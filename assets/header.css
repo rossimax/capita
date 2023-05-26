@@ -1,0 +1,7 @@
+sticky-header.header-wrapper {
+    background: rgba(26, 26, 26, 0.8);
+}
+a.header__menu-item.list-menu__item.link.link--text.focus-inset {
+    color: #fff;
+    text-transform: uppercase;
+}

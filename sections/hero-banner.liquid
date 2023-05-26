@@ -1,0 +1,84 @@
+{{ 'mod-hero-banner.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.transparent_header %}
+    <script>
+        var pagePontainer = document.querySelector(".page-container");
+        pagePontainer.style.cssText += 'margin-top: -105px'
+    </script>
+{% endif %}
+
+{% assign video_desk = section.settings.video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+{% assign video_mob = section.settings.video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+
+<div class="section-hero-banner">
+    <a href="{{section.settings.link}}">
+        {% if section.settings.video %}
+            <div class="only-desk hero-video-video--desk">{{video_desk}}</div>
+            <div class="only-mob hero-video-video--mob">{{video_mob}}</div>
+        {% else %}
+            <img class="only-desk hero-banner__image" src="{{ section.settings.image | img_url: 'master' }}" alt="funky hero" width="100%">
+            <img class="only-mob hero-banner__image" src="{{ section.settings.image_mob | img_url: 'master' }}" alt="funky hero" width="100%">
+        {% endif %}
+        <div class="hero-banner__content">
+            <div class="boxed">
+                <div class="hero-banner__content__boxed">
+                    <span class="span-link">{{ section.settings.left_text }}</span>
+                    <span class="medium span-link">{{ section.settings.right_text }}</span>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+
+{% schema %}
+  {
+    "name": "Hero Banner",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "transparent_header",
+            "label": "Transparent Header"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mob",
+            "label": "Image Mob"
+        },
+        {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+        },
+        {
+            "type": "video",
+            "id": "video_mob",
+            "label": "Video Mob"
+        },
+        {
+            "type": "text",
+            "id": "left_text",
+            "label": "Left Text"
+        },
+        {
+            "type": "text",
+            "id": "right_text",
+            "label": "Right Text"
+        },
+        {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hero Banner"
+        }
+    ]
+  }
+{% endschema %}

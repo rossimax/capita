@@ -1,11 +1,11 @@
 {{ 'mod-hero-banner.css' | asset_url | stylesheet_tag }}
 
-{% if section.settings.transparent_header %}
-    {% javascript %}
+{% javascript %}
+    {% if section.settings.transparent_header %}
         var pagePontainer = document.querySelector(".page-container");
         pagePontainer.style.cssText += 'margin-top: -105px'
-    {% endjavascript %}
-{% endif %}
+    {% endif %}
+{% endjavascript %}
 
 {% assign video_desk = section.settings.video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
 {% assign video_mob = section.settings.video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}

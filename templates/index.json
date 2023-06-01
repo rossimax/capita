@@ -4,9 +4,13 @@
       "type": "hero-banner",
       "settings": {
         "transparent_header": false,
-        "left_text": "",
-        "right_text": "",
-        "link": ""
+        "image": "shopify:\/\/shop_images\/230127_WEBSITE_BANNERS_2324_Early_Release_notextbutton.jpg",
+        "image_mob": "shopify:\/\/shop_images\/230127_WEBSITE_BANNERS_2324_Early_Release_Mobile_notextbutton.jpg",
+        "video": "shopify:\/\/files\/videos\/MARKUS OLIMSTAD - VIDEO BANNER.mp4",
+        "video_mob": "shopify:\/\/files\/videos\/MILES - VIDEO BANNER.mp4",
+        "left_text": "left",
+        "right_text": "right",
+        "link": "#"
       }
     },
     "image_banner": {

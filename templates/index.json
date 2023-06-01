@@ -1,5 +1,14 @@
 {
   "sections": {
+    "44fb95ef-7a1b-4528-a42b-a22bb355a233": {
+      "type": "hero-banner",
+      "settings": {
+        "transparent_header": false,
+        "left_text": "",
+        "right_text": "",
+        "link": ""
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -68,6 +77,7 @@
     }
   },
   "order": [
+    "44fb95ef-7a1b-4528-a42b-a22bb355a233",
     "image_banner",
     "featured_collection"
   ]

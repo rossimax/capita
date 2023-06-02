@@ -2,6 +2,7 @@
 {% assign video_mob = section.settings.video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
 
 <div class="section-hero-banner">
+    
     {% if section.settings.video %}
         <div class="only-desk hero-banner__video">{{video_desk}}</div>
         <div class="only-mob hero-banner__video">{{video_mob}}</div>
@@ -9,7 +10,9 @@
         <img class="only-desk hero-banner__image" src="{{ section.settings.image | img_url: 'master' }}" alt="funky hero" width="100%">
         <img class="only-mob hero-banner__image" src="{{ section.settings.image_mob | img_url: 'master' }}" alt="funky hero" width="100%">
     {% endif %}
+
     <a class="hero-banner__cta" href="{{section.settings.cta_ink}}">{{section.settings.cta_text}}</a>
+
 </div>
 
 {% schema %}

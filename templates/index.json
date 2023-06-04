@@ -9,9 +9,23 @@
         "cta_text": "cyta",
         "cta_link": ""
       }
+    },
+    "b0ceccbd-5777-4ea4-a4a9-34b65278682a": {
+      "type": "lazy-slider",
+      "settings": {
+        "text": "EARTLY RELEASE (online store only)",
+        "font_size": 40,
+        "font_size_mob": 16,
+        "padding": 20,
+        "padding_mob": 20,
+        "space_between_text": 100,
+        "border_top": "no",
+        "border_bottom": "no"
+      }
     }
   },
   "order": [
-    "b78e3e4b-5746-42c1-b1e6-fdd722b34f05"
+    "b78e3e4b-5746-42c1-b1e6-fdd722b34f05",
+    "b0ceccbd-5777-4ea4-a4a9-34b65278682a"
   ]
 }

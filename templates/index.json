@@ -34,11 +34,20 @@
         "left_sup_title": "Left sup",
         "right_text": "text right"
       }
+    },
+    "00a10f6f-b6ea-423b-9921-d1c287c306ea": {
+      "type": "paragraph",
+      "settings": {
+        "black_style": "yes",
+        "text": "<p>Lorem ipsum<\/p>",
+        "image": "shopify:\/\/shop_images\/logo-capita.png"
+      }
     }
   },
   "order": [
     "b78e3e4b-5746-42c1-b1e6-fdd722b34f05",
     "b0ceccbd-5777-4ea4-a4a9-34b65278682a",
-    "9bfad989-863d-473a-962c-c5b28a8c5824"
+    "9bfad989-863d-473a-962c-c5b28a8c5824",
+    "00a10f6f-b6ea-423b-9921-d1c287c306ea"
   ]
 }

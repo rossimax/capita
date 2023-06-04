@@ -1,0 +1,63 @@
+{% if section.settings.black_style == "yes" %}
+    {% assign style_black = "background:#000;color:#fff;" %}
+{% else %}
+    {% assign style_black = "" %}
+{% endif %}
+
+<div class="section-paragraph" style="background-image:url({{ section.settings.background_image }}); {{style_black}}">
+    <div class="paragraph-content">
+        <div class="paragraph-content__text">
+            {{ section.settings.text }}
+        </div>
+        <img src="paragraph-content__image" src="{{ section.settings.image | img_url: 'master' }}" alt="capita">
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Paragraph",
+    "settings": [
+        {
+            "type": "select",
+            "id": "black_style",
+            "label": "Black Style",
+            "options": [
+                {
+                "value": "yes",
+                "label": "Yes"
+                },
+                {
+                "value": "no",
+                "label": "No"
+                }
+            ],
+            "default": "no"
+        },
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Paragraph"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+
+{% endstylesheet %}

@@ -9,7 +9,7 @@
         <div class="paragraph-content__text">
             {{ section.settings.text }}
         </div>
-        <img src="paragraph-content__image" src="{{ section.settings.image | img_url: 'master' }}" alt="capita">
+        <img class="paragraph-content__image" src="{{ section.settings.image | img_url: 'master' }}" alt="capita">
     </div>
 </div>
 
@@ -57,7 +57,22 @@
   }
 {% endschema %}
 
+
 {% stylesheet %}
+.paragraph-content {
+    text-align: center;
+}
+.section-paragraph {
+    padding: 60px 20px;
+}
+.paragraph-content__text p {
+    margin: 0;
+    display: block;
+    font-size: 60px;
+}
+.paragraph-content__image {
+    margin: 60px 0 0 0;
+}
 
 
 {% endstylesheet %}

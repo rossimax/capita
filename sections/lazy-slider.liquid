@@ -182,16 +182,17 @@
     padding: 20px 0;
     overflow: hidden;
 }
-
 .lazy-slide-text {
     display: flex;
     animation: scrollTextLazy 60s infinite linear;
     line-height: 1;
 }
-
 .lazy-slide-text span {
     white-space: nowrap;
     margin-right: 50px;
+}
+.lazy-slide-text.title {
+    margin: 0;
 }
 
 @keyframes scrollTextLazy {

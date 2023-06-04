@@ -1,0 +1,167 @@
+{% assign video_desk = section.settings.video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+{% assign video_mob = section.settings.video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+
+<div class="section-hero-banner-text">
+    
+    {% if section.settings.video %}
+        <div class="only-desk hero-banner-text__video">{{video_desk}}</div>
+        <div class="only-mob hero-banner-text__video">{{video_mob}}</div>
+    {% else %}
+        <img class="only-desk hero-banner-text__image" src="{{ section.settings.image | img_url: 'master' }}" alt="capita banner" width="100%">
+        <img class="only-mob hero-banner-text__image" src="{{ section.settings.image_mob | img_url: 'master' }}" alt="capita banner" width="100%">
+    {% endif %}
+
+    <div class="hero-banner-text__content">
+
+        {% if section.settings.logo_image %}
+            <div class="hero-banner-text__content__logo">
+                <img src="{{ section.settings.logo_image | img_url: 'master' }}">
+                <div class="hero-banner-text__content__logo__text">
+                    <div class="hero-banner-text__content__logo__text__title">{{ section.settings.title }}</div>
+                    {% if section.settings.line_separator == "yes" %}
+                        <hr>
+                    {% endif %}
+                    <div class="hero-banner-text__content__logo__text__subtitle">{{ section.settings.subtitle }}</div>
+                </div>
+            </div>
+        {% else %}
+        <div class="hero-banner-text__content__normal">
+            <div class="hero-banner-text__content__normal__text">
+                <div class="hero-banner-text__content__normal__text__title">{{ section.settings.title }}</div>
+                {% if section.settings.line_separator == "yes" %}
+                    <hr>
+                {% endif %}
+                <div class="hero-banner-text__content__normal__text__subtitle">{{ section.settings.subtitle }}</div>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <a class="hero-banner-text__cta cta-transparent" href="{{section.settings.cta_ink}}">{{section.settings.cta_text}}</a>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Hero Banner Text",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mob",
+            "label": "Image Mob"
+        },
+        {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+        },
+        {
+            "type": "video",
+            "id": "video_mob",
+            "label": "Video Mob"
+        },
+        {
+            "type": "richtext",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "select",
+            "id": "line_separator",
+            "label": "Line Separator",
+            "options": [
+                {
+                "value": "yes",
+                "label": "Yes"
+                },
+                {
+                "value": "no",
+                "label": "No"
+                }
+            ],
+            "default": "no"
+        },
+        {
+            "type": "richtext",
+            "id": "subtitle",
+            "label": "Sub Title"
+        },
+        {
+            "type": "image_picker",
+            "id": "logo_image",
+            "label": "Logo Image"
+        },
+        {
+            "type": "text",
+            "id": "cta_text",
+            "label": "CTA Text"
+        },
+        {
+            "type": "url",
+            "id": "cta_link",
+            "label": "CTA Link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hero Banner Text"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+.section-hero-banner-text {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.section-hero-banner-text video {
+    width: 100%;
+    height: calc(100vh - 135px);
+    object-fit: cover;
+    display: block;
+}
+.hero-banner-text__cta {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    min-width: 340px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    height: 65px;
+}
+.hero-banner-text__cta.cta-transparent {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.section-hero-banner-text .only-mob {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .section-hero-banner-text .only-mob {
+        display: block;
+    }
+    .section-hero-banner-text .only-desk {
+        display: none;
+    }
+}
+{% endstylesheet %}
+
+
+{% javascript %}
+        console.log("ciao")
+{% endjavascript %}

@@ -42,12 +42,26 @@
         "text": "<p>Lorem ipsum<\/p>",
         "image": "shopify:\/\/shop_images\/logo-capita.png"
       }
+    },
+    "313c2a61-4905-454f-af07-4dc52801aa92": {
+      "type": "hero-banner-text",
+      "settings": {
+        "video": "shopify:\/\/files\/videos\/HENNA - VIDEO POSTER.mp4",
+        "video_mob": "shopify:\/\/files\/videos\/CAPiTA_WEB_BANNERS_-_RES_MFG.mp4",
+        "title": "<p>title<\/p>",
+        "line_separator": "yes",
+        "subtitle": "<p>subtitle<\/p>",
+        "logo_image": "shopify:\/\/shop_images\/capita-logo-white.png",
+        "cta_text": "cta",
+        "cta_link": "#"
+      }
     }
   },
   "order": [
     "b78e3e4b-5746-42c1-b1e6-fdd722b34f05",
     "b0ceccbd-5777-4ea4-a4a9-34b65278682a",
     "9bfad989-863d-473a-962c-c5b28a8c5824",
-    "00a10f6f-b6ea-423b-9921-d1c287c306ea"
+    "00a10f6f-b6ea-423b-9921-d1c287c306ea",
+    "313c2a61-4905-454f-af07-4dc52801aa92"
   ]
 }

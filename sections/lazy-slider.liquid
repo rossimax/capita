@@ -12,74 +12,94 @@
     {% assign style_border_bottom = "" %}
 {% endif %}
 
-<div class="only-desk">
-    <div cass="section-lazy-slide" style="padding: {{ section.settings.padding }}px 0; {{style_border_bottom}} {{style_border_top}}">
-        <div class="lazy-slide-text title" style="font-size: {{ section.settings.font_size }}px">
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-        </div>
+{% if section.settings.black_style == "yes" %}
+    {% assign style_black = "background:#000;color:#fff;" %}
+{% else %}
+    {% assign style_black = "" %}
+{% endif %}
+
+<div class="section-lazy-slide only-desk" style="padding: {{ section.settings.padding }}px 0; {{style_border_bottom}} {{style_border_top}} {{style_black}}">
+    <div class="lazy-slide-text title" style="font-size: {{ section.settings.font_size }}px">
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
     </div>
 </div>
-<div class="only-mob">
-    <div cass="section-lazy-slide" style="padding: {{ section.settings.padding_mob }}px 0; {{style_border_bottom}} {{style_border_top}}">
-        <div class="lazy-slide-text title" style="font-size: {{ section.settings.font_size_mob }}px">
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
-        </div>
+
+<div class="section-lazy-slide only-mob" style="padding: {{ section.settings.padding_mob }}px 0; {{style_border_bottom}} {{style_border_top}} {{style_black}}">
+    <div class="lazy-slide-text title" style="font-size: {{ section.settings.font_size_mob }}px">
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
     </div>
 </div>
+
 
 
 {% schema %}
   {
     "name": "Lazy Slide",
     "settings": [
+        {
+            "type": "select",
+            "id": "black_style",
+            "label": "Black Style",
+            "options": [
+                {
+                "value": "yes",
+                "label": "Yes"
+                },
+                {
+                "value": "no",
+                "label": "No"
+                }
+            ],
+            "default": "no"
+        },
         {
             "type": "text",
             "id": "text",
@@ -177,6 +197,17 @@
 @keyframes scrollTextLazy {
     from   { transform: translateX(0%); }
     to { transform: translateX(-50%); }
+}
+.section-lazy-slide.only-mob {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .section-lazy-slide.only-mob {
+        display: block;
+    }
+    .section-lazy-slide.only-desk {
+        display: none;
+    }
 }
 
 {% endstyle %}

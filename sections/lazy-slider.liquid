@@ -1,0 +1,182 @@
+{{ 'mod-lazy-slide.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.border_top == "yes" %}
+    {% assign style_border_top = "border-top: 2px solid #000;" %}
+{% else %}
+    {% assign style_border_top = "" %}
+{% endif %}
+
+{% if section.settings.border_bottom == "yes" %}
+    {% assign style_border_bottom = "border-bottom: 2px solid #000;" %}
+{% else %}
+    {% assign style_border_bottom = "" %}
+{% endif %}
+
+<div class="only-desk">
+    <div cass="section-lazy-slide" style="padding: {{ section.settings.padding }}px 0; {{style_border_bottom}} {{style_border_top}}">
+        <div class="lazy-slide-text title" style="font-size: {{ section.settings.font_size }}px">
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        </div>
+    </div>
+</div>
+<div class="only-mob">
+    <div cass="section-lazy-slide" style="padding: {{ section.settings.padding_mob }}px 0; {{style_border_bottom}} {{style_border_top}}">
+        <div class="lazy-slide-text title" style="font-size: {{ section.settings.font_size_mob }}px">
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+            <span style="margin-right: {{ section.settings.space_between_text }}px">{{ section.settings.text }}</span>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Lazy Slide",
+    "settings": [
+        {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "number",
+            "id": "font_size",
+            "label": "Font Size",
+            "default": 16
+        },
+        {
+            "type": "number",
+            "id": "font_size_mob",
+            "label": "Font Size Mob",
+            "default": 16
+        },
+        {
+            "type": "number",
+            "id": "padding",
+            "label": "Padding",
+            "default": 60
+        },
+        {
+            "type": "number",
+            "id": "padding_mob",
+            "label": "Padding Mob",
+            "default": 60
+        },
+        {
+            "type": "number",
+            "id": "space_between_text",
+            "label": "Space Between Text"
+        },
+        {
+            "type": "select",
+            "id": "border_top",
+            "label": "Border Top",
+            "options": [
+                {
+                "value": "yes",
+                "label": "Yes"
+                },
+                {
+                "value": "no",
+                "label": "No"
+                }
+            ],
+            "default": "no"
+        },
+        {
+            "type": "select",
+            "id": "border_bottom",
+            "label": "Border Bottom",
+            "options": [
+                {
+                "value": "yes",
+                "label": "Yes"
+                },
+                {
+                "value": "no",
+                "label": "No"
+                }
+            ],
+            "default": "no"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Lazy Slide"
+        }
+    ]
+  }
+{% endschema %}
+
+
+{% style %}
+
+.section-lazy-slide {
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.lazy-slide-text {
+    display: flex;
+    animation: scrollTextLazy 60s infinite linear;
+    line-height: 1;
+}
+
+.lazy-slide-text span {
+    white-space: nowrap;
+    margin-right: 50px;
+}
+
+@keyframes scrollTextLazy {
+    from   { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+}
+
+{% endstyle %}

@@ -49,11 +49,12 @@
       "settings": {
         "video": "shopify:\/\/files\/videos\/HENNA - VIDEO POSTER.mp4",
         "video_mob": "shopify:\/\/files\/videos\/CAPiTA_WEB_BANNERS_-_RES_MFG.mp4",
-        "title": "<p>title<\/p>",
+        "title": "<h2>The MotherShip<sup>TM<\/sup>\n<\/h2>",
         "line_separator": "yes",
-        "subtitle": "<p>subtitle<\/p>",
-        "cta_text": "cta",
-        "cta_link": "#"
+        "subtitle": "HANDCRAFTED WITH SELF-GENERATED<br>CLEAN ENERGY.",
+        "logo_image": "shopify:\/\/shop_images\/Group.png",
+        "cta_text": "VISIT",
+        "cta_link": "shopify:\/\/pages\/mothership-custom"
       }
     }
   },

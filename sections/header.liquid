@@ -1,155 +1,335 @@
 <div class="c-header">
   <div class="c-header__bg"></div>
-  <div class="c-header__top js-header-bar"><a class="c-header__logo" href="{{ shop.url }}"><svg
-              xmlns="http://www.w3.org/2000/svg" width="127" height="29" fill="none">
-              <path fill="#fff"
-                  d="M86.739 4C85.917 6.219 83.335 8 81 8c-2.335 0-3.568-1.781-2.746-4 .822-2.203 3.403-4 5.738-4 2.335 0 3.584 1.781 2.746 4ZM35.387 1 21 28h9.707l2.258-4.858h3.477L35.222 28h9.625L49 1H35.37h.017Zm2.489 17.35h-3.263c1.12-2.38 3.065-6.163 5.85-11.385a446.678 446.678 0 0 0-2.587 11.385ZM23.46 17.629h-9.21l-1.175 3.394c-.515 1.484-.95 2.423-1.304 2.819-.354.412-.885.61-1.578.61-.692 0-1.126-.198-1.19-.594-.065-.395.128-1.252.579-2.554l4.33-12.476c.483-1.368.886-2.258 1.24-2.67.354-.412.902-.61 1.675-.61.676 0 1.062.165 1.143.511.08.347-.113 1.17-.58 2.522l-1.61 4.647h9.21l.885-2.554c.869-2.505 1.24-4.35 1.094-5.521-.145-1.187-.966-2.175-2.447-2.966C23.025 1.396 20.916 1 18.212 1c-1.997 0-3.865.264-5.587.775-1.723.51-3.172 1.22-4.347 2.126-1.176.89-2.029 1.829-2.544 2.801-.515.973-1.111 2.423-1.787 4.367L1.21 18.93C.308 21.534-.094 23.512.019 24.814c.112 1.318.917 2.34 2.414 3.082C3.931 28.637 6.023 29 8.728 29s4.943-.428 7.02-1.318c2.077-.89 3.59-1.912 4.508-3.082.918-1.17 1.867-3.148 2.85-5.95l.37-1.038-.016.017ZM113.387 1 99 28h9.707l2.258-4.858h3.461L113.206 28h9.624L127 1h-13.629.016Zm2.505 17.35h-3.263c1.104-2.38 3.066-6.163 5.851-11.385a447.037 447.037 0 0 0-2.588 11.385ZM109.043 6.436 111 1H91.82a9.268 9.268 0 0 1-.519 2.462c-.385 1.041-.936 2.032-1.589 2.958h4.064L86 28h9.565l7.776-21.58h5.719l-.017.016ZM73.073 10.914l.618-1.768c-.731-1.536-.813-3.52-.049-5.684.098-.297.228-.595.358-.892-.504-.48-1.317-.86-2.438-1.124C70.294 1.15 68.392 1 65.856 1h-9.395L47 28h9.282l3.804-10.856h2.503c2.048 0 3.787-.215 5.201-.645 1.415-.43 2.504-1.024 3.251-1.817.748-.793 1.431-2.05 2.032-3.784v.016Zm-6.68-3.073-.78 2.247c-.358 1.008-.748 1.669-1.22 2-.455.33-1.121.495-2 .495-.194 0-.438 0-.698-.033l2.438-6.956c1.252 0 2.016.148 2.308.43.293.28.277.892-.049 1.833v-.016ZM79.348 12.474c-1.656 0-3.057-.426-4.15-1.163L69 28h9.682L85 11c-1.81.917-3.757 1.458-5.652 1.458v.016Z" />
-              </svg></a>
-      <nav class="c-header__menu"><button class="c-header__menu-item js-dropdown-trigger" type="button"
-              data-menu-trigger="snowboards">SNOWBOARDS</button><button
-              class="c-header__menu-item js-dropdown-trigger" type="button" data-menu-trigger="apparel">APPAREL &
-              MORE</button><a class="c-header__menu-item" href="#">THE MOTHERSHIP</a><a class="c-header__menu-item"
-              href="#">TEAM</a></nav>
-      <div class="c-header__utilities"><button class="c-header__utility is-search js-search-trigger"
-              type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
-                  <path fill="#fff" fill-rule="evenodd"
-                      d="M18.011 8c5.526 0 10.011 4.34 10.011 9.729 0 2.017-.64 3.88-1.708 5.439l5.205 5.055c.641.639.641 1.66 0 2.298a1.68 1.68 0 0 1-2.349 0l-5.152-5.005a10.11 10.11 0 0 1-6.007 1.941C12.485 27.432 8 23.091 8 17.728 8 12.341 12.485 8 18.011 8Zm0 3.243c-3.684 0-6.674 2.91-6.674 6.486 0 3.575 2.99 6.485 6.674 6.485s6.674-2.91 6.674-6.485c.027-3.6-2.963-6.486-6.674-6.486Z"
-                      clip-rule="evenodd" /></svg></button><button class="c-header__utility is-cart js-cart-trigger"
-              type="button"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                      d="M14.1222 27.8114C13.941 27.8114 13.7599 27.8114 13.5787 27.8114C12.7635 27.7919 12.2602 27.118 12.5521 26.3855C12.7937 25.7995 13.1157 25.2526 13.3875 24.6764C13.4278 24.5885 13.4579 24.4615 13.4378 24.3638C12.8843 21.8343 12.3206 19.3048 11.7671 16.7753C11.3645 14.949 10.9518 13.1226 10.5593 11.2963C10.5191 11.1205 10.4486 11.0912 10.2876 11.0912C9.24083 11.0912 8.1941 11.0912 7.14738 11.0912C6.49317 11.0912 6 10.6322 6 10.0462C6 9.56766 6.36233 9.1184 6.8555 9.0305C6.98634 9.0012 7.12725 9.0012 7.26815 9.0012C8.51618 9.0012 9.7642 9.02074 11.0122 9.0012C12.1999 8.9719 12.371 9.47976 12.5622 10.2611C12.6125 10.4857 12.6528 10.7103 12.683 10.9447C12.7031 11.0619 12.7534 11.1205 12.8843 11.101C12.9648 11.101 13.0352 11.101 13.1157 11.101C19.6578 11.101 26.1999 11.101 32.7318 11.101C33.0036 11.101 33.2653 11.101 33.4968 11.267C33.8088 11.4819 34 11.7651 34 12.146C34 14.9294 34 17.7129 34 20.4963C34 21.0823 33.5773 21.4925 32.9533 21.5609C30.4774 21.8441 28.0014 22.1273 25.5255 22.4008C22.8081 22.7035 20.0906 23.0063 17.3731 23.3188C16.7491 23.3872 16.1352 23.4653 15.5011 23.5435C15.5715 23.9243 15.7024 24.2955 15.6722 24.6471C15.652 24.9987 15.4709 25.3502 15.3501 25.7214C15.4407 25.7214 15.5514 25.7214 15.652 25.7214C20.624 25.7214 25.596 25.7214 30.5679 25.7214C30.8296 25.7214 31.1114 25.7702 31.3329 25.8874C31.7556 26.1023 31.9267 26.5711 31.816 27.0105C31.7052 27.4305 31.3127 27.7626 30.8397 27.7919C30.6283 27.8016 30.4069 27.7919 30.1754 27.8212C30.8799 28.0263 31.3932 28.4462 31.6851 29.0908C31.8763 29.5108 31.9065 29.96 31.7757 30.3995C31.504 31.3566 30.6485 32.0012 29.6722 31.9817C28.6657 31.9621 27.8203 31.3078 27.5888 30.3507C27.5083 29.9893 27.5284 29.628 27.6391 29.2764C27.7498 28.9052 27.9511 28.5927 28.2531 28.3583C28.5449 28.1435 28.8771 27.9872 29.1589 27.8212H15.0985C15.7124 28.0165 16.2056 28.3583 16.5075 28.9248C16.8196 29.4912 16.8397 30.0772 16.6082 30.6632C16.2962 31.4836 15.3501 32.0403 14.4443 31.9817C13.4177 31.9133 12.6326 31.0929 12.4917 30.2921C12.3408 29.4326 12.7132 28.2704 14.1122 27.8114H14.1222Z"
-                      fill="white" />
-              </svg>
-          </button><button class="c-header__utility is-menu" type="button"><svg width="40" height="40"
-                  viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="6" y="9" width="28" height="5" rx="2.5" fill="white" />
-                  <rect x="6" y="17" width="28" height="5" rx="2.5" fill="white" />
-                  <rect x="6" y="25" width="28" height="5" rx="2.5" fill="white" />
-              </svg>
-          </button><button class="c-header__utility is-user" type="button"><svg xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 40 40" fill="none">
-                  <path fill="#fff"
-                      d="M26.325 19.596a1.02 1.02 0 0 0-1.051.237c-1.153 1.153-3.085 1.831-5.187 1.831-2.102 0-4.035-.678-5.188-1.83a1.019 1.019 0 0 0-1.05-.238C9.372 21.156 7 24.716 7 29.869a1.016 1.016 0 0 0 1.017 1.017h24.14a1.016 1.016 0 0 0 1.017-1.017c0-5.154-2.374-8.714-6.849-10.273Z" />
-                  <path fill="#fff"
-                      d="M13.95 12.95c0 3.865 2.745 6.984 6.136 6.984 3.39 0 6.136-3.119 6.136-6.95S23.476 6 20.086 6s-6.137 3.12-6.137 6.95Z" />
-                  </svg></button></div>
+  <div class="c-header__top js-header-bar">
+    <a class="c-header__logo" href="{{ shop.url }}">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="127"
+        height="29"
+        fill="none"
+      >
+        <path fill="#fff"
+            d="M86.739 4C85.917 6.219 83.335 8 81 8c-2.335 0-3.568-1.781-2.746-4 .822-2.203 3.403-4 5.738-4 2.335 0 3.584 1.781 2.746 4ZM35.387 1 21 28h9.707l2.258-4.858h3.477L35.222 28h9.625L49 1H35.37h.017Zm2.489 17.35h-3.263c1.12-2.38 3.065-6.163 5.85-11.385a446.678 446.678 0 0 0-2.587 11.385ZM23.46 17.629h-9.21l-1.175 3.394c-.515 1.484-.95 2.423-1.304 2.819-.354.412-.885.61-1.578.61-.692 0-1.126-.198-1.19-.594-.065-.395.128-1.252.579-2.554l4.33-12.476c.483-1.368.886-2.258 1.24-2.67.354-.412.902-.61 1.675-.61.676 0 1.062.165 1.143.511.08.347-.113 1.17-.58 2.522l-1.61 4.647h9.21l.885-2.554c.869-2.505 1.24-4.35 1.094-5.521-.145-1.187-.966-2.175-2.447-2.966C23.025 1.396 20.916 1 18.212 1c-1.997 0-3.865.264-5.587.775-1.723.51-3.172 1.22-4.347 2.126-1.176.89-2.029 1.829-2.544 2.801-.515.973-1.111 2.423-1.787 4.367L1.21 18.93C.308 21.534-.094 23.512.019 24.814c.112 1.318.917 2.34 2.414 3.082C3.931 28.637 6.023 29 8.728 29s4.943-.428 7.02-1.318c2.077-.89 3.59-1.912 4.508-3.082.918-1.17 1.867-3.148 2.85-5.95l.37-1.038-.016.017ZM113.387 1 99 28h9.707l2.258-4.858h3.461L113.206 28h9.624L127 1h-13.629.016Zm2.505 17.35h-3.263c1.104-2.38 3.066-6.163 5.851-11.385a447.037 447.037 0 0 0-2.588 11.385ZM109.043 6.436 111 1H91.82a9.268 9.268 0 0 1-.519 2.462c-.385 1.041-.936 2.032-1.589 2.958h4.064L86 28h9.565l7.776-21.58h5.719l-.017.016ZM73.073 10.914l.618-1.768c-.731-1.536-.813-3.52-.049-5.684.098-.297.228-.595.358-.892-.504-.48-1.317-.86-2.438-1.124C70.294 1.15 68.392 1 65.856 1h-9.395L47 28h9.282l3.804-10.856h2.503c2.048 0 3.787-.215 5.201-.645 1.415-.43 2.504-1.024 3.251-1.817.748-.793 1.431-2.05 2.032-3.784v.016Zm-6.68-3.073-.78 2.247c-.358 1.008-.748 1.669-1.22 2-.455.33-1.121.495-2 .495-.194 0-.438 0-.698-.033l2.438-6.956c1.252 0 2.016.148 2.308.43.293.28.277.892-.049 1.833v-.016ZM79.348 12.474c-1.656 0-3.057-.426-4.15-1.163L69 28h9.682L85 11c-1.81.917-3.757 1.458-5.652 1.458v.016Z" />
+      </svg>
+    </a>
+    <nav class="c-header__menu">
+      <button
+        class="c-header__menu-item js-dropdown-trigger"
+        type="button"
+        data-menu-trigger="snowboards"
+      >
+        SNOWBOARDS
+      </button>
+      <button
+        class="c-header__menu-item js-dropdown-trigger"
+        type="button"
+        data-menu-trigger="apparel"
+      >
+        APPAREL & MORE</button
+      ><a class="c-header__menu-item" href="#">THE MOTHERSHIP</a
+      ><a
+        class="c-header__menu-item"
+        href="#"
+        >TEAM</a
+      >
+    </nav>
+    <div class="c-header__utilities">
+      <button
+        class="c-header__utility is-search js-search-trigger"
+        type="button"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+          <path fill="#fff" fill-rule="evenodd"
+              d="M18.011 8c5.526 0 10.011 4.34 10.011 9.729 0 2.017-.64 3.88-1.708 5.439l5.205 5.055c.641.639.641 1.66 0 2.298a1.68 1.68 0 0 1-2.349 0l-5.152-5.005a10.11 10.11 0 0 1-6.007 1.941C12.485 27.432 8 23.091 8 17.728 8 12.341 12.485 8 18.011 8Zm0 3.243c-3.684 0-6.674 2.91-6.674 6.486 0 3.575 2.99 6.485 6.674 6.485s6.674-2.91 6.674-6.485c.027-3.6-2.963-6.486-6.674-6.486Z"
+              clip-rule="evenodd" />
+        </svg></button
+      ><button
+        class="c-header__utility is-cart js-cart-trigger"
+        type="button"
+      >
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+              d="M14.1222 27.8114C13.941 27.8114 13.7599 27.8114 13.5787 27.8114C12.7635 27.7919 12.2602 27.118 12.5521 26.3855C12.7937 25.7995 13.1157 25.2526 13.3875 24.6764C13.4278 24.5885 13.4579 24.4615 13.4378 24.3638C12.8843 21.8343 12.3206 19.3048 11.7671 16.7753C11.3645 14.949 10.9518 13.1226 10.5593 11.2963C10.5191 11.1205 10.4486 11.0912 10.2876 11.0912C9.24083 11.0912 8.1941 11.0912 7.14738 11.0912C6.49317 11.0912 6 10.6322 6 10.0462C6 9.56766 6.36233 9.1184 6.8555 9.0305C6.98634 9.0012 7.12725 9.0012 7.26815 9.0012C8.51618 9.0012 9.7642 9.02074 11.0122 9.0012C12.1999 8.9719 12.371 9.47976 12.5622 10.2611C12.6125 10.4857 12.6528 10.7103 12.683 10.9447C12.7031 11.0619 12.7534 11.1205 12.8843 11.101C12.9648 11.101 13.0352 11.101 13.1157 11.101C19.6578 11.101 26.1999 11.101 32.7318 11.101C33.0036 11.101 33.2653 11.101 33.4968 11.267C33.8088 11.4819 34 11.7651 34 12.146C34 14.9294 34 17.7129 34 20.4963C34 21.0823 33.5773 21.4925 32.9533 21.5609C30.4774 21.8441 28.0014 22.1273 25.5255 22.4008C22.8081 22.7035 20.0906 23.0063 17.3731 23.3188C16.7491 23.3872 16.1352 23.4653 15.5011 23.5435C15.5715 23.9243 15.7024 24.2955 15.6722 24.6471C15.652 24.9987 15.4709 25.3502 15.3501 25.7214C15.4407 25.7214 15.5514 25.7214 15.652 25.7214C20.624 25.7214 25.596 25.7214 30.5679 25.7214C30.8296 25.7214 31.1114 25.7702 31.3329 25.8874C31.7556 26.1023 31.9267 26.5711 31.816 27.0105C31.7052 27.4305 31.3127 27.7626 30.8397 27.7919C30.6283 27.8016 30.4069 27.7919 30.1754 27.8212C30.8799 28.0263 31.3932 28.4462 31.6851 29.0908C31.8763 29.5108 31.9065 29.96 31.7757 30.3995C31.504 31.3566 30.6485 32.0012 29.6722 31.9817C28.6657 31.9621 27.8203 31.3078 27.5888 30.3507C27.5083 29.9893 27.5284 29.628 27.6391 29.2764C27.7498 28.9052 27.9511 28.5927 28.2531 28.3583C28.5449 28.1435 28.8771 27.9872 29.1589 27.8212H15.0985C15.7124 28.0165 16.2056 28.3583 16.5075 28.9248C16.8196 29.4912 16.8397 30.0772 16.6082 30.6632C16.2962 31.4836 15.3501 32.0403 14.4443 31.9817C13.4177 31.9133 12.6326 31.0929 12.4917 30.2921C12.3408 29.4326 12.7132 28.2704 14.1122 27.8114H14.1222Z"
+              fill="white" />
+        </svg></button
+      ><button class="c-header__utility is-menu" type="button">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect x="6" y="9" width="28" height="5" rx="2.5" fill="white" />
+          <rect x="6" y="17" width="28" height="5" rx="2.5" fill="white" />
+          <rect x="6" y="25" width="28" height="5" rx="2.5" fill="white" />
+        </svg></button
+      ><button class="c-header__utility is-user" type="button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 40 40"
+          fill="none"
+        >
+          <path fill="#fff"
+              d="M26.325 19.596a1.02 1.02 0 0 0-1.051.237c-1.153 1.153-3.085 1.831-5.187 1.831-2.102 0-4.035-.678-5.188-1.83a1.019 1.019 0 0 0-1.05-.238C9.372 21.156 7 24.716 7 29.869a1.016 1.016 0 0 0 1.017 1.017h24.14a1.016 1.016 0 0 0 1.017-1.017c0-5.154-2.374-8.714-6.849-10.273Z" />
+          <path fill="#fff"
+              d="M13.95 12.95c0 3.865 2.745 6.984 6.136 6.984 3.39 0 6.136-3.119 6.136-6.95S23.476 6 20.086 6s-6.137 3.12-6.137 6.95Z" />
+        </svg>
+      </button>
+    </div>
   </div>
-  <hr class="c-header__line" />
+  <hr class="c-header__line">
   <div class="c-header__dropdown">
-      <div class="c-header__dropdown-panel c-header-cart js-header-cart" style="display: none">
-          <div class="c-header-cart__container">
-              <div class="c-cart-item">
-                  <div class="c-cart-item__container"><img class="c-cart-item__image"
-                          src="https://via.placeholder.com/94x94" alt="alt" />
-                      <div class="c-cart-item__info"><span>fr907 equalizer</span><span>size 154</span></div>
-                      <div class="c-cart-item__quantity"><button class="c-cart-item__quantity-btn" type="button"><svg
-                                  width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
-                                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
-                              </svg>
-                          </button><span>1</span><button class="c-cart-item__quantity-btn" type="button"><svg
-                                  width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
-                                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
-                                  <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
-                              </svg>
-                          </button></div><span class="c-cart-item__price">$800.00</span>
-                  </div>
-              </div>
-              <div class="c-header-cart__line"></div>
-              <div class="c-cart-item">
-                  <div class="c-cart-item__container"><img class="c-cart-item__image"
-                          src="https://via.placeholder.com/94x94" alt="alt" />
-                      <div class="c-cart-item__info"><span>fr907 equalizer</span><span>size 154</span></div>
-                      <div class="c-cart-item__quantity"><button class="c-cart-item__quantity-btn" type="button"><svg
-                                  width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
-                                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
-                              </svg>
-                          </button><span>1</span><button class="c-cart-item__quantity-btn" type="button"><svg
-                                  width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
-                                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
-                                  <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
-                              </svg>
-                          </button></div><span class="c-cart-item__price">$800.00</span>
-                  </div>
-              </div>
-              <div class="c-header-cart__line"></div>
-              <div class="c-header-cart__summary"><span class="c-header-cart__total">total <b>$1600.00</b></span><a
-                      class="c-header-cart__checkout-btn" href="href">check out</a></div>
+    <div class="c-header__dropdown-panel c-header-cart js-header-cart" style="display: none">
+      <div class="c-header-cart__container">
+        <div class="c-cart-item">
+          <div class="c-cart-item__container">
+            <img
+              class="c-cart-item__image"
+              src="https://via.placeholder.com/94x94"
+              alt="alt"
+            >
+            <div class="c-cart-item__info"><span>fr907 equalizer</span><span>size 154</span></div>
+            <div class="c-cart-item__quantity">
+              <button class="c-cart-item__quantity-btn" type="button">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
+                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
+                </svg></button
+              ><span>1</span
+              ><button class="c-cart-item__quantity-btn" type="button">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
+                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
+                  <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+            <span class="c-cart-item__price">$800.00</span>
           </div>
-      </div>
-      <div class="c-header__dropdown-panel c-header-search js-header-search" style="display: none"><label
-              class="c-header-search__title" for="search-input">WHAT ARE YOU SEARCHING FOR?</label>
-          <form class="c-header-search__input" action="action" method="get"><input id="search-input" type="text"
-                  placeholder="Type here" /><svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_405_1183)">
-                      <circle cx="7.6066" cy="7.60547" r="7" transform="rotate(-45 7.6066 7.60547)" stroke="white" />
-                      <path d="M9.72656 5.48535L5.48392 9.72799" stroke="white" stroke-width="1.36364"
-                          stroke-linecap="round" />
-                      <path d="M5.19531 5.19434L10.0165 10.0155" stroke="white" stroke-width="1.36364"
-                          stroke-linecap="round" />
-                  </g>
-                  <defs>
-                      <clipPath id="clip0_405_1183">
-                          <rect width="15" height="15" fill="white" />
-                      </clipPath>
-                  </defs>
-              </svg>
-          </form>
-      </div>
-      <div class="c-header__dropdown-panel c-header-menu js-header-dropdown" style="display: none"
-          data-parent="snowboards"><button class="c-header-menu__parent"><span>SNOWBOARDS</span><svg width="40"
-                  height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        </div>
+        <div class="c-header-cart__line"></div>
+        <div class="c-cart-item">
+          <div class="c-cart-item__container">
+            <img
+              class="c-cart-item__image"
+              src="https://via.placeholder.com/94x94"
+              alt="alt"
+            >
+            <div class="c-cart-item__info"><span>fr907 equalizer</span><span>size 154</span></div>
+            <div class="c-cart-item__quantity">
+              <button class="c-cart-item__quantity-btn" type="button">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
+                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
+                </svg></button
+              ><span>1</span
+              ><button class="c-cart-item__quantity-btn" type="button">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <circle cx="19.5" cy="19.5" r="7" stroke="white" />
                   <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
                   <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
-              </svg>
-          </button>
-          <div class="c-header-menu__list js-header-menu"><a class="c-menu-item" href="#">all</a><a
-                  class="c-menu-item" href="#">men's</a><a class="c-menu-item" href="#">women's</a><a
-                  class="c-menu-item" href="#">kid's</a><a class="c-menu-item" href="#">spring break</a><a
-                  class="c-menu-item" href="#">splitboard</a></div>
-          <div class="c-header-menu__line"></div>
+                </svg>
+              </button>
+            </div>
+            <span class="c-cart-item__price">$800.00</span>
+          </div>
+        </div>
+        <div class="c-header-cart__line"></div>
+        <div class="c-header-cart__summary">
+          <span class="c-header-cart__total">total <b>$1600.00</b></span
+          ><a
+            class="c-header-cart__checkout-btn"
+            href="href"
+            >check out</a
+          >
+        </div>
       </div>
-      <div class="c-header__dropdown-panel c-header-menu js-header-dropdown" style="display: none"
-          data-parent="apparel"><button class="c-header-menu__parent"><span>APPAREL & MORE</span><svg width="40"
-                  height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
-                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
-                  <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
-              </svg>
-          </button>
-          <div class="c-header-menu__list js-header-menu"><a class="c-menu-item" href="#">all</a><a
-                  class="c-menu-item" href="#">men's</a><a class="c-menu-item" href="#">women's</a></div>
-          <div class="c-header-menu__line"></div>
+    </div>
+    <div class="c-header__dropdown-panel c-header-search js-header-search" style="display: none">
+      <label
+        class="c-header-search__title"
+        for="search-input"
+        >WHAT ARE YOU SEARCHING FOR?</label
+      >
+      <form class="c-header-search__input" action="action" method="get">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Type here"
+        >
+        <svg
+          width="15"
+          height="15"
+          viewBox="0 0 15 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_405_1183)">
+              <circle cx="7.6066" cy="7.60547" r="7" transform="rotate(-45 7.6066 7.60547)" stroke="white" />
+              <path d="M9.72656 5.48535L5.48392 9.72799" stroke="white" stroke-width="1.36364"
+                  stroke-linecap="round" />
+              <path d="M5.19531 5.19434L10.0165 10.0155" stroke="white" stroke-width="1.36364"
+                  stroke-linecap="round" />
+          </g>
+          <defs>
+              <clipPath id="clip0_405_1183">
+                  <rect width="15" height="15" fill="white" />
+              </clipPath>
+          </defs>
+        </svg>
+      </form>
+    </div>
+    <div
+      class="c-header__dropdown-panel c-header-menu js-header-dropdown"
+      style="display: none"
+      data-parent="snowboards"
+    >
+      <button class="c-header-menu__parent">
+        <span>SNOWBOARDS</span>
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="19.5" cy="19.5" r="7" stroke="white" />
+          <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
+          <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="c-header-menu__list js-header-menu">
+        <a class="c-menu-item" href="#">all</a
+        ><a
+          class="c-menu-item"
+          href="#"
+          >men's</a
+        ><a class="c-menu-item" href="#">women's</a
+        ><a
+          class="c-menu-item"
+          href="#"
+          >kid's</a
+        ><a class="c-menu-item" href="#">spring break</a
+        ><a
+          class="c-menu-item"
+          href="#"
+          >splitboard</a
+        >
       </div>
-      <div class="c-header__dropdown-panel c-header-menu js-header-dropdown" style="display: none"><a
-              class="c-header-menu__parent" href="#"><span>THE MOTHERSHIP</span><svg width="40" height="40"
-                  viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
-                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
-                  <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
-              </svg>
-          </a>
-          <div class="c-header-menu__line"></div>
+      <div class="c-header-menu__line"></div>
+    </div>
+    <div
+      class="c-header__dropdown-panel c-header-menu js-header-dropdown"
+      style="display: none"
+      data-parent="apparel"
+    >
+      <button class="c-header-menu__parent">
+        <span>APPAREL & MORE</span>
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="19.5" cy="19.5" r="7" stroke="white" />
+          <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
+          <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="c-header-menu__list js-header-menu">
+        <a class="c-menu-item" href="#">all</a
+        ><a
+          class="c-menu-item"
+          href="#"
+          >men's</a
+        ><a class="c-menu-item" href="#">women's</a>
       </div>
-      <div class="c-header__dropdown-panel c-header-menu js-header-dropdown" style="display: none"><a
-              class="c-header-menu__parent" href="#"><span>TEAM</span><svg width="40" height="40" viewBox="0 0 40 40"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
-                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
-                  <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
-              </svg>
-          </a>
-          <div class="c-header-menu__line"></div>
-      </div>
+      <div class="c-header-menu__line"></div>
+    </div>
+    <div class="c-header__dropdown-panel c-header-menu js-header-dropdown" style="display: none">
+      <a
+        class="c-header-menu__parent"
+        href="#"
+        ><span>THE MOTHERSHIP</span>
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="19.5" cy="19.5" r="7" stroke="white" />
+          <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
+          <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
+        </svg>
+      </a>
+      <div class="c-header-menu__line"></div>
+    </div>
+    <div class="c-header__dropdown-panel c-header-menu js-header-dropdown" style="display: none">
+      <a
+        class="c-header-menu__parent"
+        href="#"
+        ><span>TEAM</span>
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="19.5" cy="19.5" r="7" stroke="white" />
+          <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
+          <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
+        </svg>
+      </a>
+      <div class="c-header-menu__line"></div>
+    </div>
   </div>
 </div>
+
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+        {
+            "type": "link_list",
+            "id": "menu",
+            "default": "capita-main-menu",
+            "label": "Menu"
+        }
+    ]
+}
+{% endschema %}

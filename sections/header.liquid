@@ -13,25 +13,23 @@
       </svg>
     </a>
     <nav class="c-header__menu">
-      <button
-        class="c-header__menu-item js-dropdown-trigger"
-        type="button"
-        data-menu-trigger="snowboards"
-      >
-        SNOWBOARDS
-      </button>
-      <button
-        class="c-header__menu-item js-dropdown-trigger"
-        type="button"
-        data-menu-trigger="apparel"
-      >
-        APPAREL & MORE</button
-      ><a class="c-header__menu-item" href="#">THE MOTHERSHIP</a
-      ><a
-        class="c-header__menu-item"
-        href="#"
-        >TEAM</a
-      >
+
+        {%- for link in section.settings.menu.links -%}
+
+            {%- if link.links != blank -%}
+                <button
+                    class="c-header__menu-item js-dropdown-trigger"
+                    type="button"
+                    data-menu-trigger="{{ link.handle }}"
+                  >
+                    {{ link.title }}
+                  </button>
+            {%- else -%}
+                <a class="c-header__menu-item" href="{{ link.url }}">{{ link.title }}</a>
+            {%- endif -%}
+
+        {%- endfor -%}
+
     </nav>
     <div class="c-header__utilities">
       <button

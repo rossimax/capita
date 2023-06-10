@@ -10,6 +10,7 @@
     "header": {
       "type": "header",
       "settings": {
+        "menu": "capita-main-menu"
       }
     }
   },

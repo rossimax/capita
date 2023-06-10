@@ -47,8 +47,7 @@
     "313c2a61-4905-454f-af07-4dc52801aa92": {
       "type": "hero-banner-text",
       "settings": {
-        "video": "shopify:\/\/files\/videos\/HENNA - VIDEO POSTER.mp4",
-        "video_mob": "shopify:\/\/files\/videos\/CAPiTA_WEB_BANNERS_-_RES_MFG.mp4",
+        "image": "shopify:\/\/shop_images\/00-MOTHERSHIP_1.png",
         "title": "<h2>The MotherShip<sup>TM<\/sup>\n<\/h2>",
         "line_separator": "yes",
         "subtitle": "HANDCRAFTED WITH SELF-GENERATED<br>CLEAN ENERGY.",

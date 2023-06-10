@@ -2,6 +2,10 @@
 {% assign video_mob = section.settings.video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
 
 <div class="section-hero-banner-text">
+
+    {% if section.settings.box_shadow != blank %}
+        <div class="box-shadow" style="background-color: rgba(255, 0, 0, {{ section.settings.box_shadow | divided_by: 100.0 }});"></div>
+    {% endif %}
     
     {% if section.settings.video %}
         <div class="only-desk hero-banner-text__video">{{video_desk}}</div>
@@ -46,6 +50,11 @@
   {
     "name": "Hero Banner Text",
     "settings": [
+        {
+            "type": "number",
+            "id": "box_shadow",
+            "label": "Box Shadow"
+        },
         {
             "type": "image_picker",
             "id": "image",
@@ -160,8 +169,9 @@
     align-items: flex-start;
 }
 .hero-banner-text__content hr {
-    margin: 0;
+    margin: 0 0 20px 0;
     background: #fff;
+    height: 2px;
 }
 .hero-banner-text__content__logo img {
     max-width: 200px;
@@ -173,13 +183,21 @@
 .hero-banner-text__content__normal__text {
     text-align: center;
 }
-
+.hero-banner-text__content__logo img {
+    max-width: 70px;
+}
 .section-hero-banner-text .only-mob {
     display: none;
 }
 .hero-banner-text__content__logo__text__subtitle {
     line-height: 1;
 }
+.hero-banner-text__content__logo__text__title h2 {
+    font-size: 52px;
+    font-family: 'Calibre-Semibold', sans-serif;
+    line-height: 1;
+}
+
 @media screen and (max-width: 768px) {
     .section-hero-banner-text .only-mob {
         display: block;

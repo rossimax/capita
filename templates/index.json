@@ -14,7 +14,7 @@
       "type": "lazy-slider",
       "settings": {
         "black_style": "yes",
-        "text": "EARTLY RELEASE (online store only)",
+        "text": "<strong>EARTLY RELEASE<\/strong> (online store only)",
         "font_size": 40,
         "font_size_mob": 16,
         "padding": 20,

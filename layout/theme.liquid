@@ -29,6 +29,7 @@
 
     {% render 'meta-tags' %}
 
+    <link rel="stylesheet" type="text/css" href="{{ 'mr.css' | asset_url }}">
     <link rel="stylesheet" type="text/css" href="{{ 'fonts.css' | asset_url }}"> 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -51,7 +52,7 @@
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-family: 'Calibre-Regular', sans-serif;
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};

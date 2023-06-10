@@ -39,8 +39,9 @@
       "type": "paragraph",
       "settings": {
         "black_style": "yes",
-        "text": "<p>Lorem ipsum<\/p>",
-        "image": "shopify:\/\/shop_images\/logo-capita.png"
+        "background_image": "shopify:\/\/shop_images\/000_GRID_PAPER_BG_1.png",
+        "text": "<p>CAPiTA Snowboards are handcrafted in Austria<br\/>with self-generated clean energy <br\/>at The Mothership.<\/p>",
+        "image": "shopify:\/\/shop_images\/HOMEPAGE.png"
       }
     },
     "313c2a61-4905-454f-af07-4dc52801aa92": {

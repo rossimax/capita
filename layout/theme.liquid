@@ -294,9 +294,9 @@
       }
     </script>
 
-    {%- if settings.predictive_search_enabled -%}
+    {% comment %} {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
 
     <script src="{{ 'script.js' | asset_url }}" defer="defer"></script>
 

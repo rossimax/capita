@@ -1,0 +1,40 @@
+{%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
+    <select
+      class="localization-selector"
+      name="country_code"
+    >
+      {%- for country in localization.available_countries -%}
+        <option
+          value="{{ country.iso_code }}"
+          {%- if country.iso_code == localization.country.iso_code %}
+            selected
+          {% endif %}
+        >
+          {{ country.name }} ({{ country.currency.iso_code }}
+          {{ country.currency.symbol }})
+        </option>
+      {%- endfor -%}
+    </select>
+{%- endform -%}
+
+<script>
+
+    let selectors = {
+      selectCountry_code: 'select[name="country_code"]',
+    }
+
+    let selectCountry_code = document.querySelector(selectors.selectCountry_code)
+
+    window.addEventListener("load", (event) => {
+
+      selectCountry_code.addEventListener('change', function() {
+      
+        const form = document.querySelector('form#FooterCountryForm');
+        if (form) form.submit();
+
+      });
+    })
+
+
+
+</script>

@@ -48,7 +48,7 @@
       "type": "hero-banner-text",
       "settings": {
         "image": "shopify:\/\/shop_images\/00-MOTHERSHIP_1.png",
-        "title": "<h2>The MotherShip<sup>TM<\/sup>\n<\/h2>",
+        "title": "<h2 class=\"h2\">The MotherShip<sup>TM<\/sup>\n<\/h2>",
         "line_separator": "yes",
         "subtitle": "<strong>HANDCRAFTED WITH SELF-GENERATED<br>CLEAN ENERGY.<\/strong>",
         "logo_image": "shopify:\/\/shop_images\/Group.png",

@@ -3,16 +3,26 @@
     <div class="u-container">
         <div class="c-footer__content u-content">
             <div class="c-footer__blocks">
-                <div class="c-footer__block"><a class="c-footer__item" href="#">Contact Us</a><a class="c-footer__item"
-                        href="#">Find A Dealer</a><a class="c-footer__item" href="#">Distributors Info</a></div>
-                <div class="c-footer__block"><a class="c-footer__item" href="#">Order status</a><a
-                        class="c-footer__item" href="#">Shipping Policy</a><a class="c-footer__item"
-                        href="#">Returns</a><a class="c-footer__item" href="#">Payments</a></div>
-                <div class="c-footer__block"><a class="c-footer__item" href="#">Register Snowboard</a><a
-                        class="c-footer__item" href="#">Warranty</a></div>
-                <div class="c-footer__block"><a class="c-footer__item" href="#">Cookie Settings</a><a
-                        class="c-footer__item" href="#">Privacy Policy</a><a class="c-footer__item" href="#">Terms &
-                        Conditions</a></div>
+                <div class="c-footer__block">
+                    {%- for link in section.settings.menu_col_1.links -%}
+                        <a class="c-footer__item" href="{{ link.url }}">{{ link.title }}</a>
+                    {%- endfor -%}
+                </div>
+                <div class="c-footer__block">
+                    {%- for link in section.settings.menu_col_2.links -%}
+                        <a class="c-footer__item" href="{{ link.url }}">{{ link.title }}</a>
+                    {%- endfor -%}
+                </div>
+                <div class="c-footer__block">
+                    {%- for link in section.settings.menu_col_3.links -%}
+                        <a class="c-footer__item" href="{{ link.url }}">{{ link.title }}</a>
+                    {%- endfor -%}
+                </div>
+                <div class="c-footer__block">
+                    {%- for link in section.settings.menu_col_4.links -%}
+                        <a class="c-footer__item" href="{{ link.url }}">{{ link.title }}</a>
+                    {%- endfor -%}
+                </div>
             </div>
             <div class="c-footer__form">
                 <form class="c-slim-form"><span class="c-slim-form__title">SIGN UP TO GET CAPiTA’S LATEST
@@ -55,3 +65,30 @@
   </div>
 </footer>
 
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+        {
+            "type": "link_list",
+            "id": "menu_col_1",
+            "label": "Menu col 1"
+        },
+        {
+            "type": "link_list",
+            "id": "menu_col_2",
+            "label": "Menu col 2"
+        },
+        {
+            "type": "link_list",
+            "id": "menu_col_3",
+            "label": "Menu col 3"
+        },
+        {
+            "type": "link_list",
+            "id": "menu_col_4",
+            "label": "Menu col 4"
+        }
+    ]
+}
+{% endschema %}

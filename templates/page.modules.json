@@ -2,13 +2,20 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "a1e962c3-3e5b-43ed-b290-542da739f82b": {
+      "type": "defaults",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "a1e962c3-3e5b-43ed-b290-542da739f82b"
   ]
 }

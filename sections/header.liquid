@@ -85,96 +85,9 @@
   </div>
   <hr class="c-header__line">
   <div class="c-header__dropdown">
-    <div class="c-header__dropdown-panel c-header-cart js-header-cart" style="display: none">
-      <div class="c-header-cart__container">
-        <div class="c-cart-item">
-          <div class="c-cart-item__container">
-            <img
-              class="c-cart-item__image"
-              src="https://via.placeholder.com/94x94"
-              alt="alt"
-            >
-            <div class="c-cart-item__info"><span>fr907 equalizer</span><span>size 154</span></div>
-            <div class="c-cart-item__quantity">
-              <button class="c-cart-item__quantity-btn" type="button">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
-                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
-                </svg></button
-              ><span>1</span
-              ><button class="c-cart-item__quantity-btn" type="button">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
-                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
-                  <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
-                </svg>
-              </button>
-            </div>
-            <span class="c-cart-item__price">$800.00</span>
-          </div>
-        </div>
-        <div class="c-header-cart__line"></div>
-        <div class="c-cart-item">
-          <div class="c-cart-item__container">
-            <img
-              class="c-cart-item__image"
-              src="https://via.placeholder.com/94x94"
-              alt="alt"
-            >
-            <div class="c-cart-item__info"><span>fr907 equalizer</span><span>size 154</span></div>
-            <div class="c-cart-item__quantity">
-              <button class="c-cart-item__quantity-btn" type="button">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
-                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
-                </svg></button
-              ><span>1</span
-              ><button class="c-cart-item__quantity-btn" type="button">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="19.5" cy="19.5" r="7" stroke="white" />
-                  <path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" />
-                  <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
-                </svg>
-              </button>
-            </div>
-            <span class="c-cart-item__price">$800.00</span>
-          </div>
-        </div>
-        <div class="c-header-cart__line"></div>
-        <div class="c-header-cart__summary">
-          <span class="c-header-cart__total">total <b>$1600.00</b></span
-          ><a
-            class="c-header-cart__checkout-btn"
-            href="href"
-            >check out</a
-          >
-        </div>
-      </div>
-    </div>
+
+    {% include 'cart-header' %}
+    
     <div class="c-header__dropdown-panel c-header-search js-header-search" style="display: none">
       <label
         class="c-header-search__title"

@@ -42,7 +42,7 @@
 
     </div>
 
-    <a class="hero-banner-text__cta cta-transparent" href="{{section.settings.cta_ink}}">{{section.settings.cta_text}}</a>
+    <a class="hero-banner-text__cta btn btn-secondary" href="{{section.settings.cta_ink}}">{{section.settings.cta_text}}</a>
 
 </div>
 
@@ -143,21 +143,6 @@
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 15px;
-    min-width: 340px;
-    background: #fff;
-    color: #000;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 40px;
-    height: 65px;
-    font-size: 21px;
-    font-family: "Calibre-Semibold";
-}
-.hero-banner-text__cta.cta-transparent {
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
 }
 .hero-banner-text__content {
     position: absolute;
@@ -203,6 +188,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .section-hero-banner-text {
+        min-height: 400px;
+        object-fit: cover;
+    }
     .section-hero-banner-text .only-mob {
         display: block;
     }
@@ -211,8 +200,3 @@
     }
 }
 {% endstylesheet %}
-
-
-{% javascript %}
-        console.log("ciao")
-{% endjavascript %}

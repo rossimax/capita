@@ -1,0 +1,76 @@
+<div class="c-product-info">
+    <div class="c-product-info__top">
+        <span class="c-product-info__categories">{{ product.metafields.snowboard_info.snowboard_tags }}</span>
+        <h2 class="c-product-info__name">{{ product.title }}</h2>
+        <span class="c-product-info__price">{{ product.price | money_with_currency }}</span>
+        <p class="c-product-info__description">{{ product.metafields.snowboard_info.rider_type }}</p>
+
+            
+           {% comment %} form 'product', product, class:form_classes, novalidate: 'validate', data-product-form: ''
+             {% endcomment %}
+            <div class="c-product-info-form">
+                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+              {% unless product.has_only_default_variant %}
+                  {% for option in product.options_with_values %}
+
+                      {% assign option_name = option.name | downcase %}
+
+                      {% if option_name == "size" %}
+                          <div class="c-product-info__sizes">
+                              {% for variant in product.variants %}
+                                  <div class="c-product-info__size js-product-variant {%- if variant.available == false %} is-disabled{% endif %}" for="{{ variant.id }}">
+                                      <input 
+                                          style="visibility:hidden;opacity:0;height:0;width:0;padding:0;margin:0;" 
+                                          type="radio" 
+                                          name="{{option.name}}" 
+                                          id="{{ variant.id }}" 
+                                          variant-id="{{ variant.id }}" 
+                                          attr-img="{{ variant.image | img_url: "small" }}" 
+                                          value="{{ variant.title | escape }}"
+                                          >
+                                          <span>{{ variant.title }}</span>
+                                  </div>
+                              {% endfor %}
+                          </div>
+                      {% endif%}
+
+                  {% endfor %}
+
+                  <button class="c-product-info__find-size" type="button">find my size</button>
+                  
+              {% endunless %}
+    
+              {% assign current_variant = product.selected_or_first_available_variant %}
+
+              {% assign all_soldout = true %}
+              {% for variant in product.variants %}
+                {% if variant.available %}
+                    {% assign all_soldout = false %}
+                {% endif %}
+              {% endfor %}
+
+              {% if all_soldout %}
+                <span class="all-sold-out">SOLD OUT</a>
+              {% else %}
+                <button 
+                  class="js-add-to-cart c-product-info__add-to-cart {% unless current_variant.available %} all-soldout{% endunless %}">
+                    <span>
+                        {% unless current_variant.available %}
+                        {{ 'products.product.sold_out' | t }}
+                        {% else %}
+                        {{ 'products.product.add_to_cart' | t }}
+                        {% endunless %}
+                    </span>
+                  {% include 'capita-icon-cart' %}
+                </button>
+              {% endif %}
+
+              </div>
+             {% comment %} {% endform %}  {% endcomment %}
+            </div>
+
+            <span class="c-product-info__shipping"><u>Free shipping</u> for orders over 100$ <u>30 days return</u></span>
+    </div>
+</div>
+

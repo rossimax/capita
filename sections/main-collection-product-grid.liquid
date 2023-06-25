@@ -1,10 +1,11 @@
-<main>
-  <div class="u-bg-black">
-    <div class="l-listing">
-      <div class="l-listing__top">
-        <h1>{{ collection.title }}</h1>
-        <hr />
-      </div>
+
+<div class="u-bg-black">
+  <div class="l-listing">
+    <div class="l-listing__top">
+      <h1>{{ collection.title }}</h1>
+      <hr />
+    </div>
+    {% if section.settings.filter_type == "snowboard" %}
       <div class="l-listing__aside">
         <div class="c-listing-filter">
 
@@ -24,7 +25,7 @@
             <label class="c-listing-filter__option">
               <input type="checkbox" name="Men's Snowboards" 
                 {% if collection.handle == "snowboards-mens" %} 
-                  checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                  checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
                 {% else %} 
                   onclick="window.location.replace('{{ collections['snowboards-mens'].url }}')" 
                 {% endif %}/>
@@ -33,7 +34,7 @@
             <label class="c-listing-filter__option">
               <input type="checkbox" name="Women's Snowboards" 
                 {% if collection.handle == "snowboards-womens" %} 
-                checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
               {% else %} 
                 onclick="window.location.replace('{{ collections['snowboards-womens'].url }}')" 
               {% endif %}/>
@@ -42,7 +43,7 @@
             <label class="c-listing-filter__option">
               <input type="checkbox" name="Kid's Snowboards" 
                 {% if collection.handle == "snowboards-kids" %} 
-                checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
               {% else %} 
                 onclick="window.location.replace('{{ collections['snowboards-kids'].url }}')" 
               {% endif %}/>
@@ -51,7 +52,7 @@
             <label class="c-listing-filter__option">
               <input type="checkbox" name="Spring Break" 
                 {% if collection.handle == "spring-break" %} 
-                checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
               {% else %} 
                 onclick="window.location.replace('{{ collections['spring-break'].url }}')" 
               {% endif %}/>
@@ -160,58 +161,158 @@
           <div class="c-listing-filter__dropdown-title c-listing-filter__dropdown-title--noclose"></div>
           <div class="c-listing-filter__stack c-listing-filter__stack--foot">
             <div class="js-filter-num-select"><span class="num-select-filter">0</span> selected</div>
-            <div class="js-filter-clean">REMOVE FILTER</div>
+            <div class="js-filter-clean" attr-master-col="softgoods">REMOVE FILTER</div>
           </div>
 
         </div>
       </div>
-      <div class="l-listing__grid">
 
-        {%- for product in collection.products -%}
+    {% elsif section.settings.filter_type == "apparel_and_others"  %}
+
+      <div class="l-listing__aside">
+        <div class="c-listing-filter">
+
+          {%- for filter in collection.filters -%}
+            <span>{{ filter.label }}</span>
+          {%- endfor -%}
+
           {% assign tag_list = "" %}
-          {% for product_tag in product.tags%}
-            {% assign tag_list = tag_list | append: "|" | append: product_tag %}
-          {% endfor %}
-          <div class="c-listing-product" data-tags="{{ tag_list }}" data-title="{{ product.title }}">
-            <div class="c-listing-product__image">
-              <a href="{{ product.url }}">
-                <img src="{{ product.media[1] | image_url: width: 360 }}" alt="Capita | {{ product.title | strip_html }}">
-              </a>
-            </div>
-            <div class="c-listing-product__sizes">
-
-              {% unless product.has_only_default_variant %}
-                {% for option in product.options_with_values %}
-
-                    {% assign option_name = option.name | downcase %}
-
-                    {% if option_name == "size" %}
-                      {% for variant in product.variants %}
-                        {% if forloop.index < 8 %}
-                          <button class="c-listing-product__size {%- if variant.available == false %} is-disabled{% endif %}" attr-variant-id="{{ variant.id }}" type="button">{{ variant.title }}</button>
-                        {% elsif forloop.index == forloop.length %}
-                          <button class="c-listing-product__size is-ghost" type="button">+ {{ forloop.length | minus: 7 }} more</button>
-                        {% endif %}
-                      {% endfor %}
-                    {% endif%}
-
-                {% endfor %}                
+          {%- for current_tag in current_tags -%}
+            {% assign tag_list = tag_list | append: current_tag %}
+            {% unless forloop.last %}
+              {% assign tag_list = tag_list | append: "|" %}
             {% endunless %}
-            
-            </div>
-            <div class="c-listing-product__info">
-              <span class="c-listing-product__categories">{{ product.metafields.snowboard_info.snowboard_tags }}</span>
-              <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
-              <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
-            </div>
+          {%- endfor -%}
+
+          <div class="c-listing-filter__stack js-tags-list" data-tags="{{tag_list}}">
+            <label class="c-listing-filter__option">
+              <input type="checkbox" name="T-Shirt" 
+                {% if collection.handle == "T-Shirt" %} 
+                  checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
+                {% else %} 
+                  onclick="window.location.replace('{{ collections['T-Shirt'].url }}')" 
+                {% endif %}/>
+                <span>T-Shirt</span>
+            </label>
+            <label class="c-listing-filter__option">
+              <input type="checkbox" name="Jacket" 
+                {% if collection.handle == "Jacket" %} 
+                checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
+              {% else %} 
+                onclick="window.location.replace('{{ collections['Jacket'].url }}')" 
+              {% endif %}/>
+              <span>Jacket</span>
+            </label>
+            <label class="c-listing-filter__option">
+              <input type="checkbox" name="Hats" 
+                {% if collection.handle == "Hats" %} 
+                checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
+              {% else %} 
+                onclick="window.location.replace('{{ collections['Hats'].url }}')" 
+              {% endif %}/>
+                <span>Hats</span>
+            </label>
+            <label class="c-listing-filter__option">
+              <input type="checkbox" name="accessories" 
+                {% if collection.handle == "accessories" %} 
+                checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
+              {% else %} 
+                onclick="window.location.replace('{{ collections['accessories'].url }}')" 
+              {% endif %}/>
+                <span>Accessories</span>
+            </label>
+            <label class="c-listing-filter__option">
+              <input type="checkbox" name="movies" 
+                {% if collection.handle == "movies" %} 
+                checked onclick="window.location.replace('{{ collections['movies'].url }}')" 
+              {% else %} 
+                onclick="window.location.replace('{{ collections['movies'].url }}')" 
+              {% endif %}/>
+                <span>Movies</span>
+            </label>
           </div>
 
-        {%- endfor -%}
+          <div class="c-listing-filter__dropdown-title c-listing-filter__dropdown-title--noclose"></div>
+          <div class="c-listing-filter__stack c-listing-filter__stack--foot">
+            <div class="js-filter-num-select"><span class="num-select-filter">0</span> selected</div>
+            <div class="js-filter-clean" attr-master-col="softgoods">REMOVE FILTER</div>
+          </div>
 
+        </div>
       </div>
+
+    {% endif %}
+
+    <div class="l-listing__grid">
+
+      {%- for product in collection.products -%}
+        {% assign tag_list = "" %}
+        {% for product_tag in product.tags%}
+          {% assign tag_list = tag_list | append: "|" | append: product_tag %}
+        {% endfor %}
+        <div class="c-listing-product" data-tags="{{ tag_list }}" data-title="{{ product.title }}">
+          <div class="c-listing-product__image">
+            <a href="{{ product.url }}">
+              <img src="{{ product.media[1] | image_url: width: 360 }}" alt="Capita | {{ product.title | strip_html }}">
+            </a>
+          </div>
+          <div class="c-listing-product__sizes">
+
+            {% unless product.has_only_default_variant %}
+              {% for option in product.options_with_values %}
+
+                  {% assign option_name = option.name | downcase %}
+
+                  {% if option_name == "size" %}
+                    {% for variant in product.variants %}
+                      {% if forloop.index < 8 %}
+                        <button class="c-listing-product__size {%- if variant.available == false %} is-disabled{% endif %}" attr-variant-id="{{ variant.id }}" type="button">{{ variant.title }}</button>
+                      {% elsif forloop.index == forloop.length %}
+                        <button class="c-listing-product__size is-ghost" type="button">+ {{ forloop.length | minus: 7 }} more</button>
+                      {% endif %}
+                    {% endfor %}
+                  {% endif%}
+
+              {% endfor %}                
+          {% endunless %}
+          
+          </div>
+          <div class="c-listing-product__info">
+            <span class="c-listing-product__categories">{{ product.metafields.snowboard_info.snowboard_tags }}</span>
+            <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
+            <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
+          </div>
+        </div>
+
+      {%- endfor -%}
+
     </div>
   </div>
-</main>
+</div>
+
+{% schema %}
+{
+  "name": "Collection settings",
+  "settings": [
+    {
+      "type": "select",
+      "id": "filter_type",
+      "label": "Filter type",
+      "options": [
+        {
+          "value": "snowboards",
+          "label": "Snowboards"
+        },
+        {
+          "value": "apparel_and_others",
+          "label": "Appare and other"
+        }
+      ],
+      "default": "snowboards"
+    }
+  ]
+}
+{% endschema %}
 
 {% style %}
 
@@ -283,6 +384,7 @@
     filtersInputs: '.js-filter-inputs',
     filterNumSelect: '.js-filter-num-select .num-select-filter',
     tagsListApplied: '.js-tags-list',
+    cleanFilter: '.js-filter-clean',
   };
 
 
@@ -292,10 +394,11 @@
   let filtersInputs = document.querySelectorAll(selectors.filtersInputs)
   let filterNumSelect = document.querySelector(selectors.filterNumSelect)
   let tagsListApplied = document.querySelector(selectors.tagsListApplied)
-  let tagListAppliedArray = tagsListApplied.getAttribute("data-tags").split("|")
+  let cleanFilter = document.querySelector(selectors.cleanFilter)
 
   let uriTagsApplied = false
   let countInputSelected = 0
+  let tagListAppliedArray = tagsListApplied.getAttribute("data-tags").split("|")
 
   // UPDATE COUNTER
   function updateCounter() {
@@ -451,6 +554,12 @@
       })
     })
     // END - FILTER BOXES
+
+    cleanFilter.addEventListener("click", function(){
+      let masterCol = cleanFilter.getAttribute("attr-master-col")
+      window.location.replace(window.location.hostname + "/collection/" + masterCol)
+    })
+
 
     updateCounter()
 

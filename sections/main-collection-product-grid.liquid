@@ -415,7 +415,6 @@
   window.addEventListener("load", (event) => {
 
     // START - CHECK TAGS IN URI
-
     if (tagListAppliedArray[0] != "") {
 
       uriTagsApplied = true
@@ -441,15 +440,10 @@
               }
             })
 
-
           }
-  
         })
-  
       })
-
     } 
-
     // END - CHECK TAGS IN URI
 
     
@@ -555,10 +549,13 @@
     })
     // END - FILTER BOXES
 
+    
+    // START - CLEAN FILTER
     cleanFilter.addEventListener("click", function(){
       let masterCol = cleanFilter.getAttribute("attr-master-col")
       window.location.replace(window.location.hostname + "/collection/" + masterCol)
     })
+    // END - CLEAN FILTER
 
 
     updateCounter()

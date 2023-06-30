@@ -2,8 +2,21 @@
 <div class="u-bg-black">
   <div class="l-listing">
     <div class="l-listing__top">
-      <h1>{{ collection.title }}</h1>
+
+      <div class="l-listing__head">
+        <h1>{{ collection.title }}</h1>
+        <div class="sorting-listing js-sorting-listing">
+
+          {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+
+          <span class="sorting-option {% if sort_by == 'manual' %}selected{% endif %}" value="manual"> Featured </span> | <span class="sorting-option {% if sort_by == 'best-selling' %}selected{% endif %}" value="best-selling"> Best selling </span> / <span class="sorting-option {% if sort_by == 'price-descending' %}selected{% endif %}" value="price-descending"> PRICE: HIGH - LOW </span> |
+          <span class="sorting-option {% if sort_by == 'price-ascending' %}selected{% endif %}" value="price-ascending"> PRICE: LOW - HIGH </span>
+
+        </div>
+      </div>
+
       <hr />
+
     </div>
     {% if section.settings.filter_type == "snowboards" %}
       <div class="l-listing__aside">
@@ -21,7 +34,9 @@
             {% endunless %}
           {%- endfor -%}
 
-          <div class="c-listing-filter__stack js-tags-list" data-tags="{{tag_list}}">
+          <span class="js-tags-list" data-tags="{{tag_list}}"><span>
+
+          <div class="c-listing-filter__stack">
             <label class="c-listing-filter__option">
               <input type="checkbox" name="Men's Snowboards" 
                 {% if collection.handle == "snowboards-mens" %} 
@@ -172,9 +187,9 @@
       <div class="l-listing__aside">
         <div class="c-listing-filter">
 
-          {%- for filter in collection.filters -%}
+          {% comment %} {%- for filter in collection.filters -%}
             <span>{{ filter.label }}</span>
-          {%- endfor -%}
+          {%- endfor -%} {% endcomment %}
 
           {% assign tag_list = "" %}
           {%- for current_tag in current_tags -%}
@@ -184,51 +199,24 @@
             {% endunless %}
           {%- endfor -%}
 
-          <div class="c-listing-filter__stack js-tags-list" data-tags="{{tag_list}}">
+          <span class="js-tags-list" data-tags="{{tag_list}}"><span>
+
+          <div class="c-listing-filter__dropdown-title js-filter-type" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
+          <div class="c-listing-filter__stack js-filter-inputs" attr-filter-type="category">
             <label class="c-listing-filter__option">
-              <input type="checkbox" name="T-Shirt" 
-                {% if collection.handle == "T-Shirt" %} 
-                  checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
-                {% else %} 
-                  onclick="window.location.replace('{{ collections['T-Shirt'].url }}')" 
-                {% endif %}/>
-                <span>T-Shirt</span>
+              <input type="checkbox" name="T-Shirt" /><span>T-Shirt</span>
             </label>
             <label class="c-listing-filter__option">
-              <input type="checkbox" name="Jacket" 
-                {% if collection.handle == "Jacket" %} 
-                checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
-              {% else %} 
-                onclick="window.location.replace('{{ collections['Jacket'].url }}')" 
-              {% endif %}/>
-              <span>Jacket</span>
+              <input type="checkbox" name="Jacket" /><span>Jacket</span>
             </label>
             <label class="c-listing-filter__option">
-              <input type="checkbox" name="Hats" 
-                {% if collection.handle == "Hats" %} 
-                checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
-              {% else %} 
-                onclick="window.location.replace('{{ collections['Hats'].url }}')" 
-              {% endif %}/>
-                <span>Hats</span>
+              <input type="checkbox" name="Hats" /><span>Hats</span>
             </label>
             <label class="c-listing-filter__option">
-              <input type="checkbox" name="accessories" 
-                {% if collection.handle == "accessories" %} 
-                checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
-              {% else %} 
-                onclick="window.location.replace('{{ collections['accessories'].url }}')" 
-              {% endif %}/>
-                <span>Accessories</span>
+              <input type="checkbox" name="accessories" /><span>Accessories</span>
             </label>
             <label class="c-listing-filter__option">
-              <input type="checkbox" name="movies" 
-                {% if collection.handle == "movies" %} 
-                checked onclick="window.location.replace('{{ collections['movies'].url }}')" 
-              {% else %} 
-                onclick="window.location.replace('{{ collections['movies'].url }}')" 
-              {% endif %}/>
-                <span>Movies</span>
+              <input type="checkbox" name="movies" /><span>Movies</span>
             </label>
           </div>
 
@@ -243,7 +231,7 @@
 
     {% endif %}
 
-    <div class="l-listing__grid">
+    <div class="l-listing__grid l-listing__grid--{{section.settings.filter_type}}">
 
       {%- for product in collection.products -%}
         {% assign tag_list = "" %}
@@ -253,7 +241,7 @@
         <div class="c-listing-product" data-tags="{{ tag_list }}" data-title="{{ product.title }}">
           <div class="c-listing-product__image">
             <a href="{{ product.url }}">
-              <img src="{{ product.media[1] | image_url: width: 360 }}" alt="Capita | {{ product.title | strip_html }}">
+              <img src="{{ product.featured_image | image_url: width: 360 }}" alt="Capita | {{ product.title | strip_html }}">
             </a>
           </div>
           <div class="c-listing-product__sizes">
@@ -370,6 +358,36 @@
 .c-listing-filter__stack--boxed .c-listing-filter__option input:checked + span {
   color: #333;
 }
+.l-listing__grid--apparel_and_others .c-listing-product__image {
+    aspect-ratio: 130/150;
+}
+.js-filter-clean {
+  cursor: pointer;
+}
+.u-bg-black {
+    background-image: url(//cdn.shopify.com/s/files/1/0231/7366/0752/files/000_GRID_PAPER_BG_1.png?v=1686394097);
+}
+.sorting-listing.js-sorting-listing {
+    color: #fff;
+}
+.sorting-listing.js-sorting-listing span {
+    cursor: pointer;
+    margin: 0 3px;
+}
+.l-listing__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+.sorting-listing.js-sorting-listing {
+    text-transform: uppercase;
+    font-family: 'Calibre-Regular';
+}
+span.sorting-option.selected {
+    font-family: 'Calibre-bold';
+}
+
 {% endstyle %}
 
 
@@ -385,8 +403,10 @@
     filterNumSelect: '.js-filter-num-select .num-select-filter',
     tagsListApplied: '.js-tags-list',
     cleanFilter: '.js-filter-clean',
+    sortingListing: '.js-sorting-listing .sorting-option',
   };
 
+  Shopify.queryParams = {};
 
   let filterInputs = document.querySelectorAll(selectors.filterInputs)
   let productItems = document.querySelectorAll(selectors.productItems)
@@ -395,6 +415,7 @@
   let filterNumSelect = document.querySelector(selectors.filterNumSelect)
   let tagsListApplied = document.querySelector(selectors.tagsListApplied)
   let cleanFilter = document.querySelector(selectors.cleanFilter)
+  let sortingListing = document.querySelectorAll(selectors.sortingListing)
 
   let uriTagsApplied = false
   let countInputSelected = 0
@@ -404,7 +425,6 @@
   function updateCounter() {
     countInputSelected = 0
     filterInputs.forEach(filterInputCount => {
-      console.log("trovato")
       if (filterInputCount.checked) {
         countInputSelected++
       }
@@ -452,7 +472,7 @@
 
     filterInputs.forEach((filterInput,i) => {
 
-      filterInput.addEventListener("change", function(){
+      filterInput.addEventListener("change", function() {
 
         let filterInputName = filterInput.getAttribute("name")
 
@@ -497,7 +517,6 @@
             if (filterApply.length > 0 ) {
               prodTagsArray.forEach((prodTagItem,i) => {
                 if (filterApply.includes(prodTagItem)) {
-                  console.log("trovato: "+prodTagItem)
                   productHide = false
                 }
               })
@@ -514,7 +533,10 @@
           })
         }
 
+        updateCounter()
+
       })
+
           
     })
     // END - FILTERING ON COMPLETE LIST
@@ -553,10 +575,21 @@
     // START - CLEAN FILTER
     cleanFilter.addEventListener("click", function(){
       let masterCol = cleanFilter.getAttribute("attr-master-col")
-      window.location.replace(window.location.hostname + "/collection/" + masterCol)
+      window.location.replace(window.location.origin + "/collections/" + masterCol)
     })
     // END - CLEAN FILTER
 
+
+    // START - SORTING
+    sortingListing.forEach(sortingElement => {
+      sortingElement.addEventListener("click", function(){
+        let sortValue = sortingElement.getAttribute("value")
+        console.log(sortValue)
+        Shopify.queryParams.sort_by = sortValue;
+        location.search = new URLSearchParams(Shopify.queryParams).toString();
+      })
+    })
+    // END - SORTING
 
     updateCounter()
 

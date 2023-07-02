@@ -1,5 +1,4 @@
 <div class="section-main-page">
-
   {% if section.settings.enable_head %}
     <div class="main-page">
       <h1>
@@ -14,15 +13,6 @@
       </div>
     </div>
   {% endif %}
-
-  <div class="vertical-nav">
-    {% for block in section.blocks %}
-        <div class="vertical-nav__item {% if block.settings.selected %}selected{% endif %}">
-            <a href="{{ block.settings.link_url }}">{{ block.settings.link_text }}</a>
-        </div>
-    {% endfor%}
-  </div>
-  
 </div>
 
 {% schema %}
@@ -41,53 +31,10 @@
       "id": "title",
       "label": "Title (instead of default title)"
     }
-  ],
-  "blocks": [
-    {
-      "type": "link_list",
-      "name": "Menu",
-      "settings": [
-        {
-            "type": "text",
-            "id": "link_text",
-            "label": "Link Text"
-        },
-        {
-            "type": "url",
-            "id": "link_url",
-            "label": "Link Url"
-        },
-        {
-            "type": "checkbox",
-            "id": "selected",
-            "label": "Selected"
-        }
-      ]
-    }
   ]
 }
 {% endschema %}
 
-
 {% stylesheet %}
-.vertical-nav {
-    display: flex;
-    flex-direction: column;
-}
-.vertical-nav {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #000;
-    border-radius: 30px;
-    width: 335px;
-}
-.vertical-nav__item a {
-    padding: 20px 10px;
-}
-.vertical-nav__item.selected {
-    background: #000;
-    color: #fff;
-}
-
 
 {% endstylesheet %}

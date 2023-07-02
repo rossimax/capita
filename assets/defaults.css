@@ -13,7 +13,23 @@
     .medium {
         font-family: 'Calibre-Semibold', sans-serif;
     }
-
+    .one-quarter {
+        width: 25%;
+    }
+    .two-quarter {
+        width: 50%;
+    }
+    .three-quarter {
+        width: 75%;
+    }
+    @media screen and (max-width: 768px) {
+        .one-quarter,
+        .two-quarter,
+        .three-quarter {
+            width:100%;
+        }
+    }
+    
 /* END GENERAL */
 
 

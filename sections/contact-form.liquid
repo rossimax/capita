@@ -1,0 +1,47 @@
+<div class="section-contact-form">
+
+    {% form 'contact' %}
+
+        {{ form.errors | default_errors }}
+      
+        <div class="first-name two-quarter">
+          <input type="text" name="contact[first_name]" id="first-name" placeholder="ENTER NAME"/>
+        </div>
+      
+        <div class="email two-quarter">
+          <label for="email">Email</label>
+          <input type="email" name="contact[email]" id="email" placeholder="ENTER EMAIL"/>
+        </div>
+
+        <div class="phone">
+          <input type="tel" name="contact[phone]" id="phone" placeholder="PHONE NUMBER"/>
+        </div>
+      
+        <div class="message">
+          <textarea name="contact[body]" id="message" placeholder="ENTER MESSAGE"></textarea>
+        </div>
+      
+        <div class="submit">
+          <input type="submit" value="Send" />
+        </div>
+
+      {% endform %}
+
+</div>
+
+{% schema %}
+  {
+    "name": "Contact form",
+    "tag": "section",
+    "class": "section-contact-form three-quarter",
+    "presets": [
+        {
+            "name": "Contact form"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+{% endstylesheet %}

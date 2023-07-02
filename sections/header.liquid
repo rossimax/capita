@@ -121,6 +121,9 @@
           </defs>
         </svg>
       </form>
+
+      <div id="search-result"></div>
+
     </div>
 
     {%- for link in section.settings.menu.links -%}
@@ -193,3 +196,108 @@
     ]
 }
 {% endschema %}
+
+
+{% style %}
+#search-result {
+    max-width: 1440px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.s-item {
+  width: calc( 25% - 40px );
+}
+.s-item__content {
+    display: flex;
+    align-items: center;
+}
+.s-item__content img {
+  height: 200px;
+}
+.s-item__info {
+  color: #fff;
+}
+{% endstyle %}
+
+{% javascript %}
+
+(function(document) {
+
+  let selectors = {
+    searchInput: '#search-input',
+    searchResult: '#search-result',
+  };
+
+
+  let searchInput = document.querySelector(selectors.searchInput)
+  let searchResult = document.querySelector(selectors.searchResult)
+
+  function predectiveSearch() {
+
+    fetch(window.Shopify.routes.root + "search/suggest.json?q=" + searchInput.value + "&resources[type]=product&resources[options][unavailable_products]=hide&resources[options][fields]=title,product_type,variants.title")
+          .then((response) => response.json())
+          .then((suggestions) => {
+
+            const productSuggestions = suggestions.resources.results.products;
+
+            searchResult.innerHTML = "" 
+
+            productSuggestions.forEach((prodSug,i) => {
+
+              var prodSugItem = document.createElement('div');
+              prodSugItem.setAttribute('class', 's-item');
+              prodSugItem.setAttribute('data-id', prodSug.id);
+
+              prodSugItem.innerHTML = `
+              
+                <div class="s-item__content">
+                  <a href="`+prodSug.url+`">
+                      <img class="s-item__image" src="`+prodSug.image+`" alt="`+prodSug.title+`">
+                  </a>
+                  <div class="s-item__info">
+                    <span>`+prodSug.title+`</span>
+                  </div>
+                </div>
+              `
+              searchResult.append(prodSugItem)
+
+
+            })
+
+            if (productSuggestions.length > 0) {
+              const firstProductSuggestion = productSuggestions[0];
+
+              console.log(`The title of the first product suggestion is: ${
+                firstProductSuggestion.title}`
+              );
+            }
+          }
+        );
+  }
+
+  window.addEventListener("load", (event) => {
+      
+    searchInput.addEventListener("input", function(event){
+      
+      event.preventDefault();
+      searchResult.innerHTML = "" 
+      
+      if (searchInput.value.length > 2){
+
+        predectiveSearch()
+
+      }
+
+    })
+  })
+
+
+
+
+
+})(document);
+
+
+{% endjavascript %}

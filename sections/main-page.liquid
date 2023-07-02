@@ -1,58 +1,93 @@
-{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+<div class="section-main-page">
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+  {% if section.settings.enable_head %}
+    <div class="main-page">
+      <h1>
+        {% if section.settings.title != blank %}
+          {{ section.settings.title }}
+        {% else %}
+          {{ page.title }}
+        {% endif %}
+      </h1>
+      <div class="main-page_description">
+        {{ page.content }}
+      </div>
+    </div>
+  {% endif %}
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0">
-    {{ page.title | escape }}
-  </h1>
-  <div class="rte">
-    {{ page.content }}
+  <div class="vertical-nav">
+    {% for block in section.blocks %}
+        <div class="vertical-nav__item {% if block.settings.selected %}selected{% endif %}">
+            <a href="{{ block.settings.link_url }}">{{ block.settings.link_text }}</a>
+        </div>
+    {% endfor%}
   </div>
+  
 </div>
 
 {% schema %}
 {
-  "name": "t:sections.main-page.name",
+  "name": "Page",
   "tag": "section",
-  "class": "section",
+  "class": "section-page",
   "settings": [
     {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
+      "type": "checkbox",
+      "id": "enable_head",
+      "label": "Enable head (title and description)"
     },
     {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
+      "type": "text",
+      "id": "title",
+      "label": "Title (instead of default title)"
+    }
+  ],
+  "blocks": [
     {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "type": "link_list",
+      "name": "Menu",
+      "settings": [
+        {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link Text"
+        },
+        {
+            "type": "url",
+            "id": "link_url",
+            "label": "Link Url"
+        },
+        {
+            "type": "checkbox",
+            "id": "selected",
+            "label": "Selected"
+        }
+      ]
     }
   ]
 }
 {% endschema %}
+
+
+{% stylesheet %}
+.vertical-nav {
+    display: flex;
+    flex-direction: column;
+}
+.vertical-nav {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    border-radius: 30px;
+    width: 335px;
+}
+.vertical-nav__item a {
+    padding: 20px 10px;
+}
+.vertical-nav__item.selected {
+    background: #000;
+    color: #fff;
+}
+
+
+{% endstylesheet %}

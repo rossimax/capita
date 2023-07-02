@@ -34,8 +34,8 @@
         "98cc9e36-fdac-4c9c-9245-6f8a05bc9ff2"
       ],
       "settings": {
-        "enable_head": false,
-        "title": ""
+        "enable_head": true,
+        "title": "new title"
       }
     },
     "61f4922a-8e88-4674-ae33-0fb4cd958449": {

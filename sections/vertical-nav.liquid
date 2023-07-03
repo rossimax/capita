@@ -13,7 +13,7 @@
   {
     "name": "Vertical Nav",
     "tag": "section",
-    "class": "section-vertical-nav one-quarter",
+    "class": "shopify-section--vertical-nav one-quarter",
     "blocks": [
         {
           "type": "link_list",
@@ -50,21 +50,43 @@
 .vertical-nav {
     display: flex;
     flex-direction: column;
-}
-.vertical-nav {
-    display: flex;
-    flex-direction: column;
     border: 1px solid #000;
     border-radius: 30px;
-    width: 335px;
+    margin-right: 70px;
 }
+.vertical-nav__item {
+    border-bottom: 1px solid #000;
+}
+.vertical-nav__item:first-child {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.vertical-nav__item:last-child {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom: unset;
+}
+
 .vertical-nav__item a {
-    padding: 20px 10px;
+    padding: 20px;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Calibre-Semibold";
+    color: #000;
 }
 .vertical-nav__item.selected {
     background: #000;
+}
+.vertical-nav__item.selected a {
     color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+    .vertical-nav {
+        margin-right: 0;
+    }
+}
 
 {% endstylesheet %}

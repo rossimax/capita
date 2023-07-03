@@ -19,7 +19,7 @@
 {
   "name": "Page",
   "tag": "section",
-  "class": "section-page",
+  "class": "shopify-section--main-page four-quarter",
   "settings": [
     {
       "type": "checkbox",
@@ -36,5 +36,15 @@
 {% endschema %}
 
 {% stylesheet %}
-
+.section-main-page {
+    width: 75%;
+    float: right;
+    margin-bottom: 40px;
+}
+.main-page h1 {
+  font-family: "Calibre-Semibold";
+  font-size: 28px;
+  margin: 0;
+  text-transform: uppercase;
+}
 {% endstylesheet %}

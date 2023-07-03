@@ -4,25 +4,33 @@
 
         {{ form.errors | default_errors }}
       
-        <div class="first-name two-quarter">
-          <input type="text" name="contact[first_name]" id="first-name" placeholder="ENTER NAME"/>
-        </div>
-      
-        <div class="email two-quarter">
-          <label for="email">Email</label>
-          <input type="email" name="contact[email]" id="email" placeholder="ENTER EMAIL"/>
+        <div class="row">
+            <div class="form-item two-quarter">
+            <input type="text" name="contact[first_name]" id="first-name" placeholder="ENTER NAME"/>
+            </div>
+        
+            <div class="form-item two-quarter">
+            <input type="email" name="contact[email]" id="email" placeholder="ENTER EMAIL"/>
+            </div>
         </div>
 
-        <div class="phone">
+        <div class="form-item">
           <input type="tel" name="contact[phone]" id="phone" placeholder="PHONE NUMBER"/>
         </div>
       
-        <div class="message">
-          <textarea name="contact[body]" id="message" placeholder="ENTER MESSAGE"></textarea>
+        <div class="form-item">
+          <textarea name="contact[body]" id="message" placeholder="ENTER MESSAGE" rows="10"></textarea>
         </div>
       
-        <div class="submit">
-          <input type="submit" value="Send" />
+        <div class="row row-form-foot">
+            <label class="form-item__legal">
+                <input type="checkbox" name="contact[privacy]">
+                <span>Capita Privacy Policy and I consent to the processing of my personal data for marketing and profiling purposes.</span>
+            </label>
+
+            <div class="form-item form-item--submit">
+            <input class="btn btn-primary black" type="submit" value="Send" />
+            </div>
         </div>
 
       {% endform %}
@@ -33,7 +41,7 @@
   {
     "name": "Contact form",
     "tag": "section",
-    "class": "section-contact-form three-quarter",
+    "class": "shopify-section--contact-form three-quarter",
     "presets": [
         {
             "name": "Contact form"
@@ -43,5 +51,51 @@
 {% endschema %}
 
 {% stylesheet %}
+
+.form-item input,
+.form-item textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    color: #000;
+    margin-bottom: 10px;
+    font-family: "Calibre-Semibold";
+}
+.row .form-item:first-child {
+    padding-right: 20px;
+}
+.row .form-item:last-child {
+    padding-left: 20px;
+}
+.form-item input::placeholder,
+.form-item textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000;
+  opacity: 1; /* Firefox */
+}
+.form-item input:-ms-input-placeholder,
+.form-item textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #000;
+}
+.form-item input::-ms-input-placeholder,
+.form-item textarea::-ms-input-placeholder { /* Microsoft Edge */
+  color: #000;
+}
+input.btn.btn-primary.black {
+    max-width: 200px;
+    float: right;
+    font-size: 16px;
+    padding: 10px 20px;
+    min-width: 190px;
+    height: 44px;
+    cursor: pointer;
+}
+.form-item__legal span {
+    line-height: 1;
+    font-size: 14px;
+}
+.row.row-form-foot {
+    justify-content: space-between;
+}
 
 {% endstylesheet %}

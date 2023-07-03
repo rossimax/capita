@@ -9,6 +9,28 @@
     },
     "1d210c57-3f36-47c1-8ef2-17be22222a78": {
       "type": "vertical-nav",
+      "blocks": {
+        "c7328da8-9958-4e8e-975c-27a49ec5473c": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Contact US",
+            "link_url": "",
+            "selected": true
+          }
+        },
+        "58c7723e-358a-40ed-bb23-e7000658698a": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Find a Dealer",
+            "link_url": "shopify:\/\/pages\/dealers",
+            "selected": false
+          }
+        }
+      },
+      "block_order": [
+        "c7328da8-9958-4e8e-975c-27a49ec5473c",
+        "58c7723e-358a-40ed-bb23-e7000658698a"
+      ],
       "settings": {
       }
     },

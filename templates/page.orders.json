@@ -51,10 +51,16 @@
       ],
       "settings": {
       }
+    },
+    "f9f9dbbf-d5fa-4b9f-910c-0b4e714f3d5f": {
+      "type": "orders-status-login",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "1d210c57-3f36-47c1-8ef2-17be22222a78"
+    "1d210c57-3f36-47c1-8ef2-17be22222a78",
+    "f9f9dbbf-d5fa-4b9f-910c-0b4e714f3d5f"
   ]
 }

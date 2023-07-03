@@ -42,16 +42,10 @@
       ],
       "settings": {
       }
-    },
-    "form": {
-      "type": "contact-form",
-      "settings": {
-      }
     }
   },
   "order": [
     "main",
-    "1d210c57-3f36-47c1-8ef2-17be22222a78",
-    "form"
+    "1d210c57-3f36-47c1-8ef2-17be22222a78"
   ]
 }

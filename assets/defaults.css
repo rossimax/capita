@@ -72,20 +72,23 @@
 /* START TEMPLATES */
 
 main.template-informative,
-main.template-contact {
+main.template-contact,
+main.template-dealers {
     padding: 155px;
     display: flex;
     flex-wrap: wrap;
 }
 @media screen and (max-width: 1440px) {
     main.template-informative,
-    main.template-contact {
+    main.template-contact,
+    main.template-dealers {
         padding: 70px;
     } 
 }
 @media screen and (max-width: 768px) {
     main.template-informative,
-    main.template-contact {
+    main.template-contact,
+    main.template-dealers {
         padding: 20px;
     } 
 }

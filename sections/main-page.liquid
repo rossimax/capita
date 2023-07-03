@@ -9,7 +9,11 @@
         {% endif %}
       </h1>
       <div class="main-page_description">
-        {{ page.content }}
+        {% if section.settings.description != blank %}
+          {{ section.settings.description }}
+        {% else %}
+          {{ page.content }}
+        {% endif %}
       </div>
     </div>
   {% endif %}
@@ -30,6 +34,11 @@
       "type": "text",
       "id": "title",
       "label": "Title (instead of default title)"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description (instead of default description)"
     }
   ]
 }

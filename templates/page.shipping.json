@@ -15,7 +15,7 @@
           "settings": {
             "link_text": "Order status",
             "link_url": "",
-            "selected": true
+            "selected": false
           }
         },
         "58c7723e-358a-40ed-bb23-e7000658698a": {
@@ -23,7 +23,7 @@
           "settings": {
             "link_text": "Shopping policy",
             "link_url": "shopify:\/\/pages\/shipping-policy",
-            "selected": false
+            "selected": true
           }
         },
         "f6b75d5c-7d96-470e-b539-3a53098a1687": {

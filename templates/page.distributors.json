@@ -15,7 +15,7 @@
           "settings": {
             "link_text": "Contact US",
             "link_url": "",
-            "selected": true
+            "selected": false
           }
         },
         "58c7723e-358a-40ed-bb23-e7000658698a": {
@@ -31,7 +31,7 @@
           "settings": {
             "link_text": "Distributors info",
             "link_url": "",
-            "selected": false
+            "selected": true
           }
         }
       },

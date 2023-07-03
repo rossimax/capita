@@ -25,11 +25,20 @@
             "link_url": "shopify:\/\/pages\/dealers",
             "selected": false
           }
+        },
+        "f6b75d5c-7d96-470e-b539-3a53098a1687": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Distributors info",
+            "link_url": "",
+            "selected": false
+          }
         }
       },
       "block_order": [
         "c7328da8-9958-4e8e-975c-27a49ec5473c",
-        "58c7723e-358a-40ed-bb23-e7000658698a"
+        "58c7723e-358a-40ed-bb23-e7000658698a",
+        "f6b75d5c-7d96-470e-b539-3a53098a1687"
       ],
       "settings": {
       }

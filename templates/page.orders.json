@@ -3,8 +3,9 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "enable_head": true,
-        "title": ""
+        "enable_head": false,
+        "title": "",
+        "description": ""
       }
     },
     "1d210c57-3f36-47c1-8ef2-17be22222a78": {

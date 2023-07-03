@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "enable_head": true,
+        "title": ""
+      }
+    },
+    "1d210c57-3f36-47c1-8ef2-17be22222a78": {
+      "type": "vertical-nav",
+      "blocks": {
+        "c7328da8-9958-4e8e-975c-27a49ec5473c": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Order status",
+            "link_url": "",
+            "selected": false
+          }
+        },
+        "58c7723e-358a-40ed-bb23-e7000658698a": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Shopping policy",
+            "link_url": "shopify:\/\/pages\/shipping-policy",
+            "selected": false
+          }
+        },
+        "f6b75d5c-7d96-470e-b539-3a53098a1687": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Returns",
+            "link_url": "#",
+            "selected": true
+          }
+        },
+        "1104618f-5c85-44ef-9eae-25d1c08987d0": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Payments",
+            "link_url": "#",
+            "selected": false
+          }
+        }
+      },
+      "block_order": [
+        "c7328da8-9958-4e8e-975c-27a49ec5473c",
+        "58c7723e-358a-40ed-bb23-e7000658698a",
+        "f6b75d5c-7d96-470e-b539-3a53098a1687",
+        "1104618f-5c85-44ef-9eae-25d1c08987d0"
+      ],
+      "settings": {
+      }
+    },
+    "df686262-fb69-4057-8251-d9b26fe0fdd8": {
+      "type": "rich-text",
+      "settings": {
+        "text": "<p><strong>Returns and exchanges<\/strong><br\/>Core S.r.l. (hereinafter “Core”, “we”, “us” or “our” as appropriate) is happy to help you return or exchange your items purchased on its website.<br\/>All items have a 30 days money-back guarantee.<br\/>Items must be in new\/unused condition with original packaging and hangtags.<br\/>Only defective products may be returned after use or without hangtags.<br\/>For defective warranty returns, please make reference to our warranty page.<br\/>Please consider that the terms provided by the present policy are additional to the returns and exchanges rights provided by the applicable laws and, by way of an example, by Art. 52 of the Italian Consumer Code.<br\/><br\/><strong>Shipping costs<\/strong><br\/>You are required to cover all shipping costs (including custom duties and Country VAT in case of Extra EEC Countries) in case of return or collection and subsequent shipment in case of exchange of goods.<br\/>If products do not meet the conditions outlined in this Returns and Exchanges page, they may be rejected. In these cases, the returned products will be shipped back to you and no refund will be issued.<br\/>Likewise, if items are returned for warranty replacement and deemed to be damaged due to user error, the items will be returned and no replacement product will be issued.<br\/>Please contact us if you have additional questions regarding the rejection of a returned item.<br\/><br\/><strong>Returning product for Warranty<\/strong><br\/>Core is unable to process warranty returns without a copy of the original proof of purchase showing the product is within the warranty timeframe and that you are the original purchaser.<br\/>Product purchased from a Retailer<br\/>Product purchased from a retailer must be returned to the point of purchase. The retailer will then process the warranty with Core on your behalf.<br\/>Product purchased from eu.unionbindingcompany.com<br\/>If your product was purchased directly from eu.unionbindingcompany.com, all warranty related inquiries must be directed to your order invoice.<br\/>Before proceeding with the shipment of the warranty return Submit A Warranty Claim Here<br\/>If you send in your warranty return without Submit A Warranty Claim Here we will be unable to process your warranty return request.<br\/>Exact product replacement depends on inventory availability.<br\/>You are responsible for shipping charges to mail back warranty returns.<br\/><br\/><strong>Warranty<\/strong><br\/>For any further information you may require, please visit our warranty page.<br\/><br\/><strong>Exchanges<\/strong><br\/>At this time Core is unable to offer exchanges, but we’re working on it!For now, you may return your original item and place a new order for the item you would like instead. Core is sorry for any inconvenience this may cause. Due to stock availability, we recommend placing your replacement order as soon as possible.<br\/>Before proceeding with the shipment please contact us to confirm your exchange (mandatory).<br\/>If you received a free gift as part of a promotion, you will also need to return the free gift if you decide to return your order. If the free gift is not returned, don’t worry: we will simply deduct the value from your refund.<br\/>Please contact us to confirm your exchange.<br\/><br\/><strong>Tips for returning your item<br\/><\/strong>Package the return shipment securely. Use the original packaging. Please remove or cover all old labels and barcodes. Please keep the receipt that you will receive when the package is shipped. Using the tracking service, you can monitor the status of your return and make sure it has arrived correctly at its destination.Core takes no responsibility until the moment the package reaches its warehouse.<br\/>For further details please refer to our General Terms and Conditions of Sale<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1d210c57-3f36-47c1-8ef2-17be22222a78",
+    "df686262-fb69-4057-8251-d9b26fe0fdd8"
+  ]
+}

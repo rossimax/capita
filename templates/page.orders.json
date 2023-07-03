@@ -13,7 +13,7 @@
         "c7328da8-9958-4e8e-975c-27a49ec5473c": {
           "type": "link_list",
           "settings": {
-            "link_text": "Contact US",
+            "link_text": "Order status",
             "link_url": "",
             "selected": true
           }
@@ -21,16 +21,24 @@
         "58c7723e-358a-40ed-bb23-e7000658698a": {
           "type": "link_list",
           "settings": {
-            "link_text": "Find a Dealer",
-            "link_url": "shopify:\/\/pages\/dealers",
+            "link_text": "Shopping policy",
+            "link_url": "shopify:\/\/pages\/shipping-policy",
             "selected": false
           }
         },
         "f6b75d5c-7d96-470e-b539-3a53098a1687": {
           "type": "link_list",
           "settings": {
-            "link_text": "Distributors info",
-            "link_url": "",
+            "link_text": "Returns",
+            "link_url": "#",
+            "selected": false
+          }
+        },
+        "1104618f-5c85-44ef-9eae-25d1c08987d0": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Payments",
+            "link_url": "#",
             "selected": false
           }
         }
@@ -38,20 +46,15 @@
       "block_order": [
         "c7328da8-9958-4e8e-975c-27a49ec5473c",
         "58c7723e-358a-40ed-bb23-e7000658698a",
-        "f6b75d5c-7d96-470e-b539-3a53098a1687"
+        "f6b75d5c-7d96-470e-b539-3a53098a1687",
+        "1104618f-5c85-44ef-9eae-25d1c08987d0"
       ],
-      "settings": {
-      }
-    },
-    "form": {
-      "type": "contact-form",
       "settings": {
       }
     }
   },
   "order": [
     "main",
-    "1d210c57-3f36-47c1-8ef2-17be22222a78",
-    "form"
+    "1d210c57-3f36-47c1-8ef2-17be22222a78"
   ]
 }

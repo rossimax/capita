@@ -23,7 +23,7 @@
           "settings": {
             "link_text": "Shopping policy",
             "link_url": "shopify:\/\/pages\/shipping-policy",
-            "selected": true
+            "selected": false
           }
         },
         "f6b75d5c-7d96-470e-b539-3a53098a1687": {
@@ -31,7 +31,7 @@
           "settings": {
             "link_text": "Returns",
             "link_url": "#",
-            "selected": false
+            "selected": true
           }
         },
         "1104618f-5c85-44ef-9eae-25d1c08987d0": {

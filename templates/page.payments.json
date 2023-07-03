@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "enable_head": true,
+        "title": ""
+      }
+    },
+    "1d210c57-3f36-47c1-8ef2-17be22222a78": {
+      "type": "vertical-nav",
+      "blocks": {
+        "c7328da8-9958-4e8e-975c-27a49ec5473c": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Order status",
+            "link_url": "",
+            "selected": false
+          }
+        },
+        "58c7723e-358a-40ed-bb23-e7000658698a": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Shopping policy",
+            "link_url": "shopify:\/\/pages\/shipping-policy",
+            "selected": false
+          }
+        },
+        "f6b75d5c-7d96-470e-b539-3a53098a1687": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Returns",
+            "link_url": "#",
+            "selected": false
+          }
+        },
+        "1104618f-5c85-44ef-9eae-25d1c08987d0": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Payments",
+            "link_url": "#",
+            "selected": true
+          }
+        }
+      },
+      "block_order": [
+        "c7328da8-9958-4e8e-975c-27a49ec5473c",
+        "58c7723e-358a-40ed-bb23-e7000658698a",
+        "f6b75d5c-7d96-470e-b539-3a53098a1687",
+        "1104618f-5c85-44ef-9eae-25d1c08987d0"
+      ],
+      "settings": {
+      }
+    },
+    "df686262-fb69-4057-8251-d9b26fe0fdd8": {
+      "type": "rich-text",
+      "settings": {
+        "text": "<p><strong>Payment Policy<\/strong><br\/>Core S.r.l. (hereinafter “Core”, “we”, “us” or “our” as appropriate) accepts the following payment methods:<br\/>Credit cards: VISA, MasterCard, Maestro<br\/>PayPal<br\/>Google Pay<br\/>Shop Pay<br\/>The payment will be in the currency pointed out at the checkout.<br\/><br\/><strong>Out of Stock notice<\/strong><br\/>Core only accepts orders for items that are currently in stock.In the unusual event that an order is placed for an item that is not in stock, Core will contact you via the email address provided on your order and we will have the right to cancel your order.In case Core cancels your order, you will be entitled to the refund of the amount you paid for the purchase of the items which are found to be out of stock.The refund will occur within a maximum of 15 days from your request.As an alternative to the aforementioned refund, you can choose to obtain a discount voucher which shall be spent on purchases on the website.Should we not receive a reply from you within 3 (three) business days from the notice to choose between the refund and the voucher, we will immediately ship all in-stock items and any orders placed for out of stock items will be cancelled and refunded.<br\/><br\/><strong>Order Confirmation<\/strong><br\/>Once the order form has been submitted, Core will send you an order confirmation containing the following:<br\/>the descriptions of the purchased item;<br\/>the relevant price;<br\/>an indication of the method of payment;<br\/>an indication of delivery charges and any additional costs.<br\/>The agreement shall be deemed concluded only upon confirmation of the order by Core.<br\/><br\/><strong>Credit Card Security<\/strong><br\/>Payments on the website are operated by third party payment services providers.All information and data required for the payment, including payment cards’ details (card number, holder, expiry date, security code) are transmitted via encrypted protocol to the payment management system, which provides the relevant remote electronic payment services, without third parties having access thereto. Core never has access to and does not store any payment cards’ details on its systems.<br\/>If you have any trouble, please contact us.<br\/>For further details please refer to our General Terms and Conditions of Sale.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1d210c57-3f36-47c1-8ef2-17be22222a78",
+    "df686262-fb69-4057-8251-d9b26fe0fdd8"
+  ]
+}

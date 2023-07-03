@@ -42,10 +42,16 @@
       ],
       "settings": {
       }
+    },
+    "c3a878fd-2f6b-4b82-9dea-5abbc9e21fbe": {
+      "type": "distributors",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "1d210c57-3f36-47c1-8ef2-17be22222a78"
+    "1d210c57-3f36-47c1-8ef2-17be22222a78",
+    "c3a878fd-2f6b-4b82-9dea-5abbc9e21fbe"
   ]
 }

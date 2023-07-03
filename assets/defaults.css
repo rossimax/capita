@@ -37,10 +37,18 @@
     .col-6 {
         width: 50%;
     }
+    .col-8 {
+        width: calc(200% / 3 );
+    }
+    .col-9 {
+        width: 75%;
+    }
     @media screen and (max-width: 768px) {
         .col-3,
         .col-4,
-        .col-6 {
+        .col-6,
+        .col-8,
+        .col-9 {
             width: 100%;
         }  
     }

@@ -29,7 +29,7 @@
             </label>
 
             <div class="form-item form-item--submit">
-            <input class="btn btn-primary black" type="submit" value="Send" />
+              <input class="btn btn-primary black" type="submit" value="Send" />
             </div>
         </div>
 
@@ -52,8 +52,8 @@
 
 {% stylesheet %}
 
-.form-item input,
-.form-item textarea {
+.section-contact-form .form-item input,
+.section-contact-form .form-item textarea {
     width: 100%;
     padding: 15px 20px;
     border: 1px solid #000;
@@ -62,26 +62,26 @@
     margin-bottom: 10px;
     font-family: "Calibre-Semibold";
 }
-.row .form-item:first-child {
+.section-contact-form .row .form-item:first-child {
     padding-right: 20px;
 }
-.row .form-item:last-child {
+.section-contact-form .row .form-item:last-child {
     padding-left: 20px;
 }
-.form-item input::placeholder,
-.form-item textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.section-contact-form .form-item input::placeholder,
+.section-contact-form .form-item textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #000;
   opacity: 1; /* Firefox */
 }
-.form-item input:-ms-input-placeholder,
-.form-item textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.section-contact-form .form-item input:-ms-input-placeholder,
+.section-contact-form .form-item textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: #000;
 }
-.form-item input::-ms-input-placeholder,
-.form-item textarea::-ms-input-placeholder { /* Microsoft Edge */
+.section-contact-form .form-item input::-ms-input-placeholder,
+.section-contact-form .form-item textarea::-ms-input-placeholder { /* Microsoft Edge */
   color: #000;
 }
-input.btn.btn-primary.black {
+.section-contact-form input.btn.btn-primary.black {
     max-width: 200px;
     float: right;
     font-size: 16px;
@@ -90,11 +90,11 @@ input.btn.btn-primary.black {
     height: 44px;
     cursor: pointer;
 }
-.form-item__legal span {
+.section-contact-form .form-item__legal span {
     line-height: 1;
     font-size: 14px;
 }
-.row.row-form-foot {
+.section-contact-form .row.row-form-foot {
     justify-content: space-between;
 }
 

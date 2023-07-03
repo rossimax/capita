@@ -85,7 +85,8 @@ main.template-dealers,
 main.template-distributors,
 main.template-orders,
 main.template-shipping,
-main.template-returns {
+main.template-returns,
+main.template-payments {
     padding: 155px;
     display: flex;
     flex-wrap: wrap;
@@ -97,7 +98,8 @@ main.template-returns {
     main.template-distributors,
     main.template-orders,
     main.template-shipping,
-    main.template-returns {
+    main.template-returns,
+    main.template-payments {
         padding: 70px;
     } 
 }
@@ -108,7 +110,8 @@ main.template-returns {
     main.template-distributors,
     main.template-orders,
     main.template-shipping,
-    main.template-returns {
+    main.template-returns,
+    main.template-payments {
         padding: 20px;
     } 
 }

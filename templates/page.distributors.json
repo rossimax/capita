@@ -42,16 +42,10 @@
       ],
       "settings": {
       }
-    },
-    "b0b39221-c7b6-4acc-96c8-397b9bd4d8bf": {
-      "type": "dealers",
-      "settings": {
-      }
     }
   },
   "order": [
     "main",
-    "1d210c57-3f36-47c1-8ef2-17be22222a78",
-    "b0b39221-c7b6-4acc-96c8-397b9bd4d8bf"
+    "1d210c57-3f36-47c1-8ef2-17be22222a78"
   ]
 }

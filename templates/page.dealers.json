@@ -3,7 +3,7 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "enable_head": true,
+        "enable_head": false,
         "title": ""
       }
     },

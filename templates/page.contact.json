@@ -4,7 +4,8 @@
       "type": "main-page",
       "settings": {
         "enable_head": true,
-        "title": "HELP"
+        "title": "HELP",
+        "description": "<p>Capita customer support is here to help. Please select from options below to find answers for commonly asked questions.<\/p>"
       }
     },
     "1d210c57-3f36-47c1-8ef2-17be22222a78": {

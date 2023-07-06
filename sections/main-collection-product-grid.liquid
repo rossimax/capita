@@ -426,7 +426,18 @@ span.sorting-option.selected {
 .l-listing__grid__empty img.red-logo {
   margin: 10px auto;
 }
-@media screen and (max-width: 768px) {
+.c-listing-filter__mob-head {
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .l-listing__aside {
+    position: absolute;
+    margin: 0 15px;
+    left: 0;
+    top: 260px;
+    z-index: 1;
+  }
   .c-listing-filter__mob-head {
       color: #fff;
       display: flex;
@@ -479,15 +490,17 @@ span.sorting-option.selected {
     min-height: 300px;
     padding-top: 100px;
   }
+  .l-listing__grid.shadow {
+    opacity: 0.5;
+  }
   .l-listing {
     position: relative;
   }
+}
+
+@media screen and (max-width: 768px) {
   .l-listing__aside {
-    position: absolute;
-    margin: 0 15px;
-    left: 0;
     top: 210px;
-    z-index: 1;
   }
 }
 
@@ -510,6 +523,7 @@ span.sorting-option.selected {
     emtyMsg: '.l-listing__grid__empty',
     listingFilter: '.c-listing-filter',
     filterMobHead: '.c-listing-filter__mob-head',
+    listingGrid: '.l-listing__grid',
   };
 
   Shopify.queryParams = {};
@@ -525,6 +539,7 @@ span.sorting-option.selected {
   let emtyMsg = document.querySelector(selectors.emtyMsg)
   let listingFilter = document.querySelector(selectors.listingFilter)
   let filterMobHead = document.querySelector(selectors.filterMobHead)
+  let listingGrid = document.querySelector(selectors.listingGrid)
 
   let uriTagsApplied = false
   let countInputSelected = 0
@@ -732,7 +747,7 @@ span.sorting-option.selected {
 
   function checkMobFilter() {
     console.log(window.innerWidth)
-    if ( window.innerWidth < 768) {
+    if ( window.innerWidth < 1199) {
       filterMobHead.classList.add("closed")
       listingFilter.classList.add("closed")
       tagsListApplied.classList.add("closed")
@@ -749,10 +764,12 @@ span.sorting-option.selected {
       filterMobHead.classList.remove("closed")
       listingFilter.classList.remove("closed")
       tagsListApplied.classList.remove("closed")
+      listingGrid.classList.add("shadow")
     } else {
       filterMobHead.classList.add("closed")
       listingFilter.classList.add("closed")
       tagsListApplied.classList.add("closed")
+      listingGrid.classList.remove("shadow")
     }
   })
   // END - FILTERS MOB

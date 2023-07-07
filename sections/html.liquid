@@ -1,0 +1,25 @@
+<div class="section-custom-html">
+    <div class="custom-html">
+        {{ section.settings.text }}
+    </div>
+</div>
+  
+{% schema %}
+{
+    "name": "Custom Html",
+    "tag": "section",
+    "class": "shopify-section--custom-html",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Custom Html"
+        }
+    ]
+}
+{% endschema %}

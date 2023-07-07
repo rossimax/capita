@@ -305,5 +305,6 @@
     <script src="{{ 'mod-hero-banner.js' | asset_url }}" defer="defer"></script>
 
     {% comment %} END - MODULES SCRIPTS {% endcomment %}
-  </body>
+  	{% if content_for_header contains 'upsell-now.herokuapp.com' %}{% render 'upsell-now', customer: customer, product: product, template: template, cart: cart %}{% endif %}
+	</body>
 </html>

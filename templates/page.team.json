@@ -116,11 +116,265 @@
       ],
       "settings": {
       }
+    },
+    "3521ce90-7292-40db-8351-d4081b787f48": {
+      "type": "paragraph-simple",
+      "settings": {
+        "text_color": "#ffffff",
+        "title": "THE PATHFINDERS",
+        "text": "<p>The next generation of talent leading the progression of riding and style in contests, at resorts and in the streets. The future is bright. The future is now.<\/p>"
+      }
+    },
+    "c73601a3-fbde-479e-9c35-bfaab5fa2160": {
+      "type": "team-list",
+      "blocks": {
+        "a09490b0-a18f-4a98-8032-506aff58b924": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.05_1_26309927-eee1-44ad-8e56-2cab92bef987.jpg",
+            "link_url": "shopify:\/\/pages\/mia-brookes",
+            "name": "MIA BROOKES"
+          }
+        },
+        "4279ff00-67e8-4ca2-89e2-d426f1401f5f": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_1_1.jpg",
+            "link_url": "shopify:\/\/pages\/miles-fallon",
+            "name": "MILES FALLON"
+          }
+        },
+        "08c5e9cb-ed1f-4e6d-85f6-72eff0097ee4": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_2_1.jpg",
+            "link_url": "shopify:\/\/pages\/henna-ikola",
+            "name": "HENNA IKOLA"
+          }
+        },
+        "a2df5478-6b7c-439d-825d-dae42c02ed93": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_3_1.jpg",
+            "link_url": "shopify:\/\/pages\/benny-milam",
+            "name": "BENNY MILAM"
+          }
+        },
+        "0b8de1a6-69cc-46a2-8975-a310556735d2": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_1_1.jpg",
+            "link_url": "shopify:\/\/pages\/kaleah-opal-driscoll",
+            "name": "KALEAH OPAL DRISCOLL"
+          }
+        },
+        "99451742-31db-4424-adfe-a1accc32ebc2": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_3_1.jpg",
+            "link_url": "shopify:\/\/pages\/austin-vizz",
+            "name": "AUSTIN VIZZ"
+          }
+        },
+        "c06e8a1e-206a-4be4-a84c-6e8c4db41eaa": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_2_1.jpg",
+            "link_url": "shopify:\/\/pages\/himari-takamori",
+            "name": "HIMARI TAKAMORI"
+          }
+        },
+        "f65bdffa-78ed-46db-9848-48cacdbb7baf": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_1.jpg",
+            "link_url": "shopify:\/\/pages\/markus-olimstad",
+            "name": "MARKUS OLIMSTAD"
+          }
+        }
+      },
+      "block_order": [
+        "a09490b0-a18f-4a98-8032-506aff58b924",
+        "4279ff00-67e8-4ca2-89e2-d426f1401f5f",
+        "08c5e9cb-ed1f-4e6d-85f6-72eff0097ee4",
+        "a2df5478-6b7c-439d-825d-dae42c02ed93",
+        "0b8de1a6-69cc-46a2-8975-a310556735d2",
+        "99451742-31db-4424-adfe-a1accc32ebc2",
+        "c06e8a1e-206a-4be4-a84c-6e8c4db41eaa",
+        "f65bdffa-78ed-46db-9848-48cacdbb7baf"
+      ],
+      "settings": {
+      }
+    },
+    "fe8f1017-b722-4395-bbe4-54cba3517651": {
+      "type": "paragraph-simple",
+      "settings": {
+        "text_color": "#ffffff",
+        "title": "THE EXPLORERS",
+        "text": "<p>This global group of rippers are core members of The CAPiTA family, flying the flag and pushing snowboarding nationally, regionally and locally.<\/p>"
+      }
+    },
+    "c5f887cb-81f6-4c19-a1eb-50d5df910e42": {
+      "type": "team-list",
+      "blocks": {
+        "acbc6434-e022-4bb1-935f-c0f7b7871492": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.05_1_1.jpg",
+            "link_url": "shopify:\/\/pages\/kevin-jones",
+            "name": "KEVIN JONES"
+          }
+        },
+        "efdca2be-d920-4401-9c4f-667a433f5c81": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_1_2.jpg",
+            "link_url": "shopify:\/\/pages\/matt-wainhouse",
+            "name": "MATT WAINHOUSE"
+          }
+        },
+        "4f09568f-3e83-47dd-8ea5-e7eaad5254e5": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_2_2.jpg",
+            "link_url": "shopify:\/\/pages\/chase-josey",
+            "name": "CHASE JOSEY"
+          }
+        },
+        "b1d14384-90e4-4f8b-bd81-37cb3d520b06": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_3_2.jpg",
+            "link_url": "shopify:\/\/pages\/sonny-alba",
+            "name": "SONNY ALBA"
+          }
+        },
+        "73800fe0-1812-4e7f-aeb4-01581bcb6c90": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_1_2.jpg",
+            "link_url": "shopify:\/\/pages\/corey-smith",
+            "name": "COREY SMITH"
+          }
+        },
+        "4bde33f9-8c9e-492f-acbd-f74ee2662000": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_3_2.jpg",
+            "link_url": "shopify:\/\/pages\/ethan-e-stone-fortier",
+            "name": "ETHAN (E-STONE) FORTIER"
+          }
+        },
+        "0682fee8-c233-44c5-b764-a9b166fce0d6": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_2_2.jpg",
+            "link_url": "shopify:\/\/pages\/yawgoons",
+            "name": "YAWGOONS"
+          }
+        },
+        "d0771d5a-917d-43fd-84ef-ab1786009170": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_2.jpg",
+            "link_url": "shopify:\/\/pages\/tiarn-collins",
+            "name": "TIARN COLLINS"
+          }
+        },
+        "d91cf783-0ede-405f-8ebd-b35692d561ce": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.05_1_2.jpg",
+            "link_url": "shopify:\/\/pages\/georgia-nicholls-austin",
+            "name": "GEORGIA NICHOLLS-AUSTIN"
+          }
+        },
+        "0ab80d4c-73b4-4844-8fc8-602eddd8784d": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_1_3.jpg",
+            "link_url": "shopify:\/\/pages\/bendik-gjerdalen",
+            "name": "BENDIK GJERDALEN"
+          }
+        },
+        "94fc702b-ff9b-434b-939a-20fd4c0817d3": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_2_3.jpg",
+            "link_url": "shopify:\/\/pages\/moritz-amsuss",
+            "name": "MORITZ AMSUSS"
+          }
+        },
+        "421eabbe-2d91-4344-b111-3cb1fc4b07e4": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_3_3.jpg",
+            "link_url": "shopify:\/\/pages\/joey-fava",
+            "name": "JOEY FAVA"
+          }
+        },
+        "8e7328ab-7731-4df5-b956-47c297f74902": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_1_3.jpg",
+            "link_url": "shopify:\/\/pages\/truth-smith",
+            "name": "TRUTH SMITH"
+          }
+        },
+        "f4277378-df05-4bdd-9f60-d6bcaa3218c6": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_3_3.jpg",
+            "link_url": "shopify:\/\/pages\/simon-pircher",
+            "name": "SIMON PIRCHER"
+          }
+        },
+        "e1c8c71c-db44-43d6-a080-a2e7ed59757d": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_2_3.jpg",
+            "link_url": "shopify:\/\/pages\/miyon-yamaguchi",
+            "name": "MIYON YAMAGUCHI"
+          }
+        },
+        "3e17076a-00f9-480f-bd82-9bea61373752": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_3.jpg",
+            "link_url": "shopify:\/\/pages\/brendon-rego",
+            "name": "BRENDON REGO"
+          }
+        }
+      },
+      "block_order": [
+        "acbc6434-e022-4bb1-935f-c0f7b7871492",
+        "efdca2be-d920-4401-9c4f-667a433f5c81",
+        "4f09568f-3e83-47dd-8ea5-e7eaad5254e5",
+        "b1d14384-90e4-4f8b-bd81-37cb3d520b06",
+        "73800fe0-1812-4e7f-aeb4-01581bcb6c90",
+        "4bde33f9-8c9e-492f-acbd-f74ee2662000",
+        "0682fee8-c233-44c5-b764-a9b166fce0d6",
+        "d0771d5a-917d-43fd-84ef-ab1786009170",
+        "d91cf783-0ede-405f-8ebd-b35692d561ce",
+        "0ab80d4c-73b4-4844-8fc8-602eddd8784d",
+        "94fc702b-ff9b-434b-939a-20fd4c0817d3",
+        "421eabbe-2d91-4344-b111-3cb1fc4b07e4",
+        "8e7328ab-7731-4df5-b956-47c297f74902",
+        "f4277378-df05-4bdd-9f60-d6bcaa3218c6",
+        "e1c8c71c-db44-43d6-a080-a2e7ed59757d",
+        "3e17076a-00f9-480f-bd82-9bea61373752"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "98721115-af6f-4355-8ef8-be51e4894e53",
-    "ba6ce852-f6df-45e2-9568-6a7da23a0b42"
+    "ba6ce852-f6df-45e2-9568-6a7da23a0b42",
+    "3521ce90-7292-40db-8351-d4081b787f48",
+    "c73601a3-fbde-479e-9c35-bfaab5fa2160",
+    "fe8f1017-b722-4395-bbe4-54cba3517651",
+    "c5f887cb-81f6-4c19-a1eb-50d5df910e42"
   ]
 }

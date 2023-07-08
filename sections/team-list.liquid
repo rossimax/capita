@@ -1,0 +1,55 @@
+<div class="section-team-list">
+    <div class="team-list">
+        {% for block in section.blocks %}
+            <div class="team-list__card">
+                <a href="{{ block.settings.link_url }}">
+                    <img class="team-list__card__image" src="{{ block.settings.image }}" alt="{{ block.settings.name | strip_html }}">
+                    <div class="team-list__card__name">
+                        <span>{{ block.settings.name }}</span>
+                    </div>
+                </a>
+            </div>
+        {% endfor%}
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Team List",
+    "blocks": [
+        {
+            "type": "team_list",
+            "name": "Team Card",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "url",
+                    "id": "link_url",
+                    "label": "Url"
+                },
+                {
+                    "type": "text",
+                    "id": "name",
+                    "label": "Name"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Team List"
+        }
+    ]
+  }
+{% endschema %}
+
+
+{% stylesheet %}
+
+
+
+{% endstylesheet %}

@@ -1,6 +1,6 @@
 <div class="section-paragraph-simple">
     <div class="paragraph-simple-content">
-        <h2 class="paragraph-simple-content__title" style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
+        <h2 class="paragraph-simple-content__title strong" style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
         <div class="paragraph-simple-content__paragraph" style="color: {{ section.settings.text_color }}">{{ section.settings.text }}</div>
     </div>
 </div>
@@ -45,6 +45,14 @@
 }
 .paragraph-simple-content__paragraph {
     line-height: 1;
+}
+.paragraph-simple-content__title {
+    font-size: 80px;
+}
+.paragraph-simple-content__paragraph {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 16px;
 }
 
 {% endstylesheet %}

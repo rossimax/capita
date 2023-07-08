@@ -116,11 +116,26 @@
       ],
       "settings": {
       }
+    },
+    "3521ce90-7292-40db-8351-d4081b787f48": {
+      "type": "paragraph-simple",
+      "settings": {
+        "text_color": "#ffffff",
+        "title": "THE PATHFINDERS",
+        "text": "<p>The next generation of talent leading the progression of riding and style in contests, at resorts and in the streets. The future is bright. The future is now.<\/p>"
+      }
+    },
+    "c73601a3-fbde-479e-9c35-bfaab5fa2160": {
+      "type": "team-list",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "98721115-af6f-4355-8ef8-be51e4894e53",
-    "ba6ce852-f6df-45e2-9568-6a7da23a0b42"
+    "ba6ce852-f6df-45e2-9568-6a7da23a0b42",
+    "3521ce90-7292-40db-8351-d4081b787f48",
+    "c73601a3-fbde-479e-9c35-bfaab5fa2160"
   ]
 }

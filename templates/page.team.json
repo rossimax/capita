@@ -332,15 +332,17 @@
         "e1c8c71c-db44-43d6-a080-a2e7ed59757d": {
           "type": "team_list",
           "settings": {
-            "link_url": "",
-            "name": ""
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_2_3.jpg",
+            "link_url": "shopify:\/\/pages\/miyon-yamaguchi",
+            "name": "MIYON YAMAGUCHI"
           }
         },
         "3e17076a-00f9-480f-bd82-9bea61373752": {
           "type": "team_list",
           "settings": {
-            "link_url": "",
-            "name": ""
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_3.jpg",
+            "link_url": "shopify:\/\/pages\/brendon-rego",
+            "name": "BRENDON REGO"
           }
         }
       },

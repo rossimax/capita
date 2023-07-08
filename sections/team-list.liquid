@@ -3,7 +3,7 @@
         {% for block in section.blocks %}
             <div class="team-list__card">
                 <a href="{{ block.settings.link_url }}">
-                    <img class="team-list__card__image" src="{{ block.settings.image }}" alt="{{ block.settings.name | strip_html }}">
+                    <img class="team-list__card__image" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.name | strip_html }}">
                     <div class="team-list__card__name">
                         <span>{{ block.settings.name }}</span>
                     </div>
@@ -49,7 +49,34 @@
 
 
 {% stylesheet %}
-
-
+.team-list {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.team-list__card {
+    margin: 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    width: calc(25% - 20px);
+}
+.team-list__card a {
+    text-decoration: none;
+}
+img.team-list__card__image {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.team-list__card__name {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 21px;
+    font-family: "Calibre-Bold";
+    border-top: 1px solid #fff;
+}
 
 {% endstylesheet %}

@@ -19,12 +19,26 @@
   {% endif %}
 </div>
 
+<style>
+  {% if section.settings.body_color != blank %}
+    body {
+      background-color: {{ section.settings.body_color }};
+    }
+  {% endif %}
+</style>
+
 {% schema %}
 {
   "name": "Page",
   "tag": "section",
   "class": "shopify-section--main-page four-quarter",
   "settings": [
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "Body Color",
+      "default": "#ffffff"
+    },
     {
       "type": "checkbox",
       "id": "enable_head",

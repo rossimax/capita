@@ -3,6 +3,9 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "enable_head": false,
+        "title": "",
+        "description": ""
       }
     }
   },

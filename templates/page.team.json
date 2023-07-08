@@ -16,10 +16,29 @@
         "title": "THE PROS",
         "text": "<p>Innovators and icons, #TeamCAPiTA is unified by a passion to take snowboarding to its fullest potential. We're a global community dedicated to fun outside the lines, protecting the sport and the planet.<\/p>"
       }
+    },
+    "ba6ce852-f6df-45e2-9568-6a7da23a0b42": {
+      "type": "team-list",
+      "blocks": {
+        "857e9f42-0ad0-4578-9b21-81765fc97352": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.05_1.jpg",
+            "link_url": "shopify:\/\/pages\/jess-kimura",
+            "name": "JESS KIMURA"
+          }
+        }
+      },
+      "block_order": [
+        "857e9f42-0ad0-4578-9b21-81765fc97352"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "98721115-af6f-4355-8ef8-be51e4894e53"
+    "98721115-af6f-4355-8ef8-be51e4894e53",
+    "ba6ce852-f6df-45e2-9568-6a7da23a0b42"
   ]
 }

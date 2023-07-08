@@ -28,10 +28,19 @@
             "link_url": "shopify:\/\/pages\/jess-kimura",
             "name": "JESS KIMURA"
           }
+        },
+        "99433135-fb86-4c90-9e58-20dbe8c76ab0": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_1.jpg",
+            "link_url": "shopify:\/\/pages\/scott-stevens",
+            "name": "SCOTT STEVENS"
+          }
         }
       },
       "block_order": [
-        "857e9f42-0ad0-4578-9b21-81765fc97352"
+        "857e9f42-0ad0-4578-9b21-81765fc97352",
+        "99433135-fb86-4c90-9e58-20dbe8c76ab0"
       ],
       "settings": {
       }

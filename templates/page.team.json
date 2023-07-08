@@ -36,11 +36,83 @@
             "link_url": "shopify:\/\/pages\/scott-stevens",
             "name": "SCOTT STEVENS"
           }
+        },
+        "a021505d-8e69-4b82-b67a-128f2fd91c4c": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_2.jpg",
+            "link_url": "shopify:\/\/pages\/kazu-kokubo",
+            "name": "KAZU KOKUBO"
+          }
+        },
+        "cfb358e2-f898-4274-b5e6-dcde3af64816": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_3_b9fe0153-8949-456c-8950-a7e19bf959cc.jpg",
+            "link_url": "shopify:\/\/pages\/arthur-longo",
+            "name": "ARTHUR LONGO"
+          }
+        },
+        "90e1d231-1d69-4066-bbdb-c24dca42af13": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_1.jpg",
+            "link_url": "shopify:\/\/pages\/torstein-horgmo",
+            "name": "TORSTEIN HORGMO"
+          }
+        },
+        "18b0ab16-5a65-4de0-a030-fe73f518d4af": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_3.jpg",
+            "link_url": "shopify:\/\/pages\/kevin-backstrom",
+            "name": "KEVIN BACKSTROM"
+          }
+        },
+        "d4cded2c-ee22-4734-a2db-45f9e7290c0b": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_2.jpg",
+            "link_url": "shopify:\/\/pages\/brandon-cocard",
+            "name": "BRANDON COCARD"
+          }
+        },
+        "d8c3ecd4-4e7a-4a00-97f8-55282be63f90": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4.jpg",
+            "link_url": "",
+            "name": "MIKE RAW"
+          }
+        },
+        "7ac7fcfd-642f-4911-b976-3c9afd6209ef": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_5.jpg",
+            "link_url": "shopify:\/\/pages\/johnny-oconnor",
+            "name": "JOHNNY O’CONNOR"
+          }
+        },
+        "d75fc589-e53a-4d0d-a38e-32fbbb10ec6d": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_6.jpg",
+            "link_url": "shopify:\/\/pages\/chris-grenier",
+            "name": "CHRIS GRENIER"
+          }
         }
       },
       "block_order": [
         "857e9f42-0ad0-4578-9b21-81765fc97352",
-        "99433135-fb86-4c90-9e58-20dbe8c76ab0"
+        "99433135-fb86-4c90-9e58-20dbe8c76ab0",
+        "a021505d-8e69-4b82-b67a-128f2fd91c4c",
+        "cfb358e2-f898-4274-b5e6-dcde3af64816",
+        "90e1d231-1d69-4066-bbdb-c24dca42af13",
+        "18b0ab16-5a65-4de0-a030-fe73f518d4af",
+        "d4cded2c-ee22-4734-a2db-45f9e7290c0b",
+        "d8c3ecd4-4e7a-4a00-97f8-55282be63f90",
+        "7ac7fcfd-642f-4911-b976-3c9afd6209ef",
+        "d75fc589-e53a-4d0d-a38e-32fbbb10ec6d"
       ],
       "settings": {
       }

@@ -127,6 +127,64 @@
     },
     "c73601a3-fbde-479e-9c35-bfaab5fa2160": {
       "type": "team-list",
+      "blocks": {
+        "a09490b0-a18f-4a98-8032-506aff58b924": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.05_1_26309927-eee1-44ad-8e56-2cab92bef987.jpg",
+            "link_url": "shopify:\/\/pages\/mia-brookes",
+            "name": "MIA BROOKES"
+          }
+        },
+        "4279ff00-67e8-4ca2-89e2-d426f1401f5f": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_1_1.jpg",
+            "link_url": "shopify:\/\/pages\/miles-fallon",
+            "name": "MILES FALLON"
+          }
+        },
+        "08c5e9cb-ed1f-4e6d-85f6-72eff0097ee4": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_2_1.jpg",
+            "link_url": "shopify:\/\/pages\/henna-ikola",
+            "name": "HENNA IKOLA"
+          }
+        },
+        "a2df5478-6b7c-439d-825d-dae42c02ed93": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_3_1.jpg",
+            "link_url": "shopify:\/\/pages\/benny-milam",
+            "name": "BENNY MILAM"
+          }
+        },
+        "0b8de1a6-69cc-46a2-8975-a310556735d2": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_1_1.jpg",
+            "link_url": "shopify:\/\/pages\/kaleah-opal-driscoll",
+            "name": "KALEAH OPAL DRISCOLL"
+          }
+        },
+        "99451742-31db-4424-adfe-a1accc32ebc2": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_3_1.jpg",
+            "link_url": "shopify:\/\/pages\/austin-vizz",
+            "name": "AUSTIN VIZZ"
+          }
+        }
+      },
+      "block_order": [
+        "a09490b0-a18f-4a98-8032-506aff58b924",
+        "4279ff00-67e8-4ca2-89e2-d426f1401f5f",
+        "08c5e9cb-ed1f-4e6d-85f6-72eff0097ee4",
+        "a2df5478-6b7c-439d-825d-dae42c02ed93",
+        "0b8de1a6-69cc-46a2-8975-a310556735d2",
+        "99451742-31db-4424-adfe-a1accc32ebc2"
+      ],
       "settings": {
       }
     }

@@ -1,4 +1,4 @@
-<div class="section-main-page" style="margin-top: {{ section.settings.margin_top }}px">
+<div class="section-main-page" style="width: {{ section.settings.head_width }}%; margin-top: {{ section.settings.margin_top }}px">
   {% if section.settings.enable_head %}
     <div class="main-page">
       <h1>
@@ -33,6 +33,13 @@
   "tag": "section",
   "class": "shopify-section--main-page four-quarter",
   "settings": [
+    {
+      "type": "number",
+      "id": "head_width",
+      "label": "Head Width",
+      "default": 100,
+      "info": "For Vertical Nav use 75%"
+    },
     {
       "type": "number",
       "id": "margin_top",

@@ -8,9 +8,18 @@
         "title": "",
         "description": ""
       }
+    },
+    "98721115-af6f-4355-8ef8-be51e4894e53": {
+      "type": "paragraph-simple",
+      "settings": {
+        "text_color": "#ffffff",
+        "title": "THE PROS",
+        "text": "<p>Innovators and icons, #TeamCAPiTA is unified by a passion to take snowboarding to its fullest potential. We're a global community dedicated to fun outside the lines, protecting the sport and the planet.<\/p>"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "98721115-af6f-4355-8ef8-be51e4894e53"
   ]
 }

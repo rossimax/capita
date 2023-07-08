@@ -3,6 +3,7 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "margin_top": 120,
         "body_color": "#070707",
         "enable_head": false,
         "title": "",

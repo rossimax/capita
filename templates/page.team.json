@@ -3,6 +3,7 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "body_color": "#070707",
         "enable_head": false,
         "title": "",
         "description": ""

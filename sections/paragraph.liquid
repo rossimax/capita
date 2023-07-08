@@ -9,7 +9,9 @@
         <div class="paragraph-content__text">
             {{ section.settings.text }}
         </div>
+        {% if section.settings.image != blank %}
         <img class="paragraph-content__image" src="{{ section.settings.image | img_url: 'master' }}" alt="capita">
+        {% endif %}
     </div>
 </div>
 

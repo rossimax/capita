@@ -1,0 +1,50 @@
+<div class="section-paragraph-simple">
+    <div class="paragraph-simple-content">
+        <h2 class="paragraph-simple-content__title" style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
+        <div class="paragraph-simple-content__paragraph" style="color: {{ section.settings.text_color }}">{{ section.settings.text }}</div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Paragraph Simple",
+    "settings": [
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Paragraph Simple"
+        }
+    ]
+  }
+{% endschema %}
+
+
+{% stylesheet %}
+
+.section-paragraph-simple {
+    padding: 60px 20px;
+}
+.paragraph-simple-content {
+    text-align: center;
+}
+.paragraph-simple-content__paragraph {
+    line-height: 1;
+}
+
+{% endstylesheet %}

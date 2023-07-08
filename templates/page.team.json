@@ -3,6 +3,7 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "head_width": 100,
         "margin_top": 120,
         "body_color": "#070707",
         "enable_head": false,
@@ -366,6 +367,12 @@
       ],
       "settings": {
       }
+    },
+    "e4f32c63-69ad-4afb-bfe2-d1a7b92c99a7": {
+      "type": "spacer",
+      "settings": {
+        "height": 100
+      }
     }
   },
   "order": [
@@ -375,6 +382,7 @@
     "3521ce90-7292-40db-8351-d4081b787f48",
     "c73601a3-fbde-479e-9c35-bfaab5fa2160",
     "fe8f1017-b722-4395-bbe4-54cba3517651",
-    "c5f887cb-81f6-4c19-a1eb-50d5df910e42"
+    "c5f887cb-81f6-4c19-a1eb-50d5df910e42",
+    "e4f32c63-69ad-4afb-bfe2-d1a7b92c99a7"
   ]
 }

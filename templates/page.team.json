@@ -3,9 +3,9 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "enable_head": true,
-        "title": "THE PROS",
-        "description": "<p>Innovators and icons, #TeamCAPiTA is unified by a passion to take snowboarding to its fullest potential. We're a global community dedicated to fun outside the lines, protecting the sport and the planet.<\/p>"
+        "enable_head": false,
+        "title": "",
+        "description": ""
       }
     }
   },

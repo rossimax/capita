@@ -1,4 +1,11 @@
-<div class="section-main-page" style="width: {{ section.settings.head_width }}%; margin-top: {{ section.settings.margin_top }}px">
+
+{% if section.settings.head_width == 75 %}
+  {% assign float_style = "float: right;"%}
+{% else %}
+  {% assign float_style = ""%}
+{% endif %}
+
+<div class="section-main-page" style="{{float_style}} width: {{ section.settings.head_width }}%; margin-top: {{ section.settings.margin_top }}px">
   {% if section.settings.enable_head %}
     <div class="main-page">
       <h1>
@@ -73,8 +80,6 @@
 
 {% stylesheet %}
 .section-main-page {
-    width: 75%;
-    float: right;
     margin-bottom: 40px;
 }
 .main-page h1 {
@@ -82,5 +87,10 @@
   font-size: 28px;
   margin: 0;
   text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .section-main-page {
+    margin-top: 0 !important;
+  }
 }
 {% endstylesheet %}

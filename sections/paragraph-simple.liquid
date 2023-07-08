@@ -43,17 +43,24 @@
 .paragraph-simple-content {
     text-align: center;
 }
-.paragraph-simple-content__paragraph {
-    line-height: 1;
-}
 .paragraph-simple-content__title {
     font-size: 80px;
     text-align: center;
+    line-height: 1;
+    margin-bottom: 10px;
 }
 .paragraph-simple-content__paragraph {
     max-width: 750px;
     margin: 0 auto;
     font-size: 16px;
+    line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .paragraph-simple-content__title {
+        font-size: 36px;
+        margin-top: 20px;
+    }
 }
 
 {% endstylesheet %}

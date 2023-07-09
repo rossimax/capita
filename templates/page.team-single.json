@@ -4,7 +4,7 @@
       "type": "main-page",
       "settings": {
         "head_width": 100,
-        "margin_top": 0,
+        "margin_top": 110,
         "body_color": "#070707",
         "enable_head": false,
         "title": "",

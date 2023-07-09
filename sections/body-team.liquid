@@ -1,0 +1,70 @@
+<div class="section-team-body">
+
+    <div class="team-body">
+        <div class="team-body__content">
+            <h4>{{ section.settings.sup_title }} / {{ section.settings.title }}</h4>
+            <div class="team-body__content__bio">{{ page.metafields.accentuate.bio }}</div>
+            <div class="team-body__content__ig"><a href="https://www.instagram.com/{{page.metafields.accentuate.instagram}}">{% render 'icon-instagram' %} {{ page.metafields.accentuate.instagram }}</a></div>
+        </div>
+        <div class="team-body__table">
+            <div class="team-body__table__content">
+                <div class="team-body__table__content_cell">
+                    <span class="cell-type">HOMETOWN:</span>
+                    <span class="cell-content">{{ page.metafields.team_profile.hometown }}</span>
+                </div>
+                <div class="team-body__table__content_cell">
+                    <span class="cell-type">HEIGHT:</span>
+                    <span class="cell-content">{{ page.metafields.team_profile.height }}</span>
+                </div>
+                <div class="team-body__table__content_cell">
+                    <span class="cell-type">WEIGHT:</span>
+                    <span class="cell-content">{{ page.metafields.team_profile.weight }}</span>
+                </div>
+                <div class="team-body__table__content_cell">
+                    <span class="cell-type">STANCE:</span>
+                    <span class="cell-content">{{ page.metafields.team_profile.stance }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Team Body",
+    "settings": [
+        {
+            "type": "text",
+            "id": "sup_title",
+            "label": "Sup Title",
+            "default": "TEAM"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Team Body"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+
+
+@media screen and (max-width: 1440px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+{% endstylesheet %}
+

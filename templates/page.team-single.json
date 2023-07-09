@@ -17,10 +17,18 @@
         "title": "{{ page.title }}",
         "sup_title": "TEAM"
       }
+    },
+    "b07128f5-1671-4581-aa6f-3aa01705aea4": {
+      "type": "body-team",
+      "settings": {
+        "sup_title": "TEAM",
+        "title": "{{ page.title }}"
+      }
     }
   },
   "order": [
     "main",
-    "8c9479f5-2eeb-49ad-8082-d6f14230a5ed"
+    "8c9479f5-2eeb-49ad-8082-d6f14230a5ed",
+    "b07128f5-1671-4581-aa6f-3aa01705aea4"
   ]
 }

@@ -1,13 +1,33 @@
 <div class="section-team-head">
-    <div class="">
+    <div class="team-head">
 
-        <div class="">
-            <span class="sup-text">{{ section.settings.sup_title }}</span>
-            <h1>{{ section.settings.title }}</h1>
+        <div class="team-head__content">
+            <div class="team-head__infos">
+                <span class="sup-text">{{ section.settings.sup_title }}</span>
+                <h1>{{ section.settings.title }}</h1>
+            </div>
+            <div class="team-head__image">
+                {% if page.metafields.accentuate.team_member_headshot[0].src != blank %}
+                    <img src="{{ page.metafields.accentuate.team_member_headshot[0].src }}" alt="{{ section.settings.title | strip_html }}">
+                {% else %}
+                    <img src="{{ section.settings.image_picker }}" alt="{{ section.settings.title | strip_html }}">
+                {% endif %}
+            </div>
         </div>
 
-        <div class="">
-            
+        <div class="team-head__video">
+            <video
+                autoplay="true" 
+                muted="true" 
+                loop="true" 
+                playsinline="true"
+            >
+                {% if page.metafields.accentuate.banner_video != blank %}
+                    <source src="{{ page.metafields.accentuate.banner_video }}" type="video/mp4" />
+                {% else %}
+                    <source src="{{ section.settings.video.sources.url }}" type="video/mp4" />
+                {% endif %}
+            </video>
         </div>
 
     </div>
@@ -32,7 +52,14 @@
         {
             "type": "image_picker",
             "id": "image",
-            "label": "Image"
+            "label": "Image",
+            "info": "If team_member_headshot metafiled is not set"
+        },
+        {
+            "type": "video",
+            "id": "video",
+            "label": "Video",
+            "info": "If banner_video metafiled is not set"
         }
     ],
     "presets": [

@@ -29,12 +29,18 @@
       "type": "boards-team",
       "settings": {
       }
+    },
+    "6fd8fb31-f5ba-461c-affd-d89f8743fcad": {
+      "type": "youtube-team",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "8c9479f5-2eeb-49ad-8082-d6f14230a5ed",
     "b07128f5-1671-4581-aa6f-3aa01705aea4",
-    "5ad29c44-f6af-45b1-94c1-d08280e1256d"
+    "5ad29c44-f6af-45b1-94c1-d08280e1256d",
+    "6fd8fb31-f5ba-461c-affd-d89f8743fcad"
   ]
 }

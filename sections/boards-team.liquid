@@ -6,16 +6,16 @@
     <div class="section-team-boards">
         <div class="team-boards">
             {%- if gender -%}
-                <h3>Boards <span>{{ gender }}</span> rides:</h3>
+                <h3 class="strong">Boards <span>{{ gender }}</span> rides</h3>
             {% else %}
-                <h3>Boards:</h3>
+                <h3 class="strong">Boards:</h3>
             {%- endif -%}
             <div class="team-boards-content">
                 {%- for board in boards -%}
                 {% assign index = forloop.index | minus: 1 %}
                 <div class="team-boards-content__single">
                     <span>{{ page.metafields.team_profile.board_category[index] }}</span>
-                    <h4>{{ page.metafields.team_profile.board_title[index] }}</h4>
+                    <h4 class="strong">{{ page.metafields.team_profile.board_title[index] }}</h4>
                     <img src="{{ page.metafields.team_profile.board_image_url[index] }}">
                     <a href="{{ all_products[board].url }}" class="btn btn-primary">DISCOVER MORE</a>
                 </div>
@@ -37,11 +37,66 @@
 {% endschema %}
 
 {% stylesheet %}
+.section-team-boards {
+    background-image: url(/cdn/shop/files/000_GRID_PAPER_BG_1.png?v=1686394097);
+    background-repeat: repeat;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0 80px 0;
+}
+.team-boards {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.team-boards h3 {
+    color: #fff;
+    font-size: 80px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 30px 0; 
+}
+.team-boards-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.team-boards-content__single {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin: 30px 0;
+}
+.team-boards-content__single span,
+.team-boards-content__single h4 {
+    text-transform: uppercase;
+}
+.team-boards-content__single h4 {
+    font-size: 21px;
+}
 
-
-
-@media screen and (max-width: 768px) {
-
+.team-boards-content__single img {
+    width: 100%;
+    max-width: 275px;
+    margin: 20px 0 30px 0;
+}
+@media screen and (max-width: 1440px) {
+    .team-boards-content__single img {
+        max-width: 190px;
+    }
+    .team-boards-content__single .btn.btn-primary {
+        min-width: 240px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .team-boards-content__single {
+        width: 100%;
+    }
+    .team-boards h3 {
+        margin: 0 20px;
+    }
 }
 
 {% endstylesheet %}

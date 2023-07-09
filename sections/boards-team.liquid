@@ -1,0 +1,48 @@
+{%- liquid
+    assign gender = page.metafields.accentuate.gender
+    assign boards = page.metafields.team_profile.snowboard_product
+-%}
+{% if boards.size > 0 %}
+    <div class="section-team-boards">
+        <div class="team-boards">
+            {%- if gender -%}
+                <h3>Boards <span>{{ gender }}</span> rides:</h3>
+            {% else %}
+                <h3>Boards:</h3>
+            {%- endif -%}
+            <div class="team-boards-content">
+                {%- for board in boards -%}
+                {% assign index = forloop.index | minus: 1 %}
+                <div class="team-boards-content__single">
+                    <span>{{ page.metafields.team_profile.board_category[index] }}</span>
+                    <h4>{{ page.metafields.team_profile.board_title[index] }}</h4>
+                    <img src="{{ page.metafields.team_profile.board_image_url[index] }}">
+                    <a href="{{ all_products[board].url }}" class="btn btn-primary">DISCOVER MORE</a>
+                </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Team Boards",
+    "presets": [
+        {
+            "name": "Team Boards"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+
+
+@media screen and (max-width: 768px) {
+
+}
+
+{% endstylesheet %}
+

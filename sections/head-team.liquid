@@ -1,6 +1,17 @@
 <div class="section-team-head">
-    
+    <div class="">
 
+        <div class="">
+            <span class="sup-text">{{ section.settings.sup_title }}</span>
+            <h1>{{ section.settings.title }}</h1>
+        </div>
+
+        <div class="">
+            
+        </div>
+
+    </div>
+    
 </div>
 
 {% schema %}
@@ -11,6 +22,17 @@
             "type": "text",
             "id": "title",
             "label": "Title"
+        },
+        {
+            "type": "text",
+            "id": "sup_title",
+            "label": "Sup Title",
+            "default": "TEAM"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
         }
     ],
     "presets": [

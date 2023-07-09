@@ -5,7 +5,7 @@
       "settings": {
         "head_width": 100,
         "margin_top": 0,
-        "body_color": "#ffffff",
+        "body_color": "#121212",
         "enable_head": false,
         "title": "",
         "description": ""
@@ -14,7 +14,8 @@
     "8c9479f5-2eeb-49ad-8082-d6f14230a5ed": {
       "type": "head-team",
       "settings": {
-        "title": "{{ page.title }}"
+        "title": "{{ page.title }}",
+        "sup_title": "TEAM"
       }
     }
   },

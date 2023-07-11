@@ -32,6 +32,12 @@
       background-color: {{ section.settings.body_color }};
     }
   {% endif %}
+  {% if section.settings.footer_border %}
+    main#MainContent {
+      border-bottom: 1px solid #000;
+      padding-bottom: 60px;
+    }
+  {% endif %}
 </style>
 
 {% schema %}
@@ -58,6 +64,11 @@
       "id": "body_color",
       "label": "Body Color",
       "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "footer_border",
+      "label": "Footer Border"
     },
     {
       "type": "checkbox",

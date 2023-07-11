@@ -1,5 +1,11 @@
+{% if section.settings.boxed_small %} 
+    {% assign boxed_small_class = "boxed-small" %}
+{% else %}
+    {% assign boxed_small_class = "" %}
+{% endif %}
+
 <div class="section-paragraph-simple" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
-    <div class="paragraph-simple-content">
+    <div class="paragraph-simple-content {{boxed_small_class}}">
         <h2 class="paragraph-simple-content__title strong" style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
         <div class="paragraph-simple-content__paragraph" style="color: {{ section.settings.text_color }}">{{ section.settings.text }}</div>
     </div>
@@ -51,6 +57,11 @@
             "default": "#ffffff"
         },
         {
+            "type": "checkbox",
+            "id": "boxed_small",
+            "label": "Boxed Small"
+        },
+        {
             "type": "text",
             "id": "title",
             "label": "Title"
@@ -78,6 +89,10 @@ hl {
 .paragraph-simple-content {
     text-align: center;
     max-width: 1620px;
+    margin: 0 auto;
+}
+.paragraph-simple-content.boxed-small {
+    max-width: 960px;
     margin: 0 auto;
 }
 .paragraph-simple-content__title {

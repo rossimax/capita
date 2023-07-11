@@ -1,0 +1,52 @@
+{% assign video_desk = section.settings.video_desk | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+{% assign video_mob = section.settings.video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+
+<div class="section-hero-banner-video">
+    <div class="hero-banner-video">
+        <div class="hero-banner-video__desk">{{video_desk}}</div>
+        <div class="hero-banner-video__mob">{{video_mob}}</div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Hero Banner Video",
+    "settings": [
+        {
+            "type": "video",
+            "id": "video_desk",
+            "label": "Video Desk"
+        },
+        {
+            "type": "video",
+            "id": "video_mob",
+            "label": "Video Mob"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hero Banner Video"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+.hero-banner-video video {
+    width: 100%;
+}
+.hero-banner-video__mob {
+    display: none;
+}
+@media screen and (max-width: 991px) {
+    .hero-banner-video__mob {
+        display: block;
+    }
+    .hero-banner-video__desk {
+        display: none;
+    }
+}
+
+{% endstylesheet %}
+

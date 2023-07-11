@@ -1,0 +1,114 @@
+<div class="section-logo-cards">
+    <div class="logo-cards">
+
+        {% for block in section.blocks %}
+            <div class="single-card">
+                <div class="single-card__content">
+                    <img src="{{ block.settings.image | image_url: "master" }}" alt="{{ block.settings.title | strip_html }}">
+                    <h4 class="strong">{{ block.settings.title }}</h4>
+                    <div>{{ block.settings.description }}</div>
+                </div>
+                <div class="single-card__cta">
+                    <a class="strong"href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Logo Cards",
+    "blocks": [
+        {
+            "type": "cards",
+            "name": "Cards",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "description",
+                    "label": "Description"
+                },
+                {
+                    "type": "text",
+                    "id": "cta_text",
+                    "label": "CTA Text"
+                },
+                {
+                    "type": "url",
+                    "id": "cta_link",
+                    "label": "CTA Link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Logo Cards"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+.logo-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.single-card {
+    width: calc(33.3333% - 10px);
+    border: 1px solid #000;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.single-card__content {
+    padding: 40px 20px 20px 20px;
+}
+.single-card__content img {
+    width: 142px;
+    display:block;
+    margin: 0 auto 40px auto;
+}
+.single-card__content h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+.single-card__cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E2FF61;
+}
+.single-card__cta a {
+    width: 100%;
+    text-decoration: none;
+    padding: 36px 0;
+}
+@media screen and (max-width: 991px) {
+    .logo-cards {
+        margin: 0 20px;
+    }
+    .single-card {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+{% endstylesheet %}
+

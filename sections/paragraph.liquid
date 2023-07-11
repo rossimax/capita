@@ -4,7 +4,13 @@
     {% assign style_black = "" %}
 {% endif %}
 
-<div class="section-paragraph" style="background-image:url({{ section.settings.background_image | img_url: 'master' }}); {{style_black}}">
+{% if section.settings.background_image != blank %}
+    {% assign background_image = "background-image:url(" | append: section.settings.background_image | img_url: 'master' | append: ");" %}
+{% else %}
+    {% assign background_image = "" %}
+{% endif %}
+
+<div class="section-paragraph" style="{{background_image}} {{style_black}}">
     <div class="paragraph-content">
         <div class="paragraph-content__text">
             {{ section.settings.text }}

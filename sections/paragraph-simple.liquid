@@ -1,14 +1,49 @@
-<div class="section-paragraph-simple">
+<div class="section-paragraph-simple" style="padding-top: {{ section.settings.padding_top }}px;padding-top: {{ section.settings.padding_bottom }}px;">
     <div class="paragraph-simple-content">
         <h2 class="paragraph-simple-content__title strong" style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
         <div class="paragraph-simple-content__paragraph" style="color: {{ section.settings.text_color }}">{{ section.settings.text }}</div>
     </div>
 </div>
 
+<style>
+    .paragraph-simple-content__title {
+        font-size: {{ section.settings.font_size_title }}px;
+    }
+    @media screen and (max-width: 768px) {
+        .paragraph-simple-content__title {
+            font-size: {{ section.settings.font_size_title_mob }}px;
+        }
+    }
+</style>
+
 {% schema %}
   {
     "name": "Paragraph Simple",
     "settings": [
+        {
+            "type": "number",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": 20
+        },
+        {
+            "type": "number",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": 20
+        },
+        {
+            "type": "number",
+            "id": "font_size_title",
+            "label": "Font Size Title",
+            "default": 80
+        },
+        {
+            "type": "number",
+            "id": "font_size_title_mob",
+            "label": "Font Size Title Mob",
+            "default": 36
+        },
         {
             "type": "color",
             "id": "text_color",
@@ -37,14 +72,13 @@
 
 {% stylesheet %}
 
-.section-paragraph-simple {
-    padding: 20px;
+hl {
+    background: #e2ff61;
 }
 .paragraph-simple-content {
     text-align: center;
 }
 .paragraph-simple-content__title {
-    font-size: 80px;
     text-align: center;
     line-height: 1;
     margin-top: 20px;
@@ -59,7 +93,6 @@
 
 @media screen and (max-width: 768px) {
     .paragraph-simple-content__title {
-        font-size: 36px;
         margin-top: 20px;
     }
 }

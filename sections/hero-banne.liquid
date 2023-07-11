@@ -1,0 +1,281 @@
+{% assign image_desk = section.settings.image_desk | img_url: 'master' %}
+{% assign image_mob = section.settings.image_mob | img_url: 'master' %}
+
+{% assign video_desk = section.settings.video_desk | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+{% assign video_mob = section.settings.video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+
+{% if section.settings.title_position == "with_content" %}
+  {% assign title_position = "with-content"%}
+{% elsif section.settings.title_position == "top_left" %}
+  {% assign title_position = "top-left"%}
+{% endif %}
+
+{% if section.settings.content_position == "bottom_center" %}
+  {% assign content_position = "bottom-center"%}
+{% elsif section.settings.content_position == "bottom_outside" %}
+  {% assign content_position = "bottom-outside"%}
+{% endif %}
+
+
+<div class="section-hero-banner {{title_position}} {{content_position}}">
+
+  {% if section.settings.shadow == "yes_full" %}
+    <div class="full-shadow"></div>
+  {% endif %}
+
+  <h2 class="hero-banner-content__title hero-banner-content__title---top-left">{{section.settings.title}}</h2>
+
+  {% if section.settings.image_desk %}
+    <div class="hero-banner-image--desk"><img src="{{image_desk}}" alt="union"></div>
+    <div class="hero-banner-image--mob"><img src="{{image_mob}}" alt="union"></div>
+  {% else %}
+    <div class="hero-banner-video--desk">{{video_desk}}</div>
+    <div class="hero-banner-video--mob">{{video_mob}}</div>
+  {% endif %}
+  <div class="hero-banner-content">
+    <h2 class="hero-banner-content__title">{{section.settings.title}}</h2>
+    <h4 class="hero-banner-content__subtitle">{{section.settings.sub_title}}</h4>
+    <a class="hero-banner-content__cta" href="{{section.settings.button_link}}">{{section.settings.button_label}}</a>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": {
+    "en": "Hero Banner"
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_desk",
+      "label": "Image Desk",
+      "info": "If empty use video"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mob",
+      "label": "Image Mob",
+      "info": "If empty use video"
+    },
+    {
+      "type": "video",
+      "id": "video_desk",
+      "label": "Video Desk"
+    },
+    {
+      "type": "video",
+      "id": "video_mob",
+      "label": "Video Mob"
+    },
+    {
+      "type": "select",
+      "id": "shadow",
+      "label": "Shadow",
+      "options": [
+          {
+          "value": "yes_full",
+          "label": "Yes Full"
+          },
+          {
+          "value": "no",
+          "label": "No"
+          }
+      ],
+      "default": "no"
+    },
+    {
+      "type": "select",
+      "id": "title_position",
+      "label": "Title position",
+      "options": [
+          {
+          "value": "with_content",
+          "label": "With content"
+          },
+          {
+            "value": "top_left",
+            "label": "Top Left"
+          }
+      ],
+      "default": "with_content"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Content position",
+      "options": [
+          {
+          "value": "bottom_center",
+          "label": "Bottom Center"
+          },
+          {
+            "value": "bottom_outside",
+            "label": "Bottom Outside"
+          }
+      ],
+      "default": "bottom_center"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "Sub Title"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+{% style %}
+
+.section-hero-banner {
+    position: relative;
+    width: 100%;
+    margin-top: -60px;
+}
+.section-hero-banner .full-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.section-hero-banner.with-content .hero-banner-content__title---top-left {
+  display: none;
+}
+.section-hero-banner.top-left .hero-banner-content .hero-banner-content__title {
+  display: none;
+}
+.hero-banner-content__title.hero-banner-content__title---top-left {
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    text-align: left;
+}
+
+.hero-banner-video--desk,
+.hero-banner-image--desk {
+    width: 100%;
+}
+.hero-banner-video--desk video,
+.hero-banner-image--desk img {
+    width: 100%;
+}
+.hero-banner-video--mob,
+.hero-banner-image--mob {
+    display: none;
+}
+.hero-banner-video--mob video,
+.hero-banner-image--mob img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.hero-banner-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding: 0 20px;
+}
+.hero-banner-content__title {
+    font-size: 44px;
+    line-height: 1;
+    margin-bottom: 15px;
+    display: block;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1;
+    font-family: Gotham;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: none;
+    letter-spacing: 0;
+}
+.hero-banner-content__subtitle {
+    font-size: 21px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1;
+    font-family: Gotham;
+    margin-bottom: 0;
+    color: #fff;
+}
+.hero-banner-content__cta {
+    text-align: center;
+    margin: 30px auto 20px;
+    display: block;
+    max-width: fit-content;
+    background: #fff;
+    color: #000;
+    border-radius: 30px;
+    text-transform: none;
+    font-weight: 500!important;
+    font-family: Gotham;
+    padding: 10px 50px;
+    line-height: 1.8;
+    font-size: 13px;
+    text-transform: uppercase;
+    max-width: -moz-fit-content;
+}
+.section-hero-banner.bottom-outside .hero-banner-content {
+    position: relative;
+    left: unset;
+    top: unset;
+    transform: unset;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #fff;
+    color: #000;
+}
+.section-hero-banner.bottom-outside .hero-banner-content h2,
+.section-hero-banner.bottom-outside .hero-banner-content h4 {
+    color: #000;
+}
+.section-hero-banner.bottom-outside .hero-banner-content a.hero-banner-content__cta {
+    color: #fff;
+    background: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-banner-video--mob,
+    .hero-banner-image--mob {
+        display: block;
+    } 
+    .hero-banner-video--desk,
+    .hero-banner-image--desk {
+        display: none;
+    } 
+    .section-hero-banner .hero-banner-content__title---top-left {
+      display: none;
+    }
+    .section-hero-banner.top-left .hero-banner-content .hero-banner-content__title {
+      display: block;
+    }
+}
+
+{% endstyle %}

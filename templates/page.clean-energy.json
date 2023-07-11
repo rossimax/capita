@@ -33,7 +33,8 @@
         "padding_bottom": 0,
         "font_size_title": 60,
         "font_size_title_mob": 36,
-        "text_color": "#000000",
+        "background_color": "#000000",
+        "text_color": "#ffffff",
         "boxed_small": false,
         "title": "A one-of-a-kind marvel in snowboard production, The Mothership is the most <hl>technologically advanced<\/hl> and <hl>environmentally responsible<\/hl> manufacturing facility in the industry.",
         "text": ""
@@ -145,6 +146,7 @@
         "padding_bottom": 80,
         "font_size_title": 60,
         "font_size_title_mob": 20,
+        "background_color": "#ffffff",
         "text_color": "#000000",
         "boxed_small": true,
         "title": "Our dedication to building the world’s best snowboards, with the most efficient and sustainable process, is galvanized by the company mantra -<br> <hl>EVERYTHING IS POSSIBLE.<\/hl>",

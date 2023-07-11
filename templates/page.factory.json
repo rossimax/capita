@@ -152,6 +152,13 @@
         "title": "Our dedication to building the world’s best snowboards, with the most efficient and sustainable process, is galvanized by the company mantra - <br><hl>EVERYTHING IS POSSIBLE.<\/hl>",
         "text": ""
       }
+    },
+    "c9160b3f-8d26-484a-816a-92a791907146": {
+      "type": "video",
+      "settings": {
+        "video_desk": "shopify:\/\/files\/videos\/HIMARI - VIDEO BANNER.mp4",
+        "video_mob": "shopify:\/\/files\/videos\/EVERYTHING IS POSSIBLE BANNER.mp4"
+      }
     }
   },
   "order": [
@@ -161,6 +168,7 @@
     "1b00d31a-2214-47c2-b764-c19a557b11e1",
     "e8735002-5a92-4a60-85e1-c880063d22c6",
     "0304082a-98f7-4665-a2cd-7ea2cfbc7043",
-    "a0611009-f554-41eb-b10d-8c89de6f0e0c"
+    "a0611009-f554-41eb-b10d-8c89de6f0e0c",
+    "c9160b3f-8d26-484a-816a-92a791907146"
   ]
 }

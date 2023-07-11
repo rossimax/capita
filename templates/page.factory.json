@@ -140,7 +140,7 @@
         "shadow": "no",
         "title_position": "top_left",
         "content_position": "bottom_center",
-        "title": "Everythingis possible.",
+        "title": "Everything<br>is possible.",
         "sub_title": "",
         "button_label": "",
         "button_link": ""
@@ -155,7 +155,7 @@
         "font_size_title_mob": 20,
         "text_color": "#000000",
         "boxed_small": true,
-        "title": "Our dedication to building the world’s best snowboards, with the most efficient and sustainable process, is galvanized by the company mantra - <hl>EVERYTHING IS POSSIBLE.<\/hl>",
+        "title": "Our dedication to building the world’s best snowboards, with the most efficient and sustainable process, is galvanized by the company mantra - EVERYTHING IS POSSIBLE.",
         "text": ""
       }
     },

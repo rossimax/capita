@@ -5,11 +5,11 @@
             <div class="single-card">
                 <div class="single-card__content">
                     <img src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.title | strip_html }}">
-                    <h4 class="single-card__content__title strong">{{ block.settings.title }}</h4>
+                    <h4 class="single-card__content__title medium">{{ block.settings.title }}</h4>
                     <div class="single-card__content__description">{{ block.settings.description }}</div>
                 </div>
                 <div class="single-card__cta">
-                    <a class="strong"href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
+                    <a class="medium" href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
                 </div>
             </div>
         {% endfor %}
@@ -131,12 +131,32 @@
 }
 @media screen and (max-width: 991px) {
     .logo-cards {
-        margin: 0 20px;
+        margin: 0 20px 20px 20px;
     }
     .single-card {
         width: 100%;
         margin-bottom: 30px;
     }
+    .section-logo-cards {
+        padding: 0 !important;
+    }
+    .single-card__content__title {
+        font-size: 21px;
+    }
+    .single-card__content__description {
+        font-size: 16px;
+    }
+    .single-card__content img {
+        width: 96px;
+    }
+    .single-card__content {
+        min-height: 400px;
+    }
+    .single-card__cta a {
+        padding: 14px 0;
+        font-size: 16px;
+    }
+
 }
 
 {% endstylesheet %}

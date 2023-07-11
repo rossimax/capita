@@ -4,21 +4,26 @@
       "type": "main-page",
       "settings": {
         "head_width": 100,
-        "margin_top": 0,
+        "margin_top": 110,
         "body_color": "#ffffff",
         "footer_border": true,
         "enable_head": false,
-        "title": "",
+        "title": "We produce<br>our own<br>clean energy.",
         "description": ""
       }
     },
-    "e3d46b94-7cae-4745-a1ee-8ed3f60491b5": {
-      "type": "video",
+    "0304082a-98f7-4665-a2cd-7ea2cfbc7043": {
+      "type": "hero-banner-secondary",
       "settings": {
-        "boxed": false,
-        "title": "",
-        "video_desk": "shopify:\/\/files\/videos\/EXTERIOR SHOTS BANNER.mp4",
-        "video_mob": "shopify:\/\/files\/videos\/EXTERIOR SHOTS BANNER.mp4"
+        "image_desk": "shopify:\/\/shop_images\/Group_499.jpg",
+        "image_mob": "shopify:\/\/shop_images\/Asset_5_1.jpg",
+        "shadow": "no",
+        "title_position": "top_left",
+        "content_position": "bottom_center",
+        "title": "We produce<br>\nour own<br>\nclean energy.",
+        "sub_title": "",
+        "button_label": "",
+        "button_link": ""
       }
     },
     "6f9f2d79-f9c0-4656-b9af-709522a45887": {
@@ -133,20 +138,6 @@
         "description": "Since its opening in 2016, The CAPiTA Mothership has been recognized for its world-class production with countless industry test accolades and prestigious product design awards."
       }
     },
-    "0304082a-98f7-4665-a2cd-7ea2cfbc7043": {
-      "type": "hero-banner-secondary",
-      "settings": {
-        "image_desk": "shopify:\/\/shop_images\/Group_499.jpg",
-        "image_mob": "shopify:\/\/shop_images\/Asset_5_1.jpg",
-        "shadow": "no",
-        "title_position": "top_left",
-        "content_position": "bottom_center",
-        "title": "Everything<br>is possible.",
-        "sub_title": "",
-        "button_label": "",
-        "button_link": ""
-      }
-    },
     "a0611009-f554-41eb-b10d-8c89de6f0e0c": {
       "type": "paragraph-simple",
       "settings": {
@@ -172,11 +163,10 @@
   },
   "order": [
     "main",
-    "e3d46b94-7cae-4745-a1ee-8ed3f60491b5",
+    "0304082a-98f7-4665-a2cd-7ea2cfbc7043",
     "6f9f2d79-f9c0-4656-b9af-709522a45887",
     "1b00d31a-2214-47c2-b764-c19a557b11e1",
     "e8735002-5a92-4a60-85e1-c880063d22c6",
-    "0304082a-98f7-4665-a2cd-7ea2cfbc7043",
     "a0611009-f554-41eb-b10d-8c89de6f0e0c",
     "c9160b3f-8d26-484a-816a-92a791907146"
   ]

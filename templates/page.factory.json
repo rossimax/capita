@@ -6,6 +6,7 @@
         "head_width": 100,
         "margin_top": 0,
         "body_color": "#ffffff",
+        "footer_border": true,
         "enable_head": false,
         "title": "",
         "description": ""

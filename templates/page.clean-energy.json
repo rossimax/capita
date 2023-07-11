@@ -1,0 +1,173 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "head_width": 100,
+        "margin_top": 110,
+        "body_color": "#ffffff",
+        "footer_border": true,
+        "enable_head": false,
+        "title": "We produce<br>our own<br>clean energy.",
+        "description": ""
+      }
+    },
+    "0304082a-98f7-4665-a2cd-7ea2cfbc7043": {
+      "type": "hero-banner-secondary",
+      "settings": {
+        "image_desk": "shopify:\/\/shop_images\/Asset_6_1.jpg",
+        "image_mob": "shopify:\/\/shop_images\/Asset_6_1_1.jpg",
+        "shadow": "yes_full",
+        "title_position": "top_left",
+        "content_position": "bottom_center",
+        "title": "We produce<br>\nour own<br>\nclean energy.",
+        "sub_title": "",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "6f9f2d79-f9c0-4656-b9af-709522a45887": {
+      "type": "paragraph-simple",
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "font_size_title": 60,
+        "font_size_title_mob": 36,
+        "text_color": "#000000",
+        "boxed_small": false,
+        "title": "A one-of-a-kind marvel in snowboard production, The Mothership is the most <hl>technologically advanced<\/hl> and <hl>environmentally responsible<\/hl> manufacturing facility in the industry.",
+        "text": ""
+      }
+    },
+    "1b00d31a-2214-47c2-b764-c19a557b11e1": {
+      "type": "logo-cards",
+      "blocks": {
+        "cf8ae26c-8e17-4abc-94fb-613d98faa83a": {
+          "type": "cards",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PRODUCT_PAGE.jpg",
+            "title": "Clean Energy Manufacturing",
+            "description": "The CAPiTA Mothership is the world’s first snowboard manufacturing facility powered by 100% clean energy. At CAPiTA we are not only driven to make the world’s best snowboards, but to produce in the most responsible manner possible.",
+            "cta_text": "KNOW MORE",
+            "cta_link": ""
+          }
+        },
+        "0bdde7b0-61e7-4e96-bb11-f39049944fd2": {
+          "type": "cards",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PRODUCT_PAGE_1.jpg",
+            "title": "Technology Development",
+            "description": "Nobody else in the snowboard industry has invested into the development of new processes and technology like The Mothership. We are constantly pushing to improve our manufacturing processes to continue to progress the definition of what the world’s best snowboards are.",
+            "cta_text": "KNOW MORE",
+            "cta_link": ""
+          }
+        },
+        "c254af81-585c-4636-854b-192aa556710c": {
+          "type": "cards",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PRODUCT_PAGE_2.jpg",
+            "title": "How Snowboards Are Made",
+            "description": "The Mothership’s unique location in the southern border region of Austria allows for extraordinary access to key material suppliers, allowing production to minimize carbon intensive global freight shipping of raw materials and maximize contiguous delivery. This not only supports local businesses but also results in less energy used and less emissions released along the supply chain.",
+            "cta_text": "KNOW MORE",
+            "cta_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "cf8ae26c-8e17-4abc-94fb-613d98faa83a",
+        "0bdde7b0-61e7-4e96-bb11-f39049944fd2",
+        "c254af81-585c-4636-854b-192aa556710c"
+      ],
+      "settings": {
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "e8735002-5a92-4a60-85e1-c880063d22c6": {
+      "type": "logo-list",
+      "blocks": {
+        "f580cd57-a328-42ce-ae29-3cdeff35298e": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_904.png"
+          }
+        },
+        "22093b51-8735-4b7f-b291-0048909b7edb": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_905.png"
+          }
+        },
+        "3098e62d-c394-4d19-87e4-916227f9b42b": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_906.png"
+          }
+        },
+        "acc88b38-0a2b-4f2e-a5dc-d6f8a97e2eed": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_907.png"
+          }
+        },
+        "2cd8803c-71e2-4b38-9192-d3916f24a114": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_908.png"
+          }
+        },
+        "680387cc-4d5c-41a2-8c10-2767490245ac": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_909.png"
+          }
+        }
+      },
+      "block_order": [
+        "f580cd57-a328-42ce-ae29-3cdeff35298e",
+        "22093b51-8735-4b7f-b291-0048909b7edb",
+        "3098e62d-c394-4d19-87e4-916227f9b42b",
+        "acc88b38-0a2b-4f2e-a5dc-d6f8a97e2eed",
+        "2cd8803c-71e2-4b38-9192-d3916f24a114",
+        "680387cc-4d5c-41a2-8c10-2767490245ac"
+      ],
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 100,
+        "title": "World-Class Production",
+        "description": "Since its opening in 2016, The CAPiTA Mothership has been recognized for its world-class production with countless industry test accolades and prestigious product design awards."
+      }
+    },
+    "a0611009-f554-41eb-b10d-8c89de6f0e0c": {
+      "type": "paragraph-simple",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "font_size_title": 60,
+        "font_size_title_mob": 20,
+        "text_color": "#000000",
+        "boxed_small": true,
+        "title": "Our dedication to building the world’s best snowboards, with the most efficient and sustainable process, is galvanized by the company mantra -<br> <hl>EVERYTHING IS POSSIBLE.<\/hl>",
+        "text": ""
+      }
+    },
+    "c9160b3f-8d26-484a-816a-92a791907146": {
+      "type": "video",
+      "settings": {
+        "boxed": true,
+        "title": "Clean Energy Snowboards Production",
+        "video_desk": "shopify:\/\/files\/videos\/HIMARI - VIDEO BANNER.mp4",
+        "video_mob": "shopify:\/\/files\/videos\/EVERYTHING IS POSSIBLE BANNER.mp4"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0304082a-98f7-4665-a2cd-7ea2cfbc7043",
+    "6f9f2d79-f9c0-4656-b9af-709522a45887",
+    "1b00d31a-2214-47c2-b764-c19a557b11e1",
+    "e8735002-5a92-4a60-85e1-c880063d22c6",
+    "a0611009-f554-41eb-b10d-8c89de6f0e0c",
+    "c9160b3f-8d26-484a-816a-92a791907146"
+  ]
+}

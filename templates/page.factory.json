@@ -70,6 +70,8 @@
         "c254af81-585c-4636-854b-192aa556710c"
       ],
       "settings": {
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "e8735002-5a92-4a60-85e1-c880063d22c6": {

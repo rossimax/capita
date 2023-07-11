@@ -1,14 +1,14 @@
 <div class="section-logo-list">
     <div class="logo-list">
-        <h2>{{ section.settings.title }}</h2>
+        <h2 class="logo-list__title strong">{{ section.settings.title }}</h2>
         <div class="logo-list__content">
             {% for block in section.blocks %}
                 <div class="single-logo">
-                    <img src="{{ block.settings.image | image_url: "master" }}" alt="{{ block.settings.title | strip_html }}">
+                    <img src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.title | strip_html }}">
                 </div>
             {% endfor %}
         </div>
-        <div>{{ section.settings.description }}</div>
+        <div class="logo-list__description">{{ section.settings.description }}</div>
     </div>
 </div>
 
@@ -59,18 +59,23 @@
     margin: 50px auto 70px auto;
     color: #fff;
 }
-.logo-list h2 {
-    font-size: 60px;
-    color: #fff;
-}
 .logo-list__content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 60px;
 }
 .single-logo {
     height: 130px;
 }
-
+.logo-list__title {
+    font-size: 60px;
+    color: #fff;
+}
+.logo-list__description {
+    font-size: 24px;
+    line-height: 1;
+}
 {% endstylesheet %}
 

@@ -91,8 +91,11 @@
 }
 .paragraph-simple-content__paragraph {
     margin: 40px auto 0 auto;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 1;
+}
+.paragraph-simple-content__paragraph p {
+    font-size: 24px;
 }
 
 @media screen and (max-width: 768px) {
@@ -102,7 +105,10 @@
     .section-paragraph-simple {
         padding: 40px 20px !important;
     }
-    
+    .paragraph-simple-content__paragraph,
+    .paragraph-simple-content__paragraph p {
+        font-size: 16px;
+    }
 }
 
 {% endstylesheet %}

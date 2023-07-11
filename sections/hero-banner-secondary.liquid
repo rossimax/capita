@@ -17,25 +17,25 @@
 {% endif %}
 
 
-<div class="section-hero-banner {{title_position}} {{content_position}}">
+<div class="section-hero-banner-secondary {{title_position}} {{content_position}}">
 
   {% if section.settings.shadow == "yes_full" %}
     <div class="full-shadow"></div>
   {% endif %}
 
-  <h2 class="hero-banner-content__title hero-banner-content__title---top-left">{{section.settings.title}}</h2>
+  <h2 class="hero-banner-secondary-content__title hero-banner-secondary-content__title---top-left strong">{{section.settings.title}}</h2>
 
   {% if section.settings.image_desk %}
-    <div class="hero-banner-image--desk"><img src="{{image_desk}}" alt="union"></div>
-    <div class="hero-banner-image--mob"><img src="{{image_mob}}" alt="union"></div>
+    <div class="hero-banner-secondary-image--desk"><img src="{{image_desk}}" alt="union"></div>
+    <div class="hero-banner-secondary-image--mob"><img src="{{image_mob}}" alt="union"></div>
   {% else %}
-    <div class="hero-banner-video--desk">{{video_desk}}</div>
-    <div class="hero-banner-video--mob">{{video_mob}}</div>
+    <div class="hero-banner-secondary-video--desk">{{video_desk}}</div>
+    <div class="hero-banner-secondary-video--mob">{{video_mob}}</div>
   {% endif %}
-  <div class="hero-banner-content">
-    <h2 class="hero-banner-content__title">{{section.settings.title}}</h2>
-    <h4 class="hero-banner-content__subtitle">{{section.settings.sub_title}}</h4>
-    <a class="hero-banner-content__cta" href="{{section.settings.button_link}}">{{section.settings.button_label}}</a>
+  <div class="hero-banner-secondary-content">
+    <h2 class="hero-banner-secondary-content__title strong">{{section.settings.title}}</h2>
+    <h4 class="hero-banner-secondary-content__subtitle">{{section.settings.sub_title}}</h4>
+    <a class="hero-banner-secondary-content__cta" href="{{section.settings.button_link}}">{{section.settings.button_label}}</a>
   </div>
 </div>
 
@@ -149,12 +149,12 @@
 
 {% style %}
 
-.section-hero-banner {
+.section-hero-banner-secondary {
     position: relative;
     width: 100%;
     margin-top: -60px;
 }
-.section-hero-banner .full-shadow {
+.section-hero-banner-secondary .full-shadow {
   position: absolute;
   top: 0;
   left: 0;
@@ -162,38 +162,38 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
-.section-hero-banner.with-content .hero-banner-content__title---top-left {
+.section-hero-banner-secondary.with-content .hero-banner-secondary-content__title---top-left {
   display: none;
 }
-.section-hero-banner.top-left .hero-banner-content .hero-banner-content__title {
+.section-hero-banner-secondary.top-left .hero-banner-secondary-content .hero-banner-secondary-content__title {
   display: none;
 }
-.hero-banner-content__title.hero-banner-content__title---top-left {
+.hero-banner-secondary-content__title.hero-banner-secondary-content__title---top-left {
     position: absolute;
     top: 100px;
     left: 40px;
     text-align: left;
 }
 
-.hero-banner-video--desk,
-.hero-banner-image--desk {
+.hero-banner-secondary-video--desk,
+.hero-banner-secondary-image--desk {
     width: 100%;
 }
-.hero-banner-video--desk video,
-.hero-banner-image--desk img {
+.hero-banner-secondary-video--desk video,
+.hero-banner-secondary-image--desk img {
     width: 100%;
 }
-.hero-banner-video--mob,
-.hero-banner-image--mob {
+.hero-banner-secondary-video--mob,
+.hero-banner-secondary-image--mob {
     display: none;
 }
-.hero-banner-video--mob video,
-.hero-banner-image--mob img {
+.hero-banner-secondary-video--mob video,
+.hero-banner-secondary-image--mob img {
     width: 100%;
     height: 100%;
     display: block;
 }
-.hero-banner-content {
+.hero-banner-secondary-content {
     position: absolute;
     top: 70%;
     left: 50%;
@@ -201,27 +201,26 @@
     width: 100%;
     padding: 0 20px;
 }
-.hero-banner-content__title {
-    font-size: 44px;
+.hero-banner-secondary-content__title {
+    font-size: 80px;
     line-height: 1;
     margin-bottom: 15px;
     display: block;
     text-align: center;
     line-height: 1;
-    font-weight: 600;
     margin-bottom: 10px;
     color: #fff;
     text-transform: none;
     letter-spacing: 0;
 }
-.hero-banner-content__subtitle {
+.hero-banner-secondary-content__subtitle {
     font-size: 21px;
     text-align: center;
     line-height: 1;
     margin-bottom: 0;
     color: #fff;
 }
-.hero-banner-content__cta {
+.hero-banner-secondary-content__cta {
     text-align: center;
     margin: 30px auto 20px;
     display: block;
@@ -236,7 +235,7 @@
     text-transform: uppercase;
     max-width: -moz-fit-content;
 }
-.section-hero-banner.bottom-outside .hero-banner-content {
+.section-hero-banner-secondary.bottom-outside .hero-banner-secondary-content {
     position: relative;
     left: unset;
     top: unset;
@@ -246,28 +245,31 @@
     background: #fff;
     color: #000;
 }
-.section-hero-banner.bottom-outside .hero-banner-content h2,
-.section-hero-banner.bottom-outside .hero-banner-content h4 {
+.section-hero-banner-secondary.bottom-outside .hero-banner-secondary-content h2,
+.section-hero-banner-secondary.bottom-outside .hero-banner-secondary-content h4 {
     color: #000;
 }
-.section-hero-banner.bottom-outside .hero-banner-content a.hero-banner-content__cta {
+.section-hero-banner-secondary.bottom-outside .hero-banner-secondary-content a.hero-banner-secondary-content__cta {
     color: #fff;
     background: #000;
 }
 
 @media screen and (max-width: 768px) {
-    .hero-banner-video--mob,
-    .hero-banner-image--mob {
+    .hero-banner-secondary-content__title {
+      font-size: 36px;
+    }
+    .hero-banner-secondary-video--mob,
+    .hero-banner-secondary-image--mob {
         display: block;
     } 
-    .hero-banner-video--desk,
-    .hero-banner-image--desk {
+    .hero-banner-secondary-video--desk,
+    .hero-banner-secondary-image--desk {
         display: none;
     } 
-    .section-hero-banner .hero-banner-content__title---top-left {
+    .section-hero-banner-secondary .hero-banner-secondary-content__title---top-left {
       display: none;
     }
-    .section-hero-banner.top-left .hero-banner-content .hero-banner-content__title {
+    .section-hero-banner-secondary.top-left .hero-banner-secondary-content .hero-banner-secondary-content__title {
       display: block;
     }
 }

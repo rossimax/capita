@@ -14,6 +14,8 @@
     "e3d46b94-7cae-4745-a1ee-8ed3f60491b5": {
       "type": "video",
       "settings": {
+        "boxed": false,
+        "title": "",
         "video_desk": "shopify:\/\/files\/videos\/EXTERIOR SHOTS BANNER.mp4",
         "video_mob": "shopify:\/\/files\/videos\/EXTERIOR SHOTS BANNER.mp4"
       }
@@ -156,6 +158,8 @@
     "c9160b3f-8d26-484a-816a-92a791907146": {
       "type": "video",
       "settings": {
+        "boxed": true,
+        "title": "Clean Energy Snowboards Production",
         "video_desk": "shopify:\/\/files\/videos\/HIMARI - VIDEO BANNER.mp4",
         "video_mob": "shopify:\/\/files\/videos\/EVERYTHING IS POSSIBLE BANNER.mp4"
       }

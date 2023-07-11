@@ -378,12 +378,11 @@ main.template-payments {
         color: #fff;
         font-family: 'Calibre-Bold', sans-serif;
         font-size: 100px;
+        line-height: 1;
     }
     .pdp-head-image img {
         width: 100%;
-    }
-    p.c-product-info__description {
-        line-height: 1.5;
+        max-height: 650px;
     }
     .cart-qnt-btn-minus.disable,
     .cart-qnt-btn-plus.disabled {

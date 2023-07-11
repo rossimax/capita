@@ -1,11 +1,12 @@
 <div class="c-product-info">
     <div class="c-product-info__top">
         <span class="c-product-info__categories">{{ product.metafields.snowboard_info.snowboard_tags }}</span>
-        <h2 class="c-product-info__name">{{ product.title }}</h2>
-        <span class="c-product-info__price">{{ product.price | money_with_currency }}</span>
-        <p class="c-product-info__description">{{ product.metafields.snowboard_info.rider_type }}</p>
+        <h2 class="c-product-info__name strong">{{ product.title }}</h2>
+        <span class="c-product-info__price medium">{{ product.price | money }}</span>
+        <div style="margin-top: 5px;">or 4 interest-free installments of {{ product.price | divided_by: 4 | money }} by | <img style="display:inline;" width="75px" src="{{ 'afterpay-logo.png' | asset_url }}" alt="Afterpay"></div>
+        <p class="c-product-info__description medium">{{ product.metafields.snowboard_info.rider_type }}</p>
+        <div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>
 
-            
            {% comment %} form 'product', product, class:form_classes, novalidate: 'validate', data-product-form: ''
              {% endcomment %}
             <div class="c-product-info-form">
@@ -68,9 +69,9 @@
 
               </div>
              {% comment %} {% endform %}  {% endcomment %}
+             <span class="c-product-info__shipping medium"><u>Free shipping</u> for orders over 100$ <u>30 days return</u></span>
             </div>
 
-            <span class="c-product-info__shipping"><u>Free shipping</u> for orders over 100$ <u>30 days return</u></span>
     </div>
 </div>
 

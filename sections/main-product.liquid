@@ -268,14 +268,12 @@
           </div>
       </div>
       <div class="c-product-tech__dx">
-          <div class="c-product-tech__story"><span class="c-product-tech__subtitle">tech story</span><span
-                  class="c-product-tech__title">{{ product.title }}</span>
+          <div class="c-product-tech__story"><span class="c-product-tech__subtitle">tech story</span><span class="c-product-tech__title">{{ product.title }}</span>
               <div class="c-product-tech__text">
                   {{ product.metafields.snowboard_info.snowboard_description }}
               </div>
           </div>
-          <div class="c-product-tech__story"><span class="c-product-tech__subtitle">camber</span><span
-                  class="c-product-tech__title"{{ product.metafields.snowboard_info.camber_type }}</span>
+          <div class="c-product-tech__story"><span class="c-product-tech__subtitle">camber</span><span class="c-product-tech__title">{{ product.metafields.snowboard_info.camber_type }}</span>
               <div class="c-product-tech__text">
                   {{ product.metafields.snowboard_info.camber_description }}
               </div>
@@ -407,6 +405,8 @@
     </div>
   </div>
 
+  {% include 'product-review' %}
+
   {%- if recommendations.performed -%}
     <div class="c-related-products js-related-products">
       <div class="u-container">
@@ -438,6 +438,33 @@
   {%- endif -%}
 </main>
 
+{% style %}
+p.c-product-info__description {
+    line-height: 1.2;
+}
+.c-product-info__reviews-stars {
+    margin: 30px 0;
+}
+span.spr-badge-caption {
+    font-weight: 600;
+    margin-left: 7px;
+    text-decoration: underline;
+}
+button.js-add-to-cart.c-product-info__add-to-cart {
+    margin-top: 70px;
+}
+.c-spec__value {
+    font-size: 21px;
+}
+.c-product-tech__video {
+    margin-top: 40px;
+}
+@media screen and (min-width: 75em) {
+  .c-product-tech__specs {
+      grid-gap: 30px;
+  }
+}
+{% endstyle %}
 
 {% javascript %}
 
@@ -453,7 +480,9 @@
     cartItemsLine: '.c-header-cart__line',
     cartItemsTot: '.c-cart-item__quantity-tot',
     cartSummary: '.c-header-cart__summary',
-    msgEmptyCart: '.msg-empty-cart'
+    msgEmptyCart: '.msg-empty-cart',
+    cartCount: '.js-cart-count',
+    cartInfoHidden: '#cart-info-hidden',
   };
 
   let productVariants = document.querySelectorAll(selectors.productVariants)
@@ -466,6 +495,8 @@
   let cartItemsTot = document.querySelectorAll(selectors.cartItemsTot)
   let cartSummary = document.querySelector(selectors.cartSummary)
   let msgEmptyCart = document.querySelector(selectors.msgEmptyCart)
+  let cartCount = document.querySelector(selectors.cartCount)
+  let cartInfoHidden = document.querySelector(selectors.cartInfoHidden)
 
   let itemList = { "items" : [], 'sections': 'cart-ajax' }
 
@@ -486,6 +517,8 @@
     window.onbeforeunload = function(e) {
         localStorage.setItem('scrollpos', window.scrollY);
     };
+
+
 
 
     productVariants.forEach((productVariant,i) => {
@@ -556,9 +589,9 @@
           return response.json();
         }).then(data => {
           
-          console.log(data); // prints HTML of the section 
-          console.log(data.total_price); // prints HTML of the section 
-          console.log(data.items); // prints HTML of the section 
+          console.log(data);
+          // console.log(data.total_price);
+          // console.log(data.items);
 
           // Reloat Cart Total
           let newTotal = (parseInt(data.total_price)).toFixed(2) / 100
@@ -593,12 +626,11 @@
               btnPlus.classList.remove("disabled")
               btnPlus.setAttribute("data-qnt", cartItem.quantity + 1)
             }
-
+            
           })
 
           // Re-enable btn variation
           cartBtnVariation.classList.remove("disable")
-
           
         }).catch((error) => {
           console.error('Error:', error);
@@ -675,12 +707,16 @@
         return response.json();
       }).then(data => {
 
-        console.log(data); // prints HTML of the section 
+        // console.log(data); // prints HTML of the section 
 
         let cartAjax = document.querySelector('#cart-ajax')
         cartAjax.innerHTML = ""
 
         console.log(data.items)
+        console.log(data.item_count)
+        
+        uploadCartCount(data.item_count)
+        resetCartHidden(data.items)
 
         data.items.forEach((cartItem,i) => {
 
@@ -759,9 +795,29 @@
       });
       return;
 
+    }
+
+    function uploadCartCount(count) {
+      if (parseInt(count) > 0) {
+        cartCount.innerHTML = count
+        cartCount.classList.remove("hide")
+      } else {
+        cartCount.innerHTML = ""
+        cartCount.classList.add("hide")
+      }
+    }
 
 
-
+    function resetCartHidden(cartItems) {
+      cartInfoHidden.innerHTML = ""
+      cartItems.forEach((cartItem,i) => {
+        let cartHiddenEl = document.createElement('span')
+        cartHiddenEl.setAttribute('class', 'c-cart-item');
+        cartHiddenEl.setAttribute('data-id', cartItem.id);
+        cartHiddenEl.setAttribute('data-limit', "99");
+        console.log(cartItem)
+        cartInfoHidden.append(cartHiddenEl)
+      })
     }
 
   })
@@ -775,3 +831,4 @@
 
 
 {% endjavascript %}
+

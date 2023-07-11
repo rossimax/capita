@@ -35,7 +35,9 @@
   <div class="hero-banner-secondary-content">
     <h2 class="hero-banner-secondary-content__title strong">{{section.settings.title}}</h2>
     <h4 class="hero-banner-secondary-content__subtitle">{{section.settings.sub_title}}</h4>
-    <a class="hero-banner-secondary-content__cta" href="{{section.settings.button_link}}">{{section.settings.button_label}}</a>
+    {% if section.settings.button_label != blank %}
+      <a class="hero-banner-secondary-content__cta" href="{{section.settings.button_link}}">{{section.settings.button_label}}</a>
+    {% endif %}
   </div>
 </div>
 

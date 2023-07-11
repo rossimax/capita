@@ -1,11 +1,5 @@
-{% if section.settings.boxed_small %} 
-    {% assign boxed_small_class = "boxed-small" %}
-{% else %}
-    {% assign boxed_small_class = "" %}
-{% endif %}
-
 <div class="section-paragraph-simple" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;background-color: {{ section.settings.background_color }};">
-    <div class="paragraph-simple-content {{boxed_small_class}}">
+    <div class="paragraph-simple-content" style="max-width: {{ section.settings.max_width }}px;">
         <h2 class="paragraph-simple-content__title strong" style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
         <div class="paragraph-simple-content__paragraph" style="color: {{ section.settings.text_color }}">{{ section.settings.text }}</div>
     </div>
@@ -51,6 +45,12 @@
             "default": 36
         },
         {
+            "type": "number",
+            "id": "max_width",
+            "label": "Max Width Box",
+            "default": 1440
+        },
+        {
             "type": "color",
             "id": "background_color",
             "label": "Background Color",
@@ -92,10 +92,6 @@
 .paragraph-simple-content {
     text-align: center;
     max-width: 1620px;
-    margin: 0 auto;
-}
-.paragraph-simple-content.boxed-small {
-    max-width: 960px;
     margin: 0 auto;
 }
 .paragraph-simple-content__title {

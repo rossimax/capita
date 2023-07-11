@@ -21,8 +21,8 @@
     "6f9f2d79-f9c0-4656-b9af-709522a45887": {
       "type": "paragraph-simple",
       "settings": {
-        "padding_top": 20,
-        "padding_bottom": 20,
+        "padding_top": 60,
+        "padding_bottom": 0,
         "font_size_title": 60,
         "font_size_title_mob": 36,
         "text_color": "#000000",
@@ -70,6 +70,8 @@
         "c254af81-585c-4636-854b-192aa556710c"
       ],
       "settings": {
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "e8735002-5a92-4a60-85e1-c880063d22c6": {

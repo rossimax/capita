@@ -13,6 +13,10 @@
     .medium {
         font-family: 'Calibre-Semibold', sans-serif;
     }
+    hl {
+        background: #e2ff61;
+        padding: 0 5px;
+    }
 
 /* END GENERAL */
 

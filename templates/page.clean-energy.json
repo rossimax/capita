@@ -29,13 +29,13 @@
     "6f9f2d79-f9c0-4656-b9af-709522a45887": {
       "type": "paragraph-simple",
       "settings": {
-        "padding_top": 60,
-        "padding_bottom": 0,
+        "padding_top": 80,
+        "padding_bottom": 80,
         "font_size_title": 60,
         "font_size_title_mob": 36,
         "background_color": "#000000",
         "text_color": "#ffffff",
-        "boxed_small": false,
+        "boxed_small": true,
         "title": "As the industry’s first clean energy \nmanufacturing facility,\nThe Mothership\n– distinguished as a flagship of responsible \nmanufacturing – is the recipient of the\n<bl>Energy Globe Award for Austria.<\/bl>",
         "text": ""
       }

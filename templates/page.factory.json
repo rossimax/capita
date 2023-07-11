@@ -126,6 +126,8 @@
         "680387cc-4d5c-41a2-8c10-2767490245ac"
       ],
       "settings": {
+        "padding_top": 20,
+        "padding_bottom": 100,
         "title": "World-Class Production",
         "description": "Since its opening in 2016, The CAPiTA Mothership has been recognized for its world-class production with countless industry test accolades and prestigious product design awards."
       }

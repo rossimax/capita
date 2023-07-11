@@ -1,4 +1,4 @@
-<div class="section-logo-list">
+<div class="section-logo-list" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
     <div class="logo-list">
         <h2 class="logo-list__title strong">{{ section.settings.title }}</h2>
         <div class="logo-list__content">
@@ -16,6 +16,18 @@
   {
     "name": "Logo List",
     "settings": [
+        {
+            "type": "number",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": 20
+        },
+        {
+            "type": "number",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": 20
+        },
         {
             "type": "text",
             "id": "title",
@@ -52,7 +64,6 @@
 
 .section-logo-list {
     background: #000;
-    padding: 50px 20px;
 }
 .logo-list {
     max-width: 1440px;

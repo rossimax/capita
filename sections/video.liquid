@@ -1,8 +1,17 @@
 {% assign video_desk = section.settings.video_desk | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
 {% assign video_mob = section.settings.video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
 
+{% if section.settings.boxed %} 
+    {% assign boxed_class = "boxed" %}
+{% else %}
+    {% assign boxed_class = "" %}
+{% endif %}
+
 <div class="section-hero-banner-video">
-    <div class="hero-banner-video">
+    <div class="hero-banner-video {{ boxed_class }}">
+        {% if section.settings.title != blank %}
+            <h4>{{ section.settings.title }}</h4>
+        {% endif %}
         <div class="hero-banner-video__desk">{{video_desk}}</div>
         <div class="hero-banner-video__mob">{{video_mob}}</div>
     </div>
@@ -12,6 +21,16 @@
   {
     "name": "Hero Banner Video",
     "settings": [
+        {
+            "type": "checkbox",
+            "id": "boxed",
+            "label": "Boxed"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
         {
             "type": "video",
             "id": "video_desk",

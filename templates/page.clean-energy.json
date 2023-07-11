@@ -8,7 +8,7 @@
         "body_color": "#ffffff",
         "footer_border": true,
         "enable_head": false,
-        "title": "We produce<br>our own<br>clean energy.",
+        "title": "We produceour ownclean energy.",
         "description": ""
       }
     },
@@ -35,7 +35,7 @@
         "font_size_title_mob": 36,
         "background_color": "#000000",
         "text_color": "#ffffff",
-        "title": "As the industry’s first clean energy \nmanufacturing facility,\nThe Mothership\n– distinguished as a flagship of responsible \nmanufacturing – is the recipient of the\n<bl>Energy Globe Award for Austria.<\/bl>",
+        "title": "As the industry’s first clean energy <br>\nmanufacturing facility,\nThe Mothership<br>\n– distinguished as a flagship of responsible<br> \nmanufacturing – is the recipient of the<br>\n<bl>Energy Globe Award for Austria.<\/bl>",
         "text": "<p>Known as Nature’s Nobel Prize, with 178 participating countries, the Energy Globe is today’s most prestigious environmental award.<br\/>It is presented annually to projects focusing on reneweable energies and the conservation of resources.<\/p>"
       }
     }

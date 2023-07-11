@@ -135,10 +135,22 @@
         "shadow": "no",
         "title_position": "top_left",
         "content_position": "bottom_center",
-        "title": "Everything<br>is possible.",
+        "title": "Everythingis possible.",
         "sub_title": "",
         "button_label": "",
         "button_link": ""
+      }
+    },
+    "a0611009-f554-41eb-b10d-8c89de6f0e0c": {
+      "type": "paragraph-simple",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "font_size_title": 60,
+        "font_size_title_mob": 20,
+        "text_color": "#000000",
+        "title": "Our dedication to building the world’s best snowboards, with the most efficient and sustainable process, is galvanized by the company mantra - <br><hl>EVERYTHING IS POSSIBLE.<\/hl>",
+        "text": ""
       }
     }
   },
@@ -148,6 +160,7 @@
     "6f9f2d79-f9c0-4656-b9af-709522a45887",
     "1b00d31a-2214-47c2-b764-c19a557b11e1",
     "e8735002-5a92-4a60-85e1-c880063d22c6",
-    "0304082a-98f7-4665-a2cd-7ea2cfbc7043"
+    "0304082a-98f7-4665-a2cd-7ea2cfbc7043",
+    "a0611009-f554-41eb-b10d-8c89de6f0e0c"
   ]
 }

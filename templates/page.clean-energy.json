@@ -30,7 +30,7 @@
       "type": "paragraph-simple",
       "settings": {
         "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_bottom": 100,
         "font_size_title": 60,
         "font_size_title_mob": 36,
         "background_color": "#000000",

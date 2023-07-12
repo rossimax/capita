@@ -1,78 +1,120 @@
-<div class="c-header__dropdown-panel c-header-cart js-header-cart" style="display: none">
+<div
+  class="c-header__dropdown-panel c-header-cart js-header-dropdown"
+  style="display: none"
+  data-parent="cart">
 
-    <form action="{{ routes.cart_url }}" method="post" novalidate class="cart">
-        <div class="c-header-cart__container">
+  <form
+    action="{{ routes.cart_url }}"
+    method="post"
+    novalidate
+    class="cart">
+    <div class="c-header-cart__container">
 
-            <span class="msg-empty-cart medium {% if cart.items.size > 0 %}hide{% endif %}">CART EMPTY</span>
+      <span class="msg-empty-cart medium {% if cart.items.size > 0 %}hide{% endif %}">CART EMPTY</span>
 
-            <div id="cart-info-hidden" style="visibility:hidden;opacity:0;height:0;">
-                {% for item in cart.items %}
-                    <span 
-                        class="js-cart-item-limit" 
-                        data-id="{{ item.id }}" 
-                        data-limit="{{ item.variant.inventory_quantity }}"
-                    ></span>
-                {% endfor %} 
+      <div id="cart-info-hidden" style="visibility:hidden;opacity:0;height:0;">
+        {% for item in cart.items %}
+          <span
+            class="js-cart-item-limit"
+            data-id="{{ item.id }}"
+            data-limit="{{ item.variant.inventory_quantity }}"></span>
+        {% endfor %}
+      </div>
+
+      <div id="cart-ajax">
+        {% for item in cart.items %}
+
+          {% assign itemPlusClass = "enable" %}
+
+          {% if item.variant.inventory_quantity == item.quantity %}
+            {% assign itemPlusClass = "disabled" %}
+          {% endif %}
+
+          <div
+            class="c-cart-item"
+            data-id="{{ item.id }}"
+            data-limit="{{ item.variant.inventory_quantity }}">
+            <div class="c-cart-item__container">
+              <a href="{{ item.url }}">
+                <img
+                  class="c-cart-item__image"
+                  src="{{ item.product.featured_image | product_img_url: 'master' }}"
+                  alt="{{ item.title | strip_html }}">
+              </a>
+              <div class="c-cart-item__info">
+                <span>{{ item.title }}</span>
+              </div>
+              <div class="c-cart-item__quantity">
+
+                <button
+                  class="c-cart-item__quantity-btn cart-qnt-btn-minus"
+                  type="button"
+                  data-id="{{ item.id }}"
+                  data-qnt="{{ item.quantity | minus: 1 }}">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"><circle
+                      cx="19.5"
+                      cy="19.5"
+                      r="7"
+                      stroke="white" /><path
+                      d="M22.498 19.5H16.498"
+                      stroke="white"
+                      stroke-linecap="round" /></svg>
+                </button>
+
+                <span class="c-cart-item__quantity-tot">{{ item.quantity }}</span>
+
+                <button
+                  class="c-cart-item__quantity-btn cart-qnt-btn-plus {{ itemPlusClass }}"
+                  type="button"
+                  data-id="{{ item.id }}"
+                  data-qnt="{{ item.quantity | plus: 1 }}">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"><circle
+                      cx="19.5"
+                      cy="19.5"
+                      r="7"
+                      stroke="white" /><path
+                      d="M22.498 19.5H16.498"
+                      stroke="white"
+                      stroke-linecap="round" /><path
+                      d="M19.5 16.0898V22.908"
+                      stroke="white"
+                      stroke-linecap="round" /></svg>
+                </button>
+
+              </div>
+              <span class="c-cart-item__price">{{ item.final_price | money }}</span>
             </div>
 
-            <div id="cart-ajax">
-                {% for item in cart.items %}
+            <div class="c-header-cart__line"></div>
 
-                    {% assign itemPlusClass = "enable" %}
-
-                    {% if item.variant.inventory_quantity == item.quantity %}
-                        {% assign itemPlusClass = "disabled" %}
-                    {% endif %}
-
-                    <div class="c-cart-item" data-id="{{ item.id }}" data-limit="{{ item.variant.inventory_quantity }}">
-                        <div class="c-cart-item__container">
-                            <a href="{{ item.url }}">
-                                <img
-                                    class="c-cart-item__image"
-                                    src="{{ item.product.featured_image | product_img_url: 'master' }}"
-                                    alt="{{ item.title | strip_html }}"
-                                >
-                            </a>
-                            <div class="c-cart-item__info"><span>{{ item.title }}</span>
-                            </div>
-                            <div class="c-cart-item__quantity">
-
-                                <button 
-                                    class="c-cart-item__quantity-btn cart-qnt-btn-minus" 
-                                    type="button" 
-                                    data-id="{{ item.id }}" 
-                                    data-qnt="{{ item.quantity | minus: 1 }}" >
-                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.5" cy="19.5" r="7" stroke="white" /><path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" /></svg>
-                                </button>
-                                
-                                <span class="c-cart-item__quantity-tot">{{ item.quantity }}</span>
-                                
-                                <button 
-                                    class="c-cart-item__quantity-btn cart-qnt-btn-plus {{ itemPlusClass }}" 
-                                    type="button" 
-                                    data-id="{{ item.id }}" 
-                                    data-qnt="{{ item.quantity | plus: 1 }}" >
-                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.5" cy="19.5" r="7" stroke="white" /><path d="M22.498 19.5H16.498" stroke="white" stroke-linecap="round" /><path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" /></svg>
-                                </button>
-
-                            </div>
-                            <span class="c-cart-item__price">{{ item.final_price | money }}</span>
-                        </div>
-
-                        <div class="c-header-cart__line"></div>
-
-                    </div>
+          </div>
 
 
-                {% endfor %}
-            </div>
-            
-            <div class="c-header-cart__summary {% if cart.items.size == 0 %}hide{% endif %}">
-                <span class="c-header-cart__total" data-currency="{{ cart.currency.symbol }}">total <b class="c-header-cart__total__val">{{ cart.total_price | money }}</b></span>
-                <input type="submit" name="checkout" class="cart-submit c-header-cart__checkout-btn" value="CHECK OUT">
-            </div>
-            
+        {% endfor %}
+      </div>
 
-        </div>
-    </form>
+      <div class="c-header-cart__summary {% if cart.items.size == 0 %}hide{% endif %}">
+        <span class="c-header-cart__total" data-currency="{{ cart.currency.symbol }}">total
+          <b class="c-header-cart__total__val">{{ cart.total_price | money }}</b>
+        </span>
+        <input
+          type="submit"
+          name="checkout"
+          class="cart-submit c-header-cart__checkout-btn"
+          value="CHECK OUT">
+      </div>
+
+
+    </div>
+  </form>
 </div>

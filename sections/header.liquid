@@ -33,7 +33,8 @@
     </nav>
     <div class="c-header__utilities">
       <button
-        class="c-header__utility is-search js-search-trigger"
+        class="c-header__utility is-search js-dropdown-trigger"
+        data-menu-trigger="search"
         type="button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
             <path fill="#fff" fill-rule="evenodd"
@@ -42,7 +43,8 @@
             </svg>
         </button>
         <button
-            class="c-header__utility is-cart js-cart-trigger"
+            class="c-header__utility is-cart js-dropdown-trigger"
+            data-menu-trigger="cart"
             type="button">
             <svg
             width="40"
@@ -60,7 +62,7 @@
             {% else %}
               {% assign class_cart = "hide" %}
             {% endif %}
-            <span class="cart-count js-cart-count medium {{class_cart}}">{{ cart.item_count }}</span>
+            <span class="cart-count js-cart-count medium {{ class_cart }}">{{ cart.item_count }}</span>
         </button>
         <button class="c-header__utility is-menu" type="button">
             <svg
@@ -94,7 +96,7 @@
 
     {% include 'cart-header' %}
     
-    <div class="c-header__dropdown-panel c-header-search js-header-search" style="display: none">
+    <div class="c-header__dropdown-panel c-header-search js-header-dropdown" style="display: none" data-parent="search">
       <label
         class="c-header-search__title"
         for="search-input"
@@ -194,36 +196,41 @@
 {
   "name": "Header",
   "settings": [
-        {
-            "type": "link_list",
-            "id": "menu",
-            "label": "Menu"
-        }
-    ]
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu"
+    }
+  ]
 }
 {% endschema %}
 
 
 {% style %}
 #search-result {
-    max-width: 1440px;
-    margin: 40px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.s-item {
-  width: calc( 25% - 40px );
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 20px;
 }
 .s-item__content {
     display: flex;
     align-items: center;
 }
 .s-item__content img {
-  height: 200px;
+  height: 80px;
 }
 .s-item__info {
   color: #fff;
+  text-align: left;
+  line-height: 1;
+  font-size: 14px;
+  font-weight:500;
+}
+.s-item__info span {
+  font-weight:500;
 }
 .c-header__utility {
   position: relative;
@@ -290,7 +297,11 @@
               searchResult.append(prodSugItem)
 
 
-            })
+            });
+
+            const sContent = document.querySelector('.c-header-search');
+        const t = sContent.getBoundingClientRect().height;
+        document.body.style.setProperty('--panel-height', `${t}px`);
 
             if (productSuggestions.length > 0) {
               const firstProductSuggestion = productSuggestions[0];
@@ -312,7 +323,7 @@
       
       if (searchInput.value.length > 2){
 
-        predectiveSearch()
+        predectiveSearch();
 
       }
 

@@ -4,20 +4,20 @@
     <div class="text-video-cards">
 
         <div class="text-video-cards__head">
-            <h2>{{ section.settings.title }}</h2>
-            <div class="text-video-cards__head__content">
-                <div class="text-video-cards__head__content__paragraph">
+            <h2 class="title">{{ section.settings.title }}</h2>
+            <div class="text-video-cards__head__content row">
+                <div class="text-video-cards__head__content__paragraph col-6">
                     {{ section.settings.paragraph }}
                 </div>
-                <div class="text-video-cards__head__content__video">
+                <div class="text-video-cards__head__content__video col-6">
                     {{video}}
                 </div>
             </div>
         </div>
 
-        <div class="text-video-cards__head">
+        <div class="text-video-cards__head row">
             {% for block in section.blocks %}
-                <div class="single-text-video-cards">
+                <div class="single-text-video-cards col-4">
                     <div class="single-text-video-cards__content">
                         <img src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.title | strip_html }}">
                         <h4 class="single-text-video-cards__content__title strong">{{ block.settings.title }}</h4>
@@ -27,7 +27,7 @@
         </div>
 
         <div class="text-video-cards__cta">
-            <a class="btn btn-primary" href="{{ section.settings.cta_link }}">{{ section.settings.cta_text }}</a>
+            <a class="btn btn-secondary black text-video-cards__cta__btn" href="{{ section.settings.cta_link }}">{{ section.settings.cta_text }}</a>
         </div>
 
     </div>
@@ -102,6 +102,38 @@
 {% endschema %}
 
 {% stylesheet %}
+
+
+.text-video-cards {
+    max-width: 1620px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.text-video-cards__head {
+    margin: 60px 0;
+    justify-content: space-between;
+}
+.single-text-video-cards__content {
+    background: #ececec;
+    width: calc(100% - 60px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+.text-video-cards__cta {
+    text-align: center;
+}
+.text-video-cards video {
+    border-radius: 30px;
+}
+.text-video-cards__head__content.row {
+    margin-top: 40px;
+}
 
 @media screen and (max-width: 768px) {
 

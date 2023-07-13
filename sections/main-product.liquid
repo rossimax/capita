@@ -283,7 +283,7 @@ button.js-add-to-cart.c-product-info__add-to-cart {
   let selectors = {
     productVariants: '.js-product-variant:not(.is-disabled)',
     submitButton: '.js-add-to-cart',
-    cartTrigger: '.js-cart-trigger',
+    cartTrigger: '.is-cart',
     cartBtnsMinus: '.cart-qnt-btn-minus',
     cartBtnsPlus: '.cart-qnt-btn-plus',
     cartItems: '.c-cart-item',
@@ -517,7 +517,7 @@ button.js-add-to-cart.c-product-info__add-to-cart {
         return response.json();
       }).then(data => {
 
-        // console.log(data); // prints HTML of the section 
+        console.log(data); // prints HTML of the section 
 
         let cartAjax = document.querySelector('#cart-ajax')
         cartAjax.innerHTML = ""
@@ -585,14 +585,14 @@ button.js-add-to-cart.c-product-info__add-to-cart {
 
           cartAjax.append(divCartItem)
           msgEmptyCart.classList.add("hide")
-
-          if (!cartTrigger.classList.contains("is-active")) {
-            setTimeout(() => {
-              cartTrigger.click()
-            }, 250);
-          }
-
+          
         })
+        
+        if (!cartTrigger.classList.contains("is-active")) {
+          setTimeout(() => {
+            cartTrigger.click()
+          }, 250);
+        }
 
         cartBtnsMinus = cartAjax.querySelectorAll(selectors.cartBtnsMinus)
         cartBtnsPlus = cartAjax.querySelectorAll(selectors.cartBtnsPlus)
@@ -622,7 +622,7 @@ button.js-add-to-cart.c-product-info__add-to-cart {
       cartInfoHidden.innerHTML = ""
       cartItems.forEach((cartItem,i) => {
         let cartHiddenEl = document.createElement('span')
-        cartHiddenEl.setAttribute('class', 'c-cart-item');
+        cartHiddenEl.setAttribute('class', 'js-cart-item-limit');
         cartHiddenEl.setAttribute('data-id', cartItem.id);
         cartHiddenEl.setAttribute('data-limit', "99");
         cartInfoHidden.append(cartHiddenEl)

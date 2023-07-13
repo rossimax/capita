@@ -88,9 +88,11 @@
                 {{ product.metafields.snowboard_info.camber_description }}
             </div>
         </div>
-        <div class="c-product-tech__image">
-          <img src="{{ product.metafields.snowboard_info.camber_image | image_url : "master" }}" alt="{{ product.title | strip_html }}">
-        </div>
+        {% if product.metafields.snowboard_info.camber_image %}
+          <div class="c-product-tech__image">
+            <img src="{{ product.metafields.snowboard_info.camber_image | image_url : "master" }}" alt="{{ product.title | strip_html }}">
+          </div>
+        {% endif %}
     </div>
     <div class="c-product-tech__video">
 

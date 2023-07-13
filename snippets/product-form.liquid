@@ -31,21 +31,21 @@
                                       <input 
                                           style="visibility:hidden;opacity:0;height:0;width:0;padding:0;margin:0;" 
                                           type="radio" 
-                                          name="{{option.name}}" 
+                                          name="{{ option.name }}" 
                                           id="{{ variant.id }}" 
                                           variant-id="{{ variant.id }}" 
-                                          attr-img="{{ variant.image | img_url: "small" }}" 
+                                          attr-img="{{ variant.image | image_url: width: 100, height: 100 }}" 
                                           value="{{ variant.title | escape }}"
                                           >
                                           <span>{{ variant.title }}</span>
                                   </div>
                               {% endfor %}
                           </div>
-                      {% endif%}
+                      {% endif %}
 
                   {% endfor %}
 
-                  <button class="c-product-info__find-size" type="button">find my size</button>
+                  <button class="c-product-info__find-size js-find-my-size-btn" type="button">find my size</button>
                   
               {% endunless %}
     

@@ -17,11 +17,11 @@
       <div class="swiper-wrapper">
 
         {% for media in product.media %}
-          {%- assign img_url = media | img_url: '1024x' -%}
-          {%- assign img_url__attr = media | img_url -%}
+          {%- assign img_url = media | image_url: width: 1024 -%}
+          {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
           <div class="swiper-slide">
             <div class="c-product-gallery__item" 
-              attr-img-url="{{img_url__attr}}" 
+              attr-img-url="{{ img_url__attr }}" 
               attr-num="{{ forloop.index0 }}">
               <img class="js-product-gallery-item" src="{{ img_url }}" alt="{{ product.title | strip_html }}" />
             </div>
@@ -64,10 +64,10 @@
         <div class="c-product__thumbs-slider swiper js-product-slider-thumbs">
           <div class="swiper-wrapper">
             {% for media in product.media %}
-              {%- assign img_url = media | img_url: '1024x' -%}
-              {%- assign img_url__attr = media | img_url -%}
+              {%- assign img_url = media | image_url: width: 1024 -%}
+              {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
               <div class="swiper-slide c-product__thumb" 
-                attr-img-url="{{img_url__attr}}" 
+                attr-img-url="{{ img_url__attr }}" 
                 attr-num="{{ forloop.index0 }}"
                 >
                 <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" />
@@ -93,11 +93,11 @@
         <div class="swiper-wrapper">
 
           {% for media in product.media %}
-            {%- assign img_url = media | img_url: '1024x' -%}
-            {%- assign img_url__attr = media | img_url -%}
+            {%- assign img_url = media | image_url: width: 1024 -%}
+            {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
         
             <div class="swiper-slide" 
-              attr-img-url="{{img_url__attr}}" 
+              attr-img-url="{{ img_url__attr }}" 
               attr-num="{{ forloop.index0 }}"
               >
               <img src="{{ img_url }}" alt="{{ product.title | strip_html }}">
@@ -126,8 +126,8 @@
   </div>
       
   <div class="c-find-my-size js-find-my-size">
-    <div class="c-find-my-size__bg"></div>
-    <div class="c-find-my-size__content">
+    <div class="c-find-my-size__bg js-find-my-size-bg"></div>
+    <div class="c-find-my-size__content js-find-my-size-content">
       <div class="c-find-my-size__top-buttons">
         <button class="c-find-my-size__restart" type="button"><svg fill="none" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 15 15">
@@ -135,7 +135,7 @@
             <path
               d="M7.482 10.999c-1.6-.034-2.93-1.414-2.98-3.05-.052-1.77 1.345-3.236 3.066-3.236V3.657c0-.136.153-.205.255-.12L9.39 4.884c.12.103.12.273 0 .375L7.823 6.604a.154.154 0 0 1-.255-.12V5.429c-1.33 0-2.402 1.108-2.385 2.488.017 1.294 1.09 2.384 2.35 2.401 1.33 0 2.42-1.09 2.42-2.453 0-.357-.086-.698-.222-1.005-.068-.136-.017-.306.102-.409a.335.335 0 0 1 .528.12c.17.391.273.834.273 1.294 0 1.755-1.414 3.186-3.151 3.135Z"
               fill="#000" /></svg></button>
-        <button class="c-find-my-size__close" type="button"><svg fill="none" xmlns="http://www.w3.org/2000/svg"
+        <button class="c-find-my-size__close js-find-my-size-close" type="button"><svg fill="none" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 15 15">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M7.605 14.105a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Zm0 1a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15Z"

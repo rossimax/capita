@@ -6,7 +6,7 @@
             <div class="team-body__content__bio">{{ page.metafields.accentuate.bio }}</div>
             <div class="team-body__content__ig">
                 {% if page.metafields.accentuate.instagram != blank %}
-                    <a href="{{page.metafields.accentuate.instagram}}">{% render 'icon-instagram' %} {{ page.metafields.accentuate.instagram | remove: "https://www.instagram.com/" }}</a>
+                    <a href="{{page.metafields.accentuate.instagram}}">{% render 'icon-instagram' %} {{ page.metafields.accentuate.instagram | remove: "https://www.instagram.com/" | remove: "/"}}</a>
                 {% endif%}
             </div>
         </div>

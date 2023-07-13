@@ -425,4 +425,15 @@ footer label.c-slim-form__legal span {
     overflow-y: auto;
   }
 }
+@media screen and (max-width: 768px) {
+  .pdp-head-image h1 {
+    font-size: 36px;
+  }
+  .pdp-head-image img {
+      height: 240px;
+      object-fit: cover;
+  }
+}
+
+
 /* END FIX */

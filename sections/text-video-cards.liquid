@@ -1,0 +1,112 @@
+{% assign video = section.settings.video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+
+<div class="section-text-video-cards" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
+    <div class="text-video-cards">
+
+        <div class="text-video-cards__head">
+            <h2>{{ block.settings.title }}</h2>
+            <div class="text-video-cards__head__content">
+                <div class="text-video-cards__head__content__paragraph">
+                    {{ block.settings.paragraph }}
+                </div>
+                <div class="text-video-cards__head__content__video">
+                    {{video}}
+                </div>
+            </div>
+        </div>
+
+        <div class="text-video-cards__head">
+            {% for block in section.blocks %}
+                <div class="single-text-video-cards">
+                    <div class="single-text-video-cards__content">
+                        <img src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.title | strip_html }}">
+                        <h4 class="single-text-video-cards__content__title strong">{{ block.settings.title }}</h4>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="text-video-cards__cta">
+            <a class="btn btn-primary" href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
+        </div>
+
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text Video Cards",
+    "settings": [
+        {
+            "type": "number",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": 20
+        },
+        {
+            "type": "number",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": 20
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "paragraph",
+            "label": "Paragraph"
+        },
+        {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+        },
+        {
+            "type": "text",
+            "id": "cta_text",
+            "label": "CTA Text"
+        },
+        {
+            "type": "url",
+            "id": "cta_link",
+            "label": "CTA Link"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "cards",
+            "name": "Cards",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Text Video Cards"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+@media screen and (max-width: 768px) {
+
+
+}
+
+{% endstylesheet %}
+

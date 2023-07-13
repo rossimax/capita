@@ -141,6 +141,7 @@ main.template-payments {
   font-family: "Calibre", sans-serif;
   color: #000;
   line-height: 1;
+  font-weight: 500;
 }
 .btn svg {
   margin-left: 3px;

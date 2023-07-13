@@ -210,6 +210,11 @@
       <div class="l-listing__aside">
         <div class="c-listing-filter">
 
+          <div class="c-listing-filter__mob-head">
+            <span>FILTERS</span>
+            {% render 'icon-close' %}
+          </div>
+
           {% comment %} {%- for filter in collection.filters -%}
             <span>{{ filter.label }}</span>
           {%- endfor -%} {% endcomment %}
@@ -309,7 +314,7 @@
             <span class="c-listing-product__categories">{{ snowboard_tags }}</span>
             <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
             <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
-            <div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>
+            {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %}
           </div>
         </div>
 

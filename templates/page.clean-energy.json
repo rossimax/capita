@@ -38,11 +38,51 @@
         "title": "As the industry’s first clean energy <br>\nmanufacturing facility,\nThe Mothership<br>\n– distinguished as a flagship of responsible<br> \nmanufacturing – is the recipient of the<br>\n<bl>Energy Globe Award for Austria.<\/bl>",
         "text": "<p>Known as Nature’s Nobel Prize, with 178 participating countries, the Energy Globe is today’s most prestigious environmental award.<br\/>It is presented annually to projects focusing on reneweable energies and the conservation of resources.<\/p>"
       }
+    },
+    "2f8c7944-0519-41a9-a000-b3d228d94ecf": {
+      "type": "text-video-cards",
+      "blocks": {
+        "34655e6e-95b1-4130-9bfb-e864a94e37e9": {
+          "type": "cards",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_674.png",
+            "title": "ZEROCO2 Emissions"
+          }
+        },
+        "6837a6f1-6f4b-43a4-ad21-32840f4c2c3c": {
+          "type": "cards",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_675.png",
+            "title": "ZEROOzone Depletion Potential"
+          }
+        },
+        "17d51c09-a020-43e2-aa92-8588c1588966": {
+          "type": "cards",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_676.png",
+            "title": "ZERO Global Warming Potential"
+          }
+        }
+      },
+      "block_order": [
+        "34655e6e-95b1-4130-9bfb-e864a94e37e9",
+        "6837a6f1-6f4b-43a4-ad21-32840f4c2c3c",
+        "17d51c09-a020-43e2-aa92-8588c1588966"
+      ],
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "title": "",
+        "paragraph": "",
+        "cta_text": "",
+        "cta_link": ""
+      }
     }
   },
   "order": [
     "main",
     "0304082a-98f7-4665-a2cd-7ea2cfbc7043",
-    "6f9f2d79-f9c0-4656-b9af-709522a45887"
+    "6f9f2d79-f9c0-4656-b9af-709522a45887",
+    "2f8c7944-0519-41a9-a000-b3d228d94ecf"
   ]
 }

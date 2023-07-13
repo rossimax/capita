@@ -127,14 +127,14 @@
     "3521ce90-7292-40db-8351-d4081b787f48": {
       "type": "paragraph-simple",
       "settings": {
-        "padding_top": 20,
-        "padding_bottom": 20,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "font_size_title": 80,
         "font_size_title_mob": 36,
         "background_color": "#000000",
         "text_color": "#ffffff",
         "title": "THE PATHFINDERS",
-        "text": "<p>The next generation of talent leading the progression of riding and style in contests, at resorts and in the streets. The future is bright. The future is now.<\/p>"
+        "text": "<p>The next generation of talent leading the progression of riding and style in contests, at resorts and in the streets. <br\/>The future is bright. The future is now.<\/p>"
       }
     },
     "c73601a3-fbde-479e-9c35-bfaab5fa2160": {
@@ -222,13 +222,13 @@
       "type": "paragraph-simple",
       "settings": {
         "padding_top": 20,
-        "padding_bottom": 20,
+        "padding_bottom": 40,
         "font_size_title": 80,
         "font_size_title_mob": 36,
         "background_color": "#000000",
         "text_color": "#ffffff",
         "title": "THE EXPLORERS",
-        "text": "<p>This global group of rippers are core members of The CAPiTA family, flying the flag and pushing snowboarding nationally, regionally and locally.<\/p>"
+        "text": "<p>This global group of rippers are core members of The CAPiTA family,<br\/>flying the flag and pushing snowboarding nationally, regionally and locally.<\/p>"
       }
     },
     "c5f887cb-81f6-4c19-a1eb-50d5df910e42": {

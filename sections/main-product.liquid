@@ -374,7 +374,7 @@ button.js-add-to-cart.c-product-info__add-to-cart {
         return response.json();
       }).then(data => {
 
-        console.log(data);
+        // console.log(data);
 
         submitButton.classList.remove("disabled")
         
@@ -399,7 +399,7 @@ button.js-add-to-cart.c-product-info__add-to-cart {
           return response.json();
         }).then(data => {
           
-          console.log(data);
+          // console.log(data);
           // console.log(data.total_price);
           // console.log(data.items);
 
@@ -486,13 +486,13 @@ button.js-add-to-cart.c-product-info__add-to-cart {
           let dataID = cartBtnPlus.getAttribute("data-id")
           let dataQnt = cartBtnPlus.getAttribute("data-qnt")
 
-          console.log(dataID)
+          // console.log(dataID)
 
           let currentItem = document.querySelector('.js-cart-item-limit[data-id="'+dataID+'"]')
           let currentLimit = currentItem.getAttribute("data-limit")
           let currentLimit__qnt = parseInt(currentLimit)
 
-          console.log(currentLimit__qnt)
+          // console.log(currentLimit__qnt)
 
           let changeVariant = {
                 'id': dataID,
@@ -522,8 +522,8 @@ button.js-add-to-cart.c-product-info__add-to-cart {
         let cartAjax = document.querySelector('#cart-ajax')
         cartAjax.innerHTML = ""
 
-        console.log(data.items)
-        console.log(data.item_count)
+        // console.log(data.items)
+        // console.log(data.item_count)
         
         uploadCartCount(data.item_count)
         resetCartHidden(data.items)
@@ -625,7 +625,6 @@ button.js-add-to-cart.c-product-info__add-to-cart {
         cartHiddenEl.setAttribute('class', 'c-cart-item');
         cartHiddenEl.setAttribute('data-id', cartItem.id);
         cartHiddenEl.setAttribute('data-limit', "99");
-        console.log(cartItem)
         cartInfoHidden.append(cartHiddenEl)
       })
     }

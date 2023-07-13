@@ -6,6 +6,7 @@
         "head_width": 100,
         "margin_top": 120,
         "body_color": "#070707",
+        "footer_border": false,
         "enable_head": false,
         "title": "",
         "description": ""
@@ -14,6 +15,11 @@
     "98721115-af6f-4355-8ef8-be51e4894e53": {
       "type": "paragraph-simple",
       "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "font_size_title": 80,
+        "font_size_title_mob": 36,
+        "background_color": "#000000",
         "text_color": "#ffffff",
         "title": "THE PROS",
         "text": "<p>Innovators and icons, #TeamCAPiTA is unified by a passion to take snowboarding to its fullest potential. We're a global community dedicated to fun outside the lines, protecting the sport and the planet.<\/p>"
@@ -121,6 +127,11 @@
     "3521ce90-7292-40db-8351-d4081b787f48": {
       "type": "paragraph-simple",
       "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "font_size_title": 80,
+        "font_size_title_mob": 36,
+        "background_color": "#ffffff",
         "text_color": "#ffffff",
         "title": "THE PATHFINDERS",
         "text": "<p>The next generation of talent leading the progression of riding and style in contests, at resorts and in the streets. The future is bright. The future is now.<\/p>"
@@ -210,6 +221,11 @@
     "fe8f1017-b722-4395-bbe4-54cba3517651": {
       "type": "paragraph-simple",
       "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "font_size_title": 80,
+        "font_size_title_mob": 36,
+        "background_color": "#ffffff",
         "text_color": "#ffffff",
         "title": "THE EXPLORERS",
         "text": "<p>This global group of rippers are core members of The CAPiTA family, flying the flag and pushing snowboarding nationally, regionally and locally.<\/p>"

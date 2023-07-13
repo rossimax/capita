@@ -4,8 +4,8 @@
       "type": "hero-banner",
       "settings": {
         "transparent_header": false,
-        "video": "shopify:\/\/files\/videos\/ARTHUR - VIDEO BANNER.mp4",
-        "video_mob": "shopify:\/\/files\/videos\/KAZU - VIDEO BANNER.mp4",
+        "image": "shopify:\/\/shop_images\/230124_CAPITA_WEBSITE_HOMEPAGE_Banner_2_1.jpg",
+        "image_mob": "shopify:\/\/shop_images\/Group_201_1.jpg",
         "cta_text": "DISCOVER NOW",
         "cta_link": "shopify:\/\/collections\/all-snowboards"
       }
@@ -28,7 +28,6 @@
       "type": "banner-product",
       "settings": {
         "product": "super-doa",
-        "product_image": "shopify:\/\/shop_images\/161w_4f4f7603-d6b1-4e60-8e01-47d0ac796e16.png",
         "right_image": "shopify:\/\/shop_images\/mercury_426bda3f-4b04-4e55-be70-7a6a1b89d934.jpg",
         "left_title": "<strong>THE EQUALIZER<\/strong>",
         "left_sup_title": "FR907 EQUALIZER",

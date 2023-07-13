@@ -3,6 +3,10 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "head_width": 100,
+        "margin_top": 0,
+        "body_color": "#ffffff",
+        "footer_border": false,
         "enable_head": true,
         "title": "HELP",
         "description": "<p>Capita customer support is here to help. Please select from options below to find answers for commonly asked questions.<\/p>"
@@ -31,7 +35,7 @@
           "type": "link_list",
           "settings": {
             "link_text": "Distributors info",
-            "link_url": "",
+            "link_url": "shopify:\/\/pages\/distributors-info",
             "selected": false
           }
         }

@@ -17,7 +17,7 @@
                     <span>{{ page.metafields.team_profile.board_category[index] }}</span>
                     <h4 class="strong">{{ page.metafields.team_profile.board_title[index] }}</h4>
                     <img src="{{ page.metafields.team_profile.board_image_url[index] }}">
-                    <a href="{{ all_products[board].url }}" class="btn btn-primary">DISCOVER MORE</a>
+                    <a href="{{ all_products[board].url }}" class="btn btn-primary medium">DISCOVER MORE</a>
                 </div>
                 {%- endfor -%}
             </div>
@@ -58,7 +58,7 @@
 .team-boards-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 .team-boards-content__single {
     width: calc(100% / 3);

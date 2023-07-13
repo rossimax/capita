@@ -1,8 +1,10 @@
+{% if page.metafields.team_profile.video_embed %}
 <div class="section-youtube-team">
     <div class="youtube-team">
         {{ page.metafields.team_profile.video_embed }}
     </div>
 </div>
+{% endif %}
 
 {% schema %}
   {

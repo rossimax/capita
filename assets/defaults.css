@@ -6,12 +6,15 @@ body {
 strong,
 .strong {
   font-family: "Calibre", sans-serif;
+  font-weight: 600;
 }
 .normal {
   font-family: "Calibre", sans-serif;
+  font-weight: 400;
 }
 .medium {
   font-family: "Calibre", sans-serif;
+  font-weight: 500;
 }
 hl {
   background: #e2ff61;

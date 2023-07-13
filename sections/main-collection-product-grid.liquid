@@ -43,9 +43,18 @@
 
           <div class="c-listing-filter__stack">
             <label class="c-listing-filter__option">
+              <input type="checkbox" name="All" 
+                {% if collection.handle == "all-snowboards" %} 
+                  checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                {% else %} 
+                  onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                {% endif %}/>
+                <span>All</span>
+            </label>
+            <label class="c-listing-filter__option">
               <input type="checkbox" name="Men's Snowboards" 
                 {% if collection.handle == "snowboards-mens" %} 
-                  checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
+                  checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
                 {% else %} 
                   onclick="window.location.replace('{{ collections['snowboards-mens'].url }}')" 
                 {% endif %}/>
@@ -54,7 +63,7 @@
             <label class="c-listing-filter__option">
               <input type="checkbox" name="Women's Snowboards" 
                 {% if collection.handle == "snowboards-womens" %} 
-                checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
+                checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
               {% else %} 
                 onclick="window.location.replace('{{ collections['snowboards-womens'].url }}')" 
               {% endif %}/>
@@ -63,7 +72,7 @@
             <label class="c-listing-filter__option">
               <input type="checkbox" name="Kid's Snowboards" 
                 {% if collection.handle == "snowboards-kids" %} 
-                checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
+                checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
               {% else %} 
                 onclick="window.location.replace('{{ collections['snowboards-kids'].url }}')" 
               {% endif %}/>
@@ -72,11 +81,20 @@
             <label class="c-listing-filter__option">
               <input type="checkbox" name="Spring Break" 
                 {% if collection.handle == "spring-break" %} 
-                checked onclick="window.location.replace('{{ collections['softgoods'].url }}')" 
+                checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
               {% else %} 
                 onclick="window.location.replace('{{ collections['spring-break'].url }}')" 
               {% endif %}/>
                 <span>spring break</span>
+            </label>
+            <label class="c-listing-filter__option">
+              <input type="checkbox" name="Split" 
+                {% if collection.handle == "split-snowboards" %} 
+                checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+              {% else %} 
+                onclick="window.location.replace('{{ collections['split-snowboards'].url }}')" 
+              {% endif %}/>
+                <span>Split</span>
             </label>
           </div>
 
@@ -256,7 +274,7 @@
         <div class="c-listing-product" data-tags="{{ tag_list }}" data-title="{{ product.title }}">
           <div class="c-listing-product__image">
             <a href="{{ product.url }}">
-              <img src="{{ product.featured_image | image_url: "master" }}" alt="Capita | {{ product.title | strip_html }}">
+              <img src="{{ product.featured_image | img_url: "550x550" }}" alt="Capita | {{ product.title | strip_html }}">
             </a>
           </div>
           <div class="c-listing-product__sizes">
@@ -281,9 +299,17 @@
           
           </div>
           <div class="c-listing-product__info">
-            <span class="c-listing-product__categories">{{ product.metafields.snowboard_info.snowboard_tags }}</span>
+            {% liquid
+              if product.metafields.snowboard_info.snowboard_tags != blank
+                assign snowboard_tags = product.metafields.snowboard_info.snowboard_tags
+              else
+                assign snowboard_tags = "SNOWBOARD"
+              endif 
+            -%}
+            <span class="c-listing-product__categories">{{ snowboard_tags }}</span>
             <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
             <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
+            <div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>
           </div>
         </div>
 
@@ -428,6 +454,17 @@ span.sorting-option.selected {
 }
 .c-listing-filter__mob-head {
   display: none;
+}
+span.spr-badge-caption {
+    text-decoration: underline;
+}
+.c-listing-product__image {
+    aspect-ratio: 200/327;
+}
+@media screen and (min-width: 100em) {
+  .c-listing-product__image {
+      width: auto;
+  }
 }
 
 @media screen and (max-width: 1199px) {

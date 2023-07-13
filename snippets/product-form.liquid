@@ -1,6 +1,13 @@
 <div class="c-product-info">
+  {% liquid
+    if product.metafields.snowboard_info.snowboard_tags != blank
+      assign snowboard_tags = product.metafields.snowboard_info.snowboard_tags
+    else
+      assign snowboard_tags = "SNOWBOARD"
+    endif 
+  -%}
     <div class="c-product-info__top">
-        <span class="c-product-info__categories">{{ product.metafields.snowboard_info.snowboard_tags }}</span>
+        <span class="c-product-info__categories">{{ snowboard_tags }}</span>
         <h2 class="c-product-info__name strong">{{ product.title }}</h2>
         <span class="c-product-info__price medium">{{ product.price | money }}</span>
         <div style="margin-top: 5px;">or 4 interest-free installments of {{ product.price | divided_by: 4 | money }} by | <img style="display:inline;" width="75px" src="{{ 'afterpay-logo.png' | asset_url }}" alt="Afterpay"></div>

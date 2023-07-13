@@ -418,6 +418,9 @@
 }
 .sorting-listing.js-sorting-listing {
     color: #fff;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 .sorting-listing.js-sorting-listing span {
     cursor: pointer;
@@ -428,10 +431,6 @@
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: wrap;
-}
-.sorting-listing.js-sorting-listing {
-    text-transform: uppercase;
-    font-weight: 500;
 }
 span.sorting-option.selected {
   font-weight: 500;
@@ -541,6 +540,13 @@ span.spr-badge-caption {
 @media screen and (max-width: 768px) {
   .l-listing__aside {
     top: 210px;
+    width: calc(100% - 30px);
+  }
+  .l-listing__grid__empty.empty {
+    font-size: 20px;
+  }
+  .l-listing__grid {
+    min-height: 500px;
   }
 }
 

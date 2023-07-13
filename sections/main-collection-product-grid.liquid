@@ -256,7 +256,7 @@
         <div class="c-listing-product" data-tags="{{ tag_list }}" data-title="{{ product.title }}">
           <div class="c-listing-product__image">
             <a href="{{ product.url }}">
-              <img src="{{ product.featured_image | image_url: width: 360 }}" alt="Capita | {{ product.title | strip_html }}">
+              <img src="{{ product.featured_image | image_url: "master" }}" alt="Capita | {{ product.title | strip_html }}">
             </a>
           </div>
           <div class="c-listing-product__sizes">

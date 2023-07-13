@@ -27,9 +27,10 @@
     "9bfad989-863d-473a-962c-c5b28a8c5824": {
       "type": "banner-product",
       "settings": {
-        "product": "super-doa",
-        "right_image": "shopify:\/\/shop_images\/mercury_426bda3f-4b04-4e55-be70-7a6a1b89d934.jpg",
-        "left_title": "<strong>THE EQUALIZER<\/strong>",
+        "product": "the-equalizer-by-jess-kimura",
+        "product_image": "shopify:\/\/shop_images\/FRD07_EQUALIZER_154_ee1381ce-906a-446b-b083-cd8e93bbf9ad.png",
+        "right_image": "shopify:\/\/shop_images\/Jess_Equalizer_1.jpg",
+        "left_title": "THE EQUALIZER",
         "left_sup_title": "FR907 EQUALIZER",
         "right_text": "RIDER’S NAME"
       }

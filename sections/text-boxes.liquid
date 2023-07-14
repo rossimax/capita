@@ -41,8 +41,8 @@
                 <h2 class="title">{{ section.settings.title_bottom }}</h2>
             </div>
             <div class="text-boxes__foot__ctas">
-                <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link }}">{{ section.settings.cta_text }}</a>
-                <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link }}">{{ section.settings.cta_text }}</a>
+                <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_1 }}">{{ section.settings.cta_text_1 }}</a>
+                <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_text_2 }}</a>
             </div>
         </div>
 
@@ -78,22 +78,22 @@
         {
             "type": "text",
             "id": "cta_text_1",
-            "label": "CTA Text"
+            "label": "CTA Text 1"
         },
         {
             "type": "url",
             "id": "cta_link_1",
-            "label": "CTA Link"
+            "label": "CTA Link 1"
         },
                 {
             "type": "text",
             "id": "cta_text_2",
-            "label": "CTA Text"
+            "label": "CTA Text 2"
         },
         {
             "type": "url",
             "id": "cta_link_2",
-            "label": "CTA Link"
+            "label": "CTA Link 2"
         }
     ],
     "blocks": [
@@ -147,10 +147,6 @@
     padding-right: 20px;
     padding-bottom: 60px;
 }
-.text-boxes__head {
-    margin: 60px 0;
-    justify-content: space-between;
-}
 .single-text-boxes__content {
     background: #ececec;
     width: calc(100% - 60px);
@@ -173,6 +169,7 @@
 }
 .text-boxes__head__content {
     margin-top: 40px;
+    margin-bottom: 20px;
     line-height: 1.4;
 }
 .text-boxes__head__content.row  .text-boxes__head__content__paragraph {
@@ -184,12 +181,12 @@
 .text-boxes__head__content.row-reverse  .text-boxes__head__content__paragraph {
     padding-left: 20px;
 }
+.text-boxes__head__content.row-reverse  .text-boxes__head__content__media {
+    padding-right: 20px;
+}
 .text-boxes__head__content__paragraph__title {
     font-size: 20px;
     margin-bottom: 15px;
-}
-.text-boxes__head__content.row-reverse  .text-boxes__head__content__media {
-    padding-right: 20px;
 }
 .single-text-boxes__content__title {
     text-align: center;
@@ -211,6 +208,14 @@
 .text-boxes__foot__title h2 {
     font-size: 60px;
 }
+.text-boxes__foot__ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-boxes__foot__ctas a {
+    margin-bottom: 20px;
+}
 
 @media screen and (max-width: 1190px) {
     .single-text-boxes__content__title {
@@ -226,23 +231,23 @@
 }
 
 @media screen and (max-width: 768px) {
-    .single-text-boxes.col-4 {
-        width: calc(100% / 3);
+    .section-text-boxes {
+        padding: 20px 0 !important;
+    }
+    .text-boxes__head__content {
+        margin-top: 0;
     }
     .text-boxes__head__content__paragraph.col-6 {
         margin-bottom: 30px;
         padding-right: 0;
     }
     .text-boxes__head {
-        margin: 20px 0 40px 0;
-    }
-    .text-boxes__head__content {
-        margin-top: 20px;
+        margin: 20px 0;
     }
     .text-boxes video {
         min-height: 260px;
     }
-    .text-boxes__cta__btn {
+    .text-boxes__foot__btn {
         width: 100%;
     }
     .single-text-boxes__content__title {
@@ -260,8 +265,26 @@
     .text-boxes__cta {
         margin-top: 40px;
     }
-    .text-boxes__cards.row {
-        margin: 0 -5px;
+    .text-boxes__head__content.row  .text-boxes__head__content__paragraph {
+        padding-right: 0;
+    }
+    .text-boxes__head__content.row  .text-boxes__head__content__media {
+        padding-left: 0;
+    }
+    .text-boxes__head__content.row-reverse  .text-boxes__head__content__paragraph {
+        padding-left: 0;
+    }
+    .text-boxes__head__content.row-reverse  .text-boxes__head__content__media {
+        padding-right: 0;
+    }
+    .text-boxes__foot__title h2 {
+        font-size: 36px;
+    }
+    .text-boxes__foot__title br {
+        display: none;
+    }
+    .text-boxes__foot__title {
+        margin: 30px auto;
     }
 }
 

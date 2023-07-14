@@ -114,6 +114,43 @@
         "text": "",
         "image_bottom": "shopify:\/\/shop_images\/Layer_1.png"
       }
+    },
+    "7a215466-77ce-460c-9e7a-00f7a006189b": {
+      "type": "text-boxes",
+      "blocks": {
+        "dff44307-d733-46d9-ad1c-8f5b6bb29578": {
+          "type": "box",
+          "settings": {
+            "text_left": true,
+            "image": "shopify:\/\/shop_images\/Group_518.jpg",
+            "title": "How we produce",
+            "paragraph": "In addition to the investments in clean energy, the crew at The Mothership is also dedicated to challenging ourselves to find new ways to produce responsibly and find safer, more sustainable, and recyclable materials to use in construction.\n<br><br>In the production line, our advanced processes are capable of pressing boards a lower temperatures, and with reduced cycle times. This ultimately means <hl>less energy is needed to operate production at The Mothership compared to standard snowboard factories.<\/hl>\n<br><br>\nThe Mothership also uses water-based, UV-curable, and solventless inks in printing, and zero toxic lacquer in topsheet application, plant-based bio resins in construction, and FSC certified wood cores including hybrid cores using post-consumer recycled Thermopolymer additives."
+          }
+        },
+        "d5ac263d-ae88-4ac9-98a9-d9ed33af2d5c": {
+          "type": "box",
+          "settings": {
+            "text_left": false,
+            "image": "shopify:\/\/shop_images\/Group_727.jpg",
+            "title": "Recycling Methods",
+            "paragraph": "At the Mothership we are in a constant persuit to improve our recycling capabilities – <hl>to deliver the worlds best snowboards while producing the least waste.<\/hl>\n<br><br>\nWe are currently capable of recycling all production scraps from base materials, tip and tail trimmings, sidewall ABS materials, protection film, and our wood core milling room. We’ve also introduced the use of 100% recycled shrink wrap film on our boards at finishing."
+          }
+        }
+      },
+      "block_order": [
+        "dff44307-d733-46d9-ad1c-8f5b6bb29578",
+        "d5ac263d-ae88-4ac9-98a9-d9ed33af2d5c"
+      ],
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "title": "Sustainable,<br>\nRecyclable Materials.",
+        "title_bottom": "Each production season we recycle over \n<hl>xxx tons of material<\/hl> – preventing it from \nentering the waste cycle.",
+        "cta_text_1": "How does technology help?",
+        "cta_link_1": "",
+        "cta_text_2": "How our snowboards are made?",
+        "cta_link_2": ""
+      }
     }
   },
   "order": [
@@ -122,6 +159,7 @@
     "6f9f2d79-f9c0-4656-b9af-709522a45887",
     "2f8c7944-0519-41a9-a000-b3d228d94ecf",
     "f4853fc4-c7f6-4d08-8dae-08876af8aea6",
-    "1348af52-2bff-4a2a-8df1-975b12dc4d5c"
+    "1348af52-2bff-4a2a-8df1-975b12dc4d5c",
+    "7a215466-77ce-460c-9e7a-00f7a006189b"
   ]
 }

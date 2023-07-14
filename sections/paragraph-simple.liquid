@@ -3,6 +3,9 @@
         <h2 class="paragraph-simple-content__title strong" style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
         <div class="paragraph-simple-content__paragraph" style="color: {{ section.settings.text_color }}">{{ section.settings.text }}</div>
     </div>
+    {% if section.settings.image_bottom %}
+        <img class="paragraph-simple-image-bottom" src="{{ section.settings.image_bottom }}" alt="{{ section.settings.title | strip_html }}">
+    {% endif%}
 </div>
 
 <style>
@@ -65,6 +68,11 @@
             "type": "richtext",
             "id": "text",
             "label": "Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_bottom",
+            "label": "Image Bottom"
         }
     ],
     "presets": [

@@ -15,6 +15,8 @@
     "0304082a-98f7-4665-a2cd-7ea2cfbc7043": {
       "type": "hero-banner-secondary",
       "settings": {
+        "margin_top": 0,
+        "margin_bottom": 0,
         "image_desk": "shopify:\/\/shop_images\/Asset_6_1.jpg",
         "image_mob": "shopify:\/\/shop_images\/Asset_6_1_1.jpg",
         "shadow": "yes_full",
@@ -84,6 +86,8 @@
     "f4853fc4-c7f6-4d08-8dae-08876af8aea6": {
       "type": "hero-banner-secondary",
       "settings": {
+        "margin_top": 0,
+        "margin_bottom": 0,
         "video_desk": "shopify:\/\/files\/videos\/CLEAN ENERGY MFG BANNER.mp4",
         "video_mob": "shopify:\/\/files\/videos\/CLEAN ENERGY MFG BANNER.mp4",
         "shadow": "yes_full",
@@ -96,6 +100,19 @@
         "shadow_box_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "shadow_box_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       }
+    },
+    "1348af52-2bff-4a2a-8df1-975b12dc4d5c": {
+      "type": "paragraph-simple",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "font_size_title": 80,
+        "font_size_title_mob": 36,
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "title": "Our snowboards are crafted with 98%<br> \nof materials locally sourced within<br> \na <bl>5 hour drive<\/bl> of The Mothership.",
+        "text": ""
+      }
     }
   },
   "order": [
@@ -103,6 +120,7 @@
     "0304082a-98f7-4665-a2cd-7ea2cfbc7043",
     "6f9f2d79-f9c0-4656-b9af-709522a45887",
     "2f8c7944-0519-41a9-a000-b3d228d94ecf",
-    "f4853fc4-c7f6-4d08-8dae-08876af8aea6"
+    "f4853fc4-c7f6-4d08-8dae-08876af8aea6",
+    "1348af52-2bff-4a2a-8df1-975b12dc4d5c"
   ]
 }

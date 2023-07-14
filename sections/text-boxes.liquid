@@ -1,0 +1,249 @@
+
+
+<div class="section-text-boxes" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
+    <div class="text-boxes">
+
+        <div class="text-boxes__head">
+            <h2 class="title">{{ section.settings.title }}</h2>
+        </div>
+
+        <div class="text-boxes__cards row">
+            {% for block in section.blocks %}
+
+                {% if block.settings.text_left %}
+                    {% assign row_direction = "row" %}
+                {% else %}
+                    {% assign row_direction = "row-reverse" %}
+                {% endif %}
+                <div class="text-boxes__head__content {{ row_direction }}">
+                    <div class="text-boxes__head__content__paragraph col-6">
+                        <h5 class="text-boxes__head__content__paragraph__title">
+                            {{ block.settings.title }}
+                        </h5>
+                        <div class="text-boxes__head__content__paragraph__text">
+                            {{ block.settings.paragraph }}
+                        </div>
+                    </div>
+                    <div class="text-boxes__head__content__media col-6">
+                        {% if block.settings.video %}
+                            {% assign video = section.settings.video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+                            {{ video }}
+                        {% else %}
+                            <img src="{{ block.settings.image | img_src: "master" }}" alt="capita">
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="text-boxes__foot">
+            <h2 class="text-boxes__foot__title">
+                <h2 class="title">{{ section.settings.title_bottom }}</h2>
+            </h2>
+            <div class="text-boxes__foot__ctas">
+                <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link }}">{{ section.settings.cta_text }}</a>
+                <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link }}">{{ section.settings.cta_text }}</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text Boxes",
+    "settings": [
+        {
+            "type": "number",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": 20
+        },
+        {
+            "type": "number",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": 20
+        },
+        {
+            "type": "html",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "html",
+            "id": "title_bottom",
+            "label": "Title Bottom"
+        },
+        {
+            "type": "text",
+            "id": "cta_text_1",
+            "label": "CTA Text"
+        },
+        {
+            "type": "url",
+            "id": "cta_link_1",
+            "label": "CTA Link"
+        },
+                {
+            "type": "text",
+            "id": "cta_text_2",
+            "label": "CTA Text"
+        },
+        {
+            "type": "url",
+            "id": "cta_link_2",
+            "label": "CTA Link"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "box",
+            "name": "Box",
+            "settings": [
+                {
+                    "type": "checkbox",
+                    "id": "text_left",
+                    "label": "Text left"
+                },
+                {
+                    "type": "video",
+                    "id": "video",
+                    "label": "Video"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "html",
+                    "id": "paragraph",
+                    "label": "Paragraph"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Text Boxes"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+
+.text-boxes {
+    max-width: 1620px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+}
+.text-boxes__head {
+    margin: 60px 0;
+    justify-content: space-between;
+}
+.single-text-boxes__content {
+    background: #ececec;
+    width: calc(100% - 60px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    border-radius: 30px;
+    margin: 0 auto;
+    height: 460px;
+}
+.text-boxes__foot {
+    text-align: center;
+}
+.text-boxes video {
+    border-radius: 30px;
+    min-height: 380px;
+    object-fit: cover;
+}
+.text-boxes__head__content {
+    margin-top: 40px;
+}
+.text-boxes__head__content__paragraph {
+    padding-right: 40px;
+}
+.single-text-boxes__content__title {
+    text-align: center;
+    line-height: 1;
+    margin-top: 30px;
+    font-size: 36px;
+    height: 110px;
+}
+.text-boxes__foot__btn {
+    width: 740px;
+    text-transform: unset;
+}
+.text-boxes__foot {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1190px) {
+    .single-text-boxes__content__title {
+        font-size: 24px;
+    }
+    .single-text-boxes__content {
+        height: 340px;
+        width: calc(100% - 10px);
+    }
+    .single-text-boxes__content img {
+        max-width: 130px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .single-text-boxes.col-4 {
+        width: calc(100% / 3);
+    }
+    .text-boxes__head__content__paragraph.col-6 {
+        margin-bottom: 30px;
+        padding-right: 0;
+    }
+    .text-boxes__head {
+        margin: 20px 0 40px 0;
+    }
+    .text-boxes__head__content {
+        margin-top: 20px;
+    }
+    .text-boxes video {
+        min-height: 260px;
+    }
+    .text-boxes__cta__btn {
+        width: 100%;
+    }
+    .single-text-boxes__content__title {
+        font-size: 16px;
+        height: unset;
+        margin-top: 10px
+    }
+    .single-text-boxes__content {
+        padding: 30px 0;
+        height: 200px;
+    }
+    .single-text-boxes__content img {
+        max-width: 80px;
+    }
+    .text-boxes__cta {
+        margin-top: 40px;
+    }
+    .text-boxes__cards.row {
+        margin: 0 -5px;
+    }
+}
+
+{% endstylesheet %}
+

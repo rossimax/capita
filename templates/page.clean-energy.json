@@ -86,7 +86,7 @@
       "settings": {
         "video_desk": "shopify:\/\/files\/videos\/CLEAN ENERGY MFG BANNER.mp4",
         "video_mob": "shopify:\/\/files\/videos\/CLEAN ENERGY MFG BANNER.mp4",
-        "shadow": "no",
+        "shadow": "yes_full",
         "title_position": "top_left",
         "content_position": "bottom_center",
         "title": "UNIQUE<br>\nLOCATION.",

@@ -104,8 +104,8 @@
     "1348af52-2bff-4a2a-8df1-975b12dc4d5c": {
       "type": "paragraph-simple",
       "settings": {
-        "padding_top": 20,
-        "padding_bottom": 20,
+        "padding_top": 80,
+        "padding_bottom": 40,
         "font_size_title": 80,
         "font_size_title_mob": 36,
         "background_color": "#000000",

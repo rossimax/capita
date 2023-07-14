@@ -17,7 +17,7 @@
 {% endif %}
 
 
-<div class="section-hero-banner-secondary {{title_position}} {{content_position}}">
+<div class="section-hero-banner-secondary {{title_position}} {{content_position}}" style="margin-top: {{ section.settings.margin_top }}px;margin-bottom: {{ section.settings.margin_bottom }}px;">
 
   {% if section.settings.shadow == "yes_full" %}
     <div class="full-shadow"></div>
@@ -42,8 +42,8 @@
 
   {% if section.settings.shadow_box_title != blank %}
     <div class="hero-banner-secondary-shadow-box">
-      <h2 class="hero-banner-secondary-shadow-box__title strong">{{section.settings.title}}</h2>
-      <h4 class="hero-banner-secondary-shadow-box__text">{{section.settings.sub_title}}</h4>
+      <h3 class="hero-banner-secondary-shadow-box__title strong">{{section.settings.shadow_box_title}}</h3>
+      <div class="hero-banner-secondary-shadow-box__text">{{section.settings.shadow_box_text}}</div>
     </div>
   {% endif %}
   
@@ -56,6 +56,18 @@
     "en": "Hero Banner Secondary"
   },
   "settings": [
+    {
+      "type": "number",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "default": 0
+    },
+    {
+        "type": "number",
+        "id": "margin_bottom",
+        "label": "Margin Bottom",
+        "default": 0
+    },
     {
       "type": "image_picker",
       "id": "image_desk",
@@ -272,6 +284,26 @@
 .section-hero-banner-secondary.bottom-outside .hero-banner-secondary-content a.hero-banner-secondary-content__cta {
     color: #fff;
     background: #000;
+}
+.hero-banner-secondary-shadow-box {
+    max-width: 700px;
+    padding: 20px;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    background: #00000099;
+    backdrop-filter: blur(10px);
+}
+.hero-banner-secondary-shadow-box__title {
+    font-size: 26px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.hero-banner-secondary-shadow-box__text {
+    line-height: 1.05;
 }
 
 @media screen and (max-width: 768px) {

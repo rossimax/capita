@@ -39,6 +39,14 @@
       <a class="hero-banner-secondary-content__cta" href="{{section.settings.button_link}}">{{section.settings.button_label}}</a>
     {% endif %}
   </div>
+
+  {% if section.settings.shadow_box_title != blank %}
+    <div class="hero-banner-secondary-shadow-box">
+      <h2 class="hero-banner-secondary-shadow-box__title strong">{{section.settings.title}}</h2>
+      <h4 class="hero-banner-secondary-shadow-box__text">{{section.settings.sub_title}}</h4>
+    </div>
+  {% endif %}
+  
 </div>
 
 
@@ -137,6 +145,16 @@
       "type": "url",
       "id": "button_link",
       "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "shadow_box_title",
+      "label": "Shadow box title"
+    },
+    {
+      "type": "html",
+      "id": "shadow_box_text",
+      "label": "Shadow box text"
     }
   ],
   "presets": [

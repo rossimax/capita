@@ -17,7 +17,7 @@
                 {% endif %}
                 <div class="text-boxes__head__content {{ row_direction }}">
                     <div class="text-boxes__head__content__paragraph col-6">
-                        <h5 class="text-boxes__head__content__paragraph__title">
+                        <h5 class="text-boxes__head__content__paragraph__title strong">
                             {{ block.settings.title }}
                         </h5>
                         <div class="text-boxes__head__content__paragraph__text">
@@ -29,7 +29,7 @@
                             {% assign video = section.settings.video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
                             {{ video }}
                         {% else %}
-                            <img src="{{ block.settings.image | img_src: "master" }}" alt="capita">
+                            <img src="{{ block.settings.image | img_url: "master" }}" alt="capita">
                         {% endif %}
                     </div>
                 </div>
@@ -37,9 +37,9 @@
         </div>
 
         <div class="text-boxes__foot">
-            <h2 class="text-boxes__foot__title">
+            <div class="text-boxes__foot__title">
                 <h2 class="title">{{ section.settings.title_bottom }}</h2>
-            </h2>
+            </div>
             <div class="text-boxes__foot__ctas">
                 <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link }}">{{ section.settings.cta_text }}</a>
                 <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link }}">{{ section.settings.cta_text }}</a>
@@ -173,9 +173,23 @@
 }
 .text-boxes__head__content {
     margin-top: 40px;
+    line-height: 1.4;
 }
-.text-boxes__head__content__paragraph {
-    padding-right: 40px;
+.text-boxes__head__content.row  .text-boxes__head__content__paragraph {
+    padding-right: 20px;
+}
+.text-boxes__head__content.row  .text-boxes__head__content__media {
+    padding-left: 20px;
+}
+.text-boxes__head__content.row-reverse  .text-boxes__head__content__paragraph {
+    padding-left: 20px;
+}
+.text-boxes__head__content__paragraph__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.text-boxes__head__content.row-reverse  .text-boxes__head__content__media {
+    padding-right: 20px;
 }
 .single-text-boxes__content__title {
     text-align: center;
@@ -190,6 +204,12 @@
 }
 .text-boxes__foot {
     margin-top: 20px;
+}
+.text-boxes__foot__title {
+    margin: 60px auto;
+}
+.text-boxes__foot__title h2 {
+    font-size: 60px;
 }
 
 @media screen and (max-width: 1190px) {

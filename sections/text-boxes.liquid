@@ -26,7 +26,7 @@
                     </div>
                     <div class="text-boxes__head__content__media col-6">
                         {% if block.settings.video %}
-                            {% assign video = section.settings.video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+                            {% assign video = block.settings.video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
                             {{ video }}
                         {% else %}
                             <img src="{{ block.settings.image | img_url: "master" }}" alt="capita">
@@ -38,11 +38,17 @@
 
         <div class="text-boxes__foot">
             <div class="text-boxes__foot__title">
-                <h2 class="title">{{ section.settings.title_bottom }}</h2>
+                {% if section.settings.title_bottom %}
+                    <h2 class="title">{{ section.settings.title_bottom }}</h2>
+                {% endif %}
             </div>
             <div class="text-boxes__foot__ctas">
-                <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_1 }}">{{ section.settings.cta_text_1 }}</a>
-                <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_text_2 }}</a>
+                {% if section.settings.cta_text_1 %}
+                    <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_1 }}">{{ section.settings.cta_text_1 }}</a>
+                {% endif %}
+                {% if section.settings.cta_text_2 %}
+                    <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_text_2 }}</a>
+                {% endif %}
             </div>
         </div>
 

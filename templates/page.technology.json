@@ -76,10 +76,13 @@
         "title_bottom": "",
         "cta_text_1": "",
         "cta_link_1": "",
+        "arrow_type_1": "none",
         "cta_text_2": "",
         "cta_link_2": "",
+        "arrow_type_2": "none",
         "cta_text_3": "",
-        "cta_link_3": ""
+        "cta_link_3": "",
+        "arrow_type_3": "none"
       }
     },
     "f4853fc4-c7f6-4d08-8dae-08876af8aea6": {
@@ -143,10 +146,13 @@
         "title_bottom": "",
         "cta_text_1": "How our snowboards are made?",
         "cta_link_1": "",
+        "arrow_type_1": "arrow_normal",
         "cta_text_2": "What does clean energy mean?",
         "cta_link_2": "",
+        "arrow_type_2": "arrow_normal",
         "cta_text_3": "Watch: Clean Energy Production",
-        "cta_link_3": ""
+        "cta_link_3": "",
+        "arrow_type_3": "arrow_play"
       }
     }
   },

@@ -85,17 +85,17 @@
       "settings": {
         "margin_top": 0,
         "margin_bottom": 0,
-        "video_desk": "shopify:\/\/files\/videos\/CLEAN ENERGY MFG BANNER.mp4",
-        "video_mob": "shopify:\/\/files\/videos\/CLEAN ENERGY MFG BANNER.mp4",
+        "image_desk": "shopify:\/\/shop_images\/Asset_4-100_1.jpg",
+        "image_mob": "shopify:\/\/shop_images\/Asset_4-100_1_1.jpg",
         "shadow": "yes_full",
         "title_position": "top_left",
         "content_position": "bottom_center",
-        "title": "UNIQUE<br>\nLOCATION.",
+        "title": "PURPOSE-DRIVEN<br>\nR&amp;D.",
         "sub_title": "",
         "button_label": "",
         "button_link": "",
-        "shadow_box_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "shadow_box_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "shadow_box_title": "",
+        "shadow_box_text": ""
       }
     },
     "1348af52-2bff-4a2a-8df1-975b12dc4d5c": {

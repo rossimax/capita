@@ -1,0 +1,162 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "head_width": 100,
+        "margin_top": 110,
+        "body_color": "#ffffff",
+        "footer_border": true,
+        "enable_head": false,
+        "title": "We produceour ownclean energy.",
+        "description": ""
+      }
+    },
+    "0304082a-98f7-4665-a2cd-7ea2cfbc7043": {
+      "type": "hero-banner-secondary",
+      "settings": {
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "image_desk": "shopify:\/\/shop_images\/Asset_3-100_3.jpg",
+        "image_mob": "shopify:\/\/shop_images\/Asset_3-100_3_1.jpg",
+        "shadow": "yes_full",
+        "title_position": "top_left",
+        "content_position": "bottom_center",
+        "title": "Handcrafted with<br>\nAdvanced Technology.",
+        "sub_title": "",
+        "button_label": "",
+        "button_link": "",
+        "shadow_box_title": "",
+        "shadow_box_text": ""
+      }
+    },
+    "6f9f2d79-f9c0-4656-b9af-709522a45887": {
+      "type": "paragraph-simple",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 100,
+        "font_size_title": 60,
+        "font_size_title_mob": 36,
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <bl>labore et dolore magna<\/bl> aliqua. Ut enim ad minim veniam, quis nostrud",
+        "text": ""
+      }
+    },
+    "d05f70b4-e5a0-4e4d-af85-409d006f1017": {
+      "type": "text-boxes",
+      "blocks": {
+        "bc1a7d8e-68c5-44e3-83e9-1cfa161c57af": {
+          "type": "box",
+          "settings": {
+            "text_left": true,
+            "image": "shopify:\/\/shop_images\/DSCF2750_copy_1.jpg",
+            "title": "Enhanced Precision Through Technology",
+            "paragraph": "In 2020 The Mothership was the first in the snowboard industry to implement an NFC system in its snowboards. On the production floor, this chip allows us to track a snowboards journey with precise detail through each stage of its build. These chips allow us greater insight to quality control – <hl>greatly increasing final production quality and reducing unwanted flaws or scrap.<\/hl>"
+          }
+        },
+        "47c43f79-61a4-4cc5-8f4f-5dfa777d49c8": {
+          "type": "box",
+          "settings": {
+            "text_left": false,
+            "video": "shopify:\/\/files\/videos\/CAPiTA_WEB_BANNERS_-_RES_MFG.mp4",
+            "title": "Enhanced Experience ThroughTechnology",
+            "paragraph": "Another first in snowboard technology, the NFC capabilities have been taken further. Now you can connect with your board via NFC scan on your phone. This NFC interface will allow you to <hl>register your snowboard<\/hl> to expedite the customer service experience and get exclusive NFC-registered user early access to new product info, drops and CAPiTA team videos."
+          }
+        }
+      },
+      "block_order": [
+        "bc1a7d8e-68c5-44e3-83e9-1cfa161c57af",
+        "47c43f79-61a4-4cc5-8f4f-5dfa777d49c8"
+      ],
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "title": "The Mothership<br>\nConnection - NFC.",
+        "title_bottom": "",
+        "cta_text_1": "",
+        "cta_link_1": "",
+        "cta_text_2": "",
+        "cta_link_2": ""
+      }
+    },
+    "f4853fc4-c7f6-4d08-8dae-08876af8aea6": {
+      "type": "hero-banner-secondary",
+      "settings": {
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "video_desk": "shopify:\/\/files\/videos\/CLEAN ENERGY MFG BANNER.mp4",
+        "video_mob": "shopify:\/\/files\/videos\/CLEAN ENERGY MFG BANNER.mp4",
+        "shadow": "yes_full",
+        "title_position": "top_left",
+        "content_position": "bottom_center",
+        "title": "UNIQUE<br>\nLOCATION.",
+        "sub_title": "",
+        "button_label": "",
+        "button_link": "",
+        "shadow_box_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "shadow_box_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      }
+    },
+    "1348af52-2bff-4a2a-8df1-975b12dc4d5c": {
+      "type": "paragraph-simple",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "font_size_title": 80,
+        "font_size_title_mob": 36,
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "title": "Our snowboards are crafted with 98%<br> \nof materials locally sourced within<br> \na <bl>5 hour drive<\/bl> of The Mothership.",
+        "text": "",
+        "image_bottom": "shopify:\/\/shop_images\/Layer_1.png"
+      }
+    },
+    "7a215466-77ce-460c-9e7a-00f7a006189b": {
+      "type": "text-boxes",
+      "blocks": {
+        "dff44307-d733-46d9-ad1c-8f5b6bb29578": {
+          "type": "box",
+          "settings": {
+            "text_left": true,
+            "image": "shopify:\/\/shop_images\/Group_518.jpg",
+            "title": "How we produce",
+            "paragraph": "In addition to the investments in clean energy, the crew at The Mothership is also dedicated to challenging ourselves to find new ways to produce responsibly and find safer, more sustainable, and recyclable materials to use in construction.\n<br><br>In the production line, our advanced processes are capable of pressing boards a lower temperatures, and with reduced cycle times. This ultimately means <hl>less energy is needed to operate production at The Mothership compared to standard snowboard factories.<\/hl>\n<br><br>\nThe Mothership also uses water-based, UV-curable, and solventless inks in printing, and zero toxic lacquer in topsheet application, plant-based bio resins in construction, and FSC certified wood cores including hybrid cores using post-consumer recycled Thermopolymer additives."
+          }
+        },
+        "d5ac263d-ae88-4ac9-98a9-d9ed33af2d5c": {
+          "type": "box",
+          "settings": {
+            "text_left": false,
+            "image": "shopify:\/\/shop_images\/Group_727.jpg",
+            "title": "Recycling Methods",
+            "paragraph": "At the Mothership we are in a constant persuit to improve our recycling capabilities – <hl>to deliver the worlds best snowboards while producing the least waste.<\/hl>\n<br><br>\nWe are currently capable of recycling all production scraps from base materials, tip and tail trimmings, sidewall ABS materials, protection film, and our wood core milling room. We’ve also introduced the use of 100% recycled shrink wrap film on our boards at finishing."
+          }
+        }
+      },
+      "block_order": [
+        "dff44307-d733-46d9-ad1c-8f5b6bb29578",
+        "d5ac263d-ae88-4ac9-98a9-d9ed33af2d5c"
+      ],
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "title": "Sustainable,<br>\nRecyclable Materials.",
+        "title_bottom": "Each production season we recycle over<br> \n<hl>xxx tons of material<\/hl> – preventing it from<br> \nentering the waste cycle.",
+        "cta_text_1": "How does technology help?",
+        "cta_link_1": "",
+        "cta_text_2": "How our snowboards are made?",
+        "cta_link_2": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0304082a-98f7-4665-a2cd-7ea2cfbc7043",
+    "6f9f2d79-f9c0-4656-b9af-709522a45887",
+    "d05f70b4-e5a0-4e4d-af85-409d006f1017",
+    "f4853fc4-c7f6-4d08-8dae-08876af8aea6",
+    "1348af52-2bff-4a2a-8df1-975b12dc4d5c",
+    "7a215466-77ce-460c-9e7a-00f7a006189b"
+  ]
+}

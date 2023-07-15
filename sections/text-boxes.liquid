@@ -2,14 +2,13 @@
 
 <div class="section-text-boxes" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
     <div class="text-boxes">
-
         <div class="text-boxes__head">
-            <h2 class="title">{{ section.settings.title }}</h2>
+            {% if section.settings.title != blank %}
+                <h2 class="title">{{ section.settings.title }}</h2>
+            {% endif %}
         </div>
-
         <div class="text-boxes__cards row">
             {% for block in section.blocks %}
-
                 {% if block.settings.text_left %}
                     {% assign row_direction = "row" %}
                 {% else %}
@@ -35,26 +34,24 @@
                 </div>
             {% endfor %}
         </div>
-
         <div class="text-boxes__foot">
             <div class="text-boxes__foot__title">
-                {% if section.settings.title_bottom %}
+                {% if section.settings.title_bottom != blank %}
                     <h2 class="title">{{ section.settings.title_bottom }}</h2>
                 {% endif %}
             </div>
             <div class="text-boxes__foot__ctas">
-                {% if section.settings.cta_text_1 %}
+                {% if section.settings.cta_text_1 != blank %}
                     <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_1 }}">{{ section.settings.cta_text_1 }}</a>
                 {% endif %}
-                {% if section.settings.cta_text_2 %}
+                {% if section.settings.cta_text_2 != blank %}
                     <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_text_2 }}</a>
                 {% endif %}
-                {% if section.settings.cta_text_2 %}
+                {% if section.settings.cta_text_2 != blank %}
                     <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_3 }}">{{ section.settings.cta_text_3 }}</a>
                 {% endif %}
             </div>
         </div>
-
     </div>
 </div>
 

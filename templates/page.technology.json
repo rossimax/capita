@@ -107,24 +107,34 @@
           "type": "box",
           "settings": {
             "text_left": true,
-            "image": "shopify:\/\/shop_images\/Group_518.jpg",
-            "title": "How we produce",
-            "paragraph": "In addition to the investments in clean energy, the crew at The Mothership is also dedicated to challenging ourselves to find new ways to produce responsibly and find safer, more sustainable, and recyclable materials to use in construction.\n<br><br>In the production line, our advanced processes are capable of pressing boards a lower temperatures, and with reduced cycle times. This ultimately means <hl>less energy is needed to operate production at The Mothership compared to standard snowboard factories.<\/hl>\n<br><br>\nThe Mothership also uses water-based, UV-curable, and solventless inks in printing, and zero toxic lacquer in topsheet application, plant-based bio resins in construction, and FSC certified wood cores including hybrid cores using post-consumer recycled Thermopolymer additives."
+            "video": "shopify:\/\/files\/videos\/EVERYTHING IS POSSIBLE BANNER.mp4",
+            "title": "Thermal Insert Drilling",
+            "paragraph": "At many snowboard factories they are setting your inserts with a drill by hand. This leads to scrap pieces, poor quality and excess waste. At CAPiTA MFG we have invested in a thermal drilling machine that <strong>scans, identifies and then drills the precise location of each insert.<\/strong> This ensures the essential connection for your binding to snowboard will be sound, giving you confidence in a higher performing product."
           }
         },
         "d5ac263d-ae88-4ac9-98a9-d9ed33af2d5c": {
           "type": "box",
           "settings": {
-            "text_left": false,
-            "image": "shopify:\/\/shop_images\/Group_727.jpg",
-            "title": "Recycling Methods",
-            "paragraph": "At the Mothership we are in a constant persuit to improve our recycling capabilities – <hl>to deliver the worlds best snowboards while producing the least waste.<\/hl>\n<br><br>\nWe are currently capable of recycling all production scraps from base materials, tip and tail trimmings, sidewall ABS materials, protection film, and our wood core milling room. We’ve also introduced the use of 100% recycled shrink wrap film on our boards at finishing."
+            "text_left": true,
+            "video": "shopify:\/\/files\/videos\/RESPONSIBLE MFG BANNER_e83b52ff-a028-4395-bd74-8ba023b6201d.mp4",
+            "title": "PLT Topsheet Technology",
+            "paragraph": "The traditional model is to press the topsheet on with the snowboard, and use lacquer to cover any imperfections. The Mothership’s proprietary PLT Topsheet Technology breaks that model and <strong>applies beautifully finished graphics to our snowboards<\/strong> without any telescoping from the fiberglass layers. No other snowboard design in the world can match the finish printing quality of a CAPiTA topsheet graphic."
+          }
+        },
+        "bdaa68f8-a0e9-4d2a-aa39-e270fd19fff2": {
+          "type": "box",
+          "settings": {
+            "text_left": true,
+            "video": "shopify:\/\/files\/videos\/O CONNOR - VIDEO BANNER.mp4",
+            "title": "Fully Automated Finishing Lines",
+            "paragraph": "Computer programmed, and fully automated the grinding and finishing lines at The Mothership fine tune snowboards to perfection. This <strong>minimizes energy consumption in production and reduces material waste<\/strong>. As a final step, each board is hand inspected twice to ensure the most premium quality."
           }
         }
       },
       "block_order": [
         "dff44307-d733-46d9-ad1c-8f5b6bb29578",
-        "d5ac263d-ae88-4ac9-98a9-d9ed33af2d5c"
+        "d5ac263d-ae88-4ac9-98a9-d9ed33af2d5c",
+        "bdaa68f8-a0e9-4d2a-aa39-e270fd19fff2"
       ],
       "settings": {
         "padding_top": 60,

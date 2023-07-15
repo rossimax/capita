@@ -49,6 +49,9 @@
                 {% if section.settings.cta_text_2 %}
                     <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_text_2 }}</a>
                 {% endif %}
+                {% if section.settings.cta_text_2 %}
+                    <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_3 }}">{{ section.settings.cta_text_3 }}</a>
+                {% endif %}
             </div>
         </div>
 
@@ -91,7 +94,7 @@
             "id": "cta_link_1",
             "label": "CTA Link 1"
         },
-                {
+        {
             "type": "text",
             "id": "cta_text_2",
             "label": "CTA Text 2"
@@ -100,6 +103,16 @@
             "type": "url",
             "id": "cta_link_2",
             "label": "CTA Link 2"
+        },
+        {
+            "type": "text",
+            "id": "cta_text_3",
+            "label": "CTA Text 3"
+        },
+        {
+            "type": "url",
+            "id": "cta_link_3",
+            "label": "CTA Link 3"
         }
     ],
     "blocks": [

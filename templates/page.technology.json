@@ -1,0 +1,165 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "head_width": 100,
+        "margin_top": 110,
+        "body_color": "#ffffff",
+        "footer_border": true,
+        "enable_head": false,
+        "title": "We produceour ownclean energy.",
+        "description": ""
+      }
+    },
+    "0304082a-98f7-4665-a2cd-7ea2cfbc7043": {
+      "type": "hero-banner-secondary",
+      "settings": {
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "image_desk": "shopify:\/\/shop_images\/Asset_6_1.jpg",
+        "image_mob": "shopify:\/\/shop_images\/Asset_6_1_1.jpg",
+        "shadow": "yes_full",
+        "title_position": "top_left",
+        "content_position": "bottom_center",
+        "title": "We produce<br>\nour own<br>\nclean energy.",
+        "sub_title": "",
+        "button_label": "",
+        "button_link": "",
+        "shadow_box_title": "",
+        "shadow_box_text": ""
+      }
+    },
+    "6f9f2d79-f9c0-4656-b9af-709522a45887": {
+      "type": "paragraph-simple",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 100,
+        "font_size_title": 60,
+        "font_size_title_mob": 36,
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "title": "As the industry’s first clean energy <br>\nmanufacturing facility,\nThe Mothership<br>\n– distinguished as a flagship of responsible<br> \nmanufacturing – is the recipient of the<br>\n<bl>Energy Globe Award for Austria.<\/bl>",
+        "text": "<p>Known as Nature’s Nobel Prize, with 178 participating countries, the Energy Globe is today’s most prestigious environmental award.<br\/>It is presented annually to projects focusing on reneweable energies and the conservation of resources.<\/p>"
+      }
+    },
+    "2f8c7944-0519-41a9-a000-b3d228d94ecf": {
+      "type": "text-video-cards",
+      "blocks": {
+        "34655e6e-95b1-4130-9bfb-e864a94e37e9": {
+          "type": "cards",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_674.png",
+            "title": "ZERO<br>CO2 Emissions"
+          }
+        },
+        "6837a6f1-6f4b-43a4-ad21-32840f4c2c3c": {
+          "type": "cards",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_675.png",
+            "title": "ZERO<br>Ozone Depletion Potential"
+          }
+        },
+        "17d51c09-a020-43e2-aa92-8588c1588966": {
+          "type": "cards",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_676.png",
+            "title": "ZERO<br>Global Warming Potential"
+          }
+        }
+      },
+      "block_order": [
+        "34655e6e-95b1-4130-9bfb-e864a94e37e9",
+        "6837a6f1-6f4b-43a4-ad21-32840f4c2c3c",
+        "17d51c09-a020-43e2-aa92-8588c1588966"
+      ],
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "title": "100% Clean Energy<br> Manufacturing.",
+        "paragraph": "<strong>The CAPiTA Mothership<\/strong> is the world’s newest, most technologically advanced snowboard manufacturing facility – a clean energy production wonder. We generate the power for CAPiTA production processes via an <hl>on-site hydro-activated NH3 Thermal Energy System in concert with our newly expanded solar panel array.<\/hl> As industry leaders, we hold ourselves accountable to continue to invest in the evolution of responsible production processes to preserve the winters we love so much.<br> <br>From the board presses, to the grinding line, we are proud that our self-generated clean energy is utilized to create the best snowboards in the world.",
+        "video": "shopify:\/\/files\/videos\/EVERYTHING IS POSSIBLE BANNER.mp4",
+        "cta_text": "Watch: Clean Energy Production",
+        "cta_link": "shopify:\/\/pages\/mothership"
+      }
+    },
+    "f4853fc4-c7f6-4d08-8dae-08876af8aea6": {
+      "type": "hero-banner-secondary",
+      "settings": {
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "video_desk": "shopify:\/\/files\/videos\/CLEAN ENERGY MFG BANNER.mp4",
+        "video_mob": "shopify:\/\/files\/videos\/CLEAN ENERGY MFG BANNER.mp4",
+        "shadow": "yes_full",
+        "title_position": "top_left",
+        "content_position": "bottom_center",
+        "title": "UNIQUE<br>\nLOCATION.",
+        "sub_title": "",
+        "button_label": "",
+        "button_link": "",
+        "shadow_box_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "shadow_box_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      }
+    },
+    "1348af52-2bff-4a2a-8df1-975b12dc4d5c": {
+      "type": "paragraph-simple",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "font_size_title": 80,
+        "font_size_title_mob": 36,
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "title": "Our snowboards are crafted with 98%<br> \nof materials locally sourced within<br> \na <bl>5 hour drive<\/bl> of The Mothership.",
+        "text": "",
+        "image_bottom": "shopify:\/\/shop_images\/Layer_1.png"
+      }
+    },
+    "7a215466-77ce-460c-9e7a-00f7a006189b": {
+      "type": "text-boxes",
+      "blocks": {
+        "dff44307-d733-46d9-ad1c-8f5b6bb29578": {
+          "type": "box",
+          "settings": {
+            "text_left": true,
+            "image": "shopify:\/\/shop_images\/Group_518.jpg",
+            "title": "How we produce",
+            "paragraph": "In addition to the investments in clean energy, the crew at The Mothership is also dedicated to challenging ourselves to find new ways to produce responsibly and find safer, more sustainable, and recyclable materials to use in construction.\n<br><br>In the production line, our advanced processes are capable of pressing boards a lower temperatures, and with reduced cycle times. This ultimately means <hl>less energy is needed to operate production at The Mothership compared to standard snowboard factories.<\/hl>\n<br><br>\nThe Mothership also uses water-based, UV-curable, and solventless inks in printing, and zero toxic lacquer in topsheet application, plant-based bio resins in construction, and FSC certified wood cores including hybrid cores using post-consumer recycled Thermopolymer additives."
+          }
+        },
+        "d5ac263d-ae88-4ac9-98a9-d9ed33af2d5c": {
+          "type": "box",
+          "settings": {
+            "text_left": false,
+            "image": "shopify:\/\/shop_images\/Group_727.jpg",
+            "title": "Recycling Methods",
+            "paragraph": "At the Mothership we are in a constant persuit to improve our recycling capabilities – <hl>to deliver the worlds best snowboards while producing the least waste.<\/hl>\n<br><br>\nWe are currently capable of recycling all production scraps from base materials, tip and tail trimmings, sidewall ABS materials, protection film, and our wood core milling room. We’ve also introduced the use of 100% recycled shrink wrap film on our boards at finishing."
+          }
+        }
+      },
+      "block_order": [
+        "dff44307-d733-46d9-ad1c-8f5b6bb29578",
+        "d5ac263d-ae88-4ac9-98a9-d9ed33af2d5c"
+      ],
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "title": "Sustainable,<br>\nRecyclable Materials.",
+        "title_bottom": "Each production season we recycle over<br> \n<hl>xxx tons of material<\/hl> – preventing it from<br> \nentering the waste cycle.",
+        "cta_text_1": "How does technology help?",
+        "cta_link_1": "",
+        "cta_text_2": "How our snowboards are made?",
+        "cta_link_2": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0304082a-98f7-4665-a2cd-7ea2cfbc7043",
+    "6f9f2d79-f9c0-4656-b9af-709522a45887",
+    "2f8c7944-0519-41a9-a000-b3d228d94ecf",
+    "f4853fc4-c7f6-4d08-8dae-08876af8aea6",
+    "1348af52-2bff-4a2a-8df1-975b12dc4d5c",
+    "7a215466-77ce-460c-9e7a-00f7a006189b"
+  ]
+}

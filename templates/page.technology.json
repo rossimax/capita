@@ -98,20 +98,6 @@
         "shadow_box_text": ""
       }
     },
-    "1348af52-2bff-4a2a-8df1-975b12dc4d5c": {
-      "type": "paragraph-simple",
-      "settings": {
-        "padding_top": 80,
-        "padding_bottom": 40,
-        "font_size_title": 80,
-        "font_size_title_mob": 36,
-        "background_color": "#000000",
-        "text_color": "#ffffff",
-        "title": "Our snowboards are crafted with 98%<br> \nof materials locally sourced within<br> \na <bl>5 hour drive<\/bl> of The Mothership.",
-        "text": "",
-        "image_bottom": "shopify:\/\/shop_images\/Layer_1.png"
-      }
-    },
     "7a215466-77ce-460c-9e7a-00f7a006189b": {
       "type": "text-boxes",
       "blocks": {
@@ -156,7 +142,6 @@
     "6f9f2d79-f9c0-4656-b9af-709522a45887",
     "d05f70b4-e5a0-4e4d-af85-409d006f1017",
     "f4853fc4-c7f6-4d08-8dae-08876af8aea6",
-    "1348af52-2bff-4a2a-8df1-975b12dc4d5c",
     "7a215466-77ce-460c-9e7a-00f7a006189b"
   ]
 }

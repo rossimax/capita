@@ -42,40 +42,40 @@
             </div>
             <div class="text-boxes__foot__ctas">
                 {% liquid 
-                    if arrow_type_1 == "arrow_normal" 
+                    if section.settings.arrow_type_1 == "arrow_normal" 
                         assign arrow_cta_1 = "icon-arrow-capita"
-                    elsif arrow_type_1 == "arrow_play" 
-                        assign arrow_cta_1 = "icon-arrow-cplayapita"
+                    elsif section.settings.arrow_type_1 == "arrow_play" 
+                        assign arrow_cta_1 = "icon-arrow-play"
                     else 
                         assign arrow_cta_1 = blank
                     endif
                 -%}
                 {% if section.settings.cta_text_1 != blank %}
-                    <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_1 }}">{{ section.settings.cta_text_1 }} {% if arrow_cta_1 != blank %}{% render arrow_cta_1 %}{% endif %}</a>
+                    <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_1 }}">{{ section.settings.cta_text_1 }} {% if arrow_cta_1 != blank %}{% include arrow_cta_1 %}{% endif %}</a>
                 {% endif %}
                 {% liquid 
-                    if arrow_type_2 == "arrow_normal" 
+                    if section.settings.arrow_type_2 == "arrow_normal" 
                         assign arrow_cta_2 = "icon-arrow-capita"
-                    elsif arrow_type_2 == "arrow_play" 
-                        assign arrow_cta_2 = "icon-arrow-cplayapita"
+                    elsif section.settings.arrow_type_2 == "arrow_play" 
+                        assign arrow_cta_2 = "icon-arrow-play"
                     else 
                         assign arrow_cta_2 = blank
                     endif
                 -%}
                 {% if section.settings.cta_text_2 != blank %}
-                    <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_text_2 }} {% if arrow_cta_2 != blank %}{% render arrow_cta_2 %}{% endif %}</a>
+                    <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_text_2 }} {% if arrow_cta_2 != blank %}{% include arrow_cta_2 %}{% endif %}</a>
                 {% endif %}
                 {% liquid 
-                    if arrow_type_3 == "arrow_normal" 
+                    if section.settings.arrow_type_3 == "arrow_normal" 
                         assign arrow_cta_3 = "icon-arrow-capita"
-                    elsif arrow_type_3 == "arrow_play" 
-                        assign arrow_cta_3 = "icon-arrow-cplayapita"
+                    elsif section.settings.arrow_type_3 == "arrow_play" 
+                        assign arrow_cta_3 = "icon-arrow-play"
                     else 
                         assign arrow_cta_3 = blank
                     endif
                 -%}
                 {% if section.settings.cta_text_2 != blank %}
-                    <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_3 }}">{{ section.settings.cta_text_3 }} {% if arrow_cta_3 != blank %}{% render arrow_cta_3 %}{% endif %}</a>
+                    <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_3 }}">{{ section.settings.cta_text_3 }} {% if arrow_cta_3 != blank %}{% include arrow_cta_3 %}{% endif %}</a>
                 {% endif %}
             </div>
         </div>

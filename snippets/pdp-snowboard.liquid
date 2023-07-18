@@ -1,11 +1,11 @@
 <div class="c-product-tech">
     <div class="c-product-tech__sx">
         <div class="c-product-tech__specs">
-            <div class="c-spec"><span class="c-spec__type">shape</span><span class="c-spec__value">true twin</span>
+            <div class="c-spec"><span class="c-spec__type">shape</span><span class="c-spec__value">{{ product.metafields.snowboard_info.shapes }}</span>
             </div>
-            <div class="c-spec"><span class="c-spec__type">sidecut</span><span class="c-spec__value">blended
-                    radial</span></div>
-            <div class="c-spec"><span class="c-spec__type">flex</span><span class="c-spec__value">{{ product.metafields.snowboard_info.flex_description }}</span>
+            <div class="c-spec"><span class="c-spec__type">sidecut</span><span class="c-spec__value">{{ product.metafields.snowboard_info.sidecut }}</span></div>
+            <div class="c-spec"><span class="c-spec__type">flex</span>
+                <span class="c-spec__value">{{ product.metafields.snowboard_info.flex_title }}</span>
                 <div class="c-spec__level is-blue" style="--dot-position: {{ product.metafields.snowboard_info.rating__flex }}; --steps: 10">
                     <div class="c-spec__dot"></div>
                     <div class="c-spec__line"></div>
@@ -22,7 +22,7 @@
             <div class="c-spec"><span class="c-spec__type">rider type</span><span
                     class="c-spec__value">{{ product.metafields.snowboard_info.rider_type_title }}</span></div>
             <div class="c-spec"><span class="c-spec__type">skill level</span>
-                <div class="c-spec__level" style="--dot-position: 4; --steps: 5">
+                <div class="c-spec__level" style="--dot-position: {{ product.metafields.snowboard_info.rating__skill_level }}; --steps: 5">
                     <div class="c-spec__dot"></div>
                     <div class="c-spec__line"></div>
                     <div class="c-spec__line"></div>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="c-spec"><span class="c-spec__type">TERRAIN VERSATILITY</span>
-                <div class="c-spec__level" style="--dot-position: {{ product.metafields.snowboard_info.rating__all_mtn }}; --steps: 5">
+                <div class="c-spec__level" style="--dot-position: {{ product.metafields.snowboard_info.rating__terrain_versatility }}; --steps: 5">
                     <div class="c-spec__dot"></div>
                     <div class="c-spec__line"></div>
                     <div class="c-spec__line"></div>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="c-spec"><span class="c-spec__type">GROOMERS</span>
-                <div class="c-spec__level" style="--dot-position: {{ product.metafields.snowboard_info.rating__performance }}; --steps: 5">
+                <div class="c-spec__level" style="--dot-position: {{ product.metafields.snowboard_info.rating__groomers }}; --steps: 5">
                     <div class="c-spec__dot"></div>
                     <div class="c-spec__line"></div>
                     <div class="c-spec__line"></div>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="c-spec"><span class="c-spec__type">JUMPS</span>
-                <div class="c-spec__level" style="--dot-position: {{ product.metafields.snowboard_info.rating__urban }}; --steps: 5">
+                <div class="c-spec__level" style="--dot-position: {{ product.metafields.snowboard_info.rating__jumps }}; --steps: 5">
                     <div class="c-spec__dot"></div>
                     <div class="c-spec__line"></div>
                     <div class="c-spec__line"></div>
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="c-spec"><span class="c-spec__type">FLAT TRICK / JIBBING</span>
-                <div class="c-spec__level" style="--dot-position: {{ product.metafields.snowboard_info.rating__park }}; --steps: 5">
+                <div class="c-spec__level" style="--dot-position: {{ product.metafields.snowboard_info.rating__flat_trick__jibbing }}; --steps: 5">
                     <div class="c-spec__dot"></div>
                     <div class="c-spec__line"></div>
                     <div class="c-spec__line"></div>
@@ -78,19 +78,21 @@
         </div>
     </div>
     <div class="c-product-tech__dx">
-        <div class="c-product-tech__story"><span class="c-product-tech__subtitle">tech story</span><span class="c-product-tech__title">{{ product.title }}</span>
+        <div class="c-product-tech__story"><span class="c-product-tech__subtitle">tech story</span>
+            <span class="c-product-tech__title">{{ product.title }}</span>
             <div class="c-product-tech__text">
-                {{ product.metafields.snowboard_info.snowboard_description }}
+                {{ product.metafields.snowboard_info.tech_description }}
             </div>
         </div>
-        <div class="c-product-tech__story"><span class="c-product-tech__subtitle">camber</span><span class="c-product-tech__title">{{ product.metafields.snowboard_info.camber_type }}</span>
+        <div class="c-product-tech__story"><span class="c-product-tech__subtitle">camber</span>
+            <span class="c-product-tech__title">{{ product.metafields.snowboard_info.camber_type }}</span>
             <div class="c-product-tech__text">
                 {{ product.metafields.snowboard_info.camber_description }}
             </div>
         </div>
-        {% if product.metafields.snowboard_info.camber_image %}
+        {% if product.metafields.snowboard_info.camber_image_new %}
           <div class="c-product-tech__image">
-            <img src="{{ product.metafields.snowboard_info.camber_image | image_url : "master" }}" alt="{{ product.title | strip_html }}">
+            <img src="{{ product.metafields.snowboard_info.camber_image_new }}" alt="{{ product.title | strip_html }}">
           </div>
         {% endif %}
     </div>

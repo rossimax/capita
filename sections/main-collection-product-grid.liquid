@@ -608,23 +608,17 @@ span.spr-badge-caption {
 
   // EMPTY CHECK
   function emptyCheck() {
-    console.log(productItems.length)
     let counter = 0
-
     productItems.forEach(productItem_check => {
       if (productItem_check.classList.contains("hide")) {
         counter++
       }
     })
-        console.log(counter)
-
-
     if (counter == productItems.length) {
       emtyMsg.classList.add("empty")
     } else {
       emtyMsg.classList.remove("empty")
     }
-    
   }
 
   window.addEventListener("load", (event) => {
@@ -637,11 +631,11 @@ span.spr-badge-caption {
       tagListAppliedArray.forEach((tagApplied,i) => {
 
         tagApplied = tagApplied.replace("-"," ").toLowerCase()
-  
+
         filterInputs.forEach((filterInput_check,i) => {
   
           let filterInput_checkValue = filterInput_check.getAttribute("name").toLowerCase()
-  
+
           if (filterInput_checkValue == tagApplied) {
   
             filterInput_check.click()
@@ -669,7 +663,7 @@ span.spr-badge-caption {
 
       filterInput.addEventListener("change", function() {
 
-        let filterInputName = filterInput.getAttribute("name")
+        let filterInputName = filterInput.getAttribute("name").toLowerCase()
 
         if (uriTagsApplied) { // SYNC MODE
 
@@ -704,7 +698,7 @@ span.spr-badge-caption {
 
           productItems.forEach((productItem,i) => {
 
-            let prodTags = productItem.getAttribute("data-tags")
+            let prodTags = productItem.getAttribute("data-tags").toLowerCase()
             let prodTitle = productItem.getAttribute("data-title")
             let prodTagsArray = prodTags.split("|")
             let productHide = true
@@ -780,7 +774,6 @@ span.spr-badge-caption {
     sortingListing.forEach(sortingElement => {
       sortingElement.addEventListener("click", function(){
         let sortValue = sortingElement.getAttribute("value")
-        console.log(sortValue)
         Shopify.queryParams.sort_by = sortValue;
         location.search = new URLSearchParams(Shopify.queryParams).toString();
       })
@@ -795,7 +788,6 @@ span.spr-badge-caption {
   // START - FILTERS MOB
 
   function checkMobFilter() {
-    console.log(window.innerWidth)
     if ( window.innerWidth < 1199) {
       filterMobHead.classList.add("closed")
       listingFilter.classList.add("closed")

@@ -1,7 +1,7 @@
 <div class="pdp-head-image">
   {% liquid 
-    if product.metafields.snowboard_intro.background_image 
-      assign background_image = product.metafields.snowboard_intro.background_image | image_url: "master" 
+    if product.metafields.snowboard_intro.background_image_new 
+      assign background_image = product.metafields.snowboard_intro.background_image_new 
     else
       assign background_image = "https://placehold.co/1920x600/000000/000"
     endif

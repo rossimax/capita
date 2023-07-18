@@ -11,7 +11,7 @@
         <h2 class="c-product-info__name strong">{{ product.title }}</h2>
         <span class="c-product-info__price medium">{{ product.price | money }}</span>
         <div style="margin-top: 5px;">or 4 interest-free installments of {{ product.price | divided_by: 4 | money }} by | <img style="display:inline;" width="75px" src="{{ 'afterpay-logo.png' | asset_url }}" alt="Afterpay"></div>
-        <p class="c-product-info__description medium">{{ product.metafields.snowboard_info.rider_type }}</p>
+        <p class="c-product-info__description medium">{{ product.metafields.snowboard_info.snowboard_description }}</p>
         
         {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %}
 

@@ -242,6 +242,14 @@ main.template-payments {
 .btn.btn-secondary.black svg {
   filter: invert(1);
 }
+.btn.btn-secondary.black .icon-arrow-play {
+  width: 16px;
+  height: 16px;;
+  margin-left: 5px;
+}
+.btn.btn-secondary.black:hover svg {
+  filter: invert(0);
+}
 .btn.btn-secondary.black.disabled {
   background: transparent;
   color: #000;
@@ -319,20 +327,20 @@ main.template-payments {
 .c-slim-form label.c-slim-form__legal {
   line-height: 1;
 }
-.table-striped tr {
+.c-size-chart tr {
   display: flex;
   padding-bottom: 13px;
   padding-top: 13px;
   letter-spacing: -0.01em;
 }
-.table-striped td,
-.table-striped th {
+.c-size-chart td,
+.c-size-chart th {
   display: block;
   flex-grow: 1;
   flex-shrink: 0;
   width: var(--column-width);
 }
-.table-striped tr:nth-child(odd) {
+.c-size-chart tr:nth-child(odd) {
   background-color: #eee;
 }
 .c-info-card img {

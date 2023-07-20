@@ -1,4 +1,5 @@
-<div class="c-header">
+<div class="c-header js-header">
+  <div class="c-header__back-area js-header-back-area"></div>
   <div class="c-header__bg"></div>
   <div class="c-header__top js-header-bar">
     <a class="c-header__logo" href="{{ shop.url }}">
@@ -64,7 +65,7 @@
             {% endif %}
             <span class="cart-count js-cart-count medium {{ class_cart }}">{{ cart.item_count }}</span>
         </button>
-        <button class="c-header__utility is-menu" type="button">
+        <button class="c-header__utility is-menu js-header-mobile-menu" type="button">
             <svg
             width="40"
             height="40"
@@ -95,7 +96,8 @@
   <div class="c-header__dropdown">
 
     {% include 'cart-header' %}
-    
+    <div class="c-header__menu-list js-header-menu-list">
+
     <div class="c-header__dropdown-panel c-header-search js-header-dropdown" style="display: none" data-parent="search">
       <label
         class="c-header-search__title"
@@ -142,7 +144,7 @@
             data-parent="{{ link.handle }}"
         >
             {%- if link.links != blank -%}
-                <button class="c-header-menu__parent">
+                <button class="c-header-menu__parent js-header-menu-parent">
                     <span>{{ link.title }}</span>
                     <svg
                         width="40"
@@ -156,12 +158,14 @@
                         <path d="M19.5 16.0898V22.908" stroke="white" stroke-linecap="round" />
                     </svg>
                 </button>
-                <div class="c-header-menu__list js-header-menu">
-                    {%- for childlink in link.links -%}
-                        {%- if childlink.links == blank -%}
-                            <a class="c-menu-item" href="{{ childlink.url }}">{{ childlink.title }}</a>
-                        {%- endif -%}
-                    {%- endfor -%}
+                <div class="js-header-menu">
+                  <div class="c-header-menu__list">
+                      {%- for childlink in link.links -%}
+                          {%- if childlink.links == blank -%}
+                              <a class="c-menu-item" href="{{ childlink.url }}">{{ childlink.title }}</a>
+                          {%- endif -%}
+                      {%- endfor -%}
+                  </div>
                 </div>
                 <div class="c-header-menu__line"></div>
 
@@ -187,7 +191,7 @@
         </div>
 
     {%- endfor -%}
-
+    </div>
   </div>
 </div>
 
@@ -210,10 +214,14 @@
 #search-result {
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 80px;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px 20px;
+}
+@media screen and (min-width: 1200px) {
+  #search-result {
+    margin-top:80px
+  }
 }
 .s-item__content {
     display: flex;

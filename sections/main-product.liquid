@@ -1,13 +1,13 @@
-<div class="pdp-head-image">
+<div class="c-product-hero">
   {% liquid 
     if product.metafields.snowboard_intro.background_image_new 
       assign background_image = product.metafields.snowboard_intro.background_image_new 
     else
-      assign background_image = "https://placehold.co/1920x600/000000/000"
+      assign background_image = "https://placehold.co/1920x600/f0f0f0/000"
     endif
   -%}
   <img src="{{ background_image }}" alt="Capita | {{ product.title | strip_html }}">
-  <h1>{{ product.title }}</h1>
+  <h1 class="c-product-hero__name">{{ product.title }}</h1>
 </div>
 
 <main class="main-page">

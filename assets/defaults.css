@@ -374,6 +374,7 @@ input.cart-submit.c-header-cart__checkout-btn {
 }
 img.c-cart-item__image {
   max-height: 148px;
+  min-height: 148px;
   object-fit: contain;
 }
 .c-product-info__size.js-product-variant.selected {

@@ -9,7 +9,7 @@ class CartRemoveButton extends HTMLElement {
     });
   }
 }
-
+console.log("caaarttt")
 customElements.define('cart-remove-button', CartRemoveButton);
 
 class CartItems extends HTMLElement {

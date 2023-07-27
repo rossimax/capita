@@ -26,7 +26,7 @@
 <cart-items class="page-width{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
   <div class="title-wrapper-with-link">
     <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
-    <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
+    {% comment %} <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a> {% endcomment %}
   </div>
 
   <div class="cart__warnings">
@@ -48,17 +48,14 @@
       <div class="js-contents">
         {%- if cart != empty -%}
           <table class="cart-items">
-            <caption class="visually-hidden">
-              {{ 'sections.cart.title' | t }}
-            </caption>
             <thead>
               <tr>
                 <th class="caption-with-letter-spacing" colspan="2" scope="col">
                   {{ 'sections.cart.headings.product' | t }}
                 </th>
-                <th class="medium-hide large-up-hide right caption-with-letter-spacing" colspan="1" scope="col">
+                {% comment %} <th class="medium-hide large-up-hide right caption-with-letter-spacing" colspan="1" scope="col">
                   {{ 'sections.cart.headings.total' | t }}
-                </th>
+                </th> {% endcomment %}
                 <th class="cart-items__heading--wide small-hide caption-with-letter-spacing" colspan="1" scope="col">
                   {{ 'sections.cart.headings.quantity' | t }}
                 </th>
@@ -162,7 +159,7 @@
                     </ul>
                   </td>
 
-                  <td class="cart-item__totals right medium-hide large-up-hide">
+                  {% comment %} <td class="cart-item__totals right medium-hide large-up-hide">
                     <div class="loading-overlay hidden">
                       <div class="loading-overlay__spinner">
                         <svg
@@ -215,18 +212,15 @@
                         </div>
                       {%- endif -%}
                     </div>
-                  </td>
+                  </td> {% endcomment %}
 
                   <td class="cart-item__quantity">
                     <div class="cart-item__quantity-wrapper">
-                      <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
+                      {% comment %} <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
                         {{ 'products.product.quantity.label' | t }}
-                      </label>
+                      </label> {% endcomment %}
                       <quantity-input class="quantity cart-quantity">
-                        <button class="quantity__button no-js-hidden" name="minus" type="button">
-                          <span class="visually-hidden">
-                            {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
-                          </span>
+                        <button class="quantity__button js-minus" type="button">
                           {% render 'icon-minus' %}
                         </button>
                         <input
@@ -246,11 +240,8 @@
                           aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
                           id="Quantity-{{ item.index | plus: 1 }}"
                           data-index="{{ item.index | plus: 1 }}"
-                        >
-                        <button class="quantity__button no-js-hidden" name="plus" type="button">
-                          <span class="visually-hidden">
-                            {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
-                          </span>
+                        > 
+                        <button class="quantity__button js-plus" type="button">
                           {% render 'icon-plus' %}
                         </button>
                       </quantity-input>
@@ -347,8 +338,8 @@
       </div>
     </div>
 
-    <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
-    <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">
+  <p style="visibility: hidden;" class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
+    <p style="visibility: hidden;" class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">
       {{ 'accessibility.loading' | t }}
     </p>
   </form>
@@ -385,3 +376,122 @@
   ]
 }
 {% endschema %}
+
+
+{% style %}
+.template-cart {
+    background: #000;
+    color: #fff;
+}
+.template-cart a {
+    color: #fff;
+}
+form#cart {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.title-wrapper-with-link {
+    text-align: center;
+    margin: 120px 0 60px 0;
+}
+quantity-input.quantity.cart-quantity {
+    display: flex;
+    align-items: center;
+}
+.quantity__input {
+  text-align: center;
+  margin: 0 10px;
+}
+button.quantity__button {
+  background: transparent;
+}
+button.quantity__button svg {
+  width: 10px;
+  background: transparent;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  height: 17px;
+  width: 17px;
+  padding: 2px;
+}
+a.button.button--tertiary {
+  min-height: unset !important;
+  min-width: unset !important;
+  margin: 0 !important;
+}
+.cart-item__quantity-wrapper {
+    margin-top: 12px;
+}
+.cart__footer {
+    max-width: 1020px;
+    margin: 0 auto;
+    border-top: 1px solid #fff;
+}
+.cart__ctas button {
+    display: block;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 15px;
+    padding-inline: 36px;
+    border-radius: 9999px;
+    background-color: #fff;
+    color: #000;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    line-height: .7;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-block: 17px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.cart-items th {
+    font-size: 21px;
+    font-weight: 700;
+}
+.cart-item cart-remove-button {
+    margin: 2px 0 0 20px;
+}
+button.quantity__button {
+  cursor: pointer;
+}
+{% endstyle %}
+
+
+{% javascript %}
+
+(function() {
+
+    let selectors = {
+      cartQuantities: '.cart-quantity',
+    };
+
+    let cartQuantities = document.querySelectorAll(selectors.cartQuantities);
+
+    cartQuantities.forEach(cartQuantity => {
+
+      let qntInput = cartQuantity.querySelector(".quantity__input");
+      let minusBtn = cartQuantity.querySelector(".js-minus");
+      let plusBtn = cartQuantity.querySelector(".js-plus");
+
+      minusBtn.addEventListener("click", function(){
+        qntInput.stepDown();
+        qntInput.dispatchEvent(new Event('change'))
+        console.log("down")
+      })
+      plusBtn.addEventListener("click", function(){
+        qntInput.stepUp();
+        qntInput.dispatchEvent(new Event('change'))
+        console.log("up")
+      })
+
+    });
+  
+  })();
+  
+
+{% endjavascript %}

@@ -170,8 +170,8 @@
           <div class="c-step__media">
             {% assign video_8_desk = section.settings.section_8_video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
             {% assign video_8_mob = section.settings.section_8_video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
-            <div class="only-desk">{{video_desk}}</div>
-            <div class="only-mob">{{video_8_mob}}</div>
+            <div class="only-desk">{{ video_8_desk }}</div>
+            <div class="only-mob">{{ video_8_mob }}</div>
           </div>
         </div>
     </div>

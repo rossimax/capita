@@ -1,11 +1,11 @@
 <div class="section-paragraph-simple" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;background-color: {{ section.settings.background_color }};">
     <div class="paragraph-simple-content">
         <h2 class="paragraph-simple-content__title strong" style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
+        {% if section.settings.image_bottom %}
+            <img class="paragraph-simple-image-bottom" src="{{ section.settings.image_bottom | img_url: "master" }}" alt="{{ section.settings.title | strip_html }}">
+        {% endif%}
         <div class="paragraph-simple-content__paragraph" style="color: {{ section.settings.text_color }}">{{ section.settings.text }}</div>
     </div>
-    {% if section.settings.image_bottom %}
-        <img class="paragraph-simple-image-bottom" src="{{ section.settings.image_bottom | img_url: "master" }}" alt="{{ section.settings.title | strip_html }}">
-    {% endif%}
 </div>
 
 <style>
@@ -96,6 +96,10 @@
     line-height: 1;
     margin-top: 20px;
     margin-bottom: 10px;
+    font-weight: 500;
+}
+.paragraph-simple-content__title bl {
+    font-weight: 600;
 }
 .paragraph-simple-content__paragraph {
     margin: 40px auto 0 auto;

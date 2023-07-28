@@ -241,6 +241,8 @@ main.template-payments {
 }
 .btn.btn-secondary.black svg {
   filter: invert(1);
+  margin-top: 1px;
+  margin-left: 5px;
 }
 .btn.btn-secondary.black .icon-arrow-play {
   width: 16px;

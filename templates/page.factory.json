@@ -128,7 +128,7 @@
       ],
       "settings": {
         "padding_top": 20,
-        "padding_bottom": 20,
+        "padding_bottom": 0,
         "title": "The world’s best snowboardsare made at The Mothership.",
         "description": ""
       }

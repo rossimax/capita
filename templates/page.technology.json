@@ -70,8 +70,8 @@
         "47c43f79-61a4-4cc5-8f4f-5dfa777d49c8"
       ],
       "settings": {
-        "padding_top": 20,
-        "padding_bottom": 20,
+        "padding_top": 60,
+        "padding_bottom": 0,
         "title": "The Mothership<br>\nConnection - NFC.",
         "title_bottom": "",
         "cta_text_1": "",

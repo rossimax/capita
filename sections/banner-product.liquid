@@ -1,4 +1,11 @@
-<div class="section-banner-product">
+{%- liquid
+    if section.settings.image_position
+        assign image_position = "image-on-left"
+    else
+        assign image_position = "image-on-right" 
+    endif
+%}
+<div class="section-banner-product {{ image_position }}">
     <div class="banner-product__left">
         <div class="banner-product__left__text">
             <h5>{{ section.settings.left_sup_title }}</h5>
@@ -23,6 +30,11 @@
   {
     "name": "Banner Product",
     "settings": [
+        {
+            "type": "checkbox",
+            "id": "image_position",
+            "label": "Image on Right"
+        },
         {
             "type": "product",
             "id": "product",

@@ -28,6 +28,7 @@
     "9bfad989-863d-473a-962c-c5b28a8c5824": {
       "type": "banner-product",
       "settings": {
+        "image_position": false,
         "product": "the-equalizer-by-jess-kimura",
         "product_image": "shopify:\/\/shop_images\/FRD07_EQUALIZER_146.png",
         "right_image": "shopify:\/\/shop_images\/Jess_Equalizer_1.jpg",
@@ -39,6 +40,7 @@
     "221611b0-cb5f-4aa9-af7b-309fbceb6127": {
       "type": "banner-product",
       "settings": {
+        "image_position": true,
         "product": "the-equalizer-by-jess-kimura",
         "product_image": "shopify:\/\/shop_images\/FRD07_EQUALIZER_146.png",
         "right_image": "shopify:\/\/shop_images\/Jess_Equalizer_1.jpg",

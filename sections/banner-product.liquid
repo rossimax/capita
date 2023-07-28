@@ -1,8 +1,8 @@
 {%- liquid
     if section.settings.image_position
-        assign image_position = "image-on-right"
+        assign image_position = "image-on-left"
     else
-        assign image_position = "image-on-left" 
+        assign image_position = "image-on-right" 
     endif
 %}
 <div class="section-banner-product {{ image_position }}">
@@ -167,6 +167,9 @@
     display: block;
     height: 100%;
     object-fit: cover;
+}
+.section-banner-product.image-on-left {
+    flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 768px) {

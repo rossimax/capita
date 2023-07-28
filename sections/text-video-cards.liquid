@@ -26,8 +26,18 @@
             {% endfor %}
         </div>
 
+        {% liquid 
+            if section.settings.arrow_type == "arrow_normal" 
+                assign arrow_cta = "icon-arrow-capita"
+            elsif section.settings.arrow_type == "arrow_play" 
+                assign arrow_cta = "icon-arrow-play"
+            else 
+                assign arrow_cta = blank
+            endif
+        -%}
+
         <div class="text-video-cards__cta">
-            <a class="btn btn-secondary black text-video-cards__cta__btn" href="{{ section.settings.cta_link }}">{{ section.settings.cta_text }}</a>
+            <a class="btn btn-secondary black text-video-cards__cta__btn" href="{{ section.settings.cta_link }}">{{ section.settings.cta_text }} {% if arrow_cta != blank %}{% include arrow_cta %}{% endif %}</a>
         </div>
 
     </div>
@@ -73,6 +83,26 @@
             "type": "url",
             "id": "cta_link",
             "label": "CTA Link"
+        },        
+        {
+            "type": "select",
+            "id": "arrow_type",
+            "label": "Arrow Type",
+            "options": [
+              {
+                "value": "none",
+                "label": "None"
+              },
+              {
+                "value": "arrow_normal",
+                "label": "Arrow Normal"
+              },
+              {
+                "value": "arrow_play",
+                "label": "Arrow Play"
+              }
+            ],
+            "default": "none"
         }
     ],
     "blocks": [
@@ -112,7 +142,7 @@
     padding-bottom: 60px;
 }
 .text-video-cards__head {
-    margin: 60px 0;
+    margin: 60px 0 80px 0;
     justify-content: space-between;
 }
 .single-text-video-cards__content {

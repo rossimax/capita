@@ -21,6 +21,9 @@
           </div>
         </div>
         <div class="c-step__media">
+            {% if section.settings.section_1_box_shadow != blank %}
+                <div class="box-shadow" style="background-color: rgba(0, 0, 0, {{ section.settings.section_1_box_shadow | divided_by: 100.0 }});"></div>
+            {% endif %}
             <img class="only-desk" src="{{ section.settings.section_1_image_desk | img_url: "master" }}" alt="{{ section.settings.section_1_title | strip_html }}">
             <img class="only-mob" src="{{ section.settings.section_1_image_mob | img_url: "master" }}" alt="{{ section.settings.section_1_title | strip_html }}">
         </div>
@@ -258,6 +261,11 @@
             "type": "image_picker",
             "id": "section_1_image_mob",
             "label": "Section 1 image Mob"
+        },
+        {
+            "type": "number",
+            "id": "section_1_box_shadow",
+            "label": "Section 1 Box Shadow"
         },
         {
             "type": "html",

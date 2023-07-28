@@ -17,8 +17,8 @@
       "settings": {
         "boxed": false,
         "title": "",
-        "video_desk": "shopify:\/\/files\/videos\/EXTERIOR SHOTS BANNER.mp4",
-        "video_mob": "shopify:\/\/files\/videos\/EXTERIOR SHOTS BANNER.mp4"
+        "video_desk": "shopify:\/\/files\/videos\/Hero Banner Page 1 Desktop.mp4",
+        "video_mob": "shopify:\/\/files\/videos\/Page 1 Mobile.mp4"
       }
     },
     "6f9f2d79-f9c0-4656-b9af-709522a45887": {
@@ -28,8 +28,8 @@
         "padding_bottom": 0,
         "font_size_title": 60,
         "font_size_title_mob": 36,
+        "background_color": "#ffffff",
         "text_color": "#000000",
-        "boxed_small": false,
         "title": "A one-of-a-kind marvel in snowboard production, The Mothership is the most <hl>technologically advanced<\/hl> and <hl>environmentally responsible<\/hl> manufacturing facility in the industry.",
         "text": ""
       }
@@ -136,6 +136,8 @@
     "0304082a-98f7-4665-a2cd-7ea2cfbc7043": {
       "type": "hero-banner-secondary",
       "settings": {
+        "margin_top": 0,
+        "margin_bottom": 0,
         "image_desk": "shopify:\/\/shop_images\/Group_499.jpg",
         "image_mob": "shopify:\/\/shop_images\/Asset_5_1.jpg",
         "shadow": "no",
@@ -144,7 +146,9 @@
         "title": "Everything<br>is possible.",
         "sub_title": "",
         "button_label": "",
-        "button_link": ""
+        "button_link": "",
+        "shadow_box_title": "",
+        "shadow_box_text": ""
       }
     },
     "a0611009-f554-41eb-b10d-8c89de6f0e0c": {
@@ -154,8 +158,8 @@
         "padding_bottom": 80,
         "font_size_title": 60,
         "font_size_title_mob": 20,
+        "background_color": "#ffffff",
         "text_color": "#000000",
-        "boxed_small": true,
         "title": "Our dedication to building the world’s best snowboards, with the most efficient and sustainable process, is galvanized by the company mantra -<br> <hl>EVERYTHING IS POSSIBLE.<\/hl>",
         "text": ""
       }

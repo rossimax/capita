@@ -80,7 +80,8 @@
         "paragraph": "<strong>The CAPiTA Mothership<\/strong> is the world’s newest, most technologically advanced snowboard manufacturing facility – a clean energy production wonder. We generate the power for CAPiTA production processes via an <hl>on-site hydro-activated NH3 Thermal Energy System in concert with our newly expanded solar panel array.<\/hl><br>\nAs industry leaders, we hold ourselves accountable to continue to invest in the evolution of responsible production processes to preserve the winters we love so much.",
         "video": "shopify:\/\/files\/videos\/NH3 Process.mp4",
         "cta_text": "Watch: Clean Energy Production",
-        "cta_link": "shopify:\/\/pages\/mothership"
+        "cta_link": "shopify:\/\/pages\/mothership",
+        "arrow_type": "arrow_normal"
       }
     },
     "f4853fc4-c7f6-4d08-8dae-08876af8aea6": {

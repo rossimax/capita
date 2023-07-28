@@ -138,7 +138,7 @@
       "settings": {
         "margin_top": 0,
         "margin_bottom": 0,
-        "image_desk": "shopify:\/\/shop_images\/Group_499.jpg",
+        "image_desk": "shopify:\/\/shop_images\/D_mothership1_banner1_1.jpg",
         "image_mob": "shopify:\/\/shop_images\/Asset_5_1.jpg",
         "shadow": "no",
         "title_position": "top_left",
@@ -160,7 +160,7 @@
         "font_size_title_mob": 20,
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "title": "Our dedication to building the world’s best snowboards, with the most efficient and sustainable process, is galvanized by the company mantra -<br> <hl>EVERYTHING IS POSSIBLE.<\/hl>",
+        "title": "Our dedication to building the world’s <br>\nbest snowboards, with the most <br>\nefficient and sustainable process, is <br>\ngalvanized by the company mantra - <br>\n<hl>EVERYTHING IS POSSIBLE.<\/hl>",
         "text": ""
       }
     },

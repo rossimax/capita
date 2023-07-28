@@ -49,6 +49,18 @@
         "right_text": "MILES"
       }
     },
+    "2056c58e-7330-430b-8fa5-de787867e504": {
+      "type": "banner-product",
+      "settings": {
+        "image_position": false,
+        "product": "mercury-2024",
+        "product_image": "shopify:\/\/shop_images\/Group_343.png",
+        "right_image": "shopify:\/\/shop_images\/D_hompage_productbanner_jesskimura.jpg",
+        "left_title": "THE EQUALIZER",
+        "left_sup_title": "FRD07 EQUALIZER",
+        "right_text": "JESS"
+      }
+    },
     "00a10f6f-b6ea-423b-9921-d1c287c306ea": {
       "type": "paragraph",
       "settings": {
@@ -78,6 +90,7 @@
     "b0ceccbd-5777-4ea4-a4a9-34b65278682a",
     "9bfad989-863d-473a-962c-c5b28a8c5824",
     "221611b0-cb5f-4aa9-af7b-309fbceb6127",
+    "2056c58e-7330-430b-8fa5-de787867e504",
     "00a10f6f-b6ea-423b-9921-d1c287c306ea",
     "313c2a61-4905-454f-af07-4dc52801aa92"
   ]

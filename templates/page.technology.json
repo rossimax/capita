@@ -36,10 +36,10 @@
         "padding_top": 80,
         "padding_bottom": 100,
         "font_size_title": 60,
-        "font_size_title_mob": 36,
+        "font_size_title_mob": 20,
         "background_color": "#000000",
         "text_color": "#ffffff",
-        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <bl>labore et dolore magna<\/bl> aliqua. Ut enim ad minim veniam, quis nostrud",
+        "title": "By investing extensively in advanced production technology, our primary objective is <bl>to manufacture the utmost premium products with unparalleled performance consistency.<\/bl>",
         "text": ""
       }
     },
@@ -50,9 +50,9 @@
           "type": "box",
           "settings": {
             "text_left": true,
-            "image": "shopify:\/\/shop_images\/DSCF2750_copy_1.jpg",
+            "image": "shopify:\/\/shop_images\/Group_838_1.jpg",
             "title": "Enhanced Precision Through Technology",
-            "paragraph": "In 2020 The Mothership was the first in the snowboard industry to implement an NFC system in its snowboards. On the production floor, this chip allows us to track a snowboards journey with precise detail through each stage of its build. These chips allow us greater insight to quality control – <hl>greatly increasing final production quality and reducing unwanted flaws or scrap.<\/hl>"
+            "paragraph": "In 2020, The Mothership became the first in the snowboard industry to introduce an NFC system in our snowboards. This chip enables precise tracking of <hl>each board's production journey<\/hl>, resulting in higher quality and reduced waste."
           }
         },
         "47c43f79-61a4-4cc5-8f4f-5dfa777d49c8": {
@@ -60,8 +60,8 @@
           "settings": {
             "text_left": false,
             "video": "shopify:\/\/files\/videos\/CAPiTA_WEB_BANNERS_-_RES_MFG.mp4",
-            "title": "Enhanced Experience ThroughTechnology",
-            "paragraph": "Another first in snowboard technology, the NFC capabilities have been taken further. Now you can connect with your board via NFC scan on your phone. This NFC interface will allow you to <hl>register your snowboard<\/hl> to expedite the customer service experience and get exclusive NFC-registered user early access to new product info, drops and CAPiTA team videos."
+            "title": "Enhanced Experience Through Technology",
+            "paragraph": "Beyond the production floor, we have taken NFC capabilities to the next level. Now, you can <hl>connect with your board by simply scanning it with your phone<\/hl>. This NFC interface enables you to register your snowboard, streamlining the customer service process and granting exclusive early access to new product information, drops, and CAPiTA team videos exclusively for NFC-registered users."
           }
         }
       },

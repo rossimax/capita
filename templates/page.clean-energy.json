@@ -17,8 +17,8 @@
       "settings": {
         "margin_top": 0,
         "margin_bottom": 0,
-        "image_desk": "shopify:\/\/shop_images\/Asset_6_1.jpg",
-        "image_mob": "shopify:\/\/shop_images\/Asset_6_1_1.jpg",
+        "image_desk": "shopify:\/\/shop_images\/Group_494_1.jpg",
+        "image_mob": "shopify:\/\/shop_images\/Group_201_2.jpg",
         "shadow": "yes_full",
         "title_position": "top_left",
         "content_position": "bottom_center",
@@ -148,8 +148,13 @@
         "title_bottom": "Each production season we recycle over<br> \n<hl>xxx tons of material<\/hl> – preventing it from<br> \nentering the waste cycle.",
         "cta_text_1": "How does technology help?",
         "cta_link_1": "",
+        "arrow_type_1": "none",
         "cta_text_2": "How our snowboards are made?",
-        "cta_link_2": ""
+        "cta_link_2": "",
+        "arrow_type_2": "none",
+        "cta_text_3": "",
+        "cta_link_3": "",
+        "arrow_type_3": "none"
       }
     }
   },

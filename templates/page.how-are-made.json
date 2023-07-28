@@ -16,7 +16,7 @@
     "3286f5f8-a6d8-4ac3-81c7-0fba897d5c35": {
       "type": "how-is-made",
       "settings": {
-        "title": "What does it take to make\n<bl>a world-class snowboard<\/bl>?",
+        "title": "What does it take to make<br> <span>a world-class snowboard?</span>",
         "description": "It takes over 200 steps to produce a snowboard.",
         "section_1_title": "The People.",
         "section_1_box_title": "For decades, the Austrian Alps have been the birthplace of some of the most exceptional products in snowboarding.",

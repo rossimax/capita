@@ -2,29 +2,32 @@
     <div class="u-bg-full-black">
       <div class="u-container u-content">
         <div class="how-hero">
-          <h1 class="how-hero__title">What does it take to make<br/><span>Premium Snowboards</span>?</h1>
-          <p class="how-hero__copy"><b>There are 200 steps in producing a snowboard.</b><br/>The Mothership’s unique location in the southern border region of Austria allows for extraordinary access to key material suppliers, allowing production to minimize carbon intensive global freight shipping of raw materials and maximize contiguous delivery. This not only supports local businesses but also results in less energy used and less emissions released along the supply chain. It is presented annually to projects focusing on reneweable energies and the conservation of resources.</p>
+          <h1 class="how-hero__title">{{ section.settings.title }}</h1>
+          <p class="how-hero__copy">{{ section.settings.description }}</p>
         </div>
       </div>
     </div>
+
     <div class="c-step is-fullscreen">
       <div class="c-step__container u-container u-content wider">
         <div class="c-step__content">
           <div class="c-step__top">
             <div class="c-step__number js-step-number">1</div>
-            <div class="c-step__title">The people.</div>
+            <div class="c-step__title">{{ section.settings.section_1_title }}</div>
           </div>
           <div class="c-step__layer">
-            <div class="c-step__subtitle">For decades, some of the greatest performing products in snowboarding have been built in the Austrian Alps.</div>
-            <div class="c-step__copy">Maybe it’s being surrounded by lush green valleys and majestic mountain ranges, but Austria is renowned for producing globally desired premier products while maintaining a healthy work and life balance.</div>
+            <div class="c-step__subtitle">{{ section.settings.section_1_box_title }}</div>
+            <div class="c-step__copy">{{ section.settings.section_1_box_description }}</div>
           </div>
         </div>
         <div class="c-step__media">
-          <video src="https://cdn.shopify.com/videos/c/vp/82cfcb9e7ca740f2baa5a3385b9609ce/82cfcb9e7ca740f2baa5a3385b9609ce.HD-720p-4.5Mbps-9290199.mp4" muted="muted" loop="loop" playsinline="playsinline" autoplay="autoplay"></video>
+            <img class="only-desk" src="{{ section.settings.section_1_image_desk | img_url: "master" }}" alt="{{ section.settings.section_1_title | strip_html }}">
+            <img class="only-mob" src="{{ section.settings.section_1_image_mob | img_url: "master" }}" alt="{{ section.settings.section_1_title | strip_html }}">
         </div>
       </div>
     </div>
-    <div class="c-step-description">
+
+    {% comment %} <div class="c-step-description">
       <div class="u-container u-content wider">
         <div class="c-step-description__content">
           <div class="c-step-description__text">Establishing our manufacturing home in the Carinthia region has allowed us to retain quality jobs – and create many new ones – for a workforce known for incredible high-caliber production. We have been able to take advantage of a vast wealth of vested knowledge, while forging a new path through emerging technologies and leading our industry with Clean Energy manufacturing.<br/><br/>We feel the best snowboards in the world must be built in a region with an immersive alpine history, whose people live and breathe the crisp fresh air, and are exposed to the mountains from the day they were born.
@@ -35,43 +38,185 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> {% endcomment %}
+
     <div class="how-steps">
       <div class="c-step">
         <div class="c-step__container u-container u-content wider">
           <div class="c-step__content">
             <div class="c-step__top">
               <div class="c-step__number js-step-number">2</div>
-              <div class="c-step__title">The people.</div>
+              <div class="c-step__title">{{ section.settings.section_2_title }}</div>
             </div>
             <div class="c-step__text">
-              <div class="c-step__subtitle">Thoughtfully selected.<br> Locally sourced.</div>
-              <div class="c-step__copy">Every snowboard’s recipe of materials is different, and we are careful to select only the best raw materials for each series we produce. With a localized supply chain we are able to form healthy relationships with suppliers of some of the most innovative, high performing, and sustainably produce materials in the industry.</div>
+              <div class="c-step__subtitle">{{ section.settings.section_2_sub_title }}</div>
+              <div class="c-step__copy">{{ section.settings.section_2_sub_text }}</div>
             </div>
           </div>
           <div class="c-step__media">
-            <video src="https://cdn.shopify.com/videos/c/vp/82cfcb9e7ca740f2baa5a3385b9609ce/82cfcb9e7ca740f2baa5a3385b9609ce.HD-720p-4.5Mbps-9290199.mp4" muted="muted" loop="loop" playsinline="playsinline" autoplay="autoplay"></video>
+            <img src="{{ section.settings.section_2_image | img_url: "master" }}" alt="{{ section.settings.section_2_title | strip_html }}">
+            {% comment %} <video src="https://cdn.shopify.com/videos/c/vp/82cfcb9e7ca740f2baa5a3385b9609ce/82cfcb9e7ca740f2baa5a3385b9609ce.HD-720p-4.5Mbps-9290199.mp4" muted="muted" loop="loop" playsinline="playsinline" autoplay="autoplay"></video> {% endcomment %}
           </div>
         </div>
       </div>
+
       <div class="c-step">
         <div class="c-step__container u-container u-content wider">
           <div class="c-step__content">
             <div class="c-step__top">
-              <div class="c-step__number js-step-number">3</div>
-              <div class="c-step__title">Grinding Line.</div>
+                <div class="c-step__number js-step-number">3</div>
+                <div class="c-step__title">{{ section.settings.section_3_title }}</div>
+              </div>
+              <div class="c-step__text">
+                <div class="c-step__subtitle">{{ section.settings.section_3_sub_title }}</div>
+                <div class="c-step__copy">{{ section.settings.section_3_sub_text }}</div>
+              </div>
             </div>
-            <div class="c-step__text">
-              <div class="c-step__subtitle">Thoughtfully selected.<br> Locally sourced.</div>
-              <div class="c-step__copy">Every snowboard’s recipe of materials is different, and we are careful to select only the best raw materials for each series we produce. With a localized supply chain we are able to form healthy relationships with suppliers of some of the most innovative, high performing, and sustainably produce materials in the industry.</div>
-            </div>
-          </div>
           <div class="c-step__media">
-            <video src="https://cdn.shopify.com/videos/c/vp/82cfcb9e7ca740f2baa5a3385b9609ce/82cfcb9e7ca740f2baa5a3385b9609ce.HD-720p-4.5Mbps-9290199.mp4" muted="muted" loop="loop" playsinline="playsinline" autoplay="autoplay"></video>
+            <img src="{{ section.settings.section_3_image | img_url: "master" }}" alt="{{ section.settings.section_2_title | strip_html }}">
           </div>
         </div>
       </div>
     </div>
+
+    <div class="c-step is-fullscreen">
+        <div class="c-step__container u-container u-content wider">
+          <div class="c-step__content">
+            <div class="c-step__top">
+              <div class="c-step__number js-step-number">4</div>
+              <div class="c-step__title">{{ section.settings.section_4_title }}</div>
+            </div>
+            <div class="c-step__layer">
+              <div class="c-step__subtitle">{{ section.settings.section_4_box_title }}</div>
+              <div class="c-step__copy">{{ section.settings.section_4_box_text }}</div>
+            </div>
+          </div>
+          <div class="c-step__media">
+              <img class="only-desk" src="{{ section.settings.section_4_image | img_url: "master" }}" alt="{{ section.settings.section_4_title | strip_html }}">
+              <img class="only-mob" src="{{ section.settings.section_4_image_mob | img_url: "master" }}" alt="{{ section.settings.section_4_title | strip_html }}">
+          </div>
+        </div>
+    </div>
+
+    <div class="how-steps">
+        <div class="c-step">
+          <div class="c-step__container u-container u-content wider">
+            <div class="c-step__content">
+              <div class="c-step__top">
+                <div class="c-step__number js-step-number">5</div>
+                <div class="c-step__title">{{ section.settings.section_5_title }}</div>
+              </div>
+              <div class="c-step__text">
+                <div class="c-step__subtitle">{{ section.settings.section_5_sub_title }}</div>
+                <div class="c-step__copy">{{ section.settings.section_5_sub_text }}</div>
+              </div>
+            </div>
+            <div class="c-step__media">
+              <img src="{{ section.settings.section_5_image | img_url: "master" }}" alt="{{ section.settings.section_5_title | strip_html }}">
+            </div>
+          </div>
+        </div>
+  
+        <div class="c-step">
+          <div class="c-step__container u-container u-content wider">
+            <div class="c-step__content">
+              <div class="c-step__top">
+                  <div class="c-step__number js-step-number">6</div>
+                  <div class="c-step__title">{{ section.settings.section_6_title }}</div>
+                </div>
+                <div class="c-step__text">
+                  <div class="c-step__subtitle">{{ section.settings.section_6_sub_title }}</div>
+                  <div class="c-step__copy">{{ section.settings.section_6_sub_text }}</div>
+                </div>
+              </div>
+            <div class="c-step__media">
+              <img src="{{ section.settings.section_6_image | img_url: "master" }}" alt="{{ section.settings.section_6_title | strip_html }}">
+            </div>
+          </div>
+        </div>
+
+        <div class="c-step">
+            <div class="c-step__container u-container u-content wider">
+              <div class="c-step__content">
+                <div class="c-step__top">
+                    <div class="c-step__number js-step-number">7</div>
+                    <div class="c-step__title">{{ section.settings.section_7_title }}</div>
+                  </div>
+                  <div class="c-step__text">
+                    <div class="c-step__subtitle">{{ section.settings.section_7_sub_title }}</div>
+                    <div class="c-step__copy">{{ section.settings.section_7_sub_text }}</div>
+                  </div>
+                </div>
+              <div class="c-step__media">
+                <img src="{{ section.settings.section_7_image | img_url: "master" }}" alt="{{ section.settings.section_7_title | strip_html }}">
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <div class="c-step is-fullscreen">
+        <div class="c-step__container u-container u-content wider">
+          <div class="c-step__content">
+            <div class="c-step__top">
+              <div class="c-step__number js-step-number">8</div>
+              <div class="c-step__title">{{ section.settings.section_8_title }}</div>
+            </div>
+            <div class="c-step__layer">
+              <div class="c-step__subtitle">{{ section.settings.section_8_box_title }}</div>
+              <div class="c-step__copy">{{ section.settings.section_8_box_text }}</div>
+            </div>
+          </div>
+          <div class="c-step__media">
+            {% assign video_8_desk = section.settings.section_8_video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+            {% assign video_8_mob = section.settings.section_8_video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+            <div class="only-desk">{{video_desk}}</div>
+            <div class="only-mob">{{video_8_mob}}</div>
+          </div>
+        </div>
+    </div>
+
+    <div class="text-boxes__foot">
+        <div class="text-boxes__foot__ctas">
+            {% liquid 
+                if section.settings.arrow_type_1 == "arrow_normal" 
+                    assign arrow_cta_1 = "icon-arrow-capita"
+                elsif section.settings.arrow_type_1 == "arrow_play" 
+                    assign arrow_cta_1 = "icon-arrow-play"
+                else 
+                    assign arrow_cta_1 = blank
+                endif
+            -%}
+            {% if section.settings.cta_text_1 != blank %}
+                <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_1 }}">{{ section.settings.cta_text_1 }} {% if arrow_cta_1 != blank %}{% include arrow_cta_1 %}{% endif %}</a>
+            {% endif %}
+            {% liquid 
+                if section.settings.arrow_type_2 == "arrow_normal" 
+                    assign arrow_cta_2 = "icon-arrow-capita"
+                elsif section.settings.arrow_type_2 == "arrow_play" 
+                    assign arrow_cta_2 = "icon-arrow-play"
+                else 
+                    assign arrow_cta_2 = blank
+                endif
+            -%}
+            {% if section.settings.cta_text_2 != blank %}
+                <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_text_2 }} {% if arrow_cta_2 != blank %}{% include arrow_cta_2 %}{% endif %}</a>
+            {% endif %}
+            {% liquid 
+                if section.settings.arrow_type_3 == "arrow_normal" 
+                    assign arrow_cta_3 = "icon-arrow-capita"
+                elsif section.settings.arrow_type_3 == "arrow_play" 
+                    assign arrow_cta_3 = "icon-arrow-play"
+                else 
+                    assign arrow_cta_3 = blank
+                endif
+            -%}
+            {% if section.settings.cta_text_3 != blank %}
+                <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_3 }}">{{ section.settings.cta_text_3 }} {% if arrow_cta_3 != blank %}{% include arrow_cta_3 %}{% endif %}</a>
+            {% endif %}
+        </div>
+    </div>
+
 </div>
 
 
@@ -363,11 +508,27 @@
   }
 {% endschema %}
 
-{% stylesheet %}
+{% style %}
 
-@media screen and (max-width: 991px) {
-   
+.c-step__media .only-mob {
+    display: none;
+}
+.text-boxes__foot__ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-boxes__foot__ctas a {
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+    .c-step__media .only-mob {
+        display: block;
+    } 
+    .c-step__media .only-desk {
+        display: none;
+    }
 }
 
-{% endstylesheet %}
+{% endstyle %}
 

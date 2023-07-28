@@ -29,12 +29,12 @@
       "type": "banner-product",
       "settings": {
         "image_position": false,
-        "product": "the-equalizer-by-jess-kimura",
-        "product_image": "shopify:\/\/shop_images\/FRD07_EQUALIZER_146.png",
-        "right_image": "shopify:\/\/shop_images\/Jess_Equalizer_1.jpg",
-        "left_title": "THE EQUALIZER",
-        "left_sup_title": "FR907 EQUALIZER",
-        "right_text": "RIDER’S NAME"
+        "product": "mercury-2024",
+        "product_image": "shopify:\/\/shop_images\/FRD05_MERCURY_147_8c9fb09d-ea05-466c-86b3-967e164ec502.png",
+        "right_image": "shopify:\/\/shop_images\/D_hompage_productbanner_kevinbackstrom.jpg",
+        "left_title": "THE MERCURY",
+        "left_sup_title": "FRD05 MERCURY",
+        "right_text": "KEVIN BACKSTROM"
       }
     },
     "221611b0-cb5f-4aa9-af7b-309fbceb6127": {
@@ -71,19 +71,6 @@
         "cta_text": "VISIT",
         "cta_link": "shopify:\/\/pages\/mothership-custom"
       }
-    },
-    "6f6847ac-22c3-4a5a-aa8a-8d54bfed3c5f": {
-      "type": "hero-banner-text",
-      "settings": {
-        "box_shadow": 30,
-        "image": "shopify:\/\/shop_images\/Screenshot_2023-01-25_at_4.04_1.jpg",
-        "image_mob": "shopify:\/\/shop_images\/Screenshot_2023-01-25_at_4.04_1.jpg",
-        "title": "<span class=\"h2\">THE MOTHERSHIP CONNECTION—NFC<\/span>",
-        "line_separator": "no",
-        "subtitle": "Enhanced Experience Through Technology™",
-        "cta_text": "LEARN MORE",
-        "cta_link": "shopify:\/\/pages\/mothership-custom"
-      }
     }
   },
   "order": [
@@ -92,7 +79,6 @@
     "9bfad989-863d-473a-962c-c5b28a8c5824",
     "221611b0-cb5f-4aa9-af7b-309fbceb6127",
     "00a10f6f-b6ea-423b-9921-d1c287c306ea",
-    "313c2a61-4905-454f-af07-4dc52801aa92",
-    "6f6847ac-22c3-4a5a-aa8a-8d54bfed3c5f"
+    "313c2a61-4905-454f-af07-4dc52801aa92"
   ]
 }

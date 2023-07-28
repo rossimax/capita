@@ -1,8 +1,8 @@
 {%- liquid
     if section.settings.image_position
-        assign image_position = "image-on-left"
+        assign image_position = "image-on-right"
     else
-        assign image_position = "image-on-right" 
+        assign image_position = "image-on-left" 
     endif
 %}
 <div class="section-banner-product {{ image_position }}">
@@ -33,7 +33,7 @@
         {
             "type": "checkbox",
             "id": "image_position",
-            "label": "Image on Right"
+            "label": "Image on Left"
         },
         {
             "type": "product",

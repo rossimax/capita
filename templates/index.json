@@ -4,14 +4,15 @@
       "type": "hero-banner",
       "settings": {
         "transparent_header": false,
-        "image": "shopify:\/\/shop_images\/230124_CAPITA_WEBSITE_HOMEPAGE_Banner_2_1.jpg",
-        "image_mob": "shopify:\/\/shop_images\/Group_201_1.jpg",
+        "image": "shopify:\/\/shop_images\/D_hompage_herobanner.png",
+        "image_mob": "shopify:\/\/shop_images\/M_homepage_herobanner.png",
         "cta_text": "DISCOVER NOW",
         "cta_link": "shopify:\/\/collections\/all-snowboards"
       }
     },
     "b0ceccbd-5777-4ea4-a4a9-34b65278682a": {
       "type": "lazy-slider",
+      "disabled": true,
       "settings": {
         "black_style": "yes",
         "text_slide": "<strong>EARTLY RELEASE<\/strong> <span style=\"font-size: 30px\">(ONLINE STORE ONLY)<\/span>",

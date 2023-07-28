@@ -3,7 +3,7 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "head_width": 100,
+        "head_width": 0,
         "margin_top": 0,
         "body_color": "#ffffff",
         "footer_border": true,

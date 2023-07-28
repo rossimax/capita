@@ -66,6 +66,9 @@
 }
 .hero-banner-video video {
     width: 100%;
+    height: calc(100vh - 70px);
+    object-fit: cover;
+    display: block;
 }
 .hero-banner-video__mob {
     display: none;
@@ -89,6 +92,10 @@
     }
     .hero-banner-video.boxed {
         padding: 0 20px;
+    }
+    .hero-banner-video video {
+        width: 100%;
+        height: 70vh;
     }
 }
 

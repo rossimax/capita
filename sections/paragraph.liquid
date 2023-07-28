@@ -68,7 +68,7 @@
 
 {% stylesheet %}
 .section-paragraph {
-    padding: 60px 20px;
+    padding: 80px 20px;
     background-position: center;
     background-size: contain;
     background-repeat: repeat;
@@ -89,5 +89,17 @@
     margin: 60px auto 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+    .paragraph-content__text p {
+        font-size: 20px;
+    }
+    .paragraph-content__image {
+        margin: 30px auto 0;
+        max-width: 80px;
+    }
+    .paragraph-content__text br {
+        display: none;
+    }
+}
 
 {% endstylesheet %}

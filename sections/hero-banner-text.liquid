@@ -42,7 +42,7 @@
 
     </div>
 
-    <a class="hero-banner-text__cta btn btn-secondary" href="{{section.settings.cta_ink}}">{{section.settings.cta_text}}</a>
+    <a class="hero-banner-text__cta btn btn-primary" href="{{section.settings.cta_ink}}">{{section.settings.cta_text}}</a>
 
 </div>
 
@@ -192,10 +192,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .section-hero-banner-text {
-        min-height: 400px;
-        object-fit: cover;
-    }
     .section-hero-banner-text .only-mob {
         display: block;
     }
@@ -215,5 +211,14 @@
     .hero-banner-text__content__logo img {
         max-width: 45px;
     }
+    .hero-banner-text__cta.btn.btn-primary {
+        width: calc(100% - 40px);
+        height: 46px;
+    }
+    .hero-banner-text__content {
+        position: absolute;
+        top: 40%;
+    }
+
 }
 {% endstylesheet %}

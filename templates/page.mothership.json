@@ -12,9 +12,17 @@
         "title": "",
         "description": ""
       }
+    },
+    "3286f5f8-a6d8-4ac3-81c7-0fba897d5c35": {
+      "type": "how-is-made",
+      "settings": {
+        "boxed": false,
+        "title": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "3286f5f8-a6d8-4ac3-81c7-0fba897d5c35"
   ]
 }

@@ -269,6 +269,8 @@
           let cartTotalVal = cartTotal.querySelector(".c-header-cart__total__val")
           let currentCurency = cartTotal.getAttribute("data-currency")
 
+          cartTotalVal.innerHTML = (currentCurency + (data.total_price / 100))
+
           let finalPrice = (currentCurency + (cartItem.final_price / 100))
           // let finalPrice = (currentCurency + (cartItem.final_price / 100)).toFixed(2)
 

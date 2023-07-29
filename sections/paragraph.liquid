@@ -5,7 +5,7 @@
 {% endif %}
 
 {% if section.settings.background_image != blank %}
-    {% assign background_image = section.settings.background_image | image_url: 'master' %}
+    {% assign background_image = section.settings.background_image | img_url: 'master' %}
 {% else %}
     {% assign background_image = "" %}
 {% endif %}
@@ -16,7 +16,7 @@
             {{ section.settings.text }}
         </div>
         {% if section.settings.image != blank %}
-        <img class="paragraph-content__image" src="{{ section.settings.image | image_url: 'master' }}" alt="capita">
+        <img class="paragraph-content__image" src="{{ section.settings.image | img_url: 'master' }}" alt="capita">
         {% endif %}
     </div>
 </div>

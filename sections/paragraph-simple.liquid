@@ -1,14 +1,14 @@
 <style>
-    .paragraph-simple-content__title {
+    .section-paragraph-simple--{{section.id}} .paragraph-simple-content__title {
         font-size: {{ section.settings.font_size_title }}px;
     }
     @media screen and (max-width: 768px) {
-        .paragraph-simple-content__title {
+        .section-paragraph-simple--{{section.id}} .paragraph-simple-content__title {
             font-size: {{ section.settings.font_size_title_mob }}px;
         }
     }
 </style>
-<div class="section-paragraph-simple" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;background-color: {{ section.settings.background_color }};">
+<div class="section-paragraph-simple section-paragraph-simple--{{section.id}}" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;background-color: {{ section.settings.background_color }};">
     <div class="paragraph-simple-content">
         <h2 class="paragraph-simple-content__title strong" style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
         {% if section.settings.image_bottom %}

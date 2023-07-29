@@ -166,11 +166,18 @@
     },
     "c9160b3f-8d26-484a-816a-92a791907146": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "boxed": true,
         "title": "Clean Energy Snowboards Production",
         "video_desk": "shopify:\/\/files\/videos\/CAPiTA_ The Mothership Connection - Clean Energy Snowboard Production.mp4",
         "video_mob": "shopify:\/\/files\/videos\/CAPiTA_ The Mothership Connection - Clean Energy Snowboard Production.mp4"
+      }
+    },
+    "cea7ce25-c50c-4ece-8d2b-9d4653a22750": {
+      "type": "html",
+      "settings": {
+        "text": "<div class=\"hero-banner-video boxed\">\n\n    <h4 class=\"strong\">Clean Energy Snowboards Production<\/h4>\n\n    <div class=\"hero-banner-video__desk\">\n\n        <iframe width=\"100%\" height=\"650\" src=\"https:\/\/www.youtube.com\/embed\/HN33OvYL8N4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen><\/iframe>\n\n    <\/div>\n\n<\/div>"
       }
     }
   },
@@ -182,6 +189,7 @@
     "e8735002-5a92-4a60-85e1-c880063d22c6",
     "0304082a-98f7-4665-a2cd-7ea2cfbc7043",
     "a0611009-f554-41eb-b10d-8c89de6f0e0c",
-    "c9160b3f-8d26-484a-816a-92a791907146"
+    "c9160b3f-8d26-484a-816a-92a791907146",
+    "cea7ce25-c50c-4ece-8d2b-9d4653a22750"
   ]
 }

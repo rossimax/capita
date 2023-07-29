@@ -9,8 +9,8 @@
 
           {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
 
-          <span class="sorting-option {% if sort_by == 'manual' %}selected{% endif %}" value="manual"> Featured </span> | <span class="sorting-option {% if sort_by == 'best-selling' %}selected{% endif %}" value="best-selling"> Best selling </span> / <span class="sorting-option {% if sort_by == 'price-descending' %}selected{% endif %}" value="price-descending"> PRICE: HIGH - LOW </span> |
-          <span class="sorting-option {% if sort_by == 'price-ascending' %}selected{% endif %}" value="price-ascending"> PRICE: LOW - HIGH </span>
+          <span class="sorting-option {% if sort_by == 'manual' %}selected{% endif %}" value="manual">Featured</span> | <span class="sorting-option {% if sort_by == 'best-selling' %}selected{% endif %}" value="best-selling">Best selling</span> / <span class="sorting-option {% if sort_by == 'price-descending' %}selected{% endif %}" value="price-descending">PRICE: HIGH - LOW</span> |
+          <span class="sorting-option {% if sort_by == 'price-ascending' %}selected{% endif %}" value="price-ascending">PRICE: LOW - HIGH</span>
 
         </div>
       </div>

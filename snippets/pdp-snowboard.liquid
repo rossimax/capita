@@ -115,7 +115,12 @@
   <div class="c-detail-modal__bg js-detail-modal-bg"></div>
   <div class="c-detail-modal__content js-detail-modal-content">
     <button class="c-detail-modal__close js-detail-modal-close">
-      Read less<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.605 14.105a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Zm0 1a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15Z" fill="#000"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10.08 5.132a.5.5 0 0 1 0 .707l-4.243 4.243a.5.5 0 1 1-.707-.707l4.243-4.243a.5.5 0 0 1 .707 0Z" fill="#000"/><path fill-rule="evenodd" clip-rule="evenodd" d="M4.842 4.84a.5.5 0 0 1 .707 0l4.821 4.822a.5.5 0 1 1-.707.707L4.842 5.548a.5.5 0 0 1 0-.707Z" fill="#000"/></svg></button><img class="c-detail-modal__section" src="https://via.placeholder.com/101x77" alt="alt"/><span class="c-detail-modal__position">flex</span><span class="c-detail-modal__name">TWIN -6</span><span class="c-detail-modal__description">Extremely lightweight super-combo core of premium Poplar, Paulownia, Beech with recycled thermopolymer inlaid channels, for maximum durability, energy and pop.</span><img class="c-detail-modal__full-board" src="https://via.placeholder.com/577x137" alt="alt"/>
+      Read less<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.605 14.105a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Zm0 1a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15Z" fill="#000"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10.08 5.132a.5.5 0 0 1 0 .707l-4.243 4.243a.5.5 0 1 1-.707-.707l4.243-4.243a.5.5 0 0 1 .707 0Z" fill="#000"/><path fill-rule="evenodd" clip-rule="evenodd" d="M4.842 4.84a.5.5 0 0 1 .707 0l4.821 4.822a.5.5 0 1 1-.707.707L4.842 5.548a.5.5 0 0 1 0-.707Z" fill="#000"/></svg></button>
+      <img class="c-detail-modal__section" src="https://via.placeholder.com/101x77" alt="alt"/>
+      <span class="c-detail-modal__position">flex</span>
+      <span class="c-detail-modal__name">TWIN -6</span>
+      <span class="c-detail-modal__description">Extremely lightweight super-combo core of premium Poplar, Paulownia, Beech with recycled thermopolymer inlaid channels, for maximum durability, energy and pop.</span>
+      <img class="c-detail-modal__full-board" src="https://via.placeholder.com/577x137" alt="alt"/>
   </div>
 </div>
 <div class="c-product-details js-product-details">
@@ -162,42 +167,47 @@
           <div class="c-constructions js-constructions">
             <div class="c-constructions__dragger js-constructions-dragger swiper">
               <div class="swiper-wrapper">
+
+                
                 <div class="swiper-slide">
-
-                  <div class="c-hotspot js-constructions-hotspot" 
-                    style="
-                    --x-mob: {{ product.metafields.construction_hotspot.coordinates_x_mob }}; 
-                    --x-desk: {{ product.metafields.construction_hotspot.coordinates_x_desk }}; 
-                    --y-mob: {{ product.metafields.construction_hotspot.coordinates_y_mob }}; 
-                    --y-desk: {{ product.metafields.construction_hotspot.coordinates_y_desk }};
-                    " 
-                    data-title="{{ product.metafields.construction_hotspot.board_construction_hotspot_title }}" 
-                    data-descr="{{ product.metafields.construction_hotspot.board_construction_hotspot_description.html }}" 
-                    data-image="{{ product.metafields.construction_hotspot.board_construction_hotspot_image | image_url: "master" }}"
-                  >
-                    <div class="c-hotspot__btn js-constructions-hotspot-btn">
-                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26 16c0 5.523-4.477 10-10 10S6 21.523 6 16 10.477 6 16 6s10 4.477 10 10Zm-5.169 0a.882.882 0 0 1-.882.882H16.98v3.492a.882.882 0 0 1-1.765 0v-3.492H12.25a.882.882 0 0 1 0-1.764h2.965v-3.493a.882.882 0 1 1 1.765 0v3.493h2.97c.486 0 .881.395.881.882Z"></path>
-                        <circle cx="16" cy="16" r="15" stroke="#C8102E" stroke-width="2"></circle>
-                      </svg>
-                    </div>
-                    <div class="c-hotspot__tooltip js-constructions-hotspot-tooltip" data-mob-x="right" data-mob-y="top"
-                      data-desk-x="right" data-desk-y="bottom">
-                      <button class="c-hotspot__read-more js-constructions-hotspot-read-more" type="button">
-                        Read more<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="19.5" cy="19.5" r="7" />
-                          <path d="M22.498 19.5H16.498" stroke-linecap="round" />
-                          <path d="M19.5 16.0898V22.908" stroke-linecap="round" />
+                  
+                    {% for hotspot in product.metafields.construction_hotspot.board_construction_hotspot_title %} 
+                    <div class="c-hotspot js-constructions-hotspot" 
+                      style="
+                      --x-mob: {{ product.metafields.construction_hotspot.coordinates_x_mob[forloop.index0] }}; 
+                      --x-desk: {{ product.metafields.construction_hotspot.coordinates_x_desk[forloop.index0] }}; 
+                      --y-mob: {{ product.metafields.construction_hotspot.coordinates_y_mob[forloop.index0] }}; 
+                      --y-desk: {{ product.metafields.construction_hotspot.coordinates_y_desk[forloop.index0] }};
+                      " 
+                      data-title="{{ hotspot }}" 
+                      data-descr="{{ product.metafields.construction_hotspot.board_construction_hotspot_description[forloop.index0].html }}" 
+                      data-image="{{ product.metafields.construction_hotspot.board_construction_hotspot_image[forloop.index0] | image_url: "master" }}"
+                    >
+                      <div class="c-hotspot__btn js-constructions-hotspot-btn">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M26 16c0 5.523-4.477 10-10 10S6 21.523 6 16 10.477 6 16 6s10 4.477 10 10Zm-5.169 0a.882.882 0 0 1-.882.882H16.98v3.492a.882.882 0 0 1-1.765 0v-3.492H12.25a.882.882 0 0 1 0-1.764h2.965v-3.493a.882.882 0 1 1 1.765 0v3.493h2.97c.486 0 .881.395.881.882Z"></path>
+                          <circle cx="16" cy="16" r="15" stroke="#C8102E" stroke-width="2"></circle>
                         </svg>
+                      </div>
+                      <div class="c-hotspot__tooltip js-constructions-hotspot-tooltip" data-mob-x="right" data-mob-y="top"
+                        data-desk-x="right" data-desk-y="bottom">
+                        <button class="c-hotspot__read-more js-constructions-hotspot-read-more" type="button">
+                          Read more<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="19.5" cy="19.5" r="7" />
+                            <path d="M22.498 19.5H16.498" stroke-linecap="round" />
+                            <path d="M19.5 16.0898V22.908" stroke-linecap="round" />
+                          </svg>
 
-                      </button><span class="c-hotspot__position">core</span><span class="c-hotspot__name">3d
-                        thermopolymer supercore</span>
+                        </button><span class="c-hotspot__position">core</span><span class="c-hotspot__name">{{ hotspot }}</span>
+                      </div>
                     </div>
+                    {% endfor %} 
+
+                    <picture><img class="c-constructions__image" src="{{ product.metafields.construction_hotspot["3d_board_image"] }}"/></picture>
+
                   </div>
 
-                  <picture><img class="c-constructions__image" src="{{ product.metafields.construction_hotspot.3d_board_image }}"/></picture>
 
-                </div>
               </div>
               <div class="c-constructions__scrollbar swiper-scrollbar"></div>
             </div>

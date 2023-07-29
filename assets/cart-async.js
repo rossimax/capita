@@ -122,7 +122,7 @@
           return response.json();
         }).then(data => {
           
-          // console.log(data);
+          console.log(data);
           // console.log(data.total_price);
           // console.log(data.items);
 
@@ -133,6 +133,14 @@
           let currentCurency = cartTotal.getAttribute("data-currency")
           cartTotalVal.innerHTML = currentCurency + newTotal
           
+          // Ricalcolo totale del prodotto (line item)
+          data.items.forEach(itemCart => {
+            if (itemCart.id == changeVariant.id ) {
+              console.log("trovato: "+itemCart.id+" - "+changeVariant.id)
+              document.querySelector('.c-cart-item[data-id="'+changeVariant.id+'"] .c-cart-item__price').innerHTML = currentCurency + (parseInt(itemCart.original_line_price)).toFixed(2) / 100
+            }
+          });
+
           // Remove Item = 0
           if (changeVariant.quantity == 0) {
             document.querySelector('.c-cart-item[data-id="'+changeVariant.id+'"]').remove()

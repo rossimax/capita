@@ -29,13 +29,14 @@
 
     {% render 'meta-tags' %}
 
-    <link rel="stylesheet" type="text/css" href="{{ 'defaults.css' | asset_url }}">
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <link rel="stylesheet" href="{{ 'style.css' | asset_url }}" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{ 'fonts.css' | asset_url }}"> 
-
+    
+    <link rel="stylesheet" type="text/css" href="{{ 'defaults.css' | asset_url }}">
+    
     {{ content_for_header }}
 
     {%- liquid

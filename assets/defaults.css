@@ -31,6 +31,7 @@ bl {
 }
 a:hover:not(.c-header__menu-item),
 a:hover span,
+button:hover,
 button:hover span {
   text-decoration: underline !important;
 }

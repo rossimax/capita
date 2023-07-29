@@ -311,7 +311,32 @@
                 assign snowboard_tags = "SNOWBOARD"
               endif 
             -%} {% endcomment %}
-            <span class="c-listing-product__categories"></span>
+
+            {% liquid
+
+              assign cats = ""
+              assign gender = false
+
+              for p_col in product.collections
+                if p_col.title == "Men's Snowboards" or p_col.title == "Women's Snowboards" or p_col.title == "Kid's Snowboards"
+                  assign cats = cats | append: p_col.title
+                  assign gender = true
+                endif 
+              endfor
+
+              {% comment %} 
+              if product.metafields.snowboard_info.shapes != blank
+                if gender 
+                  assign cats = cats | append: " / " | append: product.metafields.snowboard_info.shapes
+                else
+                  assign cats = cats | append: product.metafields.snowboard_info.shapes
+                endif 
+              endif  
+              {% endcomment %}
+
+            -%}
+
+            <span class="c-listing-product__categories">{{ cats }}</span>
             <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
             <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
             {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %}

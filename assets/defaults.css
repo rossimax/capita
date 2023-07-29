@@ -114,17 +114,19 @@ button:hover:not(.c-header__menu-item) span,
     width: 100%;
   }
 }
+
 .padding-inline {
-  padding-inline: 20px
+  padding-inline: 20px;
 }
 @media screen and (min-width: 48em) {
   .padding-inline {
-      padding-inline: 70px
+      padding-inline: 70px;
   }
 }
 @media screen and (min-width: 100em) {
   .padding-inline {
-      padding-inline: 155px
+      padding-inline: 155px;
+
   }
 }
 

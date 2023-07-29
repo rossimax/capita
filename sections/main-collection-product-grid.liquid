@@ -292,7 +292,7 @@
                   {% if option_name == "size" %}
                     {% for variant in product.variants %}
                       {% if forloop.index < 8 %}
-                        <button class="c-listing-product__size {%- if variant.available == false %} is-disabled{% endif %}" attr-variant-id="{{ variant.id }}" type="button">{{ variant.title }}</button>
+                        <a class="c-listing-product__size {%- if variant.available == false %} is-disabled{% endif %}" attr-variant-id="{{ variant.id }}" href="{{ variant.url }}">{{ variant.title }}</a>
                       {% elsif forloop.index == forloop.length %}
                         <button class="c-listing-product__size is-ghost" type="button">+ {{ forloop.length | minus: 7 }} more</button>
                       {% endif %}
@@ -304,14 +304,14 @@
           
           </div>
           <div class="c-listing-product__info">
-            {% liquid
+            {% comment %} {% liquid
               if product.metafields.snowboard_info.snowboard_tags != blank
                 assign snowboard_tags = product.metafields.snowboard_info.snowboard_tags
               else
                 assign snowboard_tags = "SNOWBOARD"
               endif 
-            -%}
-            <span class="c-listing-product__categories">{{ snowboard_tags }}</span>
+            -%} {% endcomment %}
+            <span class="c-listing-product__categories"></span>
             <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
             <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
             {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %}
@@ -468,6 +468,16 @@ span.spr-badge-caption {
 }
 .c-listing-product .c-listing-product__image {
       width: auto;
+}
+a.c-listing-product__size,
+a.c-listing-product__size span {
+  text-decoration: none;
+}
+a.c-listing-product__size:hover,
+a.c-listing-product__size:hover span {
+  text-decoration: none !important;
+  background: #fff;
+  color: #000;
 }
 
 @media screen and (max-width: 1199px) {

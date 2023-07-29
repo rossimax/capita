@@ -38,7 +38,7 @@
               <a href="{{ item.url }}">
                 <img
                   class="c-cart-item__image"
-                  src="{{ item.product.featured_image | product_img_url: 'master' }}"
+                  src="{{ item.product.featured_image | image_url: width: 200 }}"
                   alt="{{ item.title | strip_html }}">
               </a>
               <div class="c-cart-item__info">

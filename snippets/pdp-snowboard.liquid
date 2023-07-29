@@ -81,13 +81,13 @@
         <div class="c-product-tech__story"><span class="c-product-tech__subtitle">tech story</span>
             <span class="c-product-tech__title">{{ product.title }}</span>
             <div class="c-product-tech__text">
-                {{ product.metafields.snowboard_info.tech_description }}
+                {{ product.metafields.snowboard_info.tech_description.html }}
             </div>
         </div>
         <div class="c-product-tech__story"><span class="c-product-tech__subtitle">camber</span>
             <span class="c-product-tech__title">{{ product.metafields.snowboard_info.camber_type }}</span>
             <div class="c-product-tech__text">
-                {{ product.metafields.snowboard_info.camber_description }}
+                {{ product.metafields.snowboard_info.camber_description.html }}
             </div>
         </div>
         {% if product.metafields.snowboard_info.camber_image_new %}

@@ -9,7 +9,7 @@
 
           {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
 
-          <span class="sorting-option {% if sort_by == 'created-descending' %}selected{% endif %}" value="created-descending">NEWEST</span> | <span class="sorting-option {% if sort_by == 'manual' %}selected{% endif %}" value="manual">Best selling</span> / <span class="sorting-option {% if sort_by == 'price-descending' %}selected{% endif %}" value="price-descending">PRICE: HIGH - LOW</span> |
+          <span class="sorting-option {% if sort_by == 'created-descending' %}selected{% endif %}" value="created-descending">NEWEST</span> | <span class="sorting-option {% if sort_by == 'manual' %}selected{% endif %}" value="manual">FEATURED</span> / <span class="sorting-option {% if sort_by == 'price-descending' %}selected{% endif %}" value="price-descending">PRICE: HIGH - LOW</span> |
           <span class="sorting-option {% if sort_by == 'price-ascending' %}selected{% endif %}" value="price-ascending">PRICE: LOW - HIGH</span>
 
         </div>
@@ -304,32 +304,10 @@
           
           </div>
           <div class="c-listing-product__info">
-            {% comment %} {% liquid
-              if product.metafields.snowboard_info.snowboard_tags != blank
-                assign snowboard_tags = product.metafields.snowboard_info.snowboard_tags
-              else
-                assign snowboard_tags = "SNOWBOARD"
-              endif 
-            -%} {% endcomment %}
-
-            {% liquid
-
-              assign cats = ""
-              assign gender = false
-
-              for p_col in product.collections
-                if p_col.title == "Men's Snowboards" or p_col.title == "Women's Snowboards" or p_col.title == "Kid's Snowboards"
-                  assign cats = cats | append: p_col.title
-                  assign gender = true
-                endif 
-              endfor
-
-            -%}
-
-            <span class="c-listing-product__categories">{{ cats }}</span>
+            <span class="c-listing-product__categories">{{ product.metafields.snowboard_info.snowboard_listing_tag }}</span>
             <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
             <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
-            {% comment %} {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %} {% endcomment %}
+            {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %}
           </div>
         </div>
 

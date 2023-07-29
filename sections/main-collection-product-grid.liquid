@@ -324,16 +324,6 @@
                 endif 
               endfor
 
-              {% comment %} 
-              if product.metafields.snowboard_info.shapes != blank
-                if gender 
-                  assign cats = cats | append: " / " | append: product.metafields.snowboard_info.shapes
-                else
-                  assign cats = cats | append: product.metafields.snowboard_info.shapes
-                endif 
-              endif  
-              {% endcomment %}
-
             -%}
 
             <span class="c-listing-product__categories">{{ cats }}</span>

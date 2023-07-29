@@ -9,7 +9,7 @@
 
           {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
 
-          <span class="sorting-option {% if sort_by == 'manual' %}selected{% endif %}" value="manual">Featured</span> | <span class="sorting-option {% if sort_by == 'best-selling' %}selected{% endif %}" value="best-selling">Best selling</span> / <span class="sorting-option {% if sort_by == 'price-descending' %}selected{% endif %}" value="price-descending">PRICE: HIGH - LOW</span> |
+          <span class="sorting-option {% if sort_by == 'created-descending' %}selected{% endif %}" value="created-descending">NEWEST</span> | <span class="sorting-option {% if sort_by == 'manual' %}selected{% endif %}" value="manual">Best selling</span> / <span class="sorting-option {% if sort_by == 'price-descending' %}selected{% endif %}" value="price-descending">PRICE: HIGH - LOW</span> |
           <span class="sorting-option {% if sort_by == 'price-ascending' %}selected{% endif %}" value="price-ascending">PRICE: LOW - HIGH</span>
 
         </div>
@@ -98,7 +98,7 @@
             </label>
           </div>
 
-          <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="terrain type"><span>TERRAIN TYPE (1 selected)</span></div>
+          <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="terrain type"><span>TERRAIN TYPE</span></div>
           <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="terrain type">
             <label class="c-listing-filter__option">
               <input type="checkbox" name="Resort" /><span>RESORT</span>

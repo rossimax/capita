@@ -1,7 +1,7 @@
 {% assign video = section.settings.video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
 
 <div class="section-text-video-cards" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
-    <div class="text-video-cards">
+    <div class="text-video-cards padding-inline">
 
         <div class="text-video-cards__head">
             <h2 class="title">{{ section.settings.title }}</h2>
@@ -137,8 +137,6 @@
 .text-video-cards {
     max-width: 1620px;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
     padding-bottom: 60px;
 }
 .text-video-cards__head {

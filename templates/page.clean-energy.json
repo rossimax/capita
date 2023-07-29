@@ -107,7 +107,7 @@
       "settings": {
         "padding_top": 80,
         "padding_bottom": 40,
-        "font_size_title": 80,
+        "font_size_title": 50,
         "font_size_title_mob": 20,
         "background_color": "#000000",
         "text_color": "#ffffff",

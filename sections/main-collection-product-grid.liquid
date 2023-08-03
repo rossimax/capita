@@ -1,318 +1,322 @@
 
 <div class="u-bg-black">
-  <div class="l-listing">
-    <div class="l-listing__top">
-
-      <div class="l-listing__head">
-        <h1>{{ collection.title }}</h1>
-        <div class="sorting-listing js-sorting-listing">
-
-          {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
-
-          <span class="sorting-option {% if sort_by == 'created-descending' %}selected{% endif %}" value="created-descending">NEWEST</span> | <span class="sorting-option {% if sort_by == 'manual' %}selected{% endif %}" value="manual">FEATURED</span> / <span class="sorting-option {% if sort_by == 'price-descending' %}selected{% endif %}" value="price-descending">PRICE: HIGH - LOW</span> |
-          <span class="sorting-option {% if sort_by == 'price-ascending' %}selected{% endif %}" value="price-ascending">PRICE: LOW - HIGH</span>
-
-        </div>
-      </div>
-
-      <hr />
-
-    </div>
-    {% if section.settings.filter_type == "snowboards" %}
-      <div class="l-listing__aside">
-        <div class="c-listing-filter">
-
-          <div class="c-listing-filter__mob-head">
-            <span>FILTERS</span>
-            {% render 'icon-close' %}
+  <div class="u-container">
+    <div class="u-content">
+      <div class="l-listing">
+        <div class="l-listing__top">
+    
+          <div class="l-listing__head">
+            <h1>{{ collection.title }}</h1>
+            <div class="sorting-listing js-sorting-listing">
+    
+              {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+    
+              <span class="sorting-option {% if sort_by == 'created-descending' %}selected{% endif %}" value="created-descending">NEWEST</span> | <span class="sorting-option {% if sort_by == 'manual' %}selected{% endif %}" value="manual">FEATURED</span> / <span class="sorting-option {% if sort_by == 'price-descending' %}selected{% endif %}" value="price-descending">PRICE: HIGH - LOW</span> |
+              <span class="sorting-option {% if sort_by == 'price-ascending' %}selected{% endif %}" value="price-ascending">PRICE: LOW - HIGH</span>
+    
+            </div>
           </div>
-
-          {% comment %} {%- for filter in collection.filters -%}
-            <span>{{ filter.label }}</span>
+    
+          <hr />
+    
+        </div>
+        {% if section.settings.filter_type == "snowboards" %}
+          <div class="l-listing__aside">
+            <div class="c-listing-filter">
+    
+              <div class="c-listing-filter__mob-head">
+                <span>FILTERS</span>
+                {% render 'icon-close' %}
+              </div>
+    
+              {% comment %} {%- for filter in collection.filters -%}
+                <span>{{ filter.label }}</span>
+              {%- endfor -%}
+    
+              {% assign tag_list = "" %}
+              {%- for current_tag in current_tags -%}
+                {% assign tag_list = tag_list | append: current_tag %}
+                {% unless forloop.last %}
+                  {% assign tag_list = tag_list | append: "|" %}
+                {% endunless %}
+              {%- endfor -%} {% endcomment %}
+    
+              <span class="js-tags-list" data-tags="{{tag_list}}"><span>
+    
+              <div class="c-listing-filter__stack">
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="All" 
+                    {% if collection.handle == "all-snowboards" %} 
+                      checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                    {% else %} 
+                      onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                    {% endif %}/>
+                    <span>All</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="Men's Snowboards" 
+                    {% if collection.handle == "snowboards-mens" %} 
+                      checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                    {% else %} 
+                      onclick="window.location.replace('{{ collections['snowboards-mens'].url }}')" 
+                    {% endif %}/>
+                    <span>men's</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="Women's Snowboards" 
+                    {% if collection.handle == "snowboards-womens" %} 
+                    checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                  {% else %} 
+                    onclick="window.location.replace('{{ collections['snowboards-womens'].url }}')" 
+                  {% endif %}/>
+                  <span>women's</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="Kid's Snowboards" 
+                    {% if collection.handle == "snowboards-kids" %} 
+                    checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                  {% else %} 
+                    onclick="window.location.replace('{{ collections['snowboards-kids'].url }}')" 
+                  {% endif %}/>
+                    <span>kids's</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="Spring Break" 
+                    {% if collection.handle == "spring-break" %} 
+                    checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                  {% else %} 
+                    onclick="window.location.replace('{{ collections['spring-break'].url }}')" 
+                  {% endif %}/>
+                    <span>spring break</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="Split" 
+                    {% if collection.handle == "split-snowboards" %} 
+                    checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                  {% else %} 
+                    onclick="window.location.replace('{{ collections['split-snowboards'].url }}')" 
+                  {% endif %}/>
+                    <span>Split</span>
+                </label>
+              </div>
+    
+              <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="terrain type"><span>TERRAIN TYPE</span></div>
+              <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="terrain type">
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="Resort" /><span>RESORT</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="Freestyle" /><span>FREESTYLE</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="Freeride" /><span>FREERIDE</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="Powder" /><span>POWDER</span>
+                </label>
+              </div>
+    
+              <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="shape"><span>SHAPE</span></div>
+              <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="shape">
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="TRUE TWIN" /><span>TRUE TWIN</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="DIRECTIONAL TWIN" /><span>DIRECTIONAL TWIN</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="DIRECTIONAL" /><span>DIRECTIONAL</span>
+                </label>
+              </div>
+    
+              <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="camber type"><span>CAMBER TYPE</span></div>
+              <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="camber type">
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="CAMBER" /><span>CAMBER</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="HYBRID CAMBER" /><span>HYBRID CAMBER</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="REVERSE CAMBER" /><span>REVERSE CAMBER</span>
+                </label>
+              </div>
+    
+              <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="width"><span>WIDTH</span></div>
+              <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="width">
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="REGULAR" /><span>REGULAR</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="WIDE" /><span>WIDE</span>
+                </label>
+              </div>
+    
+              <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="size"><span>SIZE</span></div>
+              <div class="c-listing-filter__stack c-listing-filter__stack--boxed js-filter-inputs hide" attr-filter-type="size">
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="148" value="148"/><span>148</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="150" /><span>150</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="152" /><span>152</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="154" /><span>154</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="156" /><span>152</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="158" /><span>158</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="160" /><span>160</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="162" /><span>162</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="164" /><span>164</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="155W" /><span>155W</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="157W" /><span>157W</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="159W" /><span>159W</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="161W" /><span>161W</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="163W" /><span>163W</span>
+                </label>
+              </div>
+    
+              <div class="c-listing-filter__dropdown-title c-listing-filter__dropdown-title--noclose"></div>
+              <div class="c-listing-filter__stack c-listing-filter__stack--foot">
+                <div class="js-filter-num-select"><span class="num-select-filter">0</span> selected</div>
+                <div class="js-filter-clean" attr-master-col="all-snowboards">REMOVE FILTER</div>
+              </div>
+    
+            </div>
+          </div>
+    
+        {% elsif section.settings.filter_type == "apparel_and_others"  %}
+    
+          <div class="l-listing__aside">
+            <div class="c-listing-filter">
+    
+              <div class="c-listing-filter__mob-head">
+                <span>FILTERS</span>
+                {% render 'icon-close' %}
+              </div>
+    
+              {% comment %} {%- for filter in collection.filters -%}
+                <span>{{ filter.label }}</span>
+              {%- endfor -%} {% endcomment %}
+    
+              {% assign tag_list = "" %}
+              {%- for current_tag in current_tags -%}
+                {% assign tag_list = tag_list | append: current_tag %}
+                {% unless forloop.last %}
+                  {% assign tag_list = tag_list | append: "|" %}
+                {% endunless %}
+              {%- endfor -%}
+    
+              <span class="js-tags-list" data-tags="{{tag_list}}"><span>
+    
+              <div class="c-listing-filter__dropdown-title js-filter-type" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
+              <div class="c-listing-filter__stack js-filter-inputs" attr-filter-type="category">
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="T-Shirt" /><span>T-Shirt</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="Jacket" /><span>Jacket</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="Hats" /><span>Hats</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="accessories" /><span>Accessories</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="movies" /><span>Movies</span>
+                </label>
+              </div>
+    
+              <div class="c-listing-filter__dropdown-title c-listing-filter__dropdown-title--noclose"></div>
+              <div class="c-listing-filter__stack c-listing-filter__stack--foot">
+                <div class="js-filter-num-select"><span class="num-select-filter">0</span> selected</div>
+                <div class="js-filter-clean" attr-master-col="apparel-more">REMOVE FILTER</div>
+              </div>
+    
+            </div>
+          </div>
+    
+        {% endif %}
+    
+        <div class="l-listing__grid l-listing__grid--{{section.settings.filter_type}} l-listing__grid--{{collection.handle}}">
+    
+          {% assign col_empty_class = "not-empty" %}
+    
+          {% if collection.products.size == 0 %}
+            {% assign col_empty_class = "empty" %}
+          {% endif %} 
+          <div class="l-listing__grid__empty {{col_empty_class}}">
+            <img class="red-logo" src="{{ 'red_logo.png' | asset_url }}" alt="capita empty">
+            <span>Please choose a different<br/>filter combination</span>
+          </div>
+    
+          {%- for product in collection.products -%}
+            {% assign tag_list = "" %}
+            {% for product_tag in product.tags%}
+              {% assign tag_list = tag_list | append: "|" | append: product_tag %}
+            {% endfor %}
+            <div class="c-listing-product" data-tags="{{ tag_list }}" data-title="{{ product.title }}">
+              <div class="c-listing-product__image">
+                <a href="{{ product.url }}">
+                  <img src="{{ product.featured_image | img_url: "550x550" }}" alt="Capita | {{ product.title | strip_html }}">
+                </a>
+              </div>
+              <div class="c-listing-product__sizes">
+    
+                {% unless product.has_only_default_variant %}
+                  {% for option in product.options_with_values %}
+    
+                      {% assign option_name = option.name | downcase %}
+    
+                      {% if option_name == "size" %}
+                        {% for variant in product.variants %}
+                          {% if forloop.index < 8 %}
+                            <a class="c-listing-product__size {%- if variant.available == false %} is-disabled{% endif %}" attr-variant-id="{{ variant.id }}" href="{{ variant.url }}">{{ variant.title }}</a>
+                          {% elsif forloop.index == forloop.length %}
+                            <button class="c-listing-product__size is-ghost" type="button">+ {{ forloop.length | minus: 7 }} more</button>
+                          {% endif %}
+                        {% endfor %}
+                      {% endif%}
+    
+                  {% endfor %}                
+              {% endunless %}
+              
+              </div>
+              <div class="c-listing-product__info">
+                <span class="c-listing-product__categories">{{ product.metafields.snowboard_info.snowboard_listing_tag }}</span>
+                <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
+                <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
+                {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %}
+              </div>
+            </div>
+    
           {%- endfor -%}
-
-          {% assign tag_list = "" %}
-          {%- for current_tag in current_tags -%}
-            {% assign tag_list = tag_list | append: current_tag %}
-            {% unless forloop.last %}
-              {% assign tag_list = tag_list | append: "|" %}
-            {% endunless %}
-          {%- endfor -%} {% endcomment %}
-
-          <span class="js-tags-list" data-tags="{{tag_list}}"><span>
-
-          <div class="c-listing-filter__stack">
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="All" 
-                {% if collection.handle == "all-snowboards" %} 
-                  checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-                {% else %} 
-                  onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-                {% endif %}/>
-                <span>All</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="Men's Snowboards" 
-                {% if collection.handle == "snowboards-mens" %} 
-                  checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-                {% else %} 
-                  onclick="window.location.replace('{{ collections['snowboards-mens'].url }}')" 
-                {% endif %}/>
-                <span>men's</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="Women's Snowboards" 
-                {% if collection.handle == "snowboards-womens" %} 
-                checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-              {% else %} 
-                onclick="window.location.replace('{{ collections['snowboards-womens'].url }}')" 
-              {% endif %}/>
-              <span>women's</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="Kid's Snowboards" 
-                {% if collection.handle == "snowboards-kids" %} 
-                checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-              {% else %} 
-                onclick="window.location.replace('{{ collections['snowboards-kids'].url }}')" 
-              {% endif %}/>
-                <span>kids's</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="Spring Break" 
-                {% if collection.handle == "spring-break" %} 
-                checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-              {% else %} 
-                onclick="window.location.replace('{{ collections['spring-break'].url }}')" 
-              {% endif %}/>
-                <span>spring break</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="Split" 
-                {% if collection.handle == "split-snowboards" %} 
-                checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-              {% else %} 
-                onclick="window.location.replace('{{ collections['split-snowboards'].url }}')" 
-              {% endif %}/>
-                <span>Split</span>
-            </label>
-          </div>
-
-          <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="terrain type"><span>TERRAIN TYPE</span></div>
-          <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="terrain type">
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="Resort" /><span>RESORT</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="Freestyle" /><span>FREESTYLE</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="Freeride" /><span>FREERIDE</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="Powder" /><span>POWDER</span>
-            </label>
-          </div>
-
-          <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="shape"><span>SHAPE</span></div>
-          <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="shape">
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="TRUE TWIN" /><span>TRUE TWIN</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="DIRECTIONAL TWIN" /><span>DIRECTIONAL TWIN</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="DIRECTIONAL" /><span>DIRECTIONAL</span>
-            </label>
-          </div>
-
-          <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="camber type"><span>CAMBER TYPE</span></div>
-          <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="camber type">
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="CAMBER" /><span>CAMBER</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="HYBRID CAMBER" /><span>HYBRID CAMBER</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="REVERSE CAMBER" /><span>REVERSE CAMBER</span>
-            </label>
-          </div>
-
-          <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="width"><span>WIDTH</span></div>
-          <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="width">
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="REGULAR" /><span>REGULAR</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="WIDE" /><span>WIDE</span>
-            </label>
-          </div>
-
-          <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="size"><span>SIZE</span></div>
-          <div class="c-listing-filter__stack c-listing-filter__stack--boxed js-filter-inputs hide" attr-filter-type="size">
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="148" value="148"/><span>148</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="150" /><span>150</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="152" /><span>152</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="154" /><span>154</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="156" /><span>152</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="158" /><span>158</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="160" /><span>160</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="162" /><span>162</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="164" /><span>164</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="155W" /><span>155W</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="157W" /><span>157W</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="159W" /><span>159W</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="161W" /><span>161W</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="163W" /><span>163W</span>
-            </label>
-          </div>
-
-          <div class="c-listing-filter__dropdown-title c-listing-filter__dropdown-title--noclose"></div>
-          <div class="c-listing-filter__stack c-listing-filter__stack--foot">
-            <div class="js-filter-num-select"><span class="num-select-filter">0</span> selected</div>
-            <div class="js-filter-clean" attr-master-col="all-snowboards">REMOVE FILTER</div>
-          </div>
-
+    
         </div>
       </div>
-
-    {% elsif section.settings.filter_type == "apparel_and_others"  %}
-
-      <div class="l-listing__aside">
-        <div class="c-listing-filter">
-
-          <div class="c-listing-filter__mob-head">
-            <span>FILTERS</span>
-            {% render 'icon-close' %}
-          </div>
-
-          {% comment %} {%- for filter in collection.filters -%}
-            <span>{{ filter.label }}</span>
-          {%- endfor -%} {% endcomment %}
-
-          {% assign tag_list = "" %}
-          {%- for current_tag in current_tags -%}
-            {% assign tag_list = tag_list | append: current_tag %}
-            {% unless forloop.last %}
-              {% assign tag_list = tag_list | append: "|" %}
-            {% endunless %}
-          {%- endfor -%}
-
-          <span class="js-tags-list" data-tags="{{tag_list}}"><span>
-
-          <div class="c-listing-filter__dropdown-title js-filter-type" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
-          <div class="c-listing-filter__stack js-filter-inputs" attr-filter-type="category">
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="T-Shirt" /><span>T-Shirt</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="Jacket" /><span>Jacket</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="Hats" /><span>Hats</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="accessories" /><span>Accessories</span>
-            </label>
-            <label class="c-listing-filter__option">
-              <input type="checkbox" name="movies" /><span>Movies</span>
-            </label>
-          </div>
-
-          <div class="c-listing-filter__dropdown-title c-listing-filter__dropdown-title--noclose"></div>
-          <div class="c-listing-filter__stack c-listing-filter__stack--foot">
-            <div class="js-filter-num-select"><span class="num-select-filter">0</span> selected</div>
-            <div class="js-filter-clean" attr-master-col="apparel-more">REMOVE FILTER</div>
-          </div>
-
-        </div>
-      </div>
-
-    {% endif %}
-
-    <div class="l-listing__grid l-listing__grid--{{section.settings.filter_type}} l-listing__grid--{{collection.handle}}">
-
-      {% assign col_empty_class = "not-empty" %}
-
-      {% if collection.products.size == 0 %}
-        {% assign col_empty_class = "empty" %}
-      {% endif %} 
-      <div class="l-listing__grid__empty {{col_empty_class}}">
-        <img class="red-logo" src="{{ 'red_logo.png' | asset_url }}" alt="capita empty">
-        <span>Please choose a different<br/>filter combination</span>
-      </div>
-
-      {%- for product in collection.products -%}
-        {% assign tag_list = "" %}
-        {% for product_tag in product.tags%}
-          {% assign tag_list = tag_list | append: "|" | append: product_tag %}
-        {% endfor %}
-        <div class="c-listing-product" data-tags="{{ tag_list }}" data-title="{{ product.title }}">
-          <div class="c-listing-product__image">
-            <a href="{{ product.url }}">
-              <img src="{{ product.featured_image | img_url: "550x550" }}" alt="Capita | {{ product.title | strip_html }}">
-            </a>
-          </div>
-          <div class="c-listing-product__sizes">
-
-            {% unless product.has_only_default_variant %}
-              {% for option in product.options_with_values %}
-
-                  {% assign option_name = option.name | downcase %}
-
-                  {% if option_name == "size" %}
-                    {% for variant in product.variants %}
-                      {% if forloop.index < 8 %}
-                        <a class="c-listing-product__size {%- if variant.available == false %} is-disabled{% endif %}" attr-variant-id="{{ variant.id }}" href="{{ variant.url }}">{{ variant.title }}</a>
-                      {% elsif forloop.index == forloop.length %}
-                        <button class="c-listing-product__size is-ghost" type="button">+ {{ forloop.length | minus: 7 }} more</button>
-                      {% endif %}
-                    {% endfor %}
-                  {% endif%}
-
-              {% endfor %}                
-          {% endunless %}
-          
-          </div>
-          <div class="c-listing-product__info">
-            <span class="c-listing-product__categories">{{ product.metafields.snowboard_info.snowboard_listing_tag }}</span>
-            <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
-            <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
-            {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %}
-          </div>
-        </div>
-
-      {%- endfor -%}
-
     </div>
   </div>
 </div>

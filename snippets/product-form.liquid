@@ -28,7 +28,7 @@
                       {% if option_name == "size" %}
                           <div class="c-product-info__sizes">
                               {% for variant in product.variants %}
-                                  <div class="c-product-info__size js-product-variant {%- if variant.available == false %} is-disabled{% endif %}" for="{{ variant.id }}">
+                                  <div class="c-product-info__size js-product-variant {%- if variant.available == false %} is-disabled{% endif %}" for="{{ variant.id }}" data-index="{{ forloop.index0 }}">
                                       <input 
                                           style="visibility:hidden;opacity:0;height:0;width:0;padding:0;margin:0;" 
                                           type="radio" 

@@ -98,7 +98,7 @@
     {% include 'cart-header' %}
     <div class="c-header__menu-list js-header-menu-list">
 
-    <div class="c-header__dropdown-panel c-header-search js-header-dropdown" style="display: none" data-parent="search">
+    <div class="c-header__dropdown-panel c-header-search js-header-dropdown js-header-search" style="display: none" data-parent="search">
       <label
         class="c-header-search__title"
         for="search-input"
@@ -214,18 +214,24 @@
 #search-result {
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 20px;
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px 20px;
-}
-@media screen and (min-width: 1200px) {
-  #search-result {
-    margin-top:80px
+  }
+  @media screen and (min-width: 1200px) {
+    #search-result {
+      margin-top:80px;
+      grid-template-columns: repeat(4, 1fr);
   }
 }
+
 .s-item__content {
     display: flex;
     align-items: center;
+}
+.s-item__content a {
+  flex-shrink:0;
 }
 .s-item__content img {
   height: 80px;
@@ -307,9 +313,11 @@
 
             });
 
-            const sContent = document.querySelector('.c-header-search');
-        const t = sContent.getBoundingClientRect().height;
-        document.body.style.setProperty('--panel-height', `${t}px`);
+            if (window.innerWidth > 1200) {
+              const sContent = document.querySelector('.c-header-search');
+              const t = sContent.getBoundingClientRect().height;
+              document.body.style.setProperty('--panel-height', `${t}px`);
+            }
 
             if (productSuggestions.length > 0) {
               const firstProductSuggestion = productSuggestions[0];

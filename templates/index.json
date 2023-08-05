@@ -30,7 +30,6 @@
       "settings": {
         "image_position": false,
         "product": "mercury-2024",
-        "product_image": "shopify:\/\/shop_images\/FRD05_MERCURY_147_8c9fb09d-ea05-466c-86b3-967e164ec502.png",
         "right_image": "shopify:\/\/shop_images\/D_hompage_productbanner_kevinbackstrom.jpg",
         "left_title": "THE MERCURY",
         "left_sup_title": "FRD05 MERCURY",
@@ -42,7 +41,6 @@
       "settings": {
         "image_position": true,
         "product": "the-navigator-2024",
-        "product_image": "shopify:\/\/shop_images\/FRD06_NAVIGATOR_147_9c9cbd66-8aca-429d-b778-7481e046a9b7.png",
         "right_image": "shopify:\/\/shop_images\/Jess_Equalizer_1_1.jpg",
         "left_title": "THE NAVIGATOR",
         "left_sup_title": "FRD06 NAVIGATOR",
@@ -53,8 +51,7 @@
       "type": "banner-product",
       "settings": {
         "image_position": false,
-        "product": "mercury-2024",
-        "product_image": "shopify:\/\/shop_images\/Group_343.png",
+        "product": "the-equalizer-by-jess-kimura",
         "right_image": "shopify:\/\/shop_images\/D_hompage_productbanner_jesskimura.jpg",
         "left_title": "THE EQUALIZER",
         "left_sup_title": "FRD07 EQUALIZER",

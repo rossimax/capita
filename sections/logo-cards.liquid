@@ -1,19 +1,23 @@
 <div class="section-logo-cards" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
-    <div class="logo-cards">
+    <div class="u-container">
+        <div class="u-content">
+            <div class="logo-cards">
 
-        {% for block in section.blocks %}
-            <div class="single-card">
-                <div class="single-card__content">
-                    <img src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.title | strip_html }}">
-                    <h4 class="single-card__content__title medium">{{ block.settings.title }}</h4>
-                    <div class="single-card__content__description">{{ block.settings.description }}</div>
-                </div>
-                <div class="single-card__cta">
-                    <a class="medium" href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
-                </div>
+                {% for block in section.blocks %}
+                    <div class="single-card">
+                        <div class="single-card__content">
+                            <img src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.title | strip_html }}">
+                            <h4 class="single-card__content__title medium">{{ block.settings.title }}</h4>
+                            <div class="single-card__content__description">{{ block.settings.description }}</div>
+                        </div>
+                        <div class="single-card__cta">
+                            <a class="medium" href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+
             </div>
-        {% endfor %}
-
+        </div>
     </div>
 </div>
 
@@ -93,20 +97,20 @@
     justify-content: space-between;
 }
 .single-card__content {
-    padding: 40px 30px 80px;
+    padding: 40px 30px 60px;
 }
 .single-card__content img {
-    width: 142px;
+    width: 120px;
     display: block;
     margin: 0 auto 40px auto;
 }
 .single-card__content__title {
-    font-size: 32px;
+    font-size: 24px;
     margin-bottom: 20px;
     line-height: 1;
 }
 .single-card__content__description {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1;
 }
 .single-card__cta {
@@ -121,13 +125,13 @@
 .single-card__cta a {
     width: 100%;
     text-decoration: none;
-    padding: 36px 0;
+    padding: 20px 0;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     text-align: center;
     line-height: 1;
     color: #000;
-    font-size: 21px;
+    font-size: 20px;
 }
 @media screen and (max-width: 991px) {
     .logo-cards {

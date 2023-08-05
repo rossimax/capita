@@ -335,7 +335,9 @@ main.template-payments {
   .btn svg {
     width: 8px;
   }
-  .btn.btn-primary {
+  .btn.btn-primary,
+  .btn.btn-secondary {
+    height: 44px;
     padding: 22px 20px;
   }
   .btn.flat {

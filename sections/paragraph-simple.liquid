@@ -9,12 +9,16 @@
     }
 </style>
 <div class="section-paragraph-simple section-paragraph-simple--{{section.id}}" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;background-color: {{ section.settings.background_color }};">
-    <div class="paragraph-simple-content">
-        <h2 class="paragraph-simple-content__title strong" style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
-        {% if section.settings.image_bottom %}
-            <img class="paragraph-simple-image-bottom" src="{{ section.settings.image_bottom | img_url: "master" }}" alt="{{ section.settings.title | strip_html }}">
-        {% endif%}
-        <div class="paragraph-simple-content__paragraph" style="color: {{ section.settings.text_color }}">{{ section.settings.text }}</div>
+    <div class="u-container">
+        <div class="u-content">
+            <div class="paragraph-simple-content">
+                <h2 class="paragraph-simple-content__title strong" style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
+                {% if section.settings.image_bottom %}
+                    <img class="paragraph-simple-image-bottom" src="{{ section.settings.image_bottom | img_url: "master" }}" alt="{{ section.settings.title | strip_html }}">
+                {% endif%}
+                <div class="paragraph-simple-content__paragraph" style="color: {{ section.settings.text_color }}">{{ section.settings.text }}</div>
+            </div>
+        </div>
     </div>
 </div>
 

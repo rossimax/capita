@@ -41,9 +41,13 @@
   </div>
 
   {% if section.settings.shadow_box_title != blank %}
-    <div class="hero-banner-secondary-shadow-box padding-inline">
-      <h3 class="hero-banner-secondary-shadow-box__title strong">{{section.settings.shadow_box_title}}</h3>
-      <div class="hero-banner-secondary-shadow-box__text">{{section.settings.shadow_box_text}}</div>
+    <div class="u-container">
+      <div class="u-content">
+        <div class="hero-banner-secondary-shadow-box padding-inline">
+          <h3 class="hero-banner-secondary-shadow-box__title strong">{{section.settings.shadow_box_title}}</h3>
+          <div class="hero-banner-secondary-shadow-box__text">{{section.settings.shadow_box_text}}</div>
+        </div>
+      </div>
     </div>
   {% endif %}
   

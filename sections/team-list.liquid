@@ -1,15 +1,19 @@
 <div class="section-team-list">
-    <div class="team-list">
-        {% for block in section.blocks %}
-            <div class="team-list__card">
-                <a href="{{ block.settings.link_url }}">
-                    <img class="team-list__card__image" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.name | strip_html }}">
-                    <div class="team-list__card__name medium">
-                        <span>{{ block.settings.name }}</span>
+    <div class="u-container">
+        <div class="u-content">
+            <div class="team-list">
+                {% for block in section.blocks %}
+                    <div class="team-list__card">
+                        <a href="{{ block.settings.link_url }}">
+                            <img class="team-list__card__image" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.name | strip_html }}">
+                            <div class="team-list__card__name medium">
+                                <span>{{ block.settings.name }}</span>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                {% endfor%}
             </div>
-        {% endfor%}
+        </div>
     </div>
 </div>
 
@@ -68,16 +72,16 @@
 img.team-list__card__image {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    height: 360px;
     object-fit: cover;
     width: 100%;
+    aspect-ratio: 1/1;
 }
 .team-list__card__name {
     width: 100%;
     text-align: center;
     padding: 20px 0;
     color: #fff;
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 500;
     border-top: 1px solid #fff;
 }

@@ -1,82 +1,86 @@
 
 
 <div class="section-text-boxes" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
-    <div class="text-boxes">
-        <div class="text-boxes__head">
-            {% if section.settings.title != blank %}
-                <h2 class="title">{{ section.settings.title }}</h2>
-            {% endif %}
-        </div>
-        <div class="text-boxes__cards row">
-            {% for block in section.blocks %}
-                {% if block.settings.text_left %}
-                    {% assign row_direction = "row" %}
-                {% else %}
-                    {% assign row_direction = "row-reverse" %}
-                {% endif %}
-                <div class="text-boxes__head__content {{ row_direction }}">
-                    <div class="text-boxes__head__content__paragraph col-6">
-                        <h5 class="text-boxes__head__content__paragraph__title strong">
-                            {{ block.settings.title }}
-                        </h5>
-                        <div class="text-boxes__head__content__paragraph__text">
-                            {{ block.settings.paragraph }}
-                        </div>
-                    </div>
-                    <div class="text-boxes__head__content__media col-6">
-                        {% if block.settings.video %}
-                            {% assign video = block.settings.video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
-                            {{ video }}
+    <div class="u-container">
+        <div class="u-content">
+            <div class="text-boxes">
+                <div class="text-boxes__head">
+                    {% if section.settings.title != blank %}
+                        <h2 class="title">{{ section.settings.title }}</h2>
+                    {% endif %}
+                </div>
+                <div class="text-boxes__cards row">
+                    {% for block in section.blocks %}
+                        {% if block.settings.text_left %}
+                            {% assign row_direction = "row" %}
                         {% else %}
-                            <img src="{{ block.settings.image | img_url: "master" }}" alt="capita">
+                            {% assign row_direction = "row-reverse" %}
+                        {% endif %}
+                        <div class="text-boxes__head__content {{ row_direction }}">
+                            <div class="text-boxes__head__content__paragraph col-6">
+                                <h5 class="text-boxes__head__content__paragraph__title strong">
+                                    {{ block.settings.title }}
+                                </h5>
+                                <div class="text-boxes__head__content__paragraph__text">
+                                    {{ block.settings.paragraph }}
+                                </div>
+                            </div>
+                            <div class="text-boxes__head__content__media col-6">
+                                {% if block.settings.video %}
+                                    {% assign video = block.settings.video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+                                    {{ video }}
+                                {% else %}
+                                    <img src="{{ block.settings.image | img_url: "master" }}" alt="capita">
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="text-boxes__foot">
+                    <div class="text-boxes__foot__title">
+                        {% if section.settings.title_bottom != blank %}
+                            <h2 class="title">{{ section.settings.title_bottom }}</h2>
+                        {% endif %}
+                    </div>
+                    <div class="text-boxes__foot__ctas">
+                        {% liquid 
+                            if section.settings.arrow_type_1 == "arrow_normal" 
+                                assign arrow_cta_1 = "icon-arrow-capita"
+                            elsif section.settings.arrow_type_1 == "arrow_play" 
+                                assign arrow_cta_1 = "icon-arrow-play"
+                            else 
+                                assign arrow_cta_1 = blank
+                            endif
+                        -%}
+                        {% if section.settings.cta_text_1 != blank %}
+                            <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_1 }}">{{ section.settings.cta_text_1 }} {% if arrow_cta_1 != blank %}{% include arrow_cta_1 %}{% endif %}</a>
+                        {% endif %}
+                        {% liquid 
+                            if section.settings.arrow_type_2 == "arrow_normal" 
+                                assign arrow_cta_2 = "icon-arrow-capita"
+                            elsif section.settings.arrow_type_2 == "arrow_play" 
+                                assign arrow_cta_2 = "icon-arrow-play"
+                            else 
+                                assign arrow_cta_2 = blank
+                            endif
+                        -%}
+                        {% if section.settings.cta_text_2 != blank %}
+                            <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_text_2 }} {% if arrow_cta_2 != blank %}{% include arrow_cta_2 %}{% endif %}</a>
+                        {% endif %}
+                        {% liquid 
+                            if section.settings.arrow_type_3 == "arrow_normal" 
+                                assign arrow_cta_3 = "icon-arrow-capita"
+                            elsif section.settings.arrow_type_3 == "arrow_play" 
+                                assign arrow_cta_3 = "icon-arrow-play"
+                            else 
+                                assign arrow_cta_3 = blank
+                            endif
+                        -%}
+                        {% if section.settings.cta_text_3 != blank %}
+                            <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_3 }}">{{ section.settings.cta_text_3 }} {% if arrow_cta_3 != blank %}{% include arrow_cta_3 %}{% endif %}</a>
                         {% endif %}
                     </div>
                 </div>
-            {% endfor %}
-        </div>
-        <div class="text-boxes__foot">
-            <div class="text-boxes__foot__title">
-                {% if section.settings.title_bottom != blank %}
-                    <h2 class="title">{{ section.settings.title_bottom }}</h2>
-                {% endif %}
-            </div>
-            <div class="text-boxes__foot__ctas">
-                {% liquid 
-                    if section.settings.arrow_type_1 == "arrow_normal" 
-                        assign arrow_cta_1 = "icon-arrow-capita"
-                    elsif section.settings.arrow_type_1 == "arrow_play" 
-                        assign arrow_cta_1 = "icon-arrow-play"
-                    else 
-                        assign arrow_cta_1 = blank
-                    endif
-                -%}
-                {% if section.settings.cta_text_1 != blank %}
-                    <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_1 }}">{{ section.settings.cta_text_1 }} {% if arrow_cta_1 != blank %}{% include arrow_cta_1 %}{% endif %}</a>
-                {% endif %}
-                {% liquid 
-                    if section.settings.arrow_type_2 == "arrow_normal" 
-                        assign arrow_cta_2 = "icon-arrow-capita"
-                    elsif section.settings.arrow_type_2 == "arrow_play" 
-                        assign arrow_cta_2 = "icon-arrow-play"
-                    else 
-                        assign arrow_cta_2 = blank
-                    endif
-                -%}
-                {% if section.settings.cta_text_2 != blank %}
-                    <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_text_2 }} {% if arrow_cta_2 != blank %}{% include arrow_cta_2 %}{% endif %}</a>
-                {% endif %}
-                {% liquid 
-                    if section.settings.arrow_type_3 == "arrow_normal" 
-                        assign arrow_cta_3 = "icon-arrow-capita"
-                    elsif section.settings.arrow_type_3 == "arrow_play" 
-                        assign arrow_cta_3 = "icon-arrow-play"
-                    else 
-                        assign arrow_cta_3 = blank
-                    endif
-                -%}
-                {% if section.settings.cta_text_3 != blank %}
-                    <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_3 }}">{{ section.settings.cta_text_3 }} {% if arrow_cta_3 != blank %}{% include arrow_cta_3 %}{% endif %}</a>
-                {% endif %}
             </div>
         </div>
     </div>
@@ -243,12 +247,6 @@
 {% stylesheet %}
 
 
-.text-boxes {
-    max-width: 1620px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 .single-text-boxes__content {
     background: #ececec;
     width: calc(100% - 60px);

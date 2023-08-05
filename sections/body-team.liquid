@@ -1,37 +1,39 @@
 <div class="section-team-body">
-
-    <div class="team-body">
-        <div class="team-body__content">
-            <h4>{{ section.settings.sup_title }} / {{ section.settings.title }}</h4>
-            <div class="team-body__content__bio">{{ page.metafields.accentuate.bio }}</div>
-            <div class="team-body__content__ig">
-                {% if page.metafields.accentuate.instagram != blank %}
-                    <a href="{{page.metafields.accentuate.instagram}}">{% render 'icon-instagram' %} {{ page.metafields.accentuate.instagram | remove: "https://www.instagram.com/" | remove: "/"}}</a>
-                {% endif%}
-            </div>
-        </div>
-        <div class="team-body__table">
-            <div class="team-body__table__content">
-                <div class="team-body__table__content_cell">
-                    <span class="cell-type">HOMETOWN:</span><br/>
-                    <span class="cell-content">{{ page.metafields.team_profile.hometown }}</span>
+    <div class="u-container">
+        <div class="u-content">
+            <div class="team-body">
+                <div class="team-body__content">
+                    <h4>{{ section.settings.sup_title }} / {{ section.settings.title }}</h4>
+                    <div class="team-body__content__bio">{{ page.metafields.accentuate.bio }}</div>
+                    <div class="team-body__content__ig">
+                        {% if page.metafields.accentuate.instagram != blank %}
+                            <a href="{{page.metafields.accentuate.instagram}}">{% render 'icon-instagram' %} {{ page.metafields.accentuate.instagram | remove: "https://www.instagram.com/" | remove: "/"}}</a>
+                        {% endif%}
+                    </div>
                 </div>
-                <div class="team-body__table__content_cell">
-                    <span class="cell-type">HEIGHT:</span><br/>
-                    <span class="cell-content">{{ page.metafields.team_profile.height }}</span>
-                </div>
-                <div class="team-body__table__content_cell">
-                    <span class="cell-type">WEIGHT:</span><br/>
-                    <span class="cell-content">{{ page.metafields.team_profile.weight }}</span>
-                </div>
-                <div class="team-body__table__content_cell">
-                    <span class="cell-type">STANCE:</span><br/>
-                    <span class="cell-content">{{ page.metafields.team_profile.stance }}</span>
+                <div class="team-body__table">
+                    <div class="team-body__table__content">
+                        <div class="team-body__table__content_cell">
+                            <span class="cell-type">HOMETOWN:</span><br/>
+                            <span class="cell-content">{{ page.metafields.team_profile.hometown }}</span>
+                        </div>
+                        <div class="team-body__table__content_cell">
+                            <span class="cell-type">HEIGHT:</span><br/>
+                            <span class="cell-content">{{ page.metafields.team_profile.height }}</span>
+                        </div>
+                        <div class="team-body__table__content_cell">
+                            <span class="cell-type">WEIGHT:</span><br/>
+                            <span class="cell-content">{{ page.metafields.team_profile.weight }}</span>
+                        </div>
+                        <div class="team-body__table__content_cell">
+                            <span class="cell-type">STANCE:</span><br/>
+                            <span class="cell-content">{{ page.metafields.team_profile.stance }}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 
 {% schema %}

@@ -11,13 +11,17 @@
 {% endif %}
 
 <div class="section-paragraph" style="background-image:url({{ background_image }}); {{style_black}}">
-    <div class="paragraph-content">
-        <div class="paragraph-content__text">
-            {{ section.settings.text }}
+    <div class="u-container">
+        <div class="u-content">
+            <div class="paragraph-content">
+                <div class="paragraph-content__text">
+                    {{ section.settings.text }}
+                </div>
+                {% if section.settings.image != blank %}
+                <img class="paragraph-content__image" src="{{ section.settings.image | img_url: 'master' }}" alt="capita">
+                {% endif %}
+            </div>
         </div>
-        {% if section.settings.image != blank %}
-        <img class="paragraph-content__image" src="{{ section.settings.image | img_url: 'master' }}" alt="capita">
-        {% endif %}
     </div>
 </div>
 
@@ -68,7 +72,7 @@
 
 {% stylesheet %}
 .section-paragraph {
-    padding: 80px 20px;
+    padding: 80px 0;
     background-position: center;
     background-size: contain;
     background-repeat: repeat;
@@ -83,7 +87,7 @@
 .paragraph-content__text p {
     margin: 0;
     display: block;
-    font-size: 60px;
+    font-size: 52px;
 }
 .paragraph-content__image {
     margin: 60px auto 0 auto;

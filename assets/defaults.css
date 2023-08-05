@@ -25,7 +25,7 @@ bl {
 }
 
 .title {
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 600;
   line-height: 1;
 }
@@ -297,12 +297,12 @@ main.template-payments {
 .btn.btn-secondary.black:hover {
   border: 1px solid #000;
   color: #fff;
-  background: #868686;
+  background: #000;
 }
 .btn.btn-secondary.black.focus {
   border: 1px solid #000;
   color: #fff;
-  background: #868686;
+  background: #000;
 }
 .btn.btn-secondary.black.focus svg {
   filter: invert(0);
@@ -335,7 +335,9 @@ main.template-payments {
   .btn svg {
     width: 8px;
   }
-  .btn.btn-primary {
+  .btn.btn-primary,
+  .btn.btn-secondary {
+    height: 44px;
     padding: 22px 20px;
   }
   .btn.flat {

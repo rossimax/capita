@@ -14,7 +14,7 @@
         <div class="banner-product__left__card">
             <a href="{{ section.settings.product.url }}">
                 <div class="banner-product__left__card__image">
-                    <img src="{{ section.settings.product_image | img_url: 'master' }}" alt="capita card" width="100%">
+                    <img src="{{ section.settings.product.featured_image | img_url: "550x550" }}" alt="capita card" width="100%">
                 </div>
                 <div class="banner-product__left__card__cta medium"><span>SHOP NOW</span></div>
             </a>
@@ -39,11 +39,6 @@
             "type": "product",
             "id": "product",
             "label": "Product"
-        },
-        {
-            "type": "image_picker",
-            "id": "product_image",
-            "label": "Product Image"
         },
         {
             "type": "image_picker",
@@ -93,6 +88,7 @@
 }
 .banner-product__left__card {
     width: 330px;
+    height: 700px;
     transform: translateX(50%);
     border-radius: 20px;
     background: #fff;
@@ -198,6 +194,17 @@
     right: unset;
 }
 
+@media screen and (min-width: 1600px ) {
+    .banner-product__left__text {
+        left: calc(50% - 790px);
+    }
+}
+
+@media screen and (max-width: 1600px ) {
+    .banner-product__left__text {
+        left: 70px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .banner-product__left,
@@ -213,7 +220,7 @@
         width: 175px;
     }
     .banner-product__left {
-        padding: 0 40px 50px 40px;
+        padding: 0 25px 50px 25px;
         justify-content: space-between;
         align-items: end;
         transform: translateY(0);

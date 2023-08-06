@@ -129,7 +129,9 @@ button:hover:not(.c-header__menu-item) span,
 
   }
 }
-
+.text-white {
+  color: #fff;
+}
 
 /* END LAYOUT */
 

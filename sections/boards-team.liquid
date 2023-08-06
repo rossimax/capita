@@ -18,7 +18,7 @@
                         <div class="team-boards-content__single">
                             <span>{{ page.metafields.team_profile.board_category[index] }}</span>
                             <h4 class="strong">{{ page.metafields.team_profile.board_title[index] }}</h4>
-                            <img src="{{ page.metafields.team_profile.board_image_url[index] }}">
+                            <img src="{{ all_products[board].featured_image  | img_url: '550x550' }}">
                             <a href="{{ all_products[board].url }}" class="btn btn-primary medium">DISCOVER MORE</a>
                         </div>
                         {%- endfor -%}

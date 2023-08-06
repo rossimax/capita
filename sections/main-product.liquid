@@ -1,10 +1,10 @@
 
 {% if template.suffix == "snowboards" %}
 
-  {% if product.metafields.accentuate.hero_title_color == "White" %}
-    {% assign hero_title_color = "text-white" %}
-  {% else %}
+  {% if product.metafields.accentuate.hero_title_color == "Black" %}
     {% assign hero_title_color = "text-black" %}
+  {% else %}
+    {% assign hero_title_color = "text-white" %}
   {% endif %}
 
   <div class="c-product-hero">

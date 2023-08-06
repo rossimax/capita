@@ -712,11 +712,15 @@ a.c-listing-product__size:hover span {
             let productHide = true
 
             if (filterApply.length > 0 ) {
-              prodTagsArray.forEach((prodTagItem,i) => {
-                if (filterApply.includes(prodTagItem)) {
-                  productHide = false
-                }
-              })
+
+              let containsAllTags = filterApply.every(filterApplyItem => {
+                return prodTagsArray.includes(filterApplyItem);
+              });
+
+              if (containsAllTags) {
+                productHide = false
+              }
+
             } else {
               productHide = false
             }

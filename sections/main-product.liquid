@@ -1,7 +1,7 @@
 
 {% if template.suffix == "snowboards" %}
 
-  {% if hero_title_color == "White" %}
+  {% if product.metafields.accentuate.hero_title_color == "White" %}
     {% assign hero_title_color = "text-white" %}
   {% else %}
     {% assign hero_title_color = "text-black" %}

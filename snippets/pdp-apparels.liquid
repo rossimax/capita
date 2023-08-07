@@ -29,12 +29,19 @@
 }
 .pdp-defaul-table__content ul {
   list-style: none;
-  padding: 0;
+    padding: 0;
+    max-height: 180px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 @media screen and (max-width: 768px) {
   .section-pdp-defaul-table {
       margin: 60px 0;
       padding: 20px;
+  }
+  .pdp-defaul-table__content ul {
+    max-height: unset;
   }
 }
 

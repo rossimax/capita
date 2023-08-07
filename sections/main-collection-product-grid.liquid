@@ -756,26 +756,29 @@ a.c-listing-product__size:hover span {
     filtersType.forEach((filterType,i) => {
       filterType.addEventListener("click", function(){
 
-        let filterTypeType = filterType.getAttribute("attr-filter-type")
+        if ( window.innerWidth > 1199) {
 
-        if (filterType.classList.contains("closed")) {
+          let filterTypeType = filterType.getAttribute("attr-filter-type")
 
-          filterType.classList.remove("closed")
-          filtersInputs.forEach(filterInputs => {
-            if (filterInputs.getAttribute("attr-filter-type") == filterTypeType) {
-              filterInputs.classList.remove("hide")
-            }
-          })
+          if (filterType.classList.contains("closed")) {
 
-        } else {
+            filterType.classList.remove("closed")
+            filtersInputs.forEach(filterInputs => {
+              if (filterInputs.getAttribute("attr-filter-type") == filterTypeType) {
+                filterInputs.classList.remove("hide")
+              }
+            })
 
-          filterType.classList.add("closed")
-          filtersInputs.forEach(filterInputs => {
-            if (filterInputs.getAttribute("attr-filter-type") == filterTypeType) {
-              filterInputs.classList.add("hide")
-            }
-          })
+          } else {
 
+            filterType.classList.add("closed")
+            filtersInputs.forEach(filterInputs => {
+              if (filterInputs.getAttribute("attr-filter-type") == filterTypeType) {
+                filterInputs.classList.add("hide")
+              }
+            })
+
+          }
         }
       })
     })
@@ -808,7 +811,7 @@ a.c-listing-product__size:hover span {
   // START - FILTERS MOB
 
   function checkMobFilter() {
-    if ( window.innerWidth < 1199) {
+    if ( window.innerWidth < 1200) {
       filterMobHead.classList.add("closed")
       listingFilter.classList.add("closed")
       tagsListApplied.classList.add("closed")

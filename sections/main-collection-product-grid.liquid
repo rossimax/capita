@@ -22,9 +22,9 @@
         </div>
         {% if section.settings.filter_type == "snowboards" %}
           <div class="l-listing__aside">
-            <div class="c-listing-filter">
+            <div class="c-listing-filter closed">
     
-              <div class="c-listing-filter__mob-head">
+              <div class="c-listing-filter__mob-head closed">
                 <span>FILTERS</span>
                 {% render 'icon-close' %}
               </div>
@@ -210,9 +210,9 @@
         {% elsif section.settings.filter_type == "apparel_and_others"  %}
     
           <div class="l-listing__aside">
-            <div class="c-listing-filter">
+            <div class="c-listing-filter closed">
     
-              <div class="c-listing-filter__mob-head">
+              <div class="c-listing-filter__mob-head closed">
                 <span>FILTERS</span>
                 {% render 'icon-close' %}
               </div>
@@ -309,7 +309,7 @@
                 <span class="c-listing-product__categories">{{ product.metafields.snowboard_info.snowboard_listing_tag }}</span>
                 <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
                 <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
-                {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %}
+                {% comment %} {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %} {% endcomment %}
               </div>
             </div>
     
@@ -476,6 +476,10 @@ a.c-listing-product__size:hover span {
   background: #fff;
   color: #000;
 }
+.c-listing-product__size.is-ghost {
+  font-size: 14px;
+  text-decoration: none;
+}
 
 @media screen and (max-width: 1199px) {
   .l-listing__aside {
@@ -529,6 +533,13 @@ a.c-listing-product__size:hover span {
     padding: 0 15px;
     height: 55px;
   }
+  .c-listing-filter.closed .js-tags-list {
+    display: none;
+  }
+  .c-listing-filter.closed .js-tags-list span {
+    opacity: 0;
+    visibility: hidden;
+  }
   .c-listing-filter__mob-head.closed {
     border-bottom: none;
     margin-top: 15px;
@@ -539,6 +550,7 @@ a.c-listing-product__size:hover span {
   }
   .l-listing__grid.shadow {
     opacity: 0.5;
+    pointer-events: none;
   }
   .l-listing {
     position: relative;
@@ -558,6 +570,10 @@ a.c-listing-product__size:hover span {
   }
   .sorting-listing.js-sorting-listing {
     font-size: 12px;
+  }
+  .c-listing-product__size,
+  .c-listing-product__size.is-ghost {
+    font-size: 11px;
   }
 }
 
@@ -712,11 +728,15 @@ a.c-listing-product__size:hover span {
             let productHide = true
 
             if (filterApply.length > 0 ) {
-              prodTagsArray.forEach((prodTagItem,i) => {
-                if (filterApply.includes(prodTagItem)) {
-                  productHide = false
-                }
-              })
+
+              let containsAllTags = filterApply.every(filterApplyItem => {
+                return prodTagsArray.includes(filterApplyItem);
+              });
+
+              if (containsAllTags) {
+                productHide = false
+              }
+
             } else {
               productHide = false
             }
@@ -744,26 +764,29 @@ a.c-listing-product__size:hover span {
     filtersType.forEach((filterType,i) => {
       filterType.addEventListener("click", function(){
 
-        let filterTypeType = filterType.getAttribute("attr-filter-type")
+        if ( window.innerWidth > 1199) {
 
-        if (filterType.classList.contains("closed")) {
+          let filterTypeType = filterType.getAttribute("attr-filter-type")
 
-          filterType.classList.remove("closed")
-          filtersInputs.forEach(filterInputs => {
-            if (filterInputs.getAttribute("attr-filter-type") == filterTypeType) {
-              filterInputs.classList.remove("hide")
-            }
-          })
+          if (filterType.classList.contains("closed")) {
 
-        } else {
+            filterType.classList.remove("closed")
+            filtersInputs.forEach(filterInputs => {
+              if (filterInputs.getAttribute("attr-filter-type") == filterTypeType) {
+                filterInputs.classList.remove("hide")
+              }
+            })
 
-          filterType.classList.add("closed")
-          filtersInputs.forEach(filterInputs => {
-            if (filterInputs.getAttribute("attr-filter-type") == filterTypeType) {
-              filterInputs.classList.add("hide")
-            }
-          })
+          } else {
 
+            filterType.classList.add("closed")
+            filtersInputs.forEach(filterInputs => {
+              if (filterInputs.getAttribute("attr-filter-type") == filterTypeType) {
+                filterInputs.classList.add("hide")
+              }
+            })
+
+          }
         }
       })
     })
@@ -796,7 +819,7 @@ a.c-listing-product__size:hover span {
   // START - FILTERS MOB
 
   function checkMobFilter() {
-    if ( window.innerWidth < 1199) {
+    if ( window.innerWidth < 1200) {
       filterMobHead.classList.add("closed")
       listingFilter.classList.add("closed")
       tagsListApplied.classList.add("closed")

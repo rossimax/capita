@@ -1,16 +1,30 @@
-<div class="c-product-hero">
-  {% liquid
-  if product.metafields.snowboard_intro.background_image_new
-  assign background_image = product.metafields.snowboard_intro.background_image_new
-  else
-  assign background_image = "https://placehold.co/1920x600/f0f0f0/000"
-  endif
-  -%}
-  <img src="{{ background_image }}" alt="Capita | {{ product.title | strip_html }}">
-  <h1 class="c-product-hero__name">{{ product.title }}</h1>
-</div>
 
-<main class="main-page">
+{% if template.suffix == "snowboards" %}
+
+  {% if product.metafields.accentuate.hero_title_color == "Black" %}
+    {% assign hero_title_color = "text-black" %}
+  {% else %}
+    {% assign hero_title_color = "text-white" %}
+  {% endif %}
+
+  <div class="c-product-hero">
+    {% liquid
+    if product.metafields.snowboard_intro.background_image_new
+    assign background_image = product.metafields.snowboard_intro.background_image_new
+    else
+    assign background_image = "https://placehold.co/1920x600/f0f0f0/000"
+    endif
+    -%}
+    <img src="{{ background_image }}" alt="Capita | {{ product.title | strip_html }}">
+    <h1 class="c-product-hero__name {{ hero_title_color }}">{{ product.title }}</h1>
+  </div>
+  {% assign class_product = "snowboard-product" %}
+{% else %}
+  {% assign class_product = "other-product" %}
+{% endif %}
+
+
+<main class="main-page {{ class_product }}">
 
   <div class="c-product-gallery js-product-gallery">
     <div class="swiper">
@@ -274,6 +288,9 @@ margin-top: 40px;
 .c-product__main-pagination-bullet {
 width: 3px;
 height: 3px;
+}
+.spr-badge[data-rating="0.0"] {
+    display: none;
 }
 @media screen and (min-width: 75em) {
 .c-product-tech__specs {
@@ -1789,3 +1806,16 @@ grid-gap: 30px;
 ]
 }
 {% endschema %}
+
+{% style %}
+
+main.main-page.other-product {
+    margin-top: 160px;
+}
+@media screen and (max-width: 768px) {
+  main.main-page.other-product {
+    margin-top: 80px;
+  }
+}
+
+{% endstyle %}

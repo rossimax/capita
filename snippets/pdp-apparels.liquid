@@ -1,16 +1,9 @@
 <div class="section-pdp-defaul-table">
   <div class="pdp-defaul-table">
     <div class="pdp-defaul-table__content">
-      <h3>PRODUCT DETAILS</h3>
+      <h3><strong>PRODUCT DETAILS</strong></h3>
       <div class="dettails">
-        <span class="detail">Black</span>
-        <span class="detail">Black</span>
-        <span class="detail">Black</span>
-        <span class="detail">Black</span>
-        <span class="detail">Black</span>
-        <span class="detail">Black</span>
-        <span class="detail">Black</span>
-        <span class="detail">Black</span>
+        {{ product.description }}
       </div>
     </div>
   </div>
@@ -32,11 +25,23 @@
 .pdp-defaul-table__content {
     max-width: 1140px;
     margin: 0 auto;
+    font-size: 21px;
+}
+.pdp-defaul-table__content ul {
+  list-style: none;
+    padding: 0;
+    max-height: 180px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 @media screen and (max-width: 768px) {
   .section-pdp-defaul-table {
       margin: 60px 0;
       padding: 20px;
+  }
+  .pdp-defaul-table__content ul {
+    max-height: unset;
   }
 }
 

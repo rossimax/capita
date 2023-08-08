@@ -11,9 +11,7 @@
           {% endif %}
         >
           {{ country.name }} 
-          ({{ country.currency.symbol }})
-          {% comment %} ({{ country.currency.iso_code }}
-          {{ country.currency.symbol }}) {% endcomment %}
+          ({{ country.currency.iso_code }} {{ country.currency.symbol }})
         </option>
       {%- endfor -%}
     </select>

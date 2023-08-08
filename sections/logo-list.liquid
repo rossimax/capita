@@ -10,7 +10,9 @@
                         </div>
                     {% endfor %}
                 </div>
+                {% if section.settings.description != blank %}
                 <div class="logo-list__description">{{ section.settings.description }}</div>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -274,12 +274,12 @@
           </div>
     
           {%- for product in collection.products -%}
-            <a href="{{ product.url }}">
             {% assign tag_list = "" %}
             {% for product_tag in product.tags%}
               {% assign tag_list = tag_list | append: "|" | append: product_tag %}
             {% endfor %}
             <div class="c-listing-product" data-tags="{{ tag_list }}" data-title="{{ product.title }}">
+              <a href="{{ product.url }}">
               <div class="c-listing-product__image">
                   <img src="{{ product.featured_image | img_url: "550x550" }}" alt="Capita | {{ product.title | strip_html }}">
                 </div>
@@ -310,8 +310,8 @@
                   <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
                   {% comment %} {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %} {% endcomment %}
                 </div>
+              </a>
               </div>
-            </a>
               
           {%- endfor -%}
     

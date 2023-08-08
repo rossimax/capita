@@ -16,7 +16,7 @@
                 {% if section.settings.image_bottom %}
                     <img class="paragraph-simple-image-bottom" src="{{ section.settings.image_bottom | img_url: "master" }}" alt="{{ section.settings.title | strip_html }}">
                 {% endif%}
-                {% if section.settings.text %}
+                {% if section.settings.text != blank %}
                     <div class="paragraph-simple-content__paragraph" style="color: {{ section.settings.text_color }}">{{ section.settings.text }}</div>
                 {% endif%}
             </div>

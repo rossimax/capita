@@ -279,40 +279,40 @@
               {% assign tag_list = tag_list | append: "|" | append: product_tag %}
             {% endfor %}
             <div class="c-listing-product" data-tags="{{ tag_list }}" data-title="{{ product.title }}">
-              <a href="{{ product.url }}">
               <div class="c-listing-product__image">
+                <a href="{{ product.url }}">
                   <img src="{{ product.featured_image | img_url: "550x550" }}" alt="Capita | {{ product.title | strip_html }}">
-                </div>
-                <div class="c-listing-product__sizes">
-                  
-                  {% unless product.has_only_default_variant %}
-                    {% for option in product.options_with_values %}
-                      
+                </a>
+              </div>
+              <div class="c-listing-product__sizes">
+    
+                {% unless product.has_only_default_variant %}
+                  {% for option in product.options_with_values %}
+    
                       {% assign option_name = option.name | downcase %}
-                      
+    
                       {% if option_name == "size" %}
                         {% for variant in product.variants %}
                           {% if forloop.index < 8 %}
                             <a class="c-listing-product__size {%- if variant.available == false %} is-disabled{% endif %}" attr-variant-id="{{ variant.id }}" href="{{ variant.url }}">{{ variant.title }}</a>
-                            {% elsif forloop.index == forloop.length %}
+                          {% elsif forloop.index == forloop.length %}
                             <button class="c-listing-product__size is-ghost" type="button">+ {{ forloop.length | minus: 7 }} more</button>
                           {% endif %}
                         {% endfor %}
                       {% endif%}
-                      
-                    {% endfor %}                
-                  {% endunless %}
-                  
-                </div>
-                <div class="c-listing-product__info">
-                  <span class="c-listing-product__categories">{{ product.metafields.snowboard_info.snowboard_listing_tag }}</span>
-                  <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
-                  <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
-                  {% comment %} {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %} {% endcomment %}
-                </div>
-              </a>
-              </div>
+    
+                  {% endfor %}                
+              {% endunless %}
               
+              </div>
+              <div class="c-listing-product__info">
+                <span class="c-listing-product__categories">{{ product.metafields.snowboard_info.snowboard_listing_tag }}</span>
+                <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
+                <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
+                {% comment %} {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %} {% endcomment %}
+              </div>
+            </div>
+    
           {%- endfor -%}
     
         </div>

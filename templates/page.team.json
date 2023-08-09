@@ -122,6 +122,7 @@
         "d75fc589-e53a-4d0d-a38e-32fbbb10ec6d"
       ],
       "settings": {
+        "hide_all_riders_link": false
       }
     },
     "3521ce90-7292-40db-8351-d4081b787f48": {
@@ -216,6 +217,7 @@
         "f65bdffa-78ed-46db-9848-48cacdbb7baf"
       ],
       "settings": {
+        "hide_all_riders_link": false
       }
     },
     "fe8f1017-b722-4395-bbe4-54cba3517651": {
@@ -382,6 +384,7 @@
         "3e17076a-00f9-480f-bd82-9bea61373752"
       ],
       "settings": {
+        "hide_all_riders_link": true
       }
     },
     "e4f32c63-69ad-4afb-bfe2-d1a7b92c99a7": {

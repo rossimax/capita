@@ -4,12 +4,21 @@
             <div class="team-list">
                 {% for block in section.blocks %}
                     <div class="team-list__card">
-                        <a href="{{ block.settings.link_url }}">
-                            <img class="team-list__card__image" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.name | strip_html }}">
-                            <div class="team-list__card__name medium">
-                                <span>{{ block.settings.name }}</span>
-                            </div>
-                        </a>
+                        {% if section.settings.hide_all_riders_link %}
+                            <a>
+                                <img class="team-list__card__image" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.name | strip_html }}">
+                                <div class="team-list__card__name medium">
+                                    <span>{{ block.settings.name }}</span>
+                                </div>
+                            </a>
+                        {% else %}
+                            <a href="{{ block.settings.link_url }}">
+                                <img class="team-list__card__image" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.name | strip_html }}">
+                                <div class="team-list__card__name medium">
+                                    <span>{{ block.settings.name }}</span>
+                                </div>
+                            </a>
+                        {% endif %}
                     </div>
                 {% endfor%}
             </div>
@@ -20,6 +29,13 @@
 {% schema %}
   {
     "name": "Team List",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "hide_all_riders_link",
+            "label": "Hide all riders link"
+        }
+    ],
     "blocks": [
         {
             "type": "team_list",

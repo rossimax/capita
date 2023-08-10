@@ -187,14 +187,6 @@
             "link_url": "shopify:\/\/pages\/himari-takamori",
             "name": "HIMARI TAKAMORI"
           }
-        },
-        "f65bdffa-78ed-46db-9848-48cacdbb7baf": {
-          "type": "team_list",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_1.jpg",
-            "link_url": "shopify:\/\/pages\/markus-olimstad",
-            "name": "MARKUS OLIMSTAD"
-          }
         }
       },
       "block_order": [
@@ -204,8 +196,7 @@
         "a2df5478-6b7c-439d-825d-dae42c02ed93",
         "0b8de1a6-69cc-46a2-8975-a310556735d2",
         "99451742-31db-4424-adfe-a1accc32ebc2",
-        "c06e8a1e-206a-4be4-a84c-6e8c4db41eaa",
-        "f65bdffa-78ed-46db-9848-48cacdbb7baf"
+        "c06e8a1e-206a-4be4-a84c-6e8c4db41eaa"
       ],
       "settings": {
         "hide_all_riders_link": false
@@ -257,6 +248,14 @@
             "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_2_2.jpg",
             "link_url": "shopify:\/\/pages\/chase-josey",
             "name": "CHASE JOSEY"
+          }
+        },
+        "defead9d-4d23-4679-aabe-531ea2798243": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_1.jpg",
+            "link_url": "shopify:\/\/pages\/markus-olimstad",
+            "name": "MARKUS OLIMSTAD"
           }
         },
         "b1d14384-90e4-4f8b-bd81-37cb3d520b06": {
@@ -369,6 +368,7 @@
         "acbc6434-e022-4bb1-935f-c0f7b7871492",
         "efdca2be-d920-4401-9c4f-667a433f5c81",
         "4f09568f-3e83-47dd-8ea5-e7eaad5254e5",
+        "defead9d-4d23-4679-aabe-531ea2798243",
         "b1d14384-90e4-4f8b-bd81-37cb3d520b06",
         "73800fe0-1812-4e7f-aeb4-01581bcb6c90",
         "4bde33f9-8c9e-492f-acbd-f74ee2662000",

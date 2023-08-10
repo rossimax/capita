@@ -257,6 +257,14 @@
             "name": "KEVIN JONES"
           }
         },
+        "defead9d-4d23-4679-aabe-531ea2798243": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_1.jpg",
+            "link_url": "shopify:\/\/pages\/markus-olimstad",
+            "name": "MARKUS OLIMSTAD"
+          }
+        },
         "efdca2be-d920-4401-9c4f-667a433f5c81": {
           "type": "team_list",
           "settings": {
@@ -360,14 +368,6 @@
             "link_url": "shopify:\/\/pages\/brendon-rego",
             "name": "BRENDON REGO"
           }
-        },
-        "defead9d-4d23-4679-aabe-531ea2798243": {
-          "type": "team_list",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_1.jpg",
-            "link_url": "shopify:\/\/pages\/markus-olimstad",
-            "name": "MARKUS OLIMSTAD"
-          }
         }
       },
       "block_order": [
@@ -375,6 +375,7 @@
         "acdb5a97-90a3-4b91-a18a-58ef373c7e11",
         "73800fe0-1812-4e7f-aeb4-01581bcb6c90",
         "acbc6434-e022-4bb1-935f-c0f7b7871492",
+        "defead9d-4d23-4679-aabe-531ea2798243",
         "efdca2be-d920-4401-9c4f-667a433f5c81",
         "4f09568f-3e83-47dd-8ea5-e7eaad5254e5",
         "d0771d5a-917d-43fd-84ef-ab1786009170",
@@ -387,8 +388,7 @@
         "421eabbe-2d91-4344-b111-3cb1fc4b07e4",
         "8e7328ab-7731-4df5-b956-47c297f74902",
         "f4277378-df05-4bdd-9f60-d6bcaa3218c6",
-        "3e17076a-00f9-480f-bd82-9bea61373752",
-        "defead9d-4d23-4679-aabe-531ea2798243"
+        "3e17076a-00f9-480f-bd82-9bea61373752"
       ],
       "settings": {
         "hide_all_riders_link": true

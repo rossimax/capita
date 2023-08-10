@@ -187,6 +187,13 @@
             "link_url": "shopify:\/\/pages\/himari-takamori",
             "name": "HIMARI TAKAMORI"
           }
+        },
+        "56a0b0b8-6e3f-4095-9355-1b31a469d522": {
+          "type": "team_list",
+          "settings": {
+            "link_url": "",
+            "name": "Yura Murase"
+          }
         }
       },
       "block_order": [
@@ -196,7 +203,8 @@
         "a2df5478-6b7c-439d-825d-dae42c02ed93",
         "0b8de1a6-69cc-46a2-8975-a310556735d2",
         "99451742-31db-4424-adfe-a1accc32ebc2",
-        "c06e8a1e-206a-4be4-a84c-6e8c4db41eaa"
+        "c06e8a1e-206a-4be4-a84c-6e8c4db41eaa",
+        "56a0b0b8-6e3f-4095-9355-1b31a469d522"
       ],
       "settings": {
         "hide_all_riders_link": false

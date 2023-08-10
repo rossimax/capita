@@ -92,14 +92,6 @@
             "name": "MIKE RAW"
           }
         },
-        "7ac7fcfd-642f-4911-b976-3c9afd6209ef": {
-          "type": "team_list",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_5.jpg",
-            "link_url": "shopify:\/\/pages\/johnny-oconnor",
-            "name": "JOHNNY O’CONNOR"
-          }
-        },
         "d75fc589-e53a-4d0d-a38e-32fbbb10ec6d": {
           "type": "team_list",
           "settings": {
@@ -118,7 +110,6 @@
         "18b0ab16-5a65-4de0-a030-fe73f518d4af",
         "d4cded2c-ee22-4734-a2db-45f9e7290c0b",
         "d8c3ecd4-4e7a-4a00-97f8-55282be63f90",
-        "7ac7fcfd-642f-4911-b976-3c9afd6209ef",
         "d75fc589-e53a-4d0d-a38e-32fbbb10ec6d"
       ],
       "settings": {
@@ -236,6 +227,14 @@
     "c5f887cb-81f6-4c19-a1eb-50d5df910e42": {
       "type": "team-list",
       "blocks": {
+        "acdb5a97-90a3-4b91-a18a-58ef373c7e11": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_5.jpg",
+            "link_url": "shopify:\/\/pages\/johnny-oconnor",
+            "name": "JOHNNY O’CONNOR"
+          }
+        },
         "acbc6434-e022-4bb1-935f-c0f7b7871492": {
           "type": "team_list",
           "settings": {
@@ -366,6 +365,7 @@
         }
       },
       "block_order": [
+        "acdb5a97-90a3-4b91-a18a-58ef373c7e11",
         "acbc6434-e022-4bb1-935f-c0f7b7871492",
         "efdca2be-d920-4401-9c4f-667a433f5c81",
         "4f09568f-3e83-47dd-8ea5-e7eaad5254e5",

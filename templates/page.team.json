@@ -369,6 +369,13 @@
             "link_url": "shopify:\/\/pages\/brendon-rego",
             "name": "BRENDON REGO"
           }
+        },
+        "77dd9722-b736-44ae-aa92-07650c439b62": {
+          "type": "team_list",
+          "settings": {
+            "link_url": "shopify:\/\/pages\/phil-jacques",
+            "name": "Phil Jacques"
+          }
         }
       },
       "block_order": [
@@ -389,7 +396,8 @@
         "8e7328ab-7731-4df5-b956-47c297f74902",
         "f4277378-df05-4bdd-9f60-d6bcaa3218c6",
         "e1c8c71c-db44-43d6-a080-a2e7ed59757d",
-        "3e17076a-00f9-480f-bd82-9bea61373752"
+        "3e17076a-00f9-480f-bd82-9bea61373752",
+        "77dd9722-b736-44ae-aa92-07650c439b62"
       ],
       "settings": {
         "hide_all_riders_link": true

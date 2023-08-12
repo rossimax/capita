@@ -46,7 +46,7 @@
 
                   {% endfor %}
 
-                  {% comment %} <button class="c-product-info__find-size js-find-my-size-btn" type="button">find my size</button> {% endcomment %}
+                  {% comment %} {% if product.type == "Snowboard" %} <button class="c-product-info__find-size js-find-my-size-btn" type="button">find my size</button> {% endif %} {% endcomment %}
                   
               {% endunless %}
     

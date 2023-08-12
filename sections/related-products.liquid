@@ -12,15 +12,17 @@
 
             {% for recommendation in recommendations.products %}
               <div class="swiper-slide">
-                <div class="c-product-card">
-                  <div class="c-product-card__media">
-                    <img src="{{ recommendation.featured_image | image_url: width: 360 }}" alt="Capita Related Product {{ recommendation.title | strip_html }}"/>
+                <a href="{{ recommendation.url }}">
+                  <div class="c-product-card">
+                    <div class="c-product-card__media">
+                      <img src="{{ recommendation.featured_image | image_url: width: 360 }}" alt="Capita Related Product {{ recommendation.title | strip_html }}"/>
+                    </div>
+                    <div class="c-product-card__info">
+                      <span class="c-product-card__name">{{ recommendation.title }}</span>
+                      <span class="c-product-card__price">{{ recommendation.price | money_with_currency }}</span>
+                    </div>
                   </div>
-                  <div class="c-product-card__info">
-                    <span class="c-product-card__name">{{ recommendation.title }}</span>
-                    <span class="c-product-card__price">{{ recommendation.price | money_with_currency }}</span>
-                  </div>
-                </div>
+                </a>
               </div>
             {%- endfor -%}
 

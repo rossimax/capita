@@ -191,6 +191,7 @@
         "56a0b0b8-6e3f-4095-9355-1b31a469d522": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/download-1_1444f7e2-a56a-4548-8f0c-aeee67712a36.jpg",
             "link_url": "",
             "name": "Yura Murase"
           }
@@ -229,6 +230,7 @@
         "77dd9722-b736-44ae-aa92-07650c439b62": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/download_ebc5218d-bf83-4ecd-8322-2f63171cd42c.jpg",
             "link_url": "shopify:\/\/pages\/phil-jacques",
             "name": "Phil Jacques"
           }

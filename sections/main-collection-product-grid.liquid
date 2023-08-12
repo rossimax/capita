@@ -296,7 +296,7 @@
                           {% if forloop.index < 8 %}
                             <a class="c-listing-product__size {%- if variant.available == false %} is-disabled{% endif %}" attr-variant-id="{{ variant.id }}" href="{{ variant.url }}">{{ variant.title }}</a>
                           {% elsif forloop.index == forloop.length %}
-                            <button class="c-listing-product__size is-ghost" type="button">+ {{ forloop.length | minus: 7 }} more</button>
+                            <a class="c-listing-product__size is-ghost" href="{{ product.url }}">+ {{ forloop.length | minus: 7 }} more</a>
                           {% endif %}
                         {% endfor %}
                       {% endif%}

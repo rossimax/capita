@@ -43,10 +43,12 @@
     </div>
 </div>
 
-<div class="modal-youtube hide">
-    <div class="modal-youtube__close js-modal-youtube-close">{% include 'icon-close' %}</div>
-    <iframe width="90%" height="80%" src="{{ section.settings.cta_link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+{% if section.settings.cta_link != blank %}
+    <div class="modal-youtube hide">
+        <div class="modal-youtube__close js-modal-youtube-close">{% include 'icon-close' %}</div>
+        <iframe width="90%" height="80%" src="{{ section.settings.cta_link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+{% endif %}
 
 {% schema %}
   {
@@ -302,24 +304,27 @@
     let ctaTextVideoCtaModal = document.querySelector(selectors.ctaTextVideoCtaModal);
     let videoModalYTClose = document.querySelector(selectors.videoModalYTClose);
 
-    let iframeVideoModalYT__src = iframeVideoModalYT.getAttribute("src")
+    if (videoModalYT) {
 
-    ctaTextVideoCtaModal.addEventListener("click", function(){
-        videoModalYT.classList.remove("hide")
-        iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=1")
-    })
-    videoModalYTClose.addEventListener("click", function(){
-        videoModalYT.classList.add("hide")
-        iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=0")
-
-    })
-    videoModalYT.addEventListener('click', function(e){   
-        if (!iframeVideoModalYT.contains(e.target)){
+        let iframeVideoModalYT__src = iframeVideoModalYT.getAttribute("src")
+    
+        ctaTextVideoCtaModal.addEventListener("click", function(){
+            videoModalYT.classList.remove("hide")
+            iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=1")
+        })
+        videoModalYTClose.addEventListener("click", function(){
             videoModalYT.classList.add("hide")
             iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=0")
-
-        } 
-    });
+    
+        })
+        videoModalYT.addEventListener('click', function(e){   
+            if (!iframeVideoModalYT.contains(e.target)){
+                videoModalYT.classList.add("hide")
+                iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=0")
+    
+            } 
+        });
+    }
   
 })();
   

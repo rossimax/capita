@@ -464,9 +464,11 @@
     let ctaTextVideoCtaModal = document.querySelector(selectors.ctaTextVideoCtaModal);
     let videoModalYTClose = document.querySelector(selectors.videoModalYTClose);
 
-    let iframeVideoModalYT__src = iframeVideoModalYT.getAttribute("src")
-
+    
     if (videoModalYT) {
+
+        let iframeVideoModalYT__src = iframeVideoModalYT.getAttribute("src")
+        
         ctaTextVideoCtaModal.addEventListener("click", function(){
             videoModalYT.classList.remove("hide")
             iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=1")

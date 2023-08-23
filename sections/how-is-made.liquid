@@ -193,7 +193,7 @@
             endif
         -%}
         {% if section.settings.cta_text_1 != blank %}
-            <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_1 }}">{{ section.settings.cta_text_1 }} {% if arrow_cta_1 != blank %}{% include arrow_cta_1 %}{% endif %}</a>
+            <a class="btn btn-secondary black text-boxes__foot__btn js-modal-youtube">{{ section.settings.cta_text_1 }} {% if arrow_cta_1 != blank %}{% include arrow_cta_1 %}{% endif %}</a>
         {% endif %}
         {% liquid 
             if section.settings.arrow_type_2 == "arrow_normal" 
@@ -222,6 +222,12 @@
     </div>
 </div>
 
+{% if section.settings.cta_link_yt != blank %}
+  <div class="modal-youtube hide">
+      <div class="modal-youtube__close js-modal-youtube-close">{% include 'icon-close' %}</div>
+      <iframe width="90%" height="80%" src="{{ section.settings.cta_link_yt }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+{% endif %}
 
 {% schema %}
   {
@@ -424,8 +430,8 @@
         },
         {
             "type": "url",
-            "id": "cta_link_1",
-            "label": "CTA Link 1"
+            "id": "cta_link_yt",
+            "label": "Link youtube modal"
         },
         {
             "type": "select",
@@ -534,6 +540,38 @@ a.btn.btn-secondary.black.text-boxes__foot__btn {
     max-width: 740px;
     padding: 0 20px;
 }
+.modal-youtube {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0000007d;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    z-index: 999;
+}
+.modal-youtube.hide {
+    display: none;
+}
+.modal-youtube__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.modal-youtube__close svg {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 1px solid;
+    background: #ffffffd1;
+    cursor: pointer;
+}
+.js-modal-youtube {
+    cursor: pointer;
+}
 @media screen and (max-width: 768px) {
     .c-step__media .only-mob {
         display: block;
@@ -544,7 +582,55 @@ a.btn.btn-secondary.black.text-boxes__foot__btn {
     .text-boxes__foot__ctas {
         padding: 0 20px;
     }
+    .modal-youtube iframe {
+        height: 30% !important;
+    }
 }
 
 {% endstyle %}
 
+
+{% javascript %}
+
+(function() {
+
+    let selectors = {
+        videoModalYT: '.modal-youtube',
+        iframeVideoModalYT: '.modal-youtube iframe',
+        ctaTextVideoCtaModal: '.js-modal-youtube',
+        videoModalYTClose: '.js-modal-youtube-close',
+
+    };
+
+    let videoModalYT = document.querySelector(selectors.videoModalYT);
+    let iframeVideoModalYT = document.querySelector(selectors.iframeVideoModalYT);
+    let ctaTextVideoCtaModal = document.querySelector(selectors.ctaTextVideoCtaModal);
+    let videoModalYTClose = document.querySelector(selectors.videoModalYTClose);
+
+    
+    if (videoModalYT) {
+
+        let iframeVideoModalYT__src = iframeVideoModalYT.getAttribute("src")
+        
+        ctaTextVideoCtaModal.addEventListener("click", function(){
+            videoModalYT.classList.remove("hide")
+            iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=1")
+        })
+        videoModalYTClose.addEventListener("click", function(){
+            videoModalYT.classList.add("hide")
+            iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=0")
+    
+        })
+        videoModalYT.addEventListener('click', function(e){   
+            if (!iframeVideoModalYT.contains(e.target)){
+                videoModalYT.classList.add("hide")
+                iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=0")
+    
+            } 
+        });
+    }
+  
+})();
+  
+
+{% endjavascript %}

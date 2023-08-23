@@ -14,6 +14,8 @@
     msgEmptyCart: '.msg-empty-cart',
     cartCount: '.js-cart-count',
     cartInfoHidden: '#cart-info-hidden',
+    variantNotification: '.js-variant-notification',
+    borderNotification: '.js-border-notification',
   };
 
   let productVariants = document.querySelectorAll(selectors.productVariants)
@@ -28,6 +30,8 @@
   let msgEmptyCart = document.querySelector(selectors.msgEmptyCart)
   let cartCount = document.querySelector(selectors.cartCount)
   let cartInfoHidden = document.querySelector(selectors.cartInfoHidden)
+  let variantNotification = document.querySelector(selectors.variantNotification)
+  let borderNotification = document.querySelector(selectors.borderNotification)
 
   let itemList = { "items" : [], 'sections': 'cart-ajax' }
 
@@ -86,27 +90,48 @@
           submitButton.classList.add("disabled")
           cartSummary.classList.remove("hide")
           
-          fetch('/cart/add.js', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(itemList)
-          }).then(response => {
-            return response.json();
-          }).then(data => {
-    
-            // console.log(data);
-    
+          let variant_select = false
+          productVariants.forEach((productVariant__check) => {
+            if (productVariant__check.classList.contains("selected")) {
+              variant_select = true
+            }
+          })
+
+          if (variant_select) {
+
+            fetch('/cart/add.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(itemList)
+            }).then(response => {
+              return response.json();
+            }).then(data => {
+      
+              // console.log(data);
+      
+              submitButton.classList.remove("disabled")
+              
+              let disablePlus = false
+      
+              reloadCart(disablePlus)
+      
+            }).catch((error) => {
+              console.error('Error:', error);
+            });
+
+          } else {
+
+            variantNotification.classList.remove("hidden")
+            borderNotification.classList.remove("hidden")
+            setTimeout(function(){
+              variantNotification.classList.add("hidden")
+              borderNotification.classList.add("hidden")
+            }, 2500)
+
             submitButton.classList.remove("disabled")
-            
-            let disablePlus = false
-    
-            reloadCart(disablePlus)
-    
-          }).catch((error) => {
-            console.error('Error:', error);
-          });
+          }
     
         }, false)
     }

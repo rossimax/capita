@@ -1817,6 +1817,42 @@ grid-gap: 30px;
 main.main-page.other-product {
     margin-top: 160px;
 }
+.variant-select {
+    color: red;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    display: block;
+    transition-duration: 0.2s;
+    opacity: 1;
+    visibility: visible;
+}
+.variant-select.hidden {
+    transition-duration: 0.2s;
+    opacity: 0;
+    visibility: hidden;
+}
+.c-product-info__sizes {
+    position: relative;
+}
+.border-error {
+  position: absolute;
+  width: calc(100% + 10px);
+  border: 1px solid red;
+  height: calc(100% + 10px);
+  padding: 5px;
+  top: -5px;
+  left: -5px;
+  border-radius: 10px;
+  transition-duration: 0.2s;
+  opacity: 1;
+  visibility: visible;
+}
+.border-error.hidden {
+  transition-duration: 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+
 @media screen and (max-width: 768px) {
   main.main-page.other-product {
     margin-top: 80px;

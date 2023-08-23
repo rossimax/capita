@@ -27,6 +27,7 @@
 
                       {% if option_name == "size" %}
                           <div class="c-product-info__sizes">
+                            <div class="border-error js-border-notification hidden"></div>
                               {% for variant in product.variants %}
                                   <div class="c-product-info__size js-product-variant {%- if variant.available == false %} is-disabled{% endif %}" for="{{ variant.id }}" data-index="{{ forloop.index0 }}">
                                       <input 
@@ -49,6 +50,8 @@
                   {% comment %} {% if product.type == "Snowboard" %} <button class="c-product-info__find-size js-find-my-size-btn" type="button">find my size</button> {% endif %} {% endcomment %}
                   
               {% endunless %}
+
+              <span class="variant-select js-variant-notification hidden">Please select a variant.</span>
     
               {% assign current_variant = product.selected_or_first_available_variant %}
 
@@ -78,7 +81,7 @@
               </div>
              {% comment %} {% endform %}  {% endcomment %}
              <span class="c-product-info__shipping medium"><u>Free shipping</u> for orders over 100$ <u>30 days return</u></span>
-            </div>
+          </div>
 
     </div>
 </div>

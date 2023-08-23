@@ -43,7 +43,7 @@
           "type": "link_list",
           "settings": {
             "link_text": "Payments",
-            "link_url": "#",
+            "link_url": "shopify:\/\/pages\/payments",
             "selected": false
           }
         }

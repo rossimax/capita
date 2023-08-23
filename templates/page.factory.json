@@ -179,6 +179,13 @@
       "settings": {
         "text": "<div class=\"hero-banner-video boxed\">\n    <div class=\"u-container\">\n        <div class=\"u-content\">\n    <h4 class=\"strong\">Clean Energy Snowboards Production<\/h4>            <\/div>\n        <\/div>\n\n    <div class=\"hero-banner-video__desk\">\n\n        <iframe width=\"100%\" height=\"900\" src=\"https:\/\/www.youtube.com\/embed\/HN33OvYL8N4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen><\/iframe>\n\n    <\/div>\n\n<div class=\"hero-banner-video__mob\">\n\n        <iframe width=\"100%\" height=\"200\" src=\"https:\/\/www.youtube.com\/embed\/HN33OvYL8N4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen><\/iframe>\n\n    <\/div>\n\n<\/div>"
       }
+    },
+    "2c4af106-f61a-4713-a125-7ac2cd4e7c04": {
+      "type": "youtube-video",
+      "settings": {
+        "title": "Clean Energy Snowboards Production",
+        "text": "<iframe src=\"https:\/\/www.youtube.com\/embed\/HN33OvYL8N4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen><\/iframe>"
+      }
     }
   },
   "order": [
@@ -190,6 +197,7 @@
     "0304082a-98f7-4665-a2cd-7ea2cfbc7043",
     "a0611009-f554-41eb-b10d-8c89de6f0e0c",
     "c9160b3f-8d26-484a-816a-92a791907146",
-    "cea7ce25-c50c-4ece-8d2b-9d4653a22750"
+    "cea7ce25-c50c-4ece-8d2b-9d4653a22750",
+    "2c4af106-f61a-4713-a125-7ac2cd4e7c04"
   ]
 }

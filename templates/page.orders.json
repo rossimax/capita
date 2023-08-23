@@ -3,6 +3,10 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "head_width": 100,
+        "margin_top": 0,
+        "body_color": "#ffffff",
+        "footer_border": false,
         "enable_head": false,
         "title": "",
         "description": ""
@@ -31,7 +35,7 @@
           "type": "link_list",
           "settings": {
             "link_text": "Returns",
-            "link_url": "#",
+            "link_url": "shopify:\/\/pages\/returns",
             "selected": false
           }
         },
@@ -39,7 +43,7 @@
           "type": "link_list",
           "settings": {
             "link_text": "Payments",
-            "link_url": "#",
+            "link_url": "shopify:\/\/pages\/payments",
             "selected": false
           }
         }

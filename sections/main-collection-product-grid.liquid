@@ -623,7 +623,6 @@ a.c-listing-product__size:hover span {
   let emtyMsg = document.querySelector(selectors.emtyMsg)
   let listingFilter = document.querySelector(selectors.listingFilter)
   let filterMobHead = document.querySelector(selectors.filterMobHead)
-  let filterMobHeadIconClose = document.querySelector(selectors.filterMobHeadIconClose)
   let listingGrid = document.querySelector(selectors.listingGrid)
 
   let uriTagsApplied = false
@@ -837,30 +836,28 @@ a.c-listing-product__size:hover span {
       tagsListApplied.classList.add("closed")
     }
   }
-  
   window.addEventListener('load', function(event) {
     checkMobFilter()
   }, true);
-
+  
   window.addEventListener('resize', function(event) {
     checkMobFilter()
   }, true);
 
   filterMobHead.addEventListener("click", function(){
     if (filterMobHead.classList.contains("closed")) {
-      console.log("open mob")
+      alert("open mob")
       filterMobHead.classList.remove("closed")
       listingFilter.classList.remove("closed")
       tagsListApplied.classList.remove("closed")
       listingGrid.classList.add("shadow")
-    } 
-  })
-  filterMobHeadIconClose.addEventListener("click", function(){
-    console.log("close mob")
+    } else {
+      alert("close mob")
       filterMobHead.classList.add("closed")
       listingFilter.classList.add("closed")
       tagsListApplied.classList.add("closed")
       listingGrid.classList.remove("shadow")
+    }
   })
   // END - FILTERS MOB
 

@@ -775,8 +775,6 @@ a.c-listing-product__size:hover span {
     filtersType.forEach((filterType,i) => {
       filterType.addEventListener("click", function(){
 
-
-
           let filterTypeType = filterType.getAttribute("attr-filter-type")
 
           if (filterType.classList.contains("closed")) {
@@ -831,6 +829,7 @@ a.c-listing-product__size:hover span {
 
   function checkMobFilter() {
     if ( window.innerWidth < 1200) {
+      alert("close 1200")
       filterMobHead.classList.add("closed")
       listingFilter.classList.add("closed")
       tagsListApplied.classList.add("closed")

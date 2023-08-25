@@ -35,9 +35,8 @@
             data-id="{{ item.id }}"
             data-limit="{{ item.variant.inventory_quantity }}">
             <div class="c-cart-item__container">
-              <a href="{{ item.url }}">
+              <a class="c-cart-item__image" href="{{ item.url }}">
                 <img
-                  class="c-cart-item__image"
                   src="{{ item.product.featured_image | image_url: width: 200 }}"
                   alt="{{ item.title | strip_html }}">
               </a>

@@ -26,7 +26,6 @@
     
               <div class="c-listing-filter__mob-head closed">
                 <span>FILTERS</span>
-                {% render 'icon-close' %}
               </div>
     
               {% comment %} {%- for filter in collection.filters -%}
@@ -510,6 +509,18 @@ a.c-listing-product__size:hover span {
       align-items: center;
       cursor: pointer;
   }
+
+  .c-listing-filter__mob-head::after {
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    width: 25px;
+    background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NyAyNCI+PGNpcmNsZSBjeD0iMTEuNzA2IiBjeT0iMTEuNzA2IiByPSIxMC45MjUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjU2MSIvPjxwYXRoIGQ9Ik0xNi4zODMgMTEuNzA3SDcuMDE4TTExLjcwNyA2LjM4M3YxMC42NDIiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyLjEyOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iMzUuMTE4IiBjeT0iMTEuNzA2IiByPSIxMC45MjUiIHRyYW5zZm9ybT0icm90YXRlKC05MCAzNS4xMTggMTEuNzA2KSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEuNTYxIi8+PHBhdGggZD0iTTM4LjIzNSA4LjQxOSAzMiAxNU0zMi4yNDIgOC40MTIgMzggMTUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyLjEyOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+');
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: 50px;
+    aspect-ratio: 1 / 1;
+  }
   .c-listing-filter__mob-head svg {
       width: 25px;
       height: 25px;
@@ -519,9 +530,8 @@ a.c-listing-product__size:hover span {
       transform: rotate(0deg);
       transition-duration: 0.2s;
   }
-  .c-listing-filter__mob-head.closed svg {
-      transform: rotate(90deg);
-      transition-duration: 0.2s;
+  .c-listing-filter__mob-head.closed::after {
+    background-position: 0;
   }
   .js-tags-list {
     height: auto;

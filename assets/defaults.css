@@ -487,6 +487,20 @@ footer label.c-slim-form__legal span {
 .c-product-info__sizes .c-product-info__size:hover {
   background-color: #000;
 }
+span.input-error-message.site_newsletter-error {
+    color: red;
+    font-size: 12px;
+    margin-left: 20px;
+}
+.c-related-products {
+    background-image: url(//capitasnowboarding.com/cdn/shop/files/000_GRID_PAPER_BG_1_77e3e65d-56ba-4a1f-a70b-76408f3b3cbf.png?v=1690637051);
+    background-color: #000;
+    color: #fff;
+}
+.c-related-products a {
+    text-decoration: none;
+}
+
 @media screen and (min-width: 64em) {
   .c-header__dropdown-panel.c-header-cart.js-header-cart {
     max-height: 60vh;
@@ -500,6 +514,9 @@ footer label.c-slim-form__legal span {
   .pdp-head-image img {
       height: 240px;
       object-fit: cover;
+  }
+  .c-listing-filter__option input {
+    border-radius: 50%;
   }
 }
 

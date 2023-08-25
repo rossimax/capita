@@ -520,6 +520,10 @@ span.input-error-message.site_newsletter-error {
     height: 23px;
     width: 23px;
   }
+  .c-listing-filter {
+    z-index: 999;
+    position: relative;
+  }
 }
 
 

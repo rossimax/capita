@@ -787,7 +787,7 @@ a.c-listing-product__size:hover span {
             })
 
           } else {
-            alert("close filterType")
+            
             filterType.classList.add("closed")
             filtersInputs.forEach(filterInputs => {
               if (filterInputs.getAttribute("attr-filter-type") == filterTypeType) {
@@ -835,24 +835,20 @@ a.c-listing-product__size:hover span {
     }
   }
   window.addEventListener('load', function(event) {
-    alert("load 1200")
     checkMobFilter()
   }, true);
   
-  window.addEventListener('resize', function(event) {
-    alert("resize 1200")
-    checkMobFilter()
-  }, true);
+  // window.addEventListener('resize', function(event) {
+  //   checkMobFilter()
+  // }, true);
 
   filterMobHead.addEventListener("click", function(){
     if (filterMobHead.classList.contains("closed")) {
-      alert("open mob")
       filterMobHead.classList.remove("closed")
       listingFilter.classList.remove("closed")
       tagsListApplied.classList.remove("closed")
       listingGrid.classList.add("shadow")
     } else {
-      alert("close mob")
       filterMobHead.classList.add("closed")
       listingFilter.classList.add("closed")
       tagsListApplied.classList.add("closed")

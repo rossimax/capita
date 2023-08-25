@@ -606,6 +606,7 @@ a.c-listing-product__size:hover span {
     emtyMsg: '.l-listing__grid__empty',
     listingFilter: '.c-listing-filter',
     filterMobHead: '.c-listing-filter__mob-head',
+    filterMobHeadIconClose: '.c-listing-filter__mob-head svg',
     listingGrid: '.l-listing__grid',
   };
 
@@ -835,13 +836,16 @@ a.c-listing-product__size:hover span {
       tagsListApplied.classList.add("closed")
     }
   }
+
   window.addEventListener('load', function(event) {
     checkMobFilter()
   }, true);
+
   window.addEventListener('resize', function(event) {
     checkMobFilter()
   }, true);
-  filterMobHead.addEventListener("click", function(){
+
+  filterMobHeadIconClose.addEventListener("click", function(){
     if (filterMobHead.classList.contains("closed")) {
       filterMobHead.classList.remove("closed")
       listingFilter.classList.remove("closed")

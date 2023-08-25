@@ -836,7 +836,7 @@ a.c-listing-product__size:hover span {
       tagsListApplied.classList.add("closed")
     }
   }
-
+  
   window.addEventListener('load', function(event) {
     checkMobFilter()
   }, true);
@@ -845,7 +845,7 @@ a.c-listing-product__size:hover span {
     checkMobFilter()
   }, true);
 
-  filterMobHeadIconClose.addEventListener("click", function(){
+  filterMobHead.addEventListener("click", function(){
     if (filterMobHead.classList.contains("closed")) {
       filterMobHead.classList.remove("closed")
       listingFilter.classList.remove("closed")

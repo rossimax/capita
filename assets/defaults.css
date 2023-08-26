@@ -500,6 +500,23 @@ span.input-error-message.site_newsletter-error {
 .c-related-products a {
     text-decoration: none;
 }
+/* width */
+.c-listing-filter::-webkit-scrollbar {
+  width: 7px;
+}
+/* Track */
+.c-listing-filter::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-top-right-radius: 40px;
+}
+/* Handle */
+.c-listing-filter::-webkit-scrollbar-thumb {
+  background: #555;
+}
+/* Handle on hover */
+.c-listing-filter::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
 
 @media screen and (min-width: 64em) {
   .c-header__dropdown-panel.c-header-cart.js-header-cart {

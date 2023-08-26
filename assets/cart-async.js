@@ -62,23 +62,27 @@
 
         itemList.items = []
 
-        productVariants.forEach((productVariant__clean) => {
-          productVariant__clean.classList.remove("selected")
-        })
-
         if ( productVariant.classList.contains("selected") ) {
+
           productVariant.classList.remove("selected")
+
         } else {
+
+          productVariants.forEach((productVariant__clean) => {
+            productVariant__clean.classList.remove("selected")
+          })
+
           productVariant.classList.add("selected")
-        }
 
-        let productVariant__id = productVariant.querySelector("input").getAttribute("variant-id")
-
-        jsonVariant = {
-          'id': productVariant__id,
-          'quantity': 1
+          let productVariant__id = productVariant.querySelector("input").getAttribute("variant-id")
+  
+          jsonVariant = {
+            'id': productVariant__id,
+            'quantity': 1
+          }
+          itemList.items.push(jsonVariant)
+          
         }
-        itemList.items.push(jsonVariant)
 
       }, false)
           

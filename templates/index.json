@@ -38,6 +38,7 @@
     },
     "221611b0-cb5f-4aa9-af7b-309fbceb6127": {
       "type": "banner-product",
+      "disabled": true,
       "settings": {
         "image_position": true,
         "product": "the-navigator-2024",
@@ -49,6 +50,7 @@
     },
     "2056c58e-7330-430b-8fa5-de787867e504": {
       "type": "banner-product",
+      "disabled": true,
       "settings": {
         "image_position": false,
         "product": "the-equalizer-by-jess-kimura",

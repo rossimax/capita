@@ -472,21 +472,54 @@ button.quantity__button {
 
     let cartQuantities = document.querySelectorAll(selectors.cartQuantities);
 
+    function updateCart(changeVariant) {
+      fetch('/cart/change.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(changeVariant)
+        }).then(response => {
+          return response.json();
+        }).then(data => {
+          location.reload();
+          console.log(data);
+        })
+    }
+
     cartQuantities.forEach(cartQuantity => {
 
       let qntInput = cartQuantity.querySelector(".quantity__input");
       let minusBtn = cartQuantity.querySelector(".js-minus");
       let plusBtn = cartQuantity.querySelector(".js-plus");
 
+      let itemVariantID = qntInput.getAttribute('data-quantity-variant-id')
+      let itemVariantQnt = Number(qntInput.getAttribute('data-cart-quantity'))
+
       minusBtn.addEventListener("click", function(){
-        qntInput.stepDown();
-        qntInput.dispatchEvent(new Event('change'))
-        console.log("down")
+        // qntInput.stepDown();
+        // qntInput.dispatchEvent(new Event('change'))
+        // console.log("down")
+
+        let changeVariant = {
+          'id': itemVariantID,
+          'quantity': itemVariantQnt - 1
+        }
+        // console.log(changeVariant)
+        updateCart(changeVariant)
+
       })
       plusBtn.addEventListener("click", function(){
-        qntInput.stepUp();
-        qntInput.dispatchEvent(new Event('change'))
-        console.log("up")
+        // qntInput.stepUp();
+        // qntInput.dispatchEvent(new Event('change'))
+        // console.log("up")
+
+        let changeVariant = {
+          'id': itemVariantID,
+          'quantity': itemVariantQnt + 1
+        }
+        updateCart(changeVariant)
+
       })
 
     });

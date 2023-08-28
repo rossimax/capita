@@ -539,6 +539,10 @@ span.input-error-message.site_newsletter-error {
     position: relative;
   }
 }
-
+@media screen and (min-width: 990px) {
+  .cart__warnings {
+      padding: 15rem 0 1rem;
+  }
+}
 
 /* END FIX */

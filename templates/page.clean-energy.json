@@ -145,14 +145,14 @@
       "settings": {
         "padding_top": 60,
         "padding_bottom": 60,
-        "title": "Sustainable,<br>\nRecyclable Materials.",
-        "title_bottom": "Each production season we are now recycling <br>\nover xxx tons of material – preventing it <br>\nfrom entering the waste cycle.",
+        "title": "Sustainable,<br>\nRecyclable Materials",
+        "title_bottom": "Each production season we are now recycling over xxx tons of material — preventing it from entering the waste cycle.",
         "cta_text_1": "How does technology help?",
         "cta_link_1": "shopify:\/\/pages\/technology",
-        "arrow_type_1": "arrow_normal",
+        "arrow_type_1": "none",
         "cta_text_2": "How our snowboards are made?",
         "cta_link_2": "shopify:\/\/pages\/how-snowboards-are-made",
-        "arrow_type_2": "arrow_normal",
+        "arrow_type_2": "none",
         "cta_text_3": "",
         "cta_link_3_yt": "",
         "arrow_type_3": "none"

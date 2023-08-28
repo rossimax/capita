@@ -19,7 +19,7 @@
         "margin_bottom": 0,
         "image_desk": "shopify:\/\/shop_images\/Group_494_2.jpg",
         "image_mob": "shopify:\/\/shop_images\/Group_201_3.jpg",
-        "shadow": "yes_full",
+        "shadow": "no",
         "title_position": "top_left",
         "content_position": "bottom_center",
         "title": "Handcrafted with<br>\nAdvanced Technology.",

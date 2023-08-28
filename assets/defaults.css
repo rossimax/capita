@@ -44,9 +44,6 @@ button:hover:not(.c-header__menu-item) span,
   .c-header__menu-item {
     font-size: 18px;
   }
-  .c-header__utility svg {
-    max-width: 85%;
-  }
 }
 @media screen and (max-width: 768px) {
   .title {

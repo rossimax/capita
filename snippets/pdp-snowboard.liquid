@@ -183,8 +183,10 @@
         <div class="c-product-details__accolades js-details-tabs-section" data-section="accolades">
           <div class="c-accolades">
             {% if product.metafields.accentuate.award_title != blank %}
-            <span class="c-accolades__subtitle">AWARD:</span><span class="c-accolades__title">{{
-              product.metafields.accentuate.award_title }}</span>
+            {% comment %} <span class="c-accolades__subtitle">AWARD:</span> {% endcomment %}
+            <span class="c-accolades__title">{{
+              product.metafields.accentuate.award_title }}
+            </span>
             {% endif %}
             {% if product.metafields.accentuate.award_description.html != blank %}
             <div class="c-accolades__text">

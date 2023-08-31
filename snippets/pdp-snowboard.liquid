@@ -149,7 +149,7 @@
           data-tab="constructions">construction</button>
         {% if product.metafields.accentuate.award_title != blank or product.metafields.accentuate.award_description.html != blank or product.metafields.snowboard_info.award_vide != blank %}
         <button class="c-product-details__tab-btn js-details-tabs-btn" type="button"
-          data-tab="accolades">accolades</button>
+          data-tab="accolades">intel</button>
         {% endif %}
         <button class="c-product-details__tab-btn js-details-tabs-btn" type="button"
           data-tab="size-chart">specs</button>
@@ -238,8 +238,8 @@
                           <path d="M19.5 16.0898V22.908" stroke-linecap="round" />
                         </svg>
 
-                      </button><span class="c-hotspot__position">core</span><span class="c-hotspot__name">{{ hotspot
-                        }}</span>
+                      </button><span class="c-hotspot__name">{{ hotspot }}</span>
+                        {% comment %} <span class="c-hotspot__position">core</span><span class="c-hotspot__name">{{ hotspot }}</span> {% endcomment %}
                     </div>
                   </div>
                   {% endfor %}

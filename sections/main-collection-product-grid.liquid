@@ -21,6 +21,7 @@
     
         </div>
         {% if section.settings.filter_type == "snowboards" %}
+
           <div class="l-listing__aside">
             <div class="c-listing-filter closed">
     
@@ -238,8 +239,11 @@
                 <label class="c-listing-filter__option">
                   <input type="checkbox" name="hoodie" /><span>Hoodies</span>
                 </label>
-                <label class="c-listing-filter__option" style="display:none;">
-                  <input type="checkbox" name="hats-beanies" /><span>Hats & Beanies</span>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="beanies" /><span>Hats & Beanies</span>
+                </label>
+                <label class="c-listing-filter__option">
+                  <input type="checkbox" name="bags" /><span>Board Bags</span>
                 </label>
                 <label class="c-listing-filter__option" style="display:none;">
                   <input type="checkbox" name="stickers" /><span>Stickers</span>
@@ -496,6 +500,7 @@ a.c-listing-product__size:hover span {
     left: 0;
     top: 260px;
     z-index: 1;
+    width: calc(100% - 30px);
   }
   .c-listing-filter__mob-head {
       color: #fff;

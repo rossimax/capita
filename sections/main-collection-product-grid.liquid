@@ -275,27 +275,50 @@
                   <img src="{{ product.featured_image | img_url: "550x550" }}" alt="Capita | {{ product.title | strip_html }}">
                 </a>
               </div>
-              <div class="c-listing-product__sizes">
+              <div class="c-listing-product__sizes u-show-md">
     
                 {% unless product.has_only_default_variant %}
                   {% for option in product.options_with_values %}
     
-                      {% assign option_name = option.name | downcase %}
+                    {% assign option_name = option.name | downcase %}
     
-                      {% if option_name == "size" %}
-                        {% for variant in product.variants %}
-                          {% if forloop.index < 8 %}
-                            <a class="c-listing-product__size {%- if variant.available == false %} is-disabled{% endif %}" attr-variant-id="{{ variant.id }}" href="{{ variant.url }}">{{ variant.title }}</a>
-                          {% elsif forloop.index == forloop.length %}
-                            <a class="c-listing-product__size is-ghost" href="{{ product.url }}">+ {{ forloop.length | minus: 7 }} more</a>
-                          {% endif %}
-                        {% endfor %}
-                      {% endif%}
+                    {% if option_name == "size" %}
+                      {% for variant in product.variants %}
+                        {% if forloop.index < 8 %}
+                          <a class="c-listing-product__size {%- if variant.available == false %} is-disabled{% endif %}" attr-variant-id="{{ variant.id }}" href="{{ variant.url }}">{{ variant.title }}</a>
+                        {% elsif forloop.index == forloop.length %}
+                          <a class="c-listing-product__size is-ghost" href="{{ product.url }}">+ {{ forloop.length | minus: 7 }} more</a>
+                        {% endif %}
+                      {% endfor %}
+                    {% endif%}
     
                   {% endfor %}                
-              {% endunless %}
+                {% endunless %}
               
               </div>
+
+              <div class="c-listing-product__sizes u-hide-md">
+    
+                {% unless product.has_only_default_variant %}
+                  {% for option in product.options_with_values %}
+    
+                    {% assign option_name = option.name | downcase %}
+    
+                    {% if option_name == "size" %}
+                      {% for variant in product.variants %}
+                        {% if forloop.index < 4 %}
+                          <a class="c-listing-product__size {%- if variant.available == false %} is-disabled{% endif %}" attr-variant-id="{{ variant.id }}" href="{{ variant.url }}">{{ variant.title }}</a>
+                        {% elsif forloop.index == forloop.length %}
+                          <a class="c-listing-product__size is-ghost" href="{{ product.url }}">+ {{ forloop.length | minus: 3 }} more</a>
+                        {% endif %}
+                      {% endfor %}
+                    {% endif%}
+    
+                  {% endfor %}                
+                {% endunless %}
+              
+              </div>
+
               <div class="c-listing-product__info">
                 <span class="c-listing-product__categories">{{ product.metafields.snowboard_info.snowboard_listing_tag }}</span>
                 <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>

@@ -321,7 +321,7 @@
           divCartItem.innerHTML = `
                     <div class="c-cart-item__container">
                         <a href="`+cartItem.url+`">
-                            <img class="c-cart-item__image" src="`+cartItem.image+`?width=160" alt="`+cartItem.title+`">
+                            <img class="c-cart-item__image" src="`+cartItem.image+`&width=150" alt="`+cartItem.title+`">
                         </a>
                         <div class="c-cart-item__info"><span>`+cartItem.title+`</span>
                         </div>

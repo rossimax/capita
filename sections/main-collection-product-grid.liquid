@@ -638,6 +638,7 @@ a.c-listing-product__size:hover span {
     filterMobHead: '.c-listing-filter__mob-head',
     filterMobHeadIconClose: '.c-listing-filter__mob-head svg',
     listingGrid: '.l-listing__grid',
+    filterBox: '.l-listing__aside',
   };
 
   Shopify.queryParams = {};
@@ -654,6 +655,7 @@ a.c-listing-product__size:hover span {
   let listingFilter = document.querySelector(selectors.listingFilter)
   let filterMobHead = document.querySelector(selectors.filterMobHead)
   let listingGrid = document.querySelector(selectors.listingGrid)
+  let filterBox = document.querySelector(selectors.filterBox)
 
   let uriTagsApplied = false
   let countInputSelected = 0
@@ -887,6 +889,7 @@ console.log(filterApply)
 
   // START - FILTERS MOB
 
+  
   function checkMobFilter() {
     if ( window.innerWidth < 1200) {
       filterMobHead.classList.add("closed")
@@ -915,6 +918,15 @@ console.log(filterApply)
       listingGrid.classList.remove("shadow")
     }
   })
+
+  window.addEventListener('load', function(event) {
+    if ( window.innerWidth < 991) {
+      filterBox.style.top = listingGrid.offsetTop - 20 + "px"
+    } else if ( window.innerWidth < 1200) {
+      filterBox.style.top = 200 + "px"
+    }
+  })
+
   // END - FILTERS MOB
 
 })(document);

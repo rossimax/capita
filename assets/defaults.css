@@ -525,6 +525,10 @@ span.input-error-message.site_newsletter-error {
   background: #888;
 }
 
+.spr-icon-star-empty:before {
+  filter: brightness(0);
+}
+
 @media screen and (min-width: 64em) {
   .c-header__dropdown-panel.c-header-cart.js-header-cart {
     max-height: 60vh;

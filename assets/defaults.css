@@ -391,6 +391,7 @@ main.template-payments {
 .c-product-info__size.is-disabled {
   pointer-events: auto;
 }
+
 .c-info-card a {
   text-decoration: none;
 }

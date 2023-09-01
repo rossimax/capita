@@ -183,7 +183,11 @@
                   <div class="c-header-menu__list">
                       {%- for childlink in link.links -%}
                           {%- if childlink.links == blank -%}
-                              <a class="c-menu-item" href="{{ childlink.url }}">{{ childlink.title }}</a>
+                              <a class="c-menu-item" href="{{ childlink.url }}">
+                              <span>
+                                {{ childlink.title }}
+                              </span>  
+                              </a>
                           {%- endif -%}
                       {%- endfor -%}
                   </div>

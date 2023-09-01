@@ -1,11 +1,17 @@
 <div class="c-product-info">
+
   {% liquid
-    if product.metafields.snowboard_info.snowboard_tags != blank
-      assign snowboard_tags = product.metafields.snowboard_info.snowboard_tags
+    if template.suffix == "snowboards"
+      if product.metafields.snowboard_info.snowboard_tags != blank
+        assign snowboard_tags = product.metafields.snowboard_info.snowboard_tags
+      else
+        assign snowboard_tags = "SNOWBOARD"
+      endif 
     else
-      assign snowboard_tags = "SNOWBOARD"
-    endif 
+      assign snowboard_tags = product.collections[0].title
+    endif
   -%}
+
     <div class="c-product-info__top">
         <span class="c-product-info__categories">{{ snowboard_tags }}</span>
         <h2 class="c-product-info__name strong">{{ product.title }}</h2>

@@ -29,8 +29,7 @@ bl {
   font-weight: 600;
   line-height: 1;
 }
-a:not(.c-menu-item):hover,
-a:not(.c-menu-item):hover span,
+
 button:hover:not(.c-header__menu-item),
 button:hover:not(.c-header__menu-item) span,
 .js-filter-clean:hover {

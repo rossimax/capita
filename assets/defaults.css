@@ -241,6 +241,24 @@ main.template-payments {
   border: 1px solid #fff;
 }
 
+.o-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 21px;
+  border-radius: 9999px;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: .7;
+  text-transform: uppercase;
+  gap: 8px;
+  min-width: 340px;
+  text-decoration: none;
+}
+
 .btn.btn-secondary {
   background: transparent;
   color: #fff;

@@ -565,4 +565,12 @@ span.input-error-message.site_newsletter-error {
   margin: 150px 0;
 }
 
+.content-for-layout .shopify-policy__container h1 {
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: .9;
+  text-transform: uppercase;
+}
+
 /* END LEGALS */

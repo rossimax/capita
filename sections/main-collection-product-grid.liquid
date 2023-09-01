@@ -6,7 +6,7 @@
         <div class="l-listing__top">
     
           <div class="l-listing__head">
-            <h1>{{ collection.title }}</h1>
+            <h1 class="o-text is-2">{{ collection.title }}</h1>
             <div class="sorting-listing js-sorting-listing">
     
               {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
@@ -25,14 +25,14 @@
           <div class="l-listing__aside">
             <div class="c-listing-filter closed">
               <div class="c-listing-filter__wrapper">
-                <div class="c-listing-filter__mob-head closed">
+                <div class="c-listing-filter__mob-head closed o-text is-3">
                   <span>FILTERS</span>
                 </div>
       
                 <span class="js-tags-list" data-tags="{{tag_list}}"><span>
       
                 <div class="c-listing-filter__stack">
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="All" 
                       {% if collection.handle == "all-snowboards" %} 
                         checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
@@ -41,7 +41,7 @@
                       {% endif %}/>
                       <span>All</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="Men's Snowboards" 
                       {% if collection.handle == "snowboards-mens" %} 
                         checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
@@ -50,7 +50,7 @@
                       {% endif %}/>
                       <span>men's</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="Women's Snowboards" 
                       {% if collection.handle == "snowboards-womens" %} 
                       checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
@@ -59,7 +59,7 @@
                     {% endif %}/>
                     <span>women's</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="Kid's Snowboards" 
                       {% if collection.handle == "snowboards-kids" %} 
                       checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
@@ -68,7 +68,7 @@
                     {% endif %}/>
                       <span>kids's</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="Spring Break" 
                       {% if collection.handle == "spring-break" %} 
                       checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
@@ -77,7 +77,7 @@
                     {% endif %}/>
                       <span>spring break</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="Split" 
                       {% if collection.handle == "split-snowboards" %} 
                       checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
@@ -88,108 +88,108 @@
                   </label>
                 </div>
       
-                <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="terrain type"><span>TERRAIN TYPE</span></div>
+                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="terrain type"><span>TERRAIN TYPE</span></div>
                 <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="terrain type">
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="Resort" /><span>RESORT</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="Freestyle" /><span>FREESTYLE</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="Freeride" /><span>FREERIDE</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="Powder" /><span>POWDER</span>
                   </label>
                 </div>
       
-                <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="shape"><span>SHAPE</span></div>
+                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="shape"><span>SHAPE</span></div>
                 <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="shape">
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="TRUE TWIN" /><span>TRUE TWIN</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="DIRECTIONAL TWIN" /><span>DIRECTIONAL TWIN</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="DIRECTIONAL" /><span>DIRECTIONAL</span>
                   </label>
                 </div>
       
-                <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="camber type"><span>CAMBER TYPE</span></div>
+                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="camber type"><span>CAMBER TYPE</span></div>
                 <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="camber type">
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="CAMBER" /><span>CAMBER</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="HYBRID CAMBER" /><span>HYBRID CAMBER</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="REVERSE CAMBER" /><span>REVERSE CAMBER</span>
                   </label>
                 </div>
       
-                <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="width"><span>WIDTH</span></div>
+                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="width"><span>WIDTH</span></div>
                 <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="width">
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="REGULAR" /><span>REGULAR</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="WIDE" /><span>WIDE</span>
                   </label>
                 </div>
       
-                <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="size"><span>SIZE</span></div>
+                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="size"><span>SIZE</span></div>
                 <div class="c-listing-filter__stack c-listing-filter__stack--boxed js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="size">
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="148" value="148"/><span>148</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="150" /><span>150</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="152" /><span>152</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="154" /><span>154</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="156" /><span>152</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="158" /><span>158</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="160" /><span>160</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="162" /><span>162</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="164" /><span>164</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="155W" /><span>155W</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="157W" /><span>157W</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="159W" /><span>159W</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="161W" /><span>161W</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="163W" /><span>163W</span>
                   </label>
                 </div>
       
                 <div class="c-listing-filter__dropdown-title c-listing-filter__dropdown-title--noclose"></div>
                 <div class="c-listing-filter__stack c-listing-filter__stack--foot">
-                  <div class="js-filter-num-select"><span class="num-select-filter">0</span> selected</div>
-                  <div class="js-filter-clean" attr-master-col="all-snowboards">REMOVE FILTER</div>
+                  <div class="js-filter-num-select o-text is-4 is-regular"><span class="num-select-filter">0</span> selected</div>
+                  <div class="js-filter-clean o-text is-4 is-medium" attr-master-col="all-snowboards">REMOVE FILTER</div>
                 </div>
               </div>
             </div>
@@ -218,32 +218,32 @@
       
                 <span class="js-tags-list" data-tags="{{tag_list}}"><span>
       
-                <div class="c-listing-filter__dropdown-title js-filter-type" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
+                <div class="c-listing-filter__dropdown-title js-filter-type o-text is-4 is-medium" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
                 <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="category">
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="shirt" /><span>T-Shirt</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="hoodie" /><span>Hoodies</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="beanies" /><span>Hats & Beanies</span>
                   </label>
-                  <label class="c-listing-filter__option">
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="bags" /><span>Board Bags</span>
                   </label>
-                  <label class="c-listing-filter__option" style="display:none;">
+                  <label class="c-listing-filter__option o-text is-4" style="display:none;">
                     <input type="checkbox" name="stickers" /><span>Stickers</span>
                   </label>
-                  <label class="c-listing-filter__option" style="display:none;">
+                  <label class="c-listing-filter__option o-text is-4" style="display:none;">
                     <input type="checkbox" name="movies" /><span>Movies</span>
                   </label>
                 </div>
       
                 <div class="c-listing-filter__dropdown-title c-listing-filter__dropdown-title--noclose"></div>
                 <div class="c-listing-filter__stack c-listing-filter__stack--foot">
-                  <div class="js-filter-num-select"><span class="num-select-filter">0</span> selected</div>
-                  <div class="js-filter-clean" attr-master-col="accessories">REMOVE FILTER</div>
+                  <div class="js-filter-num-select o-text is-4 is-regular"><span class="num-select-filter">0</span> selected</div>
+                  <div class="js-filter-clean o-text is-4 is-medium" attr-master-col="accessories">REMOVE FILTER</div>
                 </div>
       
               </div>
@@ -320,9 +320,9 @@
               </div>
 
               <div class="c-listing-product__info">
-                <span class="c-listing-product__categories">{{ product.metafields.snowboard_info.snowboard_listing_tag }}</span>
-                <span class="c-listing-product__name"><a href="{{ product.url }}">{{ product.title }}</a></span>
-                <span class="c-listing-product__price">{{ product.price | money_with_currency }}</span>
+                <span class="c-listing-product__categories o-text is-4 is-medium">{{ product.metafields.snowboard_info.snowboard_listing_tag }}</span>
+                <span class="c-listing-product__name o-text is-3"><a href="{{ product.url }}">{{ product.title }}</a></span>
+                <span class="c-listing-product__price o-text is-4 is-medium">{{ product.price | money_with_currency }}</span>
                 {% comment %} {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %} {% endcomment %}
               </div>
             </div>
@@ -385,7 +385,7 @@
     display: flex;
     flex-wrap: wrap;
 }
-.c-listing-filter__stack--boxed .c-listing-filter__option {
+.c-listing-filter__stack--boxed .c-listing-filter__option o-text is-4 {
   position: relative;
   width: max-content;
 }
@@ -412,7 +412,7 @@
     justify-content: space-between;
     color: #fff;
 }
-.c-listing-filter__stack--boxed .c-listing-filter__option input:checked + span {
+.c-listing-filter__stack--boxed .c-listing-filter__option o-text is-4 input:checked + span {
   color: #333;
 }
 .l-listing__grid--apparel_and_others .c-listing-product__image,
@@ -421,7 +421,7 @@
 .l-listing__grid--movies .c-listing-product__image {
     aspect-ratio: 130/150;
 }
-.js-filter-clean {
+.js-filter-clean o-text is-4 is-medium {
   cursor: pointer;
 }
 .u-bg-black {
@@ -503,7 +503,7 @@ a.c-listing-product__size:hover span {
   text-decoration: none;
   white-space: nowrap;
 }
-.template-apparel-and-more .js-filter-num-select {
+.template-apparel-and-more .js-filter-num-select o-text is-4 is-regular {
   opacity: 0;
   visibility: hidden;
 }
@@ -629,9 +629,9 @@ a.c-listing-product__size:hover span {
     productItems: '.c-listing-product',
     filtersType: '.js-filter-type',
     filtersInputs: '.js-filter-inputs',
-    filterNumSelect: '.js-filter-num-select .num-select-filter',
+    filterNumSelect: '.js-filter-num-select o-text is-4 is-regular .num-select-filter',
     tagsListApplied: '.js-tags-list',
-    cleanFilter: '.js-filter-clean',
+    cleanFilter: '.js-filter-clean o-text is-4 is-medium',
     sortingListing: '.js-sorting-listing .sorting-option',
     emtyMsg: '.l-listing__grid__empty',
     listingFilter: '.c-listing-filter',

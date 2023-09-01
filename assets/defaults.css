@@ -507,20 +507,20 @@ span.input-error-message.site_newsletter-error {
     text-decoration: none;
 }
 /* width */
-.c-listing-filter::-webkit-scrollbar {
+.c-listing-filter__wrapper::-webkit-scrollbar {
   width: 7px;
 }
 /* Track */
-.c-listing-filter::-webkit-scrollbar-track {
+.c-listing-filter__wrapper::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-top-right-radius: 40px;
 }
 /* Handle */
-.c-listing-filter::-webkit-scrollbar-thumb {
+.c-listing-filter__wrapper::-webkit-scrollbar-thumb {
   background: #555;
 }
 /* Handle on hover */
-.c-listing-filter::-webkit-scrollbar-thumb:hover {
+.c-listing-filter__wrapper::-webkit-scrollbar-thumb:hover {
   background: #888;
 }
 

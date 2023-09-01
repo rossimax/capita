@@ -510,10 +510,10 @@ span.input-error-message.site_newsletter-error {
 .c-listing-filter__wrapper::-webkit-scrollbar {
   width: 7px;
 }
+
 /* Track */
 .c-listing-filter__wrapper::-webkit-scrollbar-track {
   background: #f1f1f1;
-  border-top-right-radius: 40px;
 }
 /* Handle */
 .c-listing-filter__wrapper::-webkit-scrollbar-thumb {

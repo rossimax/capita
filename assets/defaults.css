@@ -396,11 +396,17 @@ main.template-payments {
 }
 span.all-sold-out {
   display: block;
-  font-size: 36px;
+  font-size: 20px;
   color: #fb3105;
   text-align: center;
   margin: 30px 0 0 0;
   font-family: "Calibre";
+  font-weight: 500;
+  border: 1px solid #fb3105;
+  padding: 21px 20px;
+  border-radius: 30px;
+  height: 65px;
+  min-width: 340px;
 }
 .c-product-info__add-to-cart {
   cursor: pointer;

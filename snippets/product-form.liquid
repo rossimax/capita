@@ -7,9 +7,9 @@
     endif 
   -%}
     <div class="c-product-info__top">
-        <span class="c-product-info__categories">{{ snowboard_tags }}</span>
-        <h2 class="c-product-info__name strong">{{ product.title }}</h2>
-        <span class="c-product-info__price medium">{{ product.price | money }}</span>
+        <span class="c-product-info__categories o-text is-4">{{ snowboard_tags }}</span>
+        <h2 class="c-product-info__name o-text is-2">{{ product.title }}</h2>
+        <span class="c-product-info__price o-text is-3">{{ product.price | money }}</span>
         <div style="margin-top: 5px;">or 4 interest-free installments of {{ product.price | divided_by: 4 | money }} by | <img style="display:inline;" width="75px" src="{{ 'afterpay-logo.png' | asset_url }}" alt="Afterpay"></div>
         <p class="c-product-info__description medium">{{ product.metafields.snowboard_info.snowboard_description }}</p>
         

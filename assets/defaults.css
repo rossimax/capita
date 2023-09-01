@@ -381,10 +381,7 @@ main.template-payments {
 .c-size-chart tr:nth-child(odd) {
   background-color: #eee;
 }
-.c-info-card img {
-  max-width: 450px;
-  margin: 40px auto;
-}
+
 .c-info-card {
   display: flex;
   flex-direction: column;

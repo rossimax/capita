@@ -16,7 +16,7 @@
     endif
     -%}
     <img src="{{ background_image }}" alt="Capita | {{ product.title | strip_html }}">
-    <h1 class="c-product-hero__name {{ hero_title_color }}">{{ product.title }}</h1>
+    <h1 class="c-product-hero__name o-text {{ hero_title_color }}">{{ product.title }}</h1>
   </div>
   {% assign class_product = "snowboard-product" %}
 {% else %}
@@ -278,9 +278,6 @@ text-decoration: underline;
 }
 button.js-add-to-cart.c-product-info__add-to-cart {
 margin-top: 70px;
-}
-.c-spec__value {
-font-size: 21px;
 }
 .c-product-tech__video {
 margin-top: 40px;

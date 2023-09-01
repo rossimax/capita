@@ -49,21 +49,21 @@
         "34655e6e-95b1-4130-9bfb-e864a94e37e9": {
           "type": "cards",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_674.png",
+            "image": "shopify:\/\/shop_images\/1_ZERO_CO2.png",
             "title": "ZERO<br>CO2 Emissions"
           }
         },
         "6837a6f1-6f4b-43a4-ad21-32840f4c2c3c": {
           "type": "cards",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_675.png",
+            "image": "shopify:\/\/shop_images\/2_ZERO_OZONE_DP.png",
             "title": "ZERO<br>Ozone Depletion Potential"
           }
         },
         "17d51c09-a020-43e2-aa92-8588c1588966": {
           "type": "cards",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_676.png",
+            "image": "shopify:\/\/shop_images\/3_ZERO_GLOBAL_WARMING_P.png",
             "title": "ZERO<br>Global Warming Potential"
           }
         }

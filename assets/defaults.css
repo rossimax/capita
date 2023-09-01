@@ -519,6 +519,7 @@ span.input-error-message.site_newsletter-error {
 .c-listing-filter__wrapper::-webkit-scrollbar-thumb {
   background: #555;
 }
+
 /* Handle on hover */
 .c-listing-filter__wrapper::-webkit-scrollbar-thumb:hover {
   background: #888;

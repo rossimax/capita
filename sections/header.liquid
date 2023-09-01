@@ -328,10 +328,9 @@
               prodSugItem.setAttribute('data-id', prodSug.id);
 
               prodSugItem.innerHTML = `
-              
                 <div class="s-item__content">
                   <a href="`+prodSug.url+`">
-                      <img class="s-item__image" src="`+prodSug.image+`" alt="`+prodSug.title+`">
+                      <img class="s-item__image" src="`+prodSug.image+`&width=60" alt="`+prodSug.title+`">
                   </a>
                   <div class="s-item__info">
                     <span>`+prodSug.title+`</span>

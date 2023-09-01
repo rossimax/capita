@@ -545,6 +545,9 @@ span.input-error-message.site_newsletter-error {
 h1.cart__empty-text {
   margin-top: 80px;
 }
+.cart__login-title {
+  margin: 3.5rem 0 0.5rem;
+}
 
 @media screen and (min-width: 64em) {
   .c-header__dropdown-panel.c-header-cart.js-header-cart {

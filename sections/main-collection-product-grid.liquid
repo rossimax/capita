@@ -100,7 +100,7 @@
               </div>
     
               <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="terrain type"><span>TERRAIN TYPE</span></div>
-              <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="terrain type">
+              <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="terrain type">
                 <label class="c-listing-filter__option">
                   <input type="checkbox" name="Resort" /><span>RESORT</span>
                 </label>
@@ -116,7 +116,7 @@
               </div>
     
               <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="shape"><span>SHAPE</span></div>
-              <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="shape">
+              <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="shape">
                 <label class="c-listing-filter__option">
                   <input type="checkbox" name="TRUE TWIN" /><span>TRUE TWIN</span>
                 </label>
@@ -129,7 +129,7 @@
               </div>
     
               <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="camber type"><span>CAMBER TYPE</span></div>
-              <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="camber type">
+              <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="camber type">
                 <label class="c-listing-filter__option">
                   <input type="checkbox" name="CAMBER" /><span>CAMBER</span>
                 </label>
@@ -142,7 +142,7 @@
               </div>
     
               <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="width"><span>WIDTH</span></div>
-              <div class="c-listing-filter__stack js-filter-inputs hide" attr-filter-type="width">
+              <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="width">
                 <label class="c-listing-filter__option">
                   <input type="checkbox" name="REGULAR" /><span>REGULAR</span>
                 </label>
@@ -152,7 +152,7 @@
               </div>
     
               <div class="c-listing-filter__dropdown-title js-filter-type closed" attr-filter-type="size"><span>SIZE</span></div>
-              <div class="c-listing-filter__stack c-listing-filter__stack--boxed js-filter-inputs hide" attr-filter-type="size">
+              <div class="c-listing-filter__stack c-listing-filter__stack--boxed js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="size">
                 <label class="c-listing-filter__option">
                   <input type="checkbox" name="148" value="148"/><span>148</span>
                 </label>
@@ -231,7 +231,7 @@
               <span class="js-tags-list" data-tags="{{tag_list}}"><span>
     
               <div class="c-listing-filter__dropdown-title js-filter-type" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
-              <div class="c-listing-filter__stack js-filter-inputs" attr-filter-type="category">
+              <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="category">
                 <label class="c-listing-filter__option">
                   <input type="checkbox" name="shirt" /><span>T-Shirt</span>
                 </label>
@@ -241,8 +241,8 @@
                 <label class="c-listing-filter__option" style="display:none;">
                   <input type="checkbox" name="hats-beanies" /><span>Hats & Beanies</span>
                 </label>
-                <label class="c-listing-filter__option">
-                  <input type="checkbox" name="accessories" /><span>Accessories</span>
+                <label class="c-listing-filter__option" style="display:none;">
+                  <input type="checkbox" name="stickers" /><span>Stickers</span>
                 </label>
                 <label class="c-listing-filter__option" style="display:none;">
                   <input type="checkbox" name="movies" /><span>Movies</span>
@@ -252,7 +252,7 @@
               <div class="c-listing-filter__dropdown-title c-listing-filter__dropdown-title--noclose"></div>
               <div class="c-listing-filter__stack c-listing-filter__stack--foot">
                 <div class="js-filter-num-select"><span class="num-select-filter">0</span> selected</div>
-                <div class="js-filter-clean" attr-master-col="apparel-more">REMOVE FILTER</div>
+                <div class="js-filter-clean" attr-master-col="accessories">REMOVE FILTER</div>
               </div>
     
             </div>
@@ -709,6 +709,7 @@ a.c-listing-product__size:hover span {
       filterInput.addEventListener("change", function() {
 
         let filterInputName = filterInput.getAttribute("name").toLowerCase()
+        let filterInputsParent = filterInput.closest('.js-filter-inputs')
 
         if (uriTagsApplied) { // SYNC MODE
 
@@ -718,7 +719,12 @@ a.c-listing-product__size:hover span {
           if (filterInput.checked) {
 
             let currentUrl = window.location.href
-            newUrl = basePath + "+" + filterInputName.toLowerCase().replace(" ","-")
+
+            if (filterInputsParent.classList.contains("js-filter-inputs-onlyone")) {
+              newUrl = basePath.substring(0, basePath.lastIndexOf('/')) + "/" + filterInputName.toLowerCase().replace(" ","-")
+            } else {
+              newUrl = basePath + "+" + filterInputName.toLowerCase().replace(" ","-")
+            }
 
           } else {
 
@@ -735,11 +741,35 @@ a.c-listing-product__size:hover span {
         } else { // SEMI-ASYNC MODE
 
           if (filterInput.checked) {
+            
+            if (filterInputsParent.classList.contains("js-filter-inputs-onlyone")) {
+
+              filterInputsParentGroup = filterInputsParent.querySelectorAll(".js-filter-inputs input")
+
+              filterInputsParentGroup.forEach((inputDeselect,i) => {
+                let inputDeselectName = inputDeselect.getAttribute("name").toLowerCase()
+                if (inputDeselectName != filterInputName) {
+                  inputDeselect.checked = false
+                  let posRemoveSameGroup = filterApply.indexOf(inputDeselectName)
+                  if (posRemoveSameGroup != -1) {
+                    console.log("inputDeselectName: "+inputDeselectName)
+                    console.log("filterApply: "+filterApply)
+                    console.log("posRemoveSameGroup: "+posRemoveSameGroup)
+                    filterApply.splice(posRemoveSameGroup,1)
+                  }
+                }
+              })
+
+            } 
+
             filterApply.push(filterInputName)
+
           } else {
             let posRemove = filterApply.indexOf(filterInputName)
             filterApply.splice(posRemove,1)
           }
+
+console.log(filterApply)
 
           productItems.forEach((productItem,i) => {
 

@@ -3,6 +3,7 @@
 
   let selectors = {
     productVariants: '.js-product-variant:not(.is-disabled)',
+    productVariantsDisabled: '.js-product-variant.is-disabled',
     submitButton: '.js-add-to-cart',
     cartTrigger: '.is-cart',
     cartBtnsMinus: '.cart-qnt-btn-minus',
@@ -19,6 +20,7 @@
   };
 
   let productVariants = document.querySelectorAll(selectors.productVariants)
+  let productVariantsDisabled = document.querySelectorAll(selectors.productVariantsDisabled)
   let submitButton = document.querySelector(selectors.submitButton)
   let cartTrigger = document.querySelector(selectors.cartTrigger)
   let cartBtnsMinus = document.querySelectorAll(selectors.cartBtnsMinus)
@@ -53,8 +55,13 @@
         localStorage.setItem('scrollpos', window.scrollY);
     };
 
-
-
+    productVariantsDisabled.forEach((productVariantDisabled,i) => {
+      productVariantDisabled.addEventListener("click", (e) => {
+        productVariants.forEach((productVariant,i) => {
+          productVariant.classList.remove("selected")
+        })
+      })
+    })
 
     productVariants.forEach((productVariant,i) => {
 
@@ -314,7 +321,7 @@
           divCartItem.innerHTML = `
                     <div class="c-cart-item__container">
                         <a href="`+cartItem.url+`">
-                            <img class="c-cart-item__image" src="`+cartItem.image+`" alt="`+cartItem.title+`">
+                            <img class="c-cart-item__image" src="`+cartItem.image+`?width=160" alt="`+cartItem.title+`">
                         </a>
                         <div class="c-cart-item__info"><span>`+cartItem.title+`</span>
                         </div>

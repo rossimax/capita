@@ -386,6 +386,10 @@ main.template-payments {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-decoration: none;
+}
+.c-product-info__size.is-disabled {
+  pointer-events: auto;
 }
 .c-info-card a {
   text-decoration: none;

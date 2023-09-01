@@ -542,6 +542,9 @@ span.input-error-message.site_newsletter-error {
 .spr-icon-star-empty:before {
   filter: brightness(0);
 }
+h1.cart__empty-text {
+  margin-top: 80px;
+}
 
 @media screen and (min-width: 64em) {
   .c-header__dropdown-panel.c-header-cart.js-header-cart {

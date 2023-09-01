@@ -4,6 +4,13 @@
       name="country_code"
     >
       {%- for country in localization.available_countries -%}
+        {%- liquid
+            if country.iso_code == "CA" 
+              assign iso_code_text = "CAD"
+            else 
+              assign iso_code_text = country.currency.iso_code
+            endif
+        -%}
         <option
           value="{{ country.iso_code }}"
           {%- if country.iso_code == localization.country.iso_code %}
@@ -11,7 +18,7 @@
           {% endif %}
         >
           {{ country.name }} 
-          ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+          ({{ iso_code_text }} {{ country.currency.symbol }})
         </option>
       {%- endfor -%}
     </select>

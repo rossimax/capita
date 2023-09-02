@@ -601,4 +601,19 @@ h1.cart__empty-text {
   text-transform: uppercase;
 }
 
+
+.content-for-layout .shopify-policy__container table,
+.content-for-layout .shopify-policy__container tr,
+.content-for-layout .shopify-policy__container td {
+  border: 1px solid;
+}
+
+.content-for-layout .shopify-policy__container table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.content-for-layout .shopify-policy__container h2 {
+  margin-bottom: 20px;
+}
+
 /* END LEGALS */

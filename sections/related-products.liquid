@@ -10,7 +10,7 @@
         <div class="c-related-products__slider swiper">
           <div class="swiper-wrapper">
 
-            {% for recommendation in recommendations.products %}
+            {% for recommendation in recommendations.products limit:4 %}
               <div class="swiper-slide">
                 <a href="{{ recommendation.url }}">
                   <div class="c-product-card">

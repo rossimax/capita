@@ -548,6 +548,9 @@ h1.cart__empty-text {
 .cart__login-title {
   margin: 3.5rem 0 0.5rem;
 }
+.o-text.is-4 {
+  position: relative;
+}
 
 @media screen and (min-width: 64em) {
   .c-header__dropdown-panel.c-header-cart.js-header-cart {
@@ -586,8 +589,8 @@ h1.cart__empty-text {
 /* START LEGALS */
 
 .content-for-layout .shopify-policy__container {
-  max-width: 100%;
-  margin: 150px 0;
+  max-width: 1440px;
+  margin: 150px auto;
 }
 
 .content-for-layout .shopify-policy__container h1 {
@@ -596,6 +599,21 @@ h1.cart__empty-text {
   letter-spacing: normal;
   line-height: .9;
   text-transform: uppercase;
+}
+
+
+.content-for-layout .shopify-policy__container table,
+.content-for-layout .shopify-policy__container tr,
+.content-for-layout .shopify-policy__container td {
+  border: 1px solid;
+}
+
+.content-for-layout .shopify-policy__container table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.content-for-layout .shopify-policy__container h2 {
+  margin-bottom: 20px;
 }
 
 /* END LEGALS */

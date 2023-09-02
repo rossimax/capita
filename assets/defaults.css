@@ -589,8 +589,8 @@ h1.cart__empty-text {
 /* START LEGALS */
 
 .content-for-layout .shopify-policy__container {
-  max-width: 100%;
-  margin: 150px 0;
+  max-width: 1440px;
+  margin: 150px auto;
 }
 
 .content-for-layout .shopify-policy__container h1 {

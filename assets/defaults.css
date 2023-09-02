@@ -17,8 +17,15 @@ strong,
   font-weight: 500;
 }
 hl {
-  background: #e2ff61;
-  padding: 0 5px;
+  background: linear-gradient(
+    0deg,
+    rgba(226, 255, 97, 0) 0%,
+    rgba(226, 255, 97, 0) 10%,
+    rgba(226, 255, 97, 1) 10%,
+    rgba(226, 255, 97, 1) 80%,
+    rgba(226, 255, 97, 0) 80%
+  );
+  padding: 0 2px;
 }
 bl {
   color: #e2ff61;

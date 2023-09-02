@@ -1,24 +1,54 @@
-<style>
-    .section-paragraph-simple--{{section.id}} .paragraph-simple-content__title {
-        font-size: {{ section.settings.font_size_title }}px;
-    }
-    @media screen and (max-width: 768px) {
-        .section-paragraph-simple--{{section.id}} .paragraph-simple-content__title {
-            font-size: {{ section.settings.font_size_title_mob }}px;
+{% comment %} <style>
+    .section-paragraph-simple-- {
+            {
+            section.id
         }
     }
-</style>
-<div class="section-paragraph-simple section-paragraph-simple--{{section.id}}" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;background-color: {{ section.settings.background_color }};">
+
+    .paragraph-simple-content__title {
+        font-size: {
+                {
+                section.settings.font_size_title
+            }
+        }
+
+        px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .section-paragraph-simple-- {
+                {
+                section.id
+            }
+        }
+
+        .paragraph-simple-content__title {
+            font-size: {
+                    {
+                    section.settings.font_size_title_mob
+                }
+            }
+
+            px;
+        }
+    }
+</style> {% endcomment %}
+<div class="section-paragraph-simple section-paragraph-simple--{{ section.id }}"
+    style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;background-color: {{ section.settings.background_color }};">
     <div class="u-container">
         <div class="u-content">
             <div class="paragraph-simple-content">
-                <h2 class="paragraph-simple-content__title strong" style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
+                <h2 class="paragraph-simple-content__title strong o-text is-2 nocase"
+                    style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
                 {% if section.settings.image_bottom %}
-                    <img class="paragraph-simple-image-bottom" src="{{ section.settings.image_bottom | img_url: "master" }}" alt="{{ section.settings.title | strip_html }}">
-                {% endif%}
+                <img class="paragraph-simple-image-bottom" src="{{ section.settings.image_bottom | image_url }}"
+                    alt="{{ section.settings.title | strip_html }}">
+                {% endif %}
                 {% if section.settings.text != blank %}
-                    <div class="paragraph-simple-content__paragraph" style="color: {{ section.settings.text_color }}">{{ section.settings.text }}</div>
-                {% endif%}
+                <div class="paragraph-simple-content__paragraph o-text is-4 is-regular"
+                    style="color: {{ section.settings.text_color }}">{{
+                    section.settings.text }}</div>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -26,114 +56,100 @@
 
 
 {% schema %}
-  {
-    "name": "Paragraph Simple",
-    "settings": [
-        {
-            "type": "number",
-            "id": "padding_top",
-            "label": "Padding Top",
-            "default": 20
-        },
-        {
-            "type": "number",
-            "id": "padding_bottom",
-            "label": "Padding Bottom",
-            "default": 20
-        },
-        {
-            "type": "number",
-            "id": "font_size_title",
-            "label": "Font Size Title"
-        },
-        {
-            "type": "number",
-            "id": "font_size_title_mob",
-            "label": "Font Size Title Mob"
-        },
-        {
-            "type": "color",
-            "id": "background_color",
-            "label": "Background Color",
-            "default": "#ffffff"
-        },
-        {
-            "type": "color",
-            "id": "text_color",
-            "label": "Text Color",
-            "default": "#000000"
-        },
-        {
-            "type": "html",
-            "id": "title",
-            "label": "Title"
-        },
-        {
-            "type": "richtext",
-            "id": "text",
-            "label": "Text"
-        },
-        {
-            "type": "image_picker",
-            "id": "image_bottom",
-            "label": "Image Bottom"
-        }
-    ],
-    "presets": [
-        {
-            "name": "Paragraph Simple"
-        }
-    ]
-  }
+{
+"name": "Paragraph Simple",
+"settings": [
+{
+"type": "number",
+"id": "padding_top",
+"label": "Padding Top",
+"default": 20
+},
+{
+"type": "number",
+"id": "padding_bottom",
+"label": "Padding Bottom",
+"default": 20
+},
+{
+"type": "number",
+"id": "font_size_title",
+"label": "Font Size Title"
+},
+{
+"type": "number",
+"id": "font_size_title_mob",
+"label": "Font Size Title Mob"
+},
+{
+"type": "color",
+"id": "background_color",
+"label": "Background Color",
+"default": "#ffffff"
+},
+{
+"type": "color",
+"id": "text_color",
+"label": "Text Color",
+"default": "#000000"
+},
+{
+"type": "html",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "richtext",
+"id": "text",
+"label": "Text"
+},
+{
+"type": "image_picker",
+"id": "image_bottom",
+"label": "Image Bottom"
+}
+],
+"presets": [
+{
+"name": "Paragraph Simple"
+}
+]
+}
 {% endschema %}
 
 
 {% stylesheet %}
 
 .paragraph-simple-content {
-    text-align: center;
-    max-width: 1620px;
-    margin: 0 auto;
+text-align: center;
+max-width: 1620px;
+margin: 0 auto;
 }
 .paragraph-simple-content__title {
-    text-align: center;
-    line-height: 1;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-.paragraph-simple-content__title bl {
-    font-weight: 600;
+text-align: center;
+margin-top: 20px;
+margin-bottom: 10px;
 }
 .paragraph-simple-content__paragraph {
-    margin: 40px auto 0 auto;
-    font-size: 24px;
-    line-height: 1;
-}
-.paragraph-simple-content__paragraph p {
-    font-size: 24px;
+margin: 40px auto 0 auto;
 }
 .paragraph-simple-image-bottom {
-    width: 100%;
-    max-width: 1380px;
-    margin: 80px auto;
-    display: block;
+width: 100%;
+max-width: 1380px;
+margin: 80px auto;
+display: block;
 }
 
 @media screen and (max-width: 768px) {
-    .paragraph-simple-content__title {
-        margin-top: 0;
-    }
-    .section-paragraph-simple {
-        padding: 40px 0 !important;
-    }
-    .paragraph-simple-content__paragraph,
-    .paragraph-simple-content__paragraph p {
-        font-size: 14px;
-    }
-    .paragraph-simple-image-bottom {
-        margin: 30px auto;
-    }
+.paragraph-simple-content__title {
+margin-top: 0;
+}
+.section-paragraph-simple {
+padding: 40px 0 !important;
+}
+.paragraph-simple-image-bottom {
+margin: 30px auto;
+}
 }
 
 {% endstylesheet %}

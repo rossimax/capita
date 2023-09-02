@@ -1,13 +1,14 @@
-<div class="section-logo-list" style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
+<div class="section-logo-list"
+    style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
     <div class="u-container">
         <div class="u-content">
             <div class="logo-list">
-                <h2 class="logo-list__title strong">{{ section.settings.title }}</h2>
+                <h2 class="logo-list__title o-text is-2 nocase">{{ section.settings.title }}</h2>
                 <div class="logo-list__content">
                     {% for block in section.blocks %}
-                        <div class="single-logo">
-                            <img src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.title | strip_html }}">
-                        </div>
+                    <div class="single-logo">
+                        <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.title | strip_html }}">
+                    </div>
                     {% endfor %}
                 </div>
                 {% if section.settings.description != blank %}
@@ -19,114 +20,109 @@
 </div>
 
 {% schema %}
-  {
-    "name": "Logo List",
-    "settings": [
-        {
-            "type": "number",
-            "id": "padding_top",
-            "label": "Padding Top",
-            "default": 20
-        },
-        {
-            "type": "number",
-            "id": "padding_bottom",
-            "label": "Padding Bottom",
-            "default": 20
-        },
-        {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
-        },
-        {
-            "type": "text",
-            "id": "description",
-            "label": "Description"
-        }
-    ],
-    "blocks": [
-        {
-            "type": "list",
-            "name": "list",
-            "settings": [
-                {
-                    "type": "image_picker",
-                    "id": "image",
-                    "label": "Image"
-                }
-            ]
-        }
-    ],
-    "presets": [
-        {
-            "name": "Logo List"
-        }
-    ]
-  }
+{
+"name": "Logo List",
+"settings": [
+{
+"type": "number",
+"id": "padding_top",
+"label": "Padding Top",
+"default": 20
+},
+{
+"type": "number",
+"id": "padding_bottom",
+"label": "Padding Bottom",
+"default": 20
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "text",
+"id": "description",
+"label": "Description"
+}
+],
+"blocks": [
+{
+"type": "list",
+"name": "list",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Logo List"
+}
+]
+}
 {% endschema %}
 
 {% stylesheet %}
 
 .section-logo-list {
-    background: #000;
+background: #000;
 }
 .logo-list {
-    max-width: 1460px;
-    margin: 0 auto;
-    color: #fff;
+max-width: 1460px;
+margin: 0 auto;
+color: #fff;
 }
 .logo-list__content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 50px;
-    padding-bottom: 50px;
+display: flex;
+gap:60px;
+flex-wrap: wrap;
+justify-content: space-evenly;
+margin-top: 50px;
+padding-bottom: 50px;
 }
 .single-logo img {
-    height: 130px;
+height: 110px;
 }
 .logo-list__title {
-    font-size: 60px;
-    color: #fff;
-    line-height: 1;
+color: #fff;
 }
 .logo-list__description {
-    font-size: 24px;
-    line-height: 1;
+font-size: 24px;
+line-height: 1;
 }
 @media screen and (max-width: 768px) {
-    .section-logo-list {
-        padding: 40px 0 !important;
-    }
-    .logo-list__title {
-        font-size: 36px;
-    }
-    .logo-list {
-        margin: 0 auto;
-    }
-    .single-logo {
-        width: 33.333%;
-    }
-    .single-logo img {
-        height: 80px;
-        margin: 0 auto 30px auto;
-    }
-    .logo-list__content {
-        margin-top: 40px;
-    }
-    .logo-list__description {
-        font-size: 16px;
-        margin-bottom: 70px;
-    }
-    .single-logo {
-        margin-bottom: 20px;
-    }
-    .logo-list__content {
-        padding-bottom: 20px;
-    }
+.section-logo-list {
+padding: 40px 0 !important;
+}
+.logo-list {
+margin: 0 auto;
+}
+.single-logo {
+width: 33.333%;
+}
+.single-logo img {
+height: 80px;
+margin: 0 auto 30px auto;
+}
+.logo-list__content {
+margin-top: 40px;
+}
+.logo-list__description {
+font-size: 16px;
+margin-bottom: 70px;
+}
+.single-logo {
+margin-bottom: 20px;
+}
+.logo-list__content {
+padding-bottom: 20px;
+}
 }
 
 
 {% endstylesheet %}
-

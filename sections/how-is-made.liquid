@@ -1,590 +1,619 @@
 <div class="how js-step">
-    <div class="u-bg-full-black">
-      <div class="u-container u-content">
-        <div class="how-hero">
-          <h1 class="how-hero__title">{{ section.settings.title }}</h1>
-          <p class="how-hero__copy">{{ section.settings.description }}</p>
+  <div class="u-bg-full-black">
+    <div class="u-container u-content">
+      <div class="how-hero">
+        <h1 class="how-hero__title o-text is-1-smaller nocase">{{ section.settings.title }}</h1>
+        <p class="how-hero__copy o-text nocase is-3">{{ section.settings.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-step is-fullscreen">
+    <div class="c-step__container u-container u-content wider">
+      <div class="c-step__content">
+        <div class="c-step__top">
+          <div class="c-step__number js-step-number">1</div>
+          <div class="c-step__title o-text nocase">{{ section.settings.section_1_title }}</div>
+        </div>
+        <div class="c-step__layer">
+          <div class="c-step__subtitle o-text nocase is-3">{{ section.settings.section_1_box_title }}</div>
+          <div class="c-step__copy o-text nocase o-text nocase is-4 is-regular">{{
+            section.settings.section_1_box_description }}</div>
+        </div>
+      </div>
+      <div class="c-step__media">
+        {% if section.settings.section_1_box_shadow != blank %}
+        <div class="box-shadow"
+          style="background-color: rgba(0, 0, 0, {{ section.settings.section_1_box_shadow | divided_by: 100.0 }});">
+        </div>
+        {% endif %}
+        <img class="only-desk" src="{{ section.settings.section_1_image_desk | image_url }}"
+          alt="{{ section.settings.section_1_title | strip_html }}">
+        <img class="only-mob" src="{{ section.settings.section_1_image_mob | image_url }}"
+          alt="{{ section.settings.section_1_title | strip_html }}">
+      </div>
+    </div>
+  </div>
+
+  {% comment %} <div class="c-step-description">
+    <div class="u-container u-content wider">
+      <div class="c-step-description__content">
+        <div class="c-step-description__text">Establishing our manufacturing home in the Carinthia region has allowed us
+          to retain quality jobs – and create many new ones – for a workforce known for incredible high-caliber
+          production. We have been able to take advantage of a vast wealth of vested knowledge, while forging a new path
+          through emerging technologies and leading our industry with Clean Energy manufacturing.<br /><br />We feel the
+          best snowboards in the world must be built in a region with an immersive alpine history, whose people live and
+          breathe the crisp fresh air, and are exposed to the mountains from the day they were born.
+          <span>We’re proud that every CAPiTA snowboard is built upon multigenerational alpine know-how, by passionate
+            people who care deeply about the snowboarding experience.</span>
+        </div>
+        <div class="c-step-description__media">
+          <video
+            src="https://cdn.shopify.com/videos/c/vp/82cfcb9e7ca740f2baa5a3385b9609ce/82cfcb9e7ca740f2baa5a3385b9609ce.HD-720p-4.5Mbps-9290199.mp4"
+            muted="muted" loop="loop" playsinline="playsinline" autoplay="autoplay"></video>
         </div>
       </div>
     </div>
+  </div> {% endcomment %}
 
-    <div class="c-step is-fullscreen">
+  <div class="how-steps">
+    <div class="c-step">
       <div class="c-step__container u-container u-content wider">
         <div class="c-step__content">
           <div class="c-step__top">
-            <div class="c-step__number js-step-number">1</div>
-            <div class="c-step__title">{{ section.settings.section_1_title }}</div>
+            <div class="c-step__number js-step-number">2</div>
+            <div class="c-step__title o-text nocase">{{ section.settings.section_2_title }}</div>
           </div>
-          <div class="c-step__layer">
-            <div class="c-step__subtitle">{{ section.settings.section_1_box_title }}</div>
-            <div class="c-step__copy">{{ section.settings.section_1_box_description }}</div>
+          <div class="c-step__text">
+            <div class="c-step__subtitle o-text nocase is-3">{{ section.settings.section_2_sub_title }}</div>
+            <div class="c-step__copy o-text nocase is-4 is-regular">{{ section.settings.section_2_sub_text }}</div>
           </div>
         </div>
         <div class="c-step__media">
-            {% if section.settings.section_1_box_shadow != blank %}
-                <div class="box-shadow" style="background-color: rgba(0, 0, 0, {{ section.settings.section_1_box_shadow | divided_by: 100.0 }});"></div>
-            {% endif %}
-            <img class="only-desk" src="{{ section.settings.section_1_image_desk | img_url: "master" }}" alt="{{ section.settings.section_1_title | strip_html }}">
-            <img class="only-mob" src="{{ section.settings.section_1_image_mob | img_url: "master" }}" alt="{{ section.settings.section_1_title | strip_html }}">
+          <img src="{{ section.settings.section_2_image | image_url }}"
+            alt="{{ section.settings.section_2_title | strip_html }}">
+          {% comment %} <video
+            src="https://cdn.shopify.com/videos/c/vp/82cfcb9e7ca740f2baa5a3385b9609ce/82cfcb9e7ca740f2baa5a3385b9609ce.HD-720p-4.5Mbps-9290199.mp4"
+            muted="muted" loop="loop" playsinline="playsinline" autoplay="autoplay"></video> {% endcomment %}
         </div>
       </div>
     </div>
 
-    {% comment %} <div class="c-step-description">
-      <div class="u-container u-content wider">
-        <div class="c-step-description__content">
-          <div class="c-step-description__text">Establishing our manufacturing home in the Carinthia region has allowed us to retain quality jobs – and create many new ones – for a workforce known for incredible high-caliber production. We have been able to take advantage of a vast wealth of vested knowledge, while forging a new path through emerging technologies and leading our industry with Clean Energy manufacturing.<br/><br/>We feel the best snowboards in the world must be built in a region with an immersive alpine history, whose people live and breathe the crisp fresh air, and are exposed to the mountains from the day they were born.
-            <span>We’re proud that every CAPiTA snowboard is built upon multigenerational alpine know-how, by passionate people who care deeply about the snowboarding experience.</span>
+    <div class="c-step">
+      <div class="c-step__container u-container u-content wider">
+        <div class="c-step__content">
+          <div class="c-step__top">
+            <div class="c-step__number js-step-number">3</div>
+            <div class="c-step__title o-text nocase">{{ section.settings.section_3_title }}</div>
           </div>
-          <div class="c-step-description__media">
-            <video src="https://cdn.shopify.com/videos/c/vp/82cfcb9e7ca740f2baa5a3385b9609ce/82cfcb9e7ca740f2baa5a3385b9609ce.HD-720p-4.5Mbps-9290199.mp4" muted="muted" loop="loop" playsinline="playsinline" autoplay="autoplay"></video>
-          </div>
-        </div>
-      </div>
-    </div> {% endcomment %}
-
-    <div class="how-steps">
-      <div class="c-step">
-        <div class="c-step__container u-container u-content wider">
-          <div class="c-step__content">
-            <div class="c-step__top">
-              <div class="c-step__number js-step-number">2</div>
-              <div class="c-step__title">{{ section.settings.section_2_title }}</div>
-            </div>
-            <div class="c-step__text">
-              <div class="c-step__subtitle">{{ section.settings.section_2_sub_title }}</div>
-              <div class="c-step__copy">{{ section.settings.section_2_sub_text }}</div>
-            </div>
-          </div>
-          <div class="c-step__media">
-            <img src="{{ section.settings.section_2_image | img_url: "master" }}" alt="{{ section.settings.section_2_title | strip_html }}">
-            {% comment %} <video src="https://cdn.shopify.com/videos/c/vp/82cfcb9e7ca740f2baa5a3385b9609ce/82cfcb9e7ca740f2baa5a3385b9609ce.HD-720p-4.5Mbps-9290199.mp4" muted="muted" loop="loop" playsinline="playsinline" autoplay="autoplay"></video> {% endcomment %}
+          <div class="c-step__text">
+            <div class="c-step__subtitle o-text nocase is-3">{{ section.settings.section_3_sub_title }}</div>
+            <div class="c-step__copy o-text nocase is-4 is-regular">{{ section.settings.section_3_sub_text }}</div>
           </div>
         </div>
+        <div class="c-step__media">
+          <img src="{{ section.settings.section_3_image | image_url }}"
+            alt="{{ section.settings.section_2_title | strip_html }}">
+        </div>
       </div>
+    </div>
+  </div>
 
-      <div class="c-step">
-        <div class="c-step__container u-container u-content wider">
-          <div class="c-step__content">
-            <div class="c-step__top">
-                <div class="c-step__number js-step-number">3</div>
-                <div class="c-step__title">{{ section.settings.section_3_title }}</div>
-              </div>
-              <div class="c-step__text">
-                <div class="c-step__subtitle">{{ section.settings.section_3_sub_title }}</div>
-                <div class="c-step__copy">{{ section.settings.section_3_sub_text }}</div>
-              </div>
-            </div>
-          <div class="c-step__media">
-            <img src="{{ section.settings.section_3_image | img_url: "master" }}" alt="{{ section.settings.section_2_title | strip_html }}">
+  <div class="c-step is-fullscreen">
+    <div class="c-step__container u-container u-content wider">
+      <div class="c-step__content">
+        <div class="c-step__top">
+          <div class="c-step__number js-step-number">4</div>
+          <div class="c-step__title o-text nocase">{{ section.settings.section_4_title }}</div>
+        </div>
+        <div class="c-step__layer">
+          <div class="c-step__subtitle o-text nocase is-3">{{ section.settings.section_4_box_title }}</div>
+          <div class="c-step__copy o-text nocase is-4 is-regular">{{ section.settings.section_4_box_text }}</div>
+        </div>
+      </div>
+      <div class="c-step__media">
+        <img class="only-desk" src="{{ section.settings.section_4_image | image_url }}"
+          alt="{{ section.settings.section_4_title | strip_html }}">
+        <img class="only-mob" src="{{ section.settings.section_4_image_mob | image_url }}"
+          alt="{{ section.settings.section_4_title | strip_html }}">
+      </div>
+    </div>
+  </div>
+
+  <div class="how-steps">
+    <div class="c-step">
+      <div class="c-step__container u-container u-content wider">
+        <div class="c-step__content">
+          <div class="c-step__top">
+            <div class="c-step__number js-step-number">5</div>
+            <div class="c-step__title o-text nocase">{{ section.settings.section_5_title }}</div>
           </div>
+          <div class="c-step__text">
+            <div class="c-step__subtitle o-text nocase is-3">{{ section.settings.section_5_sub_title }}</div>
+            <div class="c-step__copy o-text nocase is-4 is-regular">{{ section.settings.section_5_sub_text }}</div>
+          </div>
+        </div>
+        <div class="c-step__media">
+          <img src="{{ section.settings.section_5_image | image_url }}"
+            alt="{{ section.settings.section_5_title | strip_html }}">
         </div>
       </div>
     </div>
 
-    <div class="c-step is-fullscreen">
-        <div class="c-step__container u-container u-content wider">
-          <div class="c-step__content">
-            <div class="c-step__top">
-              <div class="c-step__number js-step-number">4</div>
-              <div class="c-step__title">{{ section.settings.section_4_title }}</div>
-            </div>
-            <div class="c-step__layer">
-              <div class="c-step__subtitle">{{ section.settings.section_4_box_title }}</div>
-              <div class="c-step__copy">{{ section.settings.section_4_box_text }}</div>
-            </div>
+    <div class="c-step">
+      <div class="c-step__container u-container u-content wider">
+        <div class="c-step__content">
+          <div class="c-step__top">
+            <div class="c-step__number js-step-number">6</div>
+            <div class="c-step__title o-text nocase">{{ section.settings.section_6_title }}</div>
           </div>
-          <div class="c-step__media">
-              <img class="only-desk" src="{{ section.settings.section_4_image | img_url: "master" }}" alt="{{ section.settings.section_4_title | strip_html }}">
-              <img class="only-mob" src="{{ section.settings.section_4_image_mob | img_url: "master" }}" alt="{{ section.settings.section_4_title | strip_html }}">
+          <div class="c-step__text">
+            <div class="c-step__subtitle o-text nocase is-3">{{ section.settings.section_6_sub_title }}</div>
+            <div class="c-step__copy o-text nocase is-4 is-regular">{{ section.settings.section_6_sub_text }}</div>
           </div>
         </div>
-    </div>
-
-    <div class="how-steps">
-        <div class="c-step">
-          <div class="c-step__container u-container u-content wider">
-            <div class="c-step__content">
-              <div class="c-step__top">
-                <div class="c-step__number js-step-number">5</div>
-                <div class="c-step__title">{{ section.settings.section_5_title }}</div>
-              </div>
-              <div class="c-step__text">
-                <div class="c-step__subtitle">{{ section.settings.section_5_sub_title }}</div>
-                <div class="c-step__copy">{{ section.settings.section_5_sub_text }}</div>
-              </div>
-            </div>
-            <div class="c-step__media">
-              <img src="{{ section.settings.section_5_image | img_url: "master" }}" alt="{{ section.settings.section_5_title | strip_html }}">
-            </div>
-          </div>
+        <div class="c-step__media">
+          <img src="{{ section.settings.section_6_image | image_url }}"
+            alt="{{ section.settings.section_6_title | strip_html }}">
         </div>
-  
-        <div class="c-step">
-          <div class="c-step__container u-container u-content wider">
-            <div class="c-step__content">
-              <div class="c-step__top">
-                  <div class="c-step__number js-step-number">6</div>
-                  <div class="c-step__title">{{ section.settings.section_6_title }}</div>
-                </div>
-                <div class="c-step__text">
-                  <div class="c-step__subtitle">{{ section.settings.section_6_sub_title }}</div>
-                  <div class="c-step__copy">{{ section.settings.section_6_sub_text }}</div>
-                </div>
-              </div>
-            <div class="c-step__media">
-              <img src="{{ section.settings.section_6_image | img_url: "master" }}" alt="{{ section.settings.section_6_title | strip_html }}">
-            </div>
-          </div>
-        </div>
-
-        <div class="c-step">
-            <div class="c-step__container u-container u-content wider">
-              <div class="c-step__content">
-                <div class="c-step__top">
-                    <div class="c-step__number js-step-number">7</div>
-                    <div class="c-step__title">{{ section.settings.section_7_title }}</div>
-                  </div>
-                  <div class="c-step__text">
-                    <div class="c-step__subtitle">{{ section.settings.section_7_sub_title }}</div>
-                    <div class="c-step__copy">{{ section.settings.section_7_sub_text }}</div>
-                  </div>
-                </div>
-              <div class="c-step__media">
-                <img src="{{ section.settings.section_7_image | img_url: "master" }}" alt="{{ section.settings.section_7_title | strip_html }}">
-              </div>
-            </div>
-          </div>
-
       </div>
+    </div>
 
-      <div class="c-step is-fullscreen">
-        <div class="c-step__container u-container u-content wider">
-          <div class="c-step__content">
-            <div class="c-step__top">
-              <div class="c-step__number js-step-number">8</div>
-              <div class="c-step__title">{{ section.settings.section_8_title }}</div>
-            </div>
-            <div class="c-step__layer">
-              <div class="c-step__subtitle">{{ section.settings.section_8_box_title }}</div>
-              <div class="c-step__copy">{{ section.settings.section_8_box_text }}</div>
-            </div>
+    <div class="c-step">
+      <div class="c-step__container u-container u-content wider">
+        <div class="c-step__content">
+          <div class="c-step__top">
+            <div class="c-step__number js-step-number">7</div>
+            <div class="c-step__title o-text nocase">{{ section.settings.section_7_title }}</div>
           </div>
-          <div class="c-step__media">
-            {% assign video_8_desk = section.settings.section_8_video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
-            {% assign video_8_mob = section.settings.section_8_video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
-            <div class="only-desk">{{ video_8_desk }}</div>
-            <div class="only-mob">{{ video_8_mob }}</div>
+          <div class="c-step__text">
+            <div class="c-step__subtitle o-text nocase is-3">{{ section.settings.section_7_sub_title }}</div>
+            <div class="c-step__copy o-text nocase is-4 is-regular">{{ section.settings.section_7_sub_text }}</div>
           </div>
         </div>
+        <div class="c-step__media">
+          <img src="{{ section.settings.section_7_image | image_url }}"
+            alt="{{ section.settings.section_7_title | strip_html }}">
+        </div>
+      </div>
     </div>
-    
+
+  </div>
+
+  <div class="c-step is-fullscreen">
+    <div class="c-step__container u-container u-content wider">
+      <div class="c-step__content">
+        <div class="c-step__top">
+          <div class="c-step__number js-step-number">8</div>
+          <div class="c-step__title o-text nocase">{{ section.settings.section_8_title }}</div>
+        </div>
+        <div class="c-step__layer">
+          <div class="c-step__subtitle o-text nocase is-3">{{ section.settings.section_8_box_title }}</div>
+          <div class="c-step__copy o-text nocase is-4 is-regular">{{ section.settings.section_8_box_text }}</div>
+        </div>
+      </div>
+      <div class="c-step__media">
+        {% assign video_8_desk = section.settings.section_8_video | video_tag: image_size: 'master', autoplay: true,
+        loop: true, muted: true, controls: false %}
+        {% assign video_8_mob = section.settings.section_8_video_mob | video_tag: image_size: 'master', autoplay: true,
+        loop: true, muted: true, controls: false %}
+        <div class="only-desk">{{ video_8_desk }}</div>
+        <div class="only-mob">{{ video_8_mob }}</div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div class="text-boxes__foot">
-    <div class="text-boxes__foot__ctas">
-        {% liquid 
-            if section.settings.arrow_type_1 == "arrow_normal" 
-                assign arrow_cta_1 = "icon-arrow-capita"
-            elsif section.settings.arrow_type_1 == "arrow_play" 
-                assign arrow_cta_1 = "icon-arrow-play"
-            else 
-                assign arrow_cta_1 = blank
-            endif
-        -%}
-        {% if section.settings.cta_text_1 != blank %}
-            <a class="btn btn-secondary black text-boxes__foot__btn js-modal-youtube">{{ section.settings.cta_text_1 }} {% if arrow_cta_1 != blank %}{% include arrow_cta_1 %}{% endif %}</a>
-        {% endif %}
-        {% liquid 
-            if section.settings.arrow_type_2 == "arrow_normal" 
-                assign arrow_cta_2 = "icon-arrow-capita"
-            elsif section.settings.arrow_type_2 == "arrow_play" 
-                assign arrow_cta_2 = "icon-arrow-play"
-            else 
-                assign arrow_cta_2 = blank
-            endif
-        -%}
-        {% if section.settings.cta_text_2 != blank %}
-            <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{ section.settings.cta_text_2 }} {% if arrow_cta_2 != blank %}{% include arrow_cta_2 %}{% endif %}</a>
-        {% endif %}
-        {% liquid 
-            if section.settings.arrow_type_3 == "arrow_normal" 
-                assign arrow_cta_3 = "icon-arrow-capita"
-            elsif section.settings.arrow_type_3 == "arrow_play" 
-                assign arrow_cta_3 = "icon-arrow-play"
-            else 
-                assign arrow_cta_3 = blank
-            endif
-        -%}
-        {% if section.settings.cta_text_3 != blank %}
-            <a class="btn btn-secondary black text-boxes__foot__btn" href="{{ section.settings.cta_link_3 }}">{{ section.settings.cta_text_3 }} {% if arrow_cta_3 != blank %}{% include arrow_cta_3 %}{% endif %}</a>
-        {% endif %}
-    </div>
+  <div class="text-boxes__foot__ctas">
+    {% liquid
+    if section.settings.arrow_type_1 == "arrow_normal"
+    assign arrow_cta_1 = "icon-arrow-capita"
+    elsif section.settings.arrow_type_1 == "arrow_play"
+    assign arrow_cta_1 = "icon-arrow-play"
+    else
+    assign arrow_cta_1 = blank
+    endif
+    -%}
+    {% if section.settings.cta_text_1 != blank %}
+    <a class="o-btn is-big black text-boxes__foot__btn js-modal-youtube">{{ section.settings.cta_text_1 }} {% if
+      arrow_cta_1 != blank %}{% include arrow_cta_1 %}{% endif %}</a>
+    {% endif %}
+    {% liquid
+    if section.settings.arrow_type_2 == "arrow_normal"
+    assign arrow_cta_2 = "icon-arrow-capita"
+    elsif section.settings.arrow_type_2 == "arrow_play"
+    assign arrow_cta_2 = "icon-arrow-play"
+    else
+    assign arrow_cta_2 = blank
+    endif
+    -%}
+    {% if section.settings.cta_text_2 != blank %}
+    <a class="o-btn is-big black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{
+      section.settings.cta_text_2 }} {% if arrow_cta_2 != blank %}{% include arrow_cta_2 %}{% endif %}</a>
+    {% endif %}
+    {% liquid
+    if section.settings.arrow_type_3 == "arrow_normal"
+    assign arrow_cta_3 = "icon-arrow-capita"
+    elsif section.settings.arrow_type_3 == "arrow_play"
+    assign arrow_cta_3 = "icon-arrow-play"
+    else
+    assign arrow_cta_3 = blank
+    endif
+    -%}
+    {% if section.settings.cta_text_3 != blank %}
+    <a class="o-btn is-big black text-boxes__foot__btn" href="{{ section.settings.cta_link_3 }}">{{
+      section.settings.cta_text_3 }} {% if arrow_cta_3 != blank %}{% include arrow_cta_3 %}{% endif %}</a>
+    {% endif %}
+  </div>
 </div>
 
 {% if section.settings.cta_link_yt != blank %}
-  <div class="modal-youtube hide">
-      <div class="modal-youtube__close js-modal-youtube-close">{% include 'icon-close' %}</div>
-      <iframe width="90%" height="80%" src="{{ section.settings.cta_link_yt }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
+<div class="modal-youtube hide">
+  <div class="modal-youtube__close js-modal-youtube-close">{% include 'icon-close' %}</div>
+  <iframe width="90%" height="80%" src="{{ section.settings.cta_link_yt }}" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
 {% endif %}
 
 {% schema %}
-  {
-    "name": "How is Made",
-    "settings": [
-        {
-            "type": "html",
-            "id": "title",
-            "label": "Title"
-        },
-        {
-            "type": "html",
-            "id": "description",
-            "label": "Title"
-        },
-        {
-            "type": "html",
-            "id": "section_1_title",
-            "label": "Section 1 Title"
-        },
-        {
-            "type": "html",
-            "id": "section_1_box_title",
-            "label": "Section 1 Box Title"
-        },
-        {
-            "type": "html",
-            "id": "section_1_box_description",
-            "label": "Section 1 Box Description"
-        },
-        {
-            "type": "image_picker",
-            "id": "section_1_image_desk",
-            "label": "Section 1 image Desk"
-        },
-        {
-            "type": "image_picker",
-            "id": "section_1_image_mob",
-            "label": "Section 1 image Mob"
-        },
-        {
-            "type": "number",
-            "id": "section_1_box_shadow",
-            "label": "Section 1 Box Shadow"
-        },
-        {
-            "type": "html",
-            "id": "section_2_title",
-            "label": "Section 2 Title"
-        },
-        {
-            "type": "html",
-            "id": "section_2_sub_title",
-            "label": "Section 2 Sub Title"
-        },
-        {
-            "type": "html",
-            "id": "section_2_sub_text",
-            "label": "Section 2 Sub text"
-        },
-        {
-            "type": "image_picker",
-            "id": "section_2_image",
-            "label": "Section 2 Image"
-        },
-        {
-            "type": "html",
-            "id": "section_3_title",
-            "label": "Section 3 Title"
-        },
-        {
-            "type": "html",
-            "id": "section_3_sub_title",
-            "label": "Section 3 Sub Title"
-        },
-        {
-            "type": "html",
-            "id": "section_3_sub_text",
-            "label": "Section 3 Sub text"
-        },
-        {
-            "type": "image_picker",
-            "id": "section_3_image",
-            "label": "Section 3 Image"
-        },
-        {
-            "type": "html",
-            "id": "section_4_title",
-            "label": "Section 4 Title"
-        },
-        {
-            "type": "html",
-            "id": "section_4_box_title",
-            "label": "Section 4 Box Title"
-        },
-        {
-            "type": "html",
-            "id": "section_4_box_text",
-            "label": "Section 4 Box text"
-        },
-        {
-            "type": "image_picker",
-            "id": "section_4_image",
-            "label": "Section 4 Image Desk"
-        },
-        {
-            "type": "image_picker",
-            "id": "section_4_image_mob",
-            "label": "Section 4 Image Mob"
-        },
-        {
-            "type": "html",
-            "id": "section_5_title",
-            "label": "Section 5 Title"
-        },
-        {
-            "type": "html",
-            "id": "section_5_sub_title",
-            "label": "Section 5 Sub Title"
-        },
-        {
-            "type": "html",
-            "id": "section_5_sub_text",
-            "label": "Section 5 Sub text"
-        },
-        {
-            "type": "image_picker",
-            "id": "section_5_image",
-            "label": "Section 5 Image"
-        },
-        {
-            "type": "html",
-            "id": "section_6_title",
-            "label": "Section 6 Title"
-        },
-        {
-            "type": "html",
-            "id": "section_6_sub_title",
-            "label": "Section 6 Sub Title"
-        },
-        {
-            "type": "html",
-            "id": "section_6_sub_text",
-            "label": "Section 6 Sub text"
-        },
-        {
-            "type": "image_picker",
-            "id": "section_6_image",
-            "label": "Section 6 Image"
-        },
-        {
-            "type": "html",
-            "id": "section_7_title",
-            "label": "Section 7 Title"
-        },
-        {
-            "type": "html",
-            "id": "section_7_sub_title",
-            "label": "Section 7 Sub Title"
-        },
-        {
-            "type": "html",
-            "id": "section_7_sub_text",
-            "label": "Section 7 Sub text"
-        },
-        {
-            "type": "image_picker",
-            "id": "section_7_image",
-            "label": "Section 7 Image"
-        },
-        {
-            "type": "html",
-            "id": "section_8_title",
-            "label": "Section 8 Title"
-        },
-        {
-            "type": "html",
-            "id": "section_8_box_title",
-            "label": "Section 8 Box Title"
-        },
-        {
-            "type": "html",
-            "id": "section_8_box_text",
-            "label": "Section 8 Box text"
-        },
-        {
-            "type": "video",
-            "id": "section_8_video",
-            "label": "Section 8 Video"
-        },
-        {
-            "type": "video",
-            "id": "section_8_video_mob",
-            "label": "Section 8 Video Mob"
-        },
-        {
-            "type": "text",
-            "id": "cta_text_1",
-            "label": "CTA Text 1"
-        },
-        {
-            "type": "url",
-            "id": "cta_link_yt",
-            "label": "Link youtube modal"
-        },
-        {
-            "type": "select",
-            "id": "arrow_type_1",
-            "label": "Arrow Type",
-            "options": [
-              {
-                "value": "none",
-                "label": "None"
-              },
-              {
-                "value": "arrow_normal",
-                "label": "Arrow Normal"
-              },
-              {
-                "value": "arrow_play",
-                "label": "Arrow Play"
-              }
-            ],
-            "default": "none"
-        },
-        {
-            "type": "text",
-            "id": "cta_text_2",
-            "label": "CTA Text 2"
-        },
-        {
-            "type": "url",
-            "id": "cta_link_2",
-            "label": "CTA Link 2"
-        },
-        {
-            "type": "select",
-            "id": "arrow_type_2",
-            "label": "Arrow Type",
-            "options": [
-              {
-                "value": "none",
-                "label": "None"
-              },
-              {
-                "value": "arrow_normal",
-                "label": "Arrow Normal"
-              },
-              {
-                "value": "arrow_play",
-                "label": "Arrow Play"
-              }
-            ],
-            "default": "none"
-        },
-        {
-            "type": "text",
-            "id": "cta_text_3",
-            "label": "CTA Text 3"
-        },
-        {
-            "type": "url",
-            "id": "cta_link_3",
-            "label": "CTA Link 3"
-        },
-        {
-            "type": "select",
-            "id": "arrow_type_3",
-            "label": "Arrow Type",
-            "options": [
-              {
-                "value": "none",
-                "label": "None"
-              },
-              {
-                "value": "arrow_normal",
-                "label": "Arrow Normal"
-              },
-              {
-                "value": "arrow_play",
-                "label": "Arrow Play"
-              }
-            ],
-            "default": "none"
-        }
-    ],
-    "presets": [
-        {
-            "name": "How is Made"
-        }
-    ]
-  }
+{
+"name": "How is Made",
+"settings": [
+{
+"type": "html",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "html",
+"id": "description",
+"label": "Title"
+},
+{
+"type": "html",
+"id": "section_1_title",
+"label": "Section 1 Title"
+},
+{
+"type": "html",
+"id": "section_1_box_title",
+"label": "Section 1 Box Title"
+},
+{
+"type": "html",
+"id": "section_1_box_description",
+"label": "Section 1 Box Description"
+},
+{
+"type": "image_picker",
+"id": "section_1_image_desk",
+"label": "Section 1 image Desk"
+},
+{
+"type": "image_picker",
+"id": "section_1_image_mob",
+"label": "Section 1 image Mob"
+},
+{
+"type": "number",
+"id": "section_1_box_shadow",
+"label": "Section 1 Box Shadow"
+},
+{
+"type": "html",
+"id": "section_2_title",
+"label": "Section 2 Title"
+},
+{
+"type": "html",
+"id": "section_2_sub_title",
+"label": "Section 2 Sub Title"
+},
+{
+"type": "html",
+"id": "section_2_sub_text",
+"label": "Section 2 Sub text"
+},
+{
+"type": "image_picker",
+"id": "section_2_image",
+"label": "Section 2 Image"
+},
+{
+"type": "html",
+"id": "section_3_title",
+"label": "Section 3 Title"
+},
+{
+"type": "html",
+"id": "section_3_sub_title",
+"label": "Section 3 Sub Title"
+},
+{
+"type": "html",
+"id": "section_3_sub_text",
+"label": "Section 3 Sub text"
+},
+{
+"type": "image_picker",
+"id": "section_3_image",
+"label": "Section 3 Image"
+},
+{
+"type": "html",
+"id": "section_4_title",
+"label": "Section 4 Title"
+},
+{
+"type": "html",
+"id": "section_4_box_title",
+"label": "Section 4 Box Title"
+},
+{
+"type": "html",
+"id": "section_4_box_text",
+"label": "Section 4 Box text"
+},
+{
+"type": "image_picker",
+"id": "section_4_image",
+"label": "Section 4 Image Desk"
+},
+{
+"type": "image_picker",
+"id": "section_4_image_mob",
+"label": "Section 4 Image Mob"
+},
+{
+"type": "html",
+"id": "section_5_title",
+"label": "Section 5 Title"
+},
+{
+"type": "html",
+"id": "section_5_sub_title",
+"label": "Section 5 Sub Title"
+},
+{
+"type": "html",
+"id": "section_5_sub_text",
+"label": "Section 5 Sub text"
+},
+{
+"type": "image_picker",
+"id": "section_5_image",
+"label": "Section 5 Image"
+},
+{
+"type": "html",
+"id": "section_6_title",
+"label": "Section 6 Title"
+},
+{
+"type": "html",
+"id": "section_6_sub_title",
+"label": "Section 6 Sub Title"
+},
+{
+"type": "html",
+"id": "section_6_sub_text",
+"label": "Section 6 Sub text"
+},
+{
+"type": "image_picker",
+"id": "section_6_image",
+"label": "Section 6 Image"
+},
+{
+"type": "html",
+"id": "section_7_title",
+"label": "Section 7 Title"
+},
+{
+"type": "html",
+"id": "section_7_sub_title",
+"label": "Section 7 Sub Title"
+},
+{
+"type": "html",
+"id": "section_7_sub_text",
+"label": "Section 7 Sub text"
+},
+{
+"type": "image_picker",
+"id": "section_7_image",
+"label": "Section 7 Image"
+},
+{
+"type": "html",
+"id": "section_8_title",
+"label": "Section 8 Title"
+},
+{
+"type": "html",
+"id": "section_8_box_title",
+"label": "Section 8 Box Title"
+},
+{
+"type": "html",
+"id": "section_8_box_text",
+"label": "Section 8 Box text"
+},
+{
+"type": "video",
+"id": "section_8_video",
+"label": "Section 8 Video"
+},
+{
+"type": "video",
+"id": "section_8_video_mob",
+"label": "Section 8 Video Mob"
+},
+{
+"type": "text",
+"id": "cta_text_1",
+"label": "CTA Text 1"
+},
+{
+"type": "url",
+"id": "cta_link_yt",
+"label": "Link youtube modal"
+},
+{
+"type": "select",
+"id": "arrow_type_1",
+"label": "Arrow Type",
+"options": [
+{
+"value": "none",
+"label": "None"
+},
+{
+"value": "arrow_normal",
+"label": "Arrow Normal"
+},
+{
+"value": "arrow_play",
+"label": "Arrow Play"
+}
+],
+"default": "none"
+},
+{
+"type": "text",
+"id": "cta_text_2",
+"label": "CTA Text 2"
+},
+{
+"type": "url",
+"id": "cta_link_2",
+"label": "CTA Link 2"
+},
+{
+"type": "select",
+"id": "arrow_type_2",
+"label": "Arrow Type",
+"options": [
+{
+"value": "none",
+"label": "None"
+},
+{
+"value": "arrow_normal",
+"label": "Arrow Normal"
+},
+{
+"value": "arrow_play",
+"label": "Arrow Play"
+}
+],
+"default": "none"
+},
+{
+"type": "text",
+"id": "cta_text_3",
+"label": "CTA Text 3"
+},
+{
+"type": "url",
+"id": "cta_link_3",
+"label": "CTA Link 3"
+},
+{
+"type": "select",
+"id": "arrow_type_3",
+"label": "Arrow Type",
+"options": [
+{
+"value": "none",
+"label": "None"
+},
+{
+"value": "arrow_normal",
+"label": "Arrow Normal"
+},
+{
+"value": "arrow_play",
+"label": "Arrow Play"
+}
+],
+"default": "none"
+}
+],
+"presets": [
+{
+"name": "How is Made"
+}
+]
+}
 {% endschema %}
 
 {% style %}
 
 .c-step__media .only-mob {
-    display: none;
+display: none;
 }
 .text-boxes__foot__ctas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 .text-boxes__foot__ctas a {
-    margin-bottom: 20px;
+margin-bottom: 20px;
 }
 a.btn.btn-secondary.black.text-boxes__foot__btn {
-    width: 100%;
-    max-width: 740px;
-    padding: 0 20px;
+width: 100%;
+max-width: 740px;
+padding: 0 20px;
 }
 .modal-youtube {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #0000007d;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
-    z-index: 999;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background: #0000007d;
+display: flex;
+justify-content: center;
+height: 100vh;
+align-items: center;
+z-index: 999;
 }
 .modal-youtube.hide {
-    display: none;
+display: none;
 }
 .modal-youtube__close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+position: absolute;
+top: 20px;
+right: 20px;
 }
 .modal-youtube__close svg {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    padding: 3px;
-    border: 1px solid;
-    background: #ffffffd1;
-    cursor: pointer;
+height: 50px;
+width: 50px;
+border-radius: 50%;
+padding: 3px;
+border: 1px solid;
+background: #ffffffd1;
+cursor: pointer;
 }
 .js-modal-youtube {
-    cursor: pointer;
+cursor: pointer;
 }
 @media screen and (max-width: 768px) {
-    .c-step__media .only-mob {
-        display: block;
-    } 
-    .c-step__media .only-desk {
-        display: none;
-    }
-    .text-boxes__foot__ctas {
-        padding: 0 20px;
-    }
-    .modal-youtube iframe {
-        height: 30% !important;
-    }
+.c-step__media .only-mob {
+display: block;
+}
+.c-step__media .only-desk {
+display: none;
+}
+.text-boxes__foot__ctas {
+padding: 0 20px;
+}
+.modal-youtube iframe {
+height: 30% !important;
+}
 }
 
 {% endstyle %}
@@ -594,43 +623,43 @@ a.btn.btn-secondary.black.text-boxes__foot__btn {
 
 (function() {
 
-    let selectors = {
-        videoModalYT: '.modal-youtube',
-        iframeVideoModalYT: '.modal-youtube iframe',
-        ctaTextVideoCtaModal: '.js-modal-youtube',
-        videoModalYTClose: '.js-modal-youtube-close',
+let selectors = {
+videoModalYT: '.modal-youtube',
+iframeVideoModalYT: '.modal-youtube iframe',
+ctaTextVideoCtaModal: '.js-modal-youtube',
+videoModalYTClose: '.js-modal-youtube-close',
 
-    };
+};
 
-    let videoModalYT = document.querySelector(selectors.videoModalYT);
-    let iframeVideoModalYT = document.querySelector(selectors.iframeVideoModalYT);
-    let ctaTextVideoCtaModal = document.querySelector(selectors.ctaTextVideoCtaModal);
-    let videoModalYTClose = document.querySelector(selectors.videoModalYTClose);
+let videoModalYT = document.querySelector(selectors.videoModalYT);
+let iframeVideoModalYT = document.querySelector(selectors.iframeVideoModalYT);
+let ctaTextVideoCtaModal = document.querySelector(selectors.ctaTextVideoCtaModal);
+let videoModalYTClose = document.querySelector(selectors.videoModalYTClose);
 
-    
-    if (videoModalYT) {
 
-        let iframeVideoModalYT__src = iframeVideoModalYT.getAttribute("src")
-        
-        ctaTextVideoCtaModal.addEventListener("click", function(){
-            videoModalYT.classList.remove("hide")
-            iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=1")
-        })
-        videoModalYTClose.addEventListener("click", function(){
-            videoModalYT.classList.add("hide")
-            iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=0")
-    
-        })
-        videoModalYT.addEventListener('click', function(e){   
-            if (!iframeVideoModalYT.contains(e.target)){
-                videoModalYT.classList.add("hide")
-                iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=0")
-    
-            } 
-        });
-    }
-  
+if (videoModalYT) {
+
+let iframeVideoModalYT__src = iframeVideoModalYT.getAttribute("src")
+
+ctaTextVideoCtaModal.addEventListener("click", function(){
+videoModalYT.classList.remove("hide")
+iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=1")
+})
+videoModalYTClose.addEventListener("click", function(){
+videoModalYT.classList.add("hide")
+iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=0")
+
+})
+videoModalYT.addEventListener('click', function(e){
+if (!iframeVideoModalYT.contains(e.target)){
+videoModalYT.classList.add("hide")
+iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=0")
+
+}
+});
+}
+
 })();
-  
+
 
 {% endjavascript %}

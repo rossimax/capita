@@ -50,7 +50,7 @@ button:hover:not(.c-header__menu-item) span,
   .title {
     font-size: 36px;
   }
-} 
+}
 /* END GENERAL */
 
 /* START LAYOUT */
@@ -118,13 +118,12 @@ button:hover:not(.c-header__menu-item) span,
 }
 @media screen and (min-width: 48em) {
   .padding-inline {
-      padding-inline: 70px;
+    padding-inline: 70px;
   }
 }
 @media screen and (min-width: 100em) {
   .padding-inline {
-      padding-inline: 155px;
-
+    padding-inline: 155px;
   }
 }
 .text-white {
@@ -251,21 +250,38 @@ main.template-payments {
   color: #000;
   font-size: 18px;
   font-weight: 600;
-  letter-spacing: -.01em;
-  line-height: .7;
+  letter-spacing: -0.01em;
+  line-height: 0.7;
   text-transform: uppercase;
   gap: 8px;
   min-width: 340px;
   text-decoration: none;
 }
+.o-btn.is-big {
+  border: 1px solid #000;
+  font-size: 24px;
+  padding-block: 24px;
+}
+
+.o-btn.is-big svg {
+  filter: invert(1);
+}
+
+@media only screen and (max-width: 768px) {
+  .o-btn.is-big {
+    padding-block: 21px;
+    font-size: 18px;
+  }
+}
 
 .btn.btn-secondary {
+  font-size: 28px;
   background: transparent;
   color: #fff;
   height: 65px;
   border-radius: 30px;
   padding: 21px 20px;
-  min-width: 340px;
+  width: 100%;
   border: 1px solid #fff;
   transition-duration: 0.2s;
 }
@@ -299,7 +315,7 @@ main.template-payments {
 }
 .btn.btn-secondary.black .icon-arrow-play {
   width: 16px;
-  height: 16px;;
+  height: 16px;
   margin-left: 5px;
 }
 .btn.btn-secondary.black:hover svg {
@@ -508,17 +524,17 @@ footer label.c-slim-form__legal span {
   background-color: #000;
 }
 span.input-error-message.site_newsletter-error {
-    color: red;
-    font-size: 12px;
-    margin-left: 20px;
+  color: red;
+  font-size: 12px;
+  margin-left: 20px;
 }
 .c-related-products {
-    background-image: url(//capitasnowboarding.com/cdn/shop/files/000_GRID_PAPER_BG_1_77e3e65d-56ba-4a1f-a70b-76408f3b3cbf.png?v=1690637051);
-    background-color: #000;
-    color: #fff;
+  background-image: url(//capitasnowboarding.com/cdn/shop/files/000_GRID_PAPER_BG_1_77e3e65d-56ba-4a1f-a70b-76408f3b3cbf.png?v=1690637051);
+  background-color: #000;
+  color: #fff;
 }
 .c-related-products a {
-    text-decoration: none;
+  text-decoration: none;
 }
 /* width */
 .c-listing-filter__wrapper::-webkit-scrollbar {
@@ -563,8 +579,8 @@ h1.cart__empty-text {
     font-size: 36px;
   }
   .pdp-head-image img {
-      height: 240px;
-      object-fit: cover;
+    height: 240px;
+    object-fit: cover;
   }
   .c-listing-filter__option input {
     border-radius: 50%;
@@ -578,13 +594,11 @@ h1.cart__empty-text {
 }
 @media screen and (min-width: 990px) {
   .cart__warnings {
-      padding: 15rem 0 1rem;
+    padding: 15rem 0 1rem;
   }
 }
 
 /* END FIX */
-
-
 
 /* START LEGALS */
 
@@ -597,10 +611,9 @@ h1.cart__empty-text {
   font-size: 70px;
   font-weight: 700;
   letter-spacing: normal;
-  line-height: .9;
+  line-height: 0.9;
   text-transform: uppercase;
 }
-
 
 .content-for-layout .shopify-policy__container table,
 .content-for-layout .shopify-policy__container tr,

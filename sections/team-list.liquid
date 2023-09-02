@@ -3,115 +3,117 @@
         <div class="u-content">
             <div class="team-list">
                 {% for block in section.blocks %}
-                    <div class="team-list__card">
-                        {% if section.settings.hide_all_riders_link %}
-                            <a>
-                                <img class="team-list__card__image" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.name | strip_html }}">
-                                <div class="team-list__card__name medium">
-                                    <span>{{ block.settings.name }}</span>
-                                </div>
-                            </a>
-                        {% else %}
-                            <a href="{{ block.settings.link_url }}">
-                                <img class="team-list__card__image" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.name | strip_html }}">
-                                <div class="team-list__card__name medium">
-                                    <span>{{ block.settings.name }}</span>
-                                </div>
-                            </a>
-                        {% endif %}
-                    </div>
-                {% endfor%}
+                <div class="team-list__card">
+                    {% if section.settings.hide_all_riders_link %}
+                    <a>
+                        <img class="team-list__card__image" src="{{ block.settings.image | image_url }}"
+                            alt="{{ block.settings.name | strip_html }}">
+                        <div class="team-list__card__name medium">
+                            <span>{{ block.settings.name }}</span>
+                        </div>
+                    </a>
+                    {% else %}
+                    <a href="{{ block.settings.link_url }}">
+                        <img class="team-list__card__image" src="{{ block.settings.image | image_url }}"
+                            alt="{{ block.settings.name | strip_html }}">
+                        <div class="team-list__card__name medium">
+                            <span>{{ block.settings.name }}</span>
+                        </div>
+                    </a>
+                    {% endif %}
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 </div>
 
 {% schema %}
-  {
-    "name": "Team List",
-    "settings": [
-        {
-            "type": "checkbox",
-            "id": "hide_all_riders_link",
-            "label": "Hide all riders link"
-        }
-    ],
-    "blocks": [
-        {
-            "type": "team_list",
-            "name": "Team Card",
-            "settings": [
-                {
-                    "type": "image_picker",
-                    "id": "image",
-                    "label": "Image"
-                },
-                {
-                    "type": "url",
-                    "id": "link_url",
-                    "label": "Url"
-                },
-                {
-                    "type": "text",
-                    "id": "name",
-                    "label": "Name"
-                }
-            ]
-        }
-    ],
-    "presets": [
-        {
-            "name": "Team List"
-        }
-    ]
-  }
+{
+"name": "Team List",
+"settings": [
+{
+"type": "checkbox",
+"id": "hide_all_riders_link",
+"label": "Hide all riders link"
+}
+],
+"blocks": [
+{
+"type": "team_list",
+"name": "Team Card",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+},
+{
+"type": "url",
+"id": "link_url",
+"label": "Url"
+},
+{
+"type": "text",
+"id": "name",
+"label": "Name"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Team List"
+}
+]
+}
 {% endschema %}
 
 
 {% stylesheet %}
 .team-list {
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+max-width: 1440px;
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
 .team-list__card {
-    margin: 10px;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    width: calc(25% - 20px);
+margin: 10px;
+border: 1px solid #fff;
+border-radius: 20px;
+width: calc(25% - 20px);
 }
 .team-list__card a {
-    text-decoration: none;
+text-decoration: none;
 }
 img.team-list__card__image {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    object-fit: cover;
-    width: 100%;
-    aspect-ratio: 1/1;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+object-fit: cover;
+width: 100%;
+aspect-ratio: 1/1;
 }
 .team-list__card__name {
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    border-top: 1px solid #fff;
+width: 100%;
+text-align: center;
+padding: 20px 0;
+color: #fff;
+font-size: 18px;
+font-weight: 600;
+border-top: 1px solid #fff;
 }
 
 @media screen and (max-width: 991px) {
-    .team-list__card {
-        width: calc(50% - 20px);
-    }
-    img.team-list__card__image {
-        height: 175px;
-    }
-    .team-list__card__name {
-        padding: 10px 0;
-    }
+.team-list__card {
+width: calc(50% - 20px);
+}
+img.team-list__card__image {
+height: 175px;
+}
+.team-list__card__name {
+padding: 10px 0;
+}
 }
 
 {% endstylesheet %}

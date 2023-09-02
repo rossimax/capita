@@ -1,102 +1,116 @@
 <div class="section-contact-form">
 
-    {% form 'contact' %}
+  {% form 'contact' %}
 
-        {{ form.errors | default_errors }}
-      
-        <div class="row">
-            <div class="form-item two-quarter">
-            <input type="text" name="contact[first_name]" id="first-name" placeholder="ENTER NAME"/>
-            </div>
-        
-            <div class="form-item two-quarter">
-            <input type="email" name="contact[email]" id="email" placeholder="ENTER EMAIL"/>
-            </div>
-        </div>
+  {{ form.errors | default_errors }}
 
-        <div class="form-item">
-          <input type="tel" name="contact[phone]" id="phone" placeholder="PHONE NUMBER"/>
-        </div>
-      
-        <div class="form-item">
-          <textarea name="contact[body]" id="message" placeholder="ENTER MESSAGE" rows="10"></textarea>
-        </div>
-      
-        <div class="row row-form-foot">
-            <label class="form-item__legal">
-                <input type="checkbox" name="contact[privacy]">
-                <span>Capita Privacy Policy and I consent to the processing of my personal data for marketing and profiling purposes.</span>
-            </label>
+  <div class="form-item half">
+    <input type="text" name="contact[first_name]" id="first-name" placeholder="ENTER NAME" />
+  </div>
 
-            <div class="form-item form-item--submit">
-              <input class="btn btn-primary black" type="submit" value="Send" />
-            </div>
-        </div>
+  <div class="form-item half">
+    <input type="email" name="contact[email]" id="email" placeholder="ENTER EMAIL" />
+  </div>
 
-      {% endform %}
+  <div class="form-item">
+    <input type="tel" name="contact[phone]" id="phone" placeholder="PHONE NUMBER" />
+  </div>
+
+  <div class="form-item">
+    <textarea name="contact[body]" id="message" placeholder="ENTER MESSAGE" rows="10"></textarea>
+  </div>
+
+  <label class="form-item__legal">
+    <input type="checkbox" name="contact[privacy]">
+    <span>Capita Privacy Policy and I consent to the processing of my personal data for marketing and profiling
+      purposes.</span>
+  </label>
+
+  <div class="form-item--submit">
+    <input class="o-btn is-black" type="submit" value="Send" />
+  </div>
+
+  {% endform %}
 
 </div>
 
 {% schema %}
-  {
-    "name": "Contact form",
-    "tag": "section",
-    "class": "shopify-section--contact-form three-quarter",
-    "presets": [
-        {
-            "name": "Contact form"
-        }
-    ]
-  }
+{
+"name": "Contact form",
+"tag": "section",
+"class": "shopify-section--contact-form three-quarter",
+"presets": [
+{
+"name": "Contact form"
+}
+]
+}
 {% endschema %}
 
 {% stylesheet %}
 
 .section-contact-form .form-item input,
 .section-contact-form .form-item textarea {
-    width: 100%;
-    padding: 15px 20px;
-    border: 1px solid #000;
-    border-radius: 10px;
-    color: #000;
-    margin-bottom: 10px;
-    font-weight: 500;
+width: 100%;
+padding: 15px 20px;
+border: 1px solid #000;
+border-radius: 10px;
+color: #000;
+font-weight: 500;
 }
 .section-contact-form .row .form-item:first-child {
-    padding-right: 20px;
+padding-right: 20px;
 }
 .section-contact-form .row .form-item:last-child {
-    padding-left: 20px;
+padding-left: 20px;
 }
 .section-contact-form .form-item input::placeholder,
 .section-contact-form .form-item textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #000;
-  opacity: 1; /* Firefox */
+color: #000;
+opacity: 1; /* Firefox */
 }
 .section-contact-form .form-item input:-ms-input-placeholder,
 .section-contact-form .form-item textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #000;
+color: #000;
 }
 .section-contact-form .form-item input::-ms-input-placeholder,
 .section-contact-form .form-item textarea::-ms-input-placeholder { /* Microsoft Edge */
-  color: #000;
+color: #000;
 }
 .section-contact-form input.btn.btn-primary.black {
-    max-width: 200px;
-    float: right;
-    font-size: 16px;
-    padding: 10px 20px;
-    min-width: 190px;
-    height: 44px;
-    cursor: pointer;
+max-width: 200px;
+float: right;
+font-size: 16px;
+padding: 10px 20px;
+min-width: 190px;
+height: 44px;
+cursor: pointer;
 }
 .section-contact-form .form-item__legal span {
-    line-height: 1;
-    font-size: 14px;
+line-height: 1;
+font-size: 14px;
 }
 .section-contact-form .row.row-form-foot {
-    justify-content: space-between;
+justify-content: space-between;
 }
 
+.contact-form {
+display:grid;
+grid-gap:12px;
+}
+
+.contact-form > * {
+width:100%;
+}
+
+@media screen and (min-width: 1024px) {
+.contact-form {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-form > *:not(.half) {
+grid-column-end: span 2;
+}
+}
 
 {% endstylesheet %}

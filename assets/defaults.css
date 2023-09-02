@@ -36,8 +36,14 @@ bl {
   font-weight: 600;
   line-height: 1;
 }
-a:not(.c-menu-item):not(.c-header__menu-item):hover,
-a:not(.c-menu-item):not(.c-header__menu-item):hover span,
+
+a:not(.team-boards-content__single):not(.c-menu-item):not(
+    .c-header__menu-item
+  ):hover,
+a:not(.team-boards-content__single):not(.c-menu-item):not(
+    .c-header__menu-item
+  ):hover
+  span,
 button:hover:not(.c-header__menu-item),
 button:hover:not(.c-header__menu-item) span,
 .js-filter-clean:hover {
@@ -163,6 +169,7 @@ main.template-payments {
   main.template-returns,
   main.template-payments {
     padding: 70px;
+    padding-top: calc(var(--header-bar) + 70px);
   }
 }
 @media screen and (max-width: 768px) {
@@ -175,6 +182,7 @@ main.template-payments {
   main.template-returns,
   main.template-payments {
     padding: 20px;
+    padding-top: calc(var(--header-bar) + 20px);
   }
 }
 
@@ -262,12 +270,18 @@ main.template-payments {
   text-transform: uppercase;
   gap: 8px;
   min-width: 340px;
+  cursor: pointer;
   text-decoration: none;
 }
 .o-btn.is-big {
   border: 1px solid #000;
   font-size: 24px;
   padding-block: 24px;
+}
+
+.o-btn.is-black {
+  background-color: #000;
+  color: #fff;
 }
 
 .o-btn.is-big svg {
@@ -400,9 +414,13 @@ main.template-payments {
 /* END COMPONENTS */
 
 /* START FIX */
+.c-slim-form__title {
+  margin-bottom: 8px;
+  text-align: left;
+  display: block;
+}
 .c-slim-form .c-slim-form__title {
   font-size: 15px;
-  text-align: left;
 }
 .c-slim-form label.c-slim-form__legal {
   line-height: 1;

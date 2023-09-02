@@ -79,10 +79,24 @@
 .team-head__content {
     width: calc(100% * 1/3);
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-content: bottom;
     padding-top: 40px;
+    padding-inline: 50px;
+    gap: 12px;
 }
+@media screen and (min-width: 768px) {
+.team-head__content {
+    padding-left: 70px;
+}    
+}
+
+@media screen and (min-width: 1600px) {
+.team-head__content {
+    padding-left: 155px;
+}    
+}
+
 .team-head__infos {
     color: #fff;
     text-align: right;
@@ -97,16 +111,12 @@
 .team-head__infos h1 {
     font-size: 80px;
     font-weight: 600;
-    margin: 0;
     line-height: 1;
-    margin-left: 20px;
     text-transform: uppercase;
 }
 .team-head__image {
     display: flex;
     align-items: end;
-    margin-right: 40px;
-    margin-left: 40px;
     border-radius: 20px;
 }
 .team-head__image img {
@@ -145,10 +155,6 @@
 }
 
 @media screen and (max-width: 991px) {
-    .team-head__content {
-        justify-content: center;
-        padding: 50px;
-    } 
     .team-head {
         flex-direction: column-reverse;
     }

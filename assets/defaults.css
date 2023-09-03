@@ -722,7 +722,7 @@ p.shopify-challenge__message {
   text-transform: uppercase;
   cursor:pointer;
 }
-.customer input {
+.customer .field input {
   border: 1px solid #000;
 }
 /* END ACCOUNT */

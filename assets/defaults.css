@@ -699,4 +699,27 @@ p.shopify-challenge__message {
 .template-404.page-width.page-margin.center a {
   color: #000;
 }
+.customer.account a {
+  color: #000;
+}
+.customer.account {
+  font-size: 20px;
+}
+.customer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 30px;
+  padding-block: 21px;
+  border-radius: 9999px;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: .7;
+  text-transform: uppercase;
+  cursor:pointer;
+}
 /* END ACCOUNT */

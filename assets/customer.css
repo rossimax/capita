@@ -145,7 +145,7 @@
   }
 
   .customer tbody td:first-of-type {
-    padding-top: 2.4rem;
+    padding: 10px;
   }
 }
 

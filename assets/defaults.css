@@ -727,7 +727,7 @@ p.shopify-challenge__message {
   padding: 20px !important;
 }
 .customer .select {
-  position: relative !important;
+  position: relative;
 }
 .customer select {
   border: 1px solid #000 !important;

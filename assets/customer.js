@@ -1,4 +1,4 @@
-const selectors = {
+const selectorsCustomers = {
   customerAddresses: '[data-customer-addresses]',
   addressCountrySelect: '[data-address-country-select]',
   addressContainer: '[data-address]',
@@ -21,14 +21,14 @@ class CustomerAddresses {
   }
 
   _getElements() {
-    const container = document.querySelector(selectors.customerAddresses);
+    const container = document.querySelector(selectorsCustomers.customerAddresses);
     return container ? {
       container,
-      addressContainer: container.querySelector(selectors.addressContainer),
-      toggleButtons: document.querySelectorAll(selectors.toggleAddressButton),
-      cancelButtons: container.querySelectorAll(selectors.cancelAddressButton),
-      deleteButtons: container.querySelectorAll(selectors.deleteAddressButton),
-      countrySelects: container.querySelectorAll(selectors.addressCountrySelect)
+      addressContainer: container.querySelector(selectorsCustomers.addressContainer),
+      toggleButtons: document.querySelectorAll(selectorsCustomers.toggleAddressButton),
+      cancelButtons: container.querySelectorAll(selectorsCustomers.cancelAddressButton),
+      deleteButtons: container.querySelectorAll(selectorsCustomers.deleteAddressButton),
+      countrySelects: container.querySelectorAll(selectorsCustomers.addressCountrySelect)
     } : {};
   }
 
@@ -74,7 +74,7 @@ class CustomerAddresses {
   _handleCancelButtonClick = ({ currentTarget }) => {
     this._toggleExpanded(
       currentTarget
-        .closest(selectors.addressContainer)
+        .closest(selectorsCustomers.addressContainer)
         .querySelector(`[${attributes.expanded}]`)
     )
   }

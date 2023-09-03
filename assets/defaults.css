@@ -732,4 +732,16 @@ p.shopify-challenge__message {
 .customer select {
   border: 1px solid #000 !important;
 }
+.customer .addresses h2 {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.customer.account th,
+.customer.account td {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
 /* END ACCOUNT */

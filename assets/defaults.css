@@ -726,8 +726,10 @@ p.shopify-challenge__message {
   border: 1px solid #000 !important;
   padding: 20px !important;
 }
+.customer .select {
+  position: relative !important;
+}
 .customer select {
   border: 1px solid #000 !important;
-  position: relative !important;
 }
 /* END ACCOUNT */

@@ -723,6 +723,6 @@ p.shopify-challenge__message {
   cursor:pointer;
 }
 .customer .field input {
-  border: 1px solid #000;
+  border: 1px solid #000 !important;
 }
 /* END ACCOUNT */

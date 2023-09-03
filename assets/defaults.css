@@ -728,6 +728,6 @@ p.shopify-challenge__message {
 }
 .customer select {
   border: 1px solid #000 !important;
-  position: relative;
+  position: relative !important;
 }
 /* END ACCOUNT */

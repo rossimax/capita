@@ -91,7 +91,7 @@
         "margin_bottom": 0,
         "video_desk": "shopify:\/\/files\/videos\/Location Clip Desktop.mp4",
         "video_mob": "shopify:\/\/files\/videos\/Location mobile.mp4",
-        "shadow": "yes_full",
+        "shadow": "no",
         "title_position": "top_left",
         "content_position": "bottom_center",
         "title": "Unique<br> Location",

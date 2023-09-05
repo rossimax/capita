@@ -17,6 +17,7 @@
       "settings": {
         "boxed": false,
         "title": "",
+        "logo_top_left": "shopify:\/\/shop_images\/D_homepage_mothershiplogo.png",
         "video_desk": "shopify:\/\/files\/videos\/Hero Banner Page 1 Desktop.mp4",
         "video_mob": "shopify:\/\/files\/videos\/Page 1 Mobile.mp4"
       }

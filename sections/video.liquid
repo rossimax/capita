@@ -13,7 +13,7 @@
         {% if section.settings.logo_top_left != blank %}
             <img class="hero-banner-video__logo" src="{{ section.settings.logo_top_left | img_url: 'master' }}" alt="capita mothership">
         {% endif %}
-        
+
         {% if section.settings.title != blank %}
             <div class="u-container">
                 <div class="u-content">
@@ -69,6 +69,12 @@
 .hero-banner-video {
     width: 100%;
 }
+.hero-banner-video__logo {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    max-width: 300px;
+}
 .hero-banner-video.boxed {
     max-width: 1620px;
     margin: 0 auto;
@@ -110,6 +116,12 @@
     .hero-banner-video video {
         width: 100%;
         height: 70vh;
+    }
+    .hero-banner-video__logo {
+        top: 20%;
+        left: 50%;
+        max-width: 300px;
+        transform: translateX(-50%);
     }
 }
 

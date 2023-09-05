@@ -9,6 +9,11 @@
 
 <div class="section-hero-banner-video">
     <div class="hero-banner-video {{ boxed_class }}">
+
+        {% if section.settings.logo_top_left != blank %}
+            <img class="hero-banner-video__logo" src="{{ section.settings.logo_top_left | img_url: 'master' }}" alt="capita mothership">
+        {% endif %}
+        
         {% if section.settings.title != blank %}
             <div class="u-container">
                 <div class="u-content">
@@ -34,6 +39,11 @@
             "type": "text",
             "id": "title",
             "label": "Title"
+        },
+        {
+            "type": "image_picker",
+            "id": "logo_top_left",
+            "label": "Logo Top Left"
         },
         {
             "type": "video",

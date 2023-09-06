@@ -307,7 +307,6 @@
       pdpProductPrice: '.c-product-info__price',
       plpProductPrice: '.c-listing-product__price',
       pdpAfterPay: '.c-product-info__afterpay',
-      pdpProductPriceRelated: '.c-product-card__price',
     };
 
     let searchInput = document.querySelector(selectors.searchInput);
@@ -321,7 +320,6 @@
     let pdpProductPrice = document.querySelector(selectors.pdpProductPrice);
     let plpProductPrice = document.querySelectorAll(selectors.plpProductPrice);
     let pdpAfterPay = document.querySelector(selectors.pdpAfterPay);
-    let pdpProductPriceRelated = document.querySelectorAll(selectors.pdpProductPriceRelated);
 
     function predectiveSearch() {
       fetch(
@@ -408,8 +406,8 @@
             plpProductPrice_single.style.display = 'none';
           });
         }
-        if (pdpProductPriceRelated) {
-          pdpProductPriceRelated.forEach((pdpProductPriceRelated_single) => {
+        if (document.querySelectorAll('.c-product-card__price')) {
+          document.querySelectorAll('.c-product-card__price').forEach((pdpProductPriceRelated_single) => {
             pdpProductPriceRelated_single.style.display = 'none';
           });
         }

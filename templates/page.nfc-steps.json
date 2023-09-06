@@ -63,6 +63,7 @@
         "1084a8b2-b1b5-478c-aa35-74e6fd107dc5"
       ],
       "settings": {
+        "align_left": true,
         "background": "#ffffff",
         "padding_top": 20,
         "padding_bottom": 20,

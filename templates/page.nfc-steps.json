@@ -31,7 +31,7 @@
           "type": "list",
           "settings": {
             "image": "shopify:\/\/shop_images\/Group_927.png",
-            "text": "<medium>SCAN<\/medium><br>\nHold your phone over the nose of your board."
+            "text": "<medium>SCAN<\/medium><br>\nHold your phone over the<br> nose of your board."
           }
         },
         "8f4b5849-8918-4533-a24f-709823ba2966": {

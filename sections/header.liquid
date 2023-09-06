@@ -307,11 +307,26 @@
     searchInput: '#search-input',
     searchResult: '#search-result',
     cookieSettingsMenu: '.c-footer__block--col4 .c-footer__item--1',
+
+    siteModalChooseCountry: '#choose-country-site-modal',
+    siteModalChooseCountryClose: '#choose-country-site-modal .fas.fa-times-circle',
+    siteModalChooseCountryCloseBtnNo: '#choose-country-site-modal .btn-no',
+
+    pdpBtnAddToCart: '.js-add-to-cart',
+    pdpProductPrice: '.c-product-info__price',
+    plpProductPrice: '.c-listing-product__price',
   };
 
   let searchInput = document.querySelector(selectors.searchInput)
   let searchResult = document.querySelector(selectors.searchResult)
   let cookieSettingsMenu = document.querySelector(selectors.cookieSettingsMenu)
+
+  let siteModalChooseCountry = document.querySelector(selectors.siteModalChooseCountry);
+  let siteModalChooseCountryClose = document.querySelector(selectors.siteModalChooseCountryClose);
+  let siteModalChooseCountryCloseBtnNo = document.querySelector(selectors.siteModalChooseCountryCloseBtnNo);
+  let pdpBtnAddToCart = document.querySelector(selectors.pdpBtnAddToCart);
+  let pdpProductPrice = document.querySelector(selectors.pdpProductPrice);
+  let plpProductPrice = document.querySelector(selectors.plpProductPrice);
 
   function predectiveSearch() {
 
@@ -382,7 +397,35 @@
 
   })
 
+  window.addEventListener('load', function() {
 
+    if (siteModalChooseCountry) {
+        if (sessionStorage.getItem("modalCountry") == "close") {
+            siteModalChooseCountry.classList.remove("show")
+        }
+        siteModalChooseCountryClose.addEventListener("click", function(){
+            siteModalChooseCountry.classList.remove("show")
+            sessionStorage.setItem("modalCountry", "close")
+        })
+        siteModalChooseCountryCloseBtnNo.addEventListener("click", function(){
+            siteModalChooseCountry.classList.remove("show")
+            sessionStorage.setItem("modalCountry", "close")
+        })
+    }
+
+    if (sessionStorage.getItem("checkCountry") == "not-us") {
+        if (pdpBtnAddToCart) {
+            pdpBtnAddToCart.classList.add("hide")
+        }
+        if (pdpProductPrice) {
+            pdpProductPrice.classList.add("hide")
+        }
+        if (plpProductPrice) {
+            plpProductPrice.classList.add("hide")
+        }
+    }
+
+  })
 
 
 

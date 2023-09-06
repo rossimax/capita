@@ -8,16 +8,16 @@
         <h2 class="logo-list__title o-text is-2 nocase">{{ section.settings.title }}</h2>
         <div class="logo-list__content">
           {% for block in section.blocks %}
-            <div class="single-logo">
+            <div class="single-logo {% if block.settings.text %} single-logo--with-text {% endif %}">
               <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.title | strip_html }}">
               {% if section.settings.display_list_count %}
                 <span class="round-count">{{ forloop.index }}</span>
               {% endif %}
               {% if block.settings.text %}
-              <div class="single-logo__text">
-                {{ block.settings.text }}
-              </div>
-            {% endif %}
+                <div class="single-logo__text">
+                  {{ block.settings.text }}
+                </div>
+              {% endif %}
             </div>
           {% endfor %}
         </div>
@@ -34,15 +34,15 @@
   "name": "Logo List",
   "settings": [
     {
-        "type": "checkbox",
-        "id": "align_left",
-        "label": "Align Left"
+      "type": "checkbox",
+      "id": "align_left",
+      "label": "Align Left"
     },
     {
-        "type": "color",
-        "id": "background",
-        "label": "Background",
-        "default": "#000"
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#000"
     },
     {
       "type": "number",
@@ -134,15 +134,15 @@
     color: #000;
     text-align: center;
     font-weight: 500;
-    margin-top:10px;
-    }
-    .single-logo__text {
+    margin-top: 10px;
+  }
+  .single-logo__text {
     color: #000;
-    margin-top:20px;
-    }
-    medium {
-        font-weight: 500;
-    }
+    margin-top: 20px;
+  }
+  medium {
+    font-weight: 500;
+  }
   @media screen and (max-width: 768px) {
     .section-logo-list {
       padding: 40px 0 !important;
@@ -157,6 +157,9 @@
       height: 80px;
       margin: 0 auto 30px auto;
     }
+    .single-logo.single-logo--with-text img {
+      margin: 0;
+    }
     .logo-list__content {
       margin-top: 40px;
     }
@@ -169,6 +172,13 @@
     }
     .logo-list__content {
       padding-bottom: 20px;
+    }
+    span.round-count {
+      width: 14px;
+      height: 14px;
+    }
+    .single-logo__text {
+      margin-top: 10px;
     }
   }
 {% endstylesheet %}

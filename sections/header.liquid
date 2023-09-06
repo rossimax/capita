@@ -306,6 +306,7 @@
       pdpBtnAddToCart: '.js-add-to-cart',
       pdpProductPrice: '.c-product-info__price',
       plpProductPrice: '.c-listing-product__price',
+      pdpAfterPay: '.c-product-info__afterpay',
     };
 
     let searchInput = document.querySelector(selectors.searchInput);
@@ -318,6 +319,7 @@
     let pdpBtnAddToCart = document.querySelector(selectors.pdpBtnAddToCart);
     let pdpProductPrice = document.querySelector(selectors.pdpProductPrice);
     let plpProductPrice = document.querySelectorAll(selectors.plpProductPrice);
+    let pdpAfterPay = document.querySelector(selectors.pdpAfterPay);
 
     function predectiveSearch() {
       fetch(
@@ -405,35 +407,39 @@
 
       if (sessionStorage.getItem('checkCountry') == 'not-us') {
         if (pdpBtnAddToCart) {
-          pdpBtnAddToCart.style.display = "none";
+          pdpBtnAddToCart.style.display = 'none';
         }
         if (pdpProductPrice) {
-          pdpProductPrice.style.display = "none";
+          pdpProductPrice.style.display = 'none';
+        }
+        if (pdpAfterPay) {
+          pdpAfterPay.style.display = 'none';
         }
         if (plpProductPrice) {
           plpProductPrice.forEach((plpProductPrice_single) => {
-            plpProductPrice_single.style.display = "none"
-          })
+            plpProductPrice_single.style.display = 'none';
+          });
         }
       }
 
       setInterval(function () {
         if (sessionStorage.getItem('checkCountry') == 'not-us') {
           if (pdpBtnAddToCart) {
-            pdpBtnAddToCart.style.display = "none";
+            pdpBtnAddToCart.style.display = 'none';
           }
           if (pdpProductPrice) {
-            pdpProductPrice.style.display = "none";
+            pdpProductPrice.style.display = 'none';
+          }
+          if (pdpAfterPay) {
+            pdpAfterPay.style.display = 'none';
           }
           if (plpProductPrice) {
             plpProductPrice.forEach((plpProductPrice_single) => {
-              plpProductPrice_single.style.display = "none"
-            })
+              plpProductPrice_single.style.display = 'none';
+            });
           }
-
         }
       }, 1000);
     });
-
   })(document);
 {% endjavascript %}

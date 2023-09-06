@@ -221,6 +221,15 @@
                 <div class="c-listing-filter__dropdown-title js-filter-type o-text is-4 is-medium" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
                 <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="category">
                   <label class="c-listing-filter__option o-text is-4">
+                    <input type="checkbox" name="All" 
+                      {% if collection.handle == "accessories" %} 
+                        checked onclick="window.location.replace('{{ collections['accessories'].url }}')" 
+                      {% else %} 
+                        onclick="window.location.replace('{{ collections['accessories'].url }}')" 
+                      {% endif %}/>
+                      <span>All</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="shirt" /><span>T-Shirt</span>
                   </label>
                   <label class="c-listing-filter__option o-text is-4">

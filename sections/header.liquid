@@ -306,13 +306,11 @@
   let selectors = {
     searchInput: '#search-input',
     searchResult: '#search-result',
-    cookieBar: '.cc-window.cc-banner',
     cookieSettingsMenu: '.c-footer__block--col4 .c-footer__item--1',
   };
 
   let searchInput = document.querySelector(selectors.searchInput)
   let searchResult = document.querySelector(selectors.searchResult)
-  let cookieBar = document.querySelector(selectors.cookieBar)
   let cookieSettingsMenu = document.querySelector(selectors.cookieSettingsMenu)
 
   function predectiveSearch() {
@@ -379,7 +377,7 @@
     })
 
     cookieSettingsMenu.addEventListener("click", function(event){
-      cookieBar.style.display = null
+      document.querySelector(".cc-window.cc-banner").style.display = null
     })
 
   })

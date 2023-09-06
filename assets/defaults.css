@@ -547,6 +547,9 @@ input.c-slim-form__email {
 .c-footer__form .c-slim-form__email {
   background: unset;
 }
+.c-footer__form span.c-slim-form__title {
+  text-align: center;
+}
 footer .c-slim-form__title {
   font-size: 14px;
 }

@@ -313,7 +313,7 @@
 
   function predectiveSearch() {
 
-    fetch(window.Shopify.routes.root + "search/suggest.json?q=" + searchInput.value + "&resources[type]=product&resources[options][unavailable_products]=hide&resources[options][fields]=title,product_type,variants.title")
+    fetch(window.Shopify.routes.root + "search/suggest.json?q=" + searchInput.value + "&resources[type]=product&resources[options][unavailable_products]=hide&resources[options][fields]=title,body,product_type,variants.title")
           .then((response) => response.json())
           .then((suggestions) => {
 

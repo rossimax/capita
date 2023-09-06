@@ -1,5 +1,6 @@
 {%- liquid
-    assign gender = page.metafields.accentuate.text_rider_quiver 
+    assign gender = page.metafields.accentuate.gender 
+    assign text_rider_quiver = page.metafields.accentuate.text_rider_quiver 
     assign boards = page.metafields.team_profile.snowboard_product
 -%}
 {% if boards.size > 0 %}
@@ -7,7 +8,9 @@
         <div class="u-container">
             <div class="u-content">
                 <div class="team-boards">
-                    {%- if gender -%}
+                    {%- if text_rider_quiver != blank-%}
+                        <h3 class="strong o-text is-2">{{ text_rider_quiver }}</h3>
+                    {% elsif gender != blank %}
                         <h3 class="strong o-text is-2">Boards <span>{{ gender }}</span> rides</h3>
                     {% else %}
                         <h3 class="strong">Boards:</h3>

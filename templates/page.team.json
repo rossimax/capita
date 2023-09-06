@@ -193,7 +193,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/download-1_1444f7e2-a56a-4548-8f0c-aeee67712a36.jpg",
             "link_url": "",
-            "name": "Yura Murase"
+            "name": "YURA MURASE"
           }
         }
       },
@@ -227,12 +227,20 @@
     "c5f887cb-81f6-4c19-a1eb-50d5df910e42": {
       "type": "team-list",
       "blocks": {
+        "acbc6434-e022-4bb1-935f-c0f7b7871492": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.05_1_1.jpg",
+            "link_url": "shopify:\/\/pages\/kevin-jones",
+            "name": "KEVIN JONES"
+          }
+        },
         "77dd9722-b736-44ae-aa92-07650c439b62": {
           "type": "team_list",
           "settings": {
             "image": "shopify:\/\/shop_images\/download_ebc5218d-bf83-4ecd-8322-2f63171cd42c.jpg",
             "link_url": "shopify:\/\/pages\/phil-jacques",
-            "name": "Phil Jacques"
+            "name": "PHIL JACQUES"
           }
         },
         "acdb5a97-90a3-4b91-a18a-58ef373c7e11": {
@@ -251,20 +259,12 @@
             "name": "COREY SMITH"
           }
         },
-        "acbc6434-e022-4bb1-935f-c0f7b7871492": {
+        "d0771d5a-917d-43fd-84ef-ab1786009170": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.05_1_1.jpg",
-            "link_url": "shopify:\/\/pages\/kevin-jones",
-            "name": "KEVIN JONES"
-          }
-        },
-        "defead9d-4d23-4679-aabe-531ea2798243": {
-          "type": "team_list",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_1.jpg",
-            "link_url": "shopify:\/\/pages\/markus-olimstad",
-            "name": "MARKUS OLIMSTAD"
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_2.jpg",
+            "link_url": "shopify:\/\/pages\/tiarn-collins",
+            "name": "TIARN COLLINS"
           }
         },
         "efdca2be-d920-4401-9c4f-667a433f5c81": {
@@ -283,14 +283,6 @@
             "name": "CHASE JOSEY"
           }
         },
-        "d0771d5a-917d-43fd-84ef-ab1786009170": {
-          "type": "team_list",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_2.jpg",
-            "link_url": "shopify:\/\/pages\/tiarn-collins",
-            "name": "TIARN COLLINS"
-          }
-        },
         "0682fee8-c233-44c5-b764-a9b166fce0d6": {
           "type": "team_list",
           "settings": {
@@ -305,6 +297,14 @@
             "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.23_3_2.jpg",
             "link_url": "shopify:\/\/pages\/sonny-alba",
             "name": "SONNY ALBA"
+          }
+        },
+        "defead9d-4d23-4679-aabe-531ea2798243": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_1.jpg",
+            "link_url": "shopify:\/\/pages\/markus-olimstad",
+            "name": "MARKUS OLIMSTAD"
           }
         },
         "d91cf783-0ede-405f-8ebd-b35692d561ce": {
@@ -373,16 +373,16 @@
         }
       },
       "block_order": [
+        "acbc6434-e022-4bb1-935f-c0f7b7871492",
         "77dd9722-b736-44ae-aa92-07650c439b62",
         "acdb5a97-90a3-4b91-a18a-58ef373c7e11",
         "73800fe0-1812-4e7f-aeb4-01581bcb6c90",
-        "acbc6434-e022-4bb1-935f-c0f7b7871492",
-        "defead9d-4d23-4679-aabe-531ea2798243",
+        "d0771d5a-917d-43fd-84ef-ab1786009170",
         "efdca2be-d920-4401-9c4f-667a433f5c81",
         "4f09568f-3e83-47dd-8ea5-e7eaad5254e5",
-        "d0771d5a-917d-43fd-84ef-ab1786009170",
         "0682fee8-c233-44c5-b764-a9b166fce0d6",
         "b1d14384-90e4-4f8b-bd81-37cb3d520b06",
+        "defead9d-4d23-4679-aabe-531ea2798243",
         "d91cf783-0ede-405f-8ebd-b35692d561ce",
         "e1c8c71c-db44-43d6-a080-a2e7ed59757d",
         "0ab80d4c-73b4-4844-8fc8-602eddd8784d",

@@ -317,7 +317,7 @@
     let siteModalChooseCountryCloseBtnNo = document.querySelector(selectors.siteModalChooseCountryCloseBtnNo);
     let pdpBtnAddToCart = document.querySelector(selectors.pdpBtnAddToCart);
     let pdpProductPrice = document.querySelector(selectors.pdpProductPrice);
-    let plpProductPrice = document.querySelector(selectors.plpProductPrice);
+    let plpProductPrice = document.querySelectorAll(selectors.plpProductPrice);
 
     function predectiveSearch() {
       fetch(
@@ -411,7 +411,7 @@
           pdpProductPrice.style.display = "none";
         }
         if (plpProductPrice) {
-          plpProductPrice.style.display = "none";
+          plpProductPrice.forEach((plpProductPrice_single) => plpProductPrice_single.style.display = "none";);
         }
       }
 
@@ -424,7 +424,7 @@
             pdpProductPrice.style.display = "none";
           }
           if (plpProductPrice) {
-            plpProductPrice.style.display = "none";
+            plpProductPrice.forEach((plpProductPrice_single) => plpProductPrice_single.style.display = "none";);
           }
 
         }

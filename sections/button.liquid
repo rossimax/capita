@@ -1,0 +1,34 @@
+
+<div class="section-button">
+    <a class="btn btn-primary black button-one" href="{{ section.settings.cta_url }}">{{ section.settings.cta_text }}</a>
+</div>
+
+
+{% schema %}
+{
+  "name": "Button",
+  "settings": [
+    {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text"
+    },
+    {
+        "type": "url",
+        "id": "cta_url",
+        "label": "CTA Url"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Button"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.section-button .button-one {
+    text-align: right;
+}
+{% endstylesheet %}

@@ -155,7 +155,8 @@ main.template-orders,
 main.template-shipping,
 main.template-returns,
 main.template-payments,
-main.template-warranty {
+main.template-warranty,
+main.template-nfc-steps {
   padding: 155px;
   display: flex;
   flex-wrap: wrap;
@@ -169,7 +170,8 @@ main.template-warranty {
   main.template-shipping,
   main.template-returns,
   main.template-payments,
-  main.template-warranty {
+  main.template-warranty,
+  main.template-nfc-steps {
     padding: 70px;
     padding-top: calc(var(--header-bar) + 70px);
   }
@@ -183,7 +185,8 @@ main.template-warranty {
   main.template-shipping,
   main.template-returns,
   main.template-payments,
-  main.template-warranty {
+  main.template-warranty,
+  main.template-nfc-steps {
     padding: 20px;
     padding-top: calc(var(--header-bar) + 20px);
   }

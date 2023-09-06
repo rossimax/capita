@@ -219,10 +219,10 @@
                 <span class="js-tags-list" data-tags="{{tag_list}}"><span>
       
                 <div class="c-listing-filter__dropdown-title js-filter-type o-text is-4 is-medium" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
-                <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="category">
+                <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="category" attr-test="{{ current_tags }}">
                   <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="All" 
-                      {% if collection.handle == "accessories" %} 
+                      {% if collection.handle == "accessories" and current_tags == blank %} 
                         checked onclick="window.location.replace('{{ collections['accessories'].url }}')" 
                       {% else %} 
                         onclick="window.location.replace('{{ collections['accessories'].url }}')" 
@@ -752,7 +752,7 @@ a.c-listing-product__size:hover span {
             let currentUrl = window.location.href
 
             if (filterInputsParent.classList.contains("js-filter-inputs-onlyone")) {
-              newUrl = basePath.substring(0, basePath.lastIndexOf('/')) + "/" + filterInputName.toLowerCase().replace(" ","-")
+              newUrl = basePath.substring(0, basePath.lastIndexOf('/')) + "/" + filterInputName.toLowerCase().replace(" & ","-").replace(" ","-")
             } else {
               newUrl = basePath + "+" + filterInputName.toLowerCase().replace(" ","-")
             }

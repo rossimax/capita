@@ -15,19 +15,61 @@
     "ab6eee15-7390-4eef-821e-80aed63a6138": {
       "type": "html",
       "settings": {
-        "text": "<strong>REGISTER YOUR BOARD WITH NFC (FOR 2021 AND NEWER BOARDS)<\/strong><br>\nOver the past year, the EETT™ development team at MARS1 has been working to connect you to your board beyond the standard boot\/binding interface.<br>\nBy embedding a super-intelligent Near Field Communication (NFC) chip into the nose of your board, you can now connect your phone to your board for seamless product information, snowboard registration, warranty processing and more.<br>"
+        "text": "<strong>REGISTER YOUR BOARD WITH NFC (FOR 2021 AND NEWER BOARDS)<\/strong><br>\nOver the past year, the EETT™ development team at MARS1 has been working to connect you to your board beyond the standard boot\/binding interface.<br>\nBy embedding a super-intelligent Near Field Communication (NFC) chip into the nose of your board, you can now connect your phone to your board for seamless product information, snowboard registration, warranty processing and more.<br><br><br><br>"
       }
     },
     "b921e825-ae16-47a6-a6bb-5ae9c0c433aa": {
       "type": "html",
       "settings": {
-        "text": "<strong>HOW TO GET YOUR SERIAL NUMBER<\/strong><br>\nRegister your board with NFC  (for 2021 and newer boards). Compatible with all android phones\/ iphone 6 and newer."
+        "text": "<strong>HOW TO GET YOUR SERIAL NUMBER<\/strong><br>\nRegister your board with NFC  (for 2021 and newer boards). Compatible with all android phones\/ iphone 6 and newer.<br><br>"
+      }
+    },
+    "0909ffc7-eb7e-4862-8763-86525f4c8b02": {
+      "type": "logo-list",
+      "blocks": {
+        "bb6bbf22-fd4a-485b-8c12-cb2c61a39cbc": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_927.png"
+          }
+        },
+        "8f4b5849-8918-4533-a24f-709823ba2966": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_928.png"
+          }
+        },
+        "c0f18c11-6652-47a4-b341-b91dc9d4cf4d": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_929.png"
+          }
+        },
+        "1084a8b2-b1b5-478c-aa35-74e6fd107dc5": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_930.png"
+          }
+        }
+      },
+      "block_order": [
+        "bb6bbf22-fd4a-485b-8c12-cb2c61a39cbc",
+        "8f4b5849-8918-4533-a24f-709823ba2966",
+        "c0f18c11-6652-47a4-b341-b91dc9d4cf4d",
+        "1084a8b2-b1b5-478c-aa35-74e6fd107dc5"
+      ],
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "title": "",
+        "description": ""
       }
     }
   },
   "order": [
     "main",
     "ab6eee15-7390-4eef-821e-80aed63a6138",
-    "b921e825-ae16-47a6-a6bb-5ae9c0c433aa"
+    "b921e825-ae16-47a6-a6bb-5ae9c0c433aa",
+    "0909ffc7-eb7e-4862-8763-86525f4c8b02"
   ]
 }

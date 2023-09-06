@@ -493,7 +493,7 @@ img.c-cart-item__image {
 }
 .c-product-info__size.js-product-variant.selected {
   background: #000;
-  color: #fff;
+  color: #fff !important;
 }
 span.msg-empty-cart.medium {
   text-align: center;

@@ -3,24 +3,24 @@
     <div class="u-container">
         <div class="c-footer__content u-content">
             <div class="c-footer__blocks">
-                <div class="c-footer__block">
+                <div class="c-footer__block c-footer__block--col1">
                     {%- for link in section.settings.menu_col_1.links -%}
-                        <a class="c-footer__item" href="{{ link.url }}">{{ link.title }}</a>
+                        <a class="c-footer__item c-footer__item--{{ forloop.index }}" href="{{ link.url }}">{{ link.title }}</a>
                     {%- endfor -%}
                 </div>
-                <div class="c-footer__block">
+                <div class="c-footer__block c-footer__block--col2">
                     {%- for link in section.settings.menu_col_2.links -%}
-                        <a class="c-footer__item" href="{{ link.url }}">{{ link.title }}</a>
+                        <a class="c-footer__item c-footer__item--{{ forloop.index }}" href="{{ link.url }}">{{ link.title }}</a>
                     {%- endfor -%}
                 </div>
-                <div class="c-footer__block">
+                <div class="c-footer__block c-footer__block--col3">
                     {%- for link in section.settings.menu_col_3.links -%}
-                        <a class="c-footer__item" href="{{ link.url }}">{{ link.title }}</a>
+                        <a class="c-footer__item c-footer__item--{{ forloop.index }}" href="{{ link.url }}">{{ link.title }}</a>
                     {%- endfor -%}
                 </div>
-                <div class="c-footer__block">
+                <div class="c-footer__block c-footer__block--col4">
                     {%- for link in section.settings.menu_col_4.links -%}
-                        <a class="c-footer__item" href="{{ link.url }}">{{ link.title }}</a>
+                        <a class="c-footer__item c-footer__item--{{ forloop.index }}" href="{{ link.url }}">{{ link.title }}</a>
                     {%- endfor -%}
                 </div>
             </div>

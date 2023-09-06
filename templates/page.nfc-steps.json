@@ -30,25 +30,29 @@
         "bb6bbf22-fd4a-485b-8c12-cb2c61a39cbc": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_927.png"
+            "image": "shopify:\/\/shop_images\/Group_927.png",
+            "text": "<medium>SCAN<\/medium><br>\nHold your phone over the nose of your board."
           }
         },
         "8f4b5849-8918-4533-a24f-709823ba2966": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_928.png"
+            "image": "shopify:\/\/shop_images\/Group_928.png",
+            "text": "<medium>CLICK<\/medium><br>\nThe push notifications."
           }
         },
         "c0f18c11-6652-47a4-b341-b91dc9d4cf4d": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_929.png"
+            "image": "shopify:\/\/shop_images\/Group_929.png",
+            "text": "<medium>ACCESS<\/medium><br>\nSnowboard registration."
           }
         },
         "1084a8b2-b1b5-478c-aa35-74e6fd107dc5": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_930.png"
+            "image": "shopify:\/\/shop_images\/Group_930.png",
+            "text": "<medium>SERIAL NUMBER<\/medium><br>\nGet your serial number."
           }
         }
       },
@@ -59,10 +63,12 @@
         "1084a8b2-b1b5-478c-aa35-74e6fd107dc5"
       ],
       "settings": {
+        "background": "#ffffff",
         "padding_top": 20,
         "padding_bottom": 20,
         "title": "",
-        "description": ""
+        "description": "",
+        "display_list_count": true
       }
     }
   },

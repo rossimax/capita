@@ -3,10 +3,30 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "head_width": 100,
+        "margin_top": 0,
+        "body_color": "#ffffff",
+        "footer_border": true,
+        "enable_head": false,
+        "title": "WARRANTY",
+        "description": ""
+      }
+    },
+    "c6d6705f-cbf1-4655-8324-13329eae909f": {
+      "type": "vertical-nav",
+      "settings": {
+      }
+    },
+    "d31aaa4f-6661-4f52-b36d-46f6b20c8149": {
+      "type": "rich-text",
+      "settings": {
+        "text": "<p>CAPiTA TWO – YEAR WARRANTYCAPiTA Snowboards are hand-crafted in Austria at the snowboard industry's most technologically advanced and environmentally responsible manufacturing facility. We are proud to offer a warranty policy guaranteeing that your CAPiTA snowboard is free from defects in material or workmanship for a period of two (2) years from the date of purchase. Please review CAPiTA’s complete warranty policy and follow the steps on this page to submit a claim.<\/p>"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "c6d6705f-cbf1-4655-8324-13329eae909f",
+    "d31aaa4f-6661-4f52-b36d-46f6b20c8149"
   ]
 }

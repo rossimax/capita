@@ -405,30 +405,28 @@
 
       if (sessionStorage.getItem('checkCountry') == 'not-us') {
         if (pdpBtnAddToCart) {
-          pdpBtnAddToCart.classList.add('hide');
+          pdpBtnAddToCart.style.display = "none";
         }
         if (pdpProductPrice) {
-          pdpProductPrice.classList.add('hide');
+          pdpProductPrice.style.display = "none";
         }
         if (plpProductPrice) {
-          plpProductPrice.classList.add('hide');
+          plpProductPrice.style.display = "none";
         }
-        console.log('notUSprice');
       }
-      console.log('notUSprice 2');
 
       setInterval(function () {
         if (sessionStorage.getItem('checkCountry') == 'not-us') {
           if (pdpBtnAddToCart) {
-            pdpBtnAddToCart.classList.add('hide');
+            pdpBtnAddToCart.style.display = "none";
           }
           if (pdpProductPrice) {
-            pdpProductPrice.classList.add('hide');
+            pdpProductPrice.style.display = "none";
           }
           if (plpProductPrice) {
-            plpProductPrice.classList.add('hide');
+            plpProductPrice.style.display = "none";
           }
-          console.log('notUSprice3');
+
         }
       }, 1000);
     });

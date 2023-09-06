@@ -13,7 +13,7 @@
               {% if section.settings.display_list_count %}
                 <span class="round-count">{{ forloop.index }}</span>
               {% endif %}
-              {% if section.settings.text %}
+              {% if block.settings.text %}
               <div class="single-logo__text">
                 {{ block.settings.text }}
               </div>
@@ -120,6 +120,24 @@
     font-size: 24px;
     line-height: 1;
   }
+  span.round-count {
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 20px;
+    display: block;
+    height: 20px;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    margin-top:10px;
+    }
+    .single-logo__text {
+    color: #000;
+    margin-top:20px;
+    }
+    medium {
+        font-weight: 500;
+    }
   @media screen and (max-width: 768px) {
     .section-logo-list {
       padding: 40px 0 !important;

@@ -20,7 +20,12 @@
                 </div>
                 <div class="c-footer__block c-footer__block--col4">
                     {%- for link in section.settings.menu_col_4.links -%}
-                        <a class="c-footer__item c-footer__item--{{ forloop.index }}" href="{{ link.url }}">{{ link.title }}</a>
+                        {% if link.url == "#" %}
+                            {% assign  link_url = "" %}
+                        {% else %}
+                            {% assign  link_url = link.url %}
+                        {% endif %}
+                        <a class="c-footer__item c-footer__item--{{ forloop.index }}" href="{{ link_url }}">{{ link.title }}</a>
                     {%- endfor -%}
                 </div>
             </div>

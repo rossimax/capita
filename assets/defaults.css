@@ -544,6 +544,9 @@ span.msg-empty-cart.medium.hide,
 input.c-slim-form__email {
   width: 100%;
 }
+.c-footer__form .c-slim-form__email {
+  background: unset;
+}
 footer .c-slim-form__title {
   font-size: 14px;
 }

@@ -306,13 +306,13 @@
   let selectors = {
     searchInput: '#search-input',
     searchResult: '#search-result',
-    cookieBar: '.capita-snowboarding-store-gdpr div[role="region"]',
+    cookieBar: '.cc-window.cc-banner',
     cookieSettingsMenu: '.c-footer__block--col4 .c-footer__item--1',
   };
 
   let searchInput = document.querySelector(selectors.searchInput)
   let searchResult = document.querySelector(selectors.searchResult)
-  let cookieBar = document.querySelector(selectors.cookieBar)
+  let cookieBar = document.querySelector('.capita-snowboarding-store-gdpr div[role="region"]')
   let cookieSettingsMenu = document.querySelector(selectors.cookieSettingsMenu)
 
   function predectiveSearch() {

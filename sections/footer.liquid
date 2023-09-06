@@ -21,7 +21,7 @@
                 <div class="c-footer__block c-footer__block--col4">
                     {%- for link in section.settings.menu_col_4.links -%}
                         {% if link.url == "#" %}
-                            {% assign  link_url = "" %}
+                            {% assign  link_url = "javascript:void()" %}
                         {% else %}
                             {% assign  link_url = link.url %}
                         {% endif %}

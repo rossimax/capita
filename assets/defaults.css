@@ -154,7 +154,8 @@ main.template-distributors,
 main.template-orders,
 main.template-shipping,
 main.template-returns,
-main.template-payments {
+main.template-payments,
+main.template-warranty {
   padding: 155px;
   display: flex;
   flex-wrap: wrap;
@@ -167,7 +168,8 @@ main.template-payments {
   main.template-orders,
   main.template-shipping,
   main.template-returns,
-  main.template-payments {
+  main.template-payments,
+  main.template-warranty {
     padding: 70px;
     padding-top: calc(var(--header-bar) + 70px);
   }
@@ -180,7 +182,8 @@ main.template-payments {
   main.template-orders,
   main.template-shipping,
   main.template-returns,
-  main.template-payments {
+  main.template-payments,
+  main.template-warranty {
     padding: 20px;
     padding-top: calc(var(--header-bar) + 20px);
   }

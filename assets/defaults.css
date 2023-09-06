@@ -30,7 +30,9 @@ hl {
 bl {
   color: #e2ff61;
 }
-
+medium {
+  font-weight: 500;
+}
 .title {
   font-size: 60px;
   font-weight: 600;

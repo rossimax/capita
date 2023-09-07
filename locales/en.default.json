@@ -472,7 +472,8 @@
     "checkout": {
       "shipping": {
         "estimated_delivery_date": {
-          "other": "3-5 business days"
+          "other": " ",
+          "one": " "
         }
       }
     }

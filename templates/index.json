@@ -6,8 +6,6 @@
         "transparent_header": false,
         "image": "shopify:\/\/shop_images\/D_hompage_herobanner.png",
         "image_mob": "shopify:\/\/shop_images\/M_homepage_herobanner.png",
-        "video": "shopify:\/\/files\/videos\/web banner desktop v1.mp4",
-        "video_mob": "shopify:\/\/files\/videos\/web mobile hero banner v1.mp4",
         "cta_text": "OPEN YOUR MIND",
         "cta_link": "shopify:\/\/collections\/all-snowboards"
       }

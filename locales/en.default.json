@@ -467,5 +467,15 @@
       "message": "Message",
       "max_characters": "{{ max_chars }} characters max"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "shipping": {
+        "estimated_delivery_date": {
+          "one": " ",
+          "other": " "
+        }
+      }
+    }
   }
 }

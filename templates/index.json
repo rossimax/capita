@@ -78,6 +78,7 @@
         "title": "<h2 class=\"h2\">The MotherShip<sup>TM<\/sup>\n<\/h2>",
         "line_separator": "yes",
         "subtitle": "<strong>HANDCRAFTED WITH SELF-GENERATED<br>CLEAN ENERGY.<\/strong>",
+        "logo_image": "shopify:\/\/shop_images\/D_homepage_mothershiplogo.png",
         "cta_text": "ENTER THE MOTHERSHIP™",
         "cta_link": "shopify:\/\/pages\/the-factory"
       }

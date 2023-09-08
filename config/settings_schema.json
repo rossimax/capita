@@ -1567,5 +1567,15 @@
         "label": "Script Pre Body Close"
       }
     ]
+  },
+  {
+    "name": "FOOTER",
+    "settings": [
+      {
+        "type": "text",
+        "id": "footer_legal",
+        "label": "Footer Legal"
+      }
+    ]
   }
 ]

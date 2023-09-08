@@ -17,7 +17,14 @@
         <span class="c-product-info__categories o-text is-4">{{ snowboard_tags }}</span>
         <h2 class="c-product-info__name o-text is-2">{{ product.title }}</h2>
         <span class="c-product-info__price o-text is-3">{{ product.price | money }}</span>
-        <div class="c-product-info__afterpay" style="margin-top: 5px;">or 4 interest-free installments of {{ product.price | divided_by: 4 | money }} by | <img style="display:inline;" width="75px" src="{{ 'afterpay-logo.png' | asset_url }}" alt="Afterpay"></div>
+
+        {% if section.settings.afterpay_text %}
+          <div class="c-product-info__afterpay" style="margin-top: 5px;">or 4 interest-free installments of {{ product.price | divided_by: 4 | money }} by | <img style="display:inline;" width="75px" src="{{ 'afterpay-logo.png' | asset_url }}" alt="Afterpay"></div>
+        {% endif %}
+        {% if section.settings.paypal_text %}
+          <div class="c-product-info__paypal" style="margin-top: 5px;">or 2 interest-free installments of {{ product.price | divided_by: 2 | money }} by | <img style="display:inline;" width="75px" src="{{ 'paypal-logo.png' | asset_url }}" alt="Afterpay"></div>
+        {% endif %}
+
         <p class="c-product-info__description medium">{{ product.metafields.snowboard_info.snowboard_description }}</p>
         
         {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %}

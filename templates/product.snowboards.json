@@ -61,8 +61,8 @@
         "share"
       ],
       "settings": {
-        "afterpay_text": true,
-        "paypal_text": false,
+        "afterpay_text": false,
+        "paypal_text": true,
         "caption_under__buy_cta": "<u>Free shipping<\/u> for EU orders over 249€."
       }
     },

@@ -63,7 +63,7 @@
       "settings": {
         "afterpay_text": true,
         "paypal_text": false,
-        "caption_under__buy_cta": "<u>Free shipping<\/u> for US orders over $149."
+        "caption_under__buy_cta": "<u>Free shipping<\/u> for EU orders over 249€."
       }
     },
     "related-products": {

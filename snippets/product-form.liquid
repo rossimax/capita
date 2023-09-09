@@ -22,7 +22,7 @@
           <div class="c-product-info__afterpay" style="margin-top: 5px;">or 4 interest-free installments of {{ product.price | divided_by: 4 | money }} by | <img style="display:inline;" width="75px" src="{{ 'afterpay-logo.png' | asset_url }}" alt="Afterpay"></div>
         {% endif %}
         {% if section.settings.paypal_text %}
-          <div class="c-product-info__paypal" style="margin-top: 5px;">or 2 interest-free installments of {{ product.price | divided_by: 2 | money }} by | <img style="display:inline;" width="75px" src="{{ 'paypal-logo.png' | asset_url }}" alt="Afterpay"></div>
+          <div class="c-product-info__paypal" style="margin-top: 5px;">or 2 interest-free installments of {{ product.price | divided_by: 2 | money }} by | <img style="display:inline;vertical-align: sub;" width="75px" src="{{ 'paypal-logo.png' | asset_url }}" alt="Afterpay"></div>
         {% endif %}
 
         <p class="c-product-info__description medium">{{ product.metafields.snowboard_info.snowboard_description }}</p>

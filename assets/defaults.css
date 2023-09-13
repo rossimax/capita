@@ -440,6 +440,7 @@ main.template-nfc-steps {
 }
 .customer .errors ul {
   list-style: none;
+  padding: 0;
 }
 .section-rich-text p,
 .shopify-policy__body p {

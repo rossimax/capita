@@ -422,6 +422,26 @@ main.template-nfc-steps {
 /* END COMPONENTS */
 
 /* START FIX */
+.customer h2.form__message {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.customer h2.form__message svg {
+  max-width: 40px;
+}
+.customer .errors {
+  text-align: center;
+  margin: 0 auto;
+  color: red;
+  list-style: none;
+}
+.customer .errors ul {
+  list-style: none;
+  padding: 0;
+}
 .section-rich-text p,
 .shopify-policy__body p {
   margin-bottom: 10px;
@@ -693,6 +713,7 @@ input.shopify-challenge__button.btn {
   width: 100%;
   max-width: 300px;
   margin-top: 30px;
+  margin-bottom: 30px;
   padding-block: 21px;
   border-radius: 9999px;
   background-color: #000;

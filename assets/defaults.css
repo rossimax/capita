@@ -422,7 +422,8 @@ main.template-nfc-steps {
 /* END COMPONENTS */
 
 /* START FIX */
-.section-rich-text p {
+.section-rich-text p,
+.shopify-policy__body p {
   margin-bottom: 10px;
 }
 .form-message.form-message--success {

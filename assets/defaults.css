@@ -422,6 +422,12 @@ main.template-nfc-steps {
 /* END COMPONENTS */
 
 /* START FIX */
+.section-rich-text p {
+  margin-bottom: 10px;
+}
+.section-rich-text p {
+  margin-bottom: 10px;
+}
 .form-message.form-message--success {
   text-align: center;
   color: #45681a;

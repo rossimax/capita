@@ -715,6 +715,7 @@ input.shopify-challenge__button.btn {
   width: 100%;
   max-width: 300px;
   margin-top: 30px;
+  margin-bottom: 30px;
   padding-block: 21px;
   border-radius: 9999px;
   background-color: #000;

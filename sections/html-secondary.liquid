@@ -1,0 +1,25 @@
+<div class="section-custom-html">
+    <div class="custom-html">
+        {{ section.settings.html }}
+    </div>
+</div>
+  
+{% schema %}
+{
+    "name": "Custom Html",
+    "tag": "section",
+    "class": "shopify-section--custom-html three-quarter",
+    "settings": [
+        {
+            "type": "html",
+            "id": "html",
+            "label": "Html"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Custom Html"
+        }
+    ]
+}
+{% endschema %}

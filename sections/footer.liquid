@@ -33,7 +33,7 @@
                 {%- assign formId = 'Contact-Newsletter' -%}
                 {% form 'customer', id: formId, novalidate: 'novalidate' %}
                 {%- if form.posted_successfully? -%}
-                    <p class="form-message form-message--success" tabindex="-1" data-form-status>Thanks for subscribing</p>
+                    <p class="form-message form-message--success" tabindex="-1" data-form-status>Thanks for subscribing!</p>
                 {%- endif -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
                 <form class="c-slim-form"><span class="c-slim-form__title">SIGN UP TO GET CAPiTA’S LATEST

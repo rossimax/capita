@@ -422,6 +422,25 @@ main.template-nfc-steps {
 /* END COMPONENTS */
 
 /* START FIX */
+.customer h2.form__message {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.customer h2.form__message svg {
+  max-width: 40px;
+}
+.customer .errors {
+  text-align: center;
+  margin: 0 auto;
+  color: red;
+  list-style: none;
+}
+.customer .errors ul {
+  list-style: none;
+}
 .section-rich-text p,
 .shopify-policy__body p {
   margin-bottom: 10px;

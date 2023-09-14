@@ -166,6 +166,18 @@
 
         }
 
+        footerCurrencyCountry__select.addEventListener("change", (event) => {
+            if (event.target.value == "eu" ) {
+                if (location.hostname == 'capitasnowboarding.com') {
+                    window.location.replace("https://eu.capitasnowboarding.com");
+                }
+            } else if (event.target.value == "us" ) {
+                if (location.hostname == 'eu.capitasnowboarding.com') {
+                    window.location.replace("https://capitasnowboarding.com");
+                }
+            }
+        });
+
 
     })
 

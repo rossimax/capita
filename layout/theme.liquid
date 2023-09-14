@@ -8,6 +8,27 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
+    {%-liquid 
+      if request.origin == "https://capitasnowboarding.com" or request.origin == "https://capita-snowboarding-store.myshopify.com"
+          assign alternate_actual_shop = "https://capitasnowboarding.com/"
+          assign alternate_redirect_shop = "https://eu.capitasnowboarding.com/"
+      elsif request.origin == "https://eu.capitasnowboarding.com" or request.origin == "https://capita-snowboarding-store-eu.myshopify.com"
+          assign alternate_actual_shop = "https://eu.capitasnowboarding.com/"
+          assign alternate_redirect_shop = "https://capitasnowboarding.com/"
+      endif
+    -%}
+
+    <link rel="alternate" hreflang="en-us"
+      href="{{ canonical_url | replace: alternate_actual_shop, alternate_redirect_shop }}" />
+    <link rel="alternate" hreflang="en-ca"
+          href="{{ canonical_url | replace: alternate_actual_shop, alternate_redirect_shop }}" />
+    <link rel="alternate" hreflang="en"
+          href="{{ canonical_url }}" />
+    <link rel="alternate" hreflang="it"
+          href="{{ canonical_url }}" />
+    <link rel="alternate" hreflang="x-default"
+          href="{{ canonical_url }}" />
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}

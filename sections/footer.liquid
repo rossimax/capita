@@ -157,14 +157,12 @@
         if (location.hostname == 'eu.capitasnowboarding.com') {
 
             footerCurrencyCountry__select.prepend(footerCurrencyCountry__option_eu)
-            footerCurrencyCountry__option_eu.setAttribute("select", "select")
-            footerCurrencyCountry__option_us.removeAttribute("select")
+            footerCurrencyCountry__select.value = "eu"
 
         } else if (location.hostname == 'capitasnowboarding.com') {
 
             footerCurrencyCountry__select.prepend(footerCurrencyCountry__option_us)
-            footerCurrencyCountry__option_eu.setAttribute("select", "select")
-            footerCurrencyCountry__option_us.removeAttribute("select")
+            footerCurrencyCountry__select.value = "us"
 
         }
 

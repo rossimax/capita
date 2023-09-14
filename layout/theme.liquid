@@ -9,23 +9,30 @@
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
     <link rel="alternate" hreflang="en-us"
-      href="{{ canonical_url }}" />
+      href="{{ canonical_url | replace: "https://eu.capitasnowboarding.com", "https://capitasnowboarding.com" }}" />
     <link rel="alternate" hreflang="en-ca"
-          href="{{ canonical_url }}" />
+      href="{{ canonical_url | replace: "https://eu.capitasnowboarding.com", "https://capitasnowboarding.com" }}" />
     <link rel="alternate" hreflang="en"
-          href="{{ canonical_url | replace: 'https://eu.capitasnowboarding.com/', 'https://capitasnowboarding.com/' }}" />
+      href="{{ canonical_url | replace: "https://eu.capitasnowboarding.com", "https://capitasnowboarding.com" }}" />
     <link rel="alternate" hreflang="it"
-          href="{{ canonical_url | replace: 'https://eu.capitasnowboarding.com/', 'https://capitasnowboarding.com/' }}" />
+      href="{{ canonical_url | replace: "https://capitasnowboarding.com", "https://eu.capitasnowboarding.com" }}" />
+    <link rel="alternate" hreflang="en-eu"
+      href="{{ canonical_url | replace: "https://capitasnowboarding.com", "https://eu.capitasnowboarding.com" }}" />
+    <link rel="alternate" hreflang="fr"
+      href="{{ canonical_url | replace: "https://capitasnowboarding.com", "https://eu.capitasnowboarding.com" }}" />
+    <link rel="alternate" hreflang="es"
+      href="{{ canonical_url | replace: "https://capitasnowboarding.com", "https://eu.capitasnowboarding.com" }}" />
     <link rel="alternate" hreflang="x-default"
-          href="{{ canonical_url | replace: 'https://eu.capitasnowboarding.com/', 'https://capitasnowboarding.com/' }}" />
+      href="{{ canonical_url }}" />
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
+
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
-    
+
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}

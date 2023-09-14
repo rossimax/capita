@@ -83,8 +83,8 @@
                     </svg></a></div>
             <div class="c-footer__currency">
                 <select>
-                    <option value="value" select="select">NORTH AMERICA</option>
-                    <option value="value">EUROPE</option>
+                    <option value="us" select="select">NORTH AMERICA</option>
+                    <option value="eu">EUROPE</option>
                 </select>
 
                 {% include 'localization-countries' %}
@@ -134,3 +134,41 @@
     font-size: 12px;
 }
 {% endstyle %}
+
+
+{% javascript %}
+
+  (function (document) {
+    let selectors = {
+      footerCurrencyCountry: '.c-footer__currency',
+
+    };
+
+    let footerCurrencyCountry = document.querySelector(selectors.footerCurrencyCountry);
+
+    let footerCurrencyCountry__select = footerCurrencyCountry.querySelector("select")
+    let footerCurrencyCountry__option_eu = footerCurrencyCountry.querySelector("select option[value='eu']")
+    let footerCurrencyCountry__option_us = footerCurrencyCountry.querySelector("select option[value='us']")
+
+    window.addEventListener('load', function () {
+
+        if (location.hostname == 'eu.capitasnowboarding.com') {
+
+            footerCurrencyCountry__select.append(footerCurrencyCountry__option_eu)
+            footerCurrencyCountry__option_eu.setAttribute("select", "select")
+            footerCurrencyCountry__option_us.removeAttribute("select")
+
+        } else if (location.hostname == 'capitasnowboarding.com') {
+
+            footerCurrencyCountry__select.append(footerCurrencyCountry__option_us)
+            footerCurrencyCountry__option_eu.setAttribute("select", "select")
+            footerCurrencyCountry__option_us.removeAttribute("select")
+
+        }
+
+        
+    })
+
+  })(document);
+
+{% endjavascript %}

@@ -36,7 +36,7 @@
                     <p class="form-message form-message--success" tabindex="-1" data-form-status>Thanks for subscribing!</p>
                 {%- endif -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
-                <form class="c-slim-form"><span class="c-slim-form__title">SIGN UP TO GET CAPiTA’S LATEST
+                <div class="c-slim-form"><span class="c-slim-form__title">SIGN UP TO GET CAPiTA’S LATEST
                         UPDATES!</span>
                         <input type="email"
                             name="contact[email]"
@@ -61,7 +61,7 @@
                             data for marketing and profiling purposes.</span></label>
                         
                     {% if form.tags == "newsletter" %}
-                        <span class="input-error-message site_newsletter-error">Email già registrata oppure invalida!</span>
+                        <span class="input-error-message site_newsletter-error">Email already registered or invalid!</span>
                     {% endif %}            
                 {% endform %}
             </div>

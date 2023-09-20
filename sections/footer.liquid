@@ -31,13 +31,13 @@
             </div>
             <div class="c-footer__form">
                 {%- assign formId = 'Contact-Newsletter' -%}
-                {% form 'customer', id: formId, novalidate: 'validate' %}
-                {%- if form.posted_successfully? -%}
-                    <p class="form-message form-message--success" tabindex="-1" data-form-status>Thanks for subscribing!</p>
-                {%- endif -%}
-                <input type="hidden" name="contact[tags]" value="newsletter">
-                <div class="c-slim-form"><span class="c-slim-form__title">SIGN UP TO GET CAPiTA’S LATEST
-                        UPDATES!</span>
+                {% form 'customer', id: formId %}
+                    {%- if form.posted_successfully? -%}
+                        <p class="form-message form-message--success" tabindex="-1" data-form-status>Thanks for subscribing!</p>
+                    {%- endif -%}
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+                    <div class="c-slim-form">
+                        <span class="c-slim-form__title">SIGN UP TO GET CAPiTA’S LATEST UPDATES!</span>
                         <input type="email"
                             name="contact[email]"
                             id="{{ formId }}-email"
@@ -54,15 +54,16 @@
                                 aria-describedby="{{ formId }}-email-error"
                                 data-form-status
                             {% endif %}>
-                        <label class="c-slim-form__legal" for="privacy-newsletter">
-                            <input id="privacy-newsletter" type="checkbox"
-                                name="contact[privacy]" required/>
-                            <span>CAPiTA Privacy Policy and I consent to the processing of my personal
-                            data for marketing and profiling purposes.</span></label>
-                        
-                    {% if form.tags == "newsletter" %}
-                        <span class="input-error-message site_newsletter-error">Email already registered or invalid!</span>
-                    {% endif %}            
+                            <label class="c-slim-form__legal" for="privacy-newsletter">
+                                <input id="privacy-newsletter" type="checkbox" name="contact[privacy]" required/>
+                                <span>CAPiTA Privacy Policy and I consent to the processing of my personal
+                                data for marketing and profiling purposes.</span>
+                            </label>
+                            
+                        {% if form.tags == "newsletter" %}
+                            <span class="input-error-message site_newsletter-error">Email già registrata oppure invalida!</span>
+                        {% endif %}     
+                    </div>       
                 {% endform %}
             </div>
             <div class="c-footer__social"><a class="w-5" href="https://www.facebook.com/CAPiTAsuperCORP/" target="_blank" rel="noopener noreferrer"><svg

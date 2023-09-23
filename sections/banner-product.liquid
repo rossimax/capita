@@ -1,0 +1,354 @@
+{%- liquid
+    if section.settings.image_position
+        assign image_position = "image-on-left"
+    else
+        assign image_position = "image-on-right" 
+    endif
+%}
+<div class="section-banner-product {{ image_position }}">
+    <div class="banner-product__left">
+        <div class="banner-product__left__text">
+            <h5>{{ section.settings.left_sup_title }}</h5>
+            <h3>{{ section.settings.left_title }}</h3>
+        </div>
+        <div class="banner-product__left__card">
+            <a href="{{ section.settings.product.url }}">
+                <div class="banner-product__left__card__image">
+                    <img src="{{ section.settings.product.featured_image | img_url: "550x550" }}" alt="capita card" width="100%">
+                </div>
+                <div class="banner-product__left__card__cta medium"><span>SHOP NOW</span></div>
+            </a>
+        </div>
+    </div>
+    <div class="banner-product__right">
+        <img class="banner-product__right__image" src="{{ section.settings.right_image | img_url: 'master' }}" alt="capita snowboard" width="100%">
+        <h6 class="banner-product__right__text">{{ section.settings.right_text }}</h6>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Banner Product",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "image_position",
+            "label": "Image on Left"
+        },
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        },
+        {
+            "type": "image_picker",
+            "id": "right_image",
+            "label": "Right Image"
+        },
+        {
+            "type": "text",
+            "id": "left_title",
+            "label": "Left Title"
+        },
+        {
+            "type": "text",
+            "id": "left_sup_title",
+            "label": "Left Sup Title"
+        },
+        {
+            "type": "text",
+            "id": "right_text",
+            "label": "Right Text"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Banner Product"
+        }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+.section-banner-product {
+    display: flex;
+}
+.banner-product__left {
+    width: calc(100% * 1/3);
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    background: #000;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.banner-product__right {
+    width: calc(100% * 2/3);
+    position: relative;
+}
+.banner-product__left__card {
+    width: 330px;
+    height: 700px;
+    transform: translateX(50%);
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid #fff;
+    background: #000;
+    z-index: 1;
+    background-image: url(//cdn.shopify.com/s/files/1/0231/7366/0752/files/000_GRID_PAPER_BG_1.png?v=1686394097);
+    background-color: #000;
+    color: #fff;
+}
+.banner-product__left__card a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.banner-product__left__card a img {
+    transform: scale(1);
+    transition-duration: 0.2s;
+}
+.banner-product__left__card a:hover img {
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+}
+.banner-product__left__card__cta {
+    text-align: center;
+    padding: 15px;
+    color: #000;
+    background: #fff;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    font-size: 18px;
+}
+.banner-product__left__card__cta span {
+    font-size: 18px;
+    font-weight: 600;
+}
+.banner-product__left__text {
+    color: #fff;
+    text-align: right;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+.banner-product__left__text h3 {
+    color: #fff;
+    font-size: 80px;
+    text-transform: uppercase;
+    line-height: 0.7;
+    margin: 0;
+    white-space: nowrap;
+    font-weight: 600;
+}
+.banner-product__left__text h5 {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+}
+.banner-product__left__card__image {
+    padding: 50px 20px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.section-banner-product.image-on-left .banner-product__left__text {
+    position: absolute;
+    right: 70px;
+}
+.banner-product__left__text {
+    position: absolute;
+    left: 70px;
+}
+.banner-product__right__text {
+    position: absolute;
+    top: 90px;
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-transform: uppercase;
+    font-weight: 500;
+    vertical-align: baseline;
+    display: flex;
+    align-items: start;
+    line-height: 1;
+}
+.banner-product__right__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+.section-banner-product.image-on-left {
+    flex-direction: row-reverse;
+}
+.section-banner-product.image-on-left .banner-product__left .banner-product__left__card {
+    transform: translate(-50%);
+}
+.section-banner-product.image-on-left .banner-product__left {
+    flex-direction: row-reverse;
+}
+.section-banner-product.image-on-left .banner-product__right__text {
+    vertical-align: baseline;
+    display: flex;
+    align-items: end;
+    line-height: 1;
+    right: unset;
+}
+
+@media screen and (min-width: 1921px ) {
+    .banner-product__left__text {
+        left: calc(50% - 800px);
+    }
+    .section-banner-product.image-on-left .banner-product__right__text {
+        left: calc(50% - 470px);
+    }
+    .section-banner-product.image-on-left .banner-product__left__text {
+        right: calc(50% - 680px);
+    }
+    h6.banner-product__right__text {
+        right: calc(50% - 460px);
+    }
+}
+
+@media screen and (max-width: 1920px ) {
+    .banner-product__left__text {
+        left: 155px;
+    }
+    .section-banner-product.image-on-left .banner-product__right__text {
+        left: 155px;
+    }
+    .section-banner-product.image-on-left .banner-product__left__text {
+        right: 155px;
+    }
+    h6.banner-product__right__text {
+        right: 165px;
+    }
+}
+
+@media screen and (max-width: 1600px ) {
+    .banner-product__left__text,
+    .section-banner-product.image-on-left .banner-product__right__text {
+        left: 70px;
+    }
+    .section-banner-product.image-on-left .banner-product__left__text,
+    h6.banner-product__right__text {
+        right: 70px;
+    }
+    .banner-product__left__card {
+        height: 530px;
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+
+    .banner-product__left__card {
+        height: 450px;
+        width: 240px;
+    }
+    .banner-product__left__card__cta {
+        padding: 10px;
+    }
+    .banner-product__left__card__cta span {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 910px) {
+
+    .banner-product__left__card {
+        height: 390px;
+        width: 200px;
+    }
+    .banner-product__left__text h3 {
+        font-size: 50px;
+    }
+    .banner-product__left__text h5 {
+        font-size: 22px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .banner-product__left,
+    .banner-product__right {
+        width: 100%;
+    }
+    .section-banner-product {
+        flex-direction: column-reverse;
+        background: #000;
+    }
+    .banner-product__left__card {
+        transform: translate(0);
+        width: 175px;
+        height: 350px;
+    }
+    .banner-product__left {
+        padding: 0 25px 50px 25px;
+        justify-content: space-between;
+        align-items: end;
+        transform: translateY(0);
+        z-index: 1;
+        background: transparent;
+        margin-top: -35%;
+    }
+    .banner-product__left__text h3 {
+        font-size: 26px;
+    }
+    .banner-product__left__text h5 {
+        font-size: 16px;
+    }
+    .section-banner-product.image-on-left {
+        flex-direction: column-reverse;
+    }
+    .section-banner-product.image-on-left .banner-product__left {
+        flex-direction: row;
+    }
+    .section-banner-product.image-on-left .banner-product__left .banner-product__left__card {
+        transform: unset;
+    }
+    .banner-product__right__text {
+        vertical-align: baseline;
+        display: flex;
+        align-items: end;
+        line-height: 1;
+        right: 30px;
+    }
+    .section-banner-product.image-on-left .banner-product__right__text,
+    .section-banner-product.image-on-right .banner-product__right__text {
+        right: 40px;
+        left: unset;
+        top: 20px;
+        font-size: 10px;
+        width: auto;
+        height: auto;
+    }
+    .section-banner-product.image-on-left .banner-product__left__text {
+        position: relative;
+        right: unset;
+    }
+    .banner-product__right__image {
+        min-height: 350px;
+    }
+    .banner-product__left__text {
+        position: relative;
+        left: unset;
+    }
+    .banner-product__left__card__cta span {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .banner-product__left__card__image {
+        padding: 20px 0px;
+    }
+}
+{% endstyle %}
+
+

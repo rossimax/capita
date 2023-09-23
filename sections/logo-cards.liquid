@@ -1,0 +1,169 @@
+<div class="section-logo-cards"
+    style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
+    <div class="u-container">
+        <div class="u-content">
+            <div class="logo-cards">
+
+                {% for block in section.blocks %}
+                <div class="single-card">
+                    <div class="single-card__content">
+                        <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.title | strip_html }}">
+                        <h4 class="single-card__content__title o-text is-3 nocase">{{ block.settings.title }}</h4>
+                        <div class="single-card__content__description o-text is-4 is-regular">{{
+                            block.settings.description }}</div>
+                    </div>
+                    <div class="single-card__cta">
+                        <a href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "Logo Cards",
+"settings": [
+{
+"type": "number",
+"id": "padding_top",
+"label": "Padding Top",
+"default": 20
+},
+{
+"type": "number",
+"id": "padding_bottom",
+"label": "Padding Bottom",
+"default": 20
+}
+],
+"blocks": [
+{
+"type": "cards",
+"name": "Cards",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "text",
+"id": "description",
+"label": "Description"
+},
+{
+"type": "text",
+"id": "cta_text",
+"label": "CTA Text"
+},
+{
+"type": "url",
+"id": "cta_link",
+"label": "CTA Link"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Logo Cards"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+
+.logo-cards {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+max-width: 1620px;
+margin: 0 auto;
+}
+.single-card {
+width: calc(33.3333% - 15px);
+border: 2px solid #000;
+border-radius: 30px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.single-card__content {
+padding: 40px 30px 60px;
+}
+.single-card__content img {
+width: 120px;
+display: block;
+margin: 0 auto 40px auto;
+}
+.single-card__content__title {
+font-size: 24px;
+margin-bottom: 20px;
+line-height: 1;
+}
+.single-card__content__description {
+font-size: 20px;
+line-height: 1;
+}
+.single-card__cta {
+display: flex;
+justify-content: center;
+align-items: center;
+background: #E2FF61;
+border-top: 2px solid #000;
+border-bottom-left-radius: 30px;
+border-bottom-right-radius: 30px;
+}
+.single-card__cta a {
+width: 100%;
+text-decoration: none;
+padding: 20px 0;
+border-bottom-left-radius: 30px;
+border-bottom-right-radius: 30px;
+text-align: center;
+line-height: 1;
+color: #000;
+font-size: 18px;
+font-weight: 600;
+}
+@media screen and (max-width: 991px) {
+.logo-cards {
+margin: 0 0 20px 0;
+}
+.single-card {
+width: 100%;
+margin-bottom: 30px;
+}
+.section-logo-cards {
+padding: 0 !important;
+}
+.single-card__content__title {
+font-size: 21px;
+}
+.single-card__content__description {
+font-size: 16px;
+}
+.single-card__content img {
+width: 96px;
+}
+.single-card__content {
+min-height: 400px;
+}
+.single-card__cta a {
+padding: 14px 0;
+font-size: 16px;
+}
+
+}
+
+{% endstylesheet %}

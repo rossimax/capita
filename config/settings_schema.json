@@ -1557,5 +1557,25 @@
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
       }
     ]
+  },
+  {
+    "name": "SCRIPTS",
+    "settings": [
+      {
+        "type": "html",
+        "id": "script_pre_body_close",
+        "label": "Script Pre Body Close"
+      }
+    ]
+  },
+  {
+    "name": "FOOTER",
+    "settings": [
+      {
+        "type": "text",
+        "id": "footer_legal",
+        "label": "Footer Legal"
+      }
+    ]
   }
 ]

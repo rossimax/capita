@@ -1,0 +1,109 @@
+{% if section.settings.black_style == "yes" %}
+    {% assign style_black = "background-color:#000;color:#fff;" %}
+{% else %}
+    {% assign style_black = "" %}
+{% endif %}
+
+{% if section.settings.background_image != blank %}
+    {% assign background_image = section.settings.background_image | img_url: 'master' %}
+{% else %}
+    {% assign background_image = "" %}
+{% endif %}
+
+<div class="section-paragraph" style="background-image:url({{ background_image }}); {{style_black}}">
+    <div class="u-container">
+        <div class="u-content">
+            <div class="paragraph-content">
+                <div class="paragraph-content__text">
+                    {{ section.settings.text }}
+                </div>
+                {% if section.settings.image != blank %}
+                <img class="paragraph-content__image" src="{{ section.settings.image | img_url: 'master' }}" alt="capita">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Paragraph",
+    "settings": [
+        {
+            "type": "select",
+            "id": "black_style",
+            "label": "Black Style",
+            "options": [
+                {
+                "value": "yes",
+                "label": "Yes"
+                },
+                {
+                "value": "no",
+                "label": "No"
+                }
+            ],
+            "default": "no"
+        },
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Paragraph"
+        }
+    ]
+  }
+{% endschema %}
+
+
+{% stylesheet %}
+.section-paragraph {
+    padding: 80px 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+}
+.paragraph-content {
+    text-align: center;
+}
+.paragraph-content__text {
+    line-height: 1;
+    font-weight: 500;
+}
+.paragraph-content__text p {
+    margin: 0;
+    display: block;
+    font-size: 52px;
+}
+.paragraph-content__image {
+    margin: 60px auto 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .paragraph-content__text p {
+        font-size: 20px;
+    }
+    .paragraph-content__image {
+        margin: 30px auto 0;
+        max-width: 80px;
+    }
+    .paragraph-content__text br {
+        display: none;
+    }
+}
+
+{% endstylesheet %}

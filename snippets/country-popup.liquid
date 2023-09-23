@@ -1,0 +1,94 @@
+{%-liquid 
+    if request.origin == "https://capitasnowboarding.com" or request.origin == "https://capita-snowboarding-store.myshopify.com"
+        assign actual_shop = "https://capitasnowboarding.com"
+        assign redirect_shop = "https://eu.capitasnowboarding.com"
+        assign redirect_shop_name = "Capita EU"
+    elsif request.origin == "https://eu.capitasnowboarding.com" or request.origin == "https://capita-snowboarding-store-eu.myshopify.com"
+        assign actual_shop = "https://eu.capitasnowboarding.com"
+        assign redirect_shop = "https://capitasnowboarding.com"
+        assign redirect_shop_name = "Capita US"
+    endif
+-%}
+
+<div id="choose-country-site-modal" data-check-request-origin="{{ request.origin }}">
+    <div class="modal-country-content">
+        <i class="fas fa-times-circle"></i>
+        <p>Looks like you're in <strong><span id="modal-country-name"></span></strong>.</p>
+        <p>Go to <a class="underline" href="{{ canonical_url | replace: actual_shop, redirect_shop }}"><strong>{{ redirect_shop_name }}</strong></a>.</p>
+        <div class="modal-country-content__btn">
+            <a class="btn-yes" href="{{ canonical_url | replace: actual_shop, redirect_shop }}">Yes, please</a>
+            <a class="btn-no">No, thanks</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    #choose-country-site-modal {
+        visibility: hidden;
+        z-index: -5;
+        opacity: 0;
+        transition-duration: 0.3s;
+    }
+    #choose-country-site-modal.show {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+        opacity: 1;
+        transition-duration: 1s;
+        background-color: #0000008f;
+        display: block;
+        visibility: visible;
+    }
+    .modal-country-content {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #fff;
+        padding: 50px 30px;
+        text-align: center;
+        min-width: 300px;
+        font-size: 20px;
+    }
+    .modal-country-content i.fas.fa-times-circle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+    .modal-country-content a.btn-yes {
+        text-decoration: none;
+        background: #000;
+        color: #fff;
+        padding: 10px;
+        margin-right: 10px;
+        transition-duration: 0.2s;
+    }
+    .modal-country-content a.btn-no {
+        background: #000;
+        opacity: 0.6;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        transition-duration: 0.2s;
+    }
+    .modal-country-content__btn {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal-country-content a.underline {
+        text-decoration: none;
+    }
+    .modal-country-content a.btn-yes:hover,
+    .modal-country-content a.btn-no:hover {
+        box-shadow: 0 0 3px #757575;
+        transition-duration: 0.2s;
+    }
+    .modal-country-content a {
+        color: #000;
+    }
+</style>

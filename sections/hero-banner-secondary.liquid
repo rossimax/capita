@@ -1,0 +1,341 @@
+{% assign image_desk = section.settings.image_desk | image_url %}
+{% assign image_mob = section.settings.image_mob | image_url %}
+
+{% assign video_desk = section.settings.video_desk | video_tag: image_size: 'master', autoplay: true, loop: true, muted:
+true, controls: false %}
+{% assign video_mob = section.settings.video_mob | video_tag: image_size: 'master', autoplay: true, loop: true, muted:
+true, controls: false %}
+
+{% if section.settings.title_position == "with_content" %}
+{% assign title_position = "with-content" %}
+{% elsif section.settings.title_position == "top_left" %}
+{% assign title_position = "top-left" %}
+{% endif %}
+
+{% if section.settings.content_position == "bottom_center" %}
+{% assign content_position = "bottom-center" %}
+{% elsif section.settings.content_position == "bottom_outside" %}
+{% assign content_position = "bottom-outside" %}
+{% endif %}
+
+
+<div class="section-hero-banner-secondary {{ title_position }} {{ content_position }}"
+  style="margin-top: {{ section.settings.margin_top }}px;margin-bottom: {{ section.settings.margin_bottom }}px;">
+
+  {% if section.settings.shadow == "yes_full" %}
+  <div class="full-shadow"></div>
+  {% endif %}
+
+  <h2
+    class="hero-banner-secondary-content__title hero-banner-secondary-content__title---top-left padding-inline o-text nocase">
+    {{ section.settings.title }}</h2>
+
+  {% if section.settings.image_desk %}
+  <div class="hero-banner-secondary-image--desk"><img src="{{ image_desk }}" alt="union"></div>
+  <div class="hero-banner-secondary-image--mob"><img src="{{ image_mob }}" alt="union"></div>
+  {% else %}
+  <div class="hero-banner-secondary-video--desk">{{ video_desk }}</div>
+  <div class="hero-banner-secondary-video--mob">{{ video_mob }}</div>
+  {% endif %}
+  <div class="hero-banner-secondary-content">
+    <h2 class="hero-banner-secondary-content__title strong">{{ section.settings.title }}</h2>
+    <h4 class="hero-banner-secondary-content__subtitle">{{ section.settings.sub_title }}</h4>
+    {% if section.settings.button_label != blank %}
+    <a class="hero-banner-secondary-content__cta" href="{{ section.settings.button_link }}">{{
+      section.settings.button_label }}</a>
+    {% endif %}
+  </div>
+
+  {% if section.settings.shadow_box_title != blank %}
+  <div class="u-container">
+    <div class="u-content">
+      <div class="hero-banner-secondary-shadow-box padding-inline">
+        <h3 class="hero-banner-secondary-shadow-box__title o-text is-3 nocase">{{ section.settings.shadow_box_title }}
+        </h3>
+        <div class="hero-banner-secondary-shadow-box__text o-text is-4 is-regular">{{ section.settings.shadow_box_text
+          }}</div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+</div>
+
+
+{% schema %}
+{
+"name": {
+"en": "Hero Banner Secondary"
+},
+"settings": [
+{
+"type": "number",
+"id": "margin_top",
+"label": "Margin Top",
+"default": 0
+},
+{
+"type": "number",
+"id": "margin_bottom",
+"label": "Margin Bottom",
+"default": 0
+},
+{
+"type": "image_picker",
+"id": "image_desk",
+"label": "Image Desk",
+"info": "If empty use video"
+},
+{
+"type": "image_picker",
+"id": "image_mob",
+"label": "Image Mob",
+"info": "If empty use video"
+},
+{
+"type": "video",
+"id": "video_desk",
+"label": "Video Desk"
+},
+{
+"type": "video",
+"id": "video_mob",
+"label": "Video Mob"
+},
+{
+"type": "select",
+"id": "shadow",
+"label": "Shadow",
+"options": [
+{
+"value": "yes_full",
+"label": "Yes Full"
+},
+{
+"value": "no",
+"label": "No"
+}
+],
+"default": "no"
+},
+{
+"type": "select",
+"id": "title_position",
+"label": "Title position",
+"options": [
+{
+"value": "with_content",
+"label": "With content"
+},
+{
+"value": "top_left",
+"label": "Top Left"
+}
+],
+"default": "with_content"
+},
+{
+"type": "select",
+"id": "content_position",
+"label": "Content position",
+"options": [
+{
+"value": "bottom_center",
+"label": "Bottom Center"
+},
+{
+"value": "bottom_outside",
+"label": "Bottom Outside"
+}
+],
+"default": "bottom_center"
+},
+{
+"type": "html",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "text",
+"id": "sub_title",
+"label": "Sub Title"
+},
+{
+"type": "text",
+"id": "button_label",
+"label": "Button label"
+},
+{
+"type": "url",
+"id": "button_link",
+"label": "Button link"
+},
+{
+"type": "text",
+"id": "shadow_box_title",
+"label": "Shadow box title"
+},
+{
+"type": "html",
+"id": "shadow_box_text",
+"label": "Shadow box text"
+}
+],
+"presets": [
+{
+"name": "Hero Banner Secondary"
+}
+]
+}
+{% endschema %}
+
+
+
+{% style %}
+
+.section-hero-banner-secondary {
+position: relative;
+width: 100%;
+}
+.section-hero-banner-secondary .full-shadow {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.4);
+}
+.section-hero-banner-secondary.with-content .hero-banner-secondary-content__title---top-left {
+display: none;
+}
+.section-hero-banner-secondary.top-left .hero-banner-secondary-content .hero-banner-secondary-content__title {
+display: none;
+}
+.hero-banner-secondary-content__title.hero-banner-secondary-content__title---top-left {
+position: absolute;
+top: 100px;
+text-align: left;
+}
+
+.hero-banner-secondary-video--desk,
+.hero-banner-secondary-image--desk {
+width: 100%;
+}
+.hero-banner-secondary-video--desk video,
+.hero-banner-secondary-image--desk img {
+width: 100%;
+height: calc(100vh - 130px);
+object-fit: cover;
+}
+.hero-banner-secondary-video--mob,
+.hero-banner-secondary-image--mob {
+display: none;
+}
+.hero-banner-secondary-video--mob video,
+.hero-banner-secondary-image--mob img {
+width: 100%;
+height: 100%;
+display: block;
+min-height: 500px;
+object-fit: cover;
+}
+.hero-banner-secondary-content {
+position: absolute;
+top: 70%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 100%;
+padding: 0 20px;
+}
+.hero-banner-secondary-content__title {
+margin-bottom: 15px;
+display: block;
+text-align: center;
+margin-bottom: 10px;
+color: #fff;
+}
+.hero-banner-secondary-content__subtitle {
+font-size: 21px;
+text-align: center;
+line-height: 1;
+margin-bottom: 0;
+color: #fff;
+}
+.hero-banner-secondary-content__cta {
+text-align: center;
+margin: 30px auto 20px;
+display: block;
+max-width: fit-content;
+background: #fff;
+color: #000;
+border-radius: 30px;
+text-transform: none;
+padding: 10px 50px;
+line-height: 1.8;
+font-size: 13px;
+text-transform: uppercase;
+max-width: -moz-fit-content;
+}
+.section-hero-banner-secondary.bottom-outside .hero-banner-secondary-content {
+position: relative;
+left: unset;
+top: unset;
+transform: unset;
+padding-top: 50px;
+padding-bottom: 50px;
+background: #fff;
+color: #000;
+}
+.section-hero-banner-secondary.bottom-outside .hero-banner-secondary-content h2,
+.section-hero-banner-secondary.bottom-outside .hero-banner-secondary-content h4 {
+color: #000;
+}
+.section-hero-banner-secondary.bottom-outside .hero-banner-secondary-content a.hero-banner-secondary-content__cta {
+color: #fff;
+background: #000;
+}
+.hero-banner-secondary-shadow-box {
+max-width: 700px;
+padding: 20px;
+position: absolute;
+bottom: 5%;
+color: #fff;
+border: 1px solid #fff;
+border-radius: 30px;
+background: #00000099;
+backdrop-filter: blur(10px);
+}
+.hero-banner-secondary-shadow-box__title {
+font-size: 26px;
+line-height: 1;
+margin-bottom: 10px;
+}
+.hero-banner-secondary-shadow-box__text {
+line-height: 1.05;
+}
+
+@media screen and (max-width: 991px) {
+.hero-banner-secondary-shadow-box {
+left: 50%;
+transform: translateX(-50%);
+width: calc(100% - 30px);
+}
+}
+
+@media screen and (max-width: 768px) {
+
+.hero-banner-secondary-video--mob,
+.hero-banner-secondary-image--mob {
+display: block;
+}
+.hero-banner-secondary-video--desk,
+.hero-banner-secondary-image--desk {
+display: none;
+}
+.hero-banner-secondary-content__title.hero-banner-secondary-content__title---top-left {
+left: 20px;
+top: 30px;
+}
+}
+
+{% endstyle %}

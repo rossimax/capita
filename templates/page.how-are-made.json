@@ -1,0 +1,72 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "head_width": 0,
+        "margin_top": 0,
+        "body_color": "#ffffff",
+        "footer_border": true,
+        "enable_head": false,
+        "title": "",
+        "description": ""
+      }
+    },
+    "3286f5f8-a6d8-4ac3-81c7-0fba897d5c35": {
+      "type": "how-is-made",
+      "settings": {
+        "title": "What does it take to make<br> <span>a world-class snowboard?<\/span>",
+        "description": "",
+        "section_1_title": "The People",
+        "section_1_box_title": "For decades, the Austrian Alps have been the birthplace of some of the most exceptional products in snowboarding.",
+        "section_1_box_description": "Perhaps it's the influence of the stunning green valleys and majestic mountain ranges that surround us, but Austria has earned a reputation for manufacturing globally sought-after premier products while emphasizing a harmonious work-life balance.",
+        "section_1_image_desk": "shopify:\/\/shop_images\/CAPITA-MFG_2021_screengrab_000024_1.jpg",
+        "section_1_image_mob": "shopify:\/\/shop_images\/CAPITA-MFG_2021_screengrab_000024_1_1.jpg",
+        "section_1_box_shadow": 20,
+        "section_2_title": "Materials",
+        "section_2_sub_title": "Thoughtfully selected. Locally sourced.",
+        "section_2_sub_text": "Every snowboard’s recipe of materials is different, and we meticulously select only the best raw materials for each series we produce. Our localized supply chain allows us to collaborate with suppliers offering innovative, high-performing, and sustainable materials.",
+        "section_2_image": "shopify:\/\/shop_images\/Group_846.jpg",
+        "section_3_title": "In-house printing",
+        "section_3_sub_title": "Industry leading print capabilities.",
+        "section_3_sub_text": "At The MotherShip™, we prioritize both performance and aesthetics. We handle our entire printing process in-house, utilizing top-end digital printing, silk screening, and our proprietary PLT Topsheet application technology. This comprehensive approach guarantees that CAPiTA graphics are brought to life in a unique and unparalleled manner that cannot be replicated by anyone else. In the snowboard industry, our investment in printing technology truly sets us apart.",
+        "section_3_image": "shopify:\/\/shop_images\/D_mothership4_img3.jpg",
+        "section_4_title": "Core Milling",
+        "section_4_box_title": "The heart of your snowboard.",
+        "section_4_box_text": "Wood cores are the heart of your snowboard. This crucial component defines the key characteristics of a board and serves as the primary foundation for its construction. With utmost care, we choose the finest and highest-performing species of wood for our cores. In-house 5-axis CNC milling ensures precision, and each core is then meticulously hand-inspected by our carpenters to achieve perfection.   ",
+        "section_4_image": "shopify:\/\/shop_images\/D_mothership4_banner2.jpg",
+        "section_4_image_mob": "shopify:\/\/shop_images\/M_mothership4_banner2_1.jpg",
+        "section_5_title": "Pressing",
+        "section_5_sub_title": "By the most experienced crafters.",
+        "section_5_sub_text": "At The MotherShip™, the renowned tradition of snowboard manufacturing in the Austrian Alps runs deep. Our craftsmen meticulously press each board with a bespoke, computer-controlled, recipe of ingredients to deliver an optimal ride experience. Freshly pressed boards undergo hand inspection before moving on to the grinding and finishing stages.",
+        "section_5_image": "shopify:\/\/shop_images\/Group_726.jpg",
+        "section_6_title": "Grinding Line",
+        "section_6_sub_title": "Machine automated for fine tuned perfection.",
+        "section_6_sub_text": "The MotherShip™ features a multi-million dollar, industry-leading, advanced grinding line. Fully automated machines meticulously fine-tune each board, ensuring exceptional precision while minimizing errors and waste. Additionally, our boards undergo thorough hand inspection by experienced craftsmen for perfection. This commitment to detail guarantees that a board built at The MotherShip™ is truly the best in the world.",
+        "section_6_image": "shopify:\/\/shop_images\/D_mothership4_img5.jpg",
+        "section_7_title": "Finishing",
+        "section_7_sub_title": "Machine precision meets hand inspection.",
+        "section_7_sub_text": "Before leaving the production line every snowboard undergoes a meticulous final hand inspection. We hold our boards to rigorous standards to ensure they meet your high expectations. Each CAPiTA snowboard leaving our facility is certified as world-class and proudly sealed with the MotherShip™ quality control stamp of approval.",
+        "section_7_image": "shopify:\/\/shop_images\/Group_731.jpg",
+        "section_8_title": "Delivery",
+        "section_8_box_title": "From everyone at The MotherShip™ to you.",
+        "section_8_box_text": "At The MotherShip™, our deep passion for the mountains and snow drives us. We wholeheartedly dedicate ourselves to designing and manufacturing the world's finest snowboards, employing the most efficient and sustainable processes. We extend our heartfelt gratitude to all who have chosen and ridden a CAPiTA snowboard. Thank you for your support, from everyone at The MotherShip™.",
+        "section_8_video": "shopify:\/\/files\/videos\/Delivery Hero Banner.mp4",
+        "section_8_video_mob": "shopify:\/\/files\/videos\/Delivery Mobile.mp4",
+        "cta_text_1": "Watch: Clean Energy Production",
+        "cta_link_yt": "https:\/\/www.youtube.com\/embed\/HN33OvYL8N4",
+        "arrow_type_1": "arrow_play",
+        "cta_text_2": "How does technology help?",
+        "cta_link_2": "shopify:\/\/pages\/technology",
+        "arrow_type_2": "none",
+        "cta_text_3": "What does clean energy mean?",
+        "cta_link_3": "shopify:\/\/pages\/clean-energy",
+        "arrow_type_3": "none"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "3286f5f8-a6d8-4ac3-81c7-0fba897d5c35"
+  ]
+}

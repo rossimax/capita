@@ -1,0 +1,116 @@
+{%- liquid
+    assign gender = page.metafields.accentuate.gender 
+    assign text_rider_quiver = page.metafields.accentuate.text_rider_quiver 
+    assign boards = page.metafields.team_profile.snowboard_product
+-%}
+{% if boards.size > 0 %}
+    <div class="section-team-boards">
+        <div class="u-container">
+            <div class="u-content">
+                <div class="team-boards">
+                    {%- if text_rider_quiver != blank-%}
+                        <h3 class="strong o-text is-2">{{ text_rider_quiver }}</h3>
+                    {% elsif gender != blank %}
+                        <h3 class="strong o-text is-2">Boards <span>{{ gender }}</span> rides</h3>
+                    {% else %}
+                        <h3 class="strong o-text is-2">Boards:</h3>
+                    {%- endif -%}
+                    <div class="team-boards-content">
+                        {%- for board in boards -%}
+                        {% assign index = forloop.index | minus: 1 %}
+                        <a class="team-boards-content__single" href="{{ all_products[board].url }}" >
+                            <img src="{{ all_products[board].featured_image  | img_url: '550x550' }}">
+                            <span class="o-text is-4 is-medium">{{ page.metafields.team_profile.board_category[index] }}</span>
+                            <h4 class="o-text is-3">{{ page.metafields.team_profile.board_title[index] }}</h4>
+                            {% comment %} <a href="{{ all_products[board].url }}" class="btn btn-primary medium">DISCOVER MORE</a> {% endcomment %}
+                        </a>
+                        {%- endfor -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Team Boards",
+    "presets": [
+        {
+            "name": "Team Boards"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+.section-team-boards {
+    background-image: url(/cdn/shop/files/000_GRID_PAPER_BG_1.png?v=1686394097);
+    background-repeat: repeat;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0 80px 0;
+    margin-top: 40px; 
+}
+@media screen and (min-width: 768px) {
+    .section-team-boards {
+    margin-top: 70px;
+}
+}
+.team-boards {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.team-boards h3 {
+    color: #fff;
+    margin: 30px 0; 
+}
+.team-boards-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.team-boards-content__single {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration:none;
+    margin: 30px 0;
+    cursor: pointer;
+}
+
+.team-boards-content__single img {
+    width: 100%;
+    max-width: 275px;
+    margin: 20px 0 30px 0;
+    transition: transform .2s;
+}
+
+.team-boards-content__single:hover {
+    text-decoration:none !important;
+}
+.team-boards-content__single:hover img {
+    transform: scale(1.05);
+}
+@media screen and (max-width: 1440px) {
+    .team-boards-content__single img {
+        max-width: 190px;
+    }
+    .team-boards-content__single .btn.btn-primary {
+        min-width: calc(100% - 40px);
+    }
+}
+@media screen and (max-width: 991px) {
+    .team-boards h3 {
+        margin: 40px 20px;
+    }
+    .team-boards-content__single {
+        width: 100%;
+    }
+}
+
+{% endstylesheet %}
+

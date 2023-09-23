@@ -14,6 +14,7 @@
   }
 {%- endstyle -%}
 
+
 <div class="customer login section-{{ section.id }}-padding">
   <h1 id="recover" tabindex="-1">
     {{ 'customer.recover_password.title' | t }}
@@ -26,6 +27,11 @@
     {%- form 'recover_customer_password' -%}
       {% assign recover_success = form.posted_successfully? %}
       <div class="field">
+
+        <label for="RecoverEmail">
+          {{ 'customer.login_page.email' | t }}
+        </label>
+
         <input
           type="email"
           value=""
@@ -41,9 +47,7 @@
           {% endif %}
           placeholder="{{ 'customer.login_page.email' | t }}"
         >
-        <label for="RecoverEmail">
-          {{ 'customer.login_page.email' | t }}
-        </label>
+
       </div>
       {%- if form.errors -%}
         <small id="RecoverEmail-email-error" class="form__message">
@@ -57,11 +61,11 @@
         </small>
       {%- endif -%}
 
-      <button>
+      <button class="btn btn-secondary black">
         {{ 'customer.login_page.submit' | t }}
       </button>
 
-      <a href="#login">
+      <a class="link-login" href="#login">
         {{ 'customer.login_page.cancel' | t }}
       </a>
     {%- endform -%}
@@ -97,6 +101,10 @@
       {%- endif -%}
 
       <div class="field">
+        <label for="CustomerEmail">
+          {{ 'customer.login_page.email' | t }}
+        </label>
+
         <input
           type="email"
           name="customer[email]"
@@ -109,13 +117,15 @@
           {% endif %}
           placeholder="{{ 'customer.login_page.email' | t }}"
         >
-        <label for="CustomerEmail">
-          {{ 'customer.login_page.email' | t }}
-        </label>
+
       </div>
 
       {%- if form.password_needed -%}
         <div class="field">
+          <label for="CustomerPassword">
+            {{ 'customer.login_page.password' | t }}
+          </label>
+
           <input
             type="password"
             value=""
@@ -127,21 +137,19 @@
             {% endif %}
             placeholder="{{ 'customer.login_page.password' | t }}"
           >
-          <label for="CustomerPassword">
-            {{ 'customer.login_page.password' | t }}
-          </label>
+
         </div>
 
-        <a href="#recover">
+        <a class="link-recover" href="#recover">
           {{ 'customer.login_page.forgot_password' | t }}
         </a>
       {%- endif -%}
 
-      <button>
+      <button class="btn btn-secondary black">
         {{ 'customer.login_page.sign_in' | t }}
       </button>
 
-      <a href="{{ routes.account_register_url }}">
+      <a class="link-register" href="{{ routes.account_register_url }}">
         {{ 'customer.login_page.create_account' | t }}
       </a>
     {%- endform -%}
@@ -153,7 +161,7 @@
       <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
 
       {%- form 'guest_login' -%}
-        <button>
+        <button class="btn btn-secondary black">
           {{ 'customer.login_page.guest_continue' | t }}
         </button>
       {%- endform -%}
@@ -192,3 +200,75 @@
   ]
 }
 {% endschema %}
+
+
+{% style %}
+
+.customer.login {
+    margin-top: 150px !important;
+}
+.field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.field input {
+    border: 1px solid;
+    min-width: 300px;
+    height: 40px;
+    padding: 0 10px;
+}
+.field label {
+    font-weight: 500;
+}
+#customer_login a {
+    font-weight: 500;
+    color: #000;
+    width: 100%;
+}
+#customer_login a.link-register,
+#customer_login a.link-login {
+  text-align: center;
+}
+a.link-login {
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  width: 100%;
+}
+#customer_login a.link-recover {
+  text-align: right;
+}
+h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1;
+}
+.customer form {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+button.btn.btn-secondary.black {
+    text-align: center;
+    margin: 20px auto;
+}
+@media screen and (max-width: 768px) {
+  .customer.login {
+    margin-top: 100px !important;
+  }
+  .field input {
+    border: 1px solid;
+    min-width: 210px;
+  }
+  button.btn.btn-secondary.black {
+    text-align: center;
+    margin: 20px auto;
+    min-width: unset;
+    width: 100%;
+  }
+}
+{% endstyle %}

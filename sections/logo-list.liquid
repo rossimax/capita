@@ -1,0 +1,181 @@
+<div
+  class="section-logo-list"
+  style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.background }}; "
+>
+  <div class="u-container">
+    <div class="{% if section.settings.align_left == false %}u-content{% endif %}">
+      <div class="logo-list">
+        <h2 class="logo-list__title o-text is-2 nocase">{{ section.settings.title }}</h2>
+        <div class="logo-list__content">
+          {% for block in section.blocks %}
+            <div class="single-logo {% if block.settings.text %} single-logo--with-text {% endif %}">
+              <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.title | strip_html }}">
+              {% if section.settings.display_list_count %}
+                <span class="round-count">{{ forloop.index }}</span>
+              {% endif %}
+              {% if block.settings.text %}
+                <div class="single-logo__text">
+                  {{ block.settings.text }}
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        {% if section.settings.description != blank %}
+          <div class="logo-list__description">{{ section.settings.description }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Logo List",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "align_left",
+      "label": "Align Left"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#000"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 20
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 20
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_list_count",
+      "label": "Display List Count"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "list",
+      "name": "list",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "html",
+          "id": "text",
+          "label": "text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo List"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .section-logo-list {
+    background: #000;
+  }
+  .logo-list {
+    max-width: 1460px;
+    margin: 0 auto;
+    color: #fff;
+  }
+  .logo-list__content {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+  .single-logo img {
+    height: 110px;
+  }
+  .logo-list__title {
+    color: #fff;
+  }
+  .logo-list__description {
+    font-size: 24px;
+    line-height: 1;
+  }
+  span.round-count {
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 20px;
+    display: block;
+    height: 20px;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  .single-logo__text {
+    color: #000;
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    .section-logo-list {
+      padding: 40px 0 !important;
+    }
+    .logo-list {
+      margin: 0 auto;
+    }
+    .single-logo {
+      width: 33.333%;
+    }
+    .single-logo img {
+      height: 80px;
+      margin: 0 auto 30px auto;
+    }
+    .single-logo.single-logo--with-text img {
+      margin: 0;
+    }
+    .logo-list__content {
+      margin-top: 40px;
+    }
+    .logo-list__description {
+      font-size: 16px;
+      margin-bottom: 70px;
+    }
+    .single-logo {
+      margin-bottom: 20px;
+    }
+    .logo-list__content {
+      padding-bottom: 20px;
+    }
+    span.round-count {
+      width: 14px;
+      height: 14px;
+    }
+    .single-logo__text {
+      margin-top: 10px;
+    }
+  }
+{% endstylesheet %}

@@ -1,0 +1,47 @@
+
+<div class="section-button" style="padding-top: {{ section.settings.padding_top }}px;">
+    <a class="btn btn-primary black button-one" href="{{ section.settings.cta_url }}">{{ section.settings.cta_text }}</a>
+</div>
+
+
+{% schema %}
+{
+  "name": "Button",
+  "class": "button-section",
+  "settings": [
+    {
+        "type": "number",
+        "id": "padding_top",
+        "label": "Padding Top",
+        "default": 20
+    },
+    {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text"
+    },
+    {
+        "type": "url",
+        "id": "cta_url",
+        "label": "CTA Url"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Button"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.shopify-section.button-section {
+    width: 100%;
+}
+.section-button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+{% endstylesheet %}

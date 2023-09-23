@@ -1,0 +1,144 @@
+<div class="section-team-body">
+    <div class="u-container">
+        <div class="u-content">
+            <div class="team-body">
+                <div class="team-body__content">
+                    <h4 class="o-text is-3">{{ section.settings.sup_title }} / {{ section.settings.title }}</h4>
+                    <div class="team-body__content__bio o-text is-4 is-regular">{{ page.metafields.accentuate.bio }}
+                    </div>
+                    <div class="team-body__content__ig o-text is-4 is-regular">
+                        {% if page.metafields.accentuate.instagram != blank %}
+                        <a href="{{ page.metafields.accentuate.instagram }}" target="_blank">{% render 'icon-instagram'
+                            %} {{ page.metafields.accentuate.instagram | remove: "https://www.instagram.com/" | remove:
+                            "/" }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="team-body__table">
+                    <div class="team-body__table__content">
+                        <div class="team-body__table__content_cell">
+                            <span class="cell-type o-text is-4 is-regular nocase">HOMETOWN:</span><br />
+                            <span class="cell-content o-text is-4 nocase">{{ page.metafields.team_profile.hometown
+                                }}</span>
+                        </div>
+                        <div class="team-body__table__content_cell">
+                            <span class="cell-type o-text is-4 is-regular nocase">HEIGHT:</span><br />
+                            <span class="cell-content o-text is-4 nocase">{{ page.metafields.team_profile.height
+                                }}</span>
+                        </div>
+                        <div class="team-body__table__content_cell">
+                            <span class="cell-type o-text is-4 is-regular nocase">STANCE:</span><br />
+                            <span class="cell-content o-text is-4 nocase">{{ page.metafields.team_profile.weight
+                                }}</span>
+                        </div>
+                        <div class="team-body__table__content_cell">
+                            <span class="cell-type o-text is-4 is-regular nocase">STANCE ANGLES:</span><br />
+                            <span class="cell-content o-text is-4 nocase">{{ page.metafields.team_profile.stance
+                                }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "Team Body",
+"settings": [
+{
+"type": "text",
+"id": "sup_title",
+"label": "Sup Title",
+"default": "TEAM"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title"
+}
+],
+"presets": [
+{
+"name": "Team Body"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+
+.team-body,
+.team-body h4,
+.team-body__content__bio,
+.team-body__table__content_cell,
+.team-body__content__ig a {
+color: #fff;
+}
+.team-body__table__content_cell .cell-type {
+color: #676767;
+}
+.team-body__content__ig svg.icon.icon-instagram {
+width: 10px;
+}
+.team-body {
+display: flex;
+flex-wrap: wrap;
+max-width: 1440px;
+margin-top: 60px;
+}
+.team-body__content {
+width: 75%;
+padding-right: 150px;
+line-height: 1;
+}
+.team-body__table {
+width: 25%;
+}
+.team-body__content__bio {
+margin: 30px 0;
+}
+.team-body__table__content {
+display: flex;
+flex-wrap: wrap;
+line-height: 1;
+border: 1px solid #fff;
+border-radius: 30px;
+padding-bottom: 10px;
+font-weight: 500;
+}
+.team-body__table__content_cell {
+width: 50%;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-top: 20px;
+}
+.team-body__content h4 {
+text-transform: uppercase;
+}
+.team-body__content__ig a {
+display: flex;
+text-transform: uppercase;
+text-decoration: unset;
+}
+.team-body__content__ig svg {
+margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+.team-body__content,
+.team-body__table {
+width: 100%;
+}
+
+.team-body__table {
+margin-top: 40px;
+}
+
+.team-body__content {
+padding-right: 0;
+}
+}
+
+{% endstylesheet %}

@@ -1,0 +1,22 @@
+<div class="section-spacer">
+    <div class="spacer" style="height: {{ section.settings.height }}px"></div>
+</div>
+
+{% schema %}
+  {
+    "name": "Spacer",
+    "settings": [
+        {
+            "type": "number",
+            "id": "height",
+            "label": "Height",
+            "default": 0
+        }
+    ],
+    "presets": [
+        {
+            "name": "Spacer"
+        }
+    ]
+  }
+{% endschema %}

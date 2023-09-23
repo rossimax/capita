@@ -1,0 +1,62 @@
+<div class="section-youtube-video">
+    <div class="u-container">
+        <div class="u-content">
+            <h4 class="strong">{{ section.settings.title }}</h4>            
+        </div>
+    </div>
+    <div class="youtube-video">
+        {{ section.settings.text }}
+    </div>
+</div>
+  
+{% schema %}
+{
+    "name": "Youtube Video",
+    "tag": "section",
+    "class": "shopify-section--youtube-video",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Youtube Video"
+        }
+    ]
+}
+{% endschema %}
+
+{% style %}
+.youtube-video {
+  position: relative;
+  height: 0;
+  padding-top: 56.25%;
+  width:100%;
+}
+.youtube-video iframe {
+  position: absolute;
+  top: 0; left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+.section-youtube-video h4 {
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+    .section-youtube-video h4 {
+        font-size: 22px;
+    }
+}
+
+{% endstyle %}

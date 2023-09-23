@@ -118,7 +118,7 @@
 }
 
 .customer tbody td:first-of-type {
-  padding-top: 4rem;
+  padding: 10px;
 }
 
 @media screen and (min-width: 750px) {
@@ -127,12 +127,6 @@
     text-align: left;
     padding-left: 0;
     padding-right: 2.2rem;
-  }
-
-  .customer thead th,
-  .customer tbody td {
-    padding-top: 2.4rem;
-    padding-bottom: 2.4rem;
   }
 
   .customer th:first-of-type,
@@ -145,7 +139,7 @@
   }
 
   .customer tbody td:first-of-type {
-    padding-top: 2.4rem;
+    padding: 10px;
   }
 }
 
@@ -155,7 +149,7 @@
 
 @media screen and (min-width: 750px) {
   .customer tbody td:last-of-type {
-    padding-bottom: 0;
+    padding: 10px;
   }
 }
 
@@ -189,23 +183,11 @@
   padding-top: 4rem;
 }
 
-@media screen and (min-width: 750px) {
-  .customer tfoot tr:first-of-type td,
-  .customer tfoot tr:first-of-type th {
-    padding-top: 2.4rem;
-  }
-}
 
 .customer tfoot tr:last-of-type td {
   padding-bottom: 4rem;
 }
 
-@media screen and (min-width: 750px) {
-  .customer tfoot tr:last-of-type td,
-  .customer tfoot tr:last-of-type th {
-    padding-bottom: 2.4rem;
-  }
-}
 
 /* works around colspan phantom border issues */
 .customer thead::after,
@@ -447,17 +429,6 @@
   margin-bottom: 1rem;
 }
 
-:is(.account, .order) h2 {
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 990px) {
-  :is(.account, .order) h2 {
-    margin-top: 0;
-  }
-}
-
 .account h1 + a {
   display: inline-flex;
   align-items: center;
@@ -481,18 +452,6 @@
   }
 }
 
-.account table td:first-of-type a {
-  padding: 1.1rem 1.5rem;
-  text-decoration: none;
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-link), 0.2);
-  border: 0.1rem solid transparent;
-  font-size: 1.2rem;
-}
-
-.account table td:first-of-type a:hover {
-  box-shadow: 0 0 0 0.2rem rgba(var(--color-link), 0.2);
-}
-
 .order td:first-of-type {
   align-items: initial;
 }
@@ -509,13 +468,6 @@
   font-size: 2.2rem;
   padding-top: 1.5rem;
   padding-bottom: 4rem;
-}
-
-@media screen and (min-width: 750px) {
-  .order tfoot tr:last-of-type td,
-  .order tfoot tr:last-of-type th {
-    padding-bottom: 2.4rem;
-  }
 }
 
 .order tfoot tr:last-of-type td:before {

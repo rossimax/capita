@@ -1,0 +1,174 @@
+<div class="section-team-head">
+    <div class="team-head">
+
+        <div class="team-head__content">
+            <div class="team-head__infos">
+                <span class="sup-text">{{ section.settings.sup_title }}</span>
+                <h1>{{ section.settings.title }}</h1>
+            </div>
+            <div class="team-head__image">
+                {% if page.metafields.accentuate.team_member_headshot[0].src != blank %}
+                    <img src="{{ page.metafields.accentuate.team_member_headshot[0].src }}" alt="{{ section.settings.title | strip_html }}">
+                {% else %}
+                    <img src="{{ section.settings.image_picker }}" alt="{{ section.settings.title | strip_html }}">
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="team-head__video">
+            <video
+                autoplay="true" 
+                muted="true" 
+                loop="true" 
+                playsinline="true"
+            >
+                {% if page.metafields.accentuate.banner_video != blank %}
+                    <source src="{{ page.metafields.accentuate.banner_video }}" type="video/mp4" />
+                {% else %}
+                    <source src="{{ section.settings.video.sources.url }}" type="video/mp4" />
+                {% endif %}
+            </video>
+        </div>
+
+    </div>
+    
+</div>
+
+{% schema %}
+  {
+    "name": "Team Head",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "text",
+            "id": "sup_title",
+            "label": "Sup Title",
+            "default": "TEAM"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "If team_member_headshot metafiled is not set"
+        },
+        {
+            "type": "video",
+            "id": "video",
+            "label": "Video",
+            "info": "If banner_video metafiled is not set"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Team Head"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+.team-head {
+    display: flex;
+    width: 100%;
+}
+.team-head__content {
+    width: calc(100% * 1/3);
+    display: flex;
+    justify-content: space-between;
+    align-content: bottom;
+    padding-top: 40px;
+    padding-inline: 50px;
+    gap: 12px;
+}
+@media screen and (min-width: 768px) {
+.team-head__content {
+    padding-left: 70px;
+}    
+}
+
+@media screen and (min-width: 1600px) {
+.team-head__content {
+    padding-left: 155px;
+}    
+}
+
+.team-head__infos {
+    color: #fff;
+    text-align: right;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+.team-head__infos .sup-text {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+}
+.team-head__infos h1 {
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.team-head__image {
+    display: flex;
+    align-items: end;
+    border-radius: 20px;
+}
+.team-head__image img {
+    width: 100%;
+    max-width: 290px;
+    object-fit: contain;
+    border-radius: 20px;
+    border: 1px solid #fff;
+}
+
+.team-head__video {
+    width: calc(100% * 2/3);
+    display: flex;
+    align-items: end;
+}
+.team-head__video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1440px) {
+    .team-head__content{
+        width: 40%;
+    } 
+    .team-head__video {
+        width: 60%;
+    } 
+    .team-head__infos h1 {
+        font-size: 44px;
+    }
+    .team-head__infos .sup-text {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    .team-head {
+        flex-direction: column-reverse;
+    }
+    .team-head__content,
+    .team-head__video {
+        width: 100%;
+    } 
+    .team-head__infos h1 {
+        font-size: 24px;
+    }
+    .team-head__infos .sup-text {
+        font-size: 16px;
+    }
+}
+
+{% endstylesheet %}
+

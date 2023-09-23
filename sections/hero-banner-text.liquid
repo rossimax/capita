@@ -1,0 +1,218 @@
+{% assign video_desk = section.settings.video | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+{% assign video_mob = section.settings.video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
+
+<div class="section-hero-banner-text">
+
+    {% if section.settings.box_shadow != blank %}
+        <div class="box-shadow" style="background-color: rgba(0, 0, 0, {{ section.settings.box_shadow | divided_by: 100.0 }});"></div>
+    {% endif %}
+    
+    {% if section.settings.video %}
+        <div class="only-desk hero-banner-text__video">{{video_desk}}</div>
+        <div class="only-mob hero-banner-text__video">{{video_mob}}</div>
+    {% else %}
+        <img class="only-desk hero-banner-text__image" src="{{ section.settings.image | img_url: 'master' }}" alt="capita banner" width="100%">
+        <img class="only-mob hero-banner-text__image" src="{{ section.settings.image_mob | img_url: 'master' }}" alt="capita banner" width="100%">
+    {% endif %}
+
+    <div class="hero-banner-text__content">
+
+        {% if section.settings.logo_image %}
+            <div class="hero-banner-text__content__logo">
+                <img src="{{ section.settings.logo_image | img_url: 'master' }}">
+                {% comment %} <div class="hero-banner-text__content__logo__text">
+                    <div class="hero-banner-text__content__logo__text__title">{{ section.settings.title }}</div>
+                    {% if section.settings.line_separator == "yes" %}
+                        <hr>
+                    {% endif %}
+                    <div class="hero-banner-text__content__logo__text__subtitle">{{ section.settings.subtitle }}</div>
+                </div> {% endcomment %}
+            </div>
+        {% else %}
+        <div class="hero-banner-text__content__normal">
+            <div class="hero-banner-text__content__normal__text">
+                <div class="hero-banner-text__content__normal__text__title">{{ section.settings.title }}</div>
+                {% if section.settings.line_separator == "yes" %}
+                    <hr>
+                {% endif %}
+                <div class="hero-banner-text__content__normal__text__subtitle">{{ section.settings.subtitle }}</div>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <a class="hero-banner-text__cta o-btn" href="{{section.settings.cta_link}}">{{section.settings.cta_text}}</a>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Hero Banner Text",
+    "settings": [
+        {
+            "type": "number",
+            "id": "box_shadow",
+            "label": "Box Shadow"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mob",
+            "label": "Image Mob"
+        },
+        {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+        },
+        {
+            "type": "video",
+            "id": "video_mob",
+            "label": "Video Mob"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "select",
+            "id": "line_separator",
+            "label": "Line Separator",
+            "options": [
+                {
+                "value": "yes",
+                "label": "Yes"
+                },
+                {
+                "value": "no",
+                "label": "No"
+                }
+            ],
+            "default": "no"
+        },
+        {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Sub Title"
+        },
+        {
+            "type": "image_picker",
+            "id": "logo_image",
+            "label": "Logo Image"
+        },
+        {
+            "type": "text",
+            "id": "cta_text",
+            "label": "CTA Text"
+        },
+        {
+            "type": "url",
+            "id": "cta_link",
+            "label": "CTA Link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hero Banner Text"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+.section-hero-banner-text {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.section-hero-banner-text video,
+.section-hero-banner-text .hero-banner-text__image.only-desk {
+    width: 100%;
+    height: calc(100vh - 135px);
+    object-fit: cover;
+    display: block;
+}
+.hero-banner-text__cta {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-banner-text__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    width: max-content;
+}
+.hero-banner-text__content__logo {
+    display: flex;
+    align-items: flex-start;
+}
+.hero-banner-text__content hr {
+    margin: 0 0 20px 0;
+    background: #fff;
+    height: 2px;
+}
+.hero-banner-text__content__logo img {
+    max-width: 500px;
+    margin-right: 30px;
+}
+.hero-banner-text__content__logo p {
+    margin: 0;
+}
+.hero-banner-text__content__normal__text {
+    text-align: center;
+}
+.section-hero-banner-text .only-mob {
+    display: none;
+}
+.hero-banner-text__content__logo__text__subtitle {
+    line-height: 1;
+}
+.hero-banner-text__content__logo__text__title h2,
+.hero-banner-text__content__normal__text__title .h2 {
+    font-size: 52px;
+    font-weight: 500;
+    line-height: 1;
+}
+.hero-banner-text__content__logo__text__title h2 sup,
+.hero-banner-text__content__normal__text__title .h2 sup {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .section-hero-banner-text .only-mob {
+        display: block;
+    }
+    .section-hero-banner-text .hero-banner-text__image.only-desk {
+        display: none;
+    }
+    .hero-banner-text__content__logo__text__title h2,
+    .hero-banner-text__content__normal__text__title .h2 {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1;
+    }
+    .hero-banner-text__content__logo__text__title h2 sup,
+    .hero-banner-text__content__normal__text__title .h2 sup {
+        font-size: 14px;
+    }
+    .hero-banner-text__content__logo img {
+        max-width: 310px;
+    }
+    .hero-banner-text__content {
+        position: absolute;
+        top: 40%;
+    }
+
+}
+{% endstylesheet %}

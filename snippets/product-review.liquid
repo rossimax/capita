@@ -1,0 +1,52 @@
+<div class="u-container">
+    <div class="c-product-details__content">
+        <div class="product-reviews">
+            <div class="page-width">
+                <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% style %}
+.product-reviews {
+    margin: 40px 0;
+    border: 1px solid #000;
+    border-radius: 30px;
+    letter-spacing: normal;
+}
+@media only screen and (min-width: 1200px) {
+    .product-reviews {
+        margin: 80px 0;
+    }   
+}
+.spr-container {
+    padding: 24px;
+    border-color: transparent;
+}
+h2.spr-header-title {
+    font-weight: 600;
+    font-size: 36px;
+}
+a.spr-summary-actions-newreview {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.spr-review-reportreview {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+input.spr-form-input,
+textarea.spr-form-input {
+    border: 1px solid;
+    min-height: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+input.spr-button.spr-button-primary.button.button-primary.btn.btn-primary {
+    border-color: #000;
+    line-height: 0;
+}
+{% endstyle %}

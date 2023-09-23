@@ -2,14 +2,17 @@
 {% assign video_mob = section.settings.video_mob | video_tag: image_size: 'master', autoplay: true,  loop: true, muted: true, controls: false %}
 
 <div class="section-hero-banner">
+    
     {% if section.settings.video %}
         <div class="only-desk hero-banner__video">{{video_desk}}</div>
         <div class="only-mob hero-banner__video">{{video_mob}}</div>
         {% else %}
-        <img class="only-desk hero-banner__image" src="{{ section.settings.image | img_url: 'master' }}" alt="funky hero" width="100%">
-        <img class="only-mob hero-banner__image" src="{{ section.settings.image_mob | img_url: 'master' }}" alt="funky hero" width="100%">
+        <img class="only-desk hero-banner__image" src="{{ section.settings.image | img_url: 'master' }}" alt="capita hero" width="100%">
+        <img class="only-mob hero-banner__image" src="{{ section.settings.image_mob | img_url: 'master' }}" alt="capita hero" width="100%">
     {% endif %}
-    <a class="hero-banner__cta" href="{{section.settings.cta_ink}}">{{section.settings.cta_text}}</a>
+
+    <a class="hero-banner__cta o-btn" href="{{section.settings.cta_link}}">{{section.settings.cta_text}}</a>
+
 </div>
 
 {% schema %}
@@ -67,27 +70,21 @@
     background-repeat: no-repeat;
     position: relative;
 }
-.section-hero-banner .only-mob {
-    display: none;
-}
 .section-hero-banner video {
     width: 100%;
+    height: calc(100vh - 135px);
+    object-fit: cover;
+    display: block;
 }
 .hero-banner__cta {
     position: absolute;
-    top: 75%;
+    top: 86%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 15px;
-    min-width: 340px;
-    background: #fff;
-    color: #000;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 40px;
-    height: 65px;
 }
-
+.section-hero-banner .only-mob {
+    display: none;
+}
 @media screen and (max-width: 768px) {
     .section-hero-banner .only-mob {
         display: block;
@@ -98,7 +95,3 @@
 }
 {% endstylesheet %}
 
-
-{% javascript %}
-        console.log("ciao")
-{% endjavascript %}

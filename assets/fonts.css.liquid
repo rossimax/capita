@@ -1,30 +1,48 @@
 @font-face {
-    font-family: 'Calibre-Regular';
-    src: url({{ 'Calibre-Regular.otf' | asset_url }}) format('opentype');
-}
+    font-family: Calibre;
+    font-style: italic;
+    font-weight: 900;
+    src: url('{{ 'calibre-blackitalic-webfont.woff2' | asset_url}}') format('woff2'), url('{{ 'calibre-blackitalic-webfont.woff' | asset_url}}') format('woff');
+  }
 
-@font-face {
-    font-family: 'Calibre-RegularItalic';
-    src: url({{ 'Calibre-RegularItalic.otf' | asset_url }}) format('opentype');
-}
+  @font-face {
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: 700;
+    src: url('{{ 'calibre-bold-webfont.woff2' | asset_url}}') format('woff2'), url('{{ 'calibre-bold-webfont.woff' | asset_url}}') format('woff');
+  }
 
-@font-face {
-    font-family: 'Calibre-Bold';
-    src: url({{ 'Calibre-Bold.otf' | asset_url }}) format('opentype');
-}
+  @font-face {
+    font-family: Calibre;
+    font-style: italic;
+    font-weight: 700;
+    src: url('{{ 'calibre-bolditalic-webfont.woff2' | asset_url}}') format('woff2'), url('{{ 'calibre-bolditalic-webfont.woff' | asset_url}}') format('woff');
+  }
 
-@font-face {
-    font-family: 'Calibre-Semibold';
-    font-weight: 600;
-    src: url({{ 'Calibre-Semibold.otf' | asset_url }}) format('opentype');
-}
+  @font-face {
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: 400;
+    src: url('{{ 'calibre-regular-webfont.woff2' | asset_url}}') format('woff2'), url('{{ 'calibre-regular-webfont.woff' | asset_url}}') format('woff');
+  }
 
-@font-face {
-    font-family: 'Calibre-SemiboldItalic';
-    src: url({{ 'Calibre-SemiboldItalic.otf' | asset_url }}) format('opentype');
-}
+  @font-face {
+    font-family: Calibre;
+    font-style: italic;
+    font-weight: 400;
+    src: url('{{ 'calibre-regularitalic-webfont.woff2' | asset_url}}') format('woff2'), url('{{ 'calibre-regularitalic-webfont.woff' | asset_url}}') format('woff');
+  }
 
-@font-face {
-    font-family: 'Calibre-BoldItalic';
-    src: url({{ 'Calibre-BoldItalic.otf' | asset_url }}) format('opentype');
-}
+  @font-face {
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: 500;
+    src: url('{{ 'calibre-semibold-webfont.woff2' | asset_url}}') format('woff2'), url('{{ 'calibre-semibold-webfont.woff' | asset_url}}') format('woff');
+  }
+
+  @font-face {
+    font-family: Calibre;
+    font-style: italic;
+    font-weight: 500;
+    src: url('{{ 'calibre-semibolditalic-webfont.woff2' | asset_url}}') format('woff2'), url('{{ 'calibre-semibolditalic-webfont.woff' | asset_url}}') format('woff');
+  }

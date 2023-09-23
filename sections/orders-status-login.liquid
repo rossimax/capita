@@ -1,0 +1,121 @@
+<div class="section-login">
+
+  <div class="row">
+    <div class="login-form col-8">
+
+      <h4>SIGN IN WITH YOUR CREDENTIALS</h4>
+
+      {% form 'customer_login' %}
+        {{ form.errors | default_errors }}
+      
+        <div class="form-item">
+          <input type="email" name="customer[email]" placeholder="ENTER EMAIL">
+        </div>
+      
+        <div class="form-item">
+          <input type="password" name="customer[password]" placeholder="ENTER PASSWORD">
+        </div>
+      
+        <div class="form-item form-item--submit">
+          <input class="btn btn-primary black" type="submit" value="CONTINUE">
+        </div>
+      {% endform %}
+    </div>
+
+    {% comment %} <div class="order-form col-4">
+
+      <h4>OR FIND A SINGLE ORDER</h4>
+
+      <form>
+        <div class="form-item">
+          <input type="email" name="customer[order]" placeholder="ENTER ORDER NUMBER">
+        </div>
+      
+        <div class="form-item">
+          <input type="text" name="customer[email]" placeholder="ENTER EMAIL">
+        </div>
+      
+        <div class="form-item form-item--submit">
+          <input class="btn btn-primary black" type="submit" value="FIND MY ORDER">
+        </div>
+      </form>
+
+    </div> {% endcomment %}
+
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Login Order Status",
+    "tag": "section",
+    "class": "shopify-section--order-status-login three-quarter",
+    "presets": [
+        {
+            "name": "Login Order Status"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+.section-login h4 {
+  font-weight: 500;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1;
+}
+.section-login .form-item {
+    margin-bottom: 20px;
+}
+.section-login .form-item input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.section-login input.btn.btn-primary.black {
+    font-size: 16px;
+    padding: 10px 20px;
+    height: 44px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 30px;
+    min-width: unset;
+    margin-top: 10px;
+}
+.section-login .login-form {
+    padding-right: 70px;
+    border-right: 1px solid #000;
+}
+.section-login .order-form {
+  padding-left: 70px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.section-login .form-item input::placeholder,
+.section-login .form-item textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000;
+  opacity: 1; /* Firefox */
+}
+.section-login .form-item input:-ms-input-placeholder,
+.section-login .form-item textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #000;
+}
+.section-login .form-item input::-ms-input-placeholder,
+.section-login .form-item textarea::-ms-input-placeholder { /* Microsoft Edge */
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .section-login .login-form {
+    padding-right: 0;
+    border-right: unset;
+  }
+}
+
+{% endstylesheet %}

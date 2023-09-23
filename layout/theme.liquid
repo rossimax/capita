@@ -8,6 +8,23 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
+    <link rel="alternate" hreflang="en-us"
+      href="{{ canonical_url | replace: "https://eu.capitasnowboarding.com", "https://capitasnowboarding.com" }}" />
+    <link rel="alternate" hreflang="en-ca"
+      href="{{ canonical_url | replace: "https://eu.capitasnowboarding.com", "https://capitasnowboarding.com" }}" />
+    <link rel="alternate" hreflang="en"
+      href="{{ canonical_url | replace: "https://eu.capitasnowboarding.com", "https://capitasnowboarding.com" }}" />
+    <link rel="alternate" hreflang="it"
+      href="{{ canonical_url | replace: "https://capitasnowboarding.com", "https://eu.capitasnowboarding.com" }}" />
+    <link rel="alternate" hreflang="en-eu"
+      href="{{ canonical_url | replace: "https://capitasnowboarding.com", "https://eu.capitasnowboarding.com" }}" />
+    <link rel="alternate" hreflang="fr"
+      href="{{ canonical_url | replace: "https://capitasnowboarding.com", "https://eu.capitasnowboarding.com" }}" />
+    <link rel="alternate" hreflang="es"
+      href="{{ canonical_url | replace: "https://capitasnowboarding.com", "https://eu.capitasnowboarding.com" }}" />
+    <link rel="alternate" hreflang="x-default"
+      href="{{ canonical_url }}" />
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -29,10 +46,14 @@
 
     {% render 'meta-tags' %}
 
-    <link rel="stylesheet" type="text/css" href="{{ 'fonts.css' | asset_url }}"> 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ 'fonts.css' | asset_url }}"> 
+    
+    <link rel="stylesheet" type="text/css" href="{{ 'defaults.css' | asset_url }}">
+    
     {{ content_for_header }}
 
     {%- liquid
@@ -49,7 +70,7 @@
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-family: 'Calibre', sans-serif;
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
@@ -186,12 +207,6 @@
         --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
       }
 
-      *,
-      *::before,
-      *::after {
-        box-sizing: inherit;
-      }
-
       html {
         box-sizing: border-box;
         font-size: calc(var(--font-body-scale) * 62.5%);
@@ -204,12 +219,8 @@
         grid-template-columns: 100%;
         min-height: 100%;
         margin: 0;
-        font-size: 1.5rem;
-        letter-spacing: 0.06rem;
-        line-height: calc(1 + 0.8 / var(--font-body-scale));
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
-        font-weight: var(--font-body-weight);
       }
 
       @media screen and (min-width: 750px) {
@@ -219,7 +230,7 @@
       }
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {% comment %} {{ 'base.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -228,9 +239,9 @@
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
 
-    {%- if settings.predictive_search_enabled -%}
+    {% comment %} {%- if settings.predictive_search_enabled -%}
       <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     if (Shopify.designMode) {
@@ -240,17 +251,23 @@
   </head>
 
   <body class="gradient">
-    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+    {% comment %} <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
-    </a>
+    </a> {% endcomment %}
 
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
     {% sections 'header-group' %}
-
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+{%- liquid 
+  if template.suffix != blank
+    assign template_suff = template.suffix
+  else
+    assign template_suff = template.name
+  endif
+%}
+    <main id="MainContent" class="content-for-layout focus-none template-{{ template_suff }}" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
 
@@ -291,14 +308,29 @@
       }
     </script>
 
-    {%- if settings.predictive_search_enabled -%}
+    {% comment %} {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
+
+    <script src="{{ 'script.js' | asset_url }}" defer="defer"></script>
+
+    <script src="{{ 'cart-async.js' | asset_url }}" defer="defer"></script>
 
     {% comment %} START - MODULES SCRIPTS {% endcomment %}
     
     <script src="{{ 'mod-hero-banner.js' | asset_url }}" defer="defer"></script>
 
     {% comment %} END - MODULES SCRIPTS {% endcomment %}
-  </body>
+
+  	{% if content_for_header contains 'upsell-now.herokuapp.com' %}{% render 'upsell-now', customer: customer, product: product, template: template, cart: cart %}{% endif %}
+
+    {% include 'country-popup' %}
+
+    {% comment %} START - custom script {% endcomment %}
+    {%- if settings.script_pre_body_close -%}
+      {{ settings.script_pre_body_close }}
+    {% endif %}
+    {% comment %} END - custom script {% endcomment %}
+
+	</body>
 </html>

@@ -1,0 +1,38 @@
+{% if page.metafields.team_profile.video_embed %}
+<div class="section-youtube-team">
+    <div class="youtube-team">
+        {{ page.metafields.team_profile.video_embed }}
+    </div>
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Team Youtube",
+    "presets": [
+        {
+            "name": "Team Youtube"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+.youtube-team {
+    max-width: 1440px;
+    margin: 50px auto;
+}
+.youtube-team iframe {
+    width: 100%;
+    height: 600px;
+}
+
+@media screen and (max-width: 991px) {
+    .youtube-team iframe {
+        height: 340px;
+    }
+}
+
+{% endstylesheet %}
+

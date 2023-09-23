@@ -1,0 +1,51 @@
+<div class="section-pdp-defaul-table">
+  <div class="pdp-defaul-table">
+    <div class="pdp-defaul-table__content">
+      <h3><strong>PRODUCT DETAILS</strong></h3>
+      <div class="dettails">
+        {{ product.description }}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% style %}
+.section-pdp-defaul-table {
+    margin: 100px 0;
+    padding: 50px 80px 0 80px;
+}
+.pdp-defaul-table {
+    max-width: 1620px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 30px;
+}
+.pdp-defaul-table__content {
+    max-width: 1140px;
+    margin: 0 auto;
+    font-size: 21px;
+}
+.pdp-defaul-table__content ul {
+  list-style: none;
+    padding: 0;
+    max-height: 180px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 1200px) {
+  .pdp-defaul-table__content ul {
+    max-height: unset;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-pdp-defaul-table {
+      margin: 60px 0;
+      padding: 20px;
+  }
+}
+
+{% endstyle %}

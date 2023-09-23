@@ -1,0 +1,102 @@
+<div class="c-product-info">
+
+  {% liquid
+    if template.suffix == "snowboards"
+      if product.metafields.snowboard_info.snowboard_tags != blank
+        assign snowboard_tags = product.metafields.snowboard_info.snowboard_tags
+      else
+        assign snowboard_tags = "SNOWBOARD"
+      endif 
+    else
+      assign snowboard_tags = product.collections[0].title
+    endif
+  -%}
+
+  
+    <div class="c-product-info__top">
+        <span class="c-product-info__categories o-text is-4">{{ snowboard_tags }}</span>
+        <h2 class="c-product-info__name o-text is-2">{{ product.title }}</h2>
+        <span class="c-product-info__price o-text is-3">{{ product.price | money }}</span>
+
+        {% if section.settings.afterpay_text %}
+          <div class="c-product-info__afterpay" style="margin-top: 5px;">or 4 interest-free installments of {{ product.price | divided_by: 4 | money }} by | <img style="display:inline;" width="75px" src="{{ 'afterpay-logo.png' | asset_url }}" alt="Afterpay"></div>
+        {% endif %}
+        {% if section.settings.paypal_text %}
+          <div class="c-product-info__paypal" style="margin-top: 5px;">or 3 interest-free installments of {{ product.price | divided_by: 3 | money }} by | <img style="display:inline;vertical-align: sub;" width="75px" src="{{ 'paypal-logo.png' | asset_url }}" alt="Afterpay"></div>
+        {% endif %}
+
+        <p class="c-product-info__description medium">{{ product.metafields.snowboard_info.snowboard_description }}</p>
+        
+        {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %}
+
+           {% comment %} form 'product', product, class:form_classes, novalidate: 'validate', data-product-form: ''
+             {% endcomment %}
+            <div class="c-product-info-form">
+                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+              {% unless product.has_only_default_variant %}
+                  {% for option in product.options_with_values %}
+
+                      {% assign option_name = option.name | downcase %}
+
+                      {% if option_name == "size" %}
+                          <div class="c-product-info__sizes">
+                            <div class="border-error js-border-notification hidden"></div>
+                              {% for variant in product.variants %}
+                                  <div class="c-product-info__size js-product-variant {%- if variant.available == false %} is-disabled{% endif %}" for="{{ variant.id }}" data-index="{{ forloop.index0 }}">
+                                      <input 
+                                          style="visibility:hidden;opacity:0;height:0;width:0;padding:0;margin:0;" 
+                                          type="radio" 
+                                          name="{{ option.name }}" 
+                                          id="{{ variant.id }}" 
+                                          variant-id="{{ variant.id }}" 
+                                          attr-img="{{ variant.image | image_url: width: 100, height: 100 }}" 
+                                          value="{{ variant.title | escape }}"
+                                          >
+                                          <span>{{ variant.title }}</span>
+                                  </div>
+                              {% endfor %}
+                          </div>
+                      {% endif %}
+
+                  {% endfor %}
+
+                  {% comment %} {% if product.type == "Snowboard" %} <button class="c-product-info__find-size js-find-my-size-btn" type="button">find my size</button> {% endif %} {% endcomment %}
+                  
+              {% endunless %}
+
+              <span class="variant-select js-variant-notification hidden">Please select a variant.</span>
+    
+              {% assign current_variant = product.selected_or_first_available_variant %}
+
+              {% assign all_soldout = true %}
+              {% for variant in product.variants %}
+                {% if variant.available %}
+                    {% assign all_soldout = false %}
+                {% endif %}
+              {% endfor %}
+
+              {% if all_soldout %}
+                <span class="all-sold-out">COMING SOON</a>
+              {% else %}
+                <button 
+                  class="js-add-to-cart c-product-info__add-to-cart {% unless current_variant.available %} all-soldout{% endunless %}">
+                    <span>
+                        {% unless current_variant.available %}
+                        {{ 'products.product.sold_out' | t }}
+                        {% else %}
+                        {{ 'products.product.add_to_cart' | t }}
+                        {% endunless %}
+                    </span>
+                  {% include 'capita-icon-cart' %}
+                </button>
+              {% endif %}
+
+              </div>
+             {% comment %} {% endform %}  {% endcomment %}
+             <span class="c-product-info__shipping medium">{{ section.settings.caption_under__buy_cta }}</span>
+          </div>
+
+    </div>
+</div>
+

@@ -1,30 +1,96 @@
 {
   "sections": {
-    "44fb95ef-7a1b-4528-a42b-a22bb355a233": {
-      "type": "hero-banner",
-      "settings": {
-        "transparent_header": false,
-        "image": "shopify:\/\/shop_images\/230127_WEBSITE_BANNERS_2324_Early_Release_notextbutton.jpg",
-        "image_mob": "shopify:\/\/shop_images\/230127_WEBSITE_BANNERS_2324_Early_Release_Mobile_notextbutton.jpg",
-        "video": "shopify:\/\/files\/videos\/MARKUS OLIMSTAD - VIDEO BANNER.mp4",
-        "video_mob": "shopify:\/\/files\/videos\/MILES - VIDEO BANNER.mp4",
-        "cta_text": "",
-        "cta_link": ""
-      }
-    },
     "b78e3e4b-5746-42c1-b1e6-fdd722b34f05": {
       "type": "hero-banner",
       "settings": {
         "transparent_header": false,
-        "video": "shopify:\/\/files\/videos\/ARTHUR - VIDEO BANNER.mp4",
-        "video_mob": "shopify:\/\/files\/videos\/KAZU - VIDEO BANNER.mp4",
-        "cta_text": "craaa",
-        "cta_link": ""
+        "image": "shopify:\/\/shop_images\/D_hompage_herobanner.png",
+        "image_mob": "shopify:\/\/shop_images\/M_homepage_herobanner.png",
+        "cta_text": "OPEN YOUR MIND",
+        "cta_link": "shopify:\/\/collections\/all-snowboards"
+      }
+    },
+    "b0ceccbd-5777-4ea4-a4a9-34b65278682a": {
+      "type": "lazy-slider",
+      "disabled": true,
+      "settings": {
+        "black_style": "yes",
+        "text_slide": "<strong>EARTLY RELEASE<\/strong> <span style=\"font-size: 30px\">(ONLINE STORE ONLY)<\/span>",
+        "font_size": 60,
+        "font_size_mob": 16,
+        "padding": 40,
+        "padding_mob": 20,
+        "space_between_text": 100,
+        "border_top": "no",
+        "border_bottom": "no"
+      }
+    },
+    "9bfad989-863d-473a-962c-c5b28a8c5824": {
+      "type": "banner-product",
+      "settings": {
+        "image_position": false,
+        "product": "mercury-2024",
+        "right_image": "shopify:\/\/shop_images\/D_hompage_productbanner_kevinbackstrom.jpg",
+        "left_title": "MERCURY",
+        "left_sup_title": "ALL-MTN \/ FREERIDE",
+        "right_text": "KEVIN BACKSTROM"
+      }
+    },
+    "221611b0-cb5f-4aa9-af7b-309fbceb6127": {
+      "type": "banner-product",
+      "disabled": true,
+      "settings": {
+        "image_position": true,
+        "product": "the-navigator-2024",
+        "right_image": "shopify:\/\/shop_images\/Jess_Equalizer_1_1.jpg",
+        "left_title": "THE NAVIGATOR",
+        "left_sup_title": "FRD06 NAVIGATOR",
+        "right_text": "MILES"
+      }
+    },
+    "2056c58e-7330-430b-8fa5-de787867e504": {
+      "type": "banner-product",
+      "disabled": true,
+      "settings": {
+        "image_position": false,
+        "product": "the-equalizer-by-jess-kimura",
+        "right_image": "shopify:\/\/shop_images\/D_hompage_productbanner_jesskimura.jpg",
+        "left_title": "THE EQUALIZER",
+        "left_sup_title": "FRD07 EQUALIZER",
+        "right_text": "JESS"
+      }
+    },
+    "00a10f6f-b6ea-423b-9921-d1c287c306ea": {
+      "type": "paragraph",
+      "settings": {
+        "black_style": "yes",
+        "background_image": "shopify:\/\/shop_images\/000_GRID_PAPER_BG_1_77e3e65d-56ba-4a1f-a70b-76408f3b3cbf.png",
+        "text": "<p>CAPiTA Snowboards are handcrafted in Austria with self-generated clean energy at The MotherShip™.<\/p>",
+        "image": "shopify:\/\/shop_images\/HOMEPAGE.png"
+      }
+    },
+    "313c2a61-4905-454f-af07-4dc52801aa92": {
+      "type": "hero-banner-text",
+      "settings": {
+        "box_shadow": 0,
+        "image": "shopify:\/\/shop_images\/MFG_-_OVERHEAD_VILLAGE.jpg",
+        "image_mob": "shopify:\/\/shop_images\/Group_221.jpg",
+        "title": "<h2 class=\"h2\">The MotherShip<sup>TM<\/sup>\n<\/h2>",
+        "line_separator": "yes",
+        "subtitle": "<strong>HANDCRAFTED WITH SELF-GENERATED<br>CLEAN ENERGY.<\/strong>",
+        "logo_image": "shopify:\/\/shop_images\/D_homepage_mothershiplogo.png",
+        "cta_text": "ENTER THE MOTHERSHIP™",
+        "cta_link": "shopify:\/\/pages\/the-factory"
       }
     }
   },
   "order": [
-    "44fb95ef-7a1b-4528-a42b-a22bb355a233",
-    "b78e3e4b-5746-42c1-b1e6-fdd722b34f05"
+    "b78e3e4b-5746-42c1-b1e6-fdd722b34f05",
+    "b0ceccbd-5777-4ea4-a4a9-34b65278682a",
+    "9bfad989-863d-473a-962c-c5b28a8c5824",
+    "221611b0-cb5f-4aa9-af7b-309fbceb6127",
+    "2056c58e-7330-430b-8fa5-de787867e504",
+    "00a10f6f-b6ea-423b-9921-d1c287c306ea",
+    "313c2a61-4905-454f-af07-4dc52801aa92"
   ]
 }

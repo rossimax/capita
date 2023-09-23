@@ -50,6 +50,9 @@
       </ul>
     {%- endif -%}
     <div class="field">
+      <label for="RegisterForm-FirstName">
+        {{ 'customer.register.first_name' | t }}
+      </label>
       <input
         type="text"
         name="customer[first_name]"
@@ -60,11 +63,13 @@
         autocomplete="given-name"
         placeholder="{{ 'customer.register.first_name' | t }}"
       >
-      <label for="RegisterForm-FirstName">
-        {{ 'customer.register.first_name' | t }}
-      </label>
+
     </div>
     <div class="field">
+
+      <label for="RegisterForm-FirstName">
+        {{ 'customer.register.last_name' | t }}
+      </label>
       <input
         type="text"
         name="customer[last_name]"
@@ -75,11 +80,14 @@
         autocomplete="family-name"
         placeholder="{{ 'customer.register.last_name' | t }}"
       >
-      <label for="RegisterForm-LastName">
-        {{ 'customer.register.last_name' | t }}
-      </label>
+
     </div>
     <div class="field">
+
+      <label for="RegisterForm-email">
+        {{ 'customer.register.email' | t }}
+      </label>
+
       <input
         type="email"
         name="customer[email]"
@@ -97,9 +105,7 @@
         {% endif %}
         placeholder="{{ 'customer.register.email' | t }}"
       >
-      <label for="RegisterForm-email">
-        {{ 'customer.register.email' | t }}
-      </label>
+
     </div>
     {%- if form.errors contains 'email' -%}
       <span id="RegisterForm-email-error" class="form__message">
@@ -111,6 +117,11 @@
       </span>
     {%- endif -%}
     <div class="field">
+
+      <label for="RegisterForm-password">
+        {{ 'customer.register.password' | t }}
+      </label>
+
       <input
         type="password"
         name="customer[password]"
@@ -122,9 +133,7 @@
         {% endif %}
         placeholder="{{ 'customer.register.password' | t }}"
       >
-      <label for="RegisterForm-password">
-        {{ 'customer.register.password' | t }}
-      </label>
+
     </div>
     {%- if form.errors contains 'password' -%}
       <span id="RegisterForm-password-error" class="form__message">
@@ -135,7 +144,7 @@
         {{ form.errors.messages.password }}.
       </span>
     {%- endif -%}
-    <button>
+    <button class="btn btn-secondary black">
       {{ 'customer.register.submit' | t }}
     </button>
   {%- endform -%}
@@ -172,3 +181,76 @@
   ]
 }
 {% endschema %}
+
+
+
+{% style %}
+
+.customer.register {
+    margin-top: 150px !important;
+}
+.field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.field input {
+    border: 1px solid;
+    min-width: 300px;
+    height: 40px;
+    padding: 0 10px;
+}
+.field label {
+    font-weight: 500;
+}
+#customer_login a {
+    font-weight: 500;
+    color: #000;
+    width: 100%;
+}
+#customer_login a.link-register,
+#customer_login a.link-login {
+  text-align: center;
+}
+a.link-login {
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  width: 100%;
+}
+#customer_login a.link-recover {
+  text-align: right;
+}
+h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1;
+}
+.customer form {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+button.btn.btn-secondary.black {
+    text-align: center;
+    margin: 50px auto;
+}
+@media screen and (max-width: 768px) {
+  .customer.register {
+    margin-top: 100px !important;
+  }
+  .field input {
+    border: 1px solid;
+    min-width: 210px;
+  }
+  button.btn.btn-secondary.black {
+    text-align: center;
+    margin: 20px auto;
+    min-width: unset;
+    width: 100%;
+  }
+}
+{% endstyle %}

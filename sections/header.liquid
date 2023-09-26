@@ -2,7 +2,7 @@
   <div class="c-header__back-area js-header-back-area"></div>
   <div class="c-header__bg"></div>
   <div class="c-header__top js-header-bar">
-    <a class="c-header__logo" href="{{ shop.url }}">
+    <a class="c-header__logo js-header-close-dropdown" href="{{ shop.url }}">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="127"
@@ -24,7 +24,7 @@
             {{ link.title }}
           </button>
         {%- else -%}
-          <a class="c-header__menu-item" href="{{ link.url }}">{{ link.title }}</a>
+          <a class="c-header__menu-item js-header-close-dropdown" href="{{ link.url }}">{{ link.title }}</a>
         {%- endif -%}
       {%- endfor -%}
     </nav>
@@ -108,7 +108,7 @@
           />
         </svg>
       </button>
-      <a class="c-header__utility is-user" href="/account/login">
+      <a class="c-header__utility is-user js-header-close-dropdown" href="/account/login">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 40 40"
@@ -195,7 +195,7 @@
 
           {%- else -%}
             <a
-              class="c-header-menu__parent"
+              class="c-header-menu__parent js-header-close-dropdown"
               href="{{ link.url }}"
               ><span>{{ link.title }}</span>
             </a>
@@ -210,7 +210,7 @@
         data-parent=""
       >
         <a
-          class="c-header-menu__parent"
+          class="c-header-menu__parent js-header-close-dropdown"
           href="/account/login"
           ><span>ACCOUNT</span>
         </a>

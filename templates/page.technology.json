@@ -37,8 +37,8 @@
         "padding_bottom": 100,
         "font_size_title": 60,
         "font_size_title_mob": 20,
-        "background_color": "#000000",
-        "text_color": "#ffffff",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#000000",
         "title": "By investing extensively in advanced production technology, our primary objective is <bl>to manufacture the most premium products with unparalleled performance consistency.<\/bl>",
         "text": ""
       }

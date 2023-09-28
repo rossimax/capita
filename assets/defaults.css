@@ -811,3 +811,8 @@ table.order-history {
 }
 
 /* END ACCOUNT */
+
+
+main#MainContent {
+  background-image: none;
+}

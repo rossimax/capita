@@ -50,7 +50,6 @@
           "type": "box",
           "settings": {
             "text_left": true,
-            "video": "shopify:\/\/files\/videos\/NFC SCANv1.mp4",
             "image": "shopify:\/\/shop_images\/Group_838_1.jpg",
             "title": "Enhanced Precision Through Technology",
             "paragraph": "In 2020, The Mothership became the first in the snowboard industry to introduce an NFC system in our snowboards. This chip enables precise tracking of <hl>each board's production journey<\/hl>, resulting in higher quality and reduced waste."
@@ -60,7 +59,6 @@
           "type": "box",
           "settings": {
             "text_left": false,
-            "video": "shopify:\/\/files\/videos\/NFC SCAN DOA.mp4",
             "image": "shopify:\/\/shop_images\/D_mothership3_img2.jpg",
             "title": "Enhanced Experience Through Technology",
             "paragraph": "Beyond the production floor, we have taken NFC capabilities to the next level. Now, you can <hl>connect with your board by simply scanning it with your phone<\/hl>. This NFC interface enables you to register your snowboard, streamlining the customer service process and granting exclusive early access to new product information, drops, and CAPiTA team videos exclusively for NFC-registered users."
@@ -147,7 +145,7 @@
         "title": "",
         "title_bottom": "",
         "cta_text_1": "How our snowboards are made?",
-        "cta_link_1": "",
+        "cta_link_1": "shopify:\/\/pages\/how-snowboards-are-made",
         "arrow_type_1": "none",
         "cta_text_2": "What does clean energy mean?",
         "cta_link_2": "shopify:\/\/pages\/clean-energy",

@@ -813,6 +813,6 @@ table.order-history {
 /* END ACCOUNT */
 
 
-#MainContent {
+main#MainContent {
   background-image: none;
 }

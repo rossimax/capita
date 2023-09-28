@@ -30,7 +30,7 @@
         "font_size_title": 60,
         "font_size_title_mob": 26,
         "background_color": "rgba(0,0,0,0)",
-        "text_color": "#ffffff",
+        "text_color": "#000000",
         "title": "<strong>A one-of-a-kind marvel in snowboard production, The MotherShip™ is the most <hl>technologically advanced<\/hl> and <hl>environmentally responsible<\/hl> manufacturing facility in the industry.<\/strong>",
         "text": ""
       }
@@ -135,7 +135,7 @@
       ],
       "settings": {
         "align_left": false,
-        "background": "#000",
+        "background": "#000000",
         "padding_top": 50,
         "padding_bottom": 20,
         "title": "The world’s best snowboards are made at <br>The MotherShip™.",
@@ -169,7 +169,7 @@
         "font_size_title": 60,
         "font_size_title_mob": 20,
         "background_color": "rgba(0,0,0,0)",
-        "text_color": "#ffffff",
+        "text_color": "#000000",
         "title": "<strong>Our dedication to building the world’s best snowboards, with the most\nefficient and sustainable process, is galvanized by the company mantra — <br>\n<i><hl>EVERYTHING IS POSSIBLE.<\/hl><\/i><\/strong>",
         "text": ""
       }

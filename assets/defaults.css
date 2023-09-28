@@ -17,6 +17,7 @@ strong,
   font-weight: 500;
 }
 hl {
+  color: #000;
   background: linear-gradient(
     0deg,
     rgba(226, 255, 97, 0) 0%,

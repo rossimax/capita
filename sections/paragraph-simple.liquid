@@ -1,6 +1,9 @@
 
 <div class="section-paragraph-simple section-paragraph-simple--{{ section.id }}"
-    style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
+    style=" padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+            {% if section.settings.background_transparent %} background: transparent; {% endif %}
+            ">
     <div class="u-container">
         <div class="u-content">
             <div class="paragraph-simple-content">
@@ -22,6 +25,12 @@
 {
 "name": "Paragraph Simple",
 "settings": [
+    {
+        "type": "checkbox",
+        "id": "background_transparent",
+        "label": "Background Transparent",
+        "default": false
+    },
 {
 "type": "number",
 "id": "padding_top",

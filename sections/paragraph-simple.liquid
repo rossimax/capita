@@ -1,53 +1,19 @@
-{% comment %} <style>
-    .section-paragraph-simple-- {
-            {
-            section.id
-        }
-    }
 
-    .paragraph-simple-content__title {
-        font-size: {
-                {
-                section.settings.font_size_title
-            }
-        }
-
-        px;
-    }
-
-    @media screen and (max-width: 768px) {
-        .section-paragraph-simple-- {
-                {
-                section.id
-            }
-        }
-
-        .paragraph-simple-content__title {
-            font-size: {
-                    {
-                    section.settings.font_size_title_mob
-                }
-            }
-
-            px;
-        }
-    }
-</style> {% endcomment %}
 <div class="section-paragraph-simple section-paragraph-simple--{{ section.id }}"
-    style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
+    style=" padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+            {% if section.settings.background_transparent %} background: transparent; {% endif %}
+            ">
     <div class="u-container">
         <div class="u-content">
             <div class="paragraph-simple-content">
-                <h2 class="paragraph-simple-content__title strong o-text is-2 nocase"
-                    style="color: {{ section.settings.text_color }}">{{ section.settings.title }}</h2>
+                <h2 class="paragraph-simple-content__title strong o-text is-2 nocase u-color-white">{{ section.settings.title }}</h2>
                 {% if section.settings.image_bottom %}
                 <img class="paragraph-simple-image-bottom" src="{{ section.settings.image_bottom | image_url }}"
                     alt="{{ section.settings.title | strip_html }}">
                 {% endif %}
                 {% if section.settings.text != blank %}
-                <div class="paragraph-simple-content__paragraph o-text is-4 is-regular"
-                    style="color: {{ section.settings.text_color }}">{{
-                    section.settings.text }}</div>
+                <div class="paragraph-simple-content__paragraph o-text is-4 is-regular u-color-white">{{ section.settings.text }}</div>
                 {% endif %}
             </div>
         </div>
@@ -59,6 +25,12 @@
 {
 "name": "Paragraph Simple",
 "settings": [
+    {
+        "type": "checkbox",
+        "id": "background_transparent",
+        "label": "Background Transparent",
+        "default": false
+    },
 {
 "type": "number",
 "id": "padding_top",
@@ -80,18 +52,6 @@
 "type": "number",
 "id": "font_size_title_mob",
 "label": "Font Size Title Mob"
-},
-{
-"type": "color",
-"id": "background_color",
-"label": "Background Color",
-"default": "#ffffff"
-},
-{
-"type": "color",
-"id": "text_color",
-"label": "Text Color",
-"default": "#000000"
 },
 {
 "type": "html",

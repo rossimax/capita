@@ -26,7 +26,7 @@
       "type": "paragraph-simple",
       "settings": {
         "padding_top": 60,
-        "padding_bottom": 0,
+        "padding_bottom": 60,
         "font_size_title": 60,
         "font_size_title_mob": 26,
         "background_color": "rgba(0,0,0,0)",
@@ -135,7 +135,7 @@
       ],
       "settings": {
         "align_left": false,
-        "background": "#000",
+        "background": "#000000",
         "padding_top": 50,
         "padding_bottom": 20,
         "title": "The world’s best snowboards are made at <br>The MotherShip™.",

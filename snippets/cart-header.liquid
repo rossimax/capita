@@ -107,7 +107,7 @@
           <b class="c-header-cart__total__val">{{ cart.total_price | money }}</b>
         </span>
                <!-- Route Code Edited 10/12/2023-->
-              <div class="route-div" disable-reorder dark-ui style="width:300px !important;"></div>
+              <div class="route-div" disable-reorder watch-changes=".c-header-cart__total__val"  style="width:300px !important;"></div>
               <!-- End Route Code -->
         <input
           type="submit"

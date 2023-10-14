@@ -27,6 +27,7 @@
     },
     "9bfad989-863d-473a-962c-c5b28a8c5824": {
       "type": "banner-product",
+      "disabled": true,
       "settings": {
         "image_position": false,
         "product": "mercury-2024",
@@ -50,14 +51,13 @@
     },
     "2056c58e-7330-430b-8fa5-de787867e504": {
       "type": "banner-product",
-      "disabled": true,
       "settings": {
         "image_position": false,
-        "product": "the-equalizer-by-jess-kimura",
-        "right_image": "shopify:\/\/shop_images\/D_hompage_productbanner_jesskimura.jpg",
-        "left_title": "THE EQUALIZER",
-        "left_sup_title": "FRD07 EQUALIZER",
-        "right_text": "JESS"
+        "product": "aeronaut",
+        "right_image": "shopify:\/\/shop_images\/D_hompage_productbanner_arthurlongo.jpg",
+        "left_title": "AERONAUT",
+        "left_sup_title": "ALL-MTN \/ RESORT",
+        "right_text": "ARTHUR LONGO"
       }
     },
     "00a10f6f-b6ea-423b-9921-d1c287c306ea": {

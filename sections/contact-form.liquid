@@ -4,6 +4,8 @@
 
   {{ form.errors | default_errors }}
 
+  <input type="hidden" name="contact[object]" value="CAPiTA Customer Service" />
+
   <div class="form-item half">
     <input type="text" name="contact[first_name]" id="first-name" placeholder="ENTER NAME" />
   </div>
@@ -12,7 +14,7 @@
     <input type="email" name="contact[email]" id="email" placeholder="ENTER EMAIL" />
   </div>
 
-  <div class="form-item">
+  <div class="form-item half">
     <input type="tel" name="contact[phone]" id="phone" placeholder="PHONE NUMBER" />
   </div>
 

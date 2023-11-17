@@ -1,0 +1,72 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "head_width": 100,
+        "margin_top": 0,
+        "body_color": "#ffffff",
+        "footer_border": false,
+        "enable_head": false,
+        "title": "",
+        "description": ""
+      }
+    },
+    "1d210c57-3f36-47c1-8ef2-17be22222a78": {
+      "type": "vertical-nav",
+      "blocks": {
+        "c7328da8-9958-4e8e-975c-27a49ec5473c": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Order status",
+            "link_url": "shopify:\/\/pages\/order-status",
+            "selected": false
+          }
+        },
+        "58c7723e-358a-40ed-bb23-e7000658698a": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Shopping policy",
+            "link_url": "shopify:\/\/pages\/shipping-policy",
+            "selected": false
+          }
+        },
+        "f6b75d5c-7d96-470e-b539-3a53098a1687": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Returns",
+            "link_url": "#",
+            "selected": true
+          }
+        },
+        "1104618f-5c85-44ef-9eae-25d1c08987d0": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Payments",
+            "link_url": "shopify:\/\/pages\/payments",
+            "selected": false
+          }
+        }
+      },
+      "block_order": [
+        "c7328da8-9958-4e8e-975c-27a49ec5473c",
+        "58c7723e-358a-40ed-bb23-e7000658698a",
+        "f6b75d5c-7d96-470e-b539-3a53098a1687",
+        "1104618f-5c85-44ef-9eae-25d1c08987d0"
+      ],
+      "settings": {
+      }
+    },
+    "df686262-fb69-4057-8251-d9b26fe0fdd8": {
+      "type": "rich-text",
+      "settings": {
+        "text": "<p><strong>RETURNS<\/strong><\/p><p> <\/p><p><strong>Returns and Exchanges<\/strong><\/p><p>CAPiTA Snowboards is happy to help you return or exchange your items purchased on capitasnowboarding.com that meet our returns and exchanges policy. Items must be in new condition, unused, and in original packaging. Returns and exchanges are subject to a return shipping flat fee ($3 for softgoods or accessories, $15 for boards). We are not offering returns and exchanges for orders to Canada at this time.<\/p><p> <\/p><p><strong>Returns<\/strong><\/p><p>Within 30 days of purchase, we will replace your unused item(s) or refund the product price, whichever you prefer. After 30 days, we may offer to replace or offer a store credit at our discretion. Refunds are subject to a return shipping fee. Refunds issued may take up 5 business days to process. We are not offering returns for orders to Canada at this time.<\/p><p> <\/p><p>To start your return please e-mail: shop@capitasnowboarding.com<\/p><p> <\/p><p><strong>Exchanges<\/strong><\/p><p>To start an exchange, please complete a return for the unwanted item with Returns instrcutions above. Then, purchase your replacement item as a separate order. Unfortunately, at this time we cannon process your exchange as one transaction. Due to stock availability, we recommend placing your replacement order as soon as possible.<\/p><p> <\/p><p>Please contact us at shop@capitasnowboarding.com to confirm your exchange.<\/p><p> <\/p><p><strong>Warranty<\/strong><\/p><p>For information visit our warranty page.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1d210c57-3f36-47c1-8ef2-17be22222a78",
+    "df686262-fb69-4057-8251-d9b26fe0fdd8"
+  ]
+}

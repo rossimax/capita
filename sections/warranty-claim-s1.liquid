@@ -24,24 +24,24 @@
 
 {% schema %}
 {
-"name": "Warranty Claim S1",
-"settings": [
-    {
-        "type": "text",
-        "id": "form_warranty",
-        "label": "ID code form warranty",
-        "info": "Example: 88sdrr-Y0W493EPXOxapXX"
-    }
-],
-"presets": [
-    {
-        "name": "Warranty Claim S1"
-    }
-]
+    "name": "Warranty Claim S1",
+    "settings": [
+        {
+            "type": "text",
+            "id": "form_warranty",
+            "label": "ID code form warranty",
+            "info": "Example: 88sdrr-Y0W493EPXOxapXX"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Warranty Claim S1"
+        }
+    ]
 }
 {% endschema %}
 
-{% stylesheet %}
+{% style %}
 
 .hide {
     display: none;
@@ -53,11 +53,12 @@ h1 {
     text-align: center;
 }
 
-{% endstylesheet %}
+{% endstyle %}
 
 
 {% javascript %}
 
+(function() {
         let selectors = {
             selectCountry: '.select-country',
             claimCountry: '.claim-country',
@@ -107,6 +108,6 @@ h1 {
 
         })
 
-
+    })();
 
 {% endjavascript %}

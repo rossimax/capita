@@ -1,7 +1,22 @@
 <div class="warranty-claim-s1">
     <div class="u-container">
         <div class="u-content">
-            
+            <h1 class="o-text is-2">WARRANTY CLAIM</h1>
+            <div class="claim-country">
+                <h5>YOUR COUNTRY</h5>
+                <div class="claim-country__select">
+                    <select class="select-country">
+                        <option value="US/CANADA">US/CANADA</option>
+                        <option value="EUROPE">EUROPE</option>
+                        <option value="OTHER">OTHER</option>
+                    </select>
+                </div>
+            </div>  
+            <div class="claim-form hide">
+
+                <div style="margin:0 auto;" class="pxFormGenerator" id="{{ section.settings.form_warranty }}"></div>
+                
+            </div>  
         </div>
     </div>
 </div>
@@ -14,7 +29,8 @@
     {
         "type": "text",
         "id": "form_warranty",
-        "label": "ID code form warranty"
+        "label": "ID code form warranty",
+        "info": "Example: 88sdrr-Y0W493EPXOxapXX"
     }
 ],
 "presets": [
@@ -27,22 +43,70 @@
 
 {% stylesheet %}
 
+.hide {
+    display: none;
+}
+.warranty-claim-s1 {
+    padding: 140px 0;
+}
+h1 {
+    text-align: center;
+}
 
 {% endstylesheet %}
 
 
 {% javascript %}
 
-    (function() {
-
         let selectors = {
-        videoModalYT: '.modal-youtube',
-
+            selectCountry: '.select-country',
+            claimCountry: '.claim-country',
+            claimForm: '.claim-form',
         };
 
-        let videoModalYT = document.querySelector(selectors.videoModalYT);
+        let selectCountry = document.querySelector(selectors.selectCountry);
+        let claimCountry = document.querySelector(selectors.claimCountry);
+        let claimForm = document.querySelector(selectors.claimForm);
 
-    })
+        function warranty_claim_step2() {
+            claimCountry.classList.add("hide")
+            claimForm.classList.add("show")
+        }
+
+
+        selectCountry.addEventListener("change", function(){
+
+            if (location.hostname == 'eu.capitasnowboarding.com') {
+
+                if (this.value == "US/CANADA") {
+                    window.location.replace("https://capitasnowboarding.com/pages/warranty-claim");
+                }
+                if (this.value == "OTHER") {
+                    window.location.replace("https://eu.capitasnowboarding.com/pages/distributors-info");
+                }
+                if (this.value == "EUROPE") {
+                    warranty_claim_step2()
+                }
+
+            } else if (location.hostname == 'capitasnowboarding.com') {
+
+                if (this.value == "EUROPE") {
+                    window.location.replace("https://eu.capitasnowboarding.com/pages/warranty-claim");
+                }
+                if (this.value == "OTHER") {
+                    window.location.replace("https://capitasnowboarding.com/pages/distributors-info");
+                }
+                if (this.value == "US/CANADA") {
+                    warranty_claim_step2()
+                }
+
+            } else {
+                console.log(this.value)
+                warranty_claim_step2()
+            }
+
+        })
+
 
 
 {% endjavascript %}

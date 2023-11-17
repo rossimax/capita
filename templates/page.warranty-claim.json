@@ -3,10 +3,24 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "head_width": 100,
+        "margin_top": 0,
+        "body_color": "#ffffff",
+        "footer_border": false,
+        "enable_head": false,
+        "title": "",
+        "description": ""
+      }
+    },
+    "3ff1da5a-60f9-4f4a-a4e3-06f4749412e9": {
+      "type": "warranty-claim-s1",
+      "settings": {
+        "form_warranty": ""
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "3ff1da5a-60f9-4f4a-a4e3-06f4749412e9"
   ]
 }

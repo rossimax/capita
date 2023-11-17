@@ -2,11 +2,26 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
+        "head_width": 100,
+        "margin_top": 0,
+        "body_color": "#ffffff",
+        "footer_border": false,
+        "enable_head": false,
+        "title": "",
+        "description": ""
+      }
+    },
+    "9c80f921-d510-4838-b362-dbe82da9dc5e": {
+      "type": "warranty-claim-s1",
+      "settings": {
+        "form_warranty": ""
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "9c80f921-d510-4838-b362-dbe82da9dc5e"
   ]
 }

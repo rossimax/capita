@@ -3,7 +3,7 @@
         <div class="u-content">
             <h1 class="o-text is-2">WARRANTY CLAIM</h1>
             <div class="claim-country">
-                <h5>YOUR COUNTRY</h5>
+                <h5 class="o-text is-5">YOUR COUNTRY</h5>
                 <div class="claim-country__select">
                     <select class="select-country">
                         <option>SELECT</option>
@@ -53,6 +53,12 @@
 h1 {
     text-align: center;
 }
+.claim-form {
+    margin: 60px 0;
+}
+.claim-country {
+    margin: 60px 0;
+}
 
 {% endstyle %}
 
@@ -60,6 +66,7 @@ h1 {
 {% javascript %}
 
 (function() {
+
         let selectors = {
             selectCountry: '.select-country',
             claimCountry: '.claim-country',

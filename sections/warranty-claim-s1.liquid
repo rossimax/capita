@@ -181,7 +181,7 @@ button.o-btn.btn-white {
             btnsStep2Eu.forEach((btnStep2Eu) => { 
                 btnStep2Eu.addEventListener("click", function(){
                     console.log(this.getAttribute("data-btn")) 
-                    if (this.getAttribute("data-btn") == "yes") {
+                    if (btnStep2Eu.getAttribute("data-btn") == "yes") {
                         btnsStep2Eu.classList.add("hide")
                         warranty_claim_step2() 
                     } else {

@@ -178,7 +178,7 @@ button.o-btn.btn-white {
             claimCountry.classList.add("hide")
             claimEuStep.classList.remove("hide")
 
-            btnsStep2Eu.foreach(btnStep2Eu, function(){
+            btnsStep2Eu.foreach((btnStep2Eu) => {
                 btnStep2Eu.addEventListener("click", function(){
                     console.log(this.getAttribute("data-btn")) 
                     if (this.getAttribute("data-btn") == "yes") {

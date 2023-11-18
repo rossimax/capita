@@ -18,10 +18,16 @@
       "settings": {
         "form_warranty": "BpJi39UpFEBli_z8hOfhhA"
       }
+    },
+    "7933b784-4a17-4a07-a974-a3d9cb927fa7": {
+      "type": "distributors",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "f2773bc5-49bf-4991-bd91-3047bbe9ccb3"
+    "f2773bc5-49bf-4991-bd91-3047bbe9ccb3",
+    "7933b784-4a17-4a07-a974-a3d9cb927fa7"
   ]
 }

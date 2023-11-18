@@ -19,6 +19,12 @@
                 
             </div>  
 
+            <div class="claim-form-others-paragraph hide">
+                <p>All warranty requests in this territory are handled by our Authorized CAPiTA dealers and distributor. 
+                Please bring your snowboard for warranty claim to the shop of original purchase for inspection, 
+                OR contact our distributor in this territory direclty at:</p>
+            </div> 
+
         </div>
     </div>
 </div>
@@ -91,7 +97,12 @@ select.select-country {
 .shopify-section--distributors {
     margin: 0 auto;
 }
-
+.claim-form-others-paragraph {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 20px;
+}
 
 {% endstyle %}
 
@@ -105,12 +116,14 @@ select.select-country {
             claimCountry: '.claim-country',
             claimForm: '.claim-form',
             distributors: '.template-warranty-claim .distributors',
+            othersParagraph: '.claim-form-others-paragraph',
         };
 
         let selectCountry = document.querySelector(selectors.selectCountry);
         let claimCountry = document.querySelector(selectors.claimCountry);
         let claimForm = document.querySelector(selectors.claimForm);
         let distributors = document.querySelector(selectors.distributors);
+        let othersParagraph = document.querySelector(selectors.othersParagraph);
 
         function warranty_claim_step2() {
             claimCountry.classList.add("hide")
@@ -126,6 +139,7 @@ select.select-country {
                 }
                 if (this.value == "OTHER") {
                     distributors.classList.add("show") 
+                    othersParagraph.classList.remove("hide") 
                 }
                 if (this.value == "EUROPE") {
                     warranty_claim_step2()
@@ -138,6 +152,7 @@ select.select-country {
                 }
                 if (this.value == "OTHER") {
                     distributors.classList.add("show")
+                    othersParagraph.classList.remove("hide") 
                 }
                 if (this.value == "US/CANADA") {
                     warranty_claim_step2()

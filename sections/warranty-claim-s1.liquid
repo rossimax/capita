@@ -174,12 +174,13 @@ button.o-btn.btn-white {
         }
 
         function warranty_claim_eu_pre_step2() { 
-            
+
             claimCountry.classList.add("hide")
             claimEuStep.classList.remove("hide")
 
             btnsStep2Eu.foreach(btnStep2Eu, function(){
                 btnStep2Eu.addEventListener("click", function(){
+                    console.log(this.getAttribute("data-btn"))
                     if (this.getAttribute("data-btn") == "yes") {
                         btnsStep2Eu.classList.add("hide")
                         warranty_claim_step2() 

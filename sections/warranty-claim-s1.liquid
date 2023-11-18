@@ -21,16 +21,21 @@
             <div class="claim-form-eu-step hide">
                 <p>Did you purchase the board through <strong>eu.capitasnowboarding.com</strong>?</p>
                 <div class="btn-group">
-                    <button class="o-btn" data-btn="no">No</button>
-                    <button class="o-btn btn-white" data-btn="yes">Yes</button>
+                    <button class="o-btn js-step2" data-btn="no">No</button>
+                    <button class="o-btn js-step2 btn-white" data-btn="yes">Yes</button>
                 </div>
             </div>  
+
+            <div class="claim-form-eu-step-retailer hide">
+                <p>If you purchased your CAPiTA snowboard through any retail location - online or in-person, please contact the retailer or bring your board back to the location for inspection and warranty claim processing.</p>
+            </div> 
 
             <div class="claim-form-others-paragraph hide">
                 <p>All warranty requests in this territory are handled by our Authorized CAPiTA dealers and distributor. 
                 Please bring your snowboard for warranty claim to the shop of original purchase for inspection, 
                 OR contact our distributor in this territory direclty at:</p>
             </div> 
+            
 
         </div>
     </div>
@@ -132,7 +137,6 @@ button.o-btn {
     border: 1px solid #000;
 }
 button.o-btn.btn-white {
-    margin: 0 10px;
     background: #fff;
     color: #000;
 }
@@ -151,6 +155,8 @@ button.o-btn.btn-white {
             distributors: '.template-warranty-claim .distributors',
             othersParagraph: '.claim-form-others-paragraph',
             claimEuStep: '.claim-form-eu-step',
+            btnsStep2Eu: '.js-step2',
+            claimEuRetailer: '.claim-form-eu-step-retailer',
         };
 
         let selectCountry = document.querySelector(selectors.selectCountry);
@@ -159,6 +165,8 @@ button.o-btn.btn-white {
         let distributors = document.querySelector(selectors.distributors);
         let othersParagraph = document.querySelector(selectors.othersParagraph);
         let claimEuStep = document.querySelector(selectors.claimEuStep);
+        let btnsStep2Eu = document.querySelectorAll(selectors.btnsStep2Eu);
+        let claimEuRetailer = document.querySelector(selectors.claimEuRetailer);
 
         function warranty_claim_step2() { 
             claimCountry.classList.add("hide")
@@ -166,9 +174,23 @@ button.o-btn.btn-white {
         }
 
         function warranty_claim_eu_pre_step2() { 
+            
             claimCountry.classList.add("hide")
             claimEuStep.classList.remove("hide")
+
+            btnsStep2Eu.foreach(btnStep2Eu, function(){
+                btnStep2Eu.addEventListener("click", function(){
+                    if (this.getAttribute("data-btn") == "yes") {
+                        btnsStep2Eu.classList.add("hide")
+                        warranty_claim_step2() 
+                    } else {
+                        btnsStep2Eu.classList.add("hide")
+                        claimEuRetailer.classList.remove("hide")
+                    }
+                })
+            })
         } 
+
 
         selectCountry.addEventListener("change", function(){
 

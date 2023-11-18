@@ -18,10 +18,16 @@
       "settings": {
         "form_warranty": "88sdrr-Y0W493EPXOxapMw"
       }
+    },
+    "11c3ecbf-5f71-42f5-8567-a9db8515da63": {
+      "type": "distributors",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "bceaa288-3962-42ce-9b28-914e86ef5178"
+    "bceaa288-3962-42ce-9b28-914e86ef5178",
+    "11c3ecbf-5f71-42f5-8567-a9db8515da63"
   ]
 }

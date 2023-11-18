@@ -18,7 +18,6 @@
                 <div style="margin:0 auto;" class="pxFormGenerator" id="{{ section.settings.form_warranty }}"></div>
             </div>  
 
-            {% if request.origin == "https://eu.capitasnowboarding.com" %}
             <div class="claim-form-eu-step hide">
                 <p>Did you purchase the board through <strong>eu.capitasnowboarding.com</strong>?</p>
                 <div class="btns">
@@ -26,7 +25,6 @@
                     <button data-btn="no">No</button>
                 </div>
             </div>  
-            {% endif %}
 
             <div class="claim-form-others-paragraph hide">
                 <p>All warranty requests in this territory are handled by our Authorized CAPiTA dealers and distributor. 
@@ -131,6 +129,7 @@ select.select-country {
             claimForm: '.claim-form',
             distributors: '.template-warranty-claim .distributors',
             othersParagraph: '.claim-form-others-paragraph',
+            claimEuStep: '.claim-form-eu-step',
         };
 
         let selectCountry = document.querySelector(selectors.selectCountry);
@@ -138,10 +137,16 @@ select.select-country {
         let claimForm = document.querySelector(selectors.claimForm);
         let distributors = document.querySelector(selectors.distributors);
         let othersParagraph = document.querySelector(selectors.othersParagraph);
+        let claimEuStep = document.querySelector(selectors.claimEuStep);
 
         function warranty_claim_step2() { 
             claimCountry.classList.add("hide")
             claimForm.classList.remove("hide")
+        } 
+
+        function warranty_claim_eu_pre_step2() { 
+            claimCountry.classList.add("hide")
+            claimEuStep.classList.remove("hide")
         } 
 
         selectCountry.addEventListener("change", function(){
@@ -157,7 +162,7 @@ select.select-country {
                     claimCountry.classList.add("hide") 
                 }
                 if (this.value == "EUROPE") {
-                    warranty_claim_step2()
+                    warranty_claim_eu_pre_step2()
                 }
 
             } else if (location.hostname == 'capitasnowboarding.com') {

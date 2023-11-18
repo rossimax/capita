@@ -15,10 +15,18 @@
                 </div>
             </div>  
             <div class="claim-form hide">
-
                 <div style="margin:0 auto;" class="pxFormGenerator" id="{{ section.settings.form_warranty }}"></div>
-                
             </div>  
+
+            {% if actual_shop == "https://eu.capitasnowboarding.com" %}
+            <div class="claim-form-eu-step hide">
+                <p>Did you purchase the board through <strong>eu.capitasnowboarding.com</strong>?</p>
+                <div class="btns">
+                    <button data-btn="yes">Yes</button>
+                    <button data-btn="no">No</button>
+                </div>
+            </div>  
+            {% endif %}
 
             <div class="claim-form-others-paragraph hide">
                 <p>All warranty requests in this territory are handled by our Authorized CAPiTA dealers and distributor. 

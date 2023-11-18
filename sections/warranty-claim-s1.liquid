@@ -18,7 +18,7 @@
                 <div style="margin:0 auto;" class="pxFormGenerator" id="{{ section.settings.form_warranty }}"></div>
             </div>  
 
-            {% if actual_shop == "https://eu.capitasnowboarding.com" %}
+            {% if request.origin == "https://eu.capitasnowboarding.com" %}
             <div class="claim-form-eu-step hide">
                 <p>Did you purchase the board through <strong>eu.capitasnowboarding.com</strong>?</p>
                 <div class="btns">

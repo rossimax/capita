@@ -74,6 +74,20 @@ select.select-country {
     background-position: right center;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOSAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5IDEyTDEzIDE5TDcgMTIiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==);
 }
+.template-warranty-claim .container.distributors {
+    display:none;
+}
+.template-warranty-claim .container.distributors.show {
+    display:block;
+}
+.template-warranty-claim .warranty-na-canada,
+.template-warranty-claim .warranty-europe-me .distributors__card
+{
+    display: none;
+}
+.template-warranty-claim .warranty-europe-me .distributors__card.show-warranty-others {
+    display:block;
+}
 
 
 {% endstyle %}
@@ -87,11 +101,13 @@ select.select-country {
             selectCountry: '.select-country',
             claimCountry: '.claim-country',
             claimForm: '.claim-form',
+            distributors: '.template-warranty-claim .distributors',
         };
 
         let selectCountry = document.querySelector(selectors.selectCountry);
         let claimCountry = document.querySelector(selectors.claimCountry);
         let claimForm = document.querySelector(selectors.claimForm);
+        let distributors = document.querySelector(selectors.distributors);
 
         function warranty_claim_step2() {
             claimCountry.classList.add("hide")
@@ -106,7 +122,7 @@ select.select-country {
                     window.location.replace("https://capitasnowboarding.com/pages/warranty-claim");
                 }
                 if (this.value == "OTHER") {
-                    window.location.replace("https://eu.capitasnowboarding.com/pages/distributors-info");
+                    distributors.classList.add("show")
                 }
                 if (this.value == "EUROPE") {
                     warranty_claim_step2()
@@ -118,7 +134,7 @@ select.select-country {
                     window.location.replace("https://eu.capitasnowboarding.com/pages/warranty-claim");
                 }
                 if (this.value == "OTHER") {
-                    window.location.replace("https://capitasnowboarding.com/pages/distributors-info");
+                    distributors.classList.add("show")
                 }
                 if (this.value == "US/CANADA") {
                     warranty_claim_step2()

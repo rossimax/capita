@@ -188,6 +188,16 @@ button.o-btn:hover {
         let claimEuRetailer = document.querySelector(selectors.claimEuRetailer);
         let btnsStepRetailerEu = document.querySelectorAll(selectors.btnsStepRetailerEu);
 
+        let urlParamsClaim = new URLSearchParams(window.location.search)
+        if( urlParamsClaim.has('step2') ) {
+            if (location.hostname == 'eu.capitasnowboarding.com') {
+                warranty_claim_eu_pre_step2()
+            } else if (location.hostname == 'capitasnowboarding.com') {
+                warranty_claim_step2()
+            } else {
+                warranty_claim_step2()
+            }
+        }
 
         function warranty_claim_step2() { 
             claimCountry.classList.add("hide")
@@ -221,7 +231,7 @@ button.o-btn:hover {
                     }
                 })
             })
-            
+
         } 
 
 
@@ -230,7 +240,7 @@ button.o-btn:hover {
             if (location.hostname == 'eu.capitasnowboarding.com') {
 
                 if (this.value == "US/CANADA") {
-                    window.location.replace("https://capitasnowboarding.com/pages/warranty-claim");
+                    window.location.replace("https://capitasnowboarding.com/pages/warranty-claim?step2");
                 }
                 if (this.value == "OTHER") {
                     distributors.classList.add("show") 
@@ -244,7 +254,7 @@ button.o-btn:hover {
             } else if (location.hostname == 'capitasnowboarding.com') {
 
                 if (this.value == "EUROPE") {
-                    window.location.replace("https://eu.capitasnowboarding.com/pages/warranty-claim");
+                    window.location.replace("https://eu.capitasnowboarding.com/pages/warranty-claim?step2");
                 }
                 if (this.value == "OTHER") {
                     distributors.classList.add("show")

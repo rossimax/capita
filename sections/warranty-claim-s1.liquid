@@ -3,7 +3,7 @@
         <div class="u-content">
             <h1 class="o-text is-2">WARRANTY CLAIM</h1>
             <div class="claim-country">
-                <h5>YOUR COUNTRY</h5>
+                <h5 class="o-text is-5">YOUR COUNTRY</h5>
                 <div class="claim-country__select">
                     <select class="select-country">
                         <option>SELECT</option>
@@ -25,39 +25,62 @@
 
 {% schema %}
 {
-"name": "Warranty Claim S1",
-"settings": [
-    {
-        "type": "text",
-        "id": "form_warranty",
-        "label": "ID code form warranty",
-        "info": "Example: 88sdrr-Y0W493EPXOxapXX"
-    }
-],
-"presets": [
-    {
-        "name": "Warranty Claim S1"
-    }
-]
+    "name": "Warranty Claim S1",
+    "settings": [
+        {
+            "type": "text",
+            "id": "form_warranty",
+            "label": "ID code form warranty",
+            "info": "Example: 88sdrr-Y0W493EPXOxapXX"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Warranty Claim S1"
+        }
+    ]
 }
 {% endschema %}
 
-{% stylesheet %}
+{% style %}
 
 .hide {
     display: none;
 }
 .warranty-claim-s1 {
-    padding: 140px 0;
+    padding: 160px 0;
 }
 h1 {
     text-align: center;
 }
+.claim-form {
+    margin: 60px 0;
+}
+.claim-country {
+    margin: 60px auto;
+    max-width: 600px;
+}
+select.select-country {
+    padding: 10px 20px;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 30px;
+    margin-top: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOSAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5IDEyTDEzIDE5TDcgMTIiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==);
+}
 
-{% endstylesheet %}
+
+{% endstyle %}
 
 
 {% javascript %}
+
+(function() {
 
         let selectors = {
             selectCountry: '.select-country',
@@ -71,9 +94,8 @@ h1 {
 
         function warranty_claim_step2() {
             claimCountry.classList.add("hide")
-            claimForm.classList.add("show")
+            claimForm.classList.remove("hide")
         }
-
 
         selectCountry.addEventListener("change", function(){
 
@@ -108,6 +130,6 @@ h1 {
 
         })
 
-
+    })();
 
 {% endjavascript %}

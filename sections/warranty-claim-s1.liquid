@@ -153,6 +153,10 @@ button.o-btn:hover {
 .template-warranty-claim p {
     font-size: 16px;
 }
+.template-warranty-claim .o-btn {
+    min-width: 320px;
+}
+
 
 {% endstyle %}
 
@@ -170,6 +174,8 @@ button.o-btn:hover {
             claimEuStep: '.claim-form-eu-step',
             btnsStep2Eu: '.js-step2',
             claimEuRetailer: '.claim-form-eu-step-retailer',
+            btnsStepRetailerEu: '.js-step-retailer',
+
         };
 
         let selectCountry = document.querySelector(selectors.selectCountry);
@@ -180,6 +186,8 @@ button.o-btn:hover {
         let claimEuStep = document.querySelector(selectors.claimEuStep);
         let btnsStep2Eu = document.querySelectorAll(selectors.btnsStep2Eu);
         let claimEuRetailer = document.querySelector(selectors.claimEuRetailer);
+        let btnsStepRetailerEu = document.querySelectorAll(selectors.btnsStepRetailerEu);
+
 
         function warranty_claim_step2() { 
             claimCountry.classList.add("hide")
@@ -202,6 +210,18 @@ button.o-btn:hover {
                     }
                 })
             })
+
+            btnsStepRetailerEu.forEach((btnStepRetailerEu) => { 
+                btnStepRetailerEu.addEventListener("click", function(){
+                    if (btnStepRetailerEu.getAttribute("data-btn") == "home") {
+                        window.location.replace("/");
+                    } else {
+                        claimEuRetailer.classList.add("hide")
+                        claimEuStep.classList.remove("hide")
+                    }
+                })
+            })
+            
         } 
 
 

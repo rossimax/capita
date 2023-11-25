@@ -17,7 +17,7 @@
   {
     "name": "Dealers",
     "tag": "section",
-    "class": "shopify-section--dealers one-quarter",
+    "class": "shopify-section--dealers three-quarter",
     "presets": [
         {
             "name": "Dealers"
@@ -25,3 +25,73 @@
     ]
   }
 {% endschema %}
+
+{% style %}
+
+#storemapper-right {
+    margin-bottom: 30px;
+    border-radius: 35px;
+    border: 1px solid #000;
+}
+.storemapper-form-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+#storemapper label {
+    width: 100%;
+}
+#storemapper input#storemapper-zip {
+    margin-right: 10px !important;
+    border: 1px solid #000 !important;
+    border-radius: 10px !important;
+    width: 70%;
+}
+#storemapper button#storemapper-go {
+    text-transform: uppercase;
+    font-weight: 500;
+    width: calc(25% - 15px);
+    background: #000;
+    color: #fff;
+    margin-top: 0;
+    border-radius: 10px;
+    border-color: #000;
+}
+#storemapper button#storemapper-go:hover {
+    background: #fff;
+    color: #000;
+    border-color: #000;
+}
+ul#storemapper-list {
+    border-top: 1px solid #000;
+    padding-top: 30px !important;
+}
+/* width */
+div#storemapper #storemapper-left::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+div#storemapper #storemapper-left::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+/* Handle */
+div#storemapper #storemapper-left::-webkit-scrollbar-thumb {
+  background: #000; 
+}
+/* Handle on hover */
+div#storemapper #storemapper-left::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+#storemapper input#storemapper-zip::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000;
+  opacity: 1; /* Firefox */
+}
+#storemapper input#storemapper-zip:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #000;
+}
+#storemapper input#storemapper-zip::-ms-input-placeholder { /* Microsoft Edge */
+  color: #000;
+}
+{% endstyle %}

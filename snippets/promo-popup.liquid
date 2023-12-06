@@ -1,16 +1,20 @@
-<div class="promo-popup " style="display:none">
+<div class="promo-popup">
 
   <div class="promo-popup-content">
 
-    <span class="promo-popup-close"><img src="{{ 'x-finder.png' | asset_url }}" alt="close union bindings"></span>
+    <span class="promo-popup-close">                
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 95 95">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="m47.408 49.006 16.178 16.178L65 63.77 48.822 47.592 65 31.414 63.586 30 47.408 46.178 31.23 30l-1.414 1.414 16.178 16.178L29.816 63.77l1.414 1.414 16.178-16.178Z" fill="#231F20"></path>
+      </svg>
+    </span>
 
     <h3>HOLIDAY SHIPPING UPDATE</h3>
     <h5>Order on or before 12/14 for delivery by 12/25.</h5>
-    <img class="popup-image" src="https://cdn.shopify.com/s/files/1/0095/2254/4745/files/UnionJapan-12-2.jpg?v=1701870716" alt="promo union bindings">
+    <img class="popup-image" src="https://cdn.shopify.com/s/files/1/0815/1990/3022/files/M_hompage_productbanner_kevinbackstrom.jpg?v=1701879873" alt="promo capita">
 
-    <div class="countdown-box" data-time="December 1, 2023 00:00:01 AM"></div>
+    {% comment %} <div class="countdown-box" data-time="December 14, 2023 00:00:01 AM"></div> {% endcomment %}
 
-    <a class="btn-shop-now" href="/collections/union-snowboard-bindings">SHOP NOW</a>
+    <a class="btn-shop-now" href="/collections/all-snowboards">SHOP NOW</a>
 
     <p class="disclaimer">Carrier delays and delivery exceptions are possible.<br/>These dates are provided as a guideline.</p>
 
@@ -47,15 +51,20 @@
     transform: translate(-50%,-50%);
     background: #fff;
     padding: 40px 20px;
-    border-radius: 5px;
+    border-radius: 30px;
+    border: 1px solid #000;
   }
   span.promo-popup-close {
-    filter: invert(1);
-    max-width: 15px;
-    display: block;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    z-index: 2;
+    top: -10px;
+    right: -10px;
+    width: 60px;
+    padding: 0;
+    border: 1px solid #000;
+    border-radius: 9999px;
+    background-color: #fff;
+    aspect-ratio: 1/1;
     cursor: pointer;
   }
   .promo-popup h3 {
@@ -68,7 +77,7 @@
     font-size: 16px;
   }
   .promo-popup img.popup-image {
-    max-width: 260px;
+    max-width: 340px;
     margin: 30px auto;
     display: block;
   }
@@ -148,7 +157,7 @@
       if (sessionStorage.getItem("promo-popup") != "close") {
         setTimeout(function(){
           promoPopup.classList.add("show")
-        }, 5000)
+        }, 500)
       }
 
       promoPopupClose.addEventListener("click", (e) => {
@@ -161,7 +170,7 @@
       })
     })
     
-    var countdownBox_start = countdownBox.getAttribute("data-time")
+    // var countdownBox_start = countdownBox.getAttribute("data-time")
 
     if (typeof countdownBox_start !== typeof undefined && countdownBox_start !== false) {
 

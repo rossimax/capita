@@ -1575,6 +1575,13 @@
         "type": "text",
         "id": "footer_legal",
         "label": "Footer Legal"
+      },
+      {
+        "type": "checkbox",
+        "id": "promo_popup",
+        "label": {
+          "en": "Promo Popup"
+        }
       }
     ]
   }

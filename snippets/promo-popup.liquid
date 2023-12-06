@@ -1,0 +1,254 @@
+<div class="promo-popup ">
+
+  <div class="promo-popup-content">
+
+    <span class="promo-popup-close"><img src="{{ 'x-finder.png' | asset_url }}" alt="close union bindings"></span>
+
+    <h3>HOLIDAY SHIPPING UPDATE</h3>
+    <h5>Order on or before 12/14 for delivery by 12/25.</h5>
+    <img class="popup-image" src="https://cdn.shopify.com/s/files/1/0095/2254/4745/files/UnionJapan-12-2.jpg?v=1701870716" alt="promo union bindings">
+
+    <div class="countdown-box" data-time="December 1, 2023 00:00:01 AM"></div>
+
+    <a class="btn-shop-now" href="/collections/union-snowboard-bindings">SHOP NOW</a>
+
+    <p class="disclaimer">Carrier delays and delivery exceptions are possible.<br/>These dates are provided as a guideline.</p>
+
+  </div>
+</div>
+
+
+<style>
+  .promo-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000070;
+    z-index: -100;
+    transition-duration: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .promo-popup.show {
+    z-index: 999;
+    transition-duration: 0.5s;
+    opacity: 1;
+    visibility: visible;
+  }
+  .promo-popup-content {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 5px;
+  }
+  span.promo-popup-close {
+    filter: invert(1);
+    max-width: 15px;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+  .promo-popup h3 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+  }
+  .promo-popup h5 {
+    text-align: center;
+    font-size: 16px;
+  }
+  .promo-popup img.popup-image {
+    max-width: 260px;
+    margin: 30px auto;
+    display: block;
+  }
+  .promo-popup a.btn-shop-now {
+    display: block;
+    padding: 13px;
+    background: #171717;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 28px;
+    max-height: 52px;
+    max-width: 380px;
+  }
+  .promo-popup a.btn-shop-now:hover {
+    text-decoration: underline;
+  }
+  .promo-popup .disclaimer {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .countdown-time__num {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .countdown-box span {
+    color: #fb6617;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 768px) {
+    .promo-popup-content {
+      width: 100%;
+      max-width: 370px;
+    }
+    .promo-popup h3 {
+      font-size: 26px;
+    }
+    .promo-popup h5 {
+      font-size: 18px;
+    }
+    .promo-popup img.popup-image {
+      margin: 20px auto;
+      max-width: 220px;
+    }
+    .promo-popup .disclaimer {
+      font-size: 8px;
+    }
+  }
+</style>
+
+
+<script>
+
+(function(document) {
+
+    let selectors = {
+      promoPopup: '.promo-popup',
+      promoPopupClose: '.promo-popup-close',
+      countdownBox: '.countdown-box',
+      promoPopupCTA: '.btn-shop-now',
+    };
+  
+    let promoPopup = document.querySelector(selectors.promoPopup);
+    let promoPopupClose = document.querySelector(selectors.promoPopupClose);
+    let countdownBox = document.querySelector(selectors.countdownBox);
+    let promoPopupCTA = document.querySelector(selectors.promoPopupCTA);
+   
+
+    addEventListener("load", (event) => {
+
+      if (sessionStorage.getItem("promo-popup") != "close") {
+        setTimeout(function(){
+          promoPopup.classList.add("show")
+        }, 5000)
+      }
+
+      promoPopupClose.addEventListener("click", (e) => {
+        sessionStorage.setItem("promo-popup", "close")
+        promoPopup.classList.remove("show")
+      })
+
+      promoPopupCTA.addEventListener("click", (e) => {
+        sessionStorage.setItem("promo-popup", "close")
+      })
+    })
+    
+    var countdownBox_start = countdownBox.getAttribute("data-time")
+
+    if (typeof countdownBox_start !== typeof undefined && countdownBox_start !== false) {
+
+      
+      
+      // Set the date we're counting down to
+      var countDownDate = new Date(countdownBox_start).getTime();
+
+  
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+
+          var countdownBox_now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - countdownBox_now;
+  
+          if (distance > 0) {
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+            days = String(days)
+            if (days.length == 1 ) {
+                days = '0' + days;
+            }
+            hours = String(hours)
+            if (hours.length == 1 ) {
+                hours = '0' + hours;
+            }
+            minutes = String(minutes)
+            if (minutes.length == 1 ) {
+                minutes = '0' + minutes;
+            }
+            seconds = String(seconds)
+            if (seconds.length == 1 ) {
+                seconds = '0' + seconds;
+            }
+            
+            let countdown_html = `
+                <div class="countdown-time">
+                    <div class="countdown-time__num">
+                        <span>
+                            ` + days + `<br/>
+                          <span class="countdown-time__text">
+                              DAYS
+                          </span>
+                        </span>
+                        
+                        <span>
+                            ` + hours + `<br/>
+                            <span class="countdown-time__text">
+                              HOURS
+                            </span>
+                        </span>
+                        
+                        <span>
+                            ` + minutes + `<br/>
+                            <span class="countdown-time__text">
+                              MINUTES
+                            </span>
+                        </span>
+                        
+                        <span>
+                            ` + seconds + `<br/>
+                            <span class="countdown-time__text">
+                              SECONDS
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            `
+
+            countdownBox.innerHTML =  countdown_html
+          } else {
+            promoPopup.classList.add("hide")
+          }
+
+      }, 1000);
+
+    }
+
+
+
+})(document);
+  
+</script>

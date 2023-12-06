@@ -4,20 +4,7 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "blocks": {
-        "661d8102-0126-4e46-b286-189567b5d6f5": {
-          "type": "announcement",
-          "settings": {
-            "text": "Order on or before 12\/14 for delivery by 12\/25",
-            "text_alignment": "center",
-            "color_scheme": "accent-1",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "661d8102-0126-4e46-b286-189567b5d6f5"
-      ],
+      "disabled": true,
       "custom_css": [
 
       ],

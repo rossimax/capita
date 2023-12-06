@@ -22,7 +22,7 @@
         "font_size": 24,
         "font_size_mob": 16,
         "padding": 30,
-        "padding_mob": 60,
+        "padding_mob": 30,
         "border_top": "no",
         "border_bottom": "no"
       }

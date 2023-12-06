@@ -332,5 +332,9 @@
     {% endif %}
     {% comment %} END - custom script {% endcomment %}
 
+    {% if settings.promo_popup %}
+      {% include 'promo-popup' %}
+    {% endif %}
+    
 	</body>
 </html>

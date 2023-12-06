@@ -4,7 +4,7 @@
       "type": "main-page",
       "settings": {
         "head_width": 100,
-        "margin_top": 90,
+        "margin_top": 0,
         "body_color": "#ffffff",
         "footer_border": true,
         "enable_head": false,
@@ -15,7 +15,7 @@
     "0304082a-98f7-4665-a2cd-7ea2cfbc7043": {
       "type": "hero-banner-secondary",
       "settings": {
-        "margin_top": -20,
+        "margin_top": 0,
         "margin_bottom": 0,
         "image_desk": "shopify:\/\/shop_images\/Group_494_1.jpg",
         "image_mob": "shopify:\/\/shop_images\/M_mothership2_herobanner_1.jpg",

@@ -12,6 +12,7 @@
     },
     "9585bd87-5023-4c43-9cfe-83138c9055e7": {
       "type": "lazy-slider",
+      "disabled": true,
       "custom_css": [
         "strong {font-size: 36px; font-weight: 600;}",
         ".lazy-slide-text span {font-weight: 500;}"

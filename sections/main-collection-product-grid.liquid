@@ -278,7 +278,7 @@
             {% for product_tag in product.tags%}
               {% assign tag_list = tag_list | append: "|" | append: product_tag %}
             {% endfor %}
-            <div class="c-listing-product" data-tags="{{ tag_list }}" data-title="{{ product.title }}">
+            <div class="c-listing-product" data-tags="{{ tag_list }}" data-title="{{ product.title }}" attr-available="{% if product.available %}true{% else %}false{% endif %}">
               <div class="c-listing-product__image">
                 <a href="{{ product.url }}">
                   <img src="{{ product.featured_image | img_url: "550x550" }}" alt="Capita | {{ product.title | strip_html }}">

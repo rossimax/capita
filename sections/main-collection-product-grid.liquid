@@ -139,6 +139,13 @@
                     <input type="checkbox" name="WIDE" /><span>WIDE</span>
                   </label>
                 </div>
+
+                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="availability"><span>AVAILABILITY</span></div>
+                <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="availability">
+                  <label class="c-listing-filter__option o-text is-4">
+                    <input type="checkbox" name="P-AVAILABILE" /><span>AVAILABILE</span>
+                  </label>
+                </div> 
       
                 <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="size"><span>SIZE</span></div>
                 <div class="c-listing-filter__stack c-listing-filter__stack--boxed js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="size">
@@ -275,10 +282,10 @@
     
           {%- for product in collection.products -%}
             {% assign tag_list = "" %}
-            {% for product_tag in product.tags%}
+            {% for product_tag in product.tags %}
               {% assign tag_list = tag_list | append: "|" | append: product_tag %}
             {% endfor %}
-            <div class="c-listing-product" data-tags="{{ tag_list }}" data-title="{{ product.title }}">
+            <div class="c-listing-product" data-tags="{{ tag_list }}{% if product.available %}|P-AVAILABILE{% endif %}" data-title="{{ product.title }}">
               <div class="c-listing-product__image">
                 <a href="{{ product.url }}">
                   <img src="{{ product.featured_image | img_url: "550x550" }}" alt="Capita | {{ product.title | strip_html }}">

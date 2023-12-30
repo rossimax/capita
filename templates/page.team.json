@@ -300,6 +300,7 @@
         },
         "defead9d-4d23-4679-aabe-531ea2798243": {
           "type": "team_list",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_4_1.jpg",
             "link_url": "shopify:\/\/pages\/markus-olimstad",
@@ -356,6 +357,7 @@
         },
         "f4277378-df05-4bdd-9f60-d6bcaa3218c6": {
           "type": "team_list",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Screenshot_2023-04-28_alle_11.24_3_3.jpg",
             "link_url": "shopify:\/\/pages\/simon-pircher",

@@ -27,6 +27,7 @@
               <div class="c-listing-filter__wrapper">
                 <div class="c-listing-filter__mob-head closed o-text is-3">
                   <span>FILTERS</span>
+                  <div class="js-filter-num-select o-text is-4 is-regular"><span class="num-select-filter">0</span> selected</div>
                 </div>
       
                 <span class="js-tags-list" data-tags="{{tag_list}}"></span>
@@ -680,7 +681,7 @@ a.c-listing-product__size:hover span {
   let productItems = document.querySelectorAll(selectors.productItems)
   let filtersType = document.querySelectorAll(selectors.filtersType)
   let filtersInputs = document.querySelectorAll(selectors.filtersInputs)
-  let filterNumSelect = document.querySelector(selectors.filterNumSelect)
+  let filterNumSelect = document.querySelectorAll(selectors.filterNumSelect)
   let tagsListApplied = document.querySelector(selectors.tagsListApplied)
   let cleanFilter = document.querySelector(selectors.cleanFilter)
   let sortingListing = document.querySelectorAll(selectors.sortingListing)

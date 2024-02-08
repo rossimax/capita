@@ -709,7 +709,11 @@ a.c-listing-product__size:hover span {
         countInputSelected++
       }
     })
-    filterNumSelect.innerHTML = countInputSelected
+
+    filterNumSelect.forEach(function(filterNumSelectSingle){
+      filterNumSelectSingle.innerHTML = countInputSelected
+    });
+
   }
 
   // EMPTY CHECK

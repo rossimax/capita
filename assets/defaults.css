@@ -490,6 +490,9 @@ main.template-nfc-steps {
   pointer-events: auto;
   opacity: 0.3;
 }
+.c-listing-product__size.is-disabled {
+  opacity: 0.4;
+}
 
 .c-info-card a {
   text-decoration: none;

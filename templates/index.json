@@ -45,7 +45,6 @@
     },
     "9bfad989-863d-473a-962c-c5b28a8c5824": {
       "type": "banner-product",
-      "disabled": true,
       "settings": {
         "image_position": false,
         "product": "mercury-2024",
@@ -69,6 +68,7 @@
     },
     "2056c58e-7330-430b-8fa5-de787867e504": {
       "type": "banner-product",
+      "disabled": true,
       "settings": {
         "image_position": false,
         "product": "aeronaut",

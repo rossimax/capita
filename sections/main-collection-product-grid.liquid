@@ -723,7 +723,9 @@ a.c-listing-product__size:hover span {
 
   window.addEventListener("load", (event) => {
 
-    filterAvailability.click()
+    setTimeout(function(){
+      document.querySelector('.js-filter-inputs[attr-filter-type="availability"] input').click()
+    }, 500);
 
     // START - CHECK TAGS IN URI
     if (tagListAppliedArray[0] != "") {

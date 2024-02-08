@@ -289,7 +289,7 @@
             {% endfor %}
             <div class="c-listing-product" data-tags="{{ tag_list }}{% if product.available %}|P-AVAILABILE{% endif %}" data-title="{{ product.title }}">
               {% if product.available == false %}
-                <div style="display:none" class="sold-out-label">SOLD OUT</div>
+                <div class="sold-out-label">SOLD OUT</div>
               {% endif %}
               <div class="c-listing-product__image">
                 <a href="{{ product.url }}">
@@ -530,6 +530,12 @@ a.c-listing-product__size:hover span {
 .template-apparel-and-more .js-filter-num-select o-text is-4 is-regular {
   opacity: 0;
   visibility: hidden;
+}
+.sold-out-label {
+  transform: rotate(90deg) translateX(50%) translateY(100%);
+  font-size: 11px;
+  font-weight: 500;
+  position: absolute;
 }
 
 @media screen and (min-width: 120em) {

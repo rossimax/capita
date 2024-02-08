@@ -670,6 +670,7 @@ a.c-listing-product__size:hover span {
     filterMobHeadIconClose: '.c-listing-filter__mob-head svg',
     listingGrid: '.l-listing__grid',
     filterBox: '.l-listing__aside',
+    filterAvailability: '.js-filter-inputs[attr-filter-type="availability"]',
   };
 
   Shopify.queryParams = {};
@@ -687,6 +688,7 @@ a.c-listing-product__size:hover span {
   let filterMobHead = document.querySelector(selectors.filterMobHead)
   let listingGrid = document.querySelector(selectors.listingGrid)
   let filterBox = document.querySelector(selectors.filterBox)
+  let filterAvailability = document.querySelector(selectors.filterAvailability)
 
   let uriTagsApplied = false
   let countInputSelected = 0
@@ -720,6 +722,8 @@ a.c-listing-product__size:hover span {
   }
 
   window.addEventListener("load", (event) => {
+
+    filterAvailability.click()
 
     // START - CHECK TAGS IN URI
     if (tagListAppliedArray[0] != "") {

@@ -29,7 +29,7 @@
                   <span>FILTERS</span>
                 </div>
       
-                <span class="js-tags-list" data-tags="{{tag_list}}"><span>
+                <span class="js-tags-list" data-tags="{{tag_list}}"></span>
       
                 <div class="c-listing-filter__stack">
                   <label class="c-listing-filter__option o-text is-4">
@@ -223,7 +223,7 @@
                   {% endunless %}
                 {%- endfor -%}
       
-                <span class="js-tags-list" data-tags="{{tag_list}}"><span>
+                <span class="js-tags-list" data-tags="{{tag_list}}"></span>
       
                 <div class="c-listing-filter__dropdown-title js-filter-type o-text is-4 is-medium" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
                 <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="category" attr-test="{{ current_tags }}">
@@ -527,7 +527,7 @@ a.c-listing-product__size:hover span {
   visibility: hidden;
 }
 
-@media screen and (min-width: 75em) {
+@media screen and (min-width: 75em) and (max-width: 90em) {
   .l-listing {
       grid-template-columns: 260px 1fr;
   }

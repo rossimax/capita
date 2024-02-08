@@ -488,6 +488,7 @@ main.template-nfc-steps {
 }
 .c-product-info__size.is-disabled {
   pointer-events: auto;
+  opacity: 0.3;
 }
 
 .c-info-card a {

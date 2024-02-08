@@ -140,8 +140,8 @@
                   </label>
                 </div>
 
-                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="availability"><span>AVAILABILITY</span></div>
-                <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="availability">
+                <div class="c-listing-filter__dropdown-title js-filter-type o-text is-4 is-medium" attr-filter-type="availability"><span>AVAILABILITY</span></div>
+                <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="availability">
                   <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="P-AVAILABILE" /><span>AVAILABILE</span>
                   </label>
@@ -533,7 +533,7 @@ a.c-listing-product__size:hover span {
   }
 }
 
-@media screen and (min-width: 75em) and (max-width: 95em) {
+@media screen and (min-width: 75em) and (max-width: 90em) {
   .l-listing {
       grid-template-columns: 260px 1fr;
   }
@@ -670,6 +670,7 @@ a.c-listing-product__size:hover span {
     filterMobHeadIconClose: '.c-listing-filter__mob-head svg',
     listingGrid: '.l-listing__grid',
     filterBox: '.l-listing__aside',
+    filterAvailability: '.js-filter-inputs[attr-filter-type="availability"] input',
   };
 
   Shopify.queryParams = {};
@@ -687,6 +688,7 @@ a.c-listing-product__size:hover span {
   let filterMobHead = document.querySelector(selectors.filterMobHead)
   let listingGrid = document.querySelector(selectors.listingGrid)
   let filterBox = document.querySelector(selectors.filterBox)
+  let filterAvailability = document.querySelector(selectors.filterAvailability)
 
   let uriTagsApplied = false
   let countInputSelected = 0
@@ -720,6 +722,8 @@ a.c-listing-product__size:hover span {
   }
 
   window.addEventListener("load", (event) => {
+
+    filterAvailability.click()
 
     // START - CHECK TAGS IN URI
     if (tagListAppliedArray[0] != "") {

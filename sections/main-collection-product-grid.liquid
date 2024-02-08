@@ -29,7 +29,7 @@
                   <span>FILTERS</span>
                 </div>
       
-                <span class="js-tags-list" data-tags="{{tag_list}}"><span>
+                <span class="js-tags-list" data-tags="{{tag_list}}"></span>
       
                 <div class="c-listing-filter__stack">
                   <label class="c-listing-filter__option o-text is-4">
@@ -143,7 +143,7 @@
                 <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="availability"><span>AVAILABILITY</span></div>
                 <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="availability">
                   <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="P-AVAILABILE" /><span>AVAILABILE</span>
+                    <input type="checkbox" name="P-AVAILABILE" checked /><span>AVAILABILE</span>
                   </label>
                 </div> 
       
@@ -223,7 +223,7 @@
                   {% endunless %}
                 {%- endfor -%}
       
-                <span class="js-tags-list" data-tags="{{tag_list}}"><span>
+                <span class="js-tags-list" data-tags="{{tag_list}}"></span>
       
                 <div class="c-listing-filter__dropdown-title js-filter-type o-text is-4 is-medium" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
                 <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="category" attr-test="{{ current_tags }}">

@@ -288,6 +288,9 @@
               {% assign tag_list = tag_list | append: "|" | append: product_tag %}
             {% endfor %}
             <div class="c-listing-product" data-tags="{{ tag_list }}{% if product.available %}|P-AVAILABILE{% endif %}" data-title="{{ product.title }}">
+              {% if product.available == false %}
+                <div class="sold-out-label">SOLD<br/> OUT</div> 
+              {% endif %}
               <div class="c-listing-product__image">
                 <a href="{{ product.url }}">
                   <img src="{{ product.featured_image | img_url: "550x550" }}" alt="Capita | {{ product.title | strip_html }}">
@@ -495,6 +498,9 @@ span.sorting-option.selected {
 span.spr-badge-caption {
     text-decoration: underline;
 }
+.c-listing-product {
+  position: relative;
+}
 .c-listing-product__image {
     aspect-ratio: 200/327;
 }
@@ -527,6 +533,13 @@ a.c-listing-product__size:hover span {
 .template-apparel-and-more .js-filter-num-select o-text is-4 is-regular {
   opacity: 0;
   visibility: hidden;
+}
+.sold-out-label {
+  font-size: 11px;
+  font-weight: 500;
+  position: absolute;
+  right: 0;
+  text-align: right;
 }
 
 @media screen and (min-width: 120em) {

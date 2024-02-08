@@ -27,6 +27,7 @@
               <div class="c-listing-filter__wrapper">
                 <div class="c-listing-filter__mob-head closed o-text is-3">
                   <span>FILTERS</span>
+                  <div class="js-filter-num-select-mob o-text is-4 is-regular"><span class="num-select-filter">0</span> selected</div>
                 </div>
       
                 <span class="js-tags-list" data-tags="{{tag_list}}"></span>
@@ -209,6 +210,7 @@
               <div class="c-listing-filter__wrapper">
                 <div class="c-listing-filter__mob-head closed">
                   <span>FILTERS</span>
+                  <div class="js-filter-num-select-mob o-text is-4 is-regular"><span class="num-select-filter">0</span> selected</div>
                 </div>
       
                 {% comment %} {%- for filter in collection.filters -%}
@@ -646,6 +648,11 @@ a.c-listing-product__size:hover span {
     font-size: 11px;
     white-space: nowrap;
   }
+  .c-listing-filter__mob-head .js-filter-num-select {
+    position: absolute;
+    right: 80px;
+  }
+
 }
 
 {% endstyle %}
@@ -654,13 +661,14 @@ a.c-listing-product__size:hover span {
 {% javascript %}
 
 (function(document) {
-
+ 
   let selectors = {
     filterInputs: '.js-filter-inputs input',
     productItems: '.c-listing-product',
     filtersType: '.js-filter-type',
     filtersInputs: '.js-filter-inputs',
     filterNumSelect: '.js-filter-num-select .num-select-filter',
+    filterNumSelectMob: '.js-filter-num-select-mob .num-select-filter',
     tagsListApplied: '.js-tags-list',
     cleanFilter: '.js-filter-clean',
     sortingListing: '.js-sorting-listing .sorting-option',
@@ -680,6 +688,7 @@ a.c-listing-product__size:hover span {
   let filtersType = document.querySelectorAll(selectors.filtersType)
   let filtersInputs = document.querySelectorAll(selectors.filtersInputs)
   let filterNumSelect = document.querySelector(selectors.filterNumSelect)
+  let filterNumSelectMob = document.querySelector(selectors.filterNumSelectMob)
   let tagsListApplied = document.querySelector(selectors.tagsListApplied)
   let cleanFilter = document.querySelector(selectors.cleanFilter)
   let sortingListing = document.querySelectorAll(selectors.sortingListing)
@@ -703,7 +712,10 @@ a.c-listing-product__size:hover span {
         countInputSelected++
       }
     })
+
     filterNumSelect.innerHTML = countInputSelected
+    filterNumSelectMob.innerHTML = countInputSelected
+
   }
 
   // EMPTY CHECK

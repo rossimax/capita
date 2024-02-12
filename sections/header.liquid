@@ -332,7 +332,7 @@
     let mobHeader = document.querySelector(selectors.mobHeader);
 
     searchMobileBtn.addEventListener("click", function() {
-      if (searchMobileBtn.classList.contains("is-active")) {
+      if (!searchMobileBtn.classList.contains("is-active")) {
         console.log("close menu") 
         hamMobileBtn.classList.remove("is-active")
         mobHeader.classList.remove("has-dropdown")

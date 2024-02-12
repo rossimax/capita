@@ -332,11 +332,13 @@
     let mobHeader = document.querySelector(selectors.mobHeader);
 
     searchMobileBtn.addEventListener("click", function() {
+
       if (searchMobileBtn.classList.contain("is-active")) {
         hamMobileBtn.classList.remove("is-active")
         mobHeader.classList.remove("has-dropdown")
         document.body.style.setProperty("--panel-height",`${i}px`)
       }
+      
     })
 
     function predectiveSearch() {

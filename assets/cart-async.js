@@ -127,6 +127,10 @@
               let disablePlus = false
       
               reloadCart(disablePlus)
+
+              setTimeout(() => {
+                window.e.emit('app:open_cart');
+              }, 500);
       
             }).catch((error) => {
               console.error('Error:', error);

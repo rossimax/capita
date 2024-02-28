@@ -30,7 +30,7 @@
     </nav>
     <div class="c-header__utilities">
       <button
-        class="c-header__utility is-search js-dropdown-trigger"
+        class="c-header__utility is-search js-dropdown-toggle"
         data-menu-trigger="search"
         type="button"
       >
@@ -41,7 +41,7 @@
         </svg>
       </button>
       <button
-        class="c-header__utility is-cart js-dropdown-trigger"
+        class="c-header__utility is-cart js-dropdown-toggle"
         data-menu-trigger="cart"
         type="button"
       >
@@ -127,7 +127,7 @@
     {% include 'cart-header' %}
     <div class="c-header__menu-list js-header-menu-list">
       <div
-        class="c-header__dropdown-panel c-header-search js-header-dropdown js-header-search"
+        class="c-header__dropdown-panel c-header-search js-header-toggle-dropdown js-header-search"
         style="display: none"
         data-parent="search"
       >

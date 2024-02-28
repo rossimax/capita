@@ -820,3 +820,10 @@ table.order-history {
 main#MainContent {
   background-image: none;
 }
+
+.c-product__thumb img {
+  object-fit: cover;
+  z-index: -71;
+  position: relative;
+  border-radius: 20px;
+}

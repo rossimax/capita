@@ -5,7 +5,7 @@
       "settings": {
         "transparent_header": false,
         "image": "shopify:\/\/shop_images\/D_2425_home_herobanner_earlyrelease_2.jpg",
-        "image_mob": "shopify:\/\/shop_images\/D_2425_home_herobanner_earlyrelease.jpg",
+        "image_mob": "shopify:\/\/shop_images\/D_2425_home_herobanner_earlyrelease_3.jpg",
         "cta_text": "OPEN YOUR MIND",
         "cta_link": "shopify:\/\/collections\/all-snowboards"
       }
@@ -47,11 +47,11 @@
       "type": "banner-product",
       "settings": {
         "image_position": false,
-        "product": "mercury-2024",
-        "right_image": "shopify:\/\/shop_images\/D_hompage_productbanner_kevinbackstrom.jpg",
-        "left_title": "MERCURY",
-        "left_sup_title": "ALL-MTN \/ FREERIDE",
-        "right_text": "KEVIN BACKSTROM"
+        "product": "aeronaut-2025",
+        "right_image": "shopify:\/\/shop_images\/D_2425_home_productbanner_aeronaut.jpg",
+        "left_title": "AERONAUT",
+        "left_sup_title": "DIRECTIONAL \/ TRADITIONAL CAMBER",
+        "right_text": "ARTHUR LONGO"
       }
     },
     "221611b0-cb5f-4aa9-af7b-309fbceb6127": {

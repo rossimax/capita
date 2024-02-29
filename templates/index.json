@@ -4,7 +4,7 @@
       "type": "hero-banner",
       "settings": {
         "transparent_header": false,
-        "image": "shopify:\/\/shop_images\/D_2425_home_herobanner_earlyrelease_2.jpg",
+        "image": "shopify:\/\/shop_images\/D_2425_home_herobanner_earlyrelease_1.jpg",
         "image_mob": "shopify:\/\/shop_images\/D_2425_home_herobanner_earlyrelease_3.jpg",
         "cta_text": "OPEN YOUR MIND",
         "cta_link": "shopify:\/\/collections\/all-snowboards"
@@ -48,7 +48,7 @@
       "settings": {
         "image_position": false,
         "product": "aeronaut-2025",
-        "right_image": "shopify:\/\/shop_images\/M_2425_home_productbanner_aeronaut.jpg",
+        "right_image": "shopify:\/\/shop_images\/D_2425_home_productbanner_aeronaut.jpg",
         "left_title": "AERONAUT",
         "left_sup_title": "DIRECTIONAL \/ TRADITIONAL CAMBER",
         "right_text": "ARTHUR LONGO"

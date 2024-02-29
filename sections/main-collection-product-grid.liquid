@@ -288,7 +288,9 @@
               {% assign tag_list = tag_list | append: "|" | append: product_tag %}
             {% endfor %}
             <div class="c-listing-product" data-tags="{{ tag_list }}{% if product.available %}|P-AVAILABILE{% endif %}" data-title="{{ product.title }}">
-              {% if product.available == false %}
+              {% if product.metafields.accentuate.new_tag %}
+                <div class="new-label">NEW</div> 
+              {% elsif product.available == false %}
                 <div class="sold-out-label">SOLD<br/> OUT</div> 
               {% endif %}
               <div class="c-listing-product__image">
@@ -534,7 +536,8 @@ a.c-listing-product__size:hover span {
   opacity: 0;
   visibility: hidden;
 }
-.sold-out-label {
+.sold-out-label,
+.new-label {
   font-size: 11px;
   font-weight: 500;
   position: absolute;

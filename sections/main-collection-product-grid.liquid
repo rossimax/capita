@@ -27,9 +27,10 @@
               <div class="c-listing-filter__wrapper">
                 <div class="c-listing-filter__mob-head closed o-text is-3">
                   <span>FILTERS</span>
+                  <div class="js-filter-num-select-mob o-text is-4 is-regular"><span class="num-select-filter">0</span> selected</div>
                 </div>
       
-                <span class="js-tags-list" data-tags="{{tag_list}}"><span>
+                <span class="js-tags-list" data-tags="{{tag_list}}"></span>
       
                 <div class="c-listing-filter__stack">
                   <label class="c-listing-filter__option o-text is-4">
@@ -140,8 +141,8 @@
                   </label>
                 </div>
 
-                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="availability"><span>AVAILABILITY</span></div>
-                <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="availability">
+                <div class="c-listing-filter__dropdown-title js-filter-type o-text is-4 is-medium" attr-filter-type="availability"><span>AVAILABILITY</span></div>
+                <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="availability">
                   <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="P-AVAILABILE" /><span>AVAILABILE</span>
                   </label>
@@ -209,6 +210,7 @@
               <div class="c-listing-filter__wrapper">
                 <div class="c-listing-filter__mob-head closed">
                   <span>FILTERS</span>
+                  <div class="js-filter-num-select-mob o-text is-4 is-regular"><span class="num-select-filter">0</span> selected</div>
                 </div>
       
                 {% comment %} {%- for filter in collection.filters -%}
@@ -223,7 +225,7 @@
                   {% endunless %}
                 {%- endfor -%}
       
-                <span class="js-tags-list" data-tags="{{tag_list}}"><span>
+                <span class="js-tags-list" data-tags="{{tag_list}}"></span>
       
                 <div class="c-listing-filter__dropdown-title js-filter-type o-text is-4 is-medium" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
                 <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="category" attr-test="{{ current_tags }}">
@@ -286,6 +288,11 @@
               {% assign tag_list = tag_list | append: "|" | append: product_tag %}
             {% endfor %}
             <div class="c-listing-product" data-tags="{{ tag_list }}{% if product.available %}|P-AVAILABILE{% endif %}" data-title="{{ product.title }}">
+              {% if product.metafields.accentuate.new_tag %}
+                <div class="new-label">NEW</div> 
+              {% elsif product.available == false %}
+                <div class="sold-out-label">SOLD<br/> OUT</div> 
+              {% endif %}
               <div class="c-listing-product__image">
                 <a href="{{ product.url }}">
                   <img src="{{ product.featured_image | img_url: "550x550" }}" alt="Capita | {{ product.title | strip_html }}">
@@ -493,6 +500,9 @@ span.sorting-option.selected {
 span.spr-badge-caption {
     text-decoration: underline;
 }
+.c-listing-product {
+  position: relative;
+}
 .c-listing-product__image {
     aspect-ratio: 200/327;
 }
@@ -526,10 +536,34 @@ a.c-listing-product__size:hover span {
   opacity: 0;
   visibility: hidden;
 }
+.sold-out-label,
+.new-label {
+  font-size: 11px;
+  font-weight: 500;
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+
+@media screen and (min-width: 120em) {
+  .l-listing__grid {
+      padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 75em) and (max-width: 90em) {
+  .l-listing {
+      grid-template-columns: 260px 1fr;
+  }
+}
 
 @media screen and (min-width: 75em) {
   .l-listing {
       grid-template-columns: 260px 1fr;
+  }
+  .sold-out-label,
+  .new-label {
+    font-size: 13px;
   }
 }
 
@@ -640,6 +674,11 @@ a.c-listing-product__size:hover span {
     font-size: 11px;
     white-space: nowrap;
   }
+  .c-listing-filter__mob-head .js-filter-num-select-mob {
+    position: absolute;
+    right: 80px;
+  }
+
 }
 
 {% endstyle %}
@@ -648,13 +687,14 @@ a.c-listing-product__size:hover span {
 {% javascript %}
 
 (function(document) {
-
+ 
   let selectors = {
     filterInputs: '.js-filter-inputs input',
     productItems: '.c-listing-product',
     filtersType: '.js-filter-type',
     filtersInputs: '.js-filter-inputs',
     filterNumSelect: '.js-filter-num-select .num-select-filter',
+    filterNumSelectMob: '.js-filter-num-select-mob .num-select-filter',
     tagsListApplied: '.js-tags-list',
     cleanFilter: '.js-filter-clean',
     sortingListing: '.js-sorting-listing .sorting-option',
@@ -664,6 +704,7 @@ a.c-listing-product__size:hover span {
     filterMobHeadIconClose: '.c-listing-filter__mob-head svg',
     listingGrid: '.l-listing__grid',
     filterBox: '.l-listing__aside',
+    filterAvailability: '.js-filter-inputs[attr-filter-type="availability"]',
   };
 
   Shopify.queryParams = {};
@@ -673,6 +714,7 @@ a.c-listing-product__size:hover span {
   let filtersType = document.querySelectorAll(selectors.filtersType)
   let filtersInputs = document.querySelectorAll(selectors.filtersInputs)
   let filterNumSelect = document.querySelector(selectors.filterNumSelect)
+  let filterNumSelectMob = document.querySelector(selectors.filterNumSelectMob)
   let tagsListApplied = document.querySelector(selectors.tagsListApplied)
   let cleanFilter = document.querySelector(selectors.cleanFilter)
   let sortingListing = document.querySelectorAll(selectors.sortingListing)
@@ -681,6 +723,7 @@ a.c-listing-product__size:hover span {
   let filterMobHead = document.querySelector(selectors.filterMobHead)
   let listingGrid = document.querySelector(selectors.listingGrid)
   let filterBox = document.querySelector(selectors.filterBox)
+  let filterAvailability = document.querySelector(selectors.filterAvailability)
 
   let uriTagsApplied = false
   let countInputSelected = 0
@@ -695,7 +738,10 @@ a.c-listing-product__size:hover span {
         countInputSelected++
       }
     })
+
     filterNumSelect.innerHTML = countInputSelected
+    filterNumSelectMob.innerHTML = countInputSelected
+
   }
 
   // EMPTY CHECK
@@ -714,6 +760,10 @@ a.c-listing-product__size:hover span {
   }
 
   window.addEventListener("load", (event) => {
+
+    setTimeout(function(){
+      document.querySelector('.js-filter-inputs[attr-filter-type="availability"] input').click()
+    }, 500);
 
     // START - CHECK TAGS IN URI
     if (tagListAppliedArray[0] != "") {

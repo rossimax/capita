@@ -53,19 +53,11 @@
       "type": "contact-form",
       "settings": {
       }
-    },
-    "5184bf80-dcbd-46fa-b9bb-c486964b8e05": {
-      "type": "warranty-claim-s1",
-      "disabled": true,
-      "settings": {
-        "form_warranty": ""
-      }
     }
   },
   "order": [
     "main",
     "1d210c57-3f36-47c1-8ef2-17be22222a78",
-    "form",
-    "5184bf80-dcbd-46fa-b9bb-c486964b8e05"
+    "form"
   ]
 }

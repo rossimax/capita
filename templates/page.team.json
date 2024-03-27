@@ -104,7 +104,7 @@
       ],
       "settings": {
         "hide_all_riders_link": false,
-        "enable_external_link": false
+        "enable_external_link": true
       }
     },
     "3521ce90-7292-40db-8351-d4081b787f48": {

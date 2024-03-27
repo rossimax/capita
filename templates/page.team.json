@@ -2,7 +2,6 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "head_width": 100,
         "margin_top": 120,
@@ -15,7 +14,6 @@
     },
     "98721115-af6f-4355-8ef8-be51e4894e53": {
       "type": "paragraph-simple",
-      "disabled": true,
       "settings": {
         "background_transparent": true,
         "padding_top": 20,
@@ -104,7 +102,6 @@
         "d8c3ecd4-4e7a-4a00-97f8-55282be63f90",
         "d75fc589-e53a-4d0d-a38e-32fbbb10ec6d"
       ],
-      "disabled": true,
       "settings": {
         "hide_all_riders_link": false,
         "enable_external_link": false
@@ -112,7 +109,6 @@
     },
     "3521ce90-7292-40db-8351-d4081b787f48": {
       "type": "paragraph-simple",
-      "disabled": true,
       "settings": {
         "background_transparent": true,
         "padding_top": 40,
@@ -193,7 +189,6 @@
         "c06e8a1e-206a-4be4-a84c-6e8c4db41eaa",
         "56a0b0b8-6e3f-4095-9355-1b31a469d522"
       ],
-      "disabled": true,
       "settings": {
         "hide_all_riders_link": false,
         "enable_external_link": false
@@ -201,7 +196,6 @@
     },
     "fe8f1017-b722-4395-bbe4-54cba3517651": {
       "type": "paragraph-simple",
-      "disabled": true,
       "settings": {
         "background_transparent": true,
         "padding_top": 20,
@@ -364,7 +358,6 @@
         "f4277378-df05-4bdd-9f60-d6bcaa3218c6",
         "3e17076a-00f9-480f-bd82-9bea61373752"
       ],
-      "disabled": true,
       "settings": {
         "hide_all_riders_link": true,
         "enable_external_link": false

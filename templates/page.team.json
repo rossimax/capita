@@ -298,15 +298,6 @@
             "name": "SONNY ALBA"
           }
         },
-        "defead9d-4d23-4679-aabe-531ea2798243": {
-          "type": "team_list",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_georgiaaustin.jpg",
-            "link_url": "shopify:\/\/pages\/markus-olimstad",
-            "name": "MARKUS OLIMSTAD"
-          }
-        },
         "d91cf783-0ede-405f-8ebd-b35692d561ce": {
           "type": "team_list",
           "settings": {
@@ -355,14 +346,6 @@
             "name": "TRUTH SMITH"
           }
         },
-        "f4277378-df05-4bdd-9f60-d6bcaa3218c6": {
-          "type": "team_list",
-          "disabled": true,
-          "settings": {
-            "link_url": "shopify:\/\/pages\/simon-pircher",
-            "name": "SIMON PIRCHER"
-          }
-        },
         "3e17076a-00f9-480f-bd82-9bea61373752": {
           "type": "team_list",
           "settings": {
@@ -382,14 +365,12 @@
         "4f09568f-3e83-47dd-8ea5-e7eaad5254e5",
         "0682fee8-c233-44c5-b764-a9b166fce0d6",
         "b1d14384-90e4-4f8b-bd81-37cb3d520b06",
-        "defead9d-4d23-4679-aabe-531ea2798243",
         "d91cf783-0ede-405f-8ebd-b35692d561ce",
         "e1c8c71c-db44-43d6-a080-a2e7ed59757d",
         "0ab80d4c-73b4-4844-8fc8-602eddd8784d",
         "94fc702b-ff9b-434b-939a-20fd4c0817d3",
         "421eabbe-2d91-4344-b111-3cb1fc4b07e4",
         "8e7328ab-7731-4df5-b956-47c297f74902",
-        "f4277378-df05-4bdd-9f60-d6bcaa3218c6",
         "3e17076a-00f9-480f-bd82-9bea61373752"
       ],
       "settings": {
@@ -399,7 +380,6 @@
     },
     "e4f32c63-69ad-4afb-bfe2-d1a7b92c99a7": {
       "type": "spacer",
-      "disabled": true,
       "settings": {
         "height": 100
       }

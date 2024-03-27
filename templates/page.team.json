@@ -30,6 +30,7 @@
         "857e9f42-0ad0-4578-9b21-81765fc97352": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_jesskimura.jpg",
             "link_url": "shopify:\/\/pages\/jess-kimura",
             "name": "JESS KIMURA"
           }
@@ -37,6 +38,7 @@
         "99433135-fb86-4c90-9e58-20dbe8c76ab0": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_scottstevens.jpg",
             "link_url": "shopify:\/\/pages\/scott-stevens",
             "name": "SCOTT STEVENS"
           }
@@ -44,6 +46,7 @@
         "a021505d-8e69-4b82-b67a-128f2fd91c4c": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_kazukokubo.jpg",
             "link_url": "shopify:\/\/pages\/kazu-kokubo",
             "name": "KAZU KOKUBO"
           }
@@ -51,6 +54,7 @@
         "cfb358e2-f898-4274-b5e6-dcde3af64816": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_arthurlongo.jpg",
             "link_url": "shopify:\/\/pages\/arthur-longo",
             "name": "ARTHUR LONGO"
           }
@@ -58,6 +62,7 @@
         "90e1d231-1d69-4066-bbdb-c24dca42af13": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_torsteinhorgmo.jpg",
             "link_url": "shopify:\/\/pages\/torstein-horgmo",
             "name": "TORSTEIN HORGMO"
           }
@@ -65,6 +70,7 @@
         "18b0ab16-5a65-4de0-a030-fe73f518d4af": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_kevinbackstrom.jpg",
             "link_url": "shopify:\/\/pages\/kevin-backstrom",
             "name": "KEVIN BACKSTROM"
           }
@@ -72,6 +78,7 @@
         "d4cded2c-ee22-4734-a2db-45f9e7290c0b": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_brandoncocard.jpg",
             "link_url": "shopify:\/\/pages\/brandon-cocard",
             "name": "BRANDON COCARD"
           }
@@ -79,6 +86,7 @@
         "d8c3ecd4-4e7a-4a00-97f8-55282be63f90": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_mikerav.jpg",
             "link_url": "shopify:\/\/pages\/mike-rav",
             "name": "MIKE RAV"
           }
@@ -86,6 +94,7 @@
         "d75fc589-e53a-4d0d-a38e-32fbbb10ec6d": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_chrisgrenier.jpg",
             "link_url": "shopify:\/\/pages\/chris-grenier",
             "name": "CHRIS GRENIER"
           }
@@ -104,7 +113,7 @@
       ],
       "settings": {
         "hide_all_riders_link": false,
-        "enable_external_link": true
+        "enable_external_link": false
       }
     },
     "3521ce90-7292-40db-8351-d4081b787f48": {

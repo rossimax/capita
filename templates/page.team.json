@@ -30,6 +30,7 @@
         "857e9f42-0ad0-4578-9b21-81765fc97352": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_jesskimura.jpg",
             "link_url": "shopify:\/\/pages\/jess-kimura",
             "name": "JESS KIMURA"
           }
@@ -37,6 +38,7 @@
         "99433135-fb86-4c90-9e58-20dbe8c76ab0": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_scottstevens.jpg",
             "link_url": "shopify:\/\/pages\/scott-stevens",
             "name": "SCOTT STEVENS"
           }
@@ -44,6 +46,7 @@
         "a021505d-8e69-4b82-b67a-128f2fd91c4c": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_kazukokubo.jpg",
             "link_url": "shopify:\/\/pages\/kazu-kokubo",
             "name": "KAZU KOKUBO"
           }

@@ -94,6 +94,7 @@
         "d75fc589-e53a-4d0d-a38e-32fbbb10ec6d": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_chrisgrenier.jpg",
             "link_url": "shopify:\/\/pages\/chris-grenier",
             "name": "CHRIS GRENIER"
           }

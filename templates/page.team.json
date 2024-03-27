@@ -54,6 +54,7 @@
         "cfb358e2-f898-4274-b5e6-dcde3af64816": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_arthurlongo.jpg",
             "link_url": "shopify:\/\/pages\/arthur-longo",
             "name": "ARTHUR LONGO"
           }
@@ -61,6 +62,7 @@
         "90e1d231-1d69-4066-bbdb-c24dca42af13": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_torsteinhorgmo.jpg",
             "link_url": "shopify:\/\/pages\/torstein-horgmo",
             "name": "TORSTEIN HORGMO"
           }
@@ -68,6 +70,7 @@
         "18b0ab16-5a65-4de0-a030-fe73f518d4af": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_kevinbackstrom.jpg",
             "link_url": "shopify:\/\/pages\/kevin-backstrom",
             "name": "KEVIN BACKSTROM"
           }
@@ -75,6 +78,7 @@
         "d4cded2c-ee22-4734-a2db-45f9e7290c0b": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_brandoncocard.jpg",
             "link_url": "shopify:\/\/pages\/brandon-cocard",
             "name": "BRANDON COCARD"
           }
@@ -82,6 +86,7 @@
         "d8c3ecd4-4e7a-4a00-97f8-55282be63f90": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_mikerav.jpg",
             "link_url": "shopify:\/\/pages\/mike-rav",
             "name": "MIKE RAV"
           }

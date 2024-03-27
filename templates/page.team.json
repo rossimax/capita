@@ -182,6 +182,7 @@
         "c06e8a1e-206a-4be4-a84c-6e8c4db41eaa": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_2pathfinders_himaritakamori.jpg",
             "link_url": "shopify:\/\/pages\/himari-takamori",
             "name": "HIMARI TAKAMORI"
           }
@@ -189,6 +190,7 @@
         "56a0b0b8-6e3f-4095-9355-1b31a469d522": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_3explorers_yuramurase.jpg",
             "link_url": "",
             "name": "YURA MURASE"
           }

@@ -229,6 +229,7 @@
         "acbc6434-e022-4bb1-935f-c0f7b7871492": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_3explorers_kevinjones.jpg",
             "link_url": "shopify:\/\/pages\/kevin-jones",
             "name": "KEVIN JONES"
           }
@@ -236,6 +237,7 @@
         "77dd9722-b736-44ae-aa92-07650c439b62": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_philjacques.jpg",
             "link_url": "shopify:\/\/pages\/phil-jacques",
             "name": "PHIL JACQUES"
           }
@@ -243,6 +245,7 @@
         "acdb5a97-90a3-4b91-a18a-58ef373c7e11": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_1pro_johnnyoconnor.jpg",
             "link_url": "shopify:\/\/pages\/johnny-oconnor",
             "name": "JOHNNY O’CONNOR"
           }
@@ -250,6 +253,7 @@
         "73800fe0-1812-4e7f-aeb4-01581bcb6c90": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_3explorers_coreysmith.jpg",
             "link_url": "shopify:\/\/pages\/corey-smith",
             "name": "COREY SMITH"
           }
@@ -257,6 +261,7 @@
         "d0771d5a-917d-43fd-84ef-ab1786009170": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_3explorers_tiarncollins.jpg",
             "link_url": "shopify:\/\/pages\/tiarn-collins",
             "name": "TIARN COLLINS"
           }
@@ -264,6 +269,7 @@
         "efdca2be-d920-4401-9c4f-667a433f5c81": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_3explorers_mattwainhouse.jpg",
             "link_url": "shopify:\/\/pages\/matt-wainhouse",
             "name": "MATT WAINHOUSE"
           }
@@ -271,6 +277,7 @@
         "4f09568f-3e83-47dd-8ea5-e7eaad5254e5": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_3explorers_chasejosey.jpg",
             "link_url": "shopify:\/\/pages\/chase-josey",
             "name": "CHASE JOSEY"
           }
@@ -278,6 +285,7 @@
         "0682fee8-c233-44c5-b764-a9b166fce0d6": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_3explorers_yawgoons.jpg",
             "link_url": "shopify:\/\/pages\/yawgoons",
             "name": "YAWGOONS"
           }
@@ -285,6 +293,7 @@
         "b1d14384-90e4-4f8b-bd81-37cb3d520b06": {
           "type": "team_list",
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_3explorers_sonnyalba.jpg",
             "link_url": "shopify:\/\/pages\/sonny-alba",
             "name": "SONNY ALBA"
           }
@@ -293,6 +302,7 @@
           "type": "team_list",
           "disabled": true,
           "settings": {
+            "image": "shopify:\/\/shop_images\/team_3explorers_georgiaaustin.jpg",
             "link_url": "shopify:\/\/pages\/markus-olimstad",
             "name": "MARKUS OLIMSTAD"
           }

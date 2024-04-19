@@ -51,13 +51,24 @@
     },
     "form": {
       "type": "contact-form",
+      "disabled": true,
       "settings": {
+      }
+    },
+    "rich_text_DYLpi9": {
+      "type": "rich-text",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "text": "<p><strong>Dear CAPiTA customer,<br\/>our Customer Service is currently suspended.<br\/>We will be back soon.<\/strong><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p>"
       }
     }
   },
   "order": [
     "main",
     "1d210c57-3f36-47c1-8ef2-17be22222a78",
-    "form"
+    "form",
+    "rich_text_DYLpi9"
   ]
 }

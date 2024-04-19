@@ -57,8 +57,11 @@
     },
     "rich_text_DYLpi9": {
       "type": "rich-text",
+      "custom_css": [
+
+      ],
       "settings": {
-        "text": "<p><strong>Dear CAPiTA customer,<br\/>our Customer Service is currently suspended.<br\/>We will be back soon.<\/strong><\/p>"
+        "text": "<p><strong>Dear CAPiTA customer,<br\/>our Customer Service is currently suspended.<br\/>We will be back soon.<\/strong><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p>"
       }
     }
   },

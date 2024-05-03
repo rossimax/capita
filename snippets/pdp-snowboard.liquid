@@ -27,8 +27,12 @@
           <div class="c-spec"><span class="c-spec__type o-text is-4">rider type</span><span class="c-spec__value o-text is-3">{{
               product.metafields.snowboard_info.rider_type_title }}</span></div>
 
+              <div class="switch-spec">
+                <span class="switch-spec__exagon js-show-exagon">Show Exagon</div>
+                <span class="switch-spec__lines js-show-lines">Show Lines</div>
+              </div>
    
-            <div class="c-spec"><span class="c-spec__type o-text is-4">skill level</span>
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">skill level</span>
               <div class="c-spec__level js-spec-level"
                 style="--dot-position: {{ product.metafields.snowboard_info.rating__skill_level }}; --steps: 5">
                 <div class="c-spec__dot"></div>
@@ -38,7 +42,7 @@
                 <div class="c-spec__line"></div>
               </div>
             </div>
-            <div class="c-spec"><span class="c-spec__type o-text is-4">TERRAIN VERSATILITY</span>
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">TERRAIN VERSATILITY</span>
               <div class="c-spec__level js-spec-level"
                 style="--dot-position: {{ product.metafields.snowboard_info.rating__terrain_versatility }}; --steps: 5">
                 <div class="c-spec__dot"></div>
@@ -48,7 +52,7 @@
                 <div class="c-spec__line"></div>
               </div>
             </div>
-            <div class="c-spec"><span class="c-spec__type o-text is-4">GROOMERS</span>
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">GROOMERS</span>
               <div class="c-spec__level js-spec-level"
                 style="--dot-position: {{ product.metafields.snowboard_info.rating__groomers }}; --steps: 5">
                 <div class="c-spec__dot"></div>
@@ -58,7 +62,7 @@
                 <div class="c-spec__line"></div>
               </div>
             </div>
-            <div class="c-spec"><span class="c-spec__type o-text is-4">POWDER</span>
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">POWDER</span>
               <div class="c-spec__level js-spec-level"
                 style="--dot-position: {{ product.metafields.snowboard_info.rating__powder }}; --steps: 5">
                 <div class="c-spec__dot"></div>
@@ -68,7 +72,7 @@
                 <div class="c-spec__line"></div>
               </div>
             </div>
-            <div class="c-spec"><span class="c-spec__type o-text is-4">JUMPS</span>
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">JUMPS</span>
               <div class="c-spec__level js-spec-level"
                 style="--dot-position: {{ product.metafields.snowboard_info.rating__jumps }}; --steps: 5">
                 <div class="c-spec__dot"></div>
@@ -78,7 +82,7 @@
                 <div class="c-spec__line"></div>
               </div>
             </div>
-            <div class="c-spec"><span class="c-spec__type o-text is-4">FLAT TRICK / JIBBING</span>
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">FLAT TRICK / JIBBING</span>
               <div class="c-spec__level js-spec-level"
                 style="--dot-position: {{ product.metafields.snowboard_info.rating__flat_trick__jibbing }}; --steps: 5">
                 <div class="c-spec__dot"></div>
@@ -400,3 +404,38 @@
 </div>
 
 {% include 'product-review' %}
+
+
+{% javascript %}
+
+(function() {
+
+        let selectors = {
+          specLines: '.js-c-spec-line',
+          specExagon: '.js-hexagon',
+          showExagon: '.js-show-exagon',
+          showLines: '.js-show-lines',
+        };
+
+        let specLines = document.querySelectorAll(selectors.specLines);
+        let specExagon = document.querySelector(selectors.specExagon);
+        let showExagon = document.querySelector(selectors.showExagon);
+        let showLines = document.querySelector(selectors.showLines);
+
+        showExagon.addEventListener("click", function(){
+          specLines.forEach((specLine) => {
+            specLine.classList.add("hide")
+          })
+          specExagon.classList.remove("hide")
+        })
+
+        showLines.addEventListener("click", function(){
+          specLines.forEach((specLine) => {
+            specLine.classList.remove("hide")
+          })
+          specExagon.classList.add("hide")
+        })
+
+    })();
+
+{% endjavascript %} 

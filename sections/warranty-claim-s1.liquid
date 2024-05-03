@@ -1,4 +1,5 @@
 <div class="warranty-claim-s1">
+    
     <div class="u-container">
         <div class="u-content">
             <h1 class="o-text is-2">WARRANTY CLAIM</h1>
@@ -14,13 +15,37 @@
                 </div>
             </div>  
             <div class="claim-form hide">
-
                 <div style="margin:0 auto;" class="pxFormGenerator" id="{{ section.settings.form_warranty }}"></div>
-                
             </div>  
+
+            <div class="claim-form-eu-step hide">
+                <p>Did you purchase the board through <strong>eu.capitasnowboarding.com</strong>?</p>
+                <div class="btn-group">
+                    <button class="o-btn js-step2" data-btn="no">No</button>
+                    <button class="o-btn js-step2" data-btn="yes">Yes</button>
+                </div>
+            </div>  
+
+            <div class="claim-form-eu-step-retailer hide">
+                <p>If you purchased your CAPiTA snowboard through any retail location - online or in-person, please contact the retailer or bring your board back to the location for inspection and warranty claim processing.</p>
+                <div class="btn-group">
+                    <button class="o-btn js-step-retailer" data-btn="back">Go Back</button>
+                    <button class="o-btn js-step-retailer" data-btn="home">Home</button>
+                </div>
+            </div> 
+
+            <div class="claim-form-others-paragraph hide">
+                <p>All warranty requests in this territory are handled by our Authorized CAPiTA dealers and distributor. 
+                Please bring your snowboard for warranty claim to the shop of original purchase for inspection, 
+                OR contact our distributor in this territory direclty at:</p>
+            </div> 
+            
+
         </div>
     </div>
 </div>
+
+
 
 
 {% schema %}
@@ -47,7 +72,7 @@
 .hide {
     display: none;
 }
-.warranty-claim-s1 {
+.template-warranty-claim {
     padding: 160px 0;
 }
 h1 {
@@ -73,11 +98,69 @@ select.select-country {
     background-position: right center;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOSAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5IDEyTDEzIDE5TDcgMTIiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==);
 }
+.template-warranty-claim .container.distributors {
+    display:none;
+}
+.template-warranty-claim .container.distributors.show {
+    display:block;
+}
+.template-warranty-claim .warranty-na-canada,
+.template-warranty-claim .warranty-europe-me .distributors__card
+{
+    display: none;
+}
+.template-warranty-claim .warranty-europe-me .distributors__card.show-warranty-others {
+    display:block;
+}
+.template-warranty-claim .warranty-title-europe {
+    display: none;
+}
+.shopify-section--distributors {
+    margin: 0 auto;
+}
+.claim-form-others-paragraph {
+    text-align: center;
+    margin: 60px auto;
+    max-width: 600px;
+    padding: 0 20px;
+}
+.claim-form-eu-step {
+    text-align: center;
+    margin: 60px 0;
+}
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+button.o-btn {
+    margin: 0 10px;
+    background: #000;
+    color: #fff;
+    margin-top: 40px;
+    border: 1px solid #000;
+}
+button.o-btn:hover {
+    background: #fff;
+    color: #000;
+}
+.claim-form-eu-step-retailer {
+    margin: 60px auto;
+    max-width: 700px;
+    text-align: center;
+}
+.template-warranty-claim p {
+    font-size: 16px;
+}
+.template-warranty-claim .o-btn {
+    min-width: 320px;
+}
 
 
 {% endstyle %}
 
-
+ 
 {% javascript %}
 
 (function() {
@@ -86,45 +169,104 @@ select.select-country {
             selectCountry: '.select-country',
             claimCountry: '.claim-country',
             claimForm: '.claim-form',
+            distributors: '.template-warranty-claim .distributors',
+            othersParagraph: '.claim-form-others-paragraph',
+            claimEuStep: '.claim-form-eu-step',
+            btnsStep2Eu: '.js-step2',
+            claimEuRetailer: '.claim-form-eu-step-retailer',
+            btnsStepRetailerEu: '.js-step-retailer',
+
         };
 
         let selectCountry = document.querySelector(selectors.selectCountry);
         let claimCountry = document.querySelector(selectors.claimCountry);
         let claimForm = document.querySelector(selectors.claimForm);
+        let distributors = document.querySelector(selectors.distributors);
+        let othersParagraph = document.querySelector(selectors.othersParagraph);
+        let claimEuStep = document.querySelector(selectors.claimEuStep);
+        let btnsStep2Eu = document.querySelectorAll(selectors.btnsStep2Eu);
+        let claimEuRetailer = document.querySelector(selectors.claimEuRetailer);
+        let btnsStepRetailerEu = document.querySelectorAll(selectors.btnsStepRetailerEu);
 
-        function warranty_claim_step2() {
+        let urlParamsClaim = new URLSearchParams(window.location.search)
+        if( urlParamsClaim.has('step2') ) {
+            if (location.hostname == 'eu.capitasnowboarding.com') {
+                warranty_claim_eu_pre_step2()
+            } else if (location.hostname == 'capitasnowboarding.com') {
+                warranty_claim_step2()
+            } else {
+                warranty_claim_step2()
+            }
+        }
+
+        function warranty_claim_step2() { 
             claimCountry.classList.add("hide")
             claimForm.classList.remove("hide")
         }
+
+        function warranty_claim_eu_pre_step2() { 
+
+            claimCountry.classList.add("hide")
+            claimEuStep.classList.remove("hide")
+
+            btnsStep2Eu.forEach((btnStep2Eu) => { 
+                btnStep2Eu.addEventListener("click", function(){
+                    if (btnStep2Eu.getAttribute("data-btn") == "yes") {
+                        claimEuStep.classList.add("hide") 
+                        warranty_claim_step2() 
+                    } else {
+                        claimEuStep.classList.add("hide")
+                        claimEuRetailer.classList.remove("hide")
+                    }
+                })
+            })
+
+            btnsStepRetailerEu.forEach((btnStepRetailerEu) => { 
+                btnStepRetailerEu.addEventListener("click", function(){
+                    if (btnStepRetailerEu.getAttribute("data-btn") == "home") {
+                        window.location.replace("/");
+                    } else {
+                        claimEuRetailer.classList.add("hide")
+                        claimEuStep.classList.remove("hide")
+                    }
+                })
+            })
+
+        } 
+
 
         selectCountry.addEventListener("change", function(){
 
             if (location.hostname == 'eu.capitasnowboarding.com') {
 
                 if (this.value == "US/CANADA") {
-                    window.location.replace("https://capitasnowboarding.com/pages/warranty-claim");
+                    window.location.replace("https://capitasnowboarding.com/pages/warranty-claim?step2");
                 }
                 if (this.value == "OTHER") {
-                    window.location.replace("https://eu.capitasnowboarding.com/pages/distributors-info");
+                    distributors.classList.add("show") 
+                    othersParagraph.classList.remove("hide") 
+                    claimCountry.classList.add("hide") 
                 }
                 if (this.value == "EUROPE") {
-                    warranty_claim_step2()
+                    warranty_claim_eu_pre_step2()
                 }
 
             } else if (location.hostname == 'capitasnowboarding.com') {
 
                 if (this.value == "EUROPE") {
-                    window.location.replace("https://eu.capitasnowboarding.com/pages/warranty-claim");
+                    window.location.replace("https://eu.capitasnowboarding.com/pages/warranty-claim?step2");
                 }
                 if (this.value == "OTHER") {
-                    window.location.replace("https://capitasnowboarding.com/pages/distributors-info");
+                    distributors.classList.add("show")
+                    othersParagraph.classList.remove("hide") 
+                    claimCountry.classList.add("hide") 
                 }
                 if (this.value == "US/CANADA") {
                     warranty_claim_step2()
                 }
 
             } else {
-                console.log(this.value)
+                // console.log(this.value)
                 warranty_claim_step2()
             }
 

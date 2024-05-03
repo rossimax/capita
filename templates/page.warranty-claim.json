@@ -2,6 +2,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "head_width": 100,
         "margin_top": 0,
@@ -12,15 +13,21 @@
         "description": ""
       }
     },
-    "3ff1da5a-60f9-4f4a-a4e3-06f4749412e9": {
+    "bceaa288-3962-42ce-9b28-914e86ef5178": {
       "type": "warranty-claim-s1",
       "settings": {
-        "form_warranty": ""
+        "form_warranty": "88sdrr-Y0W493EPXOxapMw"
+      }
+    },
+    "11c3ecbf-5f71-42f5-8567-a9db8515da63": {
+      "type": "distributors",
+      "settings": {
       }
     }
   },
   "order": [
     "main",
-    "3ff1da5a-60f9-4f4a-a4e3-06f4749412e9"
+    "bceaa288-3962-42ce-9b28-914e86ef5178",
+    "11c3ecbf-5f71-42f5-8567-a9db8515da63"
   ]
 }

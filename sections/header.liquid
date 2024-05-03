@@ -195,7 +195,7 @@
 
           {%- else -%}
             <a
-              class="c-header-menu__parent js-header-close-dropdown"
+              class="c-header-menu__parent"
               href="{{ link.url }}"
               ><span>{{ link.title }}</span>
             </a>
@@ -210,7 +210,7 @@
         data-parent=""
       >
         <a
-          class="c-header-menu__parent js-header-close-dropdown"
+          class="c-header-menu__parent"
           href="/account/login"
           ><span>ACCOUNT</span>
         </a>
@@ -308,6 +308,10 @@
       plpProductPrice: '.c-listing-product__price',
       pdpAfterPay: '.c-product-info__afterpay',
       pdpPayPal: '.c-product-info__paypal',
+
+      searchMobileBtn: '.is-cart.js-dropdown-trigger',
+      hamMobileBtn: '.is-menu.js-header-mobile-menu',
+      mobHeader: '.c-header.js-header',
     };
 
     let searchInput = document.querySelector(selectors.searchInput);
@@ -322,6 +326,20 @@
     let plpProductPrice = document.querySelectorAll(selectors.plpProductPrice);
     let pdpAfterPay = document.querySelector(selectors.pdpAfterPay);
     let pdpPayPal = document.querySelector(selectors.pdpPayPal);
+
+    let searchMobileBtn = document.querySelector(selectors.searchMobileBtn);
+    let hamMobileBtn = document.querySelector(selectors.hamMobileBtn);
+    let mobHeader = document.querySelector(selectors.mobHeader);
+
+    // searchMobileBtn.addEventListener("click", function(event) {
+    //   event.stopPropagation()
+    //   if (searchMobileBtn.classList.contains("is-active")) {
+    //     console.log("close menu") 
+    //     hamMobileBtn.classList.remove("is-active")
+    //     mobHeader.classList.remove("has-dropdown")
+    //     document.body.style.setProperty("--panel-height",`${i}px`)
+    //   }
+    // })
 
     function predectiveSearch() {
       fetch(

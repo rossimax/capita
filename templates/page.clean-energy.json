@@ -4,7 +4,7 @@
       "type": "main-page",
       "settings": {
         "head_width": 100,
-        "margin_top": 90,
+        "margin_top": 0,
         "body_color": "#ffffff",
         "footer_border": true,
         "enable_head": false,
@@ -33,12 +33,11 @@
     "6f9f2d79-f9c0-4656-b9af-709522a45887": {
       "type": "paragraph-simple",
       "settings": {
+        "background_transparent": false,
         "padding_top": 80,
         "padding_bottom": 100,
         "font_size_title": 50,
         "font_size_title_mob": 20,
-        "background_color": "rgba(0,0,0,0)",
-        "text_color": "#ffffff",
         "title": "As the industry’s first clean energy <br>manufacturing facility, The MotherShip™<br>\n— distinguished as a flagship of responsible manufacturing — was awarded<br>\n<bl>Energy Globe Award for Austria.<\/bl>",
         "text": ""
       }
@@ -105,15 +104,14 @@
     "1348af52-2bff-4a2a-8df1-975b12dc4d5c": {
       "type": "paragraph-simple",
       "settings": {
+        "background_transparent": false,
         "padding_top": 80,
         "padding_bottom": 40,
         "font_size_title": 50,
         "font_size_title_mob": 20,
-        "background_color": "#000000",
-        "text_color": "#ffffff",
-        "title": "Our snowboards are crafted with 98%<br> \nof materials locally sourced within<br> \na <bl>5-hour drive<\/bl> of The MotherShip™.",
-        "text": "<p>The MotherShip™’s unique location in the southern border region allows for extraordinary access to key material suppliers, allowing production to minimize carbon intensive global freight shipping of raw materials and maximize contiguous delivery. This not only supports local businesses but also results in less energy used and less emissions released along the supply chain.<\/p>",
-        "image_bottom": "shopify:\/\/shop_images\/Layer_1.png"
+        "title": "Our snowboards are crafted with 90%<br> \nof materials locally sourced within<br> \na <bl>8-hour drive<\/bl> of The MotherShip™.",
+        "text": "<p><em><strong>The MotherShip™’s<\/strong><\/em> unique location in the southern border region allows for extraordinary access to key material suppliers, allowing production to minimize carbon intensive global freight shipping of raw materials and maximize contiguous delivery. This not only supports local businesses but also results in less energy used and less emissions released along the supply chain.<\/p>",
+        "image_bottom": "shopify:\/\/shop_images\/Layer_1-2.png"
       }
     },
     "7a215466-77ce-460c-9e7a-00f7a006189b": {
@@ -147,6 +145,34 @@
         "padding_bottom": 60,
         "title": "Sustainable,<br>\nRecyclable Materials",
         "title_bottom": "Each production season we are increasing our recycling capabilities and preventing more and more materials from ever entering the waste cycle.",
+        "cta_text_1": "",
+        "cta_link_1": "",
+        "arrow_type_1": "none",
+        "cta_text_2": "",
+        "cta_link_2": "",
+        "arrow_type_2": "none",
+        "cta_text_3": "",
+        "cta_link_3_yt": "",
+        "arrow_type_3": "none"
+      }
+    },
+    "45c311b8-092d-4621-abc2-fa21d52bc5d6": {
+      "type": "paragraph-simple",
+      "settings": {
+        "background_transparent": false,
+        "padding_top": 40,
+        "padding_bottom": 60,
+        "title": "We are proud of our long standing relationships and process evolution with leading suppliers such as <bl>ISOSPORT, KELAG, Henkel, C3 Worldwide, Kühne&amp;Nagel, Arbeiterring, Schenker, CD Wälzholz, and CORE SRL.<\/bl>",
+        "text": ""
+      }
+    },
+    "9ae9682d-e721-4fca-b14a-997055f8edd1": {
+      "type": "text-boxes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "title": "",
+        "title_bottom": "",
         "cta_text_1": "How does technology help?",
         "cta_link_1": "shopify:\/\/pages\/technology",
         "arrow_type_1": "none",
@@ -166,6 +192,8 @@
     "2f8c7944-0519-41a9-a000-b3d228d94ecf",
     "f4853fc4-c7f6-4d08-8dae-08876af8aea6",
     "1348af52-2bff-4a2a-8df1-975b12dc4d5c",
-    "7a215466-77ce-460c-9e7a-00f7a006189b"
+    "7a215466-77ce-460c-9e7a-00f7a006189b",
+    "45c311b8-092d-4621-abc2-fa21d52bc5d6",
+    "9ae9682d-e721-4fca-b14a-997055f8edd1"
   ]
 }

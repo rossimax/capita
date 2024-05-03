@@ -1813,6 +1813,7 @@ console.log("testtttttt")
         let showLines = document.querySelector(selectors.showLines);
 
         showExagon.addEventListener("click", function(){
+          console.log("showExagon")
           specLines.forEach((specLine) => {
             specLine.classList.add("hide")
           })
@@ -1820,6 +1821,7 @@ console.log("testtttttt")
         })
 
         showLines.addEventListener("click", function(){
+          console.log("showLines")
           specLines.forEach((specLine) => {
             specLine.classList.remove("hide")
           })

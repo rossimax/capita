@@ -1784,6 +1784,37 @@
     opacity: 0;
     visibility: hidden;
   }
+  .c-hexagon__label.o-text.is-4 {
+    position: absolute;
+  }
+  .c-spec.hide,
+  .c-hexagon.hide {
+    display: none;
+  }
+  .switch-spec {
+    text-align: right;
+    margin: 10px 0 20px 0;
+    display: flex;
+    justify-content: end;
+    gap: 2px;
+  }
+  .switch-spec__exagon,
+  .switch-spec__lines {
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+  }
+  .switch-spec__exagon {
+    background: #4e9863;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  .switch-spec__lines {
+    background: #2f4284;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
 
   @media screen and (max-width: 768px) {
     main.main-page.other-product {
@@ -1791,3 +1822,40 @@
     }
   }
 {% endstyle %}
+
+
+{% javascript %}
+
+(function() {
+
+        let selectors = {
+          specLines: '.js-c-spec-line',
+          specExagon: '.js-hexagon',
+          showExagon: '.js-show-exagon',
+          showLines: '.js-show-lines',
+        };
+
+        let specLines = document.querySelectorAll(selectors.specLines);
+        let specExagon = document.querySelector(selectors.specExagon);
+        let showExagon = document.querySelector(selectors.showExagon);
+        let showLines = document.querySelector(selectors.showLines);
+
+        showExagon.addEventListener("click", function(){
+          console.log("showExagon")
+          specLines.forEach((specLine) => {
+            specLine.classList.add("hide")
+          })
+          specExagon.classList.remove("hide")
+        })
+
+        showLines.addEventListener("click", function(){
+          console.log("showLines")
+          specLines.forEach((specLine) => {
+            specLine.classList.remove("hide")
+          })
+          specExagon.classList.add("hide")
+        })
+
+    })();
+
+{% endjavascript %} 

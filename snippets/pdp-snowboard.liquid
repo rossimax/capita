@@ -26,67 +26,101 @@
           </div>
           <div class="c-spec"><span class="c-spec__type o-text is-4">rider type</span><span class="c-spec__value o-text is-3">{{
               product.metafields.snowboard_info.rider_type_title }}</span></div>
-          <div class="c-spec"><span class="c-spec__type o-text is-4">skill level</span>
-            <div class="c-spec__level js-spec-level"
-              style="--dot-position: {{ product.metafields.snowboard_info.rating__skill_level }}; --steps: 5">
-              <div class="c-spec__dot"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
+
+              {% comment %} <div class="switch-spec">
+                <span class="switch-spec__exagon js-show-exagon">Show Exagon</span>
+                <span class="switch-spec__lines js-show-lines">Show Lines</span>
+              </div> {% endcomment %}
+   
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">skill level</span>
+              <div class="c-spec__level js-spec-level"
+                style="--dot-position: {{ product.metafields.snowboard_info.rating__skill_level }}; --steps: 5">
+                <div class="c-spec__dot"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+              </div>
+            </div>
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">TERRAIN VERSATILITY</span>
+              <div class="c-spec__level js-spec-level"
+                style="--dot-position: {{ product.metafields.snowboard_info.rating__terrain_versatility }}; --steps: 5">
+                <div class="c-spec__dot"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+              </div>
+            </div>
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">GROOMERS</span>
+              <div class="c-spec__level js-spec-level"
+                style="--dot-position: {{ product.metafields.snowboard_info.rating__groomers }}; --steps: 5">
+                <div class="c-spec__dot"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+              </div>
+            </div>
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">POWDER</span>
+              <div class="c-spec__level js-spec-level"
+                style="--dot-position: {{ product.metafields.snowboard_info.rating__powder }}; --steps: 5">
+                <div class="c-spec__dot"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+              </div>
+            </div>
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">JUMPS</span>
+              <div class="c-spec__level js-spec-level"
+                style="--dot-position: {{ product.metafields.snowboard_info.rating__jumps }}; --steps: 5">
+                <div class="c-spec__dot"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+              </div>
+            </div>
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">FLAT TRICK / JIBBING</span>
+              <div class="c-spec__level js-spec-level"
+                style="--dot-position: {{ product.metafields.snowboard_info.rating__flat_trick__jibbing }}; --steps: 5">
+                <div class="c-spec__dot"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+                <div class="c-spec__line"></div>
+              </div>
             </div>
           </div>
-          <div class="c-spec"><span class="c-spec__type o-text is-4">TERRAIN VERSATILITY</span>
-            <div class="c-spec__level js-spec-level"
-              style="--dot-position: {{ product.metafields.snowboard_info.rating__terrain_versatility }}; --steps: 5">
-              <div class="c-spec__dot"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-            </div>
+
+          <div class="c-hexagon js-hexagon" data-skills="{{ product.metafields.snowboard_info.rating__flat_trick__jibbing }},{{ product.metafields.snowboard_info.rating__skill_level }},{{ product.metafields.snowboard_info.rating__powder }},{{ product.metafields.snowboard_info.rating__groomers }},{{ product.metafields.snowboard_info.rating__terrain_versatility }},{{ product.metafields.snowboard_info.rating__jumps }}">
+            <span class="c-hexagon__label o-text is-4">jibbing</span>
+            <span class="c-hexagon__label o-text is-4">skill level</span>
+            <span class="c-hexagon__label o-text is-4">powder</span>
+            <span class="c-hexagon__label o-text is-4">groomers</span>
+            <span class="c-hexagon__label o-text is-4">versatility</span>
+            <span class="c-hexagon__label o-text is-4">jumps</span>
+            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373 430">
+                <path
+                    d="M2.5 108.943 186.195 2.887l183.696 106.056v212.114L186.195 427.113 2.5 321.057V108.943Z"
+                    stroke="#000" stroke-width="3"></path>
+                <path d="m33 126.577 153-88.422 153 88.422v176.846l-153 88.422-153-88.422V126.577Z"
+                    stroke="#000" stroke-width="1"></path>
+                <path d="m65 145.077 121-69.922 121 69.922v139.846l-121 69.922-121-69.922V145.077Z"
+                    stroke="#000" stroke-width="1"></path>
+                <path d="m97 163.577 89-51.422 89 51.422v102.846l-89 51.422-89-51.422V163.577Z"
+                    stroke="#000" stroke-width="1"></path>
+                <path d="m129 182.077 57-32.922 57 32.922v65.846l-57 32.922-57-32.922v-65.846Z"
+                    stroke="#000" stroke-width="1"></path>
+                <circle cx="186" cy="215" r="8" fill="#000"></circle>
+            </svg>
+            <div
+                class="c-hexagon__gradient js-hexagon-gradient"></div>
           </div>
-          <div class="c-spec"><span class="c-spec__type o-text is-4">GROOMERS</span>
-            <div class="c-spec__level js-spec-level"
-              style="--dot-position: {{ product.metafields.snowboard_info.rating__groomers }}; --steps: 5">
-              <div class="c-spec__dot"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-            </div>
-          </div>
-          <div class="c-spec"><span class="c-spec__type o-text is-4">POWDER</span>
-            <div class="c-spec__level js-spec-level"
-              style="--dot-position: {{ product.metafields.snowboard_info.rating__powder }}; --steps: 5">
-              <div class="c-spec__dot"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-            </div>
-          </div>
-          <div class="c-spec"><span class="c-spec__type o-text is-4">JUMPS</span>
-            <div class="c-spec__level js-spec-level"
-              style="--dot-position: {{ product.metafields.snowboard_info.rating__jumps }}; --steps: 5">
-              <div class="c-spec__dot"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-            </div>
-          </div>
-          <div class="c-spec"><span class="c-spec__type o-text is-4">FLAT TRICK / JIBBING</span>
-            <div class="c-spec__level js-spec-level"
-              style="--dot-position: {{ product.metafields.snowboard_info.rating__flat_trick__jibbing }}; --steps: 5">
-              <div class="c-spec__dot"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-              <div class="c-spec__line"></div>
-            </div>
-          </div>
-        </div>
+          
+
+
       </div>
       
       <div class="c-product-tech__dx">

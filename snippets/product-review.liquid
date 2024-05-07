@@ -2,13 +2,42 @@
     <div class="c-product-details__content">
         <div class="product-reviews">
             <div class="page-width">
-                <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+                {% comment %} <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div> {% endcomment %}
+        
+                <div id="mag-product-review" data-product="{{ product.id }}" data-product-handle="{{ product.handle }}"></div>
+        
             </div>
         </div>
     </div>
 </div>
 
 {% style %}
+.el-page-count {
+    font-size: 14px;
+}
+#epr-product-reviews .el-pagination span#paginate-list-text, #epr-product-reviews .el-pagination span#paginate-grid-text {
+    font-size: 14px;
+}
+.mag-all-reviews .relative-inner-all-review.active, #epr-product-reviews .relative-inner.active {
+    color: #000;
+}
+.epr-review-list-main-wrapper .epr-review-data-wrapper .epr-review-body {
+    font-size: 12px;
+}
+.epr-form-content-wrapp button#submit-btn-text {
+    background: #000;
+    border-radius: 20px;
+}
+a#mag-cancel-btn-text {
+    border-radius: 20px;
+}
+.epr-review-form .form-group .form-label {
+    font-size: 14px;
+}
+.mag-logo-image {
+    display: none !important;
+    visibility: hidden;
+}
 .product-reviews {
     margin: 40px 0;
     border: 1px solid #000;

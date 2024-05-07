@@ -27,7 +27,11 @@
 
         <p class="c-product-info__description medium">{{ product.metafields.snowboard_info.snowboard_description }}</p>
         
-        {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %}
+        {% if product.type == "Snowboard" %}
+          {% comment %} <div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div> {% endcomment %}
+          <div id="epr-product-title-review" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}" data-product-title="{{ product.title }}"></div>
+
+        {% endif %}
 
            {% comment %} form 'product', product, class:form_classes, novalidate: 'validate', data-product-form: ''
              {% endcomment %}

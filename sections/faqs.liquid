@@ -9,10 +9,8 @@
         {% case block.type %}
           {% when 'faq_list_ord' %}
             <div class="cpt-toggle">
-                <div class="cpt-toggle__title">
-                </div>
-                <div class="cpt-toggle__content">
-                </div>
+                <div class="cpt-toggle__title"><strong>{{ block.settings.title }}</strong> {{ include 'icon-arrow-capita' }}</div>
+                <div class="cpt-toggle__content">{{ block.settings.content }}</div>
             </div>
         {% endcase %}
       {% endfor %}

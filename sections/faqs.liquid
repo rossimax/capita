@@ -16,6 +16,62 @@
       {% endfor %}
     </div>
 
+    <div class="section-faqs__content__list">
+      <h3>SNOWBOARD SIZING</h3>
+      <hr>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'faq_list_size' %}
+            <div class="cpt-toggle">
+                <div class="cpt-toggle__title"><strong>{{ block.settings.title }}</strong> {% include 'icon-arrow-capita' %}</div>
+                <div class="cpt-toggle__content">{{ block.settings.content }}</div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    <div class="section-faqs__content__list">
+      <h3>CARE AND MAINTENANCE</h3>
+      <hr>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'faq_list_care' %}
+            <div class="cpt-toggle">
+                <div class="cpt-toggle__title"><strong>{{ block.settings.title }}</strong> {% include 'icon-arrow-capita' %}</div>
+                <div class="cpt-toggle__content">{{ block.settings.content }}</div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    <div class="section-faqs__content__list">
+      <h3>SNOWBOARD REGISTRATION AND WARRANTY</h3>
+      <hr>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'faq_list_reg' %}
+            <div class="cpt-toggle">
+                <div class="cpt-toggle__title"><strong>{{ block.settings.title }}</strong> {% include 'icon-arrow-capita' %}</div>
+                <div class="cpt-toggle__content">{{ block.settings.content }}</div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    <div class="section-faqs__content__list">
+      <h3>ADDITIONAL FAQs</h3>
+      <hr>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'faq_list_add' %}
+            <div class="cpt-toggle">
+                <div class="cpt-toggle__title"><strong>{{ block.settings.title }}</strong> {% include 'icon-arrow-capita' %}</div>
+                <div class="cpt-toggle__content">{{ block.settings.content }}</div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
   </div>
 
 </div>

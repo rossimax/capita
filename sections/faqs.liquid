@@ -7,7 +7,7 @@
       <hr>
       {% for block in section.blocks %}
         {% case block.type %}
-          {% when 'faq_list_ord_del' %}
+          {% when 'faq_list_ord' %}
             <div class="cpt-toggle">
                 <div class="cpt-toggle__title">
                 </div>
@@ -29,7 +29,7 @@
   "class": "shopify-section--faqs three-quarter",
   "blocks": [
     {
-      "type": "faq_list_ord_del",
+      "type": "faq_list_ord",
       "name": "Faq List - Order Delivery",
       "settings": [
         {
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "type": "faq_list_snow_size",
+      "type": "faq_list_size",
       "name": "Faq List - Snowboard Sizing",
       "settings": [
         {
@@ -114,10 +114,10 @@
       "name": "Faqs",
       "blocks": [
         {
-          "type": "faq_list_ord_del"
+          "type": "faq_list_ord"
         },
         {
-          "type": "faq_list_snow_size"
+          "type": "faq_list_size"
         },
         {
           "type": "faq_list_care"

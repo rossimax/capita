@@ -1,6 +1,24 @@
 <div class="section-faqs">
 
-  
+  <div class="section-faqs__content">
+
+    <div class="section-faqs__content__list">
+      <h3>ONLINE ORDERING AND DELIVERY</h3>
+      <hr>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'faq_list_ord_del' %}
+            <div class="cpt-toggle">
+                <div class="cpt-toggle__title">
+                </div>
+                <div class="cpt-toggle__content">
+                </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+  </div>
 
 </div>
 
@@ -9,6 +27,88 @@
   "name": "Faqs",
   "tag": "section",
   "class": "shopify-section--faqs three-quarter",
+  "blocks": [
+    {
+      "type": "faq_list_ord_del",
+      "name": "Faq List - Order Delivery",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    },
+    {
+      "type": "faq_list_snow_size",
+      "name": "Faq List - Snowboard Sizing",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    },
+    {
+      "type": "faq_list_care",
+      "name": "Faq List - Care Mantainance",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    },
+    {
+      "type": "faq_list_reg",
+      "name": "Faq List - Registration Warranty",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    },
+    {
+      "type": "faq_list_add",
+      "name": "Faq List - Additional",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
   "presets": [
       {
       "name": "Faqs"

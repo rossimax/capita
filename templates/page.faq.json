@@ -82,11 +82,47 @@
             "cta2_text": "",
             "cta2_link": ""
           }
+        },
+        "faq_list_ord_6LkcKR": {
+          "type": "faq_list_ord",
+          "settings": {
+            "title": "How do I exchange my order?",
+            "content": "<p>To keep things simple, we offer returns rather than exchanges. You can start a return for the unwanted item by emailing us at shop@capitasnowboarding.com.To best guarantee availability, and to reduce wait time, we recommend placing an order for your desired items.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_ord_gLbeD6": {
+          "type": "faq_list_ord",
+          "settings": {
+            "title": "How do I cancel my order?",
+            "content": "<p>Once an order is confirmed on capitasnowboarding.com we are unable to guarantee any changes or cancellations. These situations can often be resolved viaour return policy. For further assistance with your order please email us at shop@capitasnowboarding.com.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_ord_c64AqE": {
+          "type": "faq_list_ord",
+          "settings": {
+            "title": "Can I preorder?",
+            "content": "<p>Currently, we do not offer pre-ordering on capitasnowboarding.com. However, many of our authorized CAPiTA Dealers may be able to help.<\/p>",
+            "cta1_text": "FIND A DEALER",
+            "cta1_link": "shopify:\/\/pages\/dealers",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
         }
       },
       "block_order": [
         "faq_list_ord_JAcbch",
-        "faq_list_ord_tUgcdN"
+        "faq_list_ord_tUgcdN",
+        "faq_list_ord_6LkcKR",
+        "faq_list_ord_gLbeD6",
+        "faq_list_ord_c64AqE"
       ],
       "settings": {
       }

@@ -159,6 +159,28 @@
             "cta2_text": "",
             "cta2_link": ""
           }
+        },
+        "faq_list_size_gLXbkm": {
+          "type": "faq_list_size",
+          "settings": {
+            "title": "What is a wide snowboard?",
+            "content": "<p>The waist width of a snowboard is the distance across the board (from the toe edge to the heel edge) between the feet at the narrowest point.Waist width on the CAPiTA website is noted in centimeters. Several models in the CAPiTA collection are offered in wide sizes, meaning they have wider waist widths to accommodate larger boot sizes or larger riders.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_size_JrYjDh": {
+          "type": "faq_list_size",
+          "settings": {
+            "title": "Do I need a wide snowboard?",
+            "content": "<p>A snowboard's waist width varies between different models and sizes within the CAPiTA collection.  Waist widths always scale up as you move higher in size (for example, a 147cm length board is a narrower waist width than a 157cm length board). Wide sizes in many cases are recommended for boot sizes equal to or larger than US M10.5 or US W’s 9, or if you prefer a slightly wider snowboard. <br\/>-<br\/>Please refer to the CAPiTA website product pages to view individual board specifications including waist width to understand if a wide-size board is right for you, or you can use our Size Finder Tool.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
         }
       },
       "block_order": [
@@ -170,7 +192,9 @@
         "faq_list_ord_h4A8B4",
         "faq_list_ord_4zTLyB",
         "faq_list_ord_PMtNBF",
-        "faq_list_size_JJm4rg"
+        "faq_list_size_JJm4rg",
+        "faq_list_size_gLXbkm",
+        "faq_list_size_JrYjDh"
       ],
       "settings": {
       }

@@ -203,6 +203,50 @@
             "cta2_text": "",
             "cta2_link": ""
           }
+        },
+        "faq_list_care_QQRjiX": {
+          "type": "faq_list_care",
+          "settings": {
+            "title": "What does the NFC Technology Chip in my snowboard do?",
+            "content": "<p>In 2020, The MotherShip™ became the first in the snowboard industry to introduce an NFC system in our snowboards. During the manufacturing process, this chip enables precise insight into each board's production journey, facilitating rigorous quality control and reduction in waste. This allows us to deliver the highest finish quality snowboard possible to you.<br\/>-<br\/>Beyond the production stage, and upon purchase, you can utilize this chip by scanning it with your phone to access product information and register your snowboard, streamlining customer service and gaining exclusive early access to new content. In the case of a warranty request, you will scan the NFC chip to access your board’s serial number.<br\/>-<br\/>Please note that due to the MEGACARBON™ construction materials utilized in the MEGA SPLIT, MEGA MERC, and MEGA DEATH models, these series do not include NFC chips in the boards. In the case of a warranty request, these boards feature the serial number printed onto the topsheet of the snowboard near the heelside edge between the binding inserts.<br\/>-<br\/>To learn more about how to connect to NFC Technology with your phone, visit our Technology page.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_reg_DYVwx8": {
+          "type": "faq_list_reg",
+          "settings": {
+            "title": "How do I register my snowboard?",
+            "content": "<p>With the super-intelligent NFC chip embedded in the nose of your board, you can now connect with your board by scanning the chip with your phone for seamless snowboard registration.<\/p><p>If your board does not have the NFC system (All pre-2020 snowboards and pre-2024 MEGA SPLIT \/ MEGA MERC \/ MEGA DEATH), a serial number is stamped on the sidewall of the snowboard. In this case, you will need to register your snowboard on www.capitasnowboarding.com manually<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_reg_7bjjKq": {
+          "type": "faq_list_reg",
+          "settings": {
+            "title": "What is the CAPiTA warranty policy?",
+            "content": "<p>CAPiTA Snowboards are handcrafted in Austria at The MotherShip™ — the snowboard industry's most technologically advanced and environmentally responsible manufacturing facility.\u2028\u2028<\/p><p>We are proud to offer a warranty policy guaranteeing that your CAPiTA snowboard is free from defects in material or workmanship for two (2) years from the date of original purchase. <br\/>-<br\/>Please review our complete warranty policy and follow the steps to submit a claim here.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_add_zW9wFJ": {
+          "type": "faq_list_add",
+          "settings": {
+            "title": "Can I preorder?",
+            "content": "<p>Many demos are offered in regions covered by a CAPiTA distributor or rep. Please check out our global list of demos and events to see if there is an upcoming event near you. Follow us on Instagram for further information and updates on demo and test events.<\/p><p>Many authorized CAPiTA Dealers offer daily or extended demo programs. <\/p>",
+            "cta1_text": "EVENTS",
+            "cta1_link": "",
+            "cta2_text": "FIND A DEALER",
+            "cta2_link": "shopify:\/\/pages\/dealers"
+          }
         }
       },
       "block_order": [
@@ -218,7 +262,11 @@
         "faq_list_size_gLXbkm",
         "faq_list_size_JrYjDh",
         "faq_list_care_EJXjhb",
-        "faq_list_care_9awWcR"
+        "faq_list_care_9awWcR",
+        "faq_list_care_QQRjiX",
+        "faq_list_reg_DYVwx8",
+        "faq_list_reg_7bjjKq",
+        "faq_list_add_zW9wFJ"
       ],
       "settings": {
       }

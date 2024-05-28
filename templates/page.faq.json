@@ -82,11 +82,95 @@
             "cta2_text": "",
             "cta2_link": ""
           }
+        },
+        "faq_list_ord_6LkcKR": {
+          "type": "faq_list_ord",
+          "settings": {
+            "title": "How do I exchange my order?",
+            "content": "<p>To keep things simple, we offer returns rather than exchanges. You can start a return for the unwanted item by emailing us at shop@capitasnowboarding.com.To best guarantee availability, and to reduce wait time, we recommend placing an order for your desired items.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_ord_gLbeD6": {
+          "type": "faq_list_ord",
+          "settings": {
+            "title": "How do I cancel my order?",
+            "content": "<p>Once an order is confirmed on capitasnowboarding.com we are unable to guarantee any changes or cancellations. These situations can often be resolved viaour return policy. For further assistance with your order please email us at shop@capitasnowboarding.com.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_ord_c64AqE": {
+          "type": "faq_list_ord",
+          "settings": {
+            "title": "Can I preorder?",
+            "content": "<p>Currently, we do not offer pre-ordering on capitasnowboarding.com. However, many of our authorized CAPiTA Dealers may be able to help.<\/p>",
+            "cta1_text": "FIND A DEALER",
+            "cta1_link": "shopify:\/\/pages\/dealers",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_ord_h4A8B4": {
+          "type": "faq_list_ord",
+          "settings": {
+            "title": "When will an out-of-stock product come back into stock?",
+            "content": "<p>While inventory may vary, typically we receive one shipment of inventory for capitasnowboarding.com. Most times, once a board is listed as out of stock on the website it will likely not come back into stock until the following season. We’d suggest in this case you use our Dealer Locator to contact an online or local retailer to inquire about their inventory. If you need further help in your search please contact us at info@capitasnowboarding.com.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_ord_4zTLyB": {
+          "type": "faq_list_ord",
+          "settings": {
+            "title": "Can I choose my base graphic?",
+            "content": "<p>Base colors on graphics may vary for one of three reasons.<\/p><ol><li>Some of our models feature graphic variations that are unique to a specific size. <\/li><li>Models featuring a die-cut base construction often will have two base color variations per size to maximize material utilization and minimize waste during       the production process. While purchasing directly on www.capitasnowboarding.com, we cannot guarantee the base color variation on models with die-cut bases.       If you have your sights set on a specific base graphic colorway, you can always head to an authorized CAPiTA Dealer!<\/li><li>Board models offered in wide sizes may feature a different graphic variation in the wide sizes versus the regular waist width sizes.<\/li><\/ol>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_ord_PMtNBF": {
+          "type": "faq_list_ord",
+          "settings": {
+            "title": "Do splitboards come with climbing skins?",
+            "content": "<p>Yes, all splitboards purchased on the CAPiTA site will come with skins. The MEGA SPLIT series ships with the Union Pro Splitboard Climbing Skins while the NAVIGATOR SPLIT series ships with the Union Splitboard Climbing Skins. For more information on these included accessories, you can visit Union’s product page at:<\/p>",
+            "cta1_text": "Union Pro Splitboard Climbing Skins",
+            "cta1_link": "shopify:\/\/collections\/all",
+            "cta2_text": "Union Splitboard Climbing Skins",
+            "cta2_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "faq_list_size_JJm4rg": {
+          "type": "faq_list_size",
+          "settings": {
+            "title": "What size board is right for me?",
+            "content": "<p>In most basic terms, choosing the right snowboard size for you typically means finding the right length and width. This can be influenced by personal riding style and terrain preference, however, the three main factors in finding the right size snowboard for you are:<\/p><ol><li>Height<\/li><li>Weight<\/li><li>Boot Size<\/li><\/ol><p>To help you find our best suggested sizes based on your specs and snowboard preference you can use our Size Finder Tool.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
         }
       },
       "block_order": [
         "faq_list_ord_JAcbch",
-        "faq_list_ord_tUgcdN"
+        "faq_list_ord_tUgcdN",
+        "faq_list_ord_6LkcKR",
+        "faq_list_ord_gLbeD6",
+        "faq_list_ord_c64AqE",
+        "faq_list_ord_h4A8B4",
+        "faq_list_ord_4zTLyB",
+        "faq_list_ord_PMtNBF",
+        "faq_list_size_JJm4rg"
       ],
       "settings": {
       }

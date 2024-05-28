@@ -1,0 +1,466 @@
+<div class="section-faqs">
+
+  <div class="section-faqs__content">
+
+    <div class="section-faqs__content__list">
+      <h3>ONLINE ORDERING AND DELIVERY</h3>
+      <hr>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'faq_list_ord' %}
+            <div class="cpt-toggle">
+                <div class="cpt-toggle__title"><strong>{{ block.settings.title }}</strong> {% include 'icon-arrow-down-capita' %}</div>
+                <hr>
+                <div class="cpt-toggle__content">
+
+                  {{ block.settings.content }}
+
+                  <div class="cpt-toggle__content__ctas">
+                    {% if block.settings.cta1_text != blank %}
+                      <a class="cpt-toggle__content__cta o-btn" href="{{block.settings.cta1_link}}">{{block.settings.cta1_text}}</a>
+                    {% endif %}
+                    {% if block.settings.cta2_text != blank %}
+                      <a class="cpt-toggle__content__cta o-btn" href="{{block.settings.cta2_link}}">{{block.settings.cta2_text}}</a>
+                    {% endif %}
+                  </div>
+
+                </div>
+              </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    <div class="section-faqs__content__list">
+      <h3>SNOWBOARD SIZING</h3>
+      <hr>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'faq_list_size' %}
+            <div class="cpt-toggle">
+                <div class="cpt-toggle__title"><strong>{{ block.settings.title }}</strong> {% include 'icon-arrow-down-capita' %}</div>
+                <hr>
+                <div class="cpt-toggle__content">
+
+                  {{ block.settings.content }}
+
+                  <div class="cpt-toggle__content__ctas">
+                    {% if block.settings.cta1_text != blank %}
+                      <a class="cpt-toggle__content__cta o-btn" href="{{block.settings.cta1_link}}">{{block.settings.cta1_text}}</a>
+                    {% endif %}
+                    {% if block.settings.cta2_text != blank %}
+                      <a class="cpt-toggle__content__cta o-btn" href="{{block.settings.cta2_link}}">{{block.settings.cta2_text}}</a>
+                    {% endif %}
+                  </div>
+
+                </div>
+              </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    <div class="section-faqs__content__list">
+      <h3>CARE AND MAINTENANCE</h3>
+      <hr>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'faq_list_care' %}
+            <div class="cpt-toggle">
+                <div class="cpt-toggle__title"><strong>{{ block.settings.title }}</strong> {% include 'icon-arrow-down-capita' %}</div>
+                <hr>
+                <div class="cpt-toggle__content">
+
+                  {{ block.settings.content }}
+
+                  <div class="cpt-toggle__content__ctas">
+                    {% if block.settings.cta1_text != blank %}
+                      <a class="cpt-toggle__content__cta o-btn" href="{{block.settings.cta1_link}}">{{block.settings.cta1_text}}</a>
+                    {% endif %}
+                    {% if block.settings.cta2_text != blank %}
+                      <a class="cpt-toggle__content__cta o-btn" href="{{block.settings.cta2_link}}">{{block.settings.cta2_text}}</a>
+                    {% endif %}
+                  </div>
+
+                </div>
+              </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    <div class="section-faqs__content__list">
+      <h3>SNOWBOARD REGISTRATION AND WARRANTY</h3>
+      <hr>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'faq_list_reg' %}
+            <div class="cpt-toggle">
+                <div class="cpt-toggle__title"><strong>{{ block.settings.title }}</strong> {% include 'icon-arrow-down-capita' %}</div>
+                <hr>
+                <div class="cpt-toggle__content">
+
+                  {{ block.settings.content }}
+
+                  <div class="cpt-toggle__content__ctas">
+                    {% if block.settings.cta1_text != blank %}
+                      <a class="cpt-toggle__content__cta o-btn" href="{{block.settings.cta1_link}}">{{block.settings.cta1_text}}</a>
+                    {% endif %}
+                    {% if block.settings.cta2_text != blank %}
+                      <a class="cpt-toggle__content__cta o-btn" href="{{block.settings.cta2_link}}">{{block.settings.cta2_text}}</a>
+                    {% endif %}
+                  </div>
+
+                </div>
+              </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    <div class="section-faqs__content__list">
+      <h3>ADDITIONAL FAQs</h3>
+      <hr>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'faq_list_add' %}
+            <div class="cpt-toggle">
+                <div class="cpt-toggle__title"><strong>{{ block.settings.title }}</strong> {% include 'icon-arrow-down-capita' %}</div>
+                <hr>
+                <div class="cpt-toggle__content">
+
+                  {{ block.settings.content }}
+
+                  <div class="cpt-toggle__content__ctas">
+                    {% if block.settings.cta1_text != blank %}
+                      <a class="cpt-toggle__content__cta o-btn" href="{{block.settings.cta1_link}}">{{block.settings.cta1_text}}</a>
+                    {% endif %}
+                    {% if block.settings.cta2_text != blank %}
+                      <a class="cpt-toggle__content__cta o-btn" href="{{block.settings.cta2_link}}">{{block.settings.cta2_text}}</a>
+                    {% endif %}
+                  </div>
+
+                </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Faqs",
+  "tag": "section",
+  "class": "shopify-section--faqs three-quarter",
+  "blocks": [
+    {
+      "type": "faq_list_ord",
+      "name": "Faq List - Order",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "cta1_text",
+          "label": "CTA 1 Text"
+        },
+        {
+          "type": "url",
+          "id": "cta1_link",
+          "label": "CTA 1 Link"
+        },
+        {
+          "type": "text",
+          "id": "cta2_text",
+          "label": "CTA 2 Text"
+        },
+        {
+          "type": "url",
+          "id": "cta2_link",
+          "label": "CTA 2 Link"
+        }
+      ]
+    },
+    {
+      "type": "faq_list_size",
+      "name": "Faq List - Sizing",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "cta1_text",
+          "label": "CTA 1 Text"
+        },
+        {
+          "type": "url",
+          "id": "cta1_link",
+          "label": "CTA 1 Link"
+        },
+        {
+          "type": "text",
+          "id": "cta2_text",
+          "label": "CTA 2 Text"
+        },
+        {
+          "type": "url",
+          "id": "cta2_link",
+          "label": "CTA 2 Link"
+        }
+      ]
+    },
+    {
+      "type": "faq_list_care",
+      "name": "Faq List - Care",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "cta1_text",
+          "label": "CTA 1 Text"
+        },
+        {
+          "type": "url",
+          "id": "cta1_link",
+          "label": "CTA 1 Link"
+        },
+        {
+          "type": "text",
+          "id": "cta2_text",
+          "label": "CTA 2 Text"
+        },
+        {
+          "type": "url",
+          "id": "cta2_link",
+          "label": "CTA 2 Link"
+        }
+      ]
+    },
+    {
+      "type": "faq_list_reg",
+      "name": "Faq List - Reg",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "cta1_text",
+          "label": "CTA 1 Text"
+        },
+        {
+          "type": "url",
+          "id": "cta1_link",
+          "label": "CTA 1 Link"
+        },
+        {
+          "type": "text",
+          "id": "cta2_text",
+          "label": "CTA 2 Text"
+        },
+        {
+          "type": "url",
+          "id": "cta2_link",
+          "label": "CTA 2 Link"
+        }
+      ]
+    },
+    {
+      "type": "faq_list_add",
+      "name": "Faq List - Add",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "cta1_text",
+          "label": "CTA 1 Text"
+        },
+        {
+          "type": "url",
+          "id": "cta1_link",
+          "label": "CTA 1 Link"
+        },
+        {
+          "type": "text",
+          "id": "cta2_text",
+          "label": "CTA 2 Text"
+        },
+        {
+          "type": "url",
+          "id": "cta2_link",
+          "label": "CTA 2 Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+      {
+      "name": "Faqs",
+      "blocks": [
+        {
+          "type": "faq_list_ord"
+        },
+        {
+          "type": "faq_list_size"
+        },
+        {
+          "type": "faq_list_care"
+        },
+        {
+          "type": "faq_list_reg"
+        },
+        {
+          "type": "faq_list_add"
+        }
+      ]
+      }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+
+.section-faqs__content__list {
+  margin-bottom: 50px;
+}
+.section-faqs__content__list h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.section-faqs__content__list hr {
+  margin: 30px 0;
+  border-bottom: 1px solid #000; 
+}
+.cpt-toggle {
+    height: 50px;
+    overflow: hidden;
+    border: 1px solid #000;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.cpt-toggle.opened {
+    height: auto;
+}
+.cpt-toggle__title {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.cpt-toggle__title svg {
+  transition-duration: 0.3s;
+  transform: rotate(0deg);
+}
+.cpt-toggle.opened svg {
+  transition-duration: 0.3s;
+  transform: rotate(180deg);
+}
+.cpt-toggle__content {
+    padding: 20px;
+}
+.cpt-toggle hr {
+    margin: 10px 20px 0 20px;
+}
+.cpt-toggle__content a {
+  color: #C8102E;
+  text-decoration: underline;
+}
+.cpt-toggle__content__ctas {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cpt-toggle__content__cta.o-btn {
+    border: 1px solid #000;
+    padding: 10px 20px;
+    width: auto;
+    min-width: 200px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .cpt-toggle__title,
+  .cpt-toggle__content {
+    font-size: 16px;
+  }
+}
+
+{% endstylesheet %}
+
+{% javascript %}
+
+(function() {
+
+let selectors = {
+  toggles: '.cpt-toggle',
+
+};
+
+let toggles = document.querySelectorAll(selectors.toggles);
+
+toggles.forEach(toggle => {
+  
+  toggle.addEventListener('click', function() {
+    
+    if (toggle.classList.contains("opened")) {
+      toggle.classList.remove("opened")
+    } else {
+      toggle.classList.add("opened")
+    }
+  
+  });
+});
+
+
+
+
+})();
+
+
+{% endjavascript %}

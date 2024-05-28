@@ -148,6 +148,17 @@
             "cta2_text": "Union Splitboard Climbing Skins",
             "cta2_link": "shopify:\/\/collections\/all"
           }
+        },
+        "faq_list_size_JJm4rg": {
+          "type": "faq_list_size",
+          "settings": {
+            "title": "What size board is right for me?",
+            "content": "<p>In most basic terms, choosing the right snowboard size for you typically means finding the right length and width. This can be influenced by personal riding style and terrain preference, however, the three main factors in finding the right size snowboard for you are:<\/p><ol><li>Height<\/li><li>Weight<\/li><li>Boot Size<\/li><\/ol><p>To help you find our best suggested sizes based on your specs and snowboard preference you can use our Size Finder Tool.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
         }
       },
       "block_order": [
@@ -158,7 +169,8 @@
         "faq_list_ord_c64AqE",
         "faq_list_ord_h4A8B4",
         "faq_list_ord_4zTLyB",
-        "faq_list_ord_PMtNBF"
+        "faq_list_ord_PMtNBF",
+        "faq_list_size_JJm4rg"
       ],
       "settings": {
       }

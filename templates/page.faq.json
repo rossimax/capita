@@ -181,6 +181,28 @@
             "cta2_text": "",
             "cta2_link": ""
           }
+        },
+        "faq_list_care_EJXjhb": {
+          "type": "faq_list_care",
+          "settings": {
+            "title": "Do I need to wax my new snowboard before riding it?",
+            "content": "<p>All boards leave the MotherShip™ with a factory direct wax and tune. While waxing is not necessary before your first use, there is no harm in giving it a fresh wax before your first day of riding.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_care_9awWcR": {
+          "type": "faq_list_care",
+          "settings": {
+            "title": "What do I need to know about waxing and tuning my CAPiTA snowboard?",
+            "content": "<ul><li>All CAPiTA snowboards come with a factory direct wax applied at The MotherShip™. While it is not necessary to wax your snowboard before riding it for the first time, you may choose to do so based on personal preference or current snow conditions at your local resort.<\/li><li>The iron temperature should not exceed 120° C (248° F) and should only be applied to an area for a short amount of time. Overheating may cause damage to the base.<\/li><li>It is recommended to remove bindings before hot waxing. We also recommend using a plastic wax scraper to remove excess wax after application. <\/li><li>For maintenance like base tunes or repairs, we recommend a visit to your local authorized CAPiTA Dealer or a trained shop tech.  <\/li><li>Factory edge bevel specifications: Base Bevel 1.5° \/ Side Bevel 1.5° \/ Overall angle geometry is 90°.\u2028Note – for a ‘one file’ tuning method, use an 88.5° fixed file to tune the side bevel.<\/li><\/ul>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
         }
       },
       "block_order": [
@@ -194,7 +216,9 @@
         "faq_list_ord_PMtNBF",
         "faq_list_size_JJm4rg",
         "faq_list_size_gLXbkm",
-        "faq_list_size_JrYjDh"
+        "faq_list_size_JrYjDh",
+        "faq_list_care_EJXjhb",
+        "faq_list_care_9awWcR"
       ],
       "settings": {
       }

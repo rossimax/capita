@@ -269,6 +269,28 @@
             "cta2_text": "",
             "cta2_link": ""
           }
+        },
+        "faq_list_add_4Ltg8g": {
+          "type": "faq_list_add",
+          "settings": {
+            "title": "How can I get sponsored?",
+            "content": "<p>Earning a spot on the CAPiTA Snowboards team is not an easy or overnight process. The majority of the CAPiTA snowboard team have spent many years on their snowboards and began riding in local contests, building a relationship with a local shop, sales rep, and\/or distributor, and working their way up from there. Most importantly, be yourself, have fun, and snowboard because you love it!<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_add_bcHDnf": {
+          "type": "faq_list_add",
+          "settings": {
+            "title": "My snowboard was stolen! What should I do?",
+            "content": "<p>This kind of stuff is the worst. Make sure to reach out to your local resort to file a report. While we can’t resolve the theft of a snowboard, Contact Us with proof of purchase and incident report and we will do what we can to help get you back on the snow.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
         }
       },
       "block_order": [
@@ -290,7 +312,9 @@
         "faq_list_reg_7bjjKq",
         "faq_list_add_zW9wFJ",
         "faq_list_add_Nk4KWK",
-        "faq_list_add_prm8nb"
+        "faq_list_add_prm8nb",
+        "faq_list_add_4Ltg8g",
+        "faq_list_add_bcHDnf"
       ],
       "settings": {
       }

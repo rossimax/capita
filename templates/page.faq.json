@@ -247,6 +247,28 @@
             "cta2_text": "FIND A DEALER",
             "cta2_link": "shopify:\/\/pages\/dealers"
           }
+        },
+        "faq_list_add_Nk4KWK": {
+          "type": "faq_list_add",
+          "settings": {
+            "title": "How can I get a job at CAPiTA?",
+            "content": "<p>We appreciate your interest! Please follow our LinkedIn page for information on any current job offerings.<\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
+        },
+        "faq_list_add_prm8nb": {
+          "type": "faq_list_add",
+          "settings": {
+            "title": "Can I get some free stickers?",
+            "content": "<p>Please send a self-addressed, stamped envelope to the address below. We'll load it with stickers and send it back your way.Please note, sticker requests are fulfilled based on availability and may vary in style.<br\/>-<br\/><strong>CAPiTA SNOWBOARDS<\/strong><br\/>ATTN: Senior Global Director of Stickers and Branded Adhesives<br\/>4917 14th Ave NW<br\/>Seattle, WA 98107<br\/><\/p>",
+            "cta1_text": "",
+            "cta1_link": "",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
         }
       },
       "block_order": [
@@ -266,7 +288,9 @@
         "faq_list_care_QQRjiX",
         "faq_list_reg_DYVwx8",
         "faq_list_reg_7bjjKq",
-        "faq_list_add_zW9wFJ"
+        "faq_list_add_zW9wFJ",
+        "faq_list_add_Nk4KWK",
+        "faq_list_add_prm8nb"
       ],
       "settings": {
       }

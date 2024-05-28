@@ -137,6 +137,17 @@
             "cta2_text": "",
             "cta2_link": ""
           }
+        },
+        "faq_list_ord_PMtNBF": {
+          "type": "faq_list_ord",
+          "settings": {
+            "title": "Do splitboards come with climbing skins?",
+            "content": "<p>Yes, all splitboards purchased on the CAPiTA site will come with skins. The MEGA SPLIT series ships with the Union Pro Splitboard Climbing Skins while the NAVIGATOR SPLIT series ships with the Union Splitboard Climbing Skins. For more information on these included accessories, you can visit Union’s product page at:<\/p>",
+            "cta1_text": "Union Pro Splitboard Climbing Skins",
+            "cta1_link": "shopify:\/\/collections\/all",
+            "cta2_text": "",
+            "cta2_link": ""
+          }
         }
       },
       "block_order": [
@@ -146,7 +157,8 @@
         "faq_list_ord_gLbeD6",
         "faq_list_ord_c64AqE",
         "faq_list_ord_h4A8B4",
-        "faq_list_ord_4zTLyB"
+        "faq_list_ord_4zTLyB",
+        "faq_list_ord_PMtNBF"
       ],
       "settings": {
       }

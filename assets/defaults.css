@@ -152,6 +152,7 @@ button:hover:not(.c-header__menu-item) span,
 
 main.template-informative,
 main.template-contact,
+main.template-faq,
 main.template-dealers,
 main.template-distributors,
 main.template-orders,
@@ -167,6 +168,7 @@ main.template-nfc-steps {
 @media screen and (max-width: 1440px) {
   main.template-informative,
   main.template-contact,
+  main.template-faq,
   main.template-dealers,
   main.template-distributors,
   main.template-orders,
@@ -182,6 +184,7 @@ main.template-nfc-steps {
 @media screen and (max-width: 768px) {
   main.template-informative,
   main.template-contact,
+  main.template-faq,
   main.template-dealers,
   main.template-distributors,
   main.template-orders,

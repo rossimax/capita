@@ -1,0 +1,588 @@
+<script src="{{ 'finder.js' | asset_url }}" defer="defer"></script>
+
+<div class="finder-container">
+    <div class="finder-content">
+        <div class="finder-head js-finder-head-default">
+            <h1>Binding Finder</h1>
+            <p>Not sure what binding to ride? Let us help.<br/>
+            Follow the prompts to see what binding is best for you.</p>
+        </div>
+        <div class="finder-head js-finder-head-result hide">
+            <h1>Our Recommendation</h1>
+            <p>Based on your selections and riding preferences,<br/>
+            we'd recommend the following Union products:</p>
+        </div>
+        <div class="finder-steps">
+
+            <div class="finder-step js-steps" data-step="step1">
+                <strong>Binding Category:</strong>
+                <div class="fs-cats">
+                    <div class="fs-cat js-step1-value" data-cat="Men">MEN'S</div>
+                    <div class="fs-cat js-step1-value" data-cat="Women">WOMEN'S</div>
+                    <div class="fs-cat js-step1-value" data-cat="Kids">KIDS</div>
+                    <span class="step-error">Must complete all fields</span>
+                </div>
+            </div>
+
+            <div class="finder-step hide js-steps" data-step="step2">
+                <span class="sup-title"></span>
+                <strong>Boots Size:</strong>
+                <div class="fs-size">
+                    <div class="fs-size-selectors">
+                        <select class="select-union js-size-type">
+                            <option value="">SELECT</option>
+                            <option value="us">US</option>
+                            <option value="euro">EURO</option>
+                            <option value="uk">UK</option>
+                            <option value="mondo">MONDO</option>
+                        </select>
+
+                        <select class="select-union select-union--inactive js-size-num" attr-gender="inactive">
+                            <option>SELECT</option>
+                        </select>
+                                    
+                        <select class="select-union js-size-num hide" attr-gender="Men" attr-type="us-men">
+                            <option value="">SELECT</option>
+                            <option value="*-5.5">*-5.5</option>
+                            <option value="5.5-7.5">5.5-7.5</option>
+                            <option value="8-10">8-10</option>
+                            <option value="10.5-13">10.5-13</option>
+                            <option value="13-15">13-15</option>
+                        </select>
+                        <select class="select-union js-size-num hide" attr-gender="Men" attr-type="uk">
+                            <option value="">SELECT</option>
+                            <option value="2-4.5">2-4.5</option>
+                            <option value="4.5-6.5">4.5-6.5</option>
+                            <option value="7-9">7-9</option>
+                            <option value="9.5-12">9.5-12</option>
+                            <option value="12-14">12-14</option>
+                        </select>
+                        <select class="select-union js-size-num hide" attr-gender="Men" attr-type="euro">
+                            <option value="">SELECT</option>
+                            <option value="34-37">34-37</option>
+                            <option value="37-40.5">37-40.5</option>
+                            <option value="41-43">41-43</option>
+                            <option value="43.5-46">43.5-46</option>
+                            <option value="46-48">46-48</option>
+                        </select>
+                        <select class="select-union js-size-num hide" attr-gender="Men" attr-type="mondo">
+                            <option value="">SELECT</option>
+                            <option value="21-23.5">21-23.5</option>
+                            <option value="23.5-25.5">23.5-25.5</option>
+                            <option value="26-28">26-28</option>
+                            <option value="28.5-31">28.5-31</option>
+                            <option value="31-33">31-33</option>
+                        </select>
+
+
+                        <select class="select-union js-size-num hide" attr-gender="Women" attr-type="us-women">
+                            <option value="">SELECT</option>
+                            <option value="4-6.5">4-6.5</option>
+                            <option value="6.5-8.5">6.5-8.5</option>
+                            <option value="9-11">9-11</option>
+                        </select>
+                        <select class="select-union js-size-num hide" attr-gender="Women" attr-type="uk">
+                            <option value="">SELECT</option>
+                            <option value="2-4.5">2-4.5</option>
+                            <option value="4.5-6.5">4.5-6.5</option>
+                            <option value="7-9">7-9</option>
+                        </select>
+                        <select class="select-union js-size-num hide" attr-gender="Women" attr-type="euro">
+                            <option value="">SELECT</option>
+                            <option value="34-37">34-37</option>
+                            <option value="37-40.5">37-40.5</option>
+                            <option value="41-43">41-43</option>
+                        </select>
+                        <select class="select-union js-size-num hide" attr-gender="Women" attr-type="mondo">
+                            <option value="">SELECT</option>
+                            <option value="21-23.5">21-23.5</option>
+                            <option value="23.5-25.5">23.5-25.5</option>
+                            <option value="26-28">26-28</option>
+                        </select>
+
+
+                        <select class="select-union js-size-num hide" attr-gender="Kids" attr-type="us-kids">
+                            <option value="">SELECT</option>
+                            <option value="11C-3K">11C-3K</option>
+                            <option value="3K-5.5K">3K-5.5K</option>
+                            <option value="5.5K+">5.5K+</option>
+                        </select>
+                        <select class="select-union js-size-num hide" attr-gender="Kids" attr-type="uk">
+                            <option value="">SELECT</option>
+                            <option value="10K-2">10K-2</option>
+                            <option value="2-4.5">2-4.5</option>
+                            <option value="4.5-6.5">4.5-6.5</option>
+                        </select>
+                        <select class="select-union js-size-num hide" attr-gender="Kids" attr-type="euro">
+                            <option value="">SELECT</option>
+                            <option value="28-34">28-34</option>
+                            <option value="34-37">34-37</option>
+                            <option value="37-40.5">37-40.5</option>
+                        </select>
+                        <select class="select-union js-size-num hide" attr-gender="Kids" attr-type="mondo">
+                            <option value="">SELECT</option>
+                            <option value="17.5-21">17.5-21</option>
+                            <option value="21-23.5">21-23.5</option>
+                            <option value="23.5-25.5">23.5-25.5</option>
+                        </select>
+
+                    </div>
+                    <div class="fs-size-result">
+                        <strong>SUGGESTED UNION BINDING SIZES:</strong>
+                        <span class="fs-size-result__box fs-size-result__box--empty js-size-finder-result" attr-value="empty"></span>
+
+                         <span class="fs-size-result__box hide js-size-finder-result" attr-value="Mini">MINI</span>              
+                         <span class="fs-size-result__box hide js-size-finder-result" attr-value="Extra Small">EXTRA SMALL</span>              
+                         <span class="fs-size-result__box hide js-size-finder-result" attr-value="Small">SMALL</span>              
+                         <span class="fs-size-result__box hide js-size-finder-result" attr-value="Medium">MEDIUM</span>              
+                         <span class="fs-size-result__box hide js-size-finder-result" attr-value="Large">LARGE</span>
+                         <span class="fs-size-result__box hide js-size-finder-result" attr-value="Extra Large">EXTRA LARGE</span>
+
+                    </div>
+                    <span class="step-error">Must complete all fields</span>
+                </div>
+            </div>
+
+            <div class="finder-step hide js-steps" data-step="step3">
+                <strong>Riding Ability:</strong>
+                <div class="fs-abilities">
+                    <div class="fs-ability js-step3-value" data-ablity="Beginner">BEGINNER</div>
+                    <div class="fs-ability js-step3-value" data-ablity="Intermediate">INTERMEDIATE</div>
+                    <div class="fs-ability js-step3-value" data-ablity="Advanced">ADVANCED</div>
+                    <span class="step-error">Must complete all fields</span>
+                </div>
+            </div>
+
+            <div class="finder-step hide js-steps" data-step="step4">
+                <span class="sup-title">DRAG THE SLIDER TO DEFINE YOUR</span>
+                <strong>Riding Style:</strong>
+                <div class="fs-styles">
+                    <div class="fs-style js-step4-value" data-style="style-1">
+                        <div class="level-selector">
+                            <div class="level-selector__line">
+                                <span class="selector-segment" attr-segment="1"></span>
+                                <span class="selector-segment" attr-segment="2"></span>
+                                <span class="selector-segment" attr-segment="3"></span>
+                                <span class="selector-segment" attr-segment="4"></span>
+                                <span class="selector-segment" attr-segment="5"></span>
+                                <span class="selector-segment" attr-segment="6"></span>
+                                <span class="selector-segment" attr-segment="7"></span>
+                                <span class="selector-segment" attr-segment="8"></span>
+                                <span class="selector-segment" attr-segment="9"></span>
+                                <span class="selector-segment" attr-segment="10"></span>
+                                <span class="selector-pin">{% include "icon-double-arrows" %}</span>
+                            </div>
+                            <div class="level-selector__num">
+                                <span attr-num="1">FREESTYLE</span>
+                                <span attr-num="5">ALL MOUNTAIN</span>
+                                <span attr-num="10">FREERIDE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fs-style js-step4-value" data-style="style-2">
+                        <div class="level-selector">
+                            <div class="level-selector__line">
+                                <span class="selector-segment" attr-segment="1"></span>
+                                <span class="selector-segment" attr-segment="2"></span>
+                                <span class="selector-segment" attr-segment="3"></span>
+                                <span class="selector-segment" attr-segment="4"></span>
+                                <span class="selector-segment" attr-segment="5"></span>
+                                <span class="selector-segment" attr-segment="6"></span>
+                                <span class="selector-segment" attr-segment="7"></span>
+                                <span class="selector-segment" attr-segment="8"></span>
+                                <span class="selector-segment" attr-segment="9"></span>
+                                <span class="selector-segment" attr-segment="10"></span>
+                                <span class="selector-pin">{% include "icon-double-arrows" %}</span>
+                            </div>
+                            <div class="level-selector__num">
+                                <span attr-num="1">SOFT</span>
+                                <span attr-num="10">STIFF</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="step-error">Must complete all fields</span>
+                </div>
+            </div>
+
+            <div class="finder-step hide js-steps" data-step="step5">
+                <div class="fs-results">
+                    <img class="result-loader" src='{{ "uniongif.gif" | asset_url }}' alt="union loader">
+                    <div class="fs-result js-step5-value hide">
+                        <img class="js-fs-result-img" src="" alt="union">
+                        <div class="fs-result-data">
+                            <span class="fs-result-data__suptitle">OPTION #1</span>
+                            <div class="fs-result-data__title js-fs-result-title"></div>
+                            <div class="fs-result-data__size js-fs-result-size"></div>
+                        </div>
+                        <a class="fs-result-btn js-fs-result-link" href="" target="_blank">DISCOVER MORE</a>
+                    </div>
+
+                    <div class="fs-result js-step5-value hide">
+                        <img class="js-fs-result-img" src="" alt="union">
+                        <div class="fs-result-data">
+                            <span class="fs-result-data__suptitle">OPTION #2</span>
+                            <div class="fs-result-data__title js-fs-result-title"></div>
+                            <div class="fs-result-data__size js-fs-result-size"></div>
+                        </div>
+                        <a class="fs-result-btn js-fs-result-link" href="" target="_blank">DISCOVER MORE</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="finder-btn-next js-btn-next">NEXT STEP</button>
+        </div>
+        <div class="finder-foot">
+            <div class="finder-foot__content">
+                <span class="ff-arrow ff-arrow--prev hidden js-ff-prev">{% include 'icon-arrow-round-left' %}</span>
+                <div class="ff-steps">
+                    <div class="ff-step" data-step="step1">
+                        <span data-step-done="false">{% include 'icon-round-grey' %}</span>
+                        <span data-step-done="true">{% include 'icon-round-flag' %}</span>
+                        <span class="step-title">STEP 1</span>
+                    </div>
+                    <div class="ff-step" data-step="step2">
+                        <span data-step-done="false">{% include 'icon-round-grey' %}</span>
+                        <span data-step-done="true">{% include 'icon-round-flag' %}</span>
+                        <span class="step-title">STEP 2</span>
+                    </div>
+                    <div class="ff-step" data-step="step3">
+                        <span data-step-done="false">{% include 'icon-round-grey' %}</span>
+                        <span data-step-done="true">{% include 'icon-round-flag' %}</span>
+                        <span class="step-title">STEP 3</span>
+                    </div>
+                    <div class="ff-step" data-step="step4">
+                        <span data-step-done="false">{% include 'icon-round-grey' %}</span>
+                        <span data-step-done="true">{% include 'icon-round-flag' %}</span>
+                        <span class="step-title">STEP 4</span>
+                    </div>
+                </div>
+                <span class="ff-arrow ff-arrow--next js-ff-next">{% include 'icon-arrow-round-right' %}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% style %}
+.finder-head {
+    margin: 60px 0;
+    text-align: center;
+}
+.finder-head h1 {
+    font-weight: 500;
+}
+button.finder-btn-next {
+    background-color: #D9D9D9;
+    color: #000;
+    height: 55px;
+    width: 100%;
+    border-radius: 30px;
+    text-align: center;
+    border: 0;
+    margin: 30px auto;
+    display: block;
+    font-weight: 500;
+}
+button.finder-btn-next.active {
+    background-color: #000;
+    color: #fff;
+}
+.finder-foot {
+    height: 80px;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.finder-foot__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ff-arrow {
+    cursor: pointer;
+}
+.ff-arrow.hidden {
+    visibility: hidden;
+}
+.ff-steps {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ff-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 10px;
+}
+.ff-step .hide {
+    display: none;
+}
+.ff-step span.step-title {
+    font-family: "Lineto";
+    font-size: 10px;
+}
+.ff-step::after {
+    content: "";
+    height: 1px;
+    width: 20px;
+    display: block;
+    background: #D9D9D9;
+    position: absolute;
+    right: -20px;
+    top: 20%;
+}
+.ff-step.active::after {
+    background: #000;
+}
+.ff-step:nth-last-child(1)::after {
+    display:none;
+}
+.ff-step span[data-step-done="false"] {
+    display: block;
+}
+.ff-step span[data-step-done="true"] {
+    display: none;
+}
+.ff-step.active span[data-step-done="false"] {
+    display: none;
+}
+.ff-step.active span[data-step-done="true"] {
+    display: block;
+}
+.finder-steps {
+    max-width: 360px;
+    min-height: 360px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.fs-cats,
+.fs-abilities {
+    margin-top: 10px;
+    position: relative;
+}
+.fs-cat,
+.fs-ability {
+    border: 1px solid #d6d6d6;
+    border-radius: 7px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1;
+    font-size: 14px;
+    cursor: pointer;
+}
+.fs-cat.selected,
+.fs-ability.selected {
+    background: #000;
+    color: #fff;
+}
+.fs-cat:hover,
+.fs-ability:hover {
+    background: #000;
+    color: #fff;
+}
+.finder-step[data-step="step1"].error .fs-cat,
+.finder-step[data-step="step2"].error .select-union,
+.finder-step[data-step="step3"].error .fs-ability,
+.finder-step[data-step="step4"].error .fs-style .level-selector__line {
+    border-color: #E11717;
+}
+.step-error {
+    color: #E11717;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 0.2s;
+} 
+.finder-step.error .step-error {
+    opacity: 1;
+    visibility: visible;
+    transition-duration: 0.2s;
+}
+.fs-cats .step-error,
+.fs-size .step-error,
+.fs-abilities .step-error,
+.fs-styles .step-error {
+    position: absolute;
+}
+.fs-cats .step-error,
+.fs-size .step-error,
+.fs-abilities .step-error,
+.fs-styles .step-error  {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.finder-steps .sup-title {
+    font-family: 'Lineto';
+    font-size: 11px;
+    display: block;
+}
+select.select-union option {
+  color: #000;
+}
+select.select-union.js-size-type {
+    width: calc(45% - 10px);
+    border-radius: 7px;
+    font-family: Gotham, sans-serif;
+    font-weight: 500;
+}
+select.select-union.js-size-num {
+    width: calc(55% - 10px);
+    border-radius: 7px;
+    font-family: Gotham, sans-serif;
+    font-weight: 500;
+}
+.fs-size {
+    position: relative;
+}
+.fs-size-selectors {
+    margin: 10px 0 50px 0;
+}
+.fs-size-result__box {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d6d6d6;
+    border-radius: 7px;
+    margin-top: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+select.select-union.select-union--inactive.js-size-num {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.fs-styles {
+    margin-top: 30px;
+    position: relative;
+}
+.fs-style {
+    margin-bottom: 50px;
+}
+span.fs-style__title {
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+.level-selector__line {
+    display: flex;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+span.selector-segment {
+    width: calc(10% - 1px);
+    display: block;
+    margin: 0 1px;
+    background: #d9d9d9;
+    height: 5px;
+}
+span.selector-segment:nth-child(1) {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+span.selector-segment:nth-child(10) {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.level-selector__num {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-family: 'Lineto';
+    margin-top: 10px;
+    user-select: none;
+}
+span.selector-pin {
+    width: 26px;
+    height: 20px;
+    border-radius: 3px;
+    background: #000;
+    top: -7px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+span.selector-pin svg {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+.fs-result {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    background: #f5f5f5;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.fs-result img {
+    max-width: 80px;
+    margin: 10px;
+}
+.fs-result .fs-result-data__suptitle {
+    font-size: 14px;
+    font-weight: 500;
+}
+.fs-result .fs-result-data__title {
+    font-size: 20px;
+    font-weight: 500;
+}
+.fs-result .fs-result-data__size {
+    font-size: 11px;
+    font-family: "Lineto";
+}
+.fs-result .fs-result-btn {
+    width: 100%;
+    background: #000;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 25px;
+    border: 1px solid #000;
+}
+.fs-result .fs-result-btn:hover {
+    background: #fff;
+    color: #000;
+}
+.fs-result-data {
+    width: calc(100% - 100px);
+    text-align: left;
+    padding: 10px 0 10px 30px;
+}
+.finder-content {
+    padding: 0 20px;
+}
+
+
+{% endstyle %}
+
+
+{% schema %}
+{
+    "name": "Finder",
+    "presets": [
+        {
+        "name": "Finder"
+        }
+    ]
+}
+{% endschema %}

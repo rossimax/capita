@@ -65,7 +65,7 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "When will my order ship?",
-            "content": "<p>Orders are packed and shipped within 2 business days of receipt. You can view our full Shipping, Returns, and Payments Policy here.<\/p>",
+            "content": "<p>Orders are packed and shipped within 2 business days of receipt. You can view our full <a href=\"https:\/\/capitasnowboarding.com\/pages\/shipping-policy\" title=\"https:\/\/capitasnowboarding.com\/pages\/shipping-policy\">Shipping<\/a>, <a href=\"https:\/\/capitasnowboarding.com\/pages\/returns\" title=\"https:\/\/capitasnowboarding.com\/pages\/returns\">Returns<\/a>, and <a href=\"https:\/\/capitasnowboarding.com\/pages\/payments\" title=\"https:\/\/capitasnowboarding.com\/pages\/payments\">Payments<\/a> Policy here.<\/p>",
             "cta1_text": "",
             "cta1_link": "",
             "cta2_text": "",

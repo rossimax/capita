@@ -76,7 +76,7 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "How do I return my order?",
-            "content": "<p>We are happy to help you return your items purchased from capitasnowboarding.com that meet our full Returns Policy. We are not offering returns and exchanges for orders to Canada currently. To start your return, please email us at <a href=\"mailto:shop@capitasnowboarding.com\" title=\"mailto:shop@capitasnowboarding.com\">shop@capitasnowboarding.com<\/a>.<\/p>",
+            "content": "<p>We are happy to help you return your items purchased from capitasnowboarding.com that meet our full Returns Policy. We are not offering returns and exchanges for orders to Canada currently. To start your return, please <a href=\"\/pages\/contact\" target=\"_blank\" title=\"Contact\">email us<\/a>.<\/p>",
             "cta1_text": "",
             "cta1_link": "",
             "cta2_text": "",
@@ -98,7 +98,7 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "How do I cancel my order?",
-            "content": "<p>Once an order is confirmed on capitasnowboarding.com we are unable to guarantee any changes or cancellations. These situations can often be resolved viaour return policy. For further assistance with your order please email us at shop@capitasnowboarding.com.<\/p>",
+            "content": "<p>Once an order is confirmed on capitasnowboarding.com we are unable to guarantee any changes or cancellations. These situations can often be resolved via our return policy. For further assistance with your order please <a href=\"\/pages\/contact\" title=\"Contact\">email us<\/a>.<\/p>",
             "cta1_text": "",
             "cta1_link": "",
             "cta2_text": "",

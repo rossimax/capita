@@ -152,6 +152,7 @@ button:hover:not(.c-header__menu-item) span,
 
 main.template-informative,
 main.template-contact,
+main.template-faq,
 main.template-dealers,
 main.template-distributors,
 main.template-orders,
@@ -167,6 +168,7 @@ main.template-nfc-steps {
 @media screen and (max-width: 1440px) {
   main.template-informative,
   main.template-contact,
+  main.template-faq,
   main.template-dealers,
   main.template-distributors,
   main.template-orders,
@@ -182,6 +184,7 @@ main.template-nfc-steps {
 @media screen and (max-width: 768px) {
   main.template-informative,
   main.template-contact,
+  main.template-faq,
   main.template-dealers,
   main.template-distributors,
   main.template-orders,
@@ -668,6 +671,21 @@ h1.cart__empty-text {
 @media screen and (min-width: 990px) {
   .cart__warnings {
     padding: 15rem 0 1rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .section-vertical-nav {
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+  .vertical-nav {
+    border: 1px solid #000;
+    border-radius: 30px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 110px;
+    min-width: 17vw;
   }
 }
 

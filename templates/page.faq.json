@@ -98,8 +98,8 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "How do I cancel my order?",
-            "content": "<p>Once an order is confirmed on capitasnowboarding.com we are unable to guarantee any changes or cancellations. These situations can often be resolved via our return policy. For further assistance with your order please <a href=\"\/pages\/contact\" title=\"Contact\">email us<\/a>.<\/p>",
-            "cta1_text": "Contact Us",
+            "content": "<p>Once an order is confirmed on capitasnowboarding.com we are unable to guarantee any changes or cancellations. These situations can often be resolved via our return policy. For further assistance with your order please email us.<\/p>",
+            "cta1_text": "Email Us",
             "cta1_link": "shopify:\/\/pages\/contact",
             "cta2_text": "",
             "cta2_link": ""

@@ -87,9 +87,9 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "How do I exchange my order?",
-            "content": "<p>To keep things simple, we offer returns rather than exchanges. You can start a return for the unwanted item by emailing us at <a href=\"mailto:shop@capitasnowboarding.com\" title=\"mailto:shop@capitasnowboarding.com\">shop@capitasnowboarding.com<\/a>.To best guarantee availability, and to reduce wait time, we recommend placing an order for your desired items.<\/p>",
-            "cta1_text": "",
-            "cta1_link": "",
+            "content": "<p>To keep things simple, we offer returns rather than exchanges. You can start a return for the unwanted item by emailing us below. To best guarantee availability, and to reduce wait time, we recommend placing an order for your desired items.<\/p>",
+            "cta1_text": "Contact Us",
+            "cta1_link": "shopify:\/\/pages\/contact",
             "cta2_text": "",
             "cta2_link": ""
           }

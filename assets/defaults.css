@@ -673,6 +673,21 @@ h1.cart__empty-text {
     padding: 15rem 0 1rem;
   }
 }
+@media screen and (min-width: 769px) {
+  .section-vertical-nav {
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+  .vertical-nav {
+    border: 1px solid #000;
+    border-radius: 30px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 110px;
+    min-width: 17vw;
+  }
+}
 
 /* END FIX */
 

@@ -285,7 +285,7 @@
           "type": "faq_list_add",
           "settings": {
             "title": "My snowboard was stolen! What should I do?",
-            "content": "<p>This kind of stuff is the worst. Make sure to reach out to your local resort to file a report. While we can’t resolve the theft of a snowboard, Contact Us with proof of purchase and incident report and we will do what we can to help get you back on the snow.<\/p>",
+            "content": "<p>This kind of stuff is the worst. Make sure to reach out to your local resort to file a report. While we can’t resolve the theft of a snowboard, <a href=\"\/pages\/contact\" title=\"Contact\">Contact Us<\/a> with proof of purchase and incident report and we will do what we can to help get you back on the snow.<\/p>",
             "cta1_text": "",
             "cta1_link": "",
             "cta2_text": "",

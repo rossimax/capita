@@ -65,9 +65,9 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "When will my order ship?",
-            "content": "<p>Orders are packed and shipped within 2 business days of receipt. You can view our full <a href=\"https:\/\/capitasnowboarding.com\/pages\/shipping-policy\" title=\"https:\/\/capitasnowboarding.com\/pages\/shipping-policy\">Shipping<\/a>, <a href=\"https:\/\/capitasnowboarding.com\/pages\/returns\" title=\"https:\/\/capitasnowboarding.com\/pages\/returns\">Returns<\/a>, and <a href=\"https:\/\/capitasnowboarding.com\/pages\/payments\" title=\"https:\/\/capitasnowboarding.com\/pages\/payments\">Payments<\/a> Policy here.<\/p>",
-            "cta1_text": "",
-            "cta1_link": "",
+            "content": "<p>Orders are packed and shipped within 2 business days of receipt. You can view our full Shipping & Returns Policy below.<\/p>",
+            "cta1_text": "Shipping & Returns",
+            "cta1_link": "shopify:\/\/pages\/shipping-policy",
             "cta2_text": "",
             "cta2_link": ""
           }
@@ -76,9 +76,9 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "How do I return my order?",
-            "content": "<p>We are happy to help you return your items purchased from capitasnowboarding.com that meet our full Returns Policy. We are not offering returns and exchanges for orders to Canada currently. To start your return, please email us at <a href=\"mailto:shop@capitasnowboarding.com\" title=\"mailto:shop@capitasnowboarding.com\">shop@capitasnowboarding.com<\/a>.<\/p>",
-            "cta1_text": "",
-            "cta1_link": "",
+            "content": "<p>We are happy to help you return your items purchased from capitasnowboarding.com that meet our full <a href=\"\/pages\/returns\" target=\"_blank\" title=\"Returns\">Returns Policy<\/a>. We are not offering returns and exchanges for orders to Canada currently. To start your return, please email us below.<\/p>",
+            "cta1_text": "Contact Us",
+            "cta1_link": "shopify:\/\/pages\/contact",
             "cta2_text": "",
             "cta2_link": ""
           }
@@ -87,9 +87,9 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "How do I exchange my order?",
-            "content": "<p>To keep things simple, we offer returns rather than exchanges. You can start a return for the unwanted item by emailing us at <a href=\"mailto:shop@capitasnowboarding.com\" title=\"mailto:shop@capitasnowboarding.com\">shop@capitasnowboarding.com<\/a>.To best guarantee availability, and to reduce wait time, we recommend placing an order for your desired items.<\/p>",
-            "cta1_text": "",
-            "cta1_link": "",
+            "content": "<p>To keep things simple, we offer returns rather than exchanges. You can start a return for the unwanted item by emailing us below. To best guarantee availability, and to reduce wait time, we recommend placing an order for your desired items.<\/p>",
+            "cta1_text": "Contact Us",
+            "cta1_link": "shopify:\/\/pages\/contact",
             "cta2_text": "",
             "cta2_link": ""
           }
@@ -98,9 +98,9 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "How do I cancel my order?",
-            "content": "<p>Once an order is confirmed on capitasnowboarding.com we are unable to guarantee any changes or cancellations. These situations can often be resolved viaour return policy. For further assistance with your order please email us at shop@capitasnowboarding.com.<\/p>",
-            "cta1_text": "",
-            "cta1_link": "",
+            "content": "<p>Once an order is confirmed on capitasnowboarding.com we are unable to guarantee any changes or cancellations. These situations can often be resolved via our return policy. For further assistance with your order please email us.<\/p>",
+            "cta1_text": "Contact Us",
+            "cta1_link": "shopify:\/\/pages\/contact",
             "cta2_text": "",
             "cta2_link": ""
           }
@@ -120,7 +120,7 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "When will an out-of-stock product come back into stock?",
-            "content": "<p>While inventory may vary, typically we receive one shipment of inventory for capitasnowboarding.com. Most times, once a board is listed as out of stock on the website it will likely not come back into stock until the following season. We’d suggest in this case you use our Dealer Locator to contact an online or local retailer to inquire about their inventory. If you need further help in your search please contact us at info@capitasnowboarding.com.<\/p>",
+            "content": "<p>While inventory may vary, typically we receive one shipment of inventory for capitasnowboarding.com. Most times, once a board is listed as out of stock on the website it will likely not come back into stock until the following season. We’d suggest in this case you use our <a href=\"\/pages\/dealers\" title=\"Dealers\">Dealer Locator<\/a> to contact an online or local retailer to inquire about their inventory. If you need further help in your search please <a href=\"\/pages\/contact\" title=\"Contact\">Contact Us<\/a>.<\/p>",
             "cta1_text": "",
             "cta1_link": "",
             "cta2_text": "",
@@ -131,7 +131,7 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "Can I choose my base graphic?",
-            "content": "<p>Base colors on graphics may vary for one of three reasons.<\/p><ol><li>Some of our models feature graphic variations that are unique to a specific size. <\/li><li>Models featuring a die-cut base construction often will have two base color variations per size to maximize material utilization and minimize waste during       the production process. While purchasing directly on www.capitasnowboarding.com, we cannot guarantee the base color variation on models with die-cut bases.       If you have your sights set on a specific base graphic colorway, you can always head to an authorized CAPiTA Dealer!<\/li><li>Board models offered in wide sizes may feature a different graphic variation in the wide sizes versus the regular waist width sizes.<\/li><\/ol>",
+            "content": "<p>Base colors on graphics may vary for one of three reasons.<\/p><ol><li>Some of our models feature graphic variations that are unique to a specific size. <\/li><li>Models featuring a die-cut base construction often will have two base color variations per size to maximize material utilization and minimize waste during the production process. While purchasing directly on www.capitasnowboarding.com, we cannot guarantee the base color variation on models with die-cut bases.If you have your sights set on a specific base graphic colorway, you can always head to an authorized CAPiTA Dealer!<\/li><li>Board models offered in wide sizes may feature a different graphic variation in the wide sizes versus the regular waist width sizes.<\/li><\/ol>",
             "cta1_text": "",
             "cta1_link": "",
             "cta2_text": "",
@@ -142,7 +142,7 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "Do splitboards come with climbing skins?",
-            "content": "<p>Yes, all splitboards purchased on the CAPiTA site will come with skins. The MEGA SPLIT series ships with the Union Pro Splitboard Climbing Skins while the NAVIGATOR SPLIT series ships with the Union Splitboard Climbing Skins. For more information on these included accessories, you can visit Union’s product page at:<\/p>",
+            "content": "<p>Yes, all splitboards purchased on the CAPiTA site will come with skins. The MEGA SPLIT series ships with the Union Pro Splitboard Climbing Skins while the NAVIGATOR SPLIT series ships with the Union Splitboard Climbing Skins. For more information on these included accessories, you can visit Union’s website below:<\/p>",
             "cta1_text": "Union Pro Splitboard Climbing Skins",
             "cta1_link": "shopify:\/\/collections\/all",
             "cta2_text": "Union Splitboard Climbing Skins",
@@ -209,8 +209,8 @@
           "settings": {
             "title": "What does the NFC Technology Chip in my snowboard do?",
             "content": "<p>In 2020, The MotherShip™ became the first in the snowboard industry to introduce an NFC system in our snowboards. During the manufacturing process, this chip enables precise insight into each board's production journey, facilitating rigorous quality control and reduction in waste. This allows us to deliver the highest finish quality snowboard possible to you.<br\/>-<br\/>Beyond the production stage, and upon purchase, you can utilize this chip by scanning it with your phone to access product information and register your snowboard, streamlining customer service and gaining exclusive early access to new content. In the case of a warranty request, you will scan the NFC chip to access your board’s serial number.<br\/>-<br\/>Please note that due to the MEGACARBON™ construction materials utilized in the MEGA SPLIT, MEGA MERC, and MEGA DEATH models, these series do not include NFC chips in the boards. In the case of a warranty request, these boards feature the serial number printed onto the topsheet of the snowboard near the heelside edge between the binding inserts.<br\/>-<br\/>To learn more about how to connect to NFC Technology with your phone, visit our Technology page.<\/p>",
-            "cta1_text": "",
-            "cta1_link": "",
+            "cta1_text": "Learn More",
+            "cta1_link": "shopify:\/\/pages\/technology",
             "cta2_text": "",
             "cta2_link": ""
           }
@@ -219,7 +219,7 @@
           "type": "faq_list_reg",
           "settings": {
             "title": "How do I register my snowboard?",
-            "content": "<p>With the super-intelligent NFC chip embedded in the nose of your board, you can now connect with your board by scanning the chip with your phone for seamless snowboard registration.<\/p><p>If your board does not have the NFC system (All pre-2020 snowboards and pre-2024 MEGA SPLIT \/ MEGA MERC \/ MEGA DEATH), a serial number is stamped on the sidewall of the snowboard. In this case, you will need to register your snowboard on www.capitasnowboarding.com manually<\/p>",
+            "content": "<p>With the super-intelligent NFC chip embedded in the nose of your board, you can now connect with your board by scanning the chip with your phone for seamless snowboard registration.<\/p><p>-<\/p><p>If your board does not have the NFC system (All pre-2020 snowboards and pre-2024 MEGA SPLIT \/ MEGA MERC \/ MEGA DEATH), a serial number is stamped on the sidewall of the snowboard. In this case, you will need to register your snowboard on www.capitasnowboarding.com manually<\/p>",
             "cta1_text": "",
             "cta1_link": "",
             "cta2_text": "",
@@ -230,9 +230,9 @@
           "type": "faq_list_reg",
           "settings": {
             "title": "What is the CAPiTA warranty policy?",
-            "content": "<p>CAPiTA Snowboards are handcrafted in Austria at The MotherShip™ — the snowboard industry's most technologically advanced and environmentally responsible manufacturing facility.\u2028\u2028<\/p><p>We are proud to offer a warranty policy guaranteeing that your CAPiTA snowboard is free from defects in material or workmanship for two (2) years from the date of original purchase. <br\/>-<br\/>Please review our complete warranty policy and follow the steps to submit a claim here.<\/p>",
-            "cta1_text": "",
-            "cta1_link": "",
+            "content": "<p>CAPiTA Snowboards are handcrafted in Austria at The MotherShip™ — the snowboard industry's most technologically advanced and environmentally responsible manufacturing facility.\u2028\u2028<\/p><p>We are proud to offer a warranty policy guaranteeing that your CAPiTA snowboard is free from defects in material or workmanship for two (2) years from the date of original purchase. <br\/>-<br\/>Please review our complete warranty policy and follow the steps to submit a claim below.<\/p>",
+            "cta1_text": "Warranty",
+            "cta1_link": "shopify:\/\/pages\/warranty",
             "cta2_text": "",
             "cta2_link": ""
           }
@@ -240,7 +240,7 @@
         "faq_list_add_zW9wFJ": {
           "type": "faq_list_add",
           "settings": {
-            "title": "Can I preorder?",
+            "title": "How can I demo a CAPiTA snowboard?",
             "content": "<p>Many demos are offered in regions covered by a CAPiTA distributor or rep. Please check out our global list of demos and events to see if there is an upcoming event near you. Follow us on Instagram for further information and updates on demo and test events.<\/p><p>Many authorized CAPiTA Dealers offer daily or extended demo programs. <\/p>",
             "cta1_text": "EVENTS",
             "cta1_link": "",

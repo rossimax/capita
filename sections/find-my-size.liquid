@@ -853,11 +853,14 @@ span.fsm-prod-size {
 
                         console.log(result1 + " ---- " + result1+1 )
                         console.log(result2 + " ---- " + result2+1 )
-                        
+
                         if ((variant_title == result1) || (variant_title == result2)) {
                             no_result = false
                             fmsResult.classList.remove("hide")
-                        } else if ((variant_title == result1) || (variant_title == result2)) {}
+                        } else if ((variant_title == Number(result1)+1) || (variant_title == Number(result2)+1)) {
+                            no_result = false
+                            fmsResult.classList.remove("hide")
+                        }
 
 
                     })

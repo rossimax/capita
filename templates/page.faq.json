@@ -20,7 +20,7 @@
           "type": "link_list",
           "settings": {
             "link_text": "Contact US",
-            "link_url": "",
+            "link_url": "shopify:\/\/pages\/contact",
             "selected": false
           }
         },

@@ -120,7 +120,7 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "When will an out-of-stock product come back into stock?",
-            "content": "<p>While inventory may vary, typically we receive one shipment of inventory for capitasnowboarding.com. Most times, once a board is listed as out of stock on the website it will likely not come back into stock until the following season. We’d suggest in this case you use our Dealer Locator to contact an online or local retailer to inquire about their inventory. If you need further help in your search please contact us at info@capitasnowboarding.com.<\/p>",
+            "content": "<p>While inventory may vary, typically we receive one shipment of inventory for capitasnowboarding.com. Most times, once a board is listed as out of stock on the website it will likely not come back into stock until the following season. We’d suggest in this case you use our <a href=\"\/pages\/dealers\" title=\"Dealers\">Dealer Locator<\/a> to contact an online or local retailer to inquire about their inventory. If you need further help in your search please <a href=\"\/pages\/contact\" title=\"Contact\">Contact Us<\/a>.<\/p>",
             "cta1_text": "",
             "cta1_link": "",
             "cta2_text": "",

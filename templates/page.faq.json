@@ -209,8 +209,8 @@
           "settings": {
             "title": "What does the NFC Technology Chip in my snowboard do?",
             "content": "<p>In 2020, The MotherShip™ became the first in the snowboard industry to introduce an NFC system in our snowboards. During the manufacturing process, this chip enables precise insight into each board's production journey, facilitating rigorous quality control and reduction in waste. This allows us to deliver the highest finish quality snowboard possible to you.<br\/><\/p><p><br\/>Beyond the production stage, and upon purchase, you can utilize this chip by scanning it with your phone to access product information and register your snowboard, streamlining customer service and gaining exclusive early access to new content. In the case of a warranty request, you will scan the NFC chip to access your board’s serial number.<br\/><\/p><p><br\/>Please note that due to the MEGACARBON™ construction materials utilized in the MEGA SPLIT, MEGA MERC, and MEGA DEATH models, these series do not include NFC chips in the boards. In the case of a warranty request, these boards feature the serial number printed onto the topsheet of the snowboard near the heelside edge between the binding inserts.<br\/><\/p><p><br\/>To learn more about how to connect to NFC Technology with your phone, visit our Technology page.<\/p>",
-            "cta1_text": "",
-            "cta1_link": "",
+            "cta1_text": "Learn More",
+            "cta1_link": "shopify:\/\/pages\/technology",
             "cta2_text": "",
             "cta2_link": ""
           }

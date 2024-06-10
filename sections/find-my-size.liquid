@@ -748,7 +748,7 @@ span.fsm-prod-size {
             url_fetch = "/pages/dealers?view=size-finder-wom.json"
         }
 
-        const response = await fetch("/pages/dealers?view=size-finder-man.json");
+        const response = await fetch(url_fetch);
         const movies = await response.json();
         return movies.comb
     }

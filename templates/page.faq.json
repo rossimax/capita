@@ -219,7 +219,7 @@
           "type": "faq_list_reg",
           "settings": {
             "title": "How do I register my snowboard?",
-            "content": "<p>With the super-intelligent NFC chip embedded in the nose of your board, you can now connect with your board by scanning the chip with your phone for seamless snowboard registration.<\/p><p><\/p><p>If your board does not have the NFC system (All pre-2020 snowboards and pre-2024 MEGA SPLIT \/ MEGA MERC \/ MEGA DEATH), a serial number is stamped on the sidewall of the snowboard. In this case, you will need to register your snowboard on www.capitasnowboarding.com manually<\/p>",
+            "content": "<ul><li>With the super-intelligent NFC chip embedded in the nose of your board, you can now connect with your board by scanning the chip with your phone for seamless snowboard registration.<\/li><\/ul><p><\/p><ul><li>If your board does not have the NFC system (All pre-2020 snowboards and pre-2024 MEGA SPLIT \/ MEGA MERC \/ MEGA DEATH), a serial number is stamped on the sidewall of the snowboard. In this case, you will need to register your snowboard on capitasnowboarding.com manually.<\/li><\/ul>",
             "cta1_text": "",
             "cta1_link": "",
             "cta2_text": "",

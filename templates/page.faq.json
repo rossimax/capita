@@ -230,7 +230,7 @@
           "type": "faq_list_reg",
           "settings": {
             "title": "What is the CAPiTA warranty policy?",
-            "content": "<p>CAPiTA Snowboards are handcrafted in Austria at The MotherShip™ — the snowboard industry's most technologically advanced and environmentally responsible manufacturing facility.\u2028\u2028<\/p><p>We are proud to offer a <a href=\"\/pages\/warranty\" title=\"Warranty\">Warranty Policy<\/a> guaranteeing that your CAPiTA snowboard is free from defects in material or workmanship for two (2) years from the date of original purchase. <br\/>-<br\/>Please review our complete warranty policy and follow the steps to submit a claim below.<\/p>",
+            "content": "<ul><li>CAPiTA Snowboards are handcrafted in Austria at The MotherShip™ — the snowboard industry's most technologically advanced and environmentally responsible manufacturing facility.\u2028\u2028<\/li><\/ul><p><\/p><ul><li>We are proud to offer a <a href=\"\/pages\/warranty\" title=\"Warranty\">Warranty Policy<\/a> guaranteeing that your CAPiTA snowboard is free from defects in material or workmanship for two (2) years from the date of original purchase.<\/li><\/ul><p><\/p><ul><li>Please review our complete warranty policy and follow the steps to submit a claim below:<\/li><\/ul>",
             "cta1_text": "Warranty",
             "cta1_link": "shopify:\/\/pages\/warranty",
             "cta2_text": "",

@@ -23,6 +23,14 @@
             "selected": false
           }
         },
+        "link_list_qagYK8": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Help & FAQs",
+            "link_url": "shopify:\/\/pages\/faq",
+            "selected": false
+          }
+        },
         "58c7723e-358a-40ed-bb23-e7000658698a": {
           "type": "link_list",
           "settings": {
@@ -38,21 +46,13 @@
             "link_url": "",
             "selected": true
           }
-        },
-        "link_list_qagYK8": {
-          "type": "link_list",
-          "settings": {
-            "link_text": "Help & FAQs",
-            "link_url": "shopify:\/\/pages\/faq",
-            "selected": false
-          }
         }
       },
       "block_order": [
         "c7328da8-9958-4e8e-975c-27a49ec5473c",
+        "link_list_qagYK8",
         "58c7723e-358a-40ed-bb23-e7000658698a",
-        "f6b75d5c-7d96-470e-b539-3a53098a1687",
-        "link_list_qagYK8"
+        "f6b75d5c-7d96-470e-b539-3a53098a1687"
       ],
       "settings": {
       }

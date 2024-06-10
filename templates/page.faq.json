@@ -76,7 +76,7 @@
           "type": "faq_list_ord",
           "settings": {
             "title": "How do I return my order?",
-            "content": "<p>We are happy to help you return your items purchased from capitasnowboarding.com that meet our full <a href=\"\/pages\/returns\" target=\"_blank\" title=\"Returns\">Returns Policy<\/a>. We are not offering returns and exchanges for orders to Canada currently. <\/p><p><\/p><p>To start your return, email us below. Please include your order number and full name.<\/p>",
+            "content": "<p>We are happy to help you return your items purchased from capitasnowboarding.com that meet our full <a href=\"\/pages\/returns\" target=\"_blank\" title=\"Returns\">Returns Policy<\/a>. We are not offering returns and exchanges for orders to Canada currently.<\/p><p><\/p><p><\/p><p>To start your return, email us below. Please include your order number and full name.<\/p>",
             "cta1_text": "Contact Us",
             "cta1_link": "shopify:\/\/pages\/contact",
             "cta2_text": "",

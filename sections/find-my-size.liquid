@@ -13,13 +13,8 @@
     {% endif %}
 {% endfor %}
 
-{% if request.origin == "https://capitasnowboarding.com" %}
-    {% assign url_origin = "capita-us" %}
-{% else %}
-    {% assign url_origin = "capita-eu" %}
-{% endif %}
 
-<div class="find-my-size-container find-my-size-container--{{ url_origin }}" data-gender="{{ gender }}">
+<div class="find-my-size-container" data-gender="{{ gender }}">
     <div class="find-my-size">
         <div class="fms-close">{% include "close-round" %}</div>
         <div class="fms-reload hide">{% include "reload-round" %}</div>
@@ -33,13 +28,20 @@
             <div class="fsm-box">
                 <div class="fsm-box-text">Your Height:</div>
                 <div class="fsm-box-radio" data-select="height">
-                    <span data-type="in">in</span>
-                    <span data-type="cm">cm</span>
+
+                    {% if request.origin == "https://capitasnowboarding.com" %}
+                        <span data-type="in">in</span>
+                        <span data-type="cm">cm</span>
+                    {% else %}
+                        <span data-type="cm">cm</span>
+                        <span data-type="in">in</span>
+                    {% endif %}
+
                     <span class="selector-radio"></span>
                 </div>
                 <div class="fsm-box-select js-fsm-box-select-height" data-select="height">
 
-                    <select data-type="in">
+                    <select {% if request.origin == "https://eu.capitasnowboarding.com" %}class="hide"{% endif %} data-type="in">
                         <option>SELECT</option>
                         <option value="140 - 143">55 - 56</option>
                         <option value="144 - 147">57 - 58</option>
@@ -59,7 +61,7 @@
                         <option value="200 - 203">79 - 80</option>
                     </select>
 
-                    <select class="hide" data-type="cm">
+                    <select {% if request.origin == "https://capitasnowboarding.com" %}class="hide"{% endif %} data-type="cm">
                         <option>SELECT</option>
                         <option value="140 - 143">140 - 143</option>
                         <option value="144 - 147">144 - 147</option>

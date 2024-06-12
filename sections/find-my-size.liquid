@@ -796,6 +796,8 @@ span.fsm-prod-size {
             
             fmsClose.addEventListener("click", function(){
                 fsmContainer.classList.add("hide")
+                no_result = true
+                fmsResult.classList.add("hide")
             })
 
             fmsResults.forEach((fmsResult) => {
@@ -911,6 +913,8 @@ span.fsm-prod-size {
                 fmsContents[0].classList.remove("hide")
                 fmsContents[1].classList.add("hide")
                 fmsReload.classList.add("hide")
+                no_result = true
+                fmsResult.classList.add("hide")
             })
             
             fmsBoxSelects.forEach((fmsBoxSelect,boxIndex) => {

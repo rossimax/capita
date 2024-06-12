@@ -983,19 +983,19 @@ span.fsm-prod-size {
                     let data_select = fmsRadio.getAttribute("data-select")
                     let box_select = document.querySelector(".fsm-box-select[data-select='"+data_select+"']")
         
-                    let select_eu = box_select.querySelector("#fsm-box-select-eu")
-                    let select_us = box_select.querySelector("#fsm-box-select-us")
+                    let select_first = box_select.querySelector("select:nth-child(1)")
+                    let select_second = box_select.querySelector("select:nth-child(2)")
 
-                    if (fmsRadioSelector.classList.contains("select-other")) {
-                        fmsRadioSelector.classList.remove("select-other")
-                        select_eu.classList.remove("hide")
-                        select_eu.value = select_us.value
-                        select_us.classList.add("hide")
+                    if (fmsRadioSelector.classList.contains("select-second")) {
+                        fmsRadioSelector.classList.remove("select-second")
+                        select_first.classList.remove("hide")
+                        select_first.value = select_second.value
+                        select_second.classList.add("hide")
                     } else {
-                        fmsRadioSelector.classList.add("select-other")
-                        select_us.classList.remove("hide")
-                        select_us.value = select_eu.value
-                        select_eu.classList.add("hide")
+                        fmsRadioSelector.classList.add("select-second")
+                        select_second.classList.remove("hide")
+                        select_second.value = select_first.value
+                        select_first.classList.add("hide")
                     }
                 })
             });

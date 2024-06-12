@@ -27,7 +27,11 @@
 
         <p class="c-product-info__description medium">{{ product.metafields.snowboard_info.snowboard_description }}</p>
         
-        {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %}
+        {% if product.type == "Snowboard" %}
+          {% comment %} <div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div> {% endcomment %}
+          <div id="epr-product-title-review" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}" data-product-title="{{ product.title }}"></div>
+
+        {% endif %}
 
            {% comment %} form 'product', product, class:form_classes, novalidate: 'validate', data-product-form: ''
              {% endcomment %}
@@ -43,7 +47,7 @@
                           <div class="c-product-info__sizes">
                             <div class="border-error js-border-notification hidden"></div>
                               {% for variant in product.variants %}
-                                  <div class="c-product-info__size js-product-variant {%- if variant.available == false %} is-disabled{% endif %}" for="{{ variant.id }}" data-index="{{ forloop.index0 }}">
+                                  <div class="c-product-info__size js-product-variant {%- if variant.available == false %} is-disabled{% endif %}" for="{{ variant.id }}" data-index="{{ forloop.index0 }}" data-title="{{ variant.title }}">
                                       <input 
                                           style="visibility:hidden;opacity:0;height:0;width:0;padding:0;margin:0;" 
                                           type="radio" 
@@ -57,6 +61,7 @@
                                   </div>
                               {% endfor %}
                           </div>
+                          <a class="open-find-my-size js-open-find-my-size">FIND MY SIZE</a>
                       {% endif %}
 
                   {% endfor %}

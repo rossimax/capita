@@ -46,13 +46,22 @@
             "link_url": "shopify:\/\/pages\/payments",
             "selected": false
           }
+        },
+        "link_list_Gpbfmw": {
+          "type": "link_list",
+          "settings": {
+            "link_text": "Help & FAQs",
+            "link_url": "shopify:\/\/pages\/faq",
+            "selected": false
+          }
         }
       },
       "block_order": [
         "c7328da8-9958-4e8e-975c-27a49ec5473c",
         "58c7723e-358a-40ed-bb23-e7000658698a",
         "f6b75d5c-7d96-470e-b539-3a53098a1687",
-        "1104618f-5c85-44ef-9eae-25d1c08987d0"
+        "1104618f-5c85-44ef-9eae-25d1c08987d0",
+        "link_list_Gpbfmw"
       ],
       "settings": {
       }

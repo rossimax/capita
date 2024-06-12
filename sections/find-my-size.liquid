@@ -991,20 +991,32 @@ span.fsm-prod-size {
                     let select_first = box_select.querySelector("select:nth-child(1)")
                     let select_second = box_select.querySelector("select:nth-child(2)")
 
-                    if (fsmContainer.classList.contains(".find-my-size-container--eu")) {
-
-                    }
-
                     if (fmsRadioSelector.classList.contains("select-second")) {
                         fmsRadioSelector.classList.remove("select-second")
-                        select_first.classList.remove("hide")
-                        select_first.value = select_second.value
-                        select_second.classList.add("hide")
+
+                        if (fsmContainer.classList.contains(".find-my-size-container--us")) {
+                            select_first.classList.remove("hide")
+                            select_first.value = select_second.value
+                            select_second.classList.add("hide")
+                        } else {
+                            select_second.classList.remove("hide")
+                            select_second.value = select_first.value
+                            select_first.classList.add("hide")
+                        }
+
                     } else {
                         fmsRadioSelector.classList.add("select-second")
-                        select_second.classList.remove("hide")
-                        select_second.value = select_first.value
-                        select_first.classList.add("hide")
+
+                        if (fsmContainer.classList.contains(".find-my-size-container--us")) {
+                            select_second.classList.remove("hide")
+                            select_second.value = select_first.value
+                            select_first.classList.add("hide")
+                        } else {
+                            select_first.classList.remove("hide")
+                            select_first.value = select_second.value
+                            select_second.classList.add("hide")
+                        }
+
                     }
                 })
             });

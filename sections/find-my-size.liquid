@@ -912,7 +912,8 @@ span.fsm-prod-size {
                 }
             })
 
-            fmsReload.addEventListener("click", function(){
+            fmsReload.addEventListener("click", function() {
+                console.log("reload")
                 fmsResults.forEach((fmsResult) => {
                     fmsResult.classList.add("hide")
                     console.log(fmsResult)

@@ -107,12 +107,18 @@
                 <div class="fsm-box-text">Boot size:</div>
 
                 <div class="fsm-box-radio" data-select="size">
-                    <span data-type="US">US</span>
-                    <span data-type="EU">EU</span>
+                    {% if request.origin == "https://capitasnowboarding.com" %}
+                        <span data-type="US">US</span>
+                        <span data-type="EU">EU</span>
+                    {% else %}
+                        <span data-type="EU">EU</span>
+                        <span data-type="US">US</span>
+                    {% endif %}
+
                     <span class="selector-radio"></span>
                 </div>
                 <div class="fsm-box-select js-fsm-box-select-size" data-select="size">
-                    <select data-type="US">
+                    <select {% if request.origin == "https://capitasnowboarding.com" %}class="hide"{% endif %} data-type="US">
                         <option>SELECT</option>
 
                         {% if gender == "men" %}
@@ -188,7 +194,7 @@
                         {% endif %}
                         
                     </select>
-                    <select class="hide" data-type="EU">
+                    <select {% if request.origin == "https://eu.capitasnowboarding.com" %}class="hide"{% endif %} data-type="EU">
                         <option>SELECT</option>
 
                         {% if gender == "men" %}

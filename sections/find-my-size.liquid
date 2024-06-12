@@ -118,7 +118,7 @@
                     <span class="selector-radio"></span>
                 </div>
                 <div class="fsm-box-select js-fsm-box-select-size" data-select="size">
-                    <select {% if request.origin == "https://capitasnowboarding.com" %}class="hide"{% endif %} data-type="US">
+                    <select {% if request.origin == "https://eu.capitasnowboarding.com" %}class="hide"{% endif %} data-type="US">
                         <option>SELECT</option>
 
                         {% if gender == "men" %}
@@ -194,7 +194,7 @@
                         {% endif %}
                         
                     </select>
-                    <select {% if request.origin == "https://eu.capitasnowboarding.com" %}class="hide"{% endif %} data-type="EU">
+                    <select {% if request.origin == "https://capitasnowboarding.com" %}class="hide"{% endif %} data-type="EU">
                         <option>SELECT</option>
 
                         {% if gender == "men" %}

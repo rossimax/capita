@@ -1852,32 +1852,36 @@
         let showExagon = document.querySelector(selectors.showExagon);
         let showLines = document.querySelector(selectors.showLines);
         let openFindMySize = document.querySelector(selectors.openFindMySize);
+        let findMySizeContainer = document.querySelector(selectors.findMySizeContainer);
 
-        if (showExagon) {
-          showExagon.addEventListener("click", function(){
-            console.log("showExagon")
-            specLines.forEach((specLine) => {
-              specLine.classList.add("hide")
-            })
-            specExagon.classList.remove("hide")
-          })
-        }
-        
-        if (showLines) {
-          showLines.addEventListener("click", function(){
-            console.log("showLines")
-            specLines.forEach((specLine) => {
-              specLine.classList.remove("hide")
-            })
-            specExagon.classList.add("hide")
-          })
-        }
+        window.addEventListener("load", function(){
 
-        if (openFindMySize) {
-          openFindMySize.addEventListener("click", function(){
-            findMySizeContainer.classList.remove("hide")
-          })
-        }
+          if (showExagon) {
+            showExagon.addEventListener("click", function(){
+              console.log("showExagon")
+              specLines.forEach((specLine) => {
+                specLine.classList.add("hide")
+              })
+              specExagon.classList.remove("hide")
+            })
+          }
+
+          if (showLines) {
+            showLines.addEventListener("click", function(){
+              console.log("showLines")
+              specLines.forEach((specLine) => {
+                specLine.classList.remove("hide")
+              })
+              specExagon.classList.add("hide")
+            })
+          }
+
+          if (openFindMySize) {
+            openFindMySize.addEventListener("click", function(){
+              findMySizeContainer.classList.remove("hide")
+            })
+          }
+        })
 
     })();
 

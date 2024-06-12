@@ -795,12 +795,11 @@ span.fsm-prod-size {
             // console.log(size_json)
             
             fmsClose.addEventListener("click", function(){
-                fsmContainer.classList.add("hide")
-                no_result = true
                 fmsResults.forEach((fmsResult) => {
                     console.log(fmsResult)
                     fmsResult.classList.add("hide")
                 })
+                fsmContainer.classList.add("hide")
 
             })
 
@@ -914,14 +913,13 @@ span.fsm-prod-size {
             })
 
             fmsReload.addEventListener("click", function(){
-                fmsContents[0].classList.remove("hide")
-                fmsContents[1].classList.add("hide")
-                fmsReload.classList.add("hide")
-                no_result = true
                 fmsResults.forEach((fmsResult) => {
                     fmsResult.classList.add("hide")
                     console.log(fmsResult)
                 })
+                fmsContents[0].classList.remove("hide")
+                fmsContents[1].classList.add("hide")
+                fmsReload.classList.add("hide")
             })
             
             fmsBoxSelects.forEach((fmsBoxSelect,boxIndex) => {

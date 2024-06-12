@@ -816,6 +816,8 @@ span.fsm-prod-size {
             // console.log(size_json)
             
             fmsClose.addEventListener("click", function(){
+                fmsContents[0].classList.remove("hide")
+                fmsContents[1].classList.add("hide")
                 fmsResults.forEach((fmsResult) => {
                     console.log(fmsResult)
                     fmsResult.classList.add("hide")

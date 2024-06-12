@@ -798,6 +798,10 @@ span.fsm-prod-size {
                 fsmContainer.classList.add("hide")
                 no_result = true
                 fmsResult.classList.add("hide")
+                fmsResults.forEach((fmsResult) => {
+                    fmsResult.classList.add("hide")
+                })
+
             })
 
             fmsResults.forEach((fmsResult) => {
@@ -915,6 +919,9 @@ span.fsm-prod-size {
                 fmsReload.classList.add("hide")
                 no_result = true
                 fmsResult.classList.add("hide")
+                fmsResults.forEach((fmsResult) => {
+                    fmsResult.classList.add("hide")
+                })
             })
             
             fmsBoxSelects.forEach((fmsBoxSelect,boxIndex) => {

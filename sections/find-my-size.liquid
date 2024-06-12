@@ -13,8 +13,13 @@
     {% endif %}
 {% endfor %}
 
+{% if request.origin == "https://capitasnowboarding.com" %}
+    {% assign origin_class = "find-my-size-container--us" %}
+{% else %}
+    {% assign origin_class = "find-my-size-container--eu" %}
+{% endif %}
 
-<div class="find-my-size-container hide" data-gender="{{ gender }}">
+<div class="find-my-size-container hide {{ origin_class }}" data-gender="{{ gender }}">
     <div class="find-my-size">
         <div class="fms-close">{% include "close-round" %}</div>
         <div class="fms-reload hide">{% include "reload-round" %}</div>
@@ -985,6 +990,11 @@ span.fsm-prod-size {
         
                     let select_first = box_select.querySelector("select:nth-child(1)")
                     let select_second = box_select.querySelector("select:nth-child(2)")
+
+                    if (fsmContainer.classList.contains(".find-my-size-container--eu")) {
+                        select_first = box_select.querySelector("select:nth-child(2)")
+                        select_second = box_select.querySelector("select:nth-child(1)")
+                    }
 
                     if (fmsRadioSelector.classList.contains("select-second")) {
                         fmsRadioSelector.classList.remove("select-second")

@@ -1853,25 +1853,31 @@
         let showLines = document.querySelector(selectors.showLines);
         let openFindMySize = document.querySelector(selectors.openFindMySize);
 
-        showExagon.addEventListener("click", function(){
-          console.log("showExagon")
-          specLines.forEach((specLine) => {
-            specLine.classList.add("hide")
+        if (showExagon) {
+          showExagon.addEventListener("click", function(){
+            console.log("showExagon")
+            specLines.forEach((specLine) => {
+              specLine.classList.add("hide")
+            })
+            specExagon.classList.remove("hide")
           })
-          specExagon.classList.remove("hide")
-        })
-
-        showLines.addEventListener("click", function(){
-          console.log("showLines")
-          specLines.forEach((specLine) => {
-            specLine.classList.remove("hide")
+        }
+        
+        if (showLines) {
+          showLines.addEventListener("click", function(){
+            console.log("showLines")
+            specLines.forEach((specLine) => {
+              specLine.classList.remove("hide")
+            })
+            specExagon.classList.add("hide")
           })
-          specExagon.classList.add("hide")
-        })
+        }
 
-        openFindMySize.addEventListener("click", function(){
-          findMySizeContainer.classList.remove("hide")
-        })
+        if (openFindMySize) {
+          openFindMySize.addEventListener("click", function(){
+            findMySizeContainer.classList.remove("hide")
+          })
+        }
 
     })();
 

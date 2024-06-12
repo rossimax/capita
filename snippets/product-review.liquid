@@ -12,57 +12,12 @@
 </div>
 
 {% style %}
-.epr-collaps-btn.btn.button {
-    border-radius: 30px;
-}
-.mag-select-menu {
-    margin-bottom: -30px !important;
-}
-div#mag-product-review .epr-review .epr-data .epr-review-here {
-    border-left: none;
-    border-right: none;
-}
-.erp-review-img-main,
-.epr-review-footer {
-    display: none !important;
-}
-.mag-review-star .progress-striped .progress-bar {
-    background-color: #000!important;
-}
-div#mag-product-review .epr-review .epr-data {
-    box-shadow: none;
-}
-.epr-collaps-btn.btn.button {
-    max-width: 230px;
-    font-weight: 600 !important;
-}
-.epr-data .mag-total-review-wrap {
-    flex: 0 0 20%;
-}
-.epr-data {
+.epr-stars,
+#epr-product-title-review > span,
+.mag-stars,
+.epr-review-data-wrapper .epr-review-head .epr-review-name {
     display: flex;
-    justify-content: center !important;
-}
-.epr-review-here {
-    display: none;
-}
-div#epr-product-title-review span {
-    color: #fff;
-}
-#mag-product-review .mag-select-menu .sBtn-text svg path,
-.epr-review-name svg,
-svg.bi.bi-star-fill.mag-ratings,
-.mag-stars svg,
-.mag-review-star .mag-star-icon svg,
-#epr-product-title-review svg {
-    stroke: #0000006b;
-    fill: #000;
-}
-svg.bi.bi-star-fill.mag-ratings[fill="orange"],
-.mag-stars svg[fill="orange"],
-.mag-review-star .mag-star-icon svg[fill="orange"],
-#epr-product-title-review svg[fill="orange"] {
-    fill: #000;
+    align-items: center;
 }
 .el-page-count {
     font-size: 14px;
@@ -90,35 +45,43 @@ a#mag-cancel-btn-text {
     display: none !important;
     visibility: hidden;
 }
-.epr-review-form .form-group input, .epr-review-form .form-group textarea {
-    box-shadow: none;
-    border: 1px solid #000;
-    font-size: 16px;
-}
 .product-reviews {
-    font-family: "Gotham";
-}
-.product-reviews h2,
-.product-reviews p,
-.product-reviews span,
-.product-reviews a {
-    font-family: "Gotham";
+    margin: 40px 0;
+    border-radius: 30px;
     letter-spacing: normal;
 }
-.product-reviews h2 {
-    font-weight: 500;
+@media only screen and (min-width: 1200px) {
+    .product-reviews {
+        margin: 80px 0;
+    }   
 }
-input.spr-button.spr-button-primary.button.button-primary.btn.btn-primary {
-    background: #000;
-    border-radius: 20px;
-    min-width: 260px;
-    font-family: Gotham;
-    line-height: 1;
-    font-weight: 500;
-    letter-spacing: 2px;
-    font-size: 13px;
+.spr-container {
+    padding: 24px;
+    border-color: transparent;
+}
+h2.spr-header-title {
+    font-weight: 600;
+    font-size: 36px;
 }
 a.spr-summary-actions-newreview {
+    color: #000;
+    text-transform: uppercase;
     font-weight: 500;
+}
+.spr-review-reportreview {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+input.spr-form-input,
+textarea.spr-form-input {
+    border: 1px solid;
+    min-height: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+input.spr-button.spr-button-primary.button.button-primary.btn.btn-primary {
+    border-color: #000;
+    line-height: 0;
 }
 {% endstyle %}

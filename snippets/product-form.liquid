@@ -61,7 +61,9 @@
                                   </div>
                               {% endfor %}
                           </div>
-                          <a class="open-find-my-size js-open-find-my-size">FIND MY SIZE</a>
+                          {% if product.tags contains "Men's" or product.tags contains "Women's" %}
+                            <a class="open-find-my-size js-open-find-my-size">FIND MY SIZE</a>
+                          {% endif %}
                       {% endif %}
 
                   {% endfor %}

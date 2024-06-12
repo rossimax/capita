@@ -13,7 +13,13 @@
     {% endif %}
 {% endfor %}
 
-<div class="find-my-size-container" data-gender="{{ gender }}">
+{% if request.origin == "https://capitasnowboarding.com" %}
+    {% assign url_origin = "capita-us" %}
+{% else %}
+    {% assign url_origin = "capita-eu" %}
+{% endif %}
+
+<div class="find-my-size-container find-my-size-container--{{ url_origin }}" data-gender="{{ gender }}">
     <div class="find-my-size">
         <div class="fms-close">{% include "close-round" %}</div>
         <div class="fms-reload hide">{% include "reload-round" %}</div>
@@ -626,6 +632,7 @@ span.fsm-prod-size {
     max-width: 200px;
     margin: 30px auto;
 }
+
 
 @media screen and (max-width: 768px) {
     .find-my-size-container {

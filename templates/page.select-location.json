@@ -15,13 +15,20 @@
     },
     "9c80f921-d510-4838-b362-dbe82da9dc5e": {
       "type": "warranty-claim-s1",
+      "disabled": true,
       "settings": {
         "form_warranty": "88sdrr-Y0W493EPXOxapMw"
+      }
+    },
+    "select_location_xAfPHx": {
+      "type": "select-location",
+      "settings": {
       }
     }
   },
   "order": [
     "main",
-    "9c80f921-d510-4838-b362-dbe82da9dc5e"
+    "9c80f921-d510-4838-b362-dbe82da9dc5e",
+    "select_location_xAfPHx"
   ]
 }

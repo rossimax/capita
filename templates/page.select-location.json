@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "head_width": 100,
+        "margin_top": 200,
+        "body_color": "#ffffff",
+        "footer_border": false,
+        "enable_head": true,
+        "title": "",
+        "description": ""
+      }
+    },
+    "select_location_xAfPHx": {
+      "type": "select-location",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "select_location_xAfPHx"
+  ]
+}

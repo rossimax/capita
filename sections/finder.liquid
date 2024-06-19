@@ -3,9 +3,9 @@
 <div class="finder-container">
     <div class="finder-content">
         <div class="finder-head js-finder-head-default">
-            <h1>Binding Finder</h1>
-            <p>Not sure what binding to ride? Let us help.<br/>
-            Follow the prompts to see what binding is best for you.</p>
+            <h1>BOARD FINDER</h1>
+            <p>Uncertain about which board is right for you? Let our super-advanced algorithm assist you.<br/>
+            Simply follow the prompts to discover the perfect companion for your adventures.</p>
         </div>
         <div class="finder-head js-finder-head-result hide">
             <h1>Our Recommendation</h1>
@@ -15,11 +15,11 @@
         <div class="finder-steps">
 
             <div class="finder-step js-steps" data-step="step1">
-                <strong>Binding Category:</strong>
+                <strong>Snowboard Category:</strong>
                 <div class="fs-cats">
                     <div class="fs-cat js-step1-value" data-cat="Men">MEN'S</div>
                     <div class="fs-cat js-step1-value" data-cat="Women">WOMEN'S</div>
-                    <div class="fs-cat js-step1-value" data-cat="Kids">KIDS</div>
+                    <div class="fs-cat js-step1-value" data-cat="Kids">YOUTH</div>
                     <span class="step-error">Must complete all fields</span>
                 </div>
             </div>
@@ -233,30 +233,22 @@
         </div>
         <div class="finder-foot">
             <div class="finder-foot__content">
-                <span class="ff-arrow ff-arrow--prev hidden js-ff-prev">{% include 'icon-arrow-round-left' %}</span>
+                <span class="ff-arrow ff-arrow--prev hidden js-ff-prev">{% include 'icon-arrow-round-left-white' %}</span>
                 <div class="ff-steps">
                     <div class="ff-step" data-step="step1">
-                        <span data-step-done="false">{% include 'icon-round-grey' %}</span>
-                        <span data-step-done="true">{% include 'icon-round-flag' %}</span>
-                        <span class="step-title">STEP 1</span>
+                        <span data-step-done="false">{% include 'icon-round-black' %}</span>
                     </div>
                     <div class="ff-step" data-step="step2">
-                        <span data-step-done="false">{% include 'icon-round-grey' %}</span>
-                        <span data-step-done="true">{% include 'icon-round-flag' %}</span>
-                        <span class="step-title">STEP 2</span>
+                        <span data-step-done="false">{% include 'icon-round-black' %}</span>
                     </div>
                     <div class="ff-step" data-step="step3">
-                        <span data-step-done="false">{% include 'icon-round-grey' %}</span>
-                        <span data-step-done="true">{% include 'icon-round-flag' %}</span>
-                        <span class="step-title">STEP 3</span>
+                        <span data-step-done="false">{% include 'icon-round-black' %}</span>
                     </div>
                     <div class="ff-step" data-step="step4">
-                        <span data-step-done="false">{% include 'icon-round-grey' %}</span>
-                        <span data-step-done="true">{% include 'icon-round-flag' %}</span>
-                        <span class="step-title">STEP 4</span>
+                        <span data-step-done="false">{% include 'icon-round-black' %}</span>
                     </div>
                 </div>
-                <span class="ff-arrow ff-arrow--next js-ff-next">{% include 'icon-arrow-round-right' %}</span>
+                <span class="ff-arrow ff-arrow--next js-ff-next">{% include 'icon-arrow-round-right-white' %}</span>
             </div>
         </div>
     </div>
@@ -266,16 +258,27 @@
 .hide {
     display: none !important;
 }
+main#MainContent {
+    background: url(https://cdn.shopify.com/s/files/1/0231/7366/0752/files/background.jpg?v=1718629476);
+}
+.finder-container {
+    margin-top: 170px;
+}
+.finder-container h1 {
+    font-size: 52px;
+    font-weight: 600 !important;
+    margin-bottom: 15px;
+}
 .finder-head {
-    margin: 60px 0;
+    margin: 60px 0 40px 0;
     text-align: center;
 }
 .finder-head h1 {
     font-weight: 500;
 }
 button.finder-btn-next {
-    background-color: #D9D9D9;
-    color: #000;
+    background-color: #00000080;
+    color: #FFF;
     height: 55px;
     width: 100%;
     border-radius: 30px;
@@ -291,7 +294,6 @@ button.finder-btn-next.active {
 }
 .finder-foot {
     height: 80px;
-    background: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,22 +305,26 @@ button.finder-btn-next.active {
 }
 .ff-arrow {
     cursor: pointer;
+    margin: 0 15px;
 }
 .ff-arrow.hidden {
-    visibility: hidden;
+    opacity: 0.5;
 }
 .ff-steps {
-    padding: 0 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid #000;
+    border-radius: 10px;
 }
 .ff-step {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
-    margin: 0 10px;
+    width: 100px;
+    padding: 2px 0;
 }
 .ff-step .hide {
     display: none;
@@ -327,23 +333,21 @@ button.finder-btn-next.active {
     font-family: "Lineto";
     font-size: 10px;
 }
-.ff-step::after {
-    content: "";
-    height: 1px;
-    width: 20px;
-    display: block;
-    background: #D9D9D9;
-    position: absolute;
-    right: -20px;
-    top: 20%;
+.ff-step {
+    border-right: 1px solid #000;
 }
-.ff-step.active::after {
-    background: #000;
+.ff-step:nth-child(4) {
+    border-right: none;
 }
-.ff-step:nth-last-child(1)::after {
-    display:none;
+.ff-step svg {
+    visibility: hidden;
+    opacity: 0;
 }
-.ff-step span[data-step-done="false"] {
+.ff-step.active svg {
+    visibility: visible;
+    opacity: 1;
+}
+/* .ff-step span[data-step-done="false"] {
     display: block;
 }
 .ff-step span[data-step-done="true"] {
@@ -354,7 +358,7 @@ button.finder-btn-next.active {
 }
 .ff-step.active span[data-step-done="true"] {
     display: block;
-}
+} */
 .finder-steps {
     max-width: 360px;
     min-height: 360px;
@@ -362,25 +366,39 @@ button.finder-btn-next.active {
     margin: 0 auto;
     text-align: center;
 }
+.fs-cats {
+    margin-top: 20px;
+    border: 1px solid #1b1b1b;
+    border-radius: 20px;
+}
 .fs-cats,
 .fs-abilities {
-    margin-top: 10px;
     position: relative;
 }
 .fs-cat,
 .fs-ability {
-    border: 1px solid #d6d6d6;
-    border-radius: 7px;
+    border-bottom: 1px solid #1b1b1b;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #000;
     font-weight: 500;
-    margin-bottom: 20px;
     line-height: 1;
     font-size: 14px;
     cursor: pointer;
+}
+.fs-cat {
+    background: #fff;
+}
+.fs-cat:nth-child(1) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.fs-cat:nth-child(3) {
+    border-bottom: none !important;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .fs-cat.selected,
 .fs-ability.selected {

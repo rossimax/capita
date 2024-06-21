@@ -1,0 +1,23 @@
+{%- layout none -%}
+{
+  {% paginate collections['nfc-bindings'].products by 10 %}
+    {%- for item in collections['nfc-bindings'].products -%}
+
+      {%- assign nfc_ids = item.metafields.accentuate.nfc_prod_code | split: "|" -%}
+
+      {%- if nfc_ids != blank -%}
+
+        {%- for nfc_id in nfc_ids -%}
+          "{{ nfc_id }}":"{{ item.id }}"{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+        {%- unless forloop.last -%},{%- endunless -%}
+          
+      {%- endif -%}
+
+    {%- endfor -%}
+  {% endpaginate %}
+}
+
+{%- comment -%} 
+https://eu.unionbindingcompany.com/pages/finder-list?view=compare-others.json
+{%- endcomment -%}

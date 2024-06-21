@@ -2,7 +2,7 @@
 {
   {% paginate collections['nfc-snowboards'].products by 10 %}
     {%- for item in collections['nfc-snowboards'].products -%}
-
+ 
       {%- assign nfc_ids = item.metafields.accentuate.nfc_prod_code | split: "|" -%}
 
       {%- if nfc_ids != blank -%}

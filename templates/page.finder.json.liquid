@@ -1,0 +1,875 @@
+{% layout none %}
+{
+
+  {% assign sizes = "Men,Beginner,freeride$Men,Beginner,all-mountain--freestyle$Men,Beginner,all-mountain$Men,Beginner,street-and-jibbing$Men,Beginner,all-mountain--freeride$Men,Beginner,carving-boardercross$Men,Beginner,freestyle-park$Men,Beginner,splitboarding$Men,Intermediate,freeride$Men,Intermediate,all-mountain--freestyle$Men,Intermediate,all-mountain$Men,Intermediate,street-and-jibbing$Men,Intermediate,all-mountain--freeride$Men,Intermediate,carving-boardercross$Men,Intermediate,freestyle-park$Men,Intermediate,splitboarding$Men,Advanced,freeride$Men,Advanced,all-mountain--freestyle$Men,Advanced,all-mountain$Men,Advanced,street-and-jibbing$Men,Advanced,all-mountain--freeride$Men,Advanced,carving-boardercross$Men,Advanced,freestyle-park$Men,Advanced,splitboarding$Women,Beginner,freeride$Women,Beginner,all-mountain--freestyle$Women,Beginner,all-mountain$Women,Beginner,street-and-jibbing$Women,Beginner,all-mountain--freeride$Women,Beginner,carving-boardercross$Women,Beginner,freestyle-park$Women,Beginner,splitboarding$Women,Intermediate,freeride$Women,Intermediate,all-mountain--freestyle$Women,Intermediate,all-mountain$Women,Intermediate,street-and-jibbing$Women,Intermediate,all-mountain--freeride$Women,Intermediate,carving-boardercross$Women,Intermediate,freestyle-park$Women,Intermediate,splitboarding$Women,Advanced,freeride$Women,Advanced,all-mountain--freestyle$Women,Advanced,all-mountain$Women,Advanced,street-and-jibbing$Women,Advanced,all-mountain--freeride$Women,Advanced,carving-boardercross$Women,Advanced,freestyle-park$Women,Advanced,splitboarding$Kids,Beginner,freeride$Kids,Beginner,all-mountain--freestyle$Kids,Beginner,all-mountain$Kids,Beginner,street-and-jibbing$Kids,Beginner,all-mountain--freeride$Kids,Beginner,carving-boardercross$Kids,Beginner,freestyle-park$Kids,Beginner,splitboarding$Kids,Intermediate,freeride$Kids,Intermediate,all-mountain--freestyle$Kids,Intermediate,all-mountain$Kids,Intermediate,street-and-jibbing$Kids,Intermediate,all-mountain--freeride$Kids,Intermediate,carving-boardercross$Kids,Intermediate,freestyle-park$Kids,Intermediate,splitboarding$Kids,Advanced,freeride$Kids,Advanced,all-mountain--freestyle$Kids,Advanced,all-mountain$Kids,Advanced,street-and-jibbing$Kids,Advanced,all-mountain--freeride$Kids,Advanced,carving-boardercross$Kids,Advanced,freestyle-park$Kids,Advanced,splitboarding" | split: "$" %}
+
+  {% for size in sizes %}
+
+    {% if size == "Men,Beginner,freeride" %}
+
+          {% assign scelta1 = "mens-str-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-force-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Beginner,all-mountain--freestyle" %}
+
+          {% assign scelta1 = "mens-str-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-strata-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Beginner,all-mountain" %}
+
+          {% assign scelta1 = "mens-str-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-force-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Beginner,street-and-jibbing" %}
+
+          {% assign scelta1 = "mens-flite-pro-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-strata-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Beginner,all-mountain--freeride" %}
+
+          {% assign scelta1 = "mens-str-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-force-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Beginner,carving-boardercross" %}
+
+          {% assign scelta1 = "mens-str-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-force-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Beginner,freestyle-park" %}
+
+          {% assign scelta1 = "mens-flite-pro-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-strata-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Beginner,splitboarding" %}
+
+          {% assign scelta1 = "explorer-splitboard-binding-2024" | json %}
+          {% assign scelta2 = "charger-splitboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Intermediate,freeride" %}
+
+          {% assign scelta1 = "mens-ultra-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-force-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Intermediate,all-mountain--freestyle" %}
+
+          {% assign scelta1 = "mens-ultra-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-force-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Intermediate,all-mountain" %}
+
+          {% assign scelta1 = "mens-force-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "atlas-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Intermediate,street-and-jibbing" %}
+
+          {% assign scelta1 = "mens-strata-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-ultra-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Intermediate,all-mountain--freeride" %}
+
+          {% assign scelta1 = "atlas-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-falcor-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Intermediate,carving-boardercross" %}
+
+          {% assign scelta1 = "atlas-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-force-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Intermediate,freestyle-park" %}
+
+          {% assign scelta1 = "mens-strata-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-force-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Intermediate,splitboarding" %}
+
+          {% assign scelta1 = "charger-splitboard-binding-2024" | json %}
+          {% assign scelta2 = "charger-pro-splitboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Advanced,freeride" %}
+
+          {% assign scelta1 = "mens-falcor-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "atlas-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Advanced,all-mountain--freestyle" %}
+
+          {% assign scelta1 = "mens-ultra-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "atlas-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Advanced,all-mountain" %}
+
+          {% assign scelta1 = "atlas-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-force-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Advanced,street-and-jibbing" %}
+
+          {% assign scelta1 = "mens-ultra-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "mens-force-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Advanced,all-mountain--freeride" %}
+
+          {% assign scelta1 = "mens-falcor-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "atlas-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Advanced,carving-boardercross" %}
+
+          {% assign scelta1 = "atlas-fc-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "atlas-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Advanced,freestyle-park" %}
+
+          {% assign scelta1 = "mens-ultra-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "atlas-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Men,Advanced,splitboarding" %}
+
+          {% assign scelta1 = "charger-fc-splitboard-binding-2024" | json %}
+          {% assign scelta2 = "charger-pro-splitboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Beginner,freeride" %}
+
+          {% assign scelta1 = "womens-juliet-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-trilogy-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Beginner,all-mountain--freestyle" %}
+
+          {% assign scelta1 = "womens-rosa-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-juliet-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Beginner,all-mountain" %}
+
+          {% assign scelta1 = "womens-juliet-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-trilogy-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Beginner,street-and-jibbing" %}
+
+          {% assign scelta1 = "womens-rosa-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-ultra-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Beginner,all-mountain--freeride" %}
+
+          {% assign scelta1 = "womens-juliet-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-trilogy-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Beginner,carving-boardercross" %}
+
+          {% assign scelta1 = "womens-juliet-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-trilogy-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Beginner,freestyle-park" %}
+
+          {% assign scelta1 = "womens-rosa-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-juliet-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Beginner,splitboarding" %}
+
+          {% assign scelta1 = "charger-splitboard-binding-2024" | json %}
+          {% assign scelta2 = "charger-pro-splitboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Intermediate,freeride" %}
+
+          {% assign scelta1 = "womens-trilogy-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-juliet-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Intermediate,all-mountain--freestyle" %}
+
+          {% assign scelta1 = "womens-legacy-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-trilogy-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Intermediate,all-mountain" %}
+
+          {% assign scelta1 = "womens-trilogy-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-juliet-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Intermediate,street-and-jibbing" %}
+
+          {% assign scelta1 = "womens-ultra-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-legacy-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Intermediate,all-mountain--freeride" %}
+
+          {% assign scelta1 = "womens-trilogy-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-juliet-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Intermediate,carving-boardercross" %}
+
+          {% assign scelta1 = "womens-trilogy-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-juliet-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Intermediate,freestyle-park" %}
+
+          {% assign scelta1 = "womens-ultra-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-legacy-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Intermediate,splitboarding" %}
+
+          {% assign scelta1 = "charger-splitboard-binding-2024" | json %}
+          {% assign scelta2 = "charger-pro-splitboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Advanced,freeride" %}
+
+          {% assign scelta1 = "womens-trilogy-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-juliet-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Advanced,all-mountain--freestyle" %}
+
+          {% assign scelta1 = "womens-legacy-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-trilogy-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Advanced,all-mountain" %}
+
+          {% assign scelta1 = "womens-trilogy-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-legacy-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Advanced,street-and-jibbing" %}
+
+          {% assign scelta1 = "womens-legacy-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-ultra-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Advanced,all-mountain--freeride" %}
+
+          {% assign scelta1 = "womens-trilogy-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-juliet-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Advanced,carving-boardercross" %}
+
+          {% assign scelta1 = "womens-trilogy-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-juliet-union-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Advanced,freestyle-park" %}
+
+          {% assign scelta1 = "womens-legacy-union-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "womens-trilogy-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Women,Advanced,splitboarding" %}
+
+          {% assign scelta1 = "charger-fc-splitboard-binding-2024" | json %}
+          {% assign scelta2 = "charger-pro-splitboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Beginner,freeride" %}
+
+          {% assign scelta1 = "kids-cadet-mini-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Beginner,all-mountain--freestyle" %}
+
+          {% assign scelta1 = "kids-cadet-mini-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Beginner,all-mountain" %}
+
+          {% assign scelta1 = "kids-cadet-mini-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Beginner,street-and-jibbing" %}
+
+          {% assign scelta1 = "kids-cadet-mini-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Beginner,all-mountain--freeride" %}
+
+          {% assign scelta1 = "kids-cadet-mini-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Beginner,carving-boardercross" %}
+
+          {% assign scelta1 = "kids-cadet-mini-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Beginner,freestyle-park" %}
+
+          {% assign scelta1 = "kids-cadet-mini-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Beginner,splitboarding" %}
+
+          {% assign scelta1 = "kids-cadet-mini-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Intermediate,freeride" %}
+
+          {% assign scelta1 = "kids-cadet-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Intermediate,all-mountain--freestyle" %}
+
+          {% assign scelta1 = "kids-cadet-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Intermediate,all-mountain" %}
+
+          {% assign scelta1 = "kids-cadet-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Intermediate,street-and-jibbing" %}
+
+          {% assign scelta1 = "kids-cadet-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Intermediate,all-mountain--freeride" %}
+
+          {% assign scelta1 = "kids-cadet-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Intermediate,carving-boardercross" %}
+
+          {% assign scelta1 = "kids-cadet-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Intermediate,freestyle-park" %}
+
+          {% assign scelta1 = "kids-cadet-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Intermediate,splitboarding" %}
+
+          {% assign scelta1 = "kids-cadet-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Advanced,freeride" %}
+
+          {% assign scelta1 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Advanced,all-mountain--freestyle" %}
+
+          {% assign scelta1 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Advanced,all-mountain" %}
+
+          {% assign scelta1 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Advanced,street-and-jibbing" %}
+
+          {% assign scelta1 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Advanced,all-mountain--freeride" %}
+
+          {% assign scelta1 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Advanced,carving-boardercross" %}
+
+          {% assign scelta1 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Advanced,freestyle-park" %}
+
+          {% assign scelta1 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {% if size == "Kids,Advanced,splitboarding" %}
+
+          {% assign scelta1 = "kids-cadet-pro-snowboard-binding-2024" | json %}
+          {% assign scelta2 = "kids-cadet-snowboard-binding-2024" | json %}
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {{ size | json }}: {{comb}} {% unless forloop.last %},{% endunless %}
+
+  {% endfor %}
+}

@@ -32,6 +32,9 @@
 
     let size_selected = ""
 
+    sessionStorage.SessionName = "Step2"
+    sessionStorage.setItem("Step2","")
+
     let steps_json = {
         "step1": { // gender
             "status": false,
@@ -82,14 +85,33 @@
     }
 
     function finder_navigation_check() {
-        for (const [step_name, step] of Object.entries(steps_json)) {
-            let ff_current_step = document.querySelector(".ff-step[data-step='" + step_name + "']")
-            if (step.status) {
-                ff_current_step.classList.add("active")
-            } else {
-                ff_current_step.classList.remove("active")
-            }
+
+        document.querySelectorAll(".ff-step").forEach(ff_step => {
+            ff_step.classList.remove("active")
+        })
+
+        let step_check = document.querySelector(".finder-step:not(.hide)")
+        let step_check_num = step_check.getAttribute("data-step")
+
+        if (step_check_num == "step5") {
+            step_check_num = "step4"
         }
+        let ff_current_step = document.querySelector(".ff-step[data-step='" + step_check_num + "']")
+
+        ff_current_step.classList.add("active")
+
+        
+        // for (const [step_name, step] of Object.entries(steps_json)) {
+        //     let ff_current_step = document.querySelector(".ff-step[data-step='" + step_name + "']")
+        //     if (step.status) {  
+        //         document.querySelectorAll(".ff-step").forEach(ff_step => {
+        //             ff_step.classList.remove("active")
+        //         })
+        //         ff_current_step.classList.add("active")
+        //     } else {
+        //         ff_current_step.classList.remove("active")
+        //     }
+        // }
     }
 
     function finder_arrows_check() {
@@ -123,141 +145,89 @@
 
     }
 
-    function load_result() {
+    async function load_result() {
 
         let combination_to_search = steps_json.step1.value + "," + steps_json.step3.value + "," + steps_json.step4.value
 
         jsHeadResult.classList.remove("hide")
         jsHeadDefault.classList.add("hide")
 
-        console.log("Size: "+size_selected)
+        console.log(combination_to_search)
 
         // mini: cadet mini
         // xl: force
 
-        jQuery.get({
-            url: "/pages/finder-list?view=finder.json",
-            success: function (products_comb) {
+        let url_fetch = "/pages/dealers?view=finder.json"
 
-                var list_comb = JSON.parse(products_comb)
+        const response = await fetch(url_fetch);
+        const finder_res = await response.json();
 
-                for (var combination of Object.keys(list_comb)) {
+        console.log(finder_res)
+        console.log(JSON.stringify(finder_res)) 
 
-                    if (combination == combination_to_search) {
-                        var scelta1 = list_comb[combination][0]
-                        var scelta2 = list_comb[combination][1]
+        for (var combination of Object.keys(finder_res)) {
 
-                        let finderResults = document.querySelectorAll('.js-step5-value')
-                        console.log(scelta1,scelta2)
+            if (combination == combination_to_search) {
+                var scelta1 = finder_res[combination][0]
+                var scelta2 = finder_res[combination][1]
 
-                        // Forzo per kids mini un attacco
-                        if (size_selected == "Mini") {
-                            var scelta1 = "kids-cadet-mini-snowboard-binding-2024"
-                            var scelta2 = "kids-cadet-mini-snowboard-binding-2024"
-                        }
-                        // Forzo per man extra large un attacco
-                        if (size_selected == "Extra Large") {
-                            var scelta1 = "union-force-mens-snowboard-binding-2025"
-                            var scelta2 = "union-force-mens-snowboard-binding-2025"
-                        }
+                let finderResults = document.querySelectorAll('.js-step5-value')
+                console.log(scelta1,scelta2)
 
-                        let product1 = jQuery.getJSON('/products/'+scelta1+'.js', function(product) {
-
-                            // console.log(product)
-                            // console.log(finderResults[0])
-
-                            finderResults[0].querySelector(".js-fs-result-img").setAttribute("src", product.featured_image)
-                            finderResults[0].querySelector(".js-fs-result-title").innerHTML = product.title
-                            finderResults[0].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
-                            finderResults[0].querySelector(".js-fs-result-link").setAttribute("href", product.url)
-
-                        })
-
-                        let product2 = jQuery.getJSON('/products/'+scelta2+'.js', function(product) {
-
-                            // console.log(product)
-                            // console.log(finderResults[1])
-
-                            finderResults[1].querySelector(".js-fs-result-img").setAttribute("src", product.featured_image)
-                            finderResults[1].querySelector(".js-fs-result-title").innerHTML = product.title
-                            finderResults[1].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
-                            finderResults[1].querySelector(".js-fs-result-link").setAttribute("href", product.url)
-
-                        })
-
-                        Promise.all([product1, product2]).then(function(data){
-                            finderResults[0].classList.remove("hide")
-                            if ((size_selected != "Mini") && (size_selected != "Extra Large")) {
-                                finderResults[1].classList.remove("hide")
-                            }
-                            resultLoader.classList.add("hide")
-                        });
-
-                    }
-
+                // Forzo per kids mini un attacco
+                if (size_selected == "Mini") {
+                    var scelta1 = "kids-cadet-mini-snowboard-binding-2024"
+                    var scelta2 = "kids-cadet-mini-snowboard-binding-2024"
                 }
-            }
-        })
-    }
-
-    function size_num_hide_all() {
-        selectNums.forEach(selectNum => {
-            selectNum.classList.add("hide")
-        })
-    }
-
-    function reset_size() {
-        sizeType.value = ""
-        size_num_hide_all()
-        document.querySelector(".select-union--inactive").classList.remove("hide")
-
-        sizeFinderResults.forEach(sizeFinderResult => {
-            sizeFinderResult.classList.add("hide")
-        })
-        document.querySelector(".fs-size-result__box--empty").classList.remove("hide")
-    }
-
-    function calculate_size(combination_to_search) {
-
-        jQuery.get({
-            url: "/pages/finder-list?view=find-size.json",
-            success: function (sizes_list) {
-
-                var sizes_list_parse = JSON.parse(sizes_list)
-                let sizeResult__value
-                let size_find
-
-                for (var size_single of Object.keys(sizes_list_parse)) {
-
-                    sizes_list_parse[size_single].forEach((combination_single, cs) => {
-
-                        if (combination_to_search == combination_single) {
-
-                            sizeFinderResults.forEach((sizeFinderResult) => {
-
-                                sizeResult__value = sizeFinderResult.getAttribute("attr-value")
-
-                                if (sizeResult__value == size_single) {
-                                    sizeFinderResult.classList.remove("hide")
-                                    size_find = size_single
-                                    size_selected = size_single
-                                } else {
-                                    sizeFinderResult.classList.add("hide")
-                                }
-                            })
-
-                        }
-                    })
+                // Forzo per man extra large un attacco
+                if (size_selected == "Extra Large") {
+                    var scelta1 = "union-force-mens-snowboard-binding-2025"
+                    var scelta2 = "union-force-mens-snowboard-binding-2025"
                 }
 
-                finder_set_step("step2", true, size_find)
-                finder_navigation_check()
+
+
+                const response_scelta1 = await fetch('/products/'+scelta1+'.js');
+                const response_scelta1_json = await response_scelta1.json();
+
+                finderResults[0].querySelector(".js-fs-result-img").setAttribute("src", response_scelta1_json.featured_image)
+                finderResults[0].querySelector(".js-fs-result-title").innerHTML = response_scelta1_json.title
+                finderResults[0].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
+                finderResults[0].querySelector(".js-fs-result-link").setAttribute("href", response_scelta1_json.url)
+
+
+                const response_scelta2 = await fetch('/products/'+scelta2+'.js');
+                const response_scelta2_json = await response_scelta2.json();
+
+                finderResults[1].querySelector(".js-fs-result-img").setAttribute("src", response_scelta2_json.featured_image)
+                finderResults[1].querySelector(".js-fs-result-title").innerHTML = response_scelta2_json.title
+                finderResults[1].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
+                finderResults[1].querySelector(".js-fs-result-link").setAttribute("href", response_scelta2_json.url)
+
+                
+                finderResults[0].classList.remove("hide")
+                if ((size_selected != "Mini") && (size_selected != "Extra Large")) {
+                    finderResults[1].classList.remove("hide")
+                }
+                resultLoader.classList.add("hide")
 
             }
-        })
+
+        }
 
     }
 
+    function check_step_2() {
+
+        if (sessionStorage.getItem("Step2") != "") {
+            steps_json["step2"].status = true
+            steps_json["step2"].value = sessionStorage.getItem("Step2")
+        } else {
+            steps_json["step2"].status = false
+            steps_json["step2"].value = ""
+        }
+        finder_navigation_check()
+    }
 
     jsFfNext.addEventListener("click", function () {
         jsBtnNext.click()
@@ -278,6 +248,8 @@
             current_step_content.classList.add("hide")
             next_step_content.classList.remove("hide")
 
+            check_step_2()
+
         } else {
             // errore nello step corrente
             let error_current_step = document.querySelector(".finder-step[data-step='" + current_step + "']")
@@ -290,7 +262,6 @@
 
         finder_arrows_check()
 
-        console.log(steps_json)
     })
 
     jsFfPrev.addEventListener("click", function () {
@@ -326,20 +297,29 @@
 
                     let cat = step1value.getAttribute("data-cat")
                     step1value.classList.add("selected")
+                    jsSteps[1].setAttribute("gender",cat)
+
+                    // sistemo le oprions nello step 2 (mostro per gender)
+                    let gender_options = document.querySelectorAll(".js-fsm-box-select-size option:not([gender='none'])")
+                    gender_options.forEach(gender_option => {
+                        let gender_attr = gender_option.getAttribute("gender")
+                        if (gender_attr != cat) {
+                            gender_option.classList.add("hide")
+                        } else {
+                            gender_option.classList.remove("hide")
+                        }
+                    })
 
                     finder_set_step("step1", true, cat)
                     finder_change_next("active")
 
-                    finder_navigation_check()
-
-                    reset_size()
+                    // finder_navigation_check()
 
                 })
             })
         }
 
-        // STEP 2
-        check_size()
+        // STEP 2 - inside javascript section
 
         // STEP 3
         if (step3values) {
@@ -357,10 +337,7 @@
                     finder_set_step("step3", true, ablity)
                     finder_change_next("active")
 
-
-                    finder_navigation_check()
-
-                    // reset_size()
+                    // finder_navigation_check()
 
                 })
             })
@@ -429,7 +406,6 @@
 
                     riding_style_json[riding_style] = (Number(position_left_pin.replace("px", "")) / line_max_width) * 10
 
-                    console.log(riding_style_json)
 
 
                     if (riding_style_json["style-2"] < 3) {
@@ -481,7 +457,6 @@
                     */
 
                     finder_change_next("active")
-                    console.log(steps_json.step4.value)
 
 
 
@@ -498,8 +473,6 @@
                 }
 
                 selector_pin.onmousedown = dragMouseDown;
-
-
 
             })
 
@@ -521,66 +494,28 @@
         elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
     }
 
-    function check_size() {
 
-        let select_selected = document.querySelector(".select-union--inactive")
-        let select_selected__value
-        let gender = steps_json.step1.value
+    // step4 info boxes
+    let fs_styles = document.querySelectorAll(".fs-style")
 
-        sizeType.addEventListener("change", function () {
+    fs_styles.forEach(fs_style => {
+        
+        let info_style = fs_style.querySelector(".info-style")
+        let modal_style = fs_style.querySelector(".modal-fs-style")
 
-            let size = sizeType.value
-            gender = steps_json.step1.value
-
-            size_num_hide_all()
-
-            if (size) {
-
-                selectNums.forEach(selectNum => {
-
-                    let selectNum__gender = selectNum.getAttribute("attr-gender")
-                    let selectNum__type = selectNum.getAttribute("attr-type")
-
-                    let type_gender
-
-                    if (size == "us") {
-                        type_gender = "us-" + selectNum__gender.toLowerCase()
-                    } else {
-                        type_gender = selectNum__type
-                    }
-
-                    if ((selectNum__gender == gender) && (selectNum__type.includes(size))) {
-
-                        selectNum.classList.remove("hide")
-                        select_selected = selectNum
-
-                        select_selected.addEventListener("change", function () {
-                            select_selected__value = select_selected.value
-                            var combination_to_search = gender + "$" + type_gender + "$" + select_selected__value
-                            let calculate_result = calculate_size(combination_to_search)
-                            Promise.all([calculate_result]).then(function(data){
-                                console.log("promise?")
-                                
-                                finder_change_next("active")
-                            });
-                        })
-
-                    }
-
-                })
-
-
-
-
+        info_style.addEventListener("click", function() {
+    
+            if (modal_style.classList.contains("hide")) {
+                modal_style.classList.remove("hide")
             } else {
-                document.querySelector(".select-union--inactive").classList.remove("hide")
+                modal_style.classList.add("hide")
             }
-
+            document.addEventListener('click', e => {
+                if (!modal_style.contains(e.target) && !info_style.contains(e.target)) {
+                    modal_style.classList.add("hide")
+                }
+            });
         })
-
-        finder_change_next("hidden") // forzo di nuovo per via dell'async sullo step2
-
-    }
-
+    });
 
 })()

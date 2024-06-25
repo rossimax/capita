@@ -1,0 +1,292 @@
+<div class="country-site-selector">
+    <a class="country-site-selector__actual">
+        {{ localization.country | image_url: width: 32 | image_tag }} {{ localization.country.iso_code }}/{{ shop.locale | upcase }}
+    </a> 
+    {% include 'icon-chevron-down' %}
+
+    <div class="country-site-selector__other">
+
+      <div class="country-site-selector__other__content">
+        <div class="current-location">
+            <h5 class="small">Your Location</h5>
+            <div class="single-country small">
+                {% if localization.country.iso_code == "US" %}
+                    <a class="single-country__name small" href="/">
+                        {{ localization.country | image_url: width: 32 | image_tag }} {{ localization.country }}
+                    </a>
+                {% else %}
+                    <a class="single-country__name small" href="/{{ localization.country.available_languages[0].iso_code }}-{{ localization.country.iso_code | downcase }}">
+                        {{ localization.country | image_url: width: 32 | image_tag }} {{ localization.country }}
+                    </a>
+                {% endif %}
+                {% if localization.available_languages.size > 1 %}
+                    <div class="single-country__langs small">
+                        {% for av_lang in localization.available_languages %}
+                            <a class="single-country__langs__link" href="{{ av_lang.root_url }}">{{ av_lang.name }}</a> {% unless forloop.last %}|{% endunless -%}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <hr>
+        <div class="europe-location">
+            <h5 class="small">North America</h5>
+            {% for country in localization.available_countries -%}
+                <div class="single-country">
+
+                    {% if country.iso_code == "US" %}
+                        <a class="single-country__name small" href="/">
+                            {{ country | image_url: width: 32 | image_tag }}
+                            {{ country }}
+                        </a>
+                    {% else %}
+                        <a class="single-country__name small" href="/{{ country.available_languages[0].iso_code }}-{{ country.iso_code | downcase }}">
+                            {{ country | image_url: width: 32 | image_tag }}
+                            {{ country }}
+                        </a>
+                    {% endif %}
+                    
+                    {% if country.available_languages.size > 1 %}
+                        <div class="single-country__langs small">
+                            {% for av_lang in country.available_languages %}
+                                <a class="single-country__langs__link" href="/{{ av_lang.iso_code }}-{{ country.iso_code | downcase }}">{{ av_lang.name }}</a> {% unless forloop.last %}|{% endunless -%}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            {%- endfor %}
+        </div>
+        <hr>
+        <div class="europe-location">
+            <h5 class="small">Europe</h5>
+            <div class="single-country">
+                <a class="single-country__name small" href="https://eu.capitasnowboarding.com/pages/select-location">
+                    <img src="//cdn.shopify.com/static/images/flags/eu.svg?width=32" alt="Europe" srcset="//cdn.shopify.com/static/images/flags/eu.svg?width=32 32w" width="32" height="24">
+                    Select location in Europe
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div class="europe-location">
+            <h5 class="small">Asia</h5>
+            <div class="single-country">
+                <a class="single-country__name small" href="https://jp.capitasnowboarding.com/">
+                    <img src="//cdn.shopify.com/static/images/flags/jp.svg?width=32" alt="Japan" srcset="//cdn.shopify.com/static/images/flags/jp.svg?width=32 32w" width="32" height="24">
+                    Japan
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+</div> 
+
+
+{% style %}
+.current-location,
+.europe-location {
+    margin-bottom: 20px;
+}
+.top-bar-menu-right hr {
+    margin: 15px 0;
+}
+.single-country {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.single-country__name {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #000;
+}
+.single-country__name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.single-country__name img {
+    margin-right: 10px;
+}
+.single-country__langs {
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+}
+.top-bar-menu-right img {
+    max-height: 15px;
+    vertical-align: top;
+    margin-right: 7px;
+}
+.top-bar-menu-right .country-site-selector__actual {
+    padding: 1px 10px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+.single-country__langs__link {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+.top-bar-menu-right {
+    position: relative;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.top-bar-menu-right .country-site-selector {
+    padding-right: 10px;
+    border: none;
+    width: auto;
+}
+.top-bar-menu-right .country-site-selector svg {
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+.current-location h5 {
+    margin-bottom: 10px;
+}
+.country-site-selector__other__content h5 {
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.country-site-selector select {
+    background: transparent;
+    z-index: 1;
+    font-size: 12px;
+    color: #fff;
+    border: none;
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 24px;
+}
+.country-site-selector svg {
+    position: absolute;
+    right: 20px;
+}
+.country-site-selector {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+a.country-site-selector__actual {
+    display: flex;
+    align-items: center;
+}
+a.country-site-selector__actual img {
+    margin-right: 10px;
+    width: 25px;
+}
+.country-site-selector svg.icon.icon-chevron-down {
+    width: 12px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition-duration: 0.2s;
+    margin-top: -2px;
+    filter: invert(1);
+}
+.country-site-selector__other {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow-y: scroll;
+    z-index: -5;
+    transform: translateY(-30px);
+    transition-duration: 0.2s;
+    background-color: #fff;
+    padding: 30px 20px;
+    display: block;
+    text-align: left;
+    width: 360px;
+    border: 1px solid #dbdbdc;
+    max-height: 500px;
+}
+.country-site-selector {
+    cursor: pointer;
+    background: #ececec;
+    border-radius: 15px;
+    padding: 10px 10px 10px 20px;
+}
+.country-site-selector.opened .country-site-selector__other {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+    transition-duration: 0.2s;
+    z-index: 10;
+    height: auto;
+    background: #f7f7f7;
+}
+.country-site-selector__other::-webkit-scrollbar {
+    width: 5px;
+    margin: 5px;
+}
+.country-site-selector__other::-webkit-scrollbar-track {
+    background: transparent;
+}
+.country-site-selector__other::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+.country-site-selector__other::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.country-site-selector.opened svg.icon.icon-chevron-down {
+    transform: rotate(180deg);
+    transition-duration: 0.2s;
+}
+@media screen and (max-width: 768px) {
+    .country-site-selector {
+        width: 100%;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid #dfdfdf;
+        border-bottom: none;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+    .country-site-selector__actual {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+    .country-site-selector__actual img {
+        max-width: 20px;
+        margin-right: 10px;
+    }
+    .country-site-selector svg.icon.icon-chevron-down {
+        right: 16px;
+        transform: rotate(-90deg) !important;
+        display: block;
+        width: 14px !important;
+    }
+    .country-site-selector.opened svg.icon.icon-chevron-down {
+        transform: rotate(0deg) !important;
+    }
+    .country-site-selector__actual {
+        width: 100%;
+        font-size: 14px;
+    }
+    .country-site-selector__actual__flag {
+        display: flex;
+        align-items: center;
+    }
+    .country-site-selector__actual svg.icon.icon-plus {
+        width: 15px;
+    }
+    ul#MobileNav {
+        border-bottom: 1px solid #d3d3d3;
+    }
+}
+{% endstyle %}
+

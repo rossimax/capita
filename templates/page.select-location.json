@@ -17,7 +17,7 @@
       "settings": {
         "head_width": 100,
         "margin_top": 160,
-        "body_color": "#ffffff",
+        "body_color": "#f1f1f1",
         "footer_border": false,
         "enable_head": true,
         "title": "",

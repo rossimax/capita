@@ -86,23 +86,31 @@
 
 
 {% style %}
+.current-location,
+.europe-location {
+    margin-bottom: 20px;
+}
 .top-bar-menu-right hr {
     margin: 15px 0;
 }
 .single-country {
-    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 .single-country__name {
     display: flex;
     align-items: center;
     font-weight: 500;
     margin-bottom: 5px;
+    color: #000;
 }
 .single-country__name:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+.single-country__name img {
+    margin-right: 10px;
 }
 .single-country__langs {
     margin-left: 35px;
@@ -143,9 +151,13 @@
     top: 0;
     right: 0px;
 }
+.current-location h5 {
+    margin-bottom: 10px;
+}
 .country-site-selector__other__content h5 {
     font-weight: 500;
     color: #000;
+    margin-bottom: 10px;
 }
 
 .country-site-selector select {
@@ -160,7 +172,20 @@
 }
 .country-site-selector svg {
     position: absolute;
-    right: 7px;
+    right: 20px;
+}
+.country-site-selector {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+a.country-site-selector__actual {
+    display: flex;
+    align-items: center;
+}
+a.country-site-selector__actual img {
+    margin-right: 10px;
+    width: 25px;
 }
 .country-site-selector svg.icon.icon-chevron-down {
     width: 12px;
@@ -168,10 +193,11 @@
     transform: rotate(0deg);
     transition-duration: 0.2s;
     margin-top: -2px;
+    filter: invert(1);
 }
 .country-site-selector__other {
     position: absolute;
-    top: 20px;
+    bottom: 40px;
     right: 0;
     visibility: hidden;
     opacity: 0;
@@ -187,6 +213,12 @@
     width: 360px;
     border: 1px solid #dbdbdc;
     max-height: 500px;
+}
+.country-site-selector {
+    cursor: pointer;
+    background: #ececec;
+    border-radius: 15px;
+    padding: 10px 10px 10px 20px;
 }
 .country-site-selector.opened .country-site-selector__other {
     visibility: visible;
@@ -222,7 +254,7 @@
         border-right: none;
         border-top: 1px solid #dfdfdf;
         border-bottom: none;
-        padding: 10px 30px;
+        padding: 10px 20px;
         display: flex;
         align-items: center;
         justify-content: right;
@@ -246,8 +278,8 @@
         transform: rotate(0deg) !important;
     }
     .country-site-selector__actual {
-        justify-content: space-between;
-        padding: 10px 5px 10px 30px;
+        width: 100%;
+        font-size: 14px;
     }
     .country-site-selector__actual__flag {
         display: flex;
@@ -261,3 +293,4 @@
     }
 }
 {% endstyle %}
+

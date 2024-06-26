@@ -103,6 +103,7 @@
     align-items: center;
     font-weight: 500;
     margin-bottom: 5px;
+    font-size: 16px;
 }
 .single-country__name:hover {
     text-decoration: underline;
@@ -142,7 +143,9 @@
 }
 .select-location-content h5 {
     font-weight: 500;
-    color: #000;
+    color: #000;    
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .country-site-selector select {
@@ -155,7 +158,9 @@
     width: 100%;
     height: 24px;
 }
-
+.current-location h5 {
+    font-size: 20px;
+}
 
 @media screen and (max-width: 768px) {
     .country-site-selector {
@@ -189,6 +194,16 @@
     }
     h1.main-page-title.page-title.h0 {
         font-size: 28px;
+    }
+    .select-location-content h5 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .single-country__name {
+        font-size: 16px;
+    }
+    .template-select-location {
+        margin-top: 100px;
     }
 }
 {% endstyle %}

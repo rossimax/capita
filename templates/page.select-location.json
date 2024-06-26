@@ -16,7 +16,7 @@
       ],
       "settings": {
         "head_width": 100,
-        "margin_top": 200,
+        "margin_top": 160,
         "body_color": "#ffffff",
         "footer_border": false,
         "enable_head": true,

@@ -139,52 +139,67 @@
 {% endstyle %}
 
 
-{% comment %} {% javascript %}
+{% javascript %}
 
   (function (document) {
     let selectors = {
-      footerCurrencyCountry: '.c-footer__currency',
-
+    //   footerCurrencyCountry: '.c-footer__currency',
+      countrySiteSelector: '.country-site-selector',
     };
 
-    let footerCurrencyCountry = document.querySelector('.c-footer__currency');
+    // let footerCurrencyCountry = document.querySelector('.c-footer__currency');
+    // let footerCurrencyCountry__select = footerCurrencyCountry.querySelector("select")
+    // let footerCurrencyCountry__option_eu = footerCurrencyCountry.querySelector("select option[value='eu']")
+    // let footerCurrencyCountry__option_us = footerCurrencyCountry.querySelector("select option[value='us']")
 
-    let footerCurrencyCountry__select = footerCurrencyCountry.querySelector("select")
-    let footerCurrencyCountry__option_eu = footerCurrencyCountry.querySelector("select option[value='eu']")
-    let footerCurrencyCountry__option_us = footerCurrencyCountry.querySelector("select option[value='us']")
+    let countrySiteSelector = document.querySelector(selectors.countrySiteSelector);
 
     window.addEventListener('load', function () {
 
-        console.log(location.hostname)
-
+        /*
         if (location.hostname == 'eu.capitasnowboarding.com') {
 
-            footerCurrencyCountry__select.prepend(footerCurrencyCountry__option_eu)
-            footerCurrencyCountry__select.value = "eu"
+            if (footerCurrencyCountry__select) {
+                footerCurrencyCountry__select.prepend(footerCurrencyCountry__option_eu)
+                footerCurrencyCountry__select.value = "eu"
+            }
 
         } else if (location.hostname == 'capitasnowboarding.com') {
 
-            footerCurrencyCountry__select.prepend(footerCurrencyCountry__option_us)
-            footerCurrencyCountry__select.value = "us"
+            if (footerCurrencyCountry__select) {
+                footerCurrencyCountry__select.prepend(footerCurrencyCountry__option_us)
+                footerCurrencyCountry__select.value = "us"
+            }
 
         }
 
-        footerCurrencyCountry__select.addEventListener("change", (event) => {
-            
-            if (event.target.value == "eu" ) {
-                if (location.hostname == 'capitasnowboarding.com') {
-                    window.location.replace("https://eu.capitasnowboarding.com");
+        if (footerCurrencyCountry__select) {
+            footerCurrencyCountry__select.addEventListener("change", (event) => {
+                
+                if (event.target.value == "eu" ) {
+                    if (location.hostname == 'capitasnowboarding.com') {
+                        window.location.replace("https://eu.capitasnowboarding.com");
+                    }
+                } else if (event.target.value == "us" ) {
+                    if (location.hostname == 'eu.capitasnowboarding.com') {
+                        window.location.replace("https://capitasnowboarding.com");
+                    }
                 }
-            } else if (event.target.value == "us" ) {
-                if (location.hostname == 'eu.capitasnowboarding.com') {
-                    window.location.replace("https://capitasnowboarding.com");
-                }
-            }
-        });
+            });
+        }
+        */
 
+
+        countrySiteSelector.addEventListener("click", function() {
+            if (countrySiteSelector.classList.contains("opened")) {
+                countrySiteSelector.classList.remove("opened")
+            } else {
+                countrySiteSelector.classList.add("opened")
+            }
+        })
 
     })
 
   })(document);
 
-{% endjavascript %} {% endcomment %}
+{% endjavascript %}

@@ -151,7 +151,7 @@
     let selectors = {
     //   footerCurrencyCountry: '.c-footer__currency',
     countrySiteSelector: '.country-site-selector',
-    countrySiteSelectorModal: '.country-site-selector__other',
+    // countrySiteSelectorModal: '.country-site-selector__other',
 };
 
     // let footerCurrencyCountry = document.querySelector('.c-footer__currency');
@@ -160,7 +160,7 @@
     // let footerCurrencyCountry__option_us = footerCurrencyCountry.querySelector("select option[value='us']")
 
     let countrySiteSelector = document.querySelector(selectors.countrySiteSelector);
-    let countrySiteSelectorModal = document.querySelector(selectors.countrySiteSelectorModal);
+    // let countrySiteSelectorModal = document.querySelector(selectors.countrySiteSelectorModal);
 
     window.addEventListener('load', function () {
 
@@ -205,11 +205,11 @@
                 countrySiteSelector.classList.add("opened")
             }
         })
-        document.addEventListener('click', e => {
-            if (!countrySiteSelectorModal.contains(e.target)) {
-                countrySiteSelector.classList.remove("opened")
-            }
-        });
+        // document.addEventListener('click', e => {
+        //     if (!countrySiteSelectorModal.contains(e.target)) {
+        //         countrySiteSelector.classList.remove("opened")
+        //     }
+        // });
 
     })
 

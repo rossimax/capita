@@ -216,6 +216,17 @@
         </a>
         <div class="c-header-menu__line"></div>
       </div>
+      <div
+        class="c-header__dropdown-panel c-header-menu only-mob"
+      >
+        <a
+          class="c-header-menu__parent"
+          href="/pages/select-location"
+          > 
+          <div class="c-header-menu__country">{{ localization.country | image_url: width: 32 | image_tag }} {{ localization.country.iso_code }}/{{ shop.locale | upcase }}</div>
+        </a>
+        <div class="c-header-menu__line"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -289,6 +300,14 @@
   }
   .cart-count.hide {
     display: none;
+  }
+  .c-header-menu__country {
+    display: flex;
+    align-items: center;
+  }
+  .c-header-menu__country img {
+    display: block;
+    margin-right: 10px;
   }
 {% endstyle %}
 

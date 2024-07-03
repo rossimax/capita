@@ -513,6 +513,7 @@ span.all-sold-out {
   border-radius: 30px;
   height: 65px;
   min-width: 340px;
+  line-height: 1;
 }
 .c-product-info__add-to-cart {
   cursor: pointer;

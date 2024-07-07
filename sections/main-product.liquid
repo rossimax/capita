@@ -84,6 +84,16 @@
             <div class="c-product__thumbs-slider swiper js-product-slider-thumbs">
               <div class="swiper-wrapper">
                 {% for media in product.media %}
+
+                  {% if forloop.index == 2 %}
+                    {% assign slider_images = product.metafields.accentuate.slider_image %}
+                    {% for slider_image in slider_images %}
+                      <div class="swiper-slide swiper-slide--extra">
+                        <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+
                   {%- assign img_url = media | image_url: width: 1024 -%}
                   {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
                   <div
@@ -121,8 +131,6 @@
             </button>
             <div class="swiper-wrapper">
               {% for media in product.media %}
-                {%- assign img_url = media | image_url: width: 1024 -%}
-                {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
 
                 {% if forloop.index == 2 %}
                   {% assign slider_images = product.metafields.accentuate.slider_image %}
@@ -132,6 +140,9 @@
                     </div>
                   {% endfor %}
                 {% endif %}
+
+                {%- assign img_url = media | image_url: width: 1024 -%}
+                {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
 
                 <div class="swiper-slide" attr-img-url="{{ img_url__attr }}" attr-num="{{ forloop.index0 }}">
                   <img src="{{ img_url }}" alt="{{ product.title | strip_html }}">

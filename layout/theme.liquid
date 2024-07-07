@@ -53,7 +53,11 @@
     <link rel="stylesheet" type="text/css" href="{{ 'fonts.css' | asset_url }}"> 
     
     <link rel="stylesheet" type="text/css" href="{{ 'defaults.css' | asset_url }}">
-    
+
+    {% if page.handle == "springbreak" %}
+      <link rel="stylesheet" href="{{ 'springbreak.css' | asset_url }}">
+    {% endif %}
+      
     {{ content_for_header }}
 
     {%- liquid
@@ -325,6 +329,7 @@
   	{% if content_for_header contains 'upsell-now.herokuapp.com' %}{% render 'upsell-now', customer: customer, product: product, template: template, cart: cart %}{% endif %}
 
     {% include 'country-popup' %}
+    {% section 'find-my-size' %}
 
     {% comment %} START - custom script {% endcomment %}
     {%- if settings.script_pre_body_close -%}

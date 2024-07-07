@@ -82,14 +82,15 @@
                             d="M7.988 9.586V3.974c1.993.938 3.536 1.843 5.36 2.82-1.505.834-3.367 1.77-5.36 2.792m11.103-8.403c-.344-.453-.93-.805-1.553-.922-1.833-.348-13.267-.349-15.099 0-.5.094-.945.32-1.328.673C-.5 2.429.005 10.452.393 11.75c.164.562.375.968.64 1.235.343.352.812.594 1.351.703 1.51.312 9.284.486 15.122.047a2.62 2.62 0 0 0 1.39-.712c1.49-1.49 1.388-9.962.195-11.841">
                         </path>
                     </svg></a></div>
-            <div class="c-footer__currency">
-                <select>
-                    <option value="us" select="select">NORTH AMERICA</option>
-                    <option value="eu">EUROPE</option>
-                </select>
-
-                {% include 'localization-countries' %}
-            </div>
+                    <div class="c-footer__currency">
+                        {% include "location" %}
+                        {% comment %} <select>
+                            <option value="us" select="select">NORTH AMERICA</option>
+                            <option value="eu">EUROPE</option>
+                        </select>
+        
+                        {% include 'localization-countries' %} {% endcomment %}
+                    </div>
             <span class="c-footer__legal">    
             {%- if settings.footer_legal -%}
                 {{ settings.footer_legal }}
@@ -135,6 +136,12 @@
     font-size: 12px;
     line-height: 1;
 }
+@media screen and (min-width: 40em) {
+    .c-footer__currency {
+        grid-gap: unset;
+        grid-template-columns: unset;
+    }
+}
 {% endstyle %}
 
 
@@ -142,45 +149,67 @@
 
   (function (document) {
     let selectors = {
-      footerCurrencyCountry: '.c-footer__currency',
+    //   footerCurrencyCountry: '.c-footer__currency',
+    countrySiteSelector: '.country-site-selector',
+    countrySiteSelectorModal: '.country-site-selector__other',
+};
 
-    };
+    // let footerCurrencyCountry = document.querySelector('.c-footer__currency');
+    // let footerCurrencyCountry__select = footerCurrencyCountry.querySelector("select")
+    // let footerCurrencyCountry__option_eu = footerCurrencyCountry.querySelector("select option[value='eu']")
+    // let footerCurrencyCountry__option_us = footerCurrencyCountry.querySelector("select option[value='us']")
 
-    let footerCurrencyCountry = document.querySelector('.c-footer__currency');
-
-    let footerCurrencyCountry__select = footerCurrencyCountry.querySelector("select")
-    let footerCurrencyCountry__option_eu = footerCurrencyCountry.querySelector("select option[value='eu']")
-    let footerCurrencyCountry__option_us = footerCurrencyCountry.querySelector("select option[value='us']")
+    let countrySiteSelector = document.querySelector(selectors.countrySiteSelector);
+    let countrySiteSelectorModal = document.querySelector(selectors.countrySiteSelectorModal);
 
     window.addEventListener('load', function () {
 
-        console.log(location.hostname)
-
+        /*
         if (location.hostname == 'eu.capitasnowboarding.com') {
 
-            footerCurrencyCountry__select.prepend(footerCurrencyCountry__option_eu)
-            footerCurrencyCountry__select.value = "eu"
+            if (footerCurrencyCountry__select) {
+                footerCurrencyCountry__select.prepend(footerCurrencyCountry__option_eu)
+                footerCurrencyCountry__select.value = "eu"
+            }
 
         } else if (location.hostname == 'capitasnowboarding.com') {
 
-            footerCurrencyCountry__select.prepend(footerCurrencyCountry__option_us)
-            footerCurrencyCountry__select.value = "us"
+            if (footerCurrencyCountry__select) {
+                footerCurrencyCountry__select.prepend(footerCurrencyCountry__option_us)
+                footerCurrencyCountry__select.value = "us"
+            }
 
         }
 
-        footerCurrencyCountry__select.addEventListener("change", (event) => {
-            
-            if (event.target.value == "eu" ) {
-                if (location.hostname == 'capitasnowboarding.com') {
-                    window.location.replace("https://eu.capitasnowboarding.com");
+        if (footerCurrencyCountry__select) {
+            footerCurrencyCountry__select.addEventListener("change", (event) => {
+                
+                if (event.target.value == "eu" ) {
+                    if (location.hostname == 'capitasnowboarding.com') {
+                        window.location.replace("https://eu.capitasnowboarding.com");
+                    }
+                } else if (event.target.value == "us" ) {
+                    if (location.hostname == 'eu.capitasnowboarding.com') {
+                        window.location.replace("https://capitasnowboarding.com");
+                    }
                 }
-            } else if (event.target.value == "us" ) {
-                if (location.hostname == 'eu.capitasnowboarding.com') {
-                    window.location.replace("https://capitasnowboarding.com");
-                }
+            });
+        }
+        */
+
+
+        countrySiteSelector.addEventListener("click", function() {
+            if (countrySiteSelector.classList.contains("opened")) {
+                countrySiteSelector.classList.remove("opened")
+            } else {
+                countrySiteSelector.classList.add("opened")
+            }
+        })
+        document.addEventListener('click', e => {
+            if (!countrySiteSelectorModal.contains(e.target) && !countrySiteSelector.contains(e.target)) {
+                countrySiteSelector.classList.remove("opened")
             }
         });
-
 
     })
 

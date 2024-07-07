@@ -1766,6 +1766,14 @@
   .c-product-info__sizes {
     position: relative;
   }
+  .open-find-my-size {
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: underline;
+    margin-top: 10px;
+    display: block;
+    cursor: pointer;
+  }
   .border-error {
     position: absolute;
     width: calc(100% + 10px);
@@ -1783,6 +1791,9 @@
     transition-duration: 0.2s;
     opacity: 0;
     visibility: hidden;
+  }
+  .c-hexagon { 
+    margin-top: 60px;
   }
   .c-hexagon__label.o-text.is-4 {
     position: absolute;
@@ -1833,27 +1844,44 @@
           specExagon: '.js-hexagon',
           showExagon: '.js-show-exagon',
           showLines: '.js-show-lines',
+          openFindMySize: '.js-open-find-my-size',
+          findMySizeContainer: '.find-my-size-container',
         };
 
         let specLines = document.querySelectorAll(selectors.specLines);
         let specExagon = document.querySelector(selectors.specExagon);
         let showExagon = document.querySelector(selectors.showExagon);
         let showLines = document.querySelector(selectors.showLines);
+        let openFindMySize = document.querySelector(selectors.openFindMySize);
+        let findMySizeContainer = document.querySelector(selectors.findMySizeContainer);
 
-        showExagon.addEventListener("click", function(){
-          console.log("showExagon")
-          specLines.forEach((specLine) => {
-            specLine.classList.add("hide")
-          })
-          specExagon.classList.remove("hide")
-        })
+        window.addEventListener("load", function(){
 
-        showLines.addEventListener("click", function(){
-          console.log("showLines")
-          specLines.forEach((specLine) => {
-            specLine.classList.remove("hide")
-          })
-          specExagon.classList.add("hide")
+          if (showExagon) {
+            showExagon.addEventListener("click", function(){
+              console.log("showExagon")
+              specLines.forEach((specLine) => {
+                specLine.classList.add("hide")
+              })
+              specExagon.classList.remove("hide")
+            })
+          }
+
+          if (showLines) {
+            showLines.addEventListener("click", function(){
+              console.log("showLines")
+              specLines.forEach((specLine) => {
+                specLine.classList.remove("hide")
+              })
+              specExagon.classList.add("hide")
+            })
+          }
+
+          if (openFindMySize) {
+            openFindMySize.addEventListener("click", function(){
+              findMySizeContainer.classList.remove("hide")
+            })
+          }
         })
 
     })();

@@ -1,0 +1,1050 @@
+{% assign gender = "unset" %}
+{% assign gender_text = "unset" %}
+{% for tag in product.tags %}
+    {% if tag == "Men's" %}
+        {% assign gender = "men" %}
+        {% assign gender_text = "Men's" %}
+    {% elsif tag == "Women's" %}
+        {% assign gender = "women" %}
+        {% assign gender_text = "Women's" %}
+    {% elsif tag == "Youth" %}
+        {% assign gender = "kid" %}
+        {% assign gender_text = "Kid's" %}
+    {% endif %}
+{% endfor %}
+
+{% if request.origin == "https://capitasnowboarding.com" %}
+    {% assign origin_class = "find-my-size-container--us" %}
+{% else %}
+    {% assign origin_class = "find-my-size-container--eu" %}
+{% endif %}
+
+<div class="find-my-size-container hide {{ origin_class }}" data-gender="{{ gender }}">
+    <div class="find-my-size">
+        <div class="fms-close">{% include "close-round" %}</div>
+        <div class="fms-reload hide">{% include "reload-round" %}</div>
+        <div class="fms-content" data-step="1">
+
+            <h5>SIZE FINDER</h5>
+            <h2 class="o-text is-2">{{ product.title }}</h2>
+
+            <h4>Enter your information:</h4>
+
+            <div class="fsm-box">
+                <div class="fsm-box-text">Your Height:</div>
+                <div class="fsm-box-radio" data-select="height">
+
+                    {% if request.origin == "https://capitasnowboarding.com" %}
+                        <span data-type="in">ft</span>
+                        <span data-type="cm">cm</span>
+                    {% else %}
+                        <span data-type="cm">cm</span>
+                        <span data-type="in">ft</span>
+                    {% endif %}
+
+                    <span class="selector-radio"></span>
+                </div>
+                <div class="fsm-box-select js-fsm-box-select-height" data-select="height">
+
+                    <select {% if request.origin == "https://eu.capitasnowboarding.com" %}class="hide"{% endif %} data-type="in">
+                        <option>SELECT</option>
+                        <option value="140 - 143">4' 7" - 4' 8"</option>
+                        <option value="144 - 147">4' 9" - 4' 10"</option>
+                        <option value="148 - 151">4' 10" - 4' 11"</option>
+                        <option value="152 - 155">5' - 5' 1"</option>
+                        <option value="156 - 159">5' 2" - 5' 3"</option>
+                        <option value="160 - 163">5' 3" - 5' 4"</option>
+                        <option value="164 - 167">5' 5" - 5' 6"</option>
+                        <option value="168 - 171">5' 6" - 5' 7"</option>
+                        <option value="172 - 175">5' 8" - 5' 9"</option>
+                        <option value="176 - 179">5' 9" - 5' 10"</option>
+                        <option value="180 - 183">5' 11" - 6'</option>
+                        <option value="184 - 187">6' - 6' 2"</option>
+                        <option value="188 - 191">6' 2" - 6' 3"</option>
+                        <option value="192 - 195">6' 4" - 6' 5"</option>
+                        <option value="196 - 199">6' 5" - 6' 6"</option>
+                        <option value="200 - 203">6' 7" - 6' 9"</option>
+                    </select>
+
+                    <select {% if request.origin == "https://capitasnowboarding.com" %}class="hide"{% endif %} data-type="cm">
+                        <option>SELECT</option>
+                        <option value="140 - 143">140 - 143</option>
+                        <option value="144 - 147">144 - 147</option>
+                        <option value="148 - 151">148 - 151</option>
+                        <option value="152 - 155">152 - 155</option>
+                        <option value="156 - 159">156 - 159</option>
+                        <option value="160 - 163">160 - 163</option>
+                        <option value="164 - 167">164 - 167</option>
+                        <option value="168 - 171">168 - 171</option>
+                        <option value="172 - 175">172 - 175</option>
+                        <option value="176 - 179">176 - 179</option>
+                        <option value="180 - 183">180 - 183</option>
+                        <option value="184 - 187">184 - 187</option>
+                        <option value="188 - 191">188 - 191</option>
+                        <option value="192 - 195">192 - 195</option>
+                        <option value="196 - 199">196 - 199</option>
+                        <option value="200 - 203">200 - 203</option>
+                    </select>
+
+                </div>
+            </div>
+
+            {% comment %} <div class="fsm-box">
+                <div class="fsm-box-text">Your Weight:</div>
+                <div class="fsm-box-radio" data-select="weight">
+                    <span data-type="kg">kg</span>
+                    <span data-type="lb">lb</span>
+                    <span class="selector-radio"></span>
+                </div>
+                <div class="fsm-box-select" data-select="weight">
+                    <select data-type="kg">
+                        <option value="w1" selected>50kg</option>
+                        <option value="w2">60kg</option>
+                    </select>
+                    <select class="hide" data-type="lb">
+                        <option value="w1" selected>30lb</option>
+                        <option value="w2">40lb</option>
+                    </select>
+                </div>
+            </div> {% endcomment %}
+
+            <div class="fsm-box">
+                <div class="fsm-box-text">Boot Size:</div>
+
+                <div class="fsm-box-radio" data-select="size">
+                    {% if request.origin == "https://capitasnowboarding.com" %}
+                        <span data-type="US">US</span>
+                        <span data-type="EU">EU</span>
+                    {% else %}
+                        <span data-type="EU">EU</span>
+                        <span data-type="US">US</span>
+                    {% endif %}
+
+                    <span class="selector-radio"></span>
+                </div>
+                <div class="fsm-box-select js-fsm-box-select-size" data-select="size">
+                    <select id="fsm-box-select-us" {% if request.origin == "https://eu.capitasnowboarding.com" %}class="hide"{% endif %} data-type="US">
+                        <option>SELECT</option>
+
+                        {% if gender == "men" %}
+                            <option value="36">{{ gender_text }} US 4</option>
+                            <option value="36.5">{{ gender_text }} US 4.5</option>
+                            <option value="37.5">{{ gender_text }} US 5</option>
+                            <option value="38">{{ gender_text }} US 5.5</option>
+                            <option value="38.5">{{ gender_text }} US 6</option>
+                            <option value="39">{{ gender_text }} US 6.5</option>
+                            <option value="40">{{ gender_text }} US 7</option>
+                            <option value="40.5">{{ gender_text }} US 7.5</option>
+                            <option value="41">{{ gender_text }} US 8</option>
+                            <option value="42">{{ gender_text }} US 8.5</option>
+                            <option value="42.5">{{ gender_text }} US 9</option>
+                            <option value="43">{{ gender_text }} US 9.5</option>
+                            <option value="44">{{ gender_text }} US 10</option>
+                            <option value="44.5">{{ gender_text }} US 10.5</option>
+                            <option value="45">{{ gender_text }} US 11</option>
+                            <option value="45.5">{{ gender_text }} US 11.5</option>
+                            <option value="46">{{ gender_text }} US 12</option>
+                            <option value="47">{{ gender_text }} US 12.5</option>
+                            <option value="47.5+">{{ gender_text }} US 13</option>
+                        {% elsif gender == "women"%}
+                            <option value="32">{{ gender_text }} US -</option>
+                            <option value="33">{{ gender_text }} US 3</option>
+                            <option value="33.5">{{ gender_text }} US 3.5</option>
+                            <option value="34">{{ gender_text }} US 4</option>
+                            <option value="35">{{ gender_text }} US 4.5</option>
+                            <option value="35.5">{{ gender_text }} US 5</option>
+                            <option value="36">{{ gender_text }} US 5.5</option>
+                            <option value="36.5">{{ gender_text }} US 6</option>
+                            <option value="37.5">{{ gender_text }} US 6.5</option>
+                            <option value="38">{{ gender_text }} US 7</option>
+                            <option value="38.5">{{ gender_text }} US 7.5</option>
+                            <option value="39">{{ gender_text }} US 8</option>
+                            <option value="40">{{ gender_text }} US 8.5</option>
+                            <option value="40.5">{{ gender_text }} US 9</option>
+                            <option value="41">{{ gender_text }} US 9.5</option>
+                            <option value="42">{{ gender_text }} US 10</option>
+                            <option value="42.5">{{ gender_text }} US 10.5</option>
+                            <option value="43">{{ gender_text }} US 11</option>
+                            <option value="44">{{ gender_text }} US 11.5</option>
+                            <option value="44.5">{{ gender_text }} US 12</option>
+                            <option value="45">{{ gender_text }} US 12.5</option>
+                            <option value="45.5">{{ gender_text }} US 13</option>
+                            <option value="46">{{ gender_text }} US 13.5</option>
+                            <option value="47">{{ gender_text }} US 14</option>
+                            <option value="47.5+">{{ gender_text }} US 14.5+</option>
+                        {% elsif gender == "kid" %}
+                            <option value="27.5">{{ gender_text }} 10C</option>
+                            <option value="28">{{ gender_text }} US 11C</option>
+                            <option value="29.5">{{ gender_text }} US 12C</option>
+                            <option value="31">{{ gender_text }} US 13C</option>
+                            <option value="32">{{ gender_text }} US 1Y</option>
+                            <option value="33">{{ gender_text }} US 1.5Y</option>
+                            <option value="33.5">{{ gender_text }} US 2Y</option>
+                            <option value="34">{{ gender_text }} US 2.5Y</option>
+                            <option value="35">{{ gender_text }} US 3Y</option>
+                            <option value="35.5">{{ gender_text }} US 3.5Y</option>
+                            <option value="36">{{ gender_text }} US 4Y</option>
+                            <option value="36.5">{{ gender_text }} US 4.5Y</option>
+                            <option value="37.5">{{ gender_text }} US 5Y</option>
+                            <option value="38">{{ gender_text }} US 5.5Y</option>
+                            <option value="38.5">{{ gender_text }} US 6Y</option>
+                            <option value="39">{{ gender_text }} US 6.5Y</option>
+                            <option value="40">{{ gender_text }} US 7Y</option>
+                        {% endif %}
+                        
+                    </select>
+                    <select id="fsm-box-select-eu" {% if request.origin == "https://capitasnowboarding.com" %}class="hide"{% endif %} data-type="EU">
+                        <option>SELECT</option>
+
+                        {% if gender == "men" %}
+                            <option value="36">{{ gender_text }} EU 36</option>
+                            <option value="36.5">{{ gender_text }} EU 36.5</option>
+                            <option value="37.5">{{ gender_text }} EU 37.5</option>
+                            <option value="38">{{ gender_text }} EU 38</option>
+                            <option value="38.5">{{ gender_text }} EU 38.5</option>
+                            <option value="39">{{ gender_text }} EU 39</option>
+                            <option value="40">{{ gender_text }} EU 40</option>
+                            <option value="40.5">{{ gender_text }} EU 40.5</option>
+                            <option value="41">{{ gender_text }} EU 41</option>
+                            <option value="42">{{ gender_text }} EU 42</option>
+                            <option value="42.5">{{ gender_text }} EU 42.5</option>
+                            <option value="43">{{ gender_text }} EU 43</option>
+                            <option value="44">{{ gender_text }} EU 44</option>
+                            <option value="44.5">{{ gender_text }} EU 44.5</option>
+                            <option value="45">{{ gender_text }} EU 45</option>
+                            <option value="45.5">{{ gender_text }} EU 45.5</option>
+                            <option value="46">{{ gender_text }} EU 46</option>
+                            <option value="47">{{ gender_text }} EU 47</option>
+                            <option value="47.5+">{{ gender_text }} EU 47.5+</option>
+                        {% elsif gender == "women"%}
+                            <option value="32">{{ gender_text }} EU 32</option>
+                            <option value="33">{{ gender_text }} EU 33</option>
+                            <option value="33.5">{{ gender_text }} EU 33.5</option>
+                            <option value="34">{{ gender_text }} EU 34</option>
+                            <option value="35">{{ gender_text }} EU 35</option>
+                            <option value="35.5">{{ gender_text }} EU 35.5</option>
+                            <option value="36">{{ gender_text }} EU 36</option>
+                            <option value="36.5">{{ gender_text }} EU 36.5</option>
+                            <option value="37.5">{{ gender_text }} EU 37.5</option>
+                            <option value="38">{{ gender_text }} EU 38</option>
+                            <option value="38.5">{{ gender_text }} EU 38.5</option>
+                            <option value="39">{{ gender_text }} EU 39</option>
+                            <option value="40">{{ gender_text }} EU 40</option>
+                            <option value="40.5">{{ gender_text }} EU 40.5</option>
+                            <option value="41">{{ gender_text }} EU 41</option>
+                            <option value="42">{{ gender_text }} EU 42</option>
+                            <option value="42.5">{{ gender_text }} EU 42.5</option>
+                            <option value="43">{{ gender_text }} EU 43</option>
+                            <option value="44">{{ gender_text }} EU 44</option>
+                            <option value="44.5">{{ gender_text }} EU 44.5</option>
+                            <option value="45">{{ gender_text }} EU 45</option>
+                            <option value="45.5">{{ gender_text }} EU 45.5</option>
+                            <option value="46">{{ gender_text }} EU 46</option>
+                            <option value="47">{{ gender_text }} EU 47</option>
+                            <option value="47.5+">{{ gender_text }} EU 47.5+</option>
+                        {% elsif gender == "kid" %}
+                            <option value="27.5">{{ gender_text }} 27.5</option>
+                            <option value="28">{{ gender_text }} EU 28</option>
+                            <option value="29.5">{{ gender_text }} EU 29.5</option>
+                            <option value="31">{{ gender_text }} EU 31</option>
+                            <option value="32">{{ gender_text }} EU 32</option>
+                            <option value="33">{{ gender_text }} EU 33</option>
+                            <option value="33.5">{{ gender_text }} EU 33.5</option>
+                            <option value="34">{{ gender_text }} EU 34</option>
+                            <option value="35">{{ gender_text }} EU 35</option>
+                            <option value="35.5">{{ gender_text }} EU 35.5</option>
+                            <option value="36">{{ gender_text }} EU 36</option>
+                            <option value="36.5">{{ gender_text }} EU 36.5</option>
+                            <option value="37.5">{{ gender_text }} EU 37.5</option>
+                            <option value="38">{{ gender_text }} EU 38</option>
+                            <option value="38.5">{{ gender_text }} EU 38.5</option>
+                            <option value="39">{{ gender_text }} EU 39</option>
+                            <option value="40">{{ gender_text }} EU 40</option>
+                        {% endif %}
+                    </select>
+                </div>
+
+            </div>
+
+            <span class="fsm-alert js-alert hidden">SELECTION REQUIRED</span>
+            <button class="o-btn is-big btn-findmysize">FIND MY SIZE</button>
+
+        </div>
+
+        <div class="fms-content hide" data-step="2">
+
+            <div class="fms-content-result js-result-fms">
+
+                <div class="fsm-result-head">
+                    <h5>SIZE FINDER</h5>
+                    <h2 class="o-text is-2">{{ product.title }}</h2>
+                </div>
+
+                <div class="fsm-result-content">
+                    {% comment %} <h4>The best choices for you are:</h4> {% endcomment %}
+                    <div class="fsm-paragraph">According to our super-advanced algorithm, below you will find the recommended sizes for you.<br/><br/>
+
+                    For a more freestyle-oriented setup with enhanced maneuverability for spins, butters, and jibs, consider sizing down. This option is also suitable for beginners seeking worry-free control.<br/><br/>
+                    
+                    Alternatively, if you prefer a more aggressive ride with stability at high speeds and bigger airs, sizing up would be the better choice.</div>
+                </div>
+                
+                
+                <div class="fsm-result-data">
+
+                    <h3>These are the best choices for you. <br/>SELECT YOUR SIZE</h3>
+
+                    <hr/>
+
+                    {% unless product.has_only_default_variant %}
+                        {% for option in product.options_with_values %}
+                            {% assign option_name = option.name | downcase %}
+                            {% if option_name == "size" %}
+                                <div class="c-product-info__sizes">
+                                  <div class="border-error js-border-notification hidden"></div>
+                                    {% for variant in product.variants %}
+                                        <div class="hide c-product-info__size js-product-variant-fms {%- if variant.available == false %} is-disabled{% endif %}" for="{{ variant.id }}" data-index="{{ forloop.index0 }}" data-title="{{ variant.title }}">
+                                            <input 
+                                                style="visibility:hidden;opacity:0;height:0;width:0;padding:0;margin:0;" 
+                                                type="radio" 
+                                                name="{{ option.name }}" 
+                                                id="{{ variant.id }}" 
+                                                variant-id="{{ variant.id }}" 
+                                                attr-img="{{ variant.image | image_url: width: 100, height: 100 }}" 
+                                                value="{{ variant.title | escape }}"
+                                                >
+                                                <span>{{ variant.title }}</span>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endunless %}
+
+                    {% comment %} <div class="fsm-result-products">
+                        <div class="fsm-result-prod" data-find-prod="1">
+                            <a href="/products/kazu-kokubo-pro-2024">
+                                <img class="fsm-prod-img" src="https://eu.capitasnowboarding.com/cdn/shop/products/FST01_OUTSIDERS_150_a9b559dc-4ff5-491f-9f3c-3ab712d78e1c.png?v=1694082282&width=1024" alt="">
+                                <span class="fsm-prod-size">152</span>
+                            </a>
+                        </div>
+                        <div class="fsm-result-prod" data-find-prod="2">
+                            <a href="/products/kazu-kokubo-pro-2024">
+                                <img class="fsm-prod-img" src="https://eu.capitasnowboarding.com/cdn/shop/products/FST01_OUTSIDERS_150_a9b559dc-4ff5-491f-9f3c-3ab712d78e1c.png?v=1694082282&width=1024" alt="">
+                                <span class="fsm-prod-size">152</span>
+                            </a>
+                        </div>
+                    </div> {% endcomment %}
+
+                </div>
+            </div>
+
+            <div class="fms-content-no-result js-no-result-fms hide">
+
+                <div class="fsm-result-head">
+                    <h5>SIZE FINDER</h5>
+                    <h2 class="o-text is-2">{{ product.title }}</h2>
+                </div>
+ 
+                {% comment %} <strong>
+                    BUMMER!<BR/>
+                    IT SEEMS LIKE THERE ISN’T AN IDEAL SIZE AVAILABLE IN THIS SERIES THAT MATCHES YOUR MEASUREMENTS.
+                    <BR/><BR/>
+                    PLEASE EXPLORE THE BOARD FINDER FOR RECOMMENDATIONS TAILORED TO YOUR SPECS.
+                </strong> {% endcomment %}
+
+                <div>
+                    Based on your input provided, our super-advanced algorithm is having trouble finding a suggestion for you on this snowboard model. <BR/><BR/>Feel free to hit us up for help finding the right board for you! Or, check out another snowboard model that may be right for you.
+                </div>
+
+                <a class="o-btn is-big" style="margin-bottom: 2vh;" href="/collections/all-snowboards">VIEW ALL SNOWBOARDS</a>
+                
+                {% comment %} <a class="o-btn is-big" href="/pages/dealers">FIND A DEALER</a> {% endcomment %}
+                {% comment %} <a class="o-btn is-big btn-findmysize" href="/collections/all-snowboards">BOARD FINDER</a> {% endcomment %}
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+{% style %}
+/* .find-my-size-container--capita-us .fsm-box-radio {
+    flex-direction: row-reverse;
+} */
+.find-my-size-container.hide {
+    display: none;
+}
+.fms-content.hide {
+    display: none;
+}
+.find-my-size-container h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 2vh;
+    font-smooth: auto;
+}
+.find-my-size-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background: #636363a8;
+}
+.find-my-size {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    max-width: 870px;
+    padding: 50px 80px;
+    background: #ffffff82;
+    backdrop-filter: blur(10px);
+    border: 1px solid #000;
+    border-radius: 25px;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+}
+.fms-close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+}
+.fms-reload {
+    position: absolute;
+    right: 70px;
+    top: 30px;
+    cursor: pointer;
+}
+.fms-reload.hide {
+    display: none;
+}
+.fms-close svg,
+.fms-reload svg {
+    width: 30px;
+    height: 30px;
+}
+.fsm-box-text {
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+}
+.fsm-box-select {
+    background-position: 20px;
+    background: #ffffffa6;
+    border-radius: 40px;
+    font-size: 24px;
+    margin-top: 20px;
+}
+.fsm-box-select select {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOSAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5IDEyTDEzIDE5TDcgMTIiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==);
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-position-x: calc(100% - 20px);
+    background-position-y: 50%;
+    background-color: #ECECEC;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    font-size: 18px;
+}
+.fsm-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+.fsm-box-text,
+.fsm-box-radio {
+    width: 50%;
+}
+.fsm-box-select {
+    width: 100%;
+}
+.find-my-size-container.hide {
+    display: none;
+}
+.fsm-box-select select.hide {
+    display: none;
+}
+.fsm-box-radio {
+    border: 1px solid #000;
+    border-radius: 30px;
+    position: relative;
+    height: 30px;
+    top: 0;
+    width: 100px;
+}
+span.selector-radio {
+    position: absolute;
+    height: 30px;
+    width: 50px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    top: -1.1px;
+    transform: translateX(-50%);
+    transition-duration: 0.2s;
+    background: #00000036;
+    font-smooth: auto;
+}
+.fsm-box-radio {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    background: #fff;
+}
+span.selector-radio.select-second {
+    transform: translateX(50%);
+    transition-duration: 0.2s;
+}
+button.o-btn.is-big.btn-findmysize {
+    background: #000;
+    color: #fff;
+    margin: 0 auto;
+}
+.fsm-result-head {
+    min-height: 120px;
+}
+.fsm-result {
+    border-top: 1px solid #676767;
+    margin-top: 20px;
+}
+.fsm-result-products {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+.fsm-prod-img {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+    transform: scale(1);
+    transition-duration: 0.2s;
+}
+span.fsm-prod-size {
+    margin: 30px auto;
+    text-align: center;
+    border: 1px solid #000;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 80px;
+    border-radius: 20px;
+    font-size: 18px;
+    background: #fff;
+}
+.fsm-result-prod a {
+    color: #000;
+}
+.fsm-result-prod a:hover .fsm-prod-img {
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+}
+.fsm-result-prod a:hover span.fsm-prod-size {
+    color: #fff;
+    background: #000;
+}
+.fsm-paragraph {
+    margin-bottom: 3vh;
+}
+.find-my-size h2 {
+    font-size: 50px;
+    margin-bottom: 2vh;
+    font-smooth: auto;
+}
+.find-my-size h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-smooth: auto;
+}
+.find-my-size h5 {
+    font-size: 18px;
+    font-weight: 600;
+    font-smooth: auto;
+}
+.fms-content-no-result.hide,
+.fms-content-result.hide {
+    display: none;
+}
+.fms-content-no-result .o-btn.is-big {
+    background: #000;
+    color: #fff;
+    margin: 30px auto;
+    width: fit-content;
+}
+.fms-content-no-result span {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 27px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: 200px auto 50px;
+}
+.fsm-alert {
+    color: #C8102E;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 0.3s;
+    transform: translateY(0);
+}
+.fsm-alert.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 0.3s;
+    transform: translateY(-30px);
+}
+.find-my-size .c-product-info__size {
+    background: #ececec;
+    width: 90px;
+}
+.find-my-size .c-product-info__size.hide {
+    display: none;
+}
+.fms-content {
+    width: 100%;
+    height: 100%;
+}
+.fms-content-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.fms-content hr {
+    border-bottom: 1px solid #ababab;
+}
+.fms-content-no-result {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+.fms-content-no-result strong {
+    margin-bottom: 50px;
+}
+.find-my-size .c-product-info__sizes {
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .find-my-size-container {
+        width: 100%;
+        height: 100vh;
+    }
+    .find-my-size {
+        width: calc(100% - 20px);
+        height: 80vh;
+        padding: 60px 20px;
+        height: 85vh;
+        background: #e1e1e1f0;
+        backdrop-filter: blur(40px);
+    }
+    .find-my-size h2 {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    .find-my-size h5 {
+        font-size: 14px;
+    }
+    .find-my-size-container h4 {
+        font-size: 16px;
+    }
+    .fsm-box-text {
+        font-size: 20px;
+    }
+    .fsm-box-select {
+        font-size: 20px;
+    }
+    .fsm-box-select select {
+        padding: 10px 20px;
+    }
+    button.o-btn.is-big.btn-findmysize,
+    .fms-content-no-result .o-btn.is-big {
+        width: 100%;
+        min-width: auto;
+    }
+    .fsm-box-select {
+        margin-top: 15px;
+    }
+    .fsm-box {
+        margin-bottom: 30px;
+    }
+    .fms-content-no-result span {
+        margin: 50px auto ;
+    }
+    .fsm-paragraph {
+        font-size: 14px;
+    }
+    .fsm-result-head {
+        min-height: auto;
+    }
+    .find-my-size h3 {
+        margin-top: 10px;
+    }
+    .fsm-prod-img {
+        max-width: 130px;
+    }
+    .find-my-size h3 {
+        font-size: 14px;
+    }
+    .fsm-result-products {
+        margin: 20px 0;
+    }
+}
+
+{% endstyle %}
+
+
+{% javascript %}
+
+// async function find_products_comb() {
+
+//     const products_comb = await fetch("/pages/dealers?view=size-finderman.json")
+
+//     const products_comb_json = await products_comb.json()
+
+//     console.log(products_comb_json)
+
+//     let json_ex = {
+//         [
+//             {
+//                 "height": "140 - 143",
+//                 "size": "32",
+//                 "results": [
+//                     "res1",
+//                     "res2"
+//                 ]
+//             },
+//             {
+//                 "height": "140 - 143",
+//                 "size": "33",
+//                 "results": [
+//                     "res1",
+//                     "res2"
+//                 ]
+//             }
+//         ]
+//     }
+
+//     return json_ex
+// }
+
+(function() {
+
+    async function find_products_comb(gender) {
+
+        let url_fetch = "/pages/dealers?view=size-finder-man.json"
+        if (gender == "men") {
+            url_fetch = "/pages/dealers?view=size-finder-man.json"
+        } else if (gender == "women") {
+            url_fetch = "/pages/dealers?view=size-finder-wom.json"
+        }
+
+        const response = await fetch(url_fetch);
+        const movies = await response.json();
+        console.log(movies.comb)
+        return movies.comb
+    }
+
+        let selectors = {
+            fmsContents: '.fms-content',
+            fsmContainer: '.find-my-size-container',
+            fmsClose: '.fms-close',
+            fmsReload: '.fms-reload',
+            fmsRadios: '.fsm-box-radio',
+            fsmFindBtn: '.btn-findmysize',
+            fmsBoxSelects: '.fsm-box-select',
+            fmsAlert: '.js-alert',
+            fmsResults: '.js-product-variant-fms',
+            fmsSelectHeightOptions: '.js-fsm-box-select-height option',
+            fmsSelectSizeOptions: '.js-fsm-box-select-size option',
+            fmsResult: '.js-result-fms',
+            fmsNoResult: '.js-no-result-fms',
+
+        };
+
+        let fmsContents = document.querySelectorAll(selectors.fmsContents);
+        let fsmContainer = document.querySelector(selectors.fsmContainer);
+        let fmsClose = document.querySelector(selectors.fmsClose);
+        let fmsReload = document.querySelector(selectors.fmsReload);
+        let fmsRadios = document.querySelectorAll(selectors.fmsRadios);
+        let fsmFindBtn = document.querySelector(selectors.fsmFindBtn);
+        let fmsBoxSelects = document.querySelectorAll(selectors.fmsBoxSelects);
+        let fmsAlert = document.querySelector(selectors.fmsAlert);
+        let fmsResults = document.querySelectorAll(selectors.fmsResults);
+        let fmsSelectHeightOptions = document.querySelectorAll(selectors.fmsSelectHeightOptions);
+        let fmsSelectSizeOptions = document.querySelectorAll(selectors.fmsSelectSizeOptions);
+        let fmsResult = document.querySelector(selectors.fmsResult);
+        let fmsNoResult = document.querySelector(selectors.fmsNoResult);
+
+        let size_json = {
+            "height": "",
+            "size": "",
+        }
+
+
+        window.addEventListener("load", function(){
+
+            // console.log(size_json)
+            
+            fmsClose.addEventListener("click", function(){
+                fmsContents[0].classList.remove("hide")
+                fmsContents[1].classList.add("hide")
+                fmsResults.forEach((fmsResult) => {
+                    console.log(fmsResult)
+                    fmsResult.classList.add("hide")
+                })
+                fsmContainer.classList.add("hide")
+
+            })
+
+            fmsResults.forEach((fmsResult) => {
+
+                fmsResult.addEventListener("click", function(){
+
+                    let variant_title = fmsResult.getAttribute("data-title")
+                    let form_variants = document.querySelectorAll(".js-product-variant")
+    
+                    form_variants.forEach((form_variant) => {
+                        let form_variant_title = form_variant.getAttribute("data-title")
+    
+                        if(form_variant_title == variant_title) {
+                            form_variant.click()
+                        }
+                    })
+                    fmsClose.click()
+                })
+
+            }) 
+
+            fsmFindBtn.addEventListener("click", async function(){
+
+                let no_result = true
+
+                if ((size_json.height != "") && (size_json.size != "")) {
+                    fmsContents[0].classList.add("hide")
+                    fmsContents[1].classList.remove("hide")
+                    fmsReload.classList.remove("hide")
+
+                    console.log("check result")
+
+                    let gender = fsmContainer.getAttribute("data-gender")
+
+                    let data_result = await find_products_comb(gender)
+
+                    // console.log(data_result)
+                    let result1
+                    let result2
+
+                    data_result.forEach((result) => {
+
+                        if ((result.height == size_json.height) &&(result.size == size_json.size)) {
+                            console.log("trovato: " + result.result1 + " " + result.result2)
+                            result1 = result.result1
+                            result2 = result.result2
+                        }
+
+                    })
+
+                    fmsResults.forEach((fmsResult) => {
+                        
+                        let variant_title = fmsResult.getAttribute("data-title")
+
+                        console.log(" ---- " + result1 + " ---- " )
+                        console.log(" ---- " + result2 + " ---- " )
+
+                        result1 = result1.toString()
+                        result2 = result2.toString()
+
+                        if ((variant_title == result1) || (variant_title == result2)) {
+                            no_result = false
+                            fmsResult.classList.remove("hide")
+                        } else if ((variant_title == Number(result1)+1) || (variant_title == Number(result2)+1)) {
+                            no_result = false
+                            fmsResult.classList.remove("hide")
+                        } else if ((variant_title == Number(result1)-1) || (variant_title == Number(result2)-1)) {
+                            no_result = false
+                            fmsResult.classList.remove("hide")
+                        } else if ((result1.includes("W")) || (result2.includes("W"))) {
+                            if ( result1.includes("W") ) {
+                                result1.replace("W", "")
+                                if (variant_title == Number(result1)+1+"W") {
+                                    no_result = false
+                                    fmsResult.classList.remove("hide")
+                                } else if (variant_title == Number(result1)-1+"W") {
+                                    no_result = false
+                                    fmsResult.classList.remove("hide")
+                                }
+                            }
+                            if ( result2.includes("W") ) {
+                                result2.replace("W", "")
+                                if (variant_title == Number(result2)+1+"W") {
+                                    no_result = false
+                                    fmsResult.classList.remove("hide")
+                                } else if (variant_title == Number(result2)-1+"W") {
+                                    no_result = false
+                                    fmsResult.classList.remove("hide")
+                                }
+                            }
+                        }
+
+
+                    })
+
+                    if (no_result) {
+                        fmsResult.classList.add("hide")
+                        fmsNoResult.classList.remove("hide")
+                    } else {
+                        fmsResult.classList.remove("hide")
+                        fmsNoResult.classList.add("hide")
+                    }
+
+                } else {
+                    fmsAlert.classList.remove("hidden")
+                    setTimeout(() => {
+                        fmsAlert.classList.add("hidden")
+                    },2000)
+                }
+            })
+
+            fmsReload.addEventListener("click", function() {
+                console.log("reload")
+                fmsResults.forEach((fmsResult) => {
+                    fmsResult.classList.add("hide")
+                    console.log(fmsResult)
+                })
+                fmsContents[0].classList.remove("hide")
+                fmsContents[1].classList.add("hide")
+                fmsReload.classList.add("hide")
+            })
+            
+            fmsBoxSelects.forEach((fmsBoxSelect,boxIndex) => {
+
+                let fmsSelects = fmsBoxSelect.querySelectorAll("select");
+
+                let data_type = fmsBoxSelect.getAttribute("data-select")
+                
+                size_json[data_type] = fmsSelects[0].selectedIndex
+
+                console.log(size_json)
+                
+                fmsSelects.forEach(fmsSelect => {
+                    
+                    fmsSelect.addEventListener("change", function(){
+
+                        console.log(fmsSelect)
+
+                        size_json[data_type] = fmsSelect.value
+
+                        console.log(fmsSelect.value)
+
+                        console.log(size_json)
+                    })
+                })
+            })
+
+            fmsRadios.forEach(fmsRadio => {
+
+                let fmsRadioSelector = fmsRadio.querySelector(".selector-radio");
+
+                fmsRadio.addEventListener("click", function(){
+        
+                    let data_select = fmsRadio.getAttribute("data-select")
+                    let box_select = document.querySelector(".fsm-box-select[data-select='"+data_select+"']")
+        
+                    let select_first = box_select.querySelector("select:nth-child(1)")
+                    let select_second = box_select.querySelector("select:nth-child(2)")
+
+                    if (fmsRadioSelector.classList.contains("select-second")) {
+                        fmsRadioSelector.classList.remove("select-second")
+
+                        if (fsmContainer.classList.contains("find-my-size-container--us")) {
+                            select_first.classList.remove("hide")
+                            select_first.value = select_second.value
+                            select_second.classList.add("hide")
+                        } else {
+                            select_second.classList.remove("hide")
+                            select_second.value = select_first.value
+                            select_first.classList.add("hide")
+                        }
+
+                    } else {
+                        fmsRadioSelector.classList.add("select-second")
+
+                        if (fsmContainer.classList.contains("find-my-size-container--us")) {
+                            select_second.classList.remove("hide")
+                            select_second.value = select_first.value
+                            select_first.classList.add("hide")
+                        } else {
+                            select_first.classList.remove("hide")
+                            select_first.value = select_second.value
+                            select_second.classList.add("hide")
+                        }
+
+                    }
+                })
+            });
+        })
+
+        let json_combinations = []
+        let num_comb = 0
+
+        fmsSelectHeightOptions.forEach((fmsSelectHeightOption) => {
+
+            if(fmsSelectHeightOption.value != "SELECT") {
+
+                fmsSelectSizeOptions.forEach((fmsSelectSizeOption) => {
+                    if(fmsSelectSizeOption.value != "SELECT") {
+                        var obj = new Object();
+                        obj.height = fmsSelectHeightOption.value;
+                        obj.size = fmsSelectSizeOption.value;
+                        obj.results = ["res1","res2"];
+                        json_combinations.push(obj)
+
+                        num_comb++
+                    }
+                })
+            }
+
+
+        })
+
+        var json_combinations_string = JSON.stringify(json_combinations);
+
+        // console.log(json_combinations_string)
+        // console.log(num_comb)
+
+
+    })();
+
+{% endjavascript %} 

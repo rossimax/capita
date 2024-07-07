@@ -1,0 +1,37 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1.o-text.is-3 {text-align: center;}"
+      ],
+      "settings": {
+        "head_width": 100,
+        "margin_top": 160,
+        "body_color": "#f1f1f1",
+        "footer_border": false,
+        "enable_head": true,
+        "title": "",
+        "description": ""
+      }
+    },
+    "select_location_jHxz8a": {
+      "type": "select-location",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "select_location_jHxz8a"
+  ]
+}

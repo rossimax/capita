@@ -15,8 +15,8 @@
   
     <div class="c-product-info__top">
         <span class="c-product-info__categories o-text is-4">{{ snowboard_tags }}</span>
-        <h2 class="c-product-info__name o-text is-2">{{ product.title }}</h2>
-        <span class="c-product-info__price o-text is-3">{{ product.price | money }}</span>
+        <h2 class="c-product-info__name mt-4 o-text is-2">{{ product.title }}</h2>
+        <span class="c-product-info__price mt-4 o-text is-3">{{ product.price | money }}</span>
 
         {% if section.settings.afterpay_text %}
           <div class="c-product-info__afterpay" style="margin-top: 5px;">or 4 interest-free installments of {{ product.price | divided_by: 4 | money }} by | <img style="display:inline;" width="75px" src="{{ 'afterpay-logo.png' | asset_url }}" alt="Afterpay"></div>
@@ -25,11 +25,12 @@
           <div class="c-product-info__paypal" style="margin-top: 5px;">or 3 interest-free installments of {{ product.price | divided_by: 3 | money }} by | <img style="display:inline;vertical-align: sub;" width="75px" src="{{ 'paypal-logo.png' | asset_url }}" alt="Afterpay"></div>
         {% endif %}
 
-        <p class="c-product-info__description medium">{{ product.metafields.snowboard_info.snowboard_description }}</p>
-        
+        {% if product.metafields.snowboard_info.snowboard_description %}
+          <p class="c-product-info__description medium">{{ product.metafields.snowboard_info.snowboard_description }}</p>
+        {% endif %}
         {% if product.type == "Snowboard" %}
           {% comment %} <div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div> {% endcomment %}
-          <div id="epr-product-title-review" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}" data-product-title="{{ product.title }}"></div>
+          <div id="epr-product-title-review" class="mt-4 mb-0" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}" data-product-title="{{ product.title }}"></div>
 
         {% endif %}
 
@@ -44,7 +45,7 @@
                       {% assign option_name = option.name | downcase %}
 
                       {% if option_name == "size" %}
-                          <div class="c-product-info__sizes">
+                          <div class="c-product-info__sizes mt-4">
                             <div class="border-error js-border-notification hidden"></div>
                               {% for variant in product.variants %}
                                   <div class="c-product-info__size js-product-variant {%- if variant.available == false %} is-disabled{% endif %}" for="{{ variant.id }}" data-index="{{ forloop.index0 }}" data-title="{{ variant.title }}">
@@ -72,7 +73,7 @@
                   
               {% endunless %}
 
-              <span class="variant-select js-variant-notification hidden">Please select a variant.</span>
+              <span class="variant-select js-variant-notification hidden mt-4">Please select a variant.</span>
     
               {% assign current_variant = product.selected_or_first_available_variant %}
 
@@ -87,7 +88,7 @@
                 <span class="all-sold-out">SOLD OUT</a>
               {% else %}
                 <button 
-                  class="js-add-to-cart c-product-info__add-to-cart {% unless current_variant.available %} all-soldout{% endunless %}">
+                  class="js-add-to-cart c-product-info__add-to-cart mt-12 {% unless current_variant.available %} all-soldout{% endunless %}">
                     <span>
                         {% unless current_variant.available %}
                         {{ 'products.product.sold_out' | t }}

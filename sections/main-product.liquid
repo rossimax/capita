@@ -30,12 +30,12 @@
           {% if forloop.index == 2 %}
             {% assign slider_images = product.metafields.accentuate.slider_image %}
             {% if slider_images != blank %}
-              <div class="swiper-slide swiper-slide--extra">
-                {% for slider_image in slider_images %}
-                    <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
-                {% endfor %}
-              </div>
-              {% endif %}
+              {% for slider_image in slider_images %}
+                <div class="swiper-slide swiper-slide--extra">
+                  <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
+                </div>
+              {% endfor %}
+            {% endif %}
           {% endif %}
 
           {%- assign img_url = media | image_url: width: 1024 -%}
@@ -100,11 +100,11 @@
                   {% if forloop.index == 2 %}
                     {% assign slider_images = product.metafields.accentuate.slider_image %}
                     {% if slider_images != blank %}
-                      <div class="swiper-slide swiper-slide--extra">
-                        {% for slider_image in slider_images %}
+                      {% for slider_image in slider_images %}
+                        <div class="swiper-slide swiper-slide--extra">
                           <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
-                        {% endfor %}
-                      </div>
+                        </div>
+                      {% endfor %}
                     {% endif %}
                   {% endif %}
 
@@ -149,11 +149,11 @@
                 {% if forloop.index == 2 %}
                   {% assign slider_images = product.metafields.accentuate.slider_image %}
                   {% if slider_images != blank %}
-                    <div class="swiper-slide swiper-slide--extra">
-                      {% for slider_image in slider_images %}
+                    {% for slider_image in slider_images %}
+                      <div class="swiper-slide swiper-slide--extra">
                         <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
-                      {% endfor %}
-                    </div>
+                      </div>
+                    {% endfor %}
                   {% endif %}
                 {% endif %}
 
@@ -1787,13 +1787,17 @@
   }
   .variant-select {
     color: red;
+    margin-top: 20px;
+    margin-bottom: -20px;
     display: block;
     transition-duration: 0.2s;
     opacity: 1;
     visibility: visible;
   }
   .variant-select.hidden {
-    display: none;
+    transition-duration: 0.2s;
+    opacity: 0;
+    visibility: hidden;
   }
   .c-product-info__sizes {
     position: relative;

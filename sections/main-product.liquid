@@ -30,12 +30,12 @@
           {% if forloop.index == 2 %}
             {% assign slider_images = product.metafields.accentuate.slider_image %}
             {% if slider_images != blank %}
-              {% for slider_image in slider_images %}
-                <div class="swiper-slide swiper-slide--extra">
-                  <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
-                </div>
-              {% endfor %}
-            {% endif %}
+              <div class="swiper-slide swiper-slide--extra">
+                {% for slider_image in slider_images %}
+                    <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
+                {% endfor %}
+              </div>
+              {% endif %}
           {% endif %}
 
           {%- assign img_url = media | image_url: width: 1024 -%}
@@ -100,11 +100,11 @@
                   {% if forloop.index == 2 %}
                     {% assign slider_images = product.metafields.accentuate.slider_image %}
                     {% if slider_images != blank %}
-                      {% for slider_image in slider_images %}
-                        <div class="swiper-slide swiper-slide--extra">
+                      <div class="swiper-slide swiper-slide--extra">
+                        {% for slider_image in slider_images %}
                           <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
-                        </div>
-                      {% endfor %}
+                        {% endfor %}
+                      </div>
                     {% endif %}
                   {% endif %}
 
@@ -149,11 +149,11 @@
                 {% if forloop.index == 2 %}
                   {% assign slider_images = product.metafields.accentuate.slider_image %}
                   {% if slider_images != blank %}
-                    {% for slider_image in slider_images %}
-                      <div class="swiper-slide swiper-slide--extra">
+                    <div class="swiper-slide swiper-slide--extra">
+                      {% for slider_image in slider_images %}
                         <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
-                      </div>
-                    {% endfor %}
+                      {% endfor %}
+                    </div>
                   {% endif %}
                 {% endif %}
 

@@ -416,10 +416,10 @@
       ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
         >
           {% for variant in all_products('sb-powder-twin-2025').variants %}
-            {% if forloop.index < 3 %}
+            {% if forloop.index < 4 %}
               <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
             {% elsif forloop.index == forloop.length %}
-              <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 2 }} more</a>
+              <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
             {% endif %}
           {% endfor %}
           
@@ -428,10 +428,10 @@
         >
           
           {% for variant in all_products('sb-powder-twin-2025').variants %}
-            {% if forloop.index < 3 %}
+            {% if forloop.index < 4 %}
               <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
             {% elsif forloop.index == forloop.length %}
-              <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 2 }} more</a>
+              <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
             {% endif %}
           {% endfor %}
 

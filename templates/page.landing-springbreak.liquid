@@ -414,7 +414,7 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_2425_productimage_SBpowdertwin_153_fab2f535-b1e8-4893-86c2-c731d8aeed53.png?v=1719927267"
           alt=""></a
       ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden">
-          {{all_products('sb-powder-twin-2025').variants }}
+         vv: {{all_products('sb-powder-twin-2025').variants }}
                         {% for variant in all_products('sb-powder-twin-2025').variants %}
                           {% if forloop.index < 8 %}
                             <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>

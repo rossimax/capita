@@ -413,13 +413,13 @@
     {% for sb_board in sb_list %}
       {{ sb_board }}
       <div class="block">
-        <a href="{{ all_products(sb_board).url }}"
+        <a href="{{ all_products[sb_board].url }}"
           ><img
             class="object-contain block w-full transition-transform duration-300 ease-out aspect-[200/327] hover:scale-105"
-            src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_2425_productimage_SBpowdertwin_153_fab2f535-b1e8-4893-86c2-c731d8aeed53.png?v=1719927267"
-            alt=""></a
+            src="{{ all_products[sb_board].image | image_url: width: 760  }}"
+            alt="{{ all_products[sb_board].title }}"></a
         ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden">
-            {% for variant in all_products(sb_board).variants %}
+            {% for variant in all_products[sb_board].variants %}
               {% if forloop.index < 4 %}
                 <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
               {% elsif forloop.index == forloop.length %}
@@ -430,7 +430,7 @@
             </span
         ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start">
             
-            {% for variant in all_products(sb_board).variants %}
+            {% for variant in all_products[sb_board].variants %}
               {% if forloop.index < 4 %}
                 <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
               {% elsif forloop.index == forloop.length %}
@@ -441,11 +441,11 @@
             </span
         ><span class="grid mt-2 md:mt-3"
           ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
-            >{{ all_products(sb_board).metafields.snowboard_info.snowboard_listing_tag | default: 'categories'  }}</span
+            >{{ all_products[sb_board].metafields.snowboard_info.snowboard_listing_tag | default: 'categories'  }}</span
           ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
-            >{{ all_products(sb_board).title }}</a
+            >{{ all_products[sb_board].title }}</a
           ></span
-        ><span class="text-sm text-black leading-none md:text-lg">{{ all_products(sb_board).price | money_with_currency }}</span>
+        ><span class="text-sm text-black leading-none md:text-lg">{{ all_products[sb_board].price | money_with_currency }}</span>
       </div>
     {% endfor %}
 

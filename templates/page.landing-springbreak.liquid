@@ -411,12 +411,11 @@
   <div class="grid grid-cols-2 gap-y-10 gap-x-5 md:grid-cols-3 lg:grid-cols-3 lg:gap-y-20 lg:gap-x-16">
 
     {% for sb_board in sb_list %}
-      {{ sb_board }}
       <div class="block">
         <a href="{{ all_products[sb_board].url }}"
           ><img
             class="object-contain block w-full transition-transform duration-300 ease-out aspect-[200/327] hover:scale-105"
-            src="{{ all_products[sb_board].image | image_url: width: 760  }}"
+            src="{{ all_products[sb_board].featured_image | img_url: '1160x' }}"
             alt="{{ all_products[sb_board].title }}"></a
         ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden">
             {% for variant in all_products[sb_board].variants %}

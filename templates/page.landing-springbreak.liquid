@@ -445,9 +445,9 @@
           ></span
         ><span class="text-sm text-black leading-none md:text-lg">{{ all_products(sb_board).price | money_with_currency }}</span>
       </div>
-    {% endif %}
+    {% endfor %}
 
-    <div class="block">
+    {% comment %} <div class="block">
       <a href=""
         ><img
           class="object-contain block w-full transition-transform duration-300 ease-out aspect-[200/327] hover:scale-105"
@@ -585,7 +585,7 @@
           >aeronaut</a
         ></span
       ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
-    </div>
+    </div> {% endcomment %}
 
   </div>
 </div>

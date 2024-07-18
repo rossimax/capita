@@ -937,3 +937,39 @@
 
   </script>
 <script src="{{ 'springbreak.js' | asset_url }}"></script>
+
+
+{% schema %}
+{
+  "name": "SB Settings",
+  "blocks": [
+    {
+      "type": "sb_list",
+      "name": "SB List",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product_sb",
+          "label": "Product SB"
+        }
+      ]
+    },
+    {
+      "type": "ac_list",
+      "name": "Accessories List",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product_acc",
+          "label": "Product Acc"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SB Settings"
+    }
+  ]
+}
+{% endschema %}

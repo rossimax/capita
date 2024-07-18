@@ -591,12 +591,53 @@
   </div>
 </div>
 
+{% assign acc_list = "tropical-hood|reaper-long-sleeve-tee|skidoo-tee|bars-long-sleeve-tee|resort-tee" | split: "|" %}
 
 <div class="px-4 py-10 bg-gray-400 grid gap-10 content-start md:px-32 md:py-24">
   <h2 class="font-bold text-5xl md:text-7xl ">Spring Break Accessories</h2>
   <div class="grid grid-cols-2 gap-y-10 gap-x-5 md:grid-cols-3 lg:gap-y-20 lg:gap-x-16">
 
-    <div class="block">
+    {% for sb_acc in acc_list %}
+      <div class="block">
+        <a href=""
+          ><img
+            class="object-contain block w-full transition-transform duration-300 ease-out aspect-[130/150] hover:scale-105"
+            src="{{ all_products[sb_acc].featured_image | img_url: '1160x' }}"
+            alt="{{ all_products[sb_acc].title }}"></a
+        ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+          >
+            {% for variant in all_products[sb_acc].variants %}
+              {% if forloop.index < 4 %}
+                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
+              {% elsif forloop.index == forloop.length %}
+                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+              {% endif %}
+            {% endfor %}
+            
+            </span
+        ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+          >
+            
+            {% for variant in all_products[sb_acc].variants %}
+              {% if forloop.index < 4 %}
+                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
+              {% elsif forloop.index == forloop.length %}
+                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+              {% endif %}
+            {% endfor %}
+            
+            </span
+        ><span class="grid mt-2 md:mt-3"
+          ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+            >{{ all_products[sb_acc].metafields.snowboard_info.snowboard_listing_tag | default: 'categories'  }}</span
+          ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+            >{{ all_products[sb_acc].title }}</a
+          ></span
+        ><span class="text-sm text-black leading-none md:text-lg">{{ all_products[sb_acc].price | money_with_currency }}</span>
+      </div>
+    {% endfor %}
+
+    {% comment %} <div class="block">
       <a href=""
         ><img
           class="object-contain block w-full transition-transform duration-300 ease-out aspect-[130/150] hover:scale-105"
@@ -804,7 +845,7 @@
           >aeronaut</a
         ></span
       ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
-    </div>
+    </div> {% endcomment %}
 
   </div>
 
@@ -937,39 +978,3 @@
 
   </script>
 <script src="{{ 'springbreak.js' | asset_url }}"></script>
-
-
-{% schema %}
-{
-  "name": "SB Settings",
-  "blocks": [
-    {
-      "type": "sb_list",
-      "name": "SB List",
-      "settings": [
-        {
-          "type": "product",
-          "id": "product_sb",
-          "label": "Product SB"
-        }
-      ]
-    },
-    {
-      "type": "ac_list",
-      "name": "Accessories List",
-      "settings": [
-        {
-          "type": "product",
-          "id": "product_acc",
-          "label": "Product Acc"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "SB Settings"
-    }
-  ]
-}
-{% endschema %}

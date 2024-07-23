@@ -36,7 +36,7 @@
     {{ shop.metafields.globals.gtm__header }}
 
     <title>
-      {{ page_title }}
+      {{ page_title | strip_html }}
       {%- if current_tags %} tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} {{ shop.name }}{% endunless -%}

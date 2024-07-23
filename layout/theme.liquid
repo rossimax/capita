@@ -33,11 +33,13 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    {{ shop.metafields.globals.gtm__header }}
+
     <title>
       {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- if current_tags %} tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} {{ shop.name }}{% endunless -%}
     </title>
 
     {% if page_description %}
@@ -251,6 +253,9 @@
   </head>
 
   <body class="gradient">
+
+    {{ shop.metafields.globals.gtm__body }}
+
     {% comment %} <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a> {% endcomment %}

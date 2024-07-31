@@ -13,20 +13,6 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "blocks": {
-        "announcement_wzMWYh": {
-          "type": "announcement",
-          "settings": {
-            "text": "New Collection",
-            "text_alignment": "center",
-            "color_scheme": "accent-1",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "announcement_wzMWYh"
-      ],
       "custom_css": [
 
       ],

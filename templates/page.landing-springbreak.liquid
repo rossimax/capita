@@ -382,46 +382,52 @@
 
   </div>
 </div>
+
+{% assign sb_list = "sb-powder-twin-2025|sb-powder-racers-2025|sb-powder-glider-2025|sb-slush-slashers-2025|sb-resort-twin-2025" | split: "|" %}
+
 <div class="px-4 py-10 bg-gray-grid bg-repeat bg-s-gray-grid grid gap-10 content-start md:px-32 md:py-24">
   <h2 class="font-bold text-5xl md:text-7xl ">The Spring Break Collection</h2>
   <div class="grid grid-cols-2 gap-y-10 gap-x-5 md:grid-cols-3 lg:grid-cols-3 lg:gap-y-20 lg:gap-x-16">
 
-    <div class="block">
-      <a href=""
-        ><img
-          class="object-contain block w-full transition-transform duration-300 ease-out aspect-[200/327] hover:scale-105"
-          src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_2425_productimage_SBpowdertwin_153_fab2f535-b1e8-4893-86c2-c731d8aeed53.png?v=1719927267"
-          alt=""></a
-      ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
-          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
-          >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
-          >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
-          >+ 3 more</a
-        ></span
-      ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
-          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
-          >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
-          >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
-          >+ 3 more</a
-        ></span
-      ><span class="grid mt-2 md:mt-3"
-        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
-          >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
-        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
-          >aeronaut</a
-        ></span
-      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
-    </div>
+    {% for sb_board in sb_list %}
+      <div class="block">
+        <a href="{{ all_products[sb_board].url }}"
+          ><img
+            class="object-contain block w-full transition-transform duration-300 ease-out aspect-[200/327] hover:scale-105"
+            src="{{ all_products[sb_board].featured_image | img_url: '1160x' }}"
+            alt="{{ all_products[sb_board].title }}"></a
+        ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden">
+            {% for variant in all_products[sb_board].variants %}
+              {% if forloop.index < 4 %}
+                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
+              {% elsif forloop.index == forloop.length %}
+                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+              {% endif %}
+            {% endfor %}
+            
+            </span
+        ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start">
+            
+            {% for variant in all_products[sb_board].variants %}
+              {% if forloop.index < 4 %}
+                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
+              {% elsif forloop.index == forloop.length %}
+                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+              {% endif %}
+            {% endfor %}
+  
+            </span
+        ><span class="grid mt-2 md:mt-3"
+          ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+            >{{ all_products[sb_board].metafields.snowboard_info.snowboard_listing_tag | default: 'categories'  }}</span
+          ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+            >{{ all_products[sb_board].title }}</a
+          ></span
+        ><span class="text-sm text-black leading-none md:text-lg">{{ all_products[sb_board].price | money_with_currency }}</span>
+      </div>
+    {% endfor %}
 
-    <div class="block">
+    {% comment %} <div class="block">
       <a href=""
         ><img
           class="object-contain block w-full transition-transform duration-300 ease-out aspect-[200/327] hover:scale-105"
@@ -559,17 +565,58 @@
           >aeronaut</a
         ></span
       ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
-    </div>
+    </div> {% endcomment %}
 
   </div>
 </div>
 
+{% assign acc_list = "tropical-hood|reaper-long-sleeve-tee|skidoo-tee|bars-long-sleeve-tee|resort-tee" | split: "|" %}
 
 <div class="px-4 py-10 bg-gray-grid bg-repeat bg-s-gray-grid grid gap-10 content-start md:px-32 md:py-24">
   <h2 class="font-bold text-5xl md:text-7xl ">Spring Break Accessories</h2>
   <div class="grid grid-cols-2 gap-y-10 gap-x-5 md:grid-cols-3 lg:gap-y-20 lg:gap-x-16">
 
-    <div class="block">
+    {% for sb_acc in acc_list %}
+      <div class="block">
+        <a href=""
+          ><img
+            class="object-contain block w-full transition-transform duration-300 ease-out aspect-[130/150] hover:scale-105"
+            src="{{ all_products[sb_acc].featured_image | img_url: '1160x' }}"
+            alt="{{ all_products[sb_acc].title }}"></a
+        ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+          >
+            {% for variant in all_products[sb_acc].variants %}
+              {% if forloop.index < 4 %}
+                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
+              {% elsif forloop.index == forloop.length %}
+                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+              {% endif %}
+            {% endfor %}
+            
+            </span
+        ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+          >
+            
+            {% for variant in all_products[sb_acc].variants %}
+              {% if forloop.index < 4 %}
+                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
+              {% elsif forloop.index == forloop.length %}
+                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+              {% endif %}
+            {% endfor %}
+            
+            </span
+        ><span class="grid mt-2 md:mt-3"
+          ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+            >{{ all_products[sb_acc].metafields.snowboard_info.snowboard_listing_tag | default: 'categories'  }}</span
+          ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+            >{{ all_products[sb_acc].title }}</a
+          ></span
+        ><span class="text-sm text-black leading-none md:text-lg">{{ all_products[sb_acc].price | money_with_currency }}</span>
+      </div>
+    {% endfor %}
+
+    {% comment %} <div class="block">
       <a href=""
         ><img
           class="object-contain block w-full transition-transform duration-300 ease-out aspect-[130/150] hover:scale-105"
@@ -777,7 +824,7 @@
           >aeronaut</a
         ></span
       ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
-    </div>
+    </div> {% endcomment %}
 
   </div>
 
@@ -810,6 +857,14 @@
   </div>
 
 <style>
+  .text-boxes__foot {
+  margin: 60px 0;
+}
+  .text-boxes__foot__btn {
+    width: 740px;
+    padding-block: 21px;
+    font-size: 18px;
+  }
   .c-step__media .only-mob {
     display: none;
   }
@@ -870,6 +925,9 @@
     }
     .modal-youtube iframe {
       height: 30% !important;
+    }
+    .text-boxes__foot__btn {
+      width: 100%;
     }
   }
 </style>

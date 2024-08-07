@@ -753,6 +753,14 @@ video {
   aspect-ratio: 16 / 9;
 }
 
+.aspect-\[965\/750\] {
+  aspect-ratio: 965/750;
+}
+
+.aspect-\[965\/680\] {
+  aspect-ratio: 965/680;
+}
+
 .h-0 {
   height: 0px;
 }
@@ -966,6 +974,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-springbreak {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 239 33 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
@@ -996,6 +1009,11 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-left {
+  -o-object-position: left;
+     object-position: left;
 }
 
 .p-5 {
@@ -1110,6 +1128,14 @@ video {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.normal-case {
+  text-transform: none;
+}
+
+.\!normal-case {
+  text-transform: none !important;
 }
 
 .italic {

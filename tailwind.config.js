@@ -9,6 +9,7 @@ module.exports = {
             },
             backgroundSize: {
                 "s-gray-grid": "720px",
+                "m-gray-grid": "130%",
             },
             backgroundColor: {
                 springbreak: "#fcef21",

@@ -44,12 +44,12 @@
       alt=""
     >
   </picture>
-  <div class="pb-16 bg-springbreak md:w-[40%] md:shrink-0 md:flex md:items-end md:flex-row-reverse  md:py-20 md:pr-[8%]">
-    <div class="absolute left-12 bottom-16 flex items-start text-right md:static md:gap-2">
-      <span class="vertical-writing-rl text-sm font-semibold uppercase text-black leading-none max-h-56 md:text-4xl md:max-h-none md:tracking-tight"
+  <div class="pb-16 bg-springbreak md:w-[40%] md:shrink-0 md:flex md:items-start md:flex-row-reverse  md:py-20 md:pr-[8%]">
+    <div class="absolute left-12 bottom-16 flex items-end md:items-start text-right md:static md:gap-2">
+      <span class="vertical-writing-rl text-sm md:text-left font-semibold uppercase text-black leading-none max-h-56 md:text-4xl md:max-h-none md:tracking-tight"
         >DIRECTIONAL HYBRID CAMBER</span>
-      <span class="vertical-writing-rl text-2xl uppercase font-semibold text-black leading-none max-h-56 md:text-8xl md:max-h-none md:leading-[65px] md:whitespace-nowrap"
-        >SB POWDER RACERS</span>
+      <span class="vertical-writing-rl text-2xl md:text-left uppercase font-semibold text-black leading-none max-h-56 md:text-8xl md:max-h-none md:leading-[65px] md:whitespace-nowrap"
+        >SB POWDER<br> RACERS</span>
     </div>
     <a class="group block border-2 border-white rounded-3xl overflow-hidden ml-auto -mt-36 isolate cursor-pointer w-1/2 mr-12 md:w-3/5 md:mt-0 md:mr-auto md:ml-0 md:max-w-80 md:-translate-x-1/2">
       <div class="bg-gray-grid bg-s-gray-grid aspect-[176/326]">
@@ -75,13 +75,38 @@
     <div class="absolute bottom-0 z-10 w-full left-0 js-timeline-trigger-container">
       <div class="bg-gradient-to-t from-white h-52"></div>
       <div class="bg-white py-6">
-        <button class="grid place-items-center gap-2 mx-auto cursor-pointer js-timeline-trigger">
+        <button class="grid place-items-center gap-2 mx-auto cursor-pointer js-timeline-open-trigger">
           <svg class="w-12 block" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="83" height="83" rx="41.5" stroke="black" stroke-width="2"></rect>
             <path d="M59.8039 34L42.402 51.402L25 34" stroke="black" stroke-width="2"></path>
           </svg>
           <span class="font-bold">Read more</span>
         </button>
+        <button
+                            class="hidden place-items-center gap-2 mx-auto cursor-pointer js-timeline-close-trigger"
+                        >
+                            <svg
+                                class="w-12 block -scale-100"
+                                viewBox="0 0 85 85"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <rect
+                                    x="1"
+                                    y="1"
+                                    width="83"
+                                    height="83"
+                                    rx="41.5"
+                                    stroke="black"
+                                    stroke-width="2"
+                                ></rect>
+                                <path
+                                    d="M59.8039 34L42.402 51.402L25 34"
+                                    stroke="black"
+                                    stroke-width="2"
+                                ></path></svg
+                            ><span class="font-bold">Read less</span>
+                        </button>
       </div>
     </div>
 
@@ -346,7 +371,7 @@
     </div>
 
 
-    <div class="border-l pb-6 pl-6 relative">
+    <div class="border-l pb-48 pl-6 relative">
       <div class="relative grid gap-4 items-start md:flex md:gap-14 md:items-start">
         <div class="relative">
           <span
@@ -384,7 +409,7 @@
 
 {% assign sb_list = "sb-powder-twin-2025|sb-powder-racers-2025|sb-powder-glider-2025|sb-slush-slashers-2025|sb-resort-twin-2025" | split: "|" %}
 
-<div class="px-4 py-10 bg-gray-grid bg-repeat bg-s-gray-grid grid gap-10 content-start md:px-32 md:py-24">
+<div class="px-4 py-10 bg-gray-grid bg-repeat bg-m-gray-grid grid gap-10 content-start md:px-32 md:py-24">
   <h2 class="font-bold text-5xl md:text-7xl ">The Spring Break Collection</h2>
   <div class="grid grid-cols-2 gap-y-10 gap-x-5 md:grid-cols-3 lg:grid-cols-3 lg:gap-y-20 lg:gap-x-16">
 
@@ -571,7 +596,7 @@
 
 {% assign acc_list = "tropical-hood|reaper-long-sleeve-tee|skidoo-tee|bars-long-sleeve-tee|resort-tee" | split: "|" %}
 
-<div class="px-4 py-10 bg-gray-grid bg-repeat bg-s-gray-grid grid gap-10 content-start md:px-32 md:py-24">
+<div class="px-4 py-10 bg-gray-grid bg-repeat bg-m-gray-grid grid gap-10 content-start md:px-32 md:py-24">
   <h2 class="font-bold text-5xl md:text-7xl ">Spring Break Accessories</h2>
   <div class="grid grid-cols-2 gap-y-10 gap-x-5 md:grid-cols-3 lg:gap-y-20 lg:gap-x-16">
 

@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/logo-capita.png",
@@ -143,6 +152,11 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "find-my-size": {
+        "type": "find-my-size",
+        "settings": {
+        }
       }
     },
     "content_for_index": [
@@ -157,6 +171,12 @@
       },
       "319724205969189013": {
         "type": "shopify:\/\/apps\/hulk-form-builder\/blocks\/app-embed\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "8559953418172270618": {
+        "type": "shopify:\/\/apps\/fbtrack-facebook-pixels-app\/blocks\/app-embed\/40a16300-89a3-4e21-943b-e2c31e744e27",
         "disabled": false,
         "settings": {
         }

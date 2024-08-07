@@ -745,20 +745,16 @@ video {
   aspect-ratio: 200/327;
 }
 
+.aspect-\[965\/680\] {
+  aspect-ratio: 965/680;
+}
+
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
 
 .aspect-video {
   aspect-ratio: 16 / 9;
-}
-
-.aspect-\[965\/750\] {
-  aspect-ratio: 965/750;
-}
-
-.aspect-\[965\/680\] {
-  aspect-ratio: 965/680;
 }
 
 .h-0 {
@@ -839,6 +835,12 @@ video {
 
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-scale-100 {
+  --tw-scale-x: -1;
+  --tw-scale-y: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -969,14 +971,14 @@ video {
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .bg-springbreak {
   --tw-bg-opacity: 1;
   background-color: rgb(252 239 33 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-t {
@@ -995,6 +997,10 @@ video {
 
 .bg-s-gray-grid {
   background-size: 720px;
+}
+
+.bg-m-gray-grid {
+  background-size: 130%;
 }
 
 .bg-repeat {
@@ -1067,6 +1073,34 @@ video {
   padding-left: 1.5rem;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
+.pb-24 {
+  padding-bottom: 6rem;
+}
+
+.pb-40 {
+  padding-bottom: 10rem;
+}
+
+.pb-80 {
+  padding-bottom: 20rem;
+}
+
+.pb-60 {
+  padding-bottom: 15rem;
+}
+
+.pb-48 {
+  padding-bottom: 12rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1128,10 +1162,6 @@ video {
 
 .capitalize {
   text-transform: capitalize;
-}
-
-.normal-case {
-  text-transform: none;
 }
 
 .\!normal-case {
@@ -1421,6 +1451,10 @@ video {
 
   .md\:pr-\[8\%\] {
     padding-right: 8%;
+  }
+
+  .md\:text-left {
+    text-align: left;
   }
 
   .md\:text-3xl {

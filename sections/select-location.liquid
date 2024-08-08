@@ -16,7 +16,7 @@
                 {% if localization.available_languages.size > 1 %}
                     <div class="single-country__langs small">
                         {% for av_lang in localization.available_languages %}
-                            <a class="single-country__langs__link" href="{{ av_lang.root_url }}">{{ av_lang.name }}</a> {% unless forloop.last %}|{% endunless -%}
+                            <a class="single-country__langs__link {% if localization.language.iso_code == av_lang.iso_code %}actual-language{% endif %}" href="{{ av_lang.root_url }}">{{ av_lang.name }}</a> {% unless forloop.last %}|{% endunless -%}
                         {% endfor %}
                     </div>
                 {% endif %}
@@ -40,8 +40,17 @@
                     {% endif %}
                     {% if country.available_languages.size > 1 %}
                         <div class="single-country__langs small">
+                            {% assign default_lang_iso_code = country.available_languages[0].iso_code | downcase %}
                             {% for av_lang in country.available_languages %}
-                                <a class="single-country__langs__link" href="/{{ av_lang.iso_code }}-{{ country.iso_code | downcase }}">{{ av_lang.name }}</a> {% unless forloop.last %}|{% endunless -%}
+                                {% if country.iso_code == "IT" %}
+                                    {% if av_lang.iso_code == default_lang_iso_code %}
+                                        <a class="single-country__langs__link" href="/">{{ av_lang.name }}</a> {% unless forloop.last %}|{% endunless -%}
+                                    {% else %}
+                                        <a class="single-country__langs__link" href="/{{ av_lang.iso_code }}">{{ av_lang.name }}</a> {% unless forloop.last %}|{% endunless -%}
+                                    {% endif %}
+                                {% else %}
+                                    <a class="single-country__langs__link" href="/{{ av_lang.iso_code }}-{{ country.iso_code | downcase }}">{{ av_lang.name }}</a> {% unless forloop.last %}|{% endunless -%}
+                                {% endif %}
                             {% endfor %}
                         </div>
                     {% endif %}
@@ -147,6 +156,10 @@ main h1 {
     display: flex;
     align-items: center;
     margin: 0 5px;
+}
+.single-country__langs__link.actual-language,
+.single-country__langs__link:hover {
+    text-decoration: underline;
 }
 .select-location-container .country-site-selector {
     padding-right: 10px;

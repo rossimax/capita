@@ -61,10 +61,11 @@
                                   </div>
                               {% endfor %}
                           </div>
+                          <span TAGSS {{ product.tags }}></span>
                           {% if product.tags contains "Men's" or product.tags contains "Women's" or product.tags contains "Youth" %}
                             <a class="open-find-my-size js-open-find-my-size">FIND MY SIZE</a>
                           {% endif %}
-                          
+
                       {% endif %}
 
                   {% endfor %}

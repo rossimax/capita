@@ -62,8 +62,9 @@
                               {% endfor %}
                           </div>
 
-                          {% if product.tags contains "Men's" or product.tags contains "Women's" or product.tags contains "Youth" %}
-                            <a class="open-find-my-size js-open-find-my-size">FIND MY SIZE</a>
+                          {% comment %} {% if product.tags contains "Men's" or product.tags contains "Women's" or product.tags contains "Youth" %} {% endcomment %}
+                          {% if product.tags contains "Men's" or product.tags contains "Women's" %}
+                              <a class="open-find-my-size js-open-find-my-size">FIND MY SIZE</a>
                           {% endif %}
 
                       {% endif %}

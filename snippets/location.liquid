@@ -22,7 +22,7 @@
                 {% if localization.available_languages.size > 1 %}
                     <div class="single-country__langs small">
                         {% for av_lang in localization.available_languages %}
-                            <a class="single-country__langs__link" href="{{ av_lang.root_url }}">{{ av_lang.name }}</a> {% unless forloop.last %}|{% endunless -%}
+                            <a class="single-country__langs__link {% if localization.language.iso_code == av_lang.iso_code %}actual-language{% endif %}" href="{{ av_lang.root_url }}">{{ av_lang.name }}</a> {% unless forloop.last %}|{% endunless -%}
                         {% endfor %}
                     </div>
                 {% endif %}
@@ -129,6 +129,10 @@
     display: flex;
     align-items: center;
     margin: 0 5px;
+}
+.single-country__langs__link.actual-language,
+.single-country__langs__link:hover {
+    text-decoration: underline;
 }
 .top-bar-menu-right {
     position: relative;

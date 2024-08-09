@@ -57,6 +57,10 @@
     
     <link rel="stylesheet" type="text/css" href="{{ 'defaults.css' | asset_url }}">
     
+    {% if page.handle == "springbreak" %}
+      <link rel="stylesheet" href="{{ 'springbreak.css' | asset_url }}">
+    {% endif %}
+    
     {{ content_for_header }}
 
     {%- liquid

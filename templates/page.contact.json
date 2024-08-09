@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -60,13 +69,21 @@
     },
     "form": {
       "type": "contact-form",
+      "disabled": true,
       "settings": {
+      }
+    },
+    "rich_text_FRVyTe": {
+      "type": "rich-text",
+      "settings": {
+        "text": "<p>Customer support temporary suspended, we will be back on 19 of August.<\/p>"
       }
     }
   },
   "order": [
     "main",
     "1d210c57-3f36-47c1-8ef2-17be22222a78",
-    "form"
+    "form",
+    "rich_text_FRVyTe"
   ]
 }

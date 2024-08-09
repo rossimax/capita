@@ -602,7 +602,7 @@
 
     {% for sb_acc in acc_list %}
       <div class="block">
-        <a href=""
+        <a href="{{ all_products[sb_acc].url }}"
           ><img
             class="object-contain block w-full transition-transform duration-300 ease-out aspect-[130/150] hover:scale-105"
             src="{{ all_products[sb_acc].featured_image | img_url: '1160x' }}"

@@ -291,8 +291,9 @@
               {% if product.metafields.accentuate.new_tag %}
                 <div class="new-label">NEW</div> 
               {% elsif product.available == false %}
-                <div class="sold-out-label">SOLD<br/> OUT</div> 
-              {% endif %}
+              {% comment %} <div class="sold-out-label">SOLD<br/> OUT</div>  {% endcomment %}
+              <div class="sold-out-label">COMING<br/> SOON</div> 
+            {% endif %}
               <div class="c-listing-product__image">
                 <a href="{{ product.url }}">
                   <img src="{{ product.featured_image | img_url: "550x550" }}" alt="Capita | {{ product.title | strip_html }}">

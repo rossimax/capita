@@ -9,8 +9,27 @@
 */
 {
   "sections": {
+    "hero_banner_secondary_E4td3N": {
+      "type": "hero-banner-secondary",
+      "settings": {
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "image_desk": "shopify:\/\/shop_images\/C6158CD0-3ED5-42C1-AAF2-BAC3703D8C56.jpg",
+        "image_mob": "shopify:\/\/shop_images\/65DDFD5D-BFB1-4C74-8860-1F2254B90F21.jpg",
+        "shadow": "no",
+        "title_position": "with_content",
+        "content_position": "bottom_center",
+        "title": "",
+        "sub_title": "",
+        "button_label": "OPEN YOUR MIND",
+        "button_link": "shopify:\/\/collections\/all-snowboards",
+        "shadow_box_title": "",
+        "shadow_box_text": ""
+      }
+    },
     "b78e3e4b-5746-42c1-b1e6-fdd722b34f05": {
       "type": "hero-banner",
+      "disabled": true,
       "settings": {
         "transparent_header": false,
         "image": "shopify:\/\/shop_images\/C6158CD0-3ED5-42C1-AAF2-BAC3703D8C56.jpg",
@@ -113,6 +132,7 @@
     }
   },
   "order": [
+    "hero_banner_secondary_E4td3N",
     "b78e3e4b-5746-42c1-b1e6-fdd722b34f05",
     "9585bd87-5023-4c43-9cfe-83138c9055e7",
     "b0ceccbd-5777-4ea4-a4a9-34b65278682a",

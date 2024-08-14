@@ -152,7 +152,12 @@
                         <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
                           attr-img-url="{{ img_url__attr }}" 
                           attr-num="{{ forloop.index0 }}" 
-                          class="js-product-gallery-item">
+                          class="js-product-gallery-item"
+                          style="
+                          {%- if forloop.index0 != 0 -%}
+                          display:none
+                          {%- endif -%}
+                          " >
                     {% endfor %}
                   {% endif %}
                 </div>
@@ -219,7 +224,12 @@
                       <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
                         attr-img-url="{{ img_url__attr }}" 
                         attr-num="{{ forloop.index0 }}" 
-                        class="js-product-gallery-item">
+                        class="js-product-gallery-item"
+                        style="
+                        {%- if forloop.index0 != 0 -%}
+                        display:none
+                        {%- endif -%}
+                        " >
                   {% endfor %}
                 {% endif %}
               </div>

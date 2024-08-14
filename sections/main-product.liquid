@@ -27,34 +27,69 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="c-product-gallery__item">
-          {% for media in product.media %}
+            {% if template.suffix == 'snowboards' %}
 
-            {%- assign img_url = media | image_url: width: 1024 -%}
-            {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
-              <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
-                attr-img-url="{{ img_url__attr }}" 
-                attr-num="{{ forloop.index0 }}" 
-                class="js-product-gallery-item"
-                style="
-                {%- if forloop.index0 != 0 -%}
-                display:none
-                {%- endif -%}
-                " 
-              >
-            {% endfor %}
+              {% for media in product.media %}
+
+                {%- assign img_url = media | image_url: width: 1024 -%}
+                {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
+                  <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
+                    attr-img-url="{{ img_url__attr }}" 
+                    attr-num="{{ forloop.index0 }}" 
+                    class="js-product-gallery-item"
+                    style="
+                    {%- if forloop.index0 != 0 -%}
+                    display:none
+                    {%- endif -%}
+                    " 
+                  >
+                {% endfor %}
+              {% else %}
+
+                {% for variant_m in product.variants %}
+
+                  {%- assign img_url = product.media[0] | image_url: width: 1024 -%}
+                  {%- assign img_url__attr = product.media[0] | image_url: width: 100, height: 100 -%}
+                    <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
+                      attr-img-url="{{ img_url__attr }}" 
+                      attr-num="{{ forloop.index0 }}" 
+                      class="js-product-gallery-item"
+                      style="
+                      {%- if forloop.index0 != 0 -%}
+                      display:none
+                      {%- endif -%}
+                      " >
+                {% endfor %}
+
+              {% endif %}
             </div>
         </div>
 
-        {% assign slider_images = product.metafields.accentuate.slider_image %}
-        {% if slider_images != blank %}
-          {% for slider_image in slider_images %}
-            <div class="swiper-slide">
-              <div class="c-product-gallery__item">
-                <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra" class="js-product-gallery-item">
+        {% if template.suffix == 'snowboards' %}
+          {% assign slider_images = product.metafields.accentuate.slider_image %}
+          {% if slider_images != blank %}
+            {% for slider_image in slider_images %}
+              <div class="swiper-slide">
+                <div class="c-product-gallery__item">
+                  <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra" class="js-product-gallery-item">
+                </div>
               </div>
-            </div>
-          {% endfor %}
+            {% endfor %}
+          {% endif %}
+        {% else %}
+            {% for media in product.media %}
+              {% if forloop.index > 1 %}
+                {%- assign img_url = media | image_url: width: 1024 -%}
+                <div class="swiper-slide">
+                  <div class="c-product-gallery__item">
+                    <img src="{{ img_url }}" alt="{{ product.title | strip_html }} extra" class="js-product-gallery-item">
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
         {% endif %}
+
+
       </div>
       <button class="c-product-gallery__close js-product-gallery-close" type="button">
         <svg
@@ -106,31 +141,64 @@
               <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
-                  {% for media in product.media %}
 
-                    {%- assign img_url = media | image_url: width: 1024 -%}
-                    {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
-                    
-                    <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
-                      attr-img-url="{{ img_url__attr }}" 
-                      attr-num="{{ forloop.index0 }}" 
-                      style="
-                {%- if forloop.index0 != 0 -%}
-                display:none
-                {%- endif -%}
-                " 
-                    >
-                  {% endfor %}
+                  {% if template.suffix == 'snowboards' %}
+                      {% for media in product.media %}
+
+                        {%- assign img_url = media | image_url: width: 1024 -%}
+                        {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
+                        
+                        <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
+                          attr-img-url="{{ img_url__attr }}" 
+                          attr-num="{{ forloop.index0 }}" 
+                          style="
+                    {%- if forloop.index0 != 0 -%}
+                    display:none
+                    {%- endif -%}
+                    " 
+                        >
+                      {% endfor %}
+
+                  {% else %}
+                    {% for variant_m in product.variants %}
+
+                      {%- assign img_url = product.media[0] | image_url: width: 1024 -%}
+                      {%- assign img_url__attr = product.media[0] | image_url: width: 100, height: 100 -%}
+                        <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
+                          attr-img-url="{{ img_url__attr }}" 
+                          attr-num="{{ forloop.index0 }}" 
+                          class="js-product-gallery-item"
+                          style="
+                          {%- if forloop.index0 != 0 -%}
+                          display:none
+                          {%- endif -%}
+                          " >
+                    {% endfor %}
+                  {% endif %}
                 </div>
 
-                {% assign slider_images = product.metafields.accentuate.slider_image %}
-                {% if slider_images != blank %}
-                  {% for slider_image in slider_images %}
-                    <div class="swiper-slide">
-                      <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
-                    </div>
-                  {% endfor %}
+
+                
+                {% if template.suffix == 'snowboards' %}
+                  {% assign slider_images = product.metafields.accentuate.slider_image %}
+                  {% if slider_images != blank %}
+                    {% for slider_image in slider_images %}
+                      <div class="swiper-slide">
+                        <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                {% else %}
+                    {% for media in product.media %}
+                      {% if forloop.index > 1 %}
+                        {%- assign img_url = media | image_url: width: 1024 -%}
+                        <div class="swiper-slide">
+                          <img src="{{ img_url }}" alt="{{ product.title | strip_html }} extra">
+                        </div>
+                      {% endif %}
+                    {% endfor %}
                 {% endif %}
+
 
               </div>
             </div>
@@ -159,30 +227,60 @@
             </button>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                {% for media in product.media %}
 
-                  {%- assign img_url = media | image_url: width: 1024 -%}
-                  {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
-                  
-                  <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
-                    attr-img-url="{{ img_url__attr }}" 
-                    attr-num="{{ forloop.index0 }}" 
-                    style="
-                {%- if forloop.index0 != 0 -%}
-                display:none
-                {%- endif -%}
-                " 
-                  >
-                {% endfor %}
+                {% if template.suffix == 'snowboards' %}
+
+                    {% for media in product.media %}
+
+                      {%- assign img_url = media | image_url: width: 1024 -%}
+                      {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
+                      
+                      <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
+                        attr-img-url="{{ img_url__attr }}" 
+                        attr-num="{{ forloop.index0 }}" 
+                        style="
+                    {%- if forloop.index0 != 0 -%}
+                    display:none
+                    {%- endif -%}
+                    " 
+                      >
+                    {% endfor %}
+                {% else %}
+                  {% for variant_m in product.variants %}
+
+                    {%- assign img_url = product.media[0] | image_url: width: 1024 -%}
+                    {%- assign img_url__attr = product.media[0] | image_url: width: 100, height: 100 -%}
+                      <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
+                        attr-img-url="{{ img_url__attr }}" 
+                        attr-num="{{ forloop.index0 }}" 
+                        class="js-product-gallery-item"
+                        style="
+                        {%- if forloop.index0 != 0 -%}
+                        display:none
+                        {%- endif -%}
+                        " >
+                  {% endfor %}
+                {% endif %}
               </div>
 
-              {% assign slider_images = product.metafields.accentuate.slider_image %}
-              {% if slider_images != blank %}
-                {% for slider_image in slider_images %}
-                  <div class="swiper-slide">
-                    <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
-                  </div>
-                {% endfor %}
+              {% if template.suffix == 'snowboards' %}
+                {% assign slider_images = product.metafields.accentuate.slider_image %}
+                {% if slider_images != blank %}
+                  {% for slider_image in slider_images %}
+                    <div class="swiper-slide">
+                      <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra">
+                    </div>
+                  {% endfor %}
+                {% endif %}
+              {% else %}
+                  {% for media in product.media %}
+                    {% if forloop.index > 1 %}
+                      {%- assign img_url = media | image_url: width: 1024 -%}
+                      <div class="swiper-slide">
+                        <img src="{{ img_url }}" alt="{{ product.title | strip_html }} extra">
+                      </div>
+                    {% endif %}
+                  {% endfor %}
               {% endif %}
 
             </div>
@@ -444,6 +542,7 @@
     }
 
   }
+
 {% endstyle %}
 
 {% schema %}

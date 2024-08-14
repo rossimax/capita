@@ -65,16 +65,34 @@
             </div>
         </div>
 
-        {% assign slider_images = product.metafields.accentuate.slider_image %}
-        {% if slider_images != blank %}
-          {% for slider_image in slider_images %}
-            <div class="swiper-slide">
-              <div class="c-product-gallery__item">
-                <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra" class="js-product-gallery-item">
+        {% if template.suffix == 'snowboards' %}
+          {% assign slider_images = product.metafields.accentuate.slider_image %}
+          {% if slider_images != blank %}
+            {% for slider_image in slider_images %}
+              <div class="swiper-slide">
+                <div class="c-product-gallery__item">
+                  <img src="{{ slider_image }}" alt="{{ product.title | strip_html }} extra" class="js-product-gallery-item">
+                </div>
               </div>
-            </div>
-          {% endfor %}
+            {% endfor %}
+          {% endif %}
+        {% else %}
+          {% assign slider_images = product.media %}
+          {% if slider_images != blank %}
+            {% for slider_image in slider_images %}
+              {% if forloop.index > 0 %}
+                {%- assign img_url = slider_image | image_url: width: 1024 -%}
+                <div class="swiper-slide">
+                  <div class="c-product-gallery__item">
+                    <img src="{{ img_url }}" alt="{{ product.title | strip_html }} extra" class="js-product-gallery-item">
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
         {% endif %}
+
+
       </div>
       <button class="c-product-gallery__close js-product-gallery-close" type="button">
         <svg

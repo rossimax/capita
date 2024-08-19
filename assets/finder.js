@@ -192,7 +192,7 @@
 
                 finderResults[0].querySelector(".js-fs-result-img").setAttribute("src", response_scelta1_json.featured_image)
                 finderResults[0].querySelector(".js-fs-result-title").innerHTML = response_scelta1_json.title
-                finderResults[0].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
+                finderResults[0].querySelector(".js-fs-result-size").innerHTML = "<span>Size: </span>"+steps_json.step2.value
                 finderResults[0].querySelector(".js-fs-result-link").setAttribute("href", response_scelta1_json.url)
 
 

@@ -11,6 +11,7 @@
   "sections": {
     "hero_banner_secondary_E4td3N": {
       "type": "hero-banner-secondary",
+      "disabled": true,
       "settings": {
         "margin_top": 0,
         "margin_bottom": 0,
@@ -29,13 +30,12 @@
     },
     "b78e3e4b-5746-42c1-b1e6-fdd722b34f05": {
       "type": "hero-banner",
-      "disabled": true,
       "settings": {
         "transparent_header": false,
         "image": "shopify:\/\/shop_images\/C6158CD0-3ED5-42C1-AAF2-BAC3703D8C56.jpg",
         "image_mob": "shopify:\/\/shop_images\/65DDFD5D-BFB1-4C74-8860-1F2254B90F21.jpg",
-        "cta_text": "",
-        "cta_link": ""
+        "cta_text": "OPEN YOUR MIND",
+        "cta_link": "shopify:\/\/collections\/all-snowboards"
       }
     },
     "9585bd87-5023-4c43-9cfe-83138c9055e7": {

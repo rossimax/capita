@@ -201,7 +201,7 @@
 
                 finderResults[1].querySelector(".js-fs-result-img").setAttribute("src", response_scelta2_json.featured_image)
                 finderResults[1].querySelector(".js-fs-result-title").innerHTML = response_scelta2_json.title
-                finderResults[1].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
+                finderResults[1].querySelector(".js-fs-result-size").innerHTML = "<span>Size: </span>"+steps_json.step2.value
                 finderResults[1].querySelector(".js-fs-result-link").setAttribute("href", response_scelta2_json.url)
 
                 

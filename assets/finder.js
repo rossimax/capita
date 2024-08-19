@@ -358,9 +358,28 @@
                 function elementDrag(e) {
                     e = e || window.event;
                     e.preventDefault();
-                    newX = oldX - e.clientX; // to calculate how much we have moved
-                    oldX = e.clientX; // store current value to use for next move
+
+                    let clientX = 0
+
+                    if (window.innerWidth < 769) {
+                        clientX = e.changedTouches[0].pageX
+                    } else {
+                        clientX = e.clientX
+                    }
+
+                    newX = oldX - clientX; // to calculate how much we have moved
+                    oldX = clientX; // store current value to use for next move
                     let pos = selector_pin.offsetLeft - newX
+
+                    // if (window.innerWidth < 769) {
+                    //     startX = e.changedTouches[0].pageX;
+                    //     console.log(e.changedTouches[0].pageX)
+                    // } 
+
+
+                    console.log("clientX: "+clientX)
+                    console.log("newX: "+newX)
+                    console.log("pos: "+pos)
 
                     let line_max_width = Number(selector__line.offsetWidth)
 
@@ -470,9 +489,22 @@
                     oldX = e.clientX; // store current value to use for mouse move calculation
                     document.onmouseup = closeDragElement;
                     document.onmousemove = elementDrag;
+
+                    document.ontouchend = closeDragElement; // mob
+                    document.ontouchmove = elementDrag; // mob
+
+                    // document.addEventListener("touchend", function(){
+                    //     console.log("touchend")
+                    //     closeDragElement();
+                    //  });
+                    //  document.addEventListener("touchmove", function(){
+                    //     console.log("touchmove")
+                    //     elementDrag();
+                    //  });
                 }
 
                 selector_pin.onmousedown = dragMouseDown;
+                selector_pin.ontouchstart = dragMouseDown; // mob
 
             })
 

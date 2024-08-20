@@ -13,7 +13,8 @@
   -%}
   {% capture paramUrlLocal %}{{ pageUrl }}{% endcapture %}
 
-<div class="select-location-container" data-link="{{ paramUrlLocal }}">
+
+<div class="select-location-container" data-link="{{ paramUrlLocal }}" {{ pageUrl }}>
     <div class="select-location-content">
 
         {% if paramUrlLocal != "no-local" %}

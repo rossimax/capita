@@ -1,30 +1,48 @@
-<div class="select-location-container">
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+  {%- assign pageUrl = contentForQuerystring
+    | split: '"pageurl":"'
+    | last
+    | split: '"'
+    | first
+    | split: '.myshopify.com'
+    | last
+    | replace: '\/', '/'
+    | replace: '%20', ' '
+    | replace: '\u0026', '&'
+    | split: 'localpos=' | last
+  -%}
+  {% capture paramUrlLocal %}{{ pageUrl }}{% endcapture %}
+
+<div class="select-location-container" data-link="{{ paramUrlLocal }}">
 
     <div class="select-location-content">
-        <div class="current-location">
-            <h5 class="medium">Your Location</h5>
-            <div class="single-country small">
-                {% if localization.country.iso_code == "IT" %}
-                    <a class="single-country__name small" href="/">
-                        {{ localization.country | image_url: width: 32 | image_tag }} {{ localization.country }}
-                    </a>
-                {% else %}
-                    <a class="single-country__name small" href="/{{ localization.country.available_languages[0].iso_code }}-{{ localization.country.iso_code | downcase }}">
-                        {{ localization.country | image_url: width: 32 | image_tag }} {{ localization.country }}
-                    </a>
-                {% endif %}
-                {% if localization.available_languages.size > 1 %}
-                    <div class="single-country__langs small">
-                        {% for av_lang in localization.available_languages %}
-                            <a class="single-country__langs__link {% if localization.language.iso_code == av_lang.iso_code %}actual-language{% endif %}" href="{{ av_lang.root_url }}">{{ av_lang.name }}</a> {% unless forloop.last %}|{% endunless -%}
-                        {% endfor %}
-                    </div>
-                {% endif %}
+
+        {% if paramUrlLocal != "no-local" %}
+            <div class="current-location">
+                <h5 class="medium">Your Location</h5>
+                <div class="single-country small">
+                    {% if localization.country.iso_code == "IT" %}
+                        <a class="single-country__name small" href="/">
+                            {{ localization.country | image_url: width: 32 | image_tag }} {{ localization.country }}
+                        </a>
+                    {% else %}
+                        <a class="single-country__name small" href="/{{ localization.country.available_languages[0].iso_code }}-{{ localization.country.iso_code | downcase }}">
+                            {{ localization.country | image_url: width: 32 | image_tag }} {{ localization.country }}
+                        </a>
+                    {% endif %}
+                    {% if localization.available_languages.size > 1 %}
+                        <div class="single-country__langs small">
+                            {% for av_lang in localization.available_languages %}
+                                <a class="single-country__langs__link {% if localization.language.iso_code == av_lang.iso_code %}actual-language{% endif %}" href="{{ av_lang.root_url }}">{{ av_lang.name }}</a> {% unless forloop.last %}|{% endunless -%}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
             </div>
-        </div>
-        <hr>
+            <hr>
+        {% endif %}
+        <h5 class="medium">Europe</h5>
         <div class="europe-location">
-            <h5 class="medium">Europe</h5>
             {% for country in localization.available_countries -%}
                 <div class="single-country">
                     {% if country.iso_code == "IT" %}
@@ -58,31 +76,31 @@
             {%- endfor %}
         </div>
         <hr>
+        <h5 class="medium">North America</h5>
         <div class="europe-location">
-            <h5 class="medium">North America</h5>
             <div class="single-country">
-                <a class="single-country__name small" href="https://capitasnowboarding.com/">
+                <a class="single-country__name small" href="https://unionbindingcompany.com/">
                     <img src="//cdn.shopify.com/static/images/flags/us.svg?width=32" alt="United States" srcset="//cdn.shopify.com/static/images/flags/us.svg?width=32 32w" width="32" height="24">
                     United States
                 </a>
             </div>
             <div class="single-country">
-                <a class="single-country__name small" href="https://capitasnowboarding.com/en-ca">
+                <a class="single-country__name small" href="https://unionbindingcompany.com/en-ca">
                     <img src="//cdn.shopify.com/static/images/flags/ca.svg?width=32" alt="Canada" srcset="//cdn.shopify.com/static/images/flags/ca.svg?width=32 32w" width="32" height="24">
                     Canada
                 </a>
             </div>
         </div>
         <hr>
-        {% comment %} <div class="europe-location">
-            <h5 class="medium">Asia</h5>
+        <h5 class="medium">Asia</h5>
+        <div class="europe-location">
             <div class="single-country">
-                <a class="single-country__name small" href="https://jp.capitasnowboarding.com/">
+                <a class="single-country__name small" href="https://jp.unionbindingcompany.com/">
                     <img src="//cdn.shopify.com/static/images/flags/jp.svg?width=32" alt="Japan" srcset="//cdn.shopify.com/static/images/flags/jp.svg?width=32 32w" width="32" height="24">
                     Japan
                 </a>
             </div>
-        </div> {% endcomment %}
+        </div>
     </div>
 
 </div>
@@ -100,13 +118,14 @@
 {% endschema %}
   
 {% style %}
-main h1 {
-    text-align: center;
-}
 .select-location-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+.select-location-content .current-location {
     max-width: 260px;
     margin: 0 auto;
-    padding: 20px;
 }
 .select-location-container hr {
     margin: 15px 0;
@@ -115,19 +134,13 @@ main h1 {
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
+    min-height: 40px;
 }
 .single-country__name {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     font-weight: 500;
-    margin-top: 10px;
     margin-bottom: 5px;
-    color: #000;
-    font-size: 16px;
-    text-align: left;
 }
 .single-country__name:hover {
     text-decoration: underline;
@@ -137,13 +150,14 @@ main h1 {
     margin-left: 35px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 170px;
 }
 .select-location-container img {
     max-height: 15px;
     vertical-align: top;
     margin-right: 7px;
-    width: 32px;
-    display: block;
+    width: fit-content;
 }
 .select-location-container .country-site-selector__actual {
     padding: 1px 10px;
@@ -173,8 +187,6 @@ main h1 {
 .select-location-content h5 {
     font-weight: 500;
     color: #000;
-    font-size: 22px;
-    margin-bottom: 10px;
 }
 
 .country-site-selector select {
@@ -187,9 +199,25 @@ main h1 {
     width: 100%;
     height: 24px;
 }
-
+.select-location-content .europe-location {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
 
 @media screen and (max-width: 768px) {
+    .select-location-content .select-location-content {
+        max-width: 260px;
+    }
+    .select-location-content .europe-location {
+        display: grid;
+        grid-template-columns: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+    .select-location-content h5 {
+        max-width: 260px;
+        margin: 20px auto;
+    } 
     .country-site-selector {
         width: 100%;
         border-left: none;
@@ -221,9 +249,6 @@ main h1 {
     }
     h1.main-page-title.page-title.h0 {
         font-size: 28px;
-    }
-    .main-page {
-        margin-top: 100px;
     }
 }
 {% endstyle %}

@@ -100,7 +100,6 @@
 
         ff_current_step.classList.add("active")
 
-        
         // num_actual_step = document.querySelector(".js-steps:not(.hide)").getAttribute("data-step")
         // document.querySelectorAll(".ff-step").forEach(ff_step => {
         //     ff_step.classList.remove("active")

@@ -202,7 +202,7 @@
                 } else {
 
                     document.querySelector(".js-no-result").classList.add("hide")
-                    document.querySelector(".js-finder-head-result").classList.remove("hide")
+                    document.querySelector(".js-finder-head-result p").classList.remove("hide")
 
                     const response_scelta1 = await fetch('/products/'+scelta1+'.js');
                     const response_scelta1_json = await response_scelta1.json();

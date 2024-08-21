@@ -186,16 +186,19 @@
                 }
 
                 console.log(steps_json.step2.value)
-                
+
                 if (steps_json.step2.value.includes("Based on your input provided")) {
 
                     document.querySelector(".js-no-result").classList.remove("hide")
+                    document.querySelector(".js-finder-head-result").classList.add("hide")
+                    
                     finderResults[0].classList.add("hide")
                     finderResults[1].classList.add("hide")
 
                 } else {
 
                     document.querySelector(".js-no-result").classList.add("hide")
+                    document.querySelector(".js-finder-head-result").classList.remove("hide")
 
                     const response_scelta1 = await fetch('/products/'+scelta1+'.js');
                     const response_scelta1_json = await response_scelta1.json();

@@ -558,6 +558,13 @@ img.js-fs-result-img {
 .finder-step.js-steps[data-step="step5"]:not(.hide) + .finder-btn-next {
     display: none !important;
 }
+.finder-step[data-step="step5"] {
+    display: flex;
+    align-items: center;
+}
+.no-result.js-no-result {
+    font-weight: 500;
+}
 @media screen and (max-width: 768px) {
     .finder-container {
         margin-top: 90px;
@@ -582,14 +589,6 @@ img.js-fs-result-img {
     }
     .finder-step {
         min-height: 200px;
-    }
-    .finder-step[data-step="step5"] {
-        display: flex;
-        align-items: center;
-    }
-    
-    .no-result.js-no-result {
-        font-weight: 500;
     }
     .fms-content .fsm-box {
         margin-bottom: 20px;

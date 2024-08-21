@@ -705,7 +705,7 @@ img.js-fs-result-img {
                 result1 = result1.toString()
                 result2 = result2.toString()
 
-                sessionStorage.setItem("Step2",[result1,result2])
+                sessionStorage.setItem("Step2","<span class='result-size result-size--1'>"+result1+"</span><span class='result-size result-size--2'>"+result2+"</span>")
 
                 document.querySelector(".js-btn-next").classList.add("active")
                 document.querySelector(".js-ff-next").classList.remove("hidden")

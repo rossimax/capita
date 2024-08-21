@@ -769,6 +769,8 @@ span.fsm-prod-size {
             url_fetch = "/pages/dealers?view=size-finder-man.json"
         } else if (gender == "women") {
             url_fetch = "/pages/dealers?view=size-finder-wom.json"
+        } else {
+            url_fetch = "/pages/dealers?view=size-finder-kid.json"
         }
 
         const response = await fetch(url_fetch);

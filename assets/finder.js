@@ -185,30 +185,42 @@
                     var scelta2 = "union-force-mens-snowboard-binding-2025"
                 }
 
-
-
-                const response_scelta1 = await fetch('/products/'+scelta1+'.js');
-                const response_scelta1_json = await response_scelta1.json();
-
-                finderResults[0].querySelector(".js-fs-result-img").setAttribute("src", response_scelta1_json.featured_image)
-                finderResults[0].querySelector(".js-fs-result-title").innerHTML = response_scelta1_json.title
-                finderResults[0].querySelector(".js-fs-result-size").innerHTML = "<span>Size: </span>"+steps_json.step2.value
-                finderResults[0].querySelector(".js-fs-result-link").setAttribute("href", response_scelta1_json.url)
-
-
-                const response_scelta2 = await fetch('/products/'+scelta2+'.js');
-                const response_scelta2_json = await response_scelta2.json();
-
-                finderResults[1].querySelector(".js-fs-result-img").setAttribute("src", response_scelta2_json.featured_image)
-                finderResults[1].querySelector(".js-fs-result-title").innerHTML = response_scelta2_json.title
-                finderResults[1].querySelector(".js-fs-result-size").innerHTML = "<span>Size: </span>"+steps_json.step2.value
-                finderResults[1].querySelector(".js-fs-result-link").setAttribute("href", response_scelta2_json.url)
-
+                console.log(steps_json.step2.value)
                 
-                finderResults[0].classList.remove("hide")
-                if ((size_selected != "Mini") && (size_selected != "Extra Large")) {
-                    finderResults[1].classList.remove("hide")
+                if (steps_json.step2.value.includes("Based on your input provided")) {
+
+                    document.querySelector(".js-no-result").classList.remove("hide")
+                    finderResults[0].classList.add("hide")
+                    finderResults[1].classList.add("hide")
+
+                } else {
+
+                    document.querySelector(".js-no-result").classList.add("hide")
+
+                    const response_scelta1 = await fetch('/products/'+scelta1+'.js');
+                    const response_scelta1_json = await response_scelta1.json();
+    
+                    finderResults[0].querySelector(".js-fs-result-img").setAttribute("src", response_scelta1_json.featured_image)
+                    finderResults[0].querySelector(".js-fs-result-title").innerHTML = response_scelta1_json.title
+                    finderResults[0].querySelector(".js-fs-result-size").innerHTML = "<span>Size: </span>"+steps_json.step2.value
+                    finderResults[0].querySelector(".js-fs-result-link").setAttribute("href", response_scelta1_json.url)
+    
+    
+                    const response_scelta2 = await fetch('/products/'+scelta2+'.js');
+                    const response_scelta2_json = await response_scelta2.json();
+    
+                    finderResults[1].querySelector(".js-fs-result-img").setAttribute("src", response_scelta2_json.featured_image)
+                    finderResults[1].querySelector(".js-fs-result-title").innerHTML = response_scelta2_json.title
+                    finderResults[1].querySelector(".js-fs-result-size").innerHTML = "<span>Size: </span>"+steps_json.step2.value
+                    finderResults[1].querySelector(".js-fs-result-link").setAttribute("href", response_scelta2_json.url)
+    
+                    
+                    finderResults[0].classList.remove("hide")
+                    if ((size_selected != "Mini") && (size_selected != "Extra Large")) {
+                        finderResults[1].classList.remove("hide")
+                    }
                 }
+
                 resultLoader.classList.add("hide")
 
             }

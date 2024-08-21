@@ -157,7 +157,7 @@
         jsHeadResult.classList.remove("hide")
         jsHeadDefault.classList.add("hide")
 
-        console.log(combination_to_search)
+        // console.log(combination_to_search)
 
         // mini: cadet mini
         // xl: force

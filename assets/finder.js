@@ -209,8 +209,10 @@
     
                     finderResults[0].querySelector(".js-fs-result-img").setAttribute("src", response_scelta1_json.featured_image)
                     finderResults[0].querySelector(".js-fs-result-title").innerHTML = response_scelta1_json.title
-                    finderResults[0].querySelector(".js-fs-result-size").innerHTML = "<span>Size: </span>"+steps_json.step2.value
+                    finderResults[0].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
                     finderResults[0].querySelector(".js-fs-result-link").setAttribute("href", response_scelta1_json.url)
+                    finderResults[0].querySelector(".js-result-size--1").setAttribute("href", response_scelta1_json.url)
+                    finderResults[0].querySelector(".js-result-size--2").setAttribute("href", response_scelta1_json.url)
     
     
                     const response_scelta2 = await fetch('/products/'+scelta2+'.js');
@@ -218,8 +220,10 @@
     
                     finderResults[1].querySelector(".js-fs-result-img").setAttribute("src", response_scelta2_json.featured_image)
                     finderResults[1].querySelector(".js-fs-result-title").innerHTML = response_scelta2_json.title
-                    finderResults[1].querySelector(".js-fs-result-size").innerHTML = "<span>Size: </span>"+steps_json.step2.value
+                    finderResults[1].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
                     finderResults[1].querySelector(".js-fs-result-link").setAttribute("href", response_scelta2_json.url)
+                    finderResults[0].querySelector(".js-result-size--1").setAttribute("href", response_scelta1_json.url)
+                    finderResults[0].querySelector(".js-result-size--2").setAttribute("href", response_scelta1_json.url)
     
                     
                     finderResults[0].classList.remove("hide")

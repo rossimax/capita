@@ -570,12 +570,18 @@ img.js-fs-result-img {
 .no-result.js-no-result {
     font-weight: 500;
 }
-span.result-size {
+a.result-size {
     background: #000;
     padding: 5px 10px;
     margin-right: 5px;
     color: #fff;
     border-radius: 20px;
+    border: 1px solid #000;
+}
+a.result-size:hover {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
 }
 @media screen and (max-width: 768px) {
     .finder-container {
@@ -712,7 +718,7 @@ span.result-size {
                 result1 = result1.toString()
                 result2 = result2.toString()
 
-                sessionStorage.setItem("Step2","<span class='result-size result-size--1'>"+result1+"</span><span class='result-size result-size--2'>"+result2+"</span>")
+                sessionStorage.setItem("Step2","<a href='' class='result-size js-result-size--1'>"+result1+"</a><a href='' class='result-size js-result-size--2'>"+result2+"</a>")
 
                 document.querySelector(".js-btn-next").classList.add("active")
                 document.querySelector(".js-ff-next").classList.remove("hidden")

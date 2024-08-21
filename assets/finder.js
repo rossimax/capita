@@ -185,7 +185,6 @@
                     var scelta2 = "union-force-mens-snowboard-binding-2025"
                 }
 
-                console.log(steps_json.step2.value)
 
                 if (steps_json.step2.value.includes("Based on your input provided")) {
 

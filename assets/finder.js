@@ -86,21 +86,27 @@
 
     function finder_navigation_check() {
 
+        // document.querySelectorAll(".ff-step").forEach(ff_step => {
+        //     ff_step.classList.remove("active")
+        // })
+
+        // let step_check = document.querySelector(".finder-step:not(.hide)")
+        // let step_check_num = step_check.getAttribute("data-step")
+
+        // if (step_check_num == "step5") {
+        //     step_check_num = "step4"
+        // }
+        // let ff_current_step = document.querySelector(".ff-step[data-step='" + step_check_num + "']")
+
+        // ff_current_step.classList.add("active")
+
+        
+        num_actual_step = document.querySelector(".js-steps:not(.hide)").getAttribute("data-step")
         document.querySelectorAll(".ff-step").forEach(ff_step => {
             ff_step.classList.remove("active")
         })
+        document.querySelector(".ff-step[data-step="+num_actual_step+"]").classList.add("active")
 
-        let step_check = document.querySelector(".finder-step:not(.hide)")
-        let step_check_num = step_check.getAttribute("data-step")
-
-        if (step_check_num == "step5") {
-            step_check_num = "step4"
-        }
-        let ff_current_step = document.querySelector(".ff-step[data-step='" + step_check_num + "']")
-
-        ff_current_step.classList.add("active")
-
-        
         // for (const [step_name, step] of Object.entries(steps_json)) {
         //     let ff_current_step = document.querySelector(".ff-step[data-step='" + step_name + "']")
         //     if (step.status) {  

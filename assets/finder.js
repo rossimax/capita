@@ -190,7 +190,7 @@
                 if (steps_json.step2.value.includes("Based on your input provided")) {
 
                     document.querySelector(".js-no-result").classList.remove("hide")
-                    document.querySelector(".js-finder-head-result").classList.add("hide")
+                    document.querySelector(".js-finder-head-result p").classList.add("hide")
                     
                     finderResults[0].classList.add("hide")
                     finderResults[1].classList.add("hide")

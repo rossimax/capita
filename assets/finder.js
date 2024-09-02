@@ -206,8 +206,6 @@
 
                     const response_scelta1 = await fetch('/products/'+scelta1+'.js');
                     const response_scelta1_json = await response_scelta1.json();
-
-                    console.log(response_scelta1_json)
     
                     finderResults[0].querySelector(".js-fs-result-img").setAttribute("src", response_scelta1_json.featured_image)
                     finderResults[0].querySelector(".js-fs-result-title").innerHTML = response_scelta1_json.title

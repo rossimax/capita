@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="{{ 'page-pro-program-create.css' | asset_url }}" type="text/css">
+
+<div class="pro-program-create">
+  <div class="ub-create-account">
+    <div class="ub-create-account__wrapper">
+      <div class="u-container u-p-inline">
+        <div class="c-intro">
+          <span class="c-text is-2">Union pro program</span
+          ><span class="c-text is-4"
+            >The Union Pro Program is a<br>
+            membership program for qualified outdoor<br>
+            and snowboard industry professionals.</span
+          >
+        </div>
+      </div>
+      <div class="u-container u-p-inline">
+        <div class="ub-create-account__content">
+          <form class="ub-create-account__form">
+            <label class="c-input js-input is-text"
+              ><span class="c-text is-4">First name*</span
+              ><span class="c-input__wrapper"><input type="text" required="required"></span></label
+            ><label class="c-input js-input is-text"
+              ><span class="c-text is-4">Last name*</span
+              ><span class="c-input__wrapper"><input type="text" required="required"></span></label
+            ><label class="c-input js-input is-email"
+              ><span class="c-text is-4">Email*</span
+              ><span class="c-input__wrapper"><input type="email" required="required"></span></label
+            ><label class="c-input js-input is-email"
+              ><span class="c-text is-4">Confirm Email*</span
+              ><span class="c-input__wrapper"><input type="email" required="required"></span></label
+            ><label class="c-input js-input is-password" required="required"
+              ><span class="c-text is-4">Password*</span
+              ><span class="c-input__wrapper"><input type="password" required="required"></span></label
+            ><label class="c-input js-input is-password" required="required"
+              ><span class="c-text is-4">Confirm Password*</span
+              ><span class="c-input__wrapper"><input type="password" required="required"></span></label
+            ><button class="c-button ub-create-account__signup" type="submit">CREATE AN ACCOUNT</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "ProProgram Create",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Enabled"
+    }
+  ],
+  "presets": [
+    {
+      "name": "ProProgram Create"
+    }
+  ]
+}
+{% endschema %}

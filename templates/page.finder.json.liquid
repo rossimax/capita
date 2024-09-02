@@ -1,0 +1,1020 @@
+{% layout none %}
+{
+
+  {% assign sizes = "Men,Beginner,freeride$Men,Beginner,all-mountain--freestyle$Men,Beginner,all-mountain$Men,Beginner,street-and-jibbing$Men,Beginner,all-mountain--freeride$Men,Beginner,carving-boardercross$Men,Beginner,freestyle-park$Men,Beginner,splitboarding$Men,Intermediate,freeride$Men,Intermediate,all-mountain--freestyle$Men,Intermediate,all-mountain$Men,Intermediate,street-and-jibbing$Men,Intermediate,all-mountain--freeride$Men,Intermediate,carving-boardercross$Men,Intermediate,freestyle-park$Men,Intermediate,splitboarding$Men,Advanced,freeride$Men,Advanced,all-mountain--freestyle$Men,Advanced,all-mountain$Men,Advanced,street-and-jibbing$Men,Advanced,all-mountain--freeride$Men,Advanced,carving-boardercross$Men,Advanced,freestyle-park$Men,Advanced,splitboarding$Women,Beginner,freeride$Women,Beginner,all-mountain--freestyle$Women,Beginner,all-mountain$Women,Beginner,street-and-jibbing$Women,Beginner,all-mountain--freeride$Women,Beginner,carving-boardercross$Women,Beginner,freestyle-park$Women,Beginner,splitboarding$Women,Intermediate,freeride$Women,Intermediate,all-mountain--freestyle$Women,Intermediate,all-mountain$Women,Intermediate,street-and-jibbing$Women,Intermediate,all-mountain--freeride$Women,Intermediate,carving-boardercross$Women,Intermediate,freestyle-park$Women,Intermediate,splitboarding$Women,Advanced,freeride$Women,Advanced,all-mountain--freestyle$Women,Advanced,all-mountain$Women,Advanced,street-and-jibbing$Women,Advanced,all-mountain--freeride$Women,Advanced,carving-boardercross$Women,Advanced,freestyle-park$Women,Advanced,splitboarding$Kids,Beginner,freeride$Kids,Beginner,all-mountain--freestyle$Kids,Beginner,all-mountain$Kids,Beginner,street-and-jibbing$Kids,Beginner,all-mountain--freeride$Kids,Beginner,carving-boardercross$Kids,Beginner,freestyle-park$Kids,Beginner,splitboarding$Kids,Intermediate,freeride$Kids,Intermediate,all-mountain--freestyle$Kids,Intermediate,all-mountain$Kids,Intermediate,street-and-jibbing$Kids,Intermediate,all-mountain--freeride$Kids,Intermediate,carving-boardercross$Kids,Intermediate,freestyle-park$Kids,Intermediate,splitboarding$Kids,Advanced,freeride$Kids,Advanced,all-mountain--freestyle$Kids,Advanced,all-mountain$Kids,Advanced,street-and-jibbing$Kids,Advanced,all-mountain--freeride$Kids,Advanced,carving-boardercross$Kids,Advanced,freestyle-park$Kids,Advanced,splitboarding" | split: "$" %}
+
+  {% for size in sizes %}
+
+
+
+    {% if size == "Men,Beginner,freeride" %}
+
+      {% assign scelta1 = "mercury-2025" | json %}
+      {% assign scelta2 = "the-navigator-2025" | json %}
+
+          {% assign comb = '
+          [
+            ' | append: scelta1 | append: ',
+            ' | append: scelta2 | append: '
+          ]
+          '%}
+    {% endif %}
+
+
+    {% if size == "Men,Beginner,all-mountain--freestyle" %}
+
+        {% assign scelta1 = "doa-2025" | json %}
+        {% assign scelta2 = "outerspace-living-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Beginner,all-mountain" %}
+
+        {% assign scelta1 = "doa-2025" | json %}
+        {% assign scelta2 = "aeronaut-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Beginner,street-and-jibbing" %}
+
+        {% assign scelta1 = "pathfinder-reverse-camber-2025" | json %}
+        {% assign scelta2 = "indoor-survival-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Beginner,all-mountain--freeride" %}
+
+        {% assign scelta1 = "mercury-2025" | json %}
+        {% assign scelta2 = "the-navigator-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Beginner,carving-boardercross" %}
+
+        {% assign scelta1 = "mercury-2025" | json %}
+        {% assign scelta2 = "aeronaut-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Beginner,freestyle-park" %}
+
+        {% assign scelta1 = "pathfinder-camber-2025" | json %}
+        {% assign scelta2 = "outerspace-living-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Beginner,splitboarding" %}
+
+        {% assign scelta1 = "navigator-split-2025" | json %}
+        {% assign scelta2 = "mega-split-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Intermediate,freeride" %}
+
+        {% assign scelta1 = "mercury-2025" | json %}
+        {% assign scelta2 = "kazu-kokubo-pro-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Intermediate,all-mountain--freestyle" %}
+
+        {% assign scelta1 = "doa-2025" | json %}
+        {% assign scelta2 = "indoor-survival-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Intermediate,all-mountain" %}
+
+        {% assign scelta1 = "kazu-kokubo-pro-2025" | json %}
+        {% assign scelta2 = "doa-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Intermediate,street-and-jibbing" %}
+
+        {% assign scelta1 = "ultrafear-2025" | json %}
+        {% assign scelta2 = "sb-resort-twin-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Intermediate,all-mountain--freeride" %}
+
+        {% assign scelta1 = "mercury-2025" | json %}
+        {% assign scelta2 = "the-black-snowboard-of-death-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Intermediate,carving-boardercross" %}
+
+        {% assign scelta1 = "super-doa-2025" | json %}
+        {% assign scelta2 = "mega-death-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Intermediate,freestyle-park" %}
+
+        {% assign scelta1 = "indoor-survival-2025" | json %}
+        {% assign scelta2 = "the-outsiders-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Intermediate,splitboarding" %}
+
+        {% assign scelta1 = "mega-split-2025" | json %}
+        {% assign scelta2 = "navigator-split-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Advanced,freeride" %}
+
+        {% assign scelta1 = "mega-merc-2025" | json %}
+        {% assign scelta2 = "mega-death-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Advanced,all-mountain--freestyle" %}
+
+        {% assign scelta1 = "kazu-kokubo-pro-2025" | json %}
+        {% assign scelta2 = "mega-merc-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Advanced,all-mountain" %}
+
+        {% assign scelta1 = "the-black-snowboard-of-death-2025" | json %}
+        {% assign scelta2 = "mega-death-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Advanced,street-and-jibbing" %}
+
+        {% assign scelta1 = "the-outsiders-2025" | json %}
+        {% assign scelta2 = "indoor-survival-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Advanced,all-mountain--freeride" %}
+
+        {% assign scelta1 = "mega-merc-2025" | json %}
+        {% assign scelta2 = "super-doa-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Advanced,carving-boardercross" %}
+
+        {% assign scelta1 = "aeronaut-2025" | json %}
+        {% assign scelta2 = "mega-death-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Advanced,freestyle-park" %}
+
+        {% assign scelta1 = "super-doa-2025" | json %}
+        {% assign scelta2 = "the-outsiders-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Men,Advanced,splitboarding" %}
+
+        {% assign scelta1 = "mega-split-2025" | json %}
+        {% assign scelta2 = "navigator-split-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Beginner,freeride" %}
+
+        {% assign scelta1 = "the-navigator-wmn-2025" | json %}
+        {% assign scelta2 = "space-metal-fantasy-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Beginner,all-mountain--freestyle" %}
+
+        {% assign scelta1 = "space-metal-fantasy-2025" | json %}
+        {% assign scelta2 = "paradise-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Beginner,all-mountain" %}
+
+        {% assign scelta1 = "birds-of-a-feather-2025" | json %}
+        {% assign scelta2 = "paradise-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Beginner,street-and-jibbing" %}
+
+        {% assign scelta1 = "space-metal-fantasy-2025" | json %}
+        {% assign scelta2 = "paradise-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Beginner,all-mountain--freeride" %}
+
+        {% assign scelta1 = "birds-of-a-feather-2025" | json %}
+        {% assign scelta2 = "the-navigator-wmn-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Beginner,carving-boardercross" %}
+
+        {% assign scelta1 = "birds-of-a-feather-2025" | json %}
+        {% assign scelta2 = "the-equalizer-by-jess-kimura-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Beginner,freestyle-park" %}
+
+        {% assign scelta1 = "space-metal-fantasy-2025" | json %}
+        {% assign scelta2 = "paradise-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Beginner,splitboarding" %}
+
+        {% assign scelta1 = "navigator-wmn-split-2025" | json %}
+        {% assign scelta2 = "navigator-split-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Intermediate,freeride" %}
+
+        {% assign scelta1 = "the-equalizer-by-jess-kimura-2025" | json %}
+        {% assign scelta2 = "the-navigator-wmn-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Intermediate,all-mountain--freestyle" %}
+
+        {% assign scelta1 = "birds-of-a-feather-2025" | json %}
+        {% assign scelta2 = "paradise-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Intermediate,all-mountain" %}
+
+        {% assign scelta1 = "birds-of-a-feather-2025" | json %}
+        {% assign scelta2 = "space-metal-fantasy-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Intermediate,street-and-jibbing" %}
+
+        {% assign scelta1 = "birds-of-a-feather-2025" | json %}
+        {% assign scelta2 = "paradise-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Intermediate,all-mountain--freeride" %}
+
+        {% assign scelta1 = "the-equalizer-by-jess-kimura-2025" | json %}
+        {% assign scelta2 = "birds-of-a-feather-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Intermediate,carving-boardercross" %}
+
+        {% assign scelta1 = "the-equalizer-by-jess-kimura-2025" | json %}
+        {% assign scelta2 = "the-navigator-wmn-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Intermediate,freestyle-park" %}
+
+        {% assign scelta1 = "space-metal-fantasy-2025" | json %}
+        {% assign scelta2 = "birds-of-a-feather-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Intermediate,splitboarding" %}
+
+        {% assign scelta1 = "navigator-wmn-split-2025" | json %}
+        {% assign scelta2 = "navigator-split-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Advanced,freeride" %}
+
+        {% assign scelta1 = "the-equalizer-by-jess-kimura-2025" | json %}
+        {% assign scelta2 = "the-navigator-wmn-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Advanced,all-mountain--freestyle" %}
+
+        {% assign scelta1 = "birds-of-a-feather-2025" | json %}
+        {% assign scelta2 = "space-metal-fantasy-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Advanced,all-mountain" %}
+
+        {% assign scelta1 = "birds-of-a-feather-2025" | json %}
+        {% assign scelta2 = "space-metal-fantasy-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Advanced,street-and-jibbing" %}
+
+        {% assign scelta1 = "birds-of-a-feather-2025" | json %}
+        {% assign scelta2 = "paradise-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Advanced,all-mountain--freeride" %}
+
+        {% assign scelta1 = "the-equalizer-by-jess-kimura-2025" | json %}
+        {% assign scelta2 = "birds-of-a-feather-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Advanced,carving-boardercross" %}
+
+        {% assign scelta1 = "the-equalizer-by-jess-kimura-2025" | json %}
+        {% assign scelta2 = "the-navigator-wmn-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Advanced,freestyle-park" %}
+
+        {% assign scelta1 = "birds-of-a-feather-2025" | json %}
+        {% assign scelta2 = "space-metal-fantasy-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Women,Advanced,splitboarding" %}
+
+        {% assign scelta1 = "navigator-wmn-split-2025" | json %}
+        {% assign scelta2 = "navigator-split-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Beginner,freeride" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "children-of-the-pow-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Beginner,all-mountain--freestyle" %}
+
+        {% assign scelta1 = "jess-kimura-mini-2025" | json %}
+        {% assign scelta2 = "scott-stevens-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Beginner,all-mountain" %}
+
+        {% assign scelta1 = "jess-kimura-mini-2025" | json %}
+        {% assign scelta2 = "scott-stevens-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Beginner,street-and-jibbing" %}
+
+        {% assign scelta1 = "scott-stevens-mini-2025" | json %}
+        {% assign scelta2 = "children-of-the-gnar-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Beginner,all-mountain--freeride" %}
+
+        {% assign scelta1 = "jess-kimura-mini-2025" | json %}
+        {% assign scelta2 = "children-of-the-pow-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Beginner,carving-boardercross" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "scott-stevens-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Beginner,freestyle-park" %}
+
+        {% assign scelta1 = "scott-stevens-mini-2025" | json %}
+        {% assign scelta2 = "children-of-the-gnar-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Beginner,splitboarding" %}
+
+        {% assign scelta1 = "" | json %}
+        {% assign scelta2 = "" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Intermediate,freeride" %}
+
+        {% assign scelta1 = "children-of-the-pow-2025" | json %}
+        {% assign scelta2 = "children-of-the-gnar-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Intermediate,all-mountain--freestyle" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "scott-stevens-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Intermediate,all-mountain" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "jess-kimura-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Intermediate,street-and-jibbing" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "scott-stevens-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Intermediate,all-mountain--freeride" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "children-of-the-pow-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Intermediate,carving-boardercross" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "jess-kimura-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Intermediate,freestyle-park" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "scott-stevens-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Intermediate,splitboarding" %}
+
+        {% assign scelta1 = "" | json %}
+        {% assign scelta2 = "" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Advanced,freeride" %}
+
+        {% assign scelta1 = "children-of-the-pow-2025" | json %}
+        {% assign scelta2 = "children-of-the-gnar-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Advanced,all-mountain--freestyle" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "scott-stevens-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Advanced,all-mountain" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "jess-kimura-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Advanced,street-and-jibbing" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "scott-stevens-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Advanced,all-mountain--freeride" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "children-of-the-pow-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Advanced,carving-boardercross" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "jess-kimura-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Advanced,freestyle-park" %}
+
+        {% assign scelta1 = "children-of-the-gnar-2025" | json %}
+        {% assign scelta2 = "scott-stevens-mini-2025" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+
+    {% if size == "Kids,Advanced,splitboarding" %}
+
+        {% assign scelta1 = "" | json %}
+        {% assign scelta2 = "" | json %}
+
+            {% assign comb = '
+            [
+              ' | append: scelta1 | append: ',
+              ' | append: scelta2 | append: '
+            ]
+            '%}
+    {% endif %}
+
+    {{ size | json }}: {{comb}} {% unless forloop.last %},{% endunless %}
+
+  {% endfor %}
+}

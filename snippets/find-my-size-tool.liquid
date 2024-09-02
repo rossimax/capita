@@ -103,36 +103,41 @@
             <select id="fsm-box-select-us" {% if request.origin contains "https://eu.capitasnowboarding.com" %}class="hide"{% endif %} data-type="US">
                 <option gender="none">SELECT</option>
 
-                    <option value="32" gender="Men">{{ gender_text }} US 1</option>
-                    <option value="33" gender="Men">{{ gender_text }} US 1.5</option>
-                    <option value="33.5" gender="Men">{{ gender_text }} US 2</option>
-                    <option value="34" gender="Men">{{ gender_text }} US 2.5</option>
-                    <option value="35" gender="Men">{{ gender_text }} US 3</option>
-                    <option value="35.5" gender="Men">{{ gender_text }} US 3.5</option>
-                    <option value="36" gender="Men">{{ gender_text }} US 4</option>
-                    <option value="36.5" gender="Men">{{ gender_text }} US 4.5</option>
-                    <option value="37.5" gender="Men">{{ gender_text }} US 5</option>
-                    <option value="38" gender="Men">{{ gender_text }} US 5.5</option>
-                    <option value="38.5" gender="Men">{{ gender_text }} US 6</option>
-                    <option value="39" gender="Men">{{ gender_text }} US 6.5</option>
-                    <option value="40" gender="Men">{{ gender_text }} US 7</option>
-                    <option value="40.5" gender="Men">{{ gender_text }} US 7.5</option>
-                    <option value="41" gender="Men">{{ gender_text }} US 8</option>
-                    <option value="42" gender="Men">{{ gender_text }} US 8.5</option>
-                    <option value="42.5" gender="Men">{{ gender_text }} US 9</option>
-                    <option value="43" gender="Men">{{ gender_text }} US 9.5</option>
-                    <option value="44" gender="Men">{{ gender_text }} US 10</option>
-                    <option value="44.5" gender="Men">{{ gender_text }} US 10.5</option>
-                    <option value="45" gender="Men">{{ gender_text }} US 11</option>
-                    <option value="45.5" gender="Men">{{ gender_text }} US 11.5</option>
-                    <option value="46" gender="Men">{{ gender_text }} US 12</option>
-                    <option value="47" gender="Men">{{ gender_text }} US 12.5</option>
-                    <option value="47.5+" gender="Men">{{ gender_text }} US 13</option>
+                    <option value="38.5" gender="Men">{{ gender_text }} 6</option>
+                    <option value="39" gender="Men">{{ gender_text }} 6.5</option>
+                    <option value="40" gender="Men">{{ gender_text }} 7</option>
+                    <option value="40.5" gender="Men">{{ gender_text }} 7.5</option>
+                    <option value="41" gender="Men">{{ gender_text }} 8</option>
+                    <option value="42" gender="Men">{{ gender_text }} 8.5</option>
+                    <option value="42.5" gender="Men">{{ gender_text }} 9</option>
+                    <option value="43" gender="Men">{{ gender_text }} 9.5</option>
+                    <option value="44" gender="Men">{{ gender_text }} 10</option>
+                    <option value="44.5" gender="Men">{{ gender_text }} 10.5</option>
+                    <option value="45" gender="Men">{{ gender_text }} 11</option>
+                    <option value="45.5" gender="Men">{{ gender_text }} 11.5</option>
+                    <option value="46" gender="Men">{{ gender_text }} 12</option>
+                    <option value="47" gender="Men">{{ gender_text }} 12.5</option>
+                    <option value="47.5" gender="Men">{{ gender_text }} 13</option>
+                    <option value="49" gender="Men">{{ gender_text }} 14</option>
+                    <option value="50" gender="Men">{{ gender_text }} 15</option>
+                    <option value="38.5" gender="Men">{{ gender_text }} 6</option>
+                    <option value="39" gender="Men">{{ gender_text }} 6.5</option>
+                    <option value="40" gender="Men">{{ gender_text }} 7</option>
+                    <option value="40.5" gender="Men">{{ gender_text }} 7.5</option>
+                    <option value="41" gender="Men">{{ gender_text }} 8</option>
+                    <option value="42" gender="Men">{{ gender_text }} 8.5</option>
+                    <option value="42.5" gender="Men">{{ gender_text }} 9</option>
+                    <option value="43" gender="Men">{{ gender_text }} 9.5</option>
+                    <option value="44" gender="Men">{{ gender_text }} 10</option>
+                    <option value="44.5" gender="Men">{{ gender_text }} 10.5</option>
+                    <option value="45" gender="Men">{{ gender_text }} 11</option>
+                    <option value="45.5" gender="Men">{{ gender_text }} 11.5</option>
+                    <option value="46" gender="Men">{{ gender_text }} 12</option>
+                    <option value="47" gender="Men">{{ gender_text }} 12.5</option>
+                    <option value="47.5" gender="Men">{{ gender_text }} 13</option>
+                    <option value="49" gender="Men">{{ gender_text }} 14</option>
+                    <option value="50" gender="Men">{{ gender_text }} 15</option>
 
-                    <option value="32" gender="Women">{{ gender_text }} US -</option>
-                    <option value="33" gender="Women">{{ gender_text }} US 3</option>
-                    <option value="33.5" gender="Women">{{ gender_text }} US 3.5</option>
-                    <option value="34" gender="Women">{{ gender_text }} US 4</option>
                     <option value="35" gender="Women">{{ gender_text }} US 4.5</option>
                     <option value="35.5" gender="Women">{{ gender_text }} US 5</option>
                     <option value="36" gender="Women">{{ gender_text }} US 5.5</option>
@@ -147,13 +152,20 @@
                     <option value="42" gender="Women">{{ gender_text }} US 10</option>
                     <option value="42.5" gender="Women">{{ gender_text }} US 10.5</option>
                     <option value="43" gender="Women">{{ gender_text }} US 11</option>
-                    <option value="44" gender="Women">{{ gender_text }} US 11.5</option>
-                    <option value="44.5" gender="Women">{{ gender_text }} US 12</option>
-                    <option value="45" gender="Women">{{ gender_text }} US 12.5</option>
-                    <option value="45.5" gender="Women">{{ gender_text }} US 13</option>
-                    <option value="46" gender="Women">{{ gender_text }} US 13.5</option>
-                    <option value="47" gender="Women">{{ gender_text }} US 14</option>
-                    <option value="47.5+" gender="Women">{{ gender_text }} US 14.5+</option>
+                    <option value="35" gender="Women">{{ gender_text }} US 4.5</option>
+                    <option value="35.5" gender="Women">{{ gender_text }} US 5</option>
+                    <option value="36" gender="Women">{{ gender_text }} US 5.5</option>
+                    <option value="36.5" gender="Women">{{ gender_text }} US 6</option>
+                    <option value="37.5" gender="Women">{{ gender_text }} US 6.5</option>
+                    <option value="38" gender="Women">{{ gender_text }} US 7</option>
+                    <option value="38.5" gender="Women">{{ gender_text }} US 7.5</option>
+                    <option value="39" gender="Women">{{ gender_text }} US 8</option>
+                    <option value="40" gender="Women">{{ gender_text }} US 8.5</option>
+                    <option value="40.5" gender="Women">{{ gender_text }} US 9</option>
+                    <option value="41" gender="Women">{{ gender_text }} US 9.5</option>
+                    <option value="42" gender="Women">{{ gender_text }} US 10</option>
+                    <option value="42.5" gender="Women">{{ gender_text }} US 10.5</option>
+                    <option value="43" gender="Women">{{ gender_text }} US 11</option>
 
                     <option value="24" gender="Kids">{{ gender_text }} 7C</option>
                     <option value="25" gender="Kids">{{ gender_text }} 8C</option>
@@ -188,16 +200,6 @@
             <select id="fsm-box-select-eu" {% if request.origin contains "https://capitasnowboarding.com" %}class="hide"{% endif %} data-type="EU">
                 <option gender="none">SELECT</option>
 
-                    <option value="32" gender="Men">{{ gender_text }} EU 32</option>
-                    <option value="33" gender="Men">{{ gender_text }} EU 33</option>
-                    <option value="33.5" gender="Men">{{ gender_text }} EU 33.5</option>
-                    <option value="34" gender="Men">{{ gender_text }} EU 34</option>
-                    <option value="35" gender="Men">{{ gender_text }} EU 35</option>
-                    <option value="35.5" gender="Men">{{ gender_text }} EU 35.5</option>
-                    <option value="36" gender="Men">{{ gender_text }} EU 36</option>
-                    <option value="36.5" gender="Men">{{ gender_text }} EU 36.5</option>
-                    <option value="37.5" gender="Men">{{ gender_text }} EU 37.5</option>
-                    <option value="38" gender="Men">{{ gender_text }} EU 38</option>
                     <option value="38.5" gender="Men">{{ gender_text }} EU 38.5</option>
                     <option value="39" gender="Men">{{ gender_text }} EU 39</option>
                     <option value="40" gender="Men">{{ gender_text }} EU 40</option>
@@ -212,12 +214,27 @@
                     <option value="45.5" gender="Men">{{ gender_text }} EU 45.5</option>
                     <option value="46" gender="Men">{{ gender_text }} EU 46</option>
                     <option value="47" gender="Men">{{ gender_text }} EU 47</option>
-                    <option value="47.5+" gender="Men">{{ gender_text }} EU 47.5+</option>
+                    <option value="47.5" gender="Men">{{ gender_text }} EU 47.5</option>
+                    <option value="49" gender="Men">{{ gender_text }} EU 49</option>
+                    <option value="50" gender="Men">{{ gender_text }} EU 50</option>
+                    <option value="38.5" gender="Men">{{ gender_text }} EU 38.5</option>
+                    <option value="39" gender="Men">{{ gender_text }} EU 39</option>
+                    <option value="40" gender="Men">{{ gender_text }} EU 40</option>
+                    <option value="40.5" gender="Men">{{ gender_text }} EU 40.5</option>
+                    <option value="41" gender="Men">{{ gender_text }} EU 41</option>
+                    <option value="42" gender="Men">{{ gender_text }} EU 42</option>
+                    <option value="42.5" gender="Men">{{ gender_text }} EU 42.5</option>
+                    <option value="43" gender="Men">{{ gender_text }} EU 43</option>
+                    <option value="44" gender="Men">{{ gender_text }} EU 44</option>
+                    <option value="44.5" gender="Men">{{ gender_text }} EU 44.5</option>
+                    <option value="45" gender="Men">{{ gender_text }} EU 45</option>
+                    <option value="45.5" gender="Men">{{ gender_text }} EU 45.5</option>
+                    <option value="46" gender="Men">{{ gender_text }} EU 46</option>
+                    <option value="47" gender="Men">{{ gender_text }} EU 47</option>
+                    <option value="47.5" gender="Men">{{ gender_text }} EU 47.5</option>
+                    <option value="49" gender="Men">{{ gender_text }} EU 49</option>
+                    <option value="50" gender="Men">{{ gender_text }} EU 50</option>
 
-                    <option value="32" gender="Women">{{ gender_text }} EU 32</option>
-                    <option value="33" gender="Women">{{ gender_text }} EU 33</option>
-                    <option value="33.5" gender="Women">{{ gender_text }} EU 33.5</option>
-                    <option value="34" gender="Women">{{ gender_text }} EU 34</option>
                     <option value="35" gender="Women">{{ gender_text }} EU 35</option>
                     <option value="35.5" gender="Women">{{ gender_text }} EU 35.5</option>
                     <option value="36" gender="Women">{{ gender_text }} EU 36</option>
@@ -232,13 +249,20 @@
                     <option value="42" gender="Women">{{ gender_text }} EU 42</option>
                     <option value="42.5" gender="Women">{{ gender_text }} EU 42.5</option>
                     <option value="43" gender="Women">{{ gender_text }} EU 43</option>
-                    <option value="44" gender="Women">{{ gender_text }} EU 44</option>
-                    <option value="44.5" gender="Women">{{ gender_text }} EU 44.5</option>
-                    <option value="45" gender="Women">{{ gender_text }} EU 45</option>
-                    <option value="45.5" gender="Women">{{ gender_text }} EU 45.5</option>
-                    <option value="46" gender="Women">{{ gender_text }} EU 46</option>
-                    <option value="47" gender="Women">{{ gender_text }} EU 47</option>
-                    <option value="47.5+" gender="Women">{{ gender_text }} EU 47.5+</option>
+                    <option value="35" gender="Women">{{ gender_text }} EU 35</option>
+                    <option value="35.5" gender="Women">{{ gender_text }} EU 35.5</option>
+                    <option value="36" gender="Women">{{ gender_text }} EU 36</option>
+                    <option value="36.5" gender="Women">{{ gender_text }} EU 36.5</option>
+                    <option value="37.5" gender="Women">{{ gender_text }} EU 37.5</option>
+                    <option value="38" gender="Women">{{ gender_text }} EU 38</option>
+                    <option value="38.5" gender="Women">{{ gender_text }} EU 38.5</option>
+                    <option value="39" gender="Women">{{ gender_text }} EU 39</option>
+                    <option value="40" gender="Women">{{ gender_text }} EU 40</option>
+                    <option value="40.5" gender="Women">{{ gender_text }} EU 40.5</option>
+                    <option value="41" gender="Women">{{ gender_text }} EU 41</option>
+                    <option value="42" gender="Women">{{ gender_text }} EU 42</option>
+                    <option value="42.5" gender="Women">{{ gender_text }} EU 42.5</option>
+                    <option value="43" gender="Women">{{ gender_text }} EU 43</option>
 
                     <option value="24" gender="Kids">{{ gender_text }} 24</option>
                     <option value="25" gender="Kids">{{ gender_text }} 25</option>

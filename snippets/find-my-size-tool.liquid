@@ -1,0 +1,505 @@
+{% if request.origin contains "https://capitasnowboarding.com" %}
+    {% assign origin_class = "fms-content--us" %}
+{% else %}
+    {% assign origin_class = "fms-content--eu" %}
+{% endif %}
+
+<div class="fms-content {{ origin_class }}" data-step="1">
+
+    <div class="fsm-box">
+        <div class="fsm-box-text">Your Height:</div>
+        <div class="fsm-box-radio" data-select="height">
+
+            {% if request.origin contains "https://capitasnowboarding.com" %}
+                <span data-type="in">ft</span>
+                <span data-type="cm">cm</span>
+            {% else %}
+                <span data-type="cm">cm</span>
+                <span data-type="in">ft</span>
+            {% endif %}
+
+            <span class="selector-radio"></span>
+        </div>
+        <div class="fsm-box-select js-fsm-box-select-height" data-select="height">
+
+            <select {% if request.origin contains "https://eu.capitasnowboarding.com" %}class="hide"{% endif %} data-type="in">
+                <option>SELECT</option>
+                <option value="100-103">3' 3" - 3' 5"</option>
+                <option value="104-107">3' 5" - 3' 6"</option>
+                <option value="108-111">3' 7" - 3' 8"</option>
+                <option value="112-115">3' 8" - 3' 9"</option>
+                <option value="116-119">3' 10" - 3' 11"</option>
+                <option value="120-123">3' 11" - 4' 0"</option>
+                <option value="124-127">4' 1" - 4' 2"</option>
+                <option value="128-131">4' 2" - 4' 4"</option>
+                <option value="132-135">4' 4" - 4' 5"</option>
+                <option value="136-139">4' 6" - 4' 7"</option>
+                <option value="140 - 143">4' 7" - 4' 8"</option>
+                <option value="144 - 147">4' 9" - 4' 10"</option>
+                <option value="148 - 151">4' 10" - 4' 11"</option>
+                <option value="152 - 155">5' - 5' 1"</option>
+                <option value="156 - 159">5' 1" - 5' 2"</option>
+                <option value="160 - 163">5' 3" - 5' 4"</option>
+                <option value="164 - 167">5' 5" - 5' 6"</option>
+                <option value="168 - 171">5' 6" - 5' 7"</option>
+                <option value="172 - 175">5' 8" - 5' 9"</option>
+                <option value="176 - 179">5' 9" - 5' 10"</option>
+                <option value="180 - 183">5' 11" - 6'</option>
+                <option value="184 - 187">6' - 6' 1"</option>
+                <option value="188 - 191">6' 2" - 6' 3"</option>
+                <option value="192 - 195">6' 4" - 6' 5"</option>
+                <option value="196 - 199">6' 5" - 6' 6"</option>
+                <option value="200 - 203">6' 7" - 6' 8"</option>
+            </select>
+
+            <select {% if request.origin contains "https://capitasnowboarding.com" %}class="hide"{% endif %} data-type="cm">
+                <option>SELECT</option>
+                <option value="100-103">100 - 103</option>
+                <option value="104-107">104 - 107</option>
+                <option value="108-111">108 - 111</option>
+                <option value="112-115">112 - 115</option>
+                <option value="116-119">116 - 119</option>
+                <option value="120-123">120 - 123</option>
+                <option value="124-127">124 - 127</option>
+                <option value="128-131">128 - 131</option>
+                <option value="132-135">132 - 135</option>
+                <option value="136-139">136 - 139</option>
+                <option value="140 - 143">140 - 143</option>
+                <option value="144 - 147">144 - 147</option>
+                <option value="148 - 151">148 - 151</option>
+                <option value="152 - 155">152 - 155</option>
+                <option value="156 - 159">156 - 159</option>
+                <option value="160 - 163">160 - 163</option>
+                <option value="164 - 167">164 - 167</option>
+                <option value="168 - 171">168 - 171</option>
+                <option value="172 - 175">172 - 175</option>
+                <option value="176 - 179">176 - 179</option>
+                <option value="180 - 183">180 - 183</option>
+                <option value="184 - 187">184 - 187</option>
+                <option value="188 - 191">188 - 191</option>
+                <option value="192 - 195">192 - 195</option>
+                <option value="196 - 199">196 - 199</option>
+                <option value="200 - 203">200 - 203</option>
+            </select>
+
+        </div>
+    </div>
+
+    <div class="fsm-box">
+        <div class="fsm-box-text">Boot Size:</div>
+
+        <div class="fsm-box-radio" data-select="size">
+            {% if request.origin contains "https://capitasnowboarding.com" %}
+                <span data-type="US">US</span>
+                <span data-type="EU">EU</span>
+            {% else %}
+                <span data-type="EU">EU</span>
+                <span data-type="US">US</span>
+            {% endif %}
+
+            <span class="selector-radio"></span>
+        </div>
+        <div class="fsm-box-select js-fsm-box-select-size" data-select="size">
+            <select id="fsm-box-select-us" {% if request.origin contains "https://eu.capitasnowboarding.com" %}class="hide"{% endif %} data-type="US">
+                <option gender="none">SELECT</option>
+
+                    <option value="38.5" gender="Men">{{ gender_text }} 6</option>
+                    <option value="39" gender="Men">{{ gender_text }} 6.5</option>
+                    <option value="40" gender="Men">{{ gender_text }} 7</option>
+                    <option value="40.5" gender="Men">{{ gender_text }} 7.5</option>
+                    <option value="41" gender="Men">{{ gender_text }} 8</option>
+                    <option value="42" gender="Men">{{ gender_text }} 8.5</option>
+                    <option value="42.5" gender="Men">{{ gender_text }} 9</option>
+                    <option value="43" gender="Men">{{ gender_text }} 9.5</option>
+                    <option value="44" gender="Men">{{ gender_text }} 10</option>
+                    <option value="44.5" gender="Men">{{ gender_text }} 10.5</option>
+                    <option value="45" gender="Men">{{ gender_text }} 11</option>
+                    <option value="45.5" gender="Men">{{ gender_text }} 11.5</option>
+                    <option value="46" gender="Men">{{ gender_text }} 12</option>
+                    <option value="47" gender="Men">{{ gender_text }} 12.5</option>
+                    <option value="47.5" gender="Men">{{ gender_text }} 13</option>
+                    <option value="49" gender="Men">{{ gender_text }} 14</option>
+                    <option value="50" gender="Men">{{ gender_text }} 15</option>
+
+                    <option value="35" gender="Women">{{ gender_text }} US 4.5</option>
+                    <option value="35.5" gender="Women">{{ gender_text }} US 5</option>
+                    <option value="36" gender="Women">{{ gender_text }} US 5.5</option>
+                    <option value="36.5" gender="Women">{{ gender_text }} US 6</option>
+                    <option value="37.5" gender="Women">{{ gender_text }} US 6.5</option>
+                    <option value="38" gender="Women">{{ gender_text }} US 7</option>
+                    <option value="38.5" gender="Women">{{ gender_text }} US 7.5</option>
+                    <option value="39" gender="Women">{{ gender_text }} US 8</option>
+                    <option value="40" gender="Women">{{ gender_text }} US 8.5</option>
+                    <option value="40.5" gender="Women">{{ gender_text }} US 9</option>
+                    <option value="41" gender="Women">{{ gender_text }} US 9.5</option>
+                    <option value="42" gender="Women">{{ gender_text }} US 10</option>
+                    <option value="42.5" gender="Women">{{ gender_text }} US 10.5</option>
+                    <option value="43" gender="Women">{{ gender_text }} US 11</option>
+
+                    <option value="24" gender="Kids">{{ gender_text }} 7C</option>
+                    <option value="25" gender="Kids">{{ gender_text }} 8C</option>
+                    <option value="26" gender="Kids">{{ gender_text }} 9C</option>
+                    <option value="27" gender="Kids">{{ gender_text }} 10C</option>
+                    <option value="28" gender="Kids">{{ gender_text }} 11C</option>
+                    <option value="29" gender="Kids">{{ gender_text }} 12C</option>
+                    <option value="30.5" gender="Kids">{{ gender_text }} 13C</option>
+                    <option value="31.5" gender="Kids">{{ gender_text }} 1K</option>
+                    <option value="33" gender="Kids">{{ gender_text }} 2K</option>
+                    <option value="34" gender="Kids">{{ gender_text }} 3K</option>
+                    <option value="35" gender="Kids">{{ gender_text }} 4K</option>
+                    <option value="36.5" gender="Kids">{{ gender_text }} 5K</option>
+                    <option value="38" gender="Kids">{{ gender_text }} 6K</option>
+                    <option value="40" gender="Kids">{{ gender_text }} 7K</option>
+
+            </select>
+            <select id="fsm-box-select-eu" {% if request.origin contains "https://capitasnowboarding.com" %}class="hide"{% endif %} data-type="EU">
+                <option gender="none">SELECT</option>
+
+                    <option value="38.5" gender="Men">{{ gender_text }} EU 38.5</option>
+                    <option value="39" gender="Men">{{ gender_text }} EU 39</option>
+                    <option value="40" gender="Men">{{ gender_text }} EU 40</option>
+                    <option value="40.5" gender="Men">{{ gender_text }} EU 40.5</option>
+                    <option value="41" gender="Men">{{ gender_text }} EU 41</option>
+                    <option value="42" gender="Men">{{ gender_text }} EU 42</option>
+                    <option value="42.5" gender="Men">{{ gender_text }} EU 42.5</option>
+                    <option value="43" gender="Men">{{ gender_text }} EU 43</option>
+                    <option value="44" gender="Men">{{ gender_text }} EU 44</option>
+                    <option value="44.5" gender="Men">{{ gender_text }} EU 44.5</option>
+                    <option value="45" gender="Men">{{ gender_text }} EU 45</option>
+                    <option value="45.5" gender="Men">{{ gender_text }} EU 45.5</option>
+                    <option value="46" gender="Men">{{ gender_text }} EU 46</option>
+                    <option value="47" gender="Men">{{ gender_text }} EU 47</option>
+                    <option value="47.5" gender="Men">{{ gender_text }} EU 47.5</option>
+                    <option value="49" gender="Men">{{ gender_text }} EU 49</option>
+                    <option value="50" gender="Men">{{ gender_text }} EU 50</option>
+
+                    <option value="35" gender="Women">{{ gender_text }} EU 35</option>
+                    <option value="35.5" gender="Women">{{ gender_text }} EU 35.5</option>
+                    <option value="36" gender="Women">{{ gender_text }} EU 36</option>
+                    <option value="36.5" gender="Women">{{ gender_text }} EU 36.5</option>
+                    <option value="37.5" gender="Women">{{ gender_text }} EU 37.5</option>
+                    <option value="38" gender="Women">{{ gender_text }} EU 38</option>
+                    <option value="38.5" gender="Women">{{ gender_text }} EU 38.5</option>
+                    <option value="39" gender="Women">{{ gender_text }} EU 39</option>
+                    <option value="40" gender="Women">{{ gender_text }} EU 40</option>
+                    <option value="40.5" gender="Women">{{ gender_text }} EU 40.5</option>
+                    <option value="41" gender="Women">{{ gender_text }} EU 41</option>
+                    <option value="42" gender="Women">{{ gender_text }} EU 42</option>
+                    <option value="42.5" gender="Women">{{ gender_text }} EU 42.5</option>
+                    <option value="43" gender="Women">{{ gender_text }} EU 43</option>
+
+                    <option value="24" gender="Kids">{{ gender_text }} 24</option>
+                    <option value="25" gender="Kids">{{ gender_text }} 25</option>
+                    <option value="26" gender="Kids">{{ gender_text }} 26</option>
+                    <option value="27" gender="Kids">{{ gender_text }} 27</option>
+                    <option value="28" gender="Kids">{{ gender_text }} 28</option>
+                    <option value="29" gender="Kids">{{ gender_text }} 29</option>
+                    <option value="30.5" gender="Kids">{{ gender_text }} 30.5</option>
+                    <option value="31.5" gender="Kids">{{ gender_text }} 31.5</option>
+                    <option value="33" gender="Kids">{{ gender_text }} 33</option>
+                    <option value="34" gender="Kids">{{ gender_text }} 34</option>
+                    <option value="35" gender="Kids">{{ gender_text }} 35</option>
+                    <option value="36.5" gender="Kids">{{ gender_text }} 36.5</option>
+                    <option value="38" gender="Kids">{{ gender_text }} 38</option>
+
+            </select>
+        </div>
+    </div>
+</div>
+
+
+{% style %}
+
+.fsm-box-text {
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+}
+.fsm-box-select {
+    background-position: 20px;
+    background: #ffffffa6;
+    border-radius: 40px;
+    font-size: 24px;
+    margin-top: 20px;
+}
+.fsm-box-select select {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOSAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5IDEyTDEzIDE5TDcgMTIiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==);
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-position-x: calc(100% - 20px);
+    background-position-y: 50%;
+    background-color: #ECECEC;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    font-size: 18px;
+}
+.fsm-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+.fsm-box-text,
+.fsm-box-radio {
+    width: 50%;
+}
+.fsm-box-select {
+    width: 100%;
+}
+.find-my-size-container.hide {
+    display: none;
+}
+.fsm-box-select select.hide {
+    display: none;
+}
+.fsm-box-radio {
+    border: 1px solid #000;
+    border-radius: 30px;
+    position: relative;
+    height: 30px;
+    top: 0;
+    width: 100px;
+}
+span.selector-radio {
+    position: absolute;
+    height: 30px;
+    width: 50px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    top: -1.1px;
+    transform: translateX(-50%);
+    transition-duration: 0.2s;
+    background: #00000036;
+    font-smooth: auto;
+}
+.fsm-box-radio {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    background: #fff;
+}
+span.selector-radio.select-second {
+    transform: translateX(50%);
+    transition-duration: 0.2s;
+}
+button.o-btn.is-big.btn-findmysize {
+    background: #000;
+    color: #fff;
+    margin: 0 auto;
+}
+.fsm-result-head {
+    min-height: 120px;
+}
+.fsm-result {
+    border-top: 1px solid #676767;
+    margin-top: 20px;
+}
+.fsm-result-products {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+.fsm-prod-img {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+    transform: scale(1);
+    transition-duration: 0.2s;
+}
+span.fsm-prod-size {
+    margin: 30px auto;
+    text-align: center;
+    border: 1px solid #000;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 80px;
+    border-radius: 20px;
+    font-size: 18px;
+    background: #fff;
+}
+.fsm-result-prod a {
+    color: #000;
+}
+.fsm-result-prod a:hover .fsm-prod-img {
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+}
+.fsm-result-prod a:hover span.fsm-prod-size {
+    color: #fff;
+    background: #000;
+}
+.fsm-paragraph {
+    margin-bottom: 3vh;
+}
+.find-my-size h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 2vh;
+    font-smooth: auto;
+}
+.find-my-size h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-smooth: auto;
+}
+.find-my-size h5 {
+    font-size: 18px;
+    font-weight: 600;
+    font-smooth: auto;
+}
+.fms-content-no-result.hide,
+.fms-content-result.hide {
+    display: none;
+}
+.fms-content-no-result .o-btn.is-big {
+    background: #000;
+    color: #fff;
+    margin: 0 auto;
+    width: fit-content;
+}
+.fms-content-no-result span {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 27px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: 200px auto 50px;
+}
+.fsm-alert {
+    color: #C8102E;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 0.3s;
+    transform: translateY(0);
+}
+.fsm-alert.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 0.3s;
+    transform: translateY(-30px);
+}
+.find-my-size .c-product-info__size {
+    background: #ececec;
+    width: 90px;
+}
+.find-my-size .c-product-info__size.hide {
+    display: none;
+}
+.fms-content {
+    width: 100%;
+    height: 100%;
+}
+.fms-content-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.fms-content hr {
+    border-bottom: 1px solid #ababab;
+}
+.fms-content-no-result {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+.fms-content-no-result strong {
+    margin-bottom: 50px;
+}
+.find-my-size .c-product-info__sizes {
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .find-my-size-container {
+        width: 100%;
+        height: 100vh;
+    }
+    .find-my-size {
+        width: calc(100% - 20px);
+        height: 80vh;
+        padding: 60px 20px;
+        height: 85vh;
+        background: #e1e1e1f0;
+        backdrop-filter: blur(40px);
+    }
+    .find-my-size h2 {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    .find-my-size h5 {
+        font-size: 14px;
+    }
+    .find-my-size-container h4 {
+        font-size: 16px;
+    }
+    .fsm-box-text {
+        font-size: 20px;
+    }
+    .fsm-box-select {
+        font-size: 20px;
+    }
+    .fsm-box-select select {
+        padding: 10px 20px;
+    }
+    button.o-btn.is-big.btn-findmysize,
+    .fms-content-no-result .o-btn.is-big {
+        width: 100%;
+        min-width: auto;
+    }
+    .fsm-box-select {
+        margin-top: 15px;
+    }
+    .fsm-box {
+        margin-bottom: 30px;
+    }
+    .fms-content-no-result span {
+        margin: 50px auto ;
+    }
+    .fsm-paragraph {
+        font-size: 14px;
+    }
+    .fsm-result-head {
+        min-height: auto;
+    }
+    .find-my-size h3 {
+        margin-top: 10px;
+    }
+    .fsm-prod-img {
+        max-width: 130px;
+    }
+    .find-my-size h3 {
+        font-size: 14px;
+    }
+    .fsm-result-products {
+        margin: 20px 0;
+    }
+}
+
+{% endstyle %}

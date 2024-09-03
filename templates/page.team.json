@@ -355,6 +355,14 @@
             "name": "TRUTH SMITH"
           }
         },
+        "team_list_JbMTUA": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NiekTeamPic.webp",
+            "link_url": "",
+            "name": "NIEK VAN DER VELDEN"
+          }
+        },
         "3e17076a-00f9-480f-bd82-9bea61373752": {
           "type": "team_list",
           "settings": {
@@ -363,12 +371,11 @@
             "name": "BRENDON REGO"
           }
         },
-        "team_list_JbMTUA": {
+        "team_list_9ddG37": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/NiekTeamPic.webp",
             "link_url": "",
-            "name": "NIEK VAN DER VELDEN"
+            "name": "JESS PERLMUTTER"
           }
         }
       },
@@ -388,8 +395,9 @@
         "94fc702b-ff9b-434b-939a-20fd4c0817d3",
         "421eabbe-2d91-4344-b111-3cb1fc4b07e4",
         "8e7328ab-7731-4df5-b956-47c297f74902",
+        "team_list_JbMTUA",
         "3e17076a-00f9-480f-bd82-9bea61373752",
-        "team_list_JbMTUA"
+        "team_list_9ddG37"
       ],
       "settings": {
         "hide_all_riders_link": true,

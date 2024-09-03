@@ -291,14 +291,6 @@
             "name": "CHASE JOSEY"
           }
         },
-        "0682fee8-c233-44c5-b764-a9b166fce0d6": {
-          "type": "team_list",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_yawgoons.jpg",
-            "link_url": "shopify:\/\/pages\/yawgoons",
-            "name": "YAWGOONS"
-          }
-        },
         "b1d14384-90e4-4f8b-bd81-37cb3d520b06": {
           "type": "team_list",
           "settings": {
@@ -321,6 +313,22 @@
             "image": "shopify:\/\/shop_images\/team_3explorers_miyonyamaguchi.jpg",
             "link_url": "shopify:\/\/pages\/miyon-yamaguchi",
             "name": "MIYON YAMAGUCHI"
+          }
+        },
+        "team_list_9ddG37": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/UI2024_DAY3_EllieNixon_ellienxn_7672.jpg",
+            "link_url": "",
+            "name": "JESS PERLMUTTER"
+          }
+        },
+        "0682fee8-c233-44c5-b764-a9b166fce0d6": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/team_3explorers_yawgoons.jpg",
+            "link_url": "shopify:\/\/pages\/yawgoons",
+            "name": "YAWGOONS"
           }
         },
         "0ab80d4c-73b4-4844-8fc8-602eddd8784d": {
@@ -370,13 +378,6 @@
             "link_url": "shopify:\/\/pages\/brendon-rego",
             "name": "BRENDON REGO"
           }
-        },
-        "team_list_9ddG37": {
-          "type": "team_list",
-          "settings": {
-            "link_url": "",
-            "name": "JESS PERLMUTTER"
-          }
         }
       },
       "block_order": [
@@ -387,17 +388,17 @@
         "d0771d5a-917d-43fd-84ef-ab1786009170",
         "efdca2be-d920-4401-9c4f-667a433f5c81",
         "4f09568f-3e83-47dd-8ea5-e7eaad5254e5",
-        "0682fee8-c233-44c5-b764-a9b166fce0d6",
         "b1d14384-90e4-4f8b-bd81-37cb3d520b06",
         "d91cf783-0ede-405f-8ebd-b35692d561ce",
         "e1c8c71c-db44-43d6-a080-a2e7ed59757d",
+        "team_list_9ddG37",
+        "0682fee8-c233-44c5-b764-a9b166fce0d6",
         "0ab80d4c-73b4-4844-8fc8-602eddd8784d",
         "94fc702b-ff9b-434b-939a-20fd4c0817d3",
         "421eabbe-2d91-4344-b111-3cb1fc4b07e4",
         "8e7328ab-7731-4df5-b956-47c297f74902",
         "team_list_JbMTUA",
-        "3e17076a-00f9-480f-bd82-9bea61373752",
-        "team_list_9ddG37"
+        "3e17076a-00f9-480f-bd82-9bea61373752"
       ],
       "settings": {
         "hide_all_riders_link": true,

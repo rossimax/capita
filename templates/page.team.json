@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -314,6 +323,14 @@
             "name": "MIYON YAMAGUCHI"
           }
         },
+        "team_list_rhKMxa": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/UI2024_DAY3_EllieNixon_ellienxn_7672.jpg",
+            "link_url": "",
+            "name": "JESS PERLMUTTER"
+          }
+        },
         "0ab80d4c-73b4-4844-8fc8-602eddd8784d": {
           "type": "team_list",
           "settings": {
@@ -346,6 +363,14 @@
             "name": "TRUTH SMITH"
           }
         },
+        "team_list_JgNEA4": {
+          "type": "team_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NiekTeamPic.png",
+            "link_url": "",
+            "name": "NIEK VAN DER VELDEN"
+          }
+        },
         "3e17076a-00f9-480f-bd82-9bea61373752": {
           "type": "team_list",
           "settings": {
@@ -367,10 +392,12 @@
         "b1d14384-90e4-4f8b-bd81-37cb3d520b06",
         "d91cf783-0ede-405f-8ebd-b35692d561ce",
         "e1c8c71c-db44-43d6-a080-a2e7ed59757d",
+        "team_list_rhKMxa",
         "0ab80d4c-73b4-4844-8fc8-602eddd8784d",
         "94fc702b-ff9b-434b-939a-20fd4c0817d3",
         "421eabbe-2d91-4344-b111-3cb1fc4b07e4",
         "8e7328ab-7731-4df5-b956-47c297f74902",
+        "team_list_JgNEA4",
         "3e17076a-00f9-480f-bd82-9bea61373752"
       ],
       "settings": {

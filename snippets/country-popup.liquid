@@ -1,11 +1,11 @@
 {%-liquid 
     if request.origin == "https://capitasnowboarding.com" or request.origin == "https://capita-snowboarding-store.myshopify.com"
         assign actual_shop = "https://capitasnowboarding.com"
-        assign redirect_shop = "https://eu.capitasnowboarding.com"
+        assign redirect_shop = "https://eu.capitasnowboarding.com/pages/select-location"
         assign redirect_shop_name = "Capita EU"
     elsif request.origin == "https://eu.capitasnowboarding.com" or request.origin == "https://capita-snowboarding-store-eu.myshopify.com"
         assign actual_shop = "https://eu.capitasnowboarding.com"
-        assign redirect_shop = "https://capitasnowboarding.com"
+        assign redirect_shop = "https://capitasnowboarding.com/pages/select-location"
         assign redirect_shop_name = "Capita US"
     endif
 -%}

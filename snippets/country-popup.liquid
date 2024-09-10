@@ -1,11 +1,11 @@
 {%-liquid 
     if request.origin == "https://capitasnowboarding.com" or request.origin == "https://capita-snowboarding-store.myshopify.com"
         assign actual_shop = "https://capitasnowboarding.com"
-        assign redirect_shop = "https://eu.capitasnowboarding.com/pages/select-location"
+        assign redirect_shop = "https://eu.capitasnowboarding.com"
         assign redirect_shop_name = "Capita EU"
     elsif request.origin == "https://eu.capitasnowboarding.com" or request.origin == "https://capita-snowboarding-store-eu.myshopify.com"
         assign actual_shop = "https://eu.capitasnowboarding.com"
-        assign redirect_shop = "https://capitasnowboarding.com/pages/select-location"
+        assign redirect_shop = "https://capitasnowboarding.com"
         assign redirect_shop_name = "Capita US"
     endif
 -%}
@@ -16,7 +16,8 @@
         <p>Looks like you're in <strong><span id="modal-country-name"></span></strong>.</p>
         <p>Go to <a class="underline" href="{{ canonical_url | replace: actual_shop, redirect_shop }}"><strong>{{ redirect_shop_name }}</strong></a>.</p>
         <div class="modal-country-content__btn">
-            <a class="btn-yes" href="{{ canonical_url | replace: actual_shop, redirect_shop }}">Yes, please</a>
+            {% comment %} <a class="btn-yes" href="{{ canonical_url | replace: actual_shop, redirect_shop }}">Yes, please</a> {% endcomment %}
+            <a class="btn-yes" href="https://eu.capitasnowboarding.com/pages/select-location">Yes, please</a>
             <a class="btn-no">No, thanks</a>
         </div>
     </div>

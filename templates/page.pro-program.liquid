@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="{{ 'page-pro-program.css' | asset_url }}" type="text/css">
+s
+<div class="ub-pro-program">
+  <div class="ub-pro-program__wrapper">
+    <div class="u-container u-p-inline">
+      <div class="c-intro">
+        <span class="o-text nocase">Pro Program</span><span class="c-text is-3">The CAPiTA Pro Program is a<br/> membership program for qualified outdoor<br/> and snowboard industry professionals.</span>
+      </div>
+    </div>
+    <div class="u-bg-off-white">
+      <div class="u-container u-p-inline">
+        <div class="ub-pro-program__content">
+          <div class="ub-pro-program__description">
+            <div class="c-title-text">
+              <span class="c-text is-3">The Program</span>
+              <span class="c-text is-4">The CAPiTA Pro Program allows qualified outdoor and snowboard industry professionals to receive discounts on select CAPiTA products.<br/><br/>
+                Membership is by application only, is not guaranteed, and can be revoked at any time. Program rules and regulations always apply. <br/><br/>
+                If you are interested in applying, please sign in with an existing account to start the application or create a new account below.</span>
+            </div>
+            <div class="c-title-text">
+              <span class="c-text is-3">Required Documents</span>
+              <span class="c-text is-4">An active supporting document such as a pay stub, proof of employment, licenses/certification, or other is a requirement for our Pro Program.<br/><br/>
+                There are no exceptions to this rule.</span>
+            </div>
+            <a class="o-btn is-black" href="/pages/pro-program-application">START APPLICATION</a>
+          </div>
+
+          {% form 'customer_login', class: "c-pro-account-login", return_to: "/pages/pro-program-account" %}
+
+            {{ form.errors | default_errors }}
+
+            <div class="c-title-text">
+              <span class="c-text is-3">Pro Account Login</span><br/><span class="c-text is-4">Already have a Pro account? Sign in here.</span>
+            </div>
+            <label class="c-input js-input is-email c-pro-account-login__input">
+              <span class="c-text is-4">Email</span>
+              <span class="c-input__wrapper">
+                <input type="email" name="customer[email]" required="required"></span>
+              </label>
+              <label class="c-input js-input is-password c-pro-account-login__input" required="required">
+                <span class="c-text is-4">Password</span>
+                <span class="c-input__wrapper">
+                  <input type="password" name="customer[password]" required="required">
+                </span>
+              </label>
+
+              <a class="c-button is-line c-pro-account-login__forgot" href="/account/login#recover">Forgot your password?</a>
+              
+              <button class="c-pro-account-login__signin-new o-btn is-black" type="submit">SIGN INTO PRO ACCOUNT</button>
+ 
+          {% endform %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {% comment %} <div class="ub-pro-program__media">
+    <picture>
+      <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0095/2254/4745/files/Capita-Japan-15-2-_1_-min2.jpg?v=1699123192">
+      <img src="https://cdn.shopify.com/s/files/1/0095/2254/4745/files/Capita-Japan-15-2-_1_-min2.jpg?v=1699123192" alt="Capita pro program">
+    </picture>
+    <span class="c-text">Capita Pro Program</span>
+  </div> {% endcomment %}
+</div>
+
+{% style %}
+.ub-pro-program {
+    margin-top: 80px;
+}
+.ub-pro-program .c-input input, .ub-pro-program .c-input select {
+    background: #fff;
+    border: 1px solid;
+}
+.ub-pro-program .c-pro-account-login__signin-new {
+    margin-top: 90px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.ub-pro-program__media img {
+    object-fit: cover;
+    object-position: top;
+}
+@media screen and (max-width: 1024px) {
+  .ub-pro-program__media img {
+    z-index: unset !important;
+    object-fit: cover;
+    object-position: right;
+  }
+  .ub-pro-program__media span.c-text {
+    z-index: 0 !important;
+  }
+}
+
+{% endstyle %}

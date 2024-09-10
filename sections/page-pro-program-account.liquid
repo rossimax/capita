@@ -1,0 +1,165 @@
+<link rel="stylesheet" href="{{ 'page-pro-program-account.css' | asset_url }}" type="text/css">
+
+{% if customer.tags contains "pro-program-20" or customer.tags contains "pro-program-40" %}
+  
+    <div class="pro-program-account">
+
+        {% if customer %}
+
+            <div class="ub-account">
+                <div class="ub-account__wrapper">
+                <div class="u-container u-p-inline">
+                    <div class="c-intro">
+                    <span class="c-text is-1">Hello, {{ customer.first_name }}!</span>
+                    <span class="c-text is-2">Welcome to your Union Pro Account.</span>
+                    </div>
+                </div>
+                <div class="u-bg-off-white">
+                    <div class="ub-account__content u-container u-p-inline u-p-block">
+                    <div class="c-membership-info">
+                        <span class="c-text is-3">Pro Membership</span>
+                        <div class="c-membership-info__grid">
+                        <div class="c-user-info">
+                            <span class="c-text is-4-small">First name</span><span class="c-text is-4">{{ customer.first_name }}</span>
+                        </div>
+                        <div class="c-user-info">
+                            <span class="c-text is-4-small">Last name</span><span class="c-text is-4">{{ customer.last_name }}</span>
+                        </div>
+                        <div class="c-user-info">
+                            <span class="c-text is-4-small">Email</span><span class="c-text is-4">{{ customer.email }}</span>
+                        </div>
+                        </div>
+                        <div class="c-membership-info__actions">
+                        <a class="c-button c-membership-info__cta" id="customer_logout_link" href="/account/logout">LOGOUT</a>
+                        <a class="c-button is-line c-membership-info__cta" href="/account/login#recover">Reset password</a>
+                        </div>
+                    </div>
+                    <div class="c-membership-info">
+                        <span class="c-text is-3">Shipping Information</span>
+                        <div class="c-membership-info__grid">
+                        <div class="c-user-info">
+                            <div class="c-text is-4">{{ customer.default_address | format_address }}</div>
+                        </div>
+                        </div>
+                        <div class="c-membership-info__actions">
+                        <a class="c-button c-membership-info__cta" href="/account/addresses">ADD NEW / EDIT</a>
+                        </div>
+                    </div>
+                    {% comment %} <div class="c-membership-info is-double">
+                        <span class="c-text is-3">Pro Membership</span>
+                        <div class="c-membership-info__actions">
+                        <button class="c-button c-membership-info__cta" type="submit">MANAGE</button>
+                        </div>
+                    </div> {% endcomment %}
+                    <div class="c-membership-info is-double">
+                        <div class="c-membership-info__history">
+                            <span class="c-text is-3">Order History</span>
+
+                            {% if customer.orders.size != 0 %}
+                                {% paginate customer.orders by 20 %}
+                                
+                        
+                                    <table class="responsive-table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">{{ 'customer.orders.order_number' | t }}</th>
+                                            <th scope="col">{{ 'customer.orders.date' | t }}</th>
+                                            <th scope="col">{{ 'customer.orders.payment_status' | t }}</th>
+                                            <th scope="col">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                                            <th scope="col">{{ 'customer.orders.total' | t }}</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for order in customer.orders %}
+                                            <tr>
+                                            <th data-label="{{ 'customer.orders.order_number' | t }}" scope="row">
+                                                <a href="{{ order.customer_url }}" class="btn btn--secondary btn--small" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">{{ order.name }}</a>
+                                            </th>
+                                            <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | time_tag: format: 'date' }}</td>
+                                            <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                                            <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                                            <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                        
+                                    {%- if paginate.pages > 1 -%}
+                                        {% include 'pagination', paginate: paginate %}
+                                    {%- endif -%}
+                                {% endpaginate %}
+                            {% else %}
+                                <span class="c-text is-4">You haven’t placed any orders yet</span>
+                            {% endif%}
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="ub-account__shop u-container u-p-inline">
+                    <span class="c-text is-3">Discover the Union Collection</span>
+                    <a class="c-button ub-account__shop-cta" href="/">SHOP NOW</a>
+                </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="ub-account">
+                <div class="ub-account__wrapper">
+                    <div class="u-container u-p-inline">
+                        <div class="c-intro">
+                        <span class="c-text is-1">Hello!</span>
+                        <br/><br/><br/><br/>
+                        <div>It seems that you are not logged in!<br/><br/> <a href="/pages/pro-program"><strong>Login here</strong></a> to access to your Pro Page account.</div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+{% else %}
+
+    <script>
+        window.location.replace("/account");
+    </script>
+    
+{% endif %}
+
+{% schema %}
+{
+  "name": "ProProgram Account",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Enabled"
+    }
+  ],
+  "presets": [
+    {
+      "name": "ProProgram Account"
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+time {
+    min-width: 120px;
+    display: block;
+}
+.c-membership-info__history table.responsive-table {
+    font-size: 12px;
+}
+@media only screen and (max-width: 749px) {
+    .c-membership-info__history .responsive-table th, 
+    .c-membership-info__history .responsive-table td {
+        padding: 10px;
+    }
+    .c-membership-info__history a.btn.btn--secondary.btn--small {
+        background: unset;
+        padding: 0;
+    }
+    .c-membership-info__history .responsive-table tr {
+        border-bottom: 1px solid #c0c0c0;
+    }
+}
+{% endstyle %}

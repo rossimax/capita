@@ -201,15 +201,10 @@
           "enable_js_api": false
         }
       },
-      "11989592277864780042": {
-        "type": "shopify:\/\/apps\/wholesale-pricing-discount\/blocks\/app-embed\/94cbfa01-7191-4bb2-bcd8-b519b9b3bd06",
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
-          "showCrossOutPrice": false,
-          "showCurrencyCodes": false,
-          "priceColor": "#000000",
-          "crossOutPriceColor": "#E9330C",
-          "appProxy": "\/apps\/wpdapp"
         }
       }
     }

@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -25,12 +34,11 @@
     "6f9f2d79-f9c0-4656-b9af-709522a45887": {
       "type": "paragraph-simple",
       "settings": {
+        "background_transparent": false,
         "padding_top": 60,
         "padding_bottom": 60,
         "font_size_title": 60,
         "font_size_title_mob": 26,
-        "background_color": "rgba(0,0,0,0)",
-        "text_color": "#ffffff",
         "title": "<strong>A one-of-a-kind marvel in snowboard production, The MotherShip™ is the most <hl>technologically advanced<\/hl> and <hl>environmentally responsible<\/hl> manufacturing facility in the industry.<\/strong>",
         "text": ""
       }
@@ -164,12 +172,11 @@
     "a0611009-f554-41eb-b10d-8c89de6f0e0c": {
       "type": "paragraph-simple",
       "settings": {
+        "background_transparent": false,
         "padding_top": 80,
         "padding_bottom": 80,
         "font_size_title": 60,
         "font_size_title_mob": 20,
-        "background_color": "rgba(0,0,0,0)",
-        "text_color": "#ffffff",
         "title": "<strong>Our dedication to building the world’s best snowboards, with the most\nefficient and sustainable process, is galvanized by the company mantra — <br>\n<i><hl>EVERYTHING IS POSSIBLE.<\/hl><\/i><\/strong>",
         "text": ""
       }
@@ -188,7 +195,7 @@
       "type": "youtube-video",
       "settings": {
         "title": "",
-        "text": "<iframe src=\"https:\/\/www.youtube.com\/embed\/HN33OvYL8N4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen><\/iframe>"
+        "text": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/ossDgIIFKQA?si=nJfj8K5yIcJNtk9F\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen><\/iframe>"
       }
     }
   },

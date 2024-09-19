@@ -413,8 +413,8 @@
 
                 // we do this so there is not multiple event handlers
                 function closeDragElement() {
-                    document.onmouseup = null;
-                    document.onmousemove = null;
+                    // document.onmouseup = null;
+                    // document.onmousemove = null;
 
                     let pos = Number(selector_pin.offsetLeft)
                     let line_max_width = Number(selector__line.offsetWidth)

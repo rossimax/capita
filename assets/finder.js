@@ -448,57 +448,67 @@
 
                     riding_style_json[riding_style] = (Number(position_left_pin.replace("px", "")) / line_max_width) * 10
 
+                    let val1 = ""
+                    let val2 = ""
+
                     switch(true) {
                         case (riding_style_json["style-1"] < 3) :
-                            if (steps_json.step4.value.includes("&&")) {
-                                steps_json.step4.value = "freestyle".concat(steps_json.step4.value)
-                                steps_json.step4.status = true
-                            } else {
-                                steps_json.step4.value = "freestyle"
-                            }
+                            val1 = "freestyle"
+                            // if (steps_json.step4.value.includes("&&")) {
+                            //     steps_json.step4.value = "freestyle".concat(steps_json.step4.value)
+                            //     steps_json.step4.status = true
+                            // } else {
+                            //     steps_json.step4.value = "freestyle"
+                            // }
                           break;
                         case (3 <= riding_style_json["style-1"] <= 7) :
-                            if (steps_json.step4.value.includes("&&")) {
-                                steps_json.step4.value = "all-mountain".concat(steps_json.step4.value)
-                                steps_json.step4.status = true
-                            } else {
-                                steps_json.step4.value = "all-mountain"
-                            }
+                            val1 = "all-mountain"
+                            // if (steps_json.step4.value.includes("&&")) {
+                            //     steps_json.step4.value = "all-mountain".concat(steps_json.step4.value)
+                            //     steps_json.step4.status = true
+                            // } else {
+                            //     steps_json.step4.value = "all-mountain"
+                            // }
                         break;
                         case (riding_style_json["style-1"] > 7) :
-                            if (steps_json.step4.value.includes("&&")) {
-                                steps_json.step4.value = "freeride".concat(steps_json.step4.value)
-                                steps_json.step4.status = true
-                            } else {
-                                steps_json.step4.value = "freeride"
-                            }
+                            val1 = "freeride"
+                            // if (steps_json.step4.value.includes("&&")) {
+                            //     steps_json.step4.value = "freeride".concat(steps_json.step4.value)
+                            //     steps_json.step4.status = true
+                            // } else {
+                            //     steps_json.step4.value = "freeride"
+                            // }
                         break;
 
                     }
 
                     switch(true) {
                         case (riding_style_json["style-2"] < 3) :
-                            steps_json.step4.value = steps_json.step4.value.concat("&&", "soft")
-                            if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
-                                steps_json.step4.status = true
-                            }
+                            val2 = "soft"
+                            // steps_json.step4.value = steps_json.step4.value.concat("&&", "soft")
+                            // if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
+                            //     steps_json.step4.status = true
+                            // }
                           break;
                         case (3 <= riding_style_json["style-2"] <= 7) :
-                            steps_json.step4.value = steps_json.step4.value.concat("&&", "medium")
-                            if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
-                                steps_json.step4.status = true
-                            }
+                            val2 = "medium"
+                            // steps_json.step4.value = steps_json.step4.value.concat("&&", "medium")
+                            // if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
+                            //     steps_json.step4.status = true
+                            // }
                         break;
                         case (riding_style_json["style-2"] > 7) :
-                            steps_json.step4.value = steps_json.step4.value.concat("&&", "stiff")
-                            if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
-                                steps_json.step4.status = true
-                            }
+                            val2 = "stiff"
+                            // steps_json.step4.value = steps_json.step4.value.concat("&&", "stiff")
+                            // if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
+                            //     steps_json.step4.status = true
+                            // }
                         break;
                     }
-if(document.onmouseup) {
-    console.log("upppp")
-}
+
+                    if (val1 && val2) {
+                        steps_json.step4.value = val1 + "&&" + val2
+                    }
                     console.log(steps_json.step4.value)
 
                     // if (riding_style_json["style-2"] < 3) {

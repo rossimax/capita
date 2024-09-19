@@ -448,40 +448,100 @@
 
                     riding_style_json[riding_style] = (Number(position_left_pin.replace("px", "")) / line_max_width) * 10
 
+                    switch(true) {
+                        case (riding_style_json["style-1"] < 3) :
+                            if (steps_json.step4.value.includes("&&")) {
+                                steps_json.step4.value = "freestyle".concat(steps_json.step4.value)
+                                steps_json.step4.status = true
+                            } else {
+                                steps_json.step4.value = "freestyle"
+                            }
+                          break;
+                        case (3 <= riding_style_json["style-1"] <= 7) :
+                            if (steps_json.step4.value.includes("&&")) {
+                                steps_json.step4.value = "all-mountain".concat(steps_json.step4.value)
+                                steps_json.step4.status = true
+                            } else {
+                                steps_json.step4.value = "all-mountain"
+                            }
+                        break;
+                        case (riding_style_json["style-1"] > 7) :
+                            if (steps_json.step4.value.includes("&&")) {
+                                steps_json.step4.value = "freeride".concat(steps_json.step4.value)
+                                steps_json.step4.status = true
+                            } else {
+                                steps_json.step4.value = "freeride"
+                            }
+                        break;
+                        default:
+                            if (steps_json.step4.value.includes("&&")) {
+                                steps_json.step4.value = "all-mountain".concat(steps_json.step4.value)
+                                steps_json.step4.status = true
+                            } else {
+                                steps_json.step4.value = "all-mountain"
+                            }
+                    }
 
+                    switch(true) {
+                        case (riding_style_json["style-2"] < 3) :
+                            steps_json.step4.value = steps_json.step4.value.concat("&&", "soft")
+                            if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
+                                steps_json.step4.status = true
+                            }
+                          break;
+                        case (3 <= riding_style_json["style-2"] <= 7) :
+                            steps_json.step4.value = steps_json.step4.value.concat("&&", "medium")
+                            if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
+                                steps_json.step4.status = true
+                            }
+                        break;
+                        case (riding_style_json["style-2"] > 7) :
+                            steps_json.step4.value = steps_json.step4.value.concat("&&", "stiff")
+                            if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
+                                steps_json.step4.status = true
+                            }
+                        break;
+                        default:
+                          steps_json.step4.value = steps_json.step4.value.concat("&&", "medium")
+                          if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
+                            steps_json.step4.status = true
+                        }
+                    }
 
-                    if (riding_style_json["style-2"] < 3) {
-                        steps_json.step4.value = "street-and-jibbing"
-                        steps_json.step4.status = true
-                    }
-                    else if (riding_style_json["style-2"] > 7) {
-                        steps_json.step4.value = "carving-boardercross"
-                        steps_json.step4.status = true
-                    }
-                    else if (riding_style_json["style-1"] < 2 ) {
-                        steps_json.step4.value = "freestyle-park"
-                        steps_json.step4.status = true
-                    }
-                    else if (riding_style_json["style-1"] > 8) {
-                        steps_json.step4.value = "freeride"
-                        steps_json.step4.status = true
-                    }
-                    else if (riding_style_json["style-1"] == 5) {
-                        steps_json.step4.value = "all-mountain"
-                        steps_json.step4.status = true
-                    }
-                    else if ((riding_style_json["style-1"] >= 2) && (riding_style_json["style-1"] < 5 )) {
-                        steps_json.step4.value = "all-mountain--freestyle"
-                        steps_json.step4.status = true
-                    }
-                    else if ((riding_style_json["style-1"] > 5) && (riding_style_json["style-1"] <= 8)) {
-                        steps_json.step4.value = "all-mountain--freeride"
-                        steps_json.step4.status = true
-                    }
-                    else {
-                        steps_json.step4.value = "all-mountain2"
-                        steps_json.step4.status = true
-                    }
+                    console.log(steps_json.step4.value)
+
+                    // if (riding_style_json["style-2"] < 3) {
+                    //     steps_json.step4.value = "street-and-jibbing"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else if (riding_style_json["style-2"] > 7) {
+                    //     steps_json.step4.value = "carving-boardercross"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else if (riding_style_json["style-1"] < 2 ) {
+                    //     steps_json.step4.value = "freestyle-park"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else if (riding_style_json["style-1"] > 8) {
+                    //     steps_json.step4.value = "freeride"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else if (riding_style_json["style-1"] == 5) {
+                    //     steps_json.step4.value = "all-mountain"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else if ((riding_style_json["style-1"] >= 2) && (riding_style_json["style-1"] < 5 )) {
+                    //     steps_json.step4.value = "all-mountain--freestyle"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else if ((riding_style_json["style-1"] > 5) && (riding_style_json["style-1"] <= 8)) {
+                    //     steps_json.step4.value = "all-mountain--freeride"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else {
+                    //     steps_json.step4.value = "all-mountain2"
+                    //     steps_json.step4.status = true
+                    // }
 
                     /*
                     da associare a queste:

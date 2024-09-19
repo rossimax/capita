@@ -507,7 +507,9 @@
                             steps_json.step4.status = true
                         }
                     }
-
+if(document.onmouseup) {
+    console.log("upppp")
+}
                     console.log(steps_json.step4.value)
 
                     // if (riding_style_json["style-2"] < 3) {

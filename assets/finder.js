@@ -473,13 +473,7 @@
                                 steps_json.step4.value = "freeride"
                             }
                         break;
-                        default:
-                            if (steps_json.step4.value.includes("&&")) {
-                                steps_json.step4.value = "all-mountain".concat(steps_json.step4.value)
-                                steps_json.step4.status = true
-                            } else {
-                                steps_json.step4.value = "all-mountain"
-                            }
+
                     }
 
                     switch(true) {
@@ -501,11 +495,6 @@
                                 steps_json.step4.status = true
                             }
                         break;
-                        default:
-                          steps_json.step4.value = steps_json.step4.value.concat("&&", "medium")
-                          if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
-                            steps_json.step4.status = true
-                        }
                     }
 if(document.onmouseup) {
     console.log("upppp")

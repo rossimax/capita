@@ -509,8 +509,8 @@
                     if (val1 && val2) {
                         steps_json.step4.value = val1 + "&&" + val2
                     }
-                    console.log(riding_style_json["style-1"])
-                    console.log(riding_style_json["style-2"])
+                    console.log(riding_style_json["style-1"]+" "+val1)
+                    console.log(riding_style_json["style-2"]+" "+val1)
                     console.log(steps_json.step4.value)
 
                     // if (riding_style_json["style-2"] < 3) {

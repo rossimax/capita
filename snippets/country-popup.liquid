@@ -2,11 +2,11 @@
     if request.origin == "https://capitasnowboarding.com" or request.origin == "https://capita-snowboarding-store.myshopify.com"
         assign actual_shop = "https://capitasnowboarding.com"
         assign redirect_shop = "https://eu.capitasnowboarding.com"
-        assign redirect_shop_name = "Capita EU"
+        assign redirect_shop_name = "EUROPE"
     elsif request.origin == "https://eu.capitasnowboarding.com" or request.origin == "https://capita-snowboarding-store-eu.myshopify.com"
         assign actual_shop = "https://eu.capitasnowboarding.com"
         assign redirect_shop = "https://capitasnowboarding.com"
-        assign redirect_shop_name = "Capita US"
+        assign redirect_shop_name = "NORTH AMERICA"
     endif
 
     if request.page_type == 'collection' or request.page_type == 'product'
@@ -36,8 +36,8 @@
         <p>Welcome to <strong>CAPiTA</strong></p>
         <p><strong>ARE YOU SHIPPING TO:</strong></p>
         <div class="modal-country-content__btn">
-            <a class="btn-yes" href="{{ link_redirect }}">EUROPE</a>
-            <a class="btn-no">NORTH AMERICA</a>
+            <a class="btn-yes" href="{{ link_redirect }}">{{redirect_shop_name}}</a>
+            <a class="btn-no">{{redirect_shop_name}}</a>
         </div>
     </div>
 </div>

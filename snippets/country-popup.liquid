@@ -34,7 +34,17 @@
 <div id="choose-country-site-modal">
 
     <div class="modal-country-content">
-        <i class="fas fa-times-circle"></i>
+        <i class="fas fa-times-circle"><svg width="20px" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.605 14.105a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Zm0 1a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15Z"
+              fill="#000" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M10.08 5.132a.5.5 0 0 1 0 .707l-4.243 4.243a.5.5 0 1 1-.707-.707l4.243-4.243a.5.5 0 0 1 .707 0Z"
+              fill="#000" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M4.842 4.84a.5.5 0 0 1 .707 0l4.821 4.822a.5.5 0 1 1-.707.707L4.842 5.548a.5.5 0 0 1 0-.707Z"
+              fill="#000" />
+          </svg></i>
         <p>Welcome to <strong>CAPiTA</strong></p>
         <p><strong>ARE YOU SHIPPING TO:</strong></p>
         <div class="modal-country-content__btn">
@@ -73,11 +83,12 @@
         text-align: center;
         min-width: 300px;
         font-size: 20px;
+        border-radius: 20px;
     }
     .modal-country-content i.fas.fa-times-circle {
         position: absolute;
-        top: 10px;
-        right: 10px;
+        top: 20px;
+        right: 20px;
         cursor: pointer;
     }
     .modal-country-content a.btn-yes {

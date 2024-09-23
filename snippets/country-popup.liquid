@@ -84,6 +84,7 @@
         min-width: 300px;
         font-size: 20px;
         border-radius: 20px;
+        border: 2x solid #000;
     }
     .modal-country-content i.fas.fa-times-circle {
         position: absolute;
@@ -126,5 +127,14 @@
         border-radius: 30px;
         font-weight: 500;
         font-size: 18px;
+    }
+    @media screen and (max-width:768px){
+        .modal-country-content {
+         min-width: unset;
+         width: calc( 100% - 20px);
+        }
+        .modal-country-content a {
+            font-size: 16px;
+        }
     }
 </style>

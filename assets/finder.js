@@ -172,6 +172,7 @@
 
         for (var combination of Object.keys(finder_res)) {
 
+            console.log(combination_to_search) 
             console.log(combination) 
 
             if (combination == combination_to_search) {

@@ -177,10 +177,8 @@
 
             if (combination == combination_to_search) {
 
-                console.log(finder_res[combination])
-                console.log(finder_res[combination].result1)
-                var scelta1 = finder_res[combination][0]
-                var scelta2 = finder_res[combination][1]
+                var scelta1 = finder_res[combination].result1
+                var scelta2 = finder_res[combination].result2
 
                 let finderResults = document.querySelectorAll('.js-step5-value')
                 console.log(scelta1,scelta2)

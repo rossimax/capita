@@ -152,7 +152,7 @@
 
     async function load_result() {
 
-        let combination_to_search = steps_json.step1.value + "," + steps_json.step3.value + "," + steps_json.step4.value
+        let combination_to_search = steps_json.step1.value + ";" + steps_json.step3.value + ";" + steps_json.step4.value
 
         jsHeadResult.classList.remove("hide")
         jsHeadDefault.classList.add("hide")

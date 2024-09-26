@@ -170,6 +170,15 @@
         console.log(finder_res)
         console.log(JSON.stringify(finder_res)) 
 
+        for (var combination of finder_res) {
+            console.log(combination)
+            if (combination == combination_to_search) {
+
+                console.log(finder_res[combination])
+                console.log(finder_res[combination].result1)
+            }
+        }
+
         for (var combination of Object.keys(finder_res)) {
 
             if (combination == combination_to_search) {

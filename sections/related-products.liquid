@@ -19,6 +19,18 @@
                     </div>
                     <div class="c-product-card__info">
                       <span class="c-product-card__name">{{ recommendation.title }}</span>
+                     
+                      
+                     {%- assign product_in_collects = '[' -%}
+{%- for collection in card_product.collections -%} 
+{%- assign product_in_collects = product_in_collects | append: '{"collection_id":"' | append: collection.id | append: '","product_id":"' | append: card_product.id | append: '"' | append: ',"product_handle":"' | append: card_product.handle | append: '"}' -%}
+{% if forloop.last == false %}
+{%- assign product_in_collects =  product_in_collects | append: ',' -%}
+{% endif %}
+{%- endfor -%}
+{%- assign product_in_collects =  product_in_collects | append: ']' -%}
+<span class="col_clct" clct='{{product_in_collects}}'></span>
+                      
                       <span class="c-product-card__price">{{ recommendation.price | money_with_currency }}</span>
                     </div>
                   </div>

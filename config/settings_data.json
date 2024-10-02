@@ -9,9 +9,9 @@
 */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo-capita.png",
+    "logo": "shopify://shop_images/logo-capita.png",
     "logo_width": 90,
-    "favicon": "shopify:\/\/shop_images\/favicon_1342a81e-a72a-4fd3-b5bb-7a92438aaff4.jpg",
+    "favicon": "shopify://shop_images/favicon_1342a81e-a72a-4fd3-b5bb-7a92438aaff4.jpg",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
@@ -118,7 +118,7 @@
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -137,7 +137,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "script_pre_body_close": "<script>\n(function(g,e,o,t,a,r,ge,tl,y){\nt=g.getElementsByTagName(e)[0];y=g.createElement(e);y.async=true;\ny.src='https:\/\/g594253006.co\/gj.js?id=-NeISIjdv2RTm56dqz3D&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);\nt.parentNode.insertBefore(y,t);\n})(document,'script');\n<\/script>",
+    "script_pre_body_close": "<script>\n(function(g,e,o,t,a,r,ge,tl,y){\nt=g.getElementsByTagName(e)[0];y=g.createElement(e);y.async=true;\ny.src='https://g594253006.co/gj.js?id=-NeISIjdv2RTm56dqz3D&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);\nt.parentNode.insertBefore(y,t);\n})(document,'script');\n</script>",
     "footer_legal": "© 2020-2023 CAPiTA Snowboards | Core S.r.l. – Via Colombano 10, 23014 Delebio (SO), Italy - VAT nr. IT00838030146 All rights reserved.",
     "promo_popup": true,
     "sections": {
@@ -164,25 +164,25 @@
     ],
     "blocks": {
       "2153490007123654574": {
-        "type": "shopify:\/\/apps\/consentmo-gdpr\/blocks\/gdpr_cookie_consent\/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "type": "shopify://apps/consentmo-gdpr/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
         "disabled": false,
         "settings": {
         }
       },
       "319724205969189013": {
-        "type": "shopify:\/\/apps\/hulk-form-builder\/blocks\/app-embed\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "type": "shopify://apps/hulk-form-builder/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3",
         "disabled": false,
         "settings": {
         }
       },
       "8559953418172270618": {
-        "type": "shopify:\/\/apps\/fbtrack-facebook-pixels-app\/blocks\/app-embed\/40a16300-89a3-4e21-943b-e2c31e744e27",
+        "type": "shopify://apps/fbtrack-facebook-pixels-app/blocks/app-embed/40a16300-89a3-4e21-943b-e2c31e744e27",
         "disabled": false,
         "settings": {
         }
       },
       "4095653568973655092": {
-        "type": "shopify:\/\/apps\/mag-product-reviews\/blocks\/app-embed\/0cf5caa0-e138-46b8-999b-520d16633e4c",
+        "type": "shopify://apps/mag-product-reviews/blocks/app-embed/0cf5caa0-e138-46b8-999b-520d16633e4c",
         "disabled": false,
         "settings": {
           "hide_star": false,
@@ -190,7 +190,7 @@
         }
       },
       "9776720720251544092": {
-        "type": "shopify:\/\/apps\/helium-customer-fields\/blocks\/app-embed\/bab58598-3e6a-4377-aaaa-97189b15f131",
+        "type": "shopify://apps/helium-customer-fields/blocks/app-embed/bab58598-3e6a-4377-aaaa-97189b15f131",
         "disabled": false,
         "settings": {
           "registration_form_id": "",
@@ -202,9 +202,21 @@
         }
       },
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
+        }
+      },
+      "18209738915288330680": {
+        "type": "shopify://apps/wholesale-all-in-one/blocks/wholesale-all-in-one/5a3d95fb-5647-47d5-8445-d5858f91ff9d",
+        "disabled": false,
+        "settings": {
+          "wsaio_app_access_token": "",
+          "wsaio_main_js_file": "",
+          "wsaio_main_liquid_file": "",
+          "wsaio_modules_liquid_file": "",
+          "wsaio_addons_liquid_file": "",
+          "wsaio_custom_css_file": ""
         }
       }
     }
@@ -318,7 +330,7 @@
       "sold_out_badge_color_scheme": "inverse",
       "accent_icons": "text",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",

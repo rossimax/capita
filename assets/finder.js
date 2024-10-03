@@ -153,6 +153,8 @@
     async function load_result() {
 
         let combination_to_search = steps_json.step1.value + ";" + steps_json.step3.value + ";" + steps_json.step4.value
+        let result_find = false
+        let finderResults = document.querySelectorAll('.js-step5-value')
 
         jsHeadResult.classList.remove("hide")
         jsHeadDefault.classList.add("hide")
@@ -177,10 +179,11 @@
 
             if (combination == combination_to_search) {
 
+                result_find = true
+
                 var scelta1 = finder_res[combination].result1
                 var scelta2 = finder_res[combination].result2
 
-                let finderResults = document.querySelectorAll('.js-step5-value')
                 console.log(scelta1,scelta2)
 
                 // Forzo per kids mini un attacco
@@ -239,6 +242,18 @@
                 resultLoader.classList.add("hide")
 
             }
+
+
+
+        }
+
+        if (!result_find) {
+
+            document.querySelector(".js-no-result").classList.remove("hide")
+            document.querySelector(".js-finder-head-result p").classList.add("hide")
+            
+            finderResults[0].classList.add("hide")
+            finderResults[1].classList.add("hide")
 
         }
 

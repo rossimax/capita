@@ -50,7 +50,7 @@
         },
         "step4": { // style (pre-set all-mountain ma lascio false lo status)
             "status": false,
-            "value": "all-mountain"
+            "value": "all-mountain&medium"
         }
     }
 

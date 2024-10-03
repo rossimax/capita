@@ -216,17 +216,16 @@
                     document.querySelector(".js-no-result").classList.add("hide")
                     document.querySelector(".js-finder-head-result p").classList.remove("hide")
 
+                    result1 = sessionStorage.getItem("Step2_r1")
+                    result2 = sessionStorage.getItem("Step2_r2")
+                    res1_recalc = result1
+                    res2_recalc = result2
+
                     const response_scelta1 = await fetch('/products/'+scelta1+'.js');
                     const response_scelta1_json = await response_scelta1.json();
 
-                    console.log(response_scelta1_json)
-
-                    result1 = sessionStorage.getItem("Step2_r1")
-                    result2 = sessionStorage.getItem("Step2_r2")
                     no_result1 = true
                     no_result2 = true
-                    res1_recalc = result1
-                    res2_recalc = result2
 
                     response_scelta1_json.variants.forEach(variant => {
 
@@ -299,6 +298,70 @@
     
                     const response_scelta2 = await fetch('/products/'+scelta2+'.js');
                     const response_scelta2_json = await response_scelta2.json();
+
+                    no_result1 = true
+                    no_result2 = true
+
+                    response_scelta2_json.variants.forEach(variant => {
+
+                        let size_check = variant.option1
+
+                        if (size_check == result1) {
+                            no_result1 = false
+                            res1_recalc = result1
+                        } else if (size_check == Number(result1)+1) {
+                            no_result1 = false
+                            res1_recalc = Number(result1)+1
+                        } else if (size_check == Number(result1)-1) {
+                            no_result1 = false
+                            res1_recalc = Number(result1)-1
+                        } else if (result1.includes("W")) {
+                            if ( result1.includes("W") ) {
+                                result1.replace("W", "")
+                                if (size_check == Number(result1)+1+"W") {
+                                    no_result1 = false
+                                    res1_recalc = Number(result1)+1+"W"
+                                } else if (size_check == Number(result1)-1+"W") {
+                                    no_result1 = false
+                                    res1_recalc = Number(result1)-1+"W"
+                                }
+                            }
+                        }
+
+                        if (size_check == result2) {
+                            no_result2 = false
+                            res2_recalc = result2
+                        } else if (size_check == Number(result2)+1) {
+                            no_result2 = false
+                            res2_recalc = Number(result2)+1
+                        } else if (size_check == Number(result2)-1) {
+                            no_result2 = false
+                            res2_recalc = Number(result2)-1
+                        } else if (result2.includes("W")) {
+                            if ( result2.includes("W") ) {
+                                result2.replace("W", "")
+                                if (size_check == Number(result2)+1+"W") {
+                                    no_result2 = false
+                                    res2_recalc = Number(result2)+1+"W"
+                                } else if (size_check == Number(result2)-1+"W") {
+                                    no_result2 = false
+                                    res2_recalc = Number(result2)-1+"W"
+                                }
+                            }
+                        }
+
+
+                    });
+
+                    if ((!no_result1) && (!no_result2)) {
+                        steps_json.step2.value = "<a href='' class='result-size js-result-size--1'>"+res1_recalc+"</a><a href='' class='result-size js-result-size--2'>"+res2_recalc+"</a>"
+                    } else if ((!no_result1) && (no_result2)) {
+                        steps_json.step2.value = "<a href='' class='result-size js-result-size--1'>"+res1_recalc+"</a><a style='display:none' href='' class='result-size js-result-size--2'></a>"
+                    } else if ((no_result1) && (!no_result2)) {
+                        steps_json.step2.value = "<a style='display:none' href='' class='result-size js-result-size--1'></a><a href='' class='result-size js-result-size--2'>"+res2_recalc+"</a>"
+                    } else {
+                        steps_json.step2.value = "<a style='display:none' href='' class='result-size js-result-size--1'></a><a style='display:none' href='' class='result-size js-result-size--2'></a>"
+                    }
     
                     finderResults[1].querySelector(".js-fs-result-img").setAttribute("src", response_scelta2_json.featured_image)
                     finderResults[1].querySelector(".js-fs-result-title").innerHTML = response_scelta2_json.title

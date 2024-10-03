@@ -482,7 +482,7 @@
                             //     steps_json.step4.value = "freestyle"
                             // }
                           break;
-                          case ((3 <= riding_style_json["style-1"]) && (riding_style_json["style-1"] <= 7)) :
+                          case ((3 >= riding_style_json["style-1"]) && (riding_style_json["style-1"] <= 7)) :
                             val1 = "all-mountain"
                             // if (steps_json.step4.value.includes("&&")) {
                             //     steps_json.step4.value = "all-mountain".concat(steps_json.step4.value)

@@ -285,7 +285,7 @@
                     } else if ((no_result1) && (!no_result2)) {
                         steps_json.step2.value = "<a style='display:none' href='' class='result-size js-result-size--1'></a><a href='' class='result-size js-result-size--2'>"+res2_recalc+"</a>"
                     } else {
-                        steps_json.step2.value = "<a style='display:none' href='' class='result-size js-result-size--1'></a><a style='display:none' href='' class='result-size js-result-size--2'></a>"
+                        // steps_json.step2.value = "<a style='display:none' href='' class='result-size js-result-size--1'></a><a style='display:none' href='' class='result-size js-result-size--2'></a>"
                     }
     
                     finderResults[0].querySelector(".js-fs-result-img").setAttribute("src", response_scelta1_json.featured_image)
@@ -360,21 +360,40 @@
                     } else if ((no_result1) && (!no_result2)) {
                         steps_json.step2.value = "<a style='display:none' href='' class='result-size js-result-size--1'></a><a href='' class='result-size js-result-size--2'>"+res2_recalc+"</a>"
                     } else {
-                        steps_json.step2.value = "<a style='display:none' href='' class='result-size js-result-size--1'></a><a style='display:none' href='' class='result-size js-result-size--2'></a>"
+                        // steps_json.step2.value = "<a style='display:none' href='' class='result-size js-result-size--1'></a><a style='display:none' href='' class='result-size js-result-size--2'></a>"
                     }
     
                     finderResults[1].querySelector(".js-fs-result-img").setAttribute("src", response_scelta2_json.featured_image)
                     finderResults[1].querySelector(".js-fs-result-title").innerHTML = response_scelta2_json.title
                     finderResults[1].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
                     finderResults[1].querySelector(".js-fs-result-link").setAttribute("href", response_scelta2_json.url)
-                    finderResults[0].querySelector(".js-result-size--1").setAttribute("href", response_scelta1_json.url)
-                    finderResults[0].querySelector(".js-result-size--2").setAttribute("href", response_scelta1_json.url)
+                    finderResults[1].querySelector(".js-result-size--1").setAttribute("href", response_scelta2_json.url)
+                    finderResults[1].querySelector(".js-result-size--2").setAttribute("href", response_scelta2_json.url)
     
                     
-                    finderResults[0].classList.remove("hide")
-                    if ((size_selected != "Mini") && (size_selected != "Extra Large")) {
+                    if (!no_result1) {
+                        finderResults[0].classList.remove("hide")
+                    }
+
+                    if (!no_result2) {
                         finderResults[1].classList.remove("hide")
                     }
+
+                    if ((no_result1) && (no_result2)) {
+
+                        resultLoader.classList.add("hide")
+
+                        document.querySelector(".js-no-result").classList.remove("hide")
+                        document.querySelector(".js-finder-head-result p").classList.add("hide")
+                        
+                        finderResults[0].classList.add("hide")
+                        finderResults[1].classList.add("hide")
+                        
+                    }
+
+                    // if ((size_selected != "Mini") && (size_selected != "Extra Large")) {
+                    //     finderResults[1].classList.remove("hide")
+                    // }
                 }
 
                 resultLoader.classList.add("hide")

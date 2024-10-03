@@ -249,6 +249,8 @@
 
         if (!result_find) {
 
+            resultLoader.classList.add("hide")
+
             document.querySelector(".js-no-result").classList.remove("hide")
             document.querySelector(".js-finder-head-result p").classList.add("hide")
             

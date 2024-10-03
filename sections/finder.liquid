@@ -740,6 +740,9 @@ a.result-size:hover {
                 result1 = result1.toString()
                 result2 = result2.toString()
 
+                sessionStorage.setItem("Step2_r1", result1)
+                sessionStorage.setItem("Step2_r2", result2)
+                    
                 sessionStorage.setItem("Step2","<a href='' class='result-size js-result-size--1'>"+result1+"</a><a href='' class='result-size js-result-size--2'>"+result2+"</a>")
 
                 document.querySelector(".js-btn-next").classList.add("active")

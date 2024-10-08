@@ -219,10 +219,11 @@
           "wsaio_custom_css_file": ""
         }
       },
-      "7280966411886983154": {
-        "type": "shopify://apps/monk/blocks/app-embed/e949adb6-87ca-4b97-8f31-0e51bf507f2d",
+      "10605408327587305396": {
+        "type": "shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
         "disabled": false,
         "settings": {
+          "version": "v3"
         }
       }
     }

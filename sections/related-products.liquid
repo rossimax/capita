@@ -22,8 +22,8 @@
 
                       
 {%- assign product_in_collects = '[' -%}
-{%- for collection in product.collections -%} 
-{%- assign product_in_collects = product_in_collects | append: '{"collection_id":"' | append: collection.id | append: '","product_id":"' | append: product.id | append: '"' | append: ',"product_handle":"' | append: product.handle | append: '"}' -%}
+{%- for collection in recomendation.collections -%} 
+{%- assign product_in_collects = product_in_collects | append: '{"collection_id":"' | append: collection.id | append: '","product_id":"' | append: recomendation.id | append: '"' | append: ',"product_handle":"' | append: recomendation.handle | append: '"}' -%}
 {% if forloop.last == false %}
 {%- assign product_in_collects =  product_in_collects | append: ',' -%}
 {% endif %}

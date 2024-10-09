@@ -21,8 +21,8 @@
                       <span class="c-product-card__name">{{ recommendation.title }}</span>
 
                       
-                        {%- assign product_in_collects = '[' -%}
-                        {%- for collection in products.collections -%} 
+                        {%- assign products_in_collects = '[' -%}
+                        {%- for collection in product.collections -%} 
                         {%- assign product_in_collects = product_in_collects | append: '{"collection_id":"' | append: collection.id | append: '","product_id":"' | append: products.id | append: '"' | append: ',"product_handle":"' | append: products.handle | append: '"}' -%}
                         {% if forloop.last == false %}
                         {%- assign product_in_collects =  product_in_collects | append: ',' -%}

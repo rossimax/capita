@@ -471,6 +471,17 @@
 
               <div class="c-listing-product__info">
                 <span class="c-listing-product__categories o-text is-5 is-medium">{{ product.metafields.snowboard_info.snowboard_listing_tag | default: ''  }}</span>
+               
+{%- assign product_in_collects = '[' -%}
+{%- for collection in product.collections -%} 
+{%- assign product_in_collects = product_in_collects | append: '{"collection_id":"' | append: collection.id | append: '","product_id":"' | append: product.id | append: '"' | append: ',"product_handle":"' | append: product.handle | append: '"}' -%}
+{% if forloop.last == false %}
+{%- assign product_in_collects =  product_in_collects | append: ',' -%}
+{% endif %}
+{%- endfor -%}
+{%- assign product_in_collects =  product_in_collects | append: ']' -%}
+<span class="col_clct" clct='{{product_in_collects}}'></span>
+                
                 <span class="1111 c-listing-product__name o-text is-3"><a href="{{ product.url }}">{{ product.title }}</a></span>
                 <span class="c-listing-product__price o-text is-4 is-medium">{{ product.price | money }}</span>
                 {% comment %} {% if product.type == "Snowboard" %}<div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{% endif %} {% endcomment %}

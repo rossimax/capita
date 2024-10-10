@@ -1160,6 +1160,14 @@ a.c-listing-product__size:hover span {
     }
   })
 
+  window.addEventListener('resize', function(event) {
+    if ( window.innerWidth < 991) {
+      filterBox.style.top = listingGrid.offsetTop + 20 + "px"
+    } else if ( window.innerWidth < 1200) {
+      filterBox.style.top = 245 + "px"
+    }
+  })
+
   // END - FILTERS MOB
 
 })(document);

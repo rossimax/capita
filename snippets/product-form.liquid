@@ -61,9 +61,12 @@
                                   </div>
                               {% endfor %}
                           </div>
-                          {% if product.tags contains "Men's" or product.tags contains "Women's" %}
-                            <a class="open-find-my-size js-open-find-my-size">FIND MY SIZE</a>
+
+                          {% comment %} {% if product.tags contains "Men's" or product.tags contains "Women's" %} {% endcomment %}
+                          {% if product.tags contains "Men's" or product.tags contains "Women's" or product.tags contains "Youth" %}
+                              <a class="open-find-my-size js-open-find-my-size">FIND MY SIZE</a>
                           {% endif %}
+
                       {% endif %}
 
                   {% endfor %}
@@ -84,14 +87,16 @@
               {% endfor %}
 
               {% if all_soldout %}
-                <span class="all-sold-out">SOLD OUT</a>
+                {% comment %} <span class="all-sold-out">SOLD OUT</a> {% endcomment %}
+                <span class="all-sold-out">COMING SOON</a> 
               {% else %}
                 <button 
                   class="js-add-to-cart c-product-info__add-to-cart {% unless current_variant.available %} all-soldout{% endunless %}">
                     <span>
                         {% unless current_variant.available %}
-                        {{ 'products.product.sold_out' | t }}
-                        {% else %}
+                          {% comment %} {{ 'products.product.sold_out' | t }} {% endcomment %}
+                          COMING SOON
+                          {% else %}
                         {{ 'products.product.add_to_cart' | t }}
                         {% endunless %}
                     </span>

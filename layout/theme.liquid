@@ -33,11 +33,13 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    {{ shop.metafields.globals.gtm__header }}
+
     <title>
-      {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {{ page_title | strip_html }}
+      {%- if current_tags %} tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} {{ shop.name }}{% endunless -%}
     </title>
 
     {% if page_description %}
@@ -46,10 +48,19 @@
 
     {% render 'meta-tags' %}
 
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W29P57GM');</script>
+<!-- End Google Tag Manager -->
+
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <link rel="stylesheet" href="{{ 'style.css' | asset_url }}" type="text/css">
+    {{ 'app.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" type="text/css" href="{{ 'fonts.css' | asset_url }}"> 
     
     <link rel="stylesheet" type="text/css" href="{{ 'defaults.css' | asset_url }}">
@@ -255,6 +266,14 @@
   </head>
 
   <body class="gradient">
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W29P57GM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    {{ shop.metafields.globals.gtm__body }}
+
     {% comment %} <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a> {% endcomment %}
@@ -341,5 +360,29 @@
       {% include 'promo-popup' %}
     {% endif %}
     
-	</body>
+	<!-- WPD Start -->
+                {% if customer.tags.size > 0 and template != 'cart' %}
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                      let checkoutbtninterval = setInterval(function(){
+                        var x=document.querySelectorAll("input[name='checkout'], button[name='checkout'], input[name='goto_pp'], button[name='goto_pp'], input[name='goto_gc'], button[name='goto_gc'], [href$='checkout']");
+                        var WPD_RedirectToCart = function(e) {
+                          	e.stopPropagation();
+                            e.preventDefault();
+                            window.location = '/cart';
+                            };
+                            for (var i = 0; i < x.length; i++) {
+                                x[i].addEventListener('click', WPD_RedirectToCart, false);
+                            }
+                        },500)
+                });
+              </script>
+               {% endif %}
+         
+
+               {% if customer.tags.size > 0 and template == 'cart' %}
+                 {% include 'wcp_cart' %}
+               {% endif %}
+               <!-- WPD End -->
+  </body>
 </html>

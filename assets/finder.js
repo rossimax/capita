@@ -33,7 +33,12 @@
     let size_selected = ""
 
     sessionStorage.SessionName = "Step2"
+    sessionStorage.SessionName = "Step2_r1"
+    sessionStorage.SessionName = "Step2_r2"
+
     sessionStorage.setItem("Step2","")
+    sessionStorage.setItem("Step2_r1","")
+    sessionStorage.setItem("Step2_r2","")
 
     let steps_json = {
         "step1": { // gender
@@ -50,7 +55,7 @@
         },
         "step4": { // style (pre-set all-mountain ma lascio false lo status)
             "status": false,
-            "value": "all-mountain"
+            "value": "all-mountain&&medium"
         }
     }
 
@@ -100,7 +105,12 @@
 
         ff_current_step.classList.add("active")
 
-        
+        // num_actual_step = document.querySelector(".js-steps:not(.hide)").getAttribute("data-step")
+        // document.querySelectorAll(".ff-step").forEach(ff_step => {
+        //     ff_step.classList.remove("active")
+        // })
+        // document.querySelector(".ff-step[data-step="+num_actual_step+"]").classList.add("active")
+
         // for (const [step_name, step] of Object.entries(steps_json)) {
         //     let ff_current_step = document.querySelector(".ff-step[data-step='" + step_name + "']")
         //     if (step.status) {  
@@ -147,12 +157,14 @@
 
     async function load_result() {
 
-        let combination_to_search = steps_json.step1.value + "," + steps_json.step3.value + "," + steps_json.step4.value
+        let combination_to_search = steps_json.step1.value + ";" + steps_json.step3.value + ";" + steps_json.step4.value
+        let result_find = false
+        let finderResults = document.querySelectorAll('.js-step5-value')
 
         jsHeadResult.classList.remove("hide")
         jsHeadDefault.classList.add("hide")
 
-        console.log(combination_to_search)
+        // console.log(combination_to_search)
 
         // mini: cadet mini
         // xl: force
@@ -162,16 +174,21 @@
         const response = await fetch(url_fetch);
         const finder_res = await response.json();
 
-        console.log(finder_res)
-        console.log(JSON.stringify(finder_res)) 
+        // console.log(finder_res)
+        // console.log(JSON.stringify(finder_res)) 
 
         for (var combination of Object.keys(finder_res)) {
 
-            if (combination == combination_to_search) {
-                var scelta1 = finder_res[combination][0]
-                var scelta2 = finder_res[combination][1]
+            console.log(combination_to_search) 
+            console.log(combination) 
 
-                let finderResults = document.querySelectorAll('.js-step5-value')
+            if (combination == combination_to_search) {
+
+                result_find = true
+
+                var scelta1 = finder_res[combination].result1
+                var scelta2 = finder_res[combination].result2
+
                 console.log(scelta1,scelta2)
 
                 // Forzo per kids mini un attacco
@@ -186,32 +203,216 @@
                 }
 
 
+                if (steps_json.step2.value.includes("Based on your input provided")) {
 
-                const response_scelta1 = await fetch('/products/'+scelta1+'.js');
-                const response_scelta1_json = await response_scelta1.json();
+                    document.querySelector(".js-no-result").classList.remove("hide")
+                    document.querySelector(".js-finder-head-result p").classList.add("hide")
+                    
+                    finderResults[0].classList.add("hide")
+                    finderResults[1].classList.add("hide")
 
-                finderResults[0].querySelector(".js-fs-result-img").setAttribute("src", response_scelta1_json.featured_image)
-                finderResults[0].querySelector(".js-fs-result-title").innerHTML = response_scelta1_json.title
-                finderResults[0].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
-                finderResults[0].querySelector(".js-fs-result-link").setAttribute("href", response_scelta1_json.url)
+                } else {
+
+                    document.querySelector(".js-no-result").classList.add("hide")
+                    document.querySelector(".js-finder-head-result p").classList.remove("hide")
+
+                    result1 = sessionStorage.getItem("Step2_r1")
+                    result2 = sessionStorage.getItem("Step2_r2")
+                    res1_recalc = result1
+                    res2_recalc = result2
+
+                    const response_scelta1 = await fetch('/products/'+scelta1+'.js');
+                    const response_scelta1_json = await response_scelta1.json();
+
+                    no_result1 = true
+                    no_result2 = true
+
+                    response_scelta1_json.variants.forEach(variant => {
+
+                        let size_check = variant.option1
+
+                        if (size_check == result1) {
+                            no_result1 = false
+                            res1_recalc = result1
+                        } else if (size_check == Number(result1)+1) {
+                            no_result1 = false
+                            res1_recalc = Number(result1)+1
+                        } else if (size_check == Number(result1)-1) {
+                            no_result1 = false
+                            res1_recalc = Number(result1)-1
+                        } else if (result1.includes("W")) {
+                            if ( result1.includes("W") ) {
+                                result1.replace("W", "")
+                                if (size_check == Number(result1)+1+"W") {
+                                    no_result1 = false
+                                    res1_recalc = Number(result1)+1+"W"
+                                } else if (size_check == Number(result1)-1+"W") {
+                                    no_result1 = false
+                                    res1_recalc = Number(result1)-1+"W"
+                                }
+                            }
+                        }
+
+                        if (size_check == result2) {
+                            no_result2 = false
+                            res2_recalc = result2
+                        } else if (size_check == Number(result2)+1) {
+                            no_result2 = false
+                            res2_recalc = Number(result2)+1
+                        } else if (size_check == Number(result2)-1) {
+                            no_result2 = false
+                            res2_recalc = Number(result2)-1
+                        } else if (result2.includes("W")) {
+                            if ( result2.includes("W") ) {
+                                result2.replace("W", "")
+                                if (size_check == Number(result2)+1+"W") {
+                                    no_result2 = false
+                                    res2_recalc = Number(result2)+1+"W"
+                                } else if (size_check == Number(result2)-1+"W") {
+                                    no_result2 = false
+                                    res2_recalc = Number(result2)-1+"W"
+                                }
+                            }
+                        }
 
 
-                const response_scelta2 = await fetch('/products/'+scelta2+'.js');
-                const response_scelta2_json = await response_scelta2.json();
+                    });
 
-                finderResults[1].querySelector(".js-fs-result-img").setAttribute("src", response_scelta2_json.featured_image)
-                finderResults[1].querySelector(".js-fs-result-title").innerHTML = response_scelta2_json.title
-                finderResults[1].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
-                finderResults[1].querySelector(".js-fs-result-link").setAttribute("href", response_scelta2_json.url)
+                    if ((!no_result1) && (!no_result2)) {
+                        steps_json.step2.value = "<a href='' class='result-size js-result-size--1'>"+res1_recalc+"</a><a href='' class='result-size js-result-size--2'>"+res2_recalc+"</a>"
+                    } else if ((!no_result1) && (no_result2)) {
+                        steps_json.step2.value = "<a href='' class='result-size js-result-size--1'>"+res1_recalc+"</a><a style='display:none' href='' class='result-size js-result-size--2'></a>"
+                    } else if ((no_result1) && (!no_result2)) {
+                        steps_json.step2.value = "<a style='display:none' href='' class='result-size js-result-size--1'></a><a href='' class='result-size js-result-size--2'>"+res2_recalc+"</a>"
+                    } else {
+                        // steps_json.step2.value = "<a style='display:none' href='' class='result-size js-result-size--1'></a><a style='display:none' href='' class='result-size js-result-size--2'></a>"
+                    }
+    
+                    finderResults[0].querySelector(".js-fs-result-img").setAttribute("src", response_scelta1_json.featured_image)
+                    finderResults[0].querySelector(".js-fs-result-title").innerHTML = response_scelta1_json.title
+                    finderResults[0].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
+                    finderResults[0].querySelector(".js-fs-result-link").setAttribute("href", response_scelta1_json.url)
+                    finderResults[0].querySelector(".js-result-size--1").setAttribute("href", response_scelta1_json.url)
+                    finderResults[0].querySelector(".js-result-size--2").setAttribute("href", response_scelta1_json.url)
+    
+    
+                    const response_scelta2 = await fetch('/products/'+scelta2+'.js');
+                    const response_scelta2_json = await response_scelta2.json();
 
-                
-                finderResults[0].classList.remove("hide")
-                if ((size_selected != "Mini") && (size_selected != "Extra Large")) {
-                    finderResults[1].classList.remove("hide")
+                    no_result1 = true
+                    no_result2 = true
+
+                    response_scelta2_json.variants.forEach(variant => {
+
+                        let size_check = variant.option1
+
+                        if (size_check == result1) {
+                            no_result1 = false
+                            res1_recalc = result1
+                        } else if (size_check == Number(result1)+1) {
+                            no_result1 = false
+                            res1_recalc = Number(result1)+1
+                        } else if (size_check == Number(result1)-1) {
+                            no_result1 = false
+                            res1_recalc = Number(result1)-1
+                        } else if (result1.includes("W")) {
+                            if ( result1.includes("W") ) {
+                                result1.replace("W", "")
+                                if (size_check == Number(result1)+1+"W") {
+                                    no_result1 = false
+                                    res1_recalc = Number(result1)+1+"W"
+                                } else if (size_check == Number(result1)-1+"W") {
+                                    no_result1 = false
+                                    res1_recalc = Number(result1)-1+"W"
+                                }
+                            }
+                        }
+
+                        if (size_check == result2) {
+                            no_result2 = false
+                            res2_recalc = result2
+                        } else if (size_check == Number(result2)+1) {
+                            no_result2 = false
+                            res2_recalc = Number(result2)+1
+                        } else if (size_check == Number(result2)-1) {
+                            no_result2 = false
+                            res2_recalc = Number(result2)-1
+                        } else if (result2.includes("W")) {
+                            if ( result2.includes("W") ) {
+                                result2.replace("W", "")
+                                if (size_check == Number(result2)+1+"W") {
+                                    no_result2 = false
+                                    res2_recalc = Number(result2)+1+"W"
+                                } else if (size_check == Number(result2)-1+"W") {
+                                    no_result2 = false
+                                    res2_recalc = Number(result2)-1+"W"
+                                }
+                            }
+                        }
+
+
+                    });
+
+                    if ((!no_result1) && (!no_result2)) {
+                        steps_json.step2.value = "<a href='' class='result-size js-result-size--1'>"+res1_recalc+"</a><a href='' class='result-size js-result-size--2'>"+res2_recalc+"</a>"
+                    } else if ((!no_result1) && (no_result2)) {
+                        steps_json.step2.value = "<a href='' class='result-size js-result-size--1'>"+res1_recalc+"</a><a style='display:none' href='' class='result-size js-result-size--2'></a>"
+                    } else if ((no_result1) && (!no_result2)) {
+                        steps_json.step2.value = "<a style='display:none' href='' class='result-size js-result-size--1'></a><a href='' class='result-size js-result-size--2'>"+res2_recalc+"</a>"
+                    } else {
+                        // steps_json.step2.value = "<a style='display:none' href='' class='result-size js-result-size--1'></a><a style='display:none' href='' class='result-size js-result-size--2'></a>"
+                    }
+    
+                    finderResults[1].querySelector(".js-fs-result-img").setAttribute("src", response_scelta2_json.featured_image)
+                    finderResults[1].querySelector(".js-fs-result-title").innerHTML = response_scelta2_json.title
+                    finderResults[1].querySelector(".js-fs-result-size").innerHTML = steps_json.step2.value
+                    finderResults[1].querySelector(".js-fs-result-link").setAttribute("href", response_scelta2_json.url)
+                    finderResults[1].querySelector(".js-result-size--1").setAttribute("href", response_scelta2_json.url)
+                    finderResults[1].querySelector(".js-result-size--2").setAttribute("href", response_scelta2_json.url)
+    
+                    
+                    if (!no_result1) {
+                        finderResults[0].classList.remove("hide")
+                    }
+
+                    if (!no_result2) {
+                        finderResults[1].classList.remove("hide")
+                    }
+
+                    if ((no_result1) && (no_result2)) {
+
+                        resultLoader.classList.add("hide")
+
+                        document.querySelector(".js-no-result").classList.remove("hide")
+                        document.querySelector(".js-finder-head-result p").classList.add("hide")
+                        
+                        finderResults[0].classList.add("hide")
+                        finderResults[1].classList.add("hide")
+                        
+                    }
+
+                    // if ((size_selected != "Mini") && (size_selected != "Extra Large")) {
+                    //     finderResults[1].classList.remove("hide")
+                    // }
                 }
+
                 resultLoader.classList.add("hide")
 
             }
+
+
+
+        }
+
+        if (!result_find) {
+
+            resultLoader.classList.add("hide")
+
+            document.querySelector(".js-no-result").classList.remove("hide")
+            document.querySelector(".js-finder-head-result p").classList.add("hide")
+            
+            finderResults[0].classList.add("hide")
+            finderResults[1].classList.add("hide")
 
         }
 
@@ -358,9 +559,28 @@
                 function elementDrag(e) {
                     e = e || window.event;
                     e.preventDefault();
-                    newX = oldX - e.clientX; // to calculate how much we have moved
-                    oldX = e.clientX; // store current value to use for next move
+
+                    let clientX = 0
+
+                    if (window.innerWidth < 769) {
+                        clientX = e.changedTouches[0].pageX
+                    } else {
+                        clientX = e.clientX
+                    }
+
+                    newX = oldX - clientX; // to calculate how much we have moved
+                    oldX = clientX; // store current value to use for next move
                     let pos = selector_pin.offsetLeft - newX
+
+                    // if (window.innerWidth < 769) {
+                    //     startX = e.changedTouches[0].pageX;
+                    //     console.log(e.changedTouches[0].pageX)
+                    // } 
+
+
+                    console.log("clientX: "+clientX)
+                    console.log("newX: "+newX)
+                    console.log("pos: "+pos)
 
                     let line_max_width = Number(selector__line.offsetWidth)
 
@@ -406,40 +626,103 @@
 
                     riding_style_json[riding_style] = (Number(position_left_pin.replace("px", "")) / line_max_width) * 10
 
+                    let val1 = ""
+                    let val2 = ""
 
+                    switch(true) {
+                        case (riding_style_json["style-1"] < 3) :
+                            val1 = "freestyle"
+                            // if (steps_json.step4.value.includes("&&")) {
+                            //     steps_json.step4.value = "freestyle".concat(steps_json.step4.value)
+                            //     steps_json.step4.status = true
+                            // } else {
+                            //     steps_json.step4.value = "freestyle"
+                            // }
+                          break;
+                          case ((3 <= riding_style_json["style-1"]) && (riding_style_json["style-1"] <= 7)) :
+                            val1 = "all-mountain"
+                            // if (steps_json.step4.value.includes("&&")) {
+                            //     steps_json.step4.value = "all-mountain".concat(steps_json.step4.value)
+                            //     steps_json.step4.status = true
+                            // } else {
+                            //     steps_json.step4.value = "all-mountain"
+                            // }
+                        break;
+                        case (riding_style_json["style-1"] > 7) :
+                            val1 = "freeride"
+                            // if (steps_json.step4.value.includes("&&")) {
+                            //     steps_json.step4.value = "freeride".concat(steps_json.step4.value)
+                            //     steps_json.step4.status = true
+                            // } else {
+                            //     steps_json.step4.value = "freeride"
+                            // }
+                        break;
 
-                    if (riding_style_json["style-2"] < 3) {
-                        steps_json.step4.value = "street-and-jibbing"
-                        steps_json.step4.status = true
                     }
-                    else if (riding_style_json["style-2"] > 7) {
-                        steps_json.step4.value = "carving-boardercross"
-                        steps_json.step4.status = true
+
+                    switch(true) {
+                        case (riding_style_json["style-2"] < 3) :
+                            val2 = "soft"
+                            // steps_json.step4.value = steps_json.step4.value.concat("&&", "soft")
+                            // if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
+                            //     steps_json.step4.status = true
+                            // }
+                          break;
+                        case ((3 <= riding_style_json["style-2"]) && (riding_style_json["style-2"] <= 7)) :
+                            val2 = "medium"
+                            // steps_json.step4.value = steps_json.step4.value.concat("&&", "medium")
+                            // if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
+                            //     steps_json.step4.status = true
+                            // }
+                        break;
+                        case (riding_style_json["style-2"] > 7) :
+                            val2 = "stiff"
+                            // steps_json.step4.value = steps_json.step4.value.concat("&&", "stiff")
+                            // if ((steps_json.step4.value.includes("freestyle")) || (steps_json.step4.value.includes("all-mountain")) || (steps_json.step4.value.includes("freeride"))) {
+                            //     steps_json.step4.status = true
+                            // }
+                        break;
                     }
-                    else if (riding_style_json["style-1"] < 2 ) {
-                        steps_json.step4.value = "freestyle-park"
-                        steps_json.step4.status = true
+
+                    if (val1 && val2) {
+                        steps_json.step4.value = val1 + "&&" + val2
                     }
-                    else if (riding_style_json["style-1"] > 8) {
-                        steps_json.step4.value = "freeride"
-                        steps_json.step4.status = true
-                    }
-                    else if (riding_style_json["style-1"] == 5) {
-                        steps_json.step4.value = "all-mountain"
-                        steps_json.step4.status = true
-                    }
-                    else if ((riding_style_json["style-1"] >= 2) && (riding_style_json["style-1"] < 5 )) {
-                        steps_json.step4.value = "all-mountain--freestyle"
-                        steps_json.step4.status = true
-                    }
-                    else if ((riding_style_json["style-1"] > 5) && (riding_style_json["style-1"] <= 8)) {
-                        steps_json.step4.value = "all-mountain--freeride"
-                        steps_json.step4.status = true
-                    }
-                    else {
-                        steps_json.step4.value = "all-mountain2"
-                        steps_json.step4.status = true
-                    }
+                    console.log(riding_style_json["style-1"]+" "+val1)
+                    console.log(riding_style_json["style-2"]+" "+val2)
+                    console.log(steps_json.step4.value)
+
+                    // if (riding_style_json["style-2"] < 3) {
+                    //     steps_json.step4.value = "street-and-jibbing"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else if (riding_style_json["style-2"] > 7) {
+                    //     steps_json.step4.value = "carving-boardercross"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else if (riding_style_json["style-1"] < 2 ) {
+                    //     steps_json.step4.value = "freestyle-park"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else if (riding_style_json["style-1"] > 8) {
+                    //     steps_json.step4.value = "freeride"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else if (riding_style_json["style-1"] == 5) {
+                    //     steps_json.step4.value = "all-mountain"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else if ((riding_style_json["style-1"] >= 2) && (riding_style_json["style-1"] < 5 )) {
+                    //     steps_json.step4.value = "all-mountain--freestyle"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else if ((riding_style_json["style-1"] > 5) && (riding_style_json["style-1"] <= 8)) {
+                    //     steps_json.step4.value = "all-mountain--freeride"
+                    //     steps_json.step4.status = true
+                    // }
+                    // else {
+                    //     steps_json.step4.value = "all-mountain2"
+                    //     steps_json.step4.status = true
+                    // }
 
                     /*
                     da associare a queste:
@@ -470,9 +753,22 @@
                     oldX = e.clientX; // store current value to use for mouse move calculation
                     document.onmouseup = closeDragElement;
                     document.onmousemove = elementDrag;
+
+                    document.ontouchend = closeDragElement; // mob
+                    document.ontouchmove = elementDrag; // mob
+
+                    // document.addEventListener("touchend", function(){
+                    //     console.log("touchend")
+                    //     closeDragElement();
+                    //  });
+                    //  document.addEventListener("touchmove", function(){
+                    //     console.log("touchmove")
+                    //     elementDrag();
+                    //  });
                 }
 
                 selector_pin.onmousedown = dragMouseDown;
+                selector_pin.ontouchstart = dragMouseDown; // mob
 
             })
 

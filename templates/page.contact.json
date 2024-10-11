@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -62,11 +71,19 @@
       "type": "contact-form",
       "settings": {
       }
+    },
+    "rich_text_FRVyTe": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "text": "<p><strong>Dear CAPiTA customer, our Customer Service is currently suspended. We will be back on July 19th.<\/strong><\/p>"
+      }
     }
   },
   "order": [
     "main",
     "1d210c57-3f36-47c1-8ef2-17be22222a78",
-    "form"
+    "form",
+    "rich_text_FRVyTe"
   ]
 }

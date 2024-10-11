@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -69,7 +78,7 @@
     "df686262-fb69-4057-8251-d9b26fe0fdd8": {
       "type": "rich-text",
       "settings": {
-        "text": "<p> <strong>SHIPPING INFORMATION<\/strong><\/p><p> <\/p><p>All orders are fulfilled from Seattle, WA USA. We offer multiple shipping options to fit your needs. Although we cannont guarantee shipping time estimated at purchase, we do our best to get your items out as quickly as possible. Delivery is not guaranteed and is subject to delays by carriers, inclement weather, and holidays. Orders shipped via USPS may arrive on Saturday (post office discretion), but all other methods of shipment do not offer delivery on Saturday or Sunday. Carriers may vary depending on shipping type and destination.<\/p><p> <\/p><p>You can always contact us with any questions or concerns: <a href=\"mailto:shop@capitasnowboarding.com\">shop@capitasnowboarding.com<\/a><\/p><p><br\/><\/p><p>Canadian Shipping<\/p><p>All orders are shipped from our US warehouse in Seattle, WA. Canadian orders are subject to additional tax and fees calculated at checkout and are shipped delivery duty paid. Canadian shipping availability and terms are subject to change. We are unable to offer return postage for Canadian orders currently.<\/p><p> <\/p><p> <\/p><p><strong>Order Processing<\/strong><\/p><p> <\/p><p>Orders are packed and shipped within 2 business days. Orders placed on weekends or holidays will be processed on the next business day. Transit time is measured in business days which are Monday through Friday (excluding holidays). Note: We get backlogged during sale events and holidays, which could delay your shipment.<\/p><p><br\/><\/p><p><strong>Delivery<\/strong><\/p><p><br\/><\/p><p>Please make sure during checkout that you are shipping your items to a secure location. Tracking is sent by email once your package is out for delivery. We are not liable for lost or stolen packages.<\/p><p><br\/><\/p>"
+        "text": "<p> <strong>SHIPPING INFORMATION<\/strong><\/p><p> <\/p><p>All orders are fulfilled from Seattle, WA USA. We offer multiple shipping options to fit your needs. Although we cannot guarantee shipping time estimated at purchase, we do our best to get your items out as quickly as possible. Delivery is not guaranteed and is subject to delays by carriers, inclement weather, and holidays. Orders shipped via USPS may arrive on Saturday (post office discretion), but all other methods of shipment do not offer delivery on Saturday or Sunday. Carriers may vary depending on shipping type and destination.<\/p><p> <\/p><p>You can always contact us with any questions or concerns: <a href=\"mailto:shop@capitasnowboarding.com\">shop@capitasnowboarding.com<\/a><\/p><p><br\/><\/p><p>Canadian Shipping<\/p><p>All orders are shipped from our US warehouse in Seattle, WA. Canadian orders are subject to additional tax and fees calculated at checkout and are shipped delivery duty paid. Canadian shipping availability and terms are subject to change. We are unable to offer return postage for Canadian orders currently.<\/p><p> <\/p><p> <\/p><p><strong>Order Processing<\/strong><\/p><p> <\/p><p>Orders are packed and shipped within 2 business days. Orders placed on weekends or holidays will be processed on the next business day. Transit time is measured in business days which are Monday through Friday (excluding holidays). Note: We get backlogged during sale events and holidays, which could delay your shipment.<\/p><p><br\/><\/p><p><strong>Delivery<\/strong><\/p><p><br\/><\/p><p>Please make sure during checkout that you are shipping your items to a secure location. Tracking is sent by email once your package is out for delivery. We are not liable for lost or stolen packages.<\/p><p><br\/><\/p>"
       }
     }
   },

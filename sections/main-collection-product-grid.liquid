@@ -23,309 +23,312 @@
         {% if section.settings.filter_type == "snowboards" %}
 
           <div class="l-listing__aside">
-            <a class="o-btn btn-finder" href="/pages/finder">BOARD FINDER</a>
-            <div class="c-listing-filter closed">
-              <div class="c-listing-filter__wrapper">
-                <div class="c-listing-filter__mob-head closed o-text is-3">
-                  <span>FILTERS</span>
-                  <div class="js-filter-num-select-mob o-text is-4 is-regular"><span class="num-select-filter">0</span> selected</div>
-                </div>
-      
-                <span class="js-tags-list" data-tags="{{tag_list}}"></span>
-      
-                <div class="c-listing-filter__stack">
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="All" 
-                      {% if collection.handle == "all-snowboards" %} 
-                        checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-                      {% else %} 
-                        onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-                      {% endif %}/>
-                      <span>All</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="Men's Snowboards" 
-                      {% if collection.handle == "snowboards-mens" %} 
-                        checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-                      {% else %} 
-                        onclick="window.location.replace('{{ collections['snowboards-mens'].url }}')" 
-                      {% endif %}/>
-                      <span>men's</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="Women's Snowboards" 
-                      {% if collection.handle == "snowboards-womens" %} 
-                      checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-                    {% else %} 
-                      onclick="window.location.replace('{{ collections['snowboards-womens'].url }}')" 
-                    {% endif %}/>
-                    <span>women's</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="Kid's Snowboards" 
-                      {% if collection.handle == "snowboards-kids" %} 
-                      checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-                    {% else %} 
-                      onclick="window.location.replace('{{ collections['snowboards-kids'].url }}')" 
-                    {% endif %}/>
-                      <span>kids's</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="Spring Break" 
-                      {% if collection.handle == "spring-break" %} 
-                      checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-                    {% else %} 
-                      onclick="window.location.replace('{{ collections['spring-break'].url }}')" 
-                    {% endif %}/>
-                      <span>spring break</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="Split" 
-                      {% if collection.handle == "split-snowboards" %} 
-                      checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
-                    {% else %} 
-                      onclick="window.location.replace('{{ collections['split-snowboards'].url }}')" 
-                    {% endif %}/>
-                      <span>Splitboards</span>
-                  </label>
-                </div>
-      
-                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="terrain type"><span>TERRAIN TYPE</span></div>
-                <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="terrain type">
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="Resort" /><span>RESORT</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="Freestyle" /><span>FREESTYLE</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="Freeride" /><span>FREERIDE</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="Powder" /><span>POWDER</span>
-                  </label>
-                </div>
-      
-                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="shape"><span>SHAPE</span></div>
-                <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="shape">
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="TRUE TWIN" /><span>TRUE TWIN</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="DIRECTIONAL TWIN" /><span>DIRECTIONAL TWIN</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="DIRECTIONAL" /><span>DIRECTIONAL</span>
-                  </label>
-                </div>
-      
-                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="camber type"><span>CAMBER TYPE</span></div>
-                <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="camber type">
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="CAMBER" /><span>CAMBER</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="HYBRID CAMBER" /><span>HYBRID CAMBER</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="REVERSE CAMBER" /><span>REVERSE CAMBER</span>
-                  </label>
-                </div>
-      
-                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="width"><span>WIDTH</span></div>
-                <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="width">
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="REGULAR" /><span>REGULAR</span>
-                  </label>
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="WIDE" /><span>WIDE</span>
-                  </label>
-                </div>
+            <div class="stick">
 
-                <div class="c-listing-filter__dropdown-title js-filter-type o-text is-4 is-medium" attr-filter-type="availability"><span>AVAILABILITY</span></div>
-                <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="availability">
-                  <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="P-AVAILABILE" /><span>AVAILABILE</span>
+              <a class="o-btn btn-finder" href="/pages/finder">BOARD FINDER</a>
+              <div class="c-listing-filter closed">
+                <div class="c-listing-filter__wrapper">
+                  <div class="c-listing-filter__mob-head closed o-text is-3">
+                    <span>FILTERS</span>
+                    <div class="js-filter-num-select-mob o-text is-4 is-regular"><span class="num-select-filter">0</span> selected</div>
+                  </div>
+        
+                  <span class="js-tags-list" data-tags="{{tag_list}}"></span>
+        
+                  <div class="c-listing-filter__stack">
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="All" 
+                        {% if collection.handle == "all-snowboards" %} 
+                          checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                        {% else %} 
+                          onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                        {% endif %}/>
+                        <span>All</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="Men's Snowboards" 
+                        {% if collection.handle == "snowboards-mens" %} 
+                          checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                        {% else %} 
+                          onclick="window.location.replace('{{ collections['snowboards-mens'].url }}')" 
+                        {% endif %}/>
+                        <span>men's</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="Women's Snowboards" 
+                        {% if collection.handle == "snowboards-womens" %} 
+                        checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                      {% else %} 
+                        onclick="window.location.replace('{{ collections['snowboards-womens'].url }}')" 
+                      {% endif %}/>
+                      <span>women's</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="Kid's Snowboards" 
+                        {% if collection.handle == "snowboards-kids" %} 
+                        checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                      {% else %} 
+                        onclick="window.location.replace('{{ collections['snowboards-kids'].url }}')" 
+                      {% endif %}/>
+                        <span>kids's</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="Spring Break" 
+                        {% if collection.handle == "spring-break" %} 
+                        checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                      {% else %} 
+                        onclick="window.location.replace('{{ collections['spring-break'].url }}')" 
+                      {% endif %}/>
+                        <span>spring break</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="Split" 
+                        {% if collection.handle == "split-snowboards" %} 
+                        checked onclick="window.location.replace('{{ collections['all-snowboards'].url }}')" 
+                      {% else %} 
+                        onclick="window.location.replace('{{ collections['split-snowboards'].url }}')" 
+                      {% endif %}/>
+                        <span>Splitboards</span>
+                    </label>
+                  </div>
+        
+                  <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="terrain type"><span>TERRAIN TYPE</span></div>
+                  <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="terrain type">
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="Resort" /><span>RESORT</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="Freestyle" /><span>FREESTYLE</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="Freeride" /><span>FREERIDE</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="Powder" /><span>POWDER</span>
+                    </label>
+                  </div>
+        
+                  <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="shape"><span>SHAPE</span></div>
+                  <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="shape">
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="TRUE TWIN" /><span>TRUE TWIN</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="DIRECTIONAL TWIN" /><span>DIRECTIONAL TWIN</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="DIRECTIONAL" /><span>DIRECTIONAL</span>
+                    </label>
+                  </div>
+        
+                  <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="camber type"><span>CAMBER TYPE</span></div>
+                  <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="camber type">
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="CAMBER" /><span>CAMBER</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="HYBRID CAMBER" /><span>HYBRID CAMBER</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="REVERSE CAMBER" /><span>REVERSE CAMBER</span>
+                    </label>
+                  </div>
+        
+                  <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="width"><span>WIDTH</span></div>
+                  <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="width">
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="REGULAR" /><span>REGULAR</span>
+                    </label>
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="WIDE" /><span>WIDE</span>
+                    </label>
+                  </div>
+  
+                  <div class="c-listing-filter__dropdown-title js-filter-type o-text is-4 is-medium" attr-filter-type="availability"><span>AVAILABILITY</span></div>
+                  <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="availability">
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="P-AVAILABILE" /><span>AVAILABILE</span>
+                    </label>
+                  </div> 
+        
+                  <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="size"><span>SIZE</span></div>
+                  <div class="c-listing-filter__stack c-listing-filter__stack--boxed js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="size">
+                    <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="80" value="0"><span>80</span>
                   </label>
-                </div> 
-      
-                <div class="c-listing-filter__dropdown-title js-filter-type closed o-text is-4 is-medium" attr-filter-type="size"><span>SIZE</span></div>
-                <div class="c-listing-filter__stack c-listing-filter__stack--boxed js-filter-inputs js-filter-inputs-onlyone hide" attr-filter-type="size">
                   <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="80" value="0"><span>80</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="90" value="0"><span>90</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="100" value="100"><span>100</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="110" value="110"><span>110</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="115" value="115"><span>115</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="120" value="120"><span>120</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="125" value="125"><span>125</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="130" value="130"><span>130</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="135" value="135"><span>135</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="137" value="137"><span>137</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="138" value="138"><span>138</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="139" value="139"><span>139</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="140" value="140"><span>140</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="141" value="141"><span>141</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="142" value="142"><span>142</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="143" value="143"><span>143</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="144" value="144"><span>144</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="145" value="145"><span>145</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="146" value="146"><span>146</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="147" value="147"><span>147</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="148" value="148"><span>148</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="149" value="149"><span>149</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="150" value="150"><span>150</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="151" value="151"><span>151</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="152" value="152"><span>152</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="153" value="153"><span>153</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="154" value="154"><span>154</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="155" value="155"><span>155</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="156" value="156"><span>156</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="157" value="157"><span>157</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="158" value="158"><span>158</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="159" value="159"><span>159</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="160" value="160"><span>160</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="161" value="161"><span>161</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="162" value="162"><span>162</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="164" value="164"><span>164</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="167" value="167"><span>167</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="145" value="145W"><span>145W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="148" value="148W"><span>148W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="149" value="149W"><span>149W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="150" value="150W"><span>150W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="151" value="151W"><span>151W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="152" value="152W"><span>152W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="153" value="153W"><span>153W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="154" value="154W"><span>154W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="155" value="155W"><span>155W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="156" value="156W"><span>156W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="157" value="157W"><span>157W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="158" value="158W"><span>158W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="159" value="159W"><span>159W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="160" value="160W"><span>160W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="161" value="161W"><span>161W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="162" value="162W"><span>162W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="163" value="163W"><span>163W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="165" value="165W"><span>165W</span>
-                </label>
-                <label class="c-listing-filter__option o-text is-4">
-                    <input type="checkbox" name="169" value="169W"><span>169W</span>
-                </label>
-                
-                </div>
-      
-                <div class="c-listing-filter__dropdown-title c-listing-filter__dropdown-title--noclose"></div>
-                <div class="c-listing-filter__stack c-listing-filter__stack--foot">
-                  <div class="js-filter-num-select o-text is-4 is-regular"><span class="num-select-filter">0</span> selected</div>
-                  <div class="js-filter-clean o-text is-4 is-medium" attr-master-col="all-snowboards">REMOVE FILTER</div>
+                      <input type="checkbox" name="90" value="0"><span>90</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="100" value="100"><span>100</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="110" value="110"><span>110</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="115" value="115"><span>115</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="120" value="120"><span>120</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="125" value="125"><span>125</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="130" value="130"><span>130</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="135" value="135"><span>135</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="137" value="137"><span>137</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="138" value="138"><span>138</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="139" value="139"><span>139</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="140" value="140"><span>140</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="141" value="141"><span>141</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="142" value="142"><span>142</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="143" value="143"><span>143</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="144" value="144"><span>144</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="145" value="145"><span>145</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="146" value="146"><span>146</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="147" value="147"><span>147</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="148" value="148"><span>148</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="149" value="149"><span>149</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="150" value="150"><span>150</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="151" value="151"><span>151</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="152" value="152"><span>152</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="153" value="153"><span>153</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="154" value="154"><span>154</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="155" value="155"><span>155</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="156" value="156"><span>156</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="157" value="157"><span>157</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="158" value="158"><span>158</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="159" value="159"><span>159</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="160" value="160"><span>160</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="161" value="161"><span>161</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="162" value="162"><span>162</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="164" value="164"><span>164</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="167" value="167"><span>167</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="145" value="145W"><span>145W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="148" value="148W"><span>148W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="149" value="149W"><span>149W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="150" value="150W"><span>150W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="151" value="151W"><span>151W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="152" value="152W"><span>152W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="153" value="153W"><span>153W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="154" value="154W"><span>154W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="155" value="155W"><span>155W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="156" value="156W"><span>156W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="157" value="157W"><span>157W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="158" value="158W"><span>158W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="159" value="159W"><span>159W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="160" value="160W"><span>160W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="161" value="161W"><span>161W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="162" value="162W"><span>162W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="163" value="163W"><span>163W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="165" value="165W"><span>165W</span>
+                  </label>
+                  <label class="c-listing-filter__option o-text is-4">
+                      <input type="checkbox" name="169" value="169W"><span>169W</span>
+                  </label>
+                  
+                  </div>
+        
+                  <div class="c-listing-filter__dropdown-title c-listing-filter__dropdown-title--noclose"></div>
+                  <div class="c-listing-filter__stack c-listing-filter__stack--foot">
+                    <div class="js-filter-num-select o-text is-4 is-regular"><span class="num-select-filter">0</span> selected</div>
+                    <div class="js-filter-clean o-text is-4 is-medium" attr-master-col="all-snowboards">REMOVE FILTER</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -523,6 +526,11 @@
 {% endschema %}
 
 {% style %}
+
+.stick {
+  position: sticky;
+  top: 115px !important;
+}
 
 a.o-btn.btn-finder {
     min-width: unset;

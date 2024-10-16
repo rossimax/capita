@@ -11,7 +11,7 @@
             <div class="single-logo {% if block.settings.text %} single-logo--with-text {% endif %}">
               <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.title | strip_html }}">
               {% if section.settings.display_list_count %}
-                <span class="round-count">{{ forloop.index }}</span>
+                <span class="round-count o-text is-4 is-regular">{{ forloop.index }}</span>
               {% endif %}
               {% if block.settings.text %}
                 <div class="single-logo__text">

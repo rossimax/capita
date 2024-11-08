@@ -17,14 +17,21 @@
 
 <div class="events-section">
   <div class="events-section__content page-width">
+    {% comment %}
+      <div class="events-section__content__head">
 
-    <h1 class="o-text is-1">EVENTS</h1>
+        <h1>Events</h1>
+
+        <p class="description small">Lorem ipsum...</p>
+
+      </div>
+    {% endcomment %}
 
     {% for region in all_regions %}
       <div class="events-continent opened">
-        <div class="events-continent-head opened">
-          <span class="o-text is-2">{{ region }}</span>
-          {% comment %} {% include "icon-plus" %} {% endcomment %}
+        <div class="events-continent-head js-events-toggle opened">
+          <h2>{{ region }}</h2>
+          {% include "icon-plus" %}
         </div>
 
         {% for state in all_states %}
@@ -33,7 +40,7 @@
 
             <div class="events-state">
               <div class="events-state-head js-events-toggle">
-                <span class="o-text is-3">{{ state_clean }}</span>
+                <h3>{{ state_clean }}</h3>
                 {% include "icon-plus" %}
               </div>
 
@@ -119,9 +126,10 @@
 {% endschema %}
 
 {% style %}
+
   .events-section {
+    max-width: 1420px;
     margin: 200px auto 60px auto;
-    padding-inline: 155px;
   }
   .events-section h2 {
     margin-bottom: 0;
@@ -153,15 +161,12 @@
     margin: 0 auto;
   }
   .events-state {
-    margin-top: 0;
+    margin-top: 20px;
     padding-left: 40px;
-    border: 1px solid #000;
-    border-radius: 20px;
-    padding-right: 20px;
   }
   .events-continent,
   .events-state {
-    height: 65px;
+    height: 45px;
     overflow: hidden;
     margin-bottom: 50px;
   }
@@ -170,20 +175,14 @@
     height: unset;
     overflow: unset;
   }
-  .events-continent-head {
-    height: 65px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
+  .events-continent-head,
   .events-state-head {
-    height: 65px;
+    height: 45px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    border-bottom: 1px solid lightgrey;
   }
   .events-continent svg {
     transform: rotate(0deg);
@@ -234,14 +233,10 @@
     margin-bottom: 20px;
   }
 
-
   @media screen and (max-width: 768px) {
-    .events-section {
-      padding-inline: 20px;
-    }
     .events-state,
     .events-single {
-      padding-left: 20px;
+      padding-left: 0;
     }
     .events-single__title,
     .events-single__content {
@@ -255,7 +250,6 @@
       width: 64%;
     }
   }
-
 {% endstyle %}
 
 {% javascript %}

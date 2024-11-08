@@ -266,6 +266,8 @@ if (document.querySelector(".events-section").length) {
 
   document.querySelector(".events-section").addEventListner("click", function() {
 
+    console.log("click")
+
     if ( this.classList.contains("opened") ) {
       this.parentElement.classList.remove("opened")
       this.classList.remove("opened")

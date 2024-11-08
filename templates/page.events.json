@@ -21,9 +21,14 @@
         "title": "",
         "description": ""
       }
+    },
+    "events_rKihXQ": {
+      "type": "events",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "events_rKihXQ"
   ]
 }

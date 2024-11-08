@@ -21,7 +21,7 @@
     {% for region in all_regions %}
       <div class="events-continent opened">
         <div class="events-continent-head js-events-toggle opened">
-          <span class="o-text is-3">{{ region }}</span>
+          <span class="o-text is-2">{{ region }}</span>
           {% include "icon-plus" %}
         </div>
 
@@ -31,7 +31,7 @@
 
             <div class="events-state">
               <div class="events-state-head js-events-toggle">
-                <span class="o-text is-4">{{ state_clean }}</span>
+                <span class="o-text is-3">{{ state_clean }}</span>
                 {% include "icon-plus" %}
               </div>
 
@@ -157,7 +157,7 @@
   }
   .events-continent,
   .events-state {
-    height: 45px;
+    height: 65px;
     overflow: hidden;
     margin-bottom: 50px;
   }
@@ -168,12 +168,14 @@
   }
   .events-continent-head,
   .events-state-head {
-    height: 45px;
+    height: 65px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    border-bottom: 1px solid lightgrey;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 20px;
   }
   .events-continent svg {
     transform: rotate(0deg);

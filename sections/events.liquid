@@ -20,9 +20,9 @@
 
     {% for region in all_regions %}
       <div class="events-continent opened">
-        <div class="events-continent-head js-events-toggle opened">
+        <div class="events-continent-head opened">
           <span class="o-text is-2">{{ region }}</span>
-          {% include "icon-plus" %}
+          {% comment %} {% include "icon-plus" %} {% endcomment %}
         </div>
 
         {% for state in all_states %}
@@ -175,6 +175,7 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    margin-bottom: 20px;
   }
   .events-state-head {
     height: 65px;

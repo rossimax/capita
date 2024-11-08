@@ -251,15 +251,25 @@
 {% endstyle %}
 
 {% javascript %}
-  document.querySelector('.js-events-toggle').addEventListener('click', function () {
-    console.log('click');
+  (function (document) {
+    let selectors = {
+      eventsToggle: '.js-events-toggle',
+    };
 
-    if (this.classList.contains('opened')) {
-      this.parentElement.classList.remove('opened');
-      this.classList.remove('opened');
-    } else {
-      this.parentElement.classList.add('opened');
-      this.classList.add('opened');
-    }
-  });
+    let eventsToggle = document.querySelectorAll(selectors.eventsToggle);
+
+    eventsToggle.forEach(function (eventToggle) {
+      eventToggle.addEventListener('click', function () {
+        console.log('click');
+
+        if (this.classList.contains('opened')) {
+          this.parentElement.classList.remove('opened');
+          this.classList.remove('opened');
+        } else {
+          this.parentElement.classList.add('opened');
+          this.classList.add('opened');
+        }
+      });
+    });
+  })(document);
 {% endjavascript %}

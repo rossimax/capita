@@ -1,64 +1,54 @@
-{%- liquid 
-
-  assign all_regions = ""
-  assign all_states = ""
-
+{%- liquid
+  assign all_regions = ''
+  assign all_states = ''
 
   for event in page.metafields.accentuate.event_region
     unless all_regions contains page.metafields.accentuate.event_region[forloop.index0]
-      assign all_regions = all_regions | append: "|" | append: page.metafields.accentuate.event_region[forloop.index0]
+      assign all_regions = all_regions | append: '|' | append: page.metafields.accentuate.event_region[forloop.index0]
     endunless
     unless all_states contains page.metafields.accentuate.event_state[forloop.index0]
-      assign all_states = all_states | append: "|" | append: page.metafields.accentuate.event_state[forloop.index0] | append: "%" | append: page.metafields.accentuate.event_region[forloop.index0] 
+      assign all_states = all_states | append: '|' | append: page.metafields.accentuate.event_state[forloop.index0] | append: '%' | append: page.metafields.accentuate.event_region[forloop.index0]
     endunless
-  endfor 
+  endfor
 
-  assign all_regions = all_regions | remove_first: "|" | split: "|" 
-  assign all_states = all_states | remove_first: "|" | split: "|" 
-
+  assign all_regions = all_regions | remove_first: '|' | split: '|'
+  assign all_states = all_states | remove_first: '|' | split: '|'
 -%}
 
 <div class="events-section">
-
   <div class="events-section__content page-width">
+    {% comment %}
+      <div class="events-section__content__head">
 
-    {% comment %} <div class="events-section__content__head">
+        <h1>Events</h1>
 
-      <h1>Events</h1>
-  
-      <p class="description small">Lorem ipsum...</p>
+        <p class="description small">Lorem ipsum...</p>
 
-    </div> {% endcomment %}
+      </div>
+    {% endcomment %}
 
-    {% for region in all_regions %} 
-
+    {% for region in all_regions %}
       <div class="events-continent opened">
-
         <div class="events-continent-head js-events-toggle opened">
-            <h2>{{ region }}</h2>
-            <i class="fas fa-chevron-down"></i>
+          <h2>{{ region }}</h2>
+          <i class="fas fa-chevron-down"></i>
         </div>
 
-        
-        {% for state in all_states %} 
-
+        {% for state in all_states %}
           {% if state contains region %}
-
-            {% assign state_clean = state | split: "%" | first %}
+            {% assign state_clean = state | split: '%' | first %}
 
             <div class="events-state">
-
               <div class="events-state-head js-events-toggle">
-                  <h3>{{ state_clean }}</h3>
-                  <i class="fas fa-chevron-down"></i>
+                <h3>{{ state_clean }}</h3>
+                <i class="fas fa-chevron-down"></i>
               </div>
 
-              {% for event in page.metafields.accentuate.event_region %} 
-
-                {% if region == page.metafields.accentuate.event_region[forloop.index0] and state_clean == page.metafields.accentuate.event_state[forloop.index0] %}
-
+              {% for event in page.metafields.accentuate.event_region %}
+                {% if region == page.metafields.accentuate.event_region[forloop.index0]
+                  and state_clean == page.metafields.accentuate.event_state[forloop.index0]
+                %}
                   <div class="events-single">
-
                     <div class="events-single__title">
                       <h3>{{ page.metafields.accentuate.event_name[forloop.index0] }}</h3>
                       <h5>Date: {{ page.metafields.accentuate.event_date[forloop.index0] }}</h5>
@@ -68,57 +58,61 @@
                     </div>
 
                     <div class="events-single__content">
-
                       {% if page.metafields.accentuate.event_location_1[forloop.index0] != blank %}
-                      <div class="events-single__content__row">
-                        <div class="events-single__content__col-title">City, Country</div>
-                        <div class="events-single__content__col-data">{{ page.metafields.accentuate.event_location_1[forloop.index0] }}</div>
-                      </div>
+                        <div class="events-single__content__row">
+                          <div class="events-single__content__col-title">City, Country</div>
+                          <div class="events-single__content__col-data">
+                            {{ page.metafields.accentuate.event_location_1[forloop.index0] }}
+                          </div>
+                        </div>
                       {% endif %}
                       {% if page.metafields.accentuate.event_location_2[forloop.index0] != blank %}
-                      <div class="events-single__content__row">
-                        <div class="events-single__content__col-title">Where</div>
-                        <div class="events-single__content__col-data">{{ page.metafields.accentuate.event_location_2[forloop.index0] }}</div>
-                      </div>
-                    {% endif %}
-                    {% if page.metafields.accentuate.event_details[forloop.index0] != blank %}
-                      <div class="events-single__content__row">
-                        <div class="events-single__content__col-title">Details</div>
-                        <div class="events-single__content__col-data">{{ page.metafields.accentuate.event_details[forloop.index0] }}</div>
-                      </div>
-                    {% endif %}
-                    {% if page.metafields.accentuate.event_web_tag[forloop.index0] != blank %}
-                      <div class="events-single__content__row">
-                        <div class="events-single__content__col-title">Related Web or Social Media Link</div>
-                        <div class="events-single__content__col-data"><a href="{{ page.metafields.accentuate.event_web_link[forloop.index0] }}" target="_blank">{{ page.metafields.accentuate.event_web_tag[forloop.index0] }}</a></div>
-                      </div>
-                    {% endif %}
-                    {% if page.metafields.accentuate.event_email[forloop.index0] != blank %}
-                      <div class="events-single__content__row">
-                        <div class="events-single__content__col-title">Event Coordinator Email</div>
-                        <div class="events-single__content__col-data"><a href="mailto:{{ page.metafields.accentuate.event_email[forloop.index0] }}">{{ page.metafields.accentuate.event_email[forloop.index0] }}</a></div>
-                      </div>
-                    {% endif %}
-
-                  </div>
+                        <div class="events-single__content__row">
+                          <div class="events-single__content__col-title">Where</div>
+                          <div class="events-single__content__col-data">
+                            {{ page.metafields.accentuate.event_location_2[forloop.index0] }}
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if page.metafields.accentuate.event_details[forloop.index0] != blank %}
+                        <div class="events-single__content__row">
+                          <div class="events-single__content__col-title">Details</div>
+                          <div class="events-single__content__col-data">
+                            {{ page.metafields.accentuate.event_details[forloop.index0] }}
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if page.metafields.accentuate.event_web_tag[forloop.index0] != blank %}
+                        <div class="events-single__content__row">
+                          <div class="events-single__content__col-title">Related Web or Social Media Link</div>
+                          <div class="events-single__content__col-data">
+                            <a href="{{ page.metafields.accentuate.event_web_link[forloop.index0] }}" target="_blank">
+                              {{- page.metafields.accentuate.event_web_tag[forloop.index0] -}}
+                            </a>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if page.metafields.accentuate.event_email[forloop.index0] != blank %}
+                        <div class="events-single__content__row">
+                          <div class="events-single__content__col-title">Event Coordinator Email</div>
+                          <div class="events-single__content__col-data">
+                            <a href="mailto:{{ page.metafields.accentuate.event_email[forloop.index0] }}">
+                              {{- page.metafields.accentuate.event_email[forloop.index0] -}}
+                            </a>
+                          </div>
+                        </div>
+                      {% endif %}
+                    </div>
                   </div>
                 {% endif %}
-              {% endfor %} 
-
-
+              {% endfor %}
             </div>
           {% endif %}
-        {% endfor %} 
-
+        {% endfor %}
       </div>
-    
     {% endfor %}
-
   </div>
-  
-
 </div>
-
 
 {% schema %}
 {
@@ -132,152 +126,140 @@
 {% endschema %}
 
 {% style %}
-
-.events-section {
-    margin-top:60px;
+  .events-section {
+    margin-top: 60px;
     padding-bottom: 60px;
-}
-.events-section h2 {
+  }
+  .events-section h2 {
     margin-bottom: 0;
     font-weight: 500;
     font-size: 26px;
-}
-.events-section h3 {
+  }
+  .events-section h3 {
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 20px;
-}
-.events-section h5 {
+  }
+  .events-section h5 {
     font-size: 14px;
     margin-bottom: 0;
-}
-.events-section__content__head {
-  text-align: center;
-  margin-bottom: 40px;
-}
-.events-section__content__head h1 {
+  }
+  .events-section__content__head {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .events-section__content__head h1 {
     font-size: 26px;
     font-weight: 500;
     text-transform: none;
     letter-spacing: normal;
     margin-top: 20px;
-}
-.events-section__content__head .description {
-  max-width: 670px;
-  margin: 0 auto;
-}
-.events-state {
-  margin-top: 20px;
-  padding-left: 40px;
-}
-.events-continent,
-.events-state {
+  }
+  .events-section__content__head .description {
+    max-width: 670px;
+    margin: 0 auto;
+  }
+  .events-state {
+    margin-top: 20px;
+    padding-left: 40px;
+  }
+  .events-continent,
+  .events-state {
     height: 45px;
     overflow: hidden;
     margin-bottom: 50px;
-}
-.events-continent.opened,
-.events-state.opened {
+  }
+  .events-continent.opened,
+  .events-state.opened {
     height: unset;
     overflow: unset;
-}
-.events-continent-head,
-.events-state-head {
+  }
+  .events-continent-head,
+  .events-state-head {
     height: 45px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     border-bottom: 1px solid lightgrey;
-}
-.events-continent i {
+  }
+  .events-continent i {
     transform: rotate(0deg);
     transition-duration: 0.3s;
-}
-.events-continent.opened .events-continent-head i {
+  }
+  .events-continent.opened .events-continent-head i {
     transform: rotate(180deg);
     transition-duration: 0.3s;
-}
-.events-state.opened .events-state-head i {
+  }
+  .events-state.opened .events-state-head i {
     transform: rotate(180deg);
     transition-duration: 0.3s;
-}
-.events-single {
+  }
+  .events-single {
     padding: 20px 0;
     display: flex;
     border-bottom: 1px solid lightgray;
-}
-.events-single {
+  }
+  .events-single {
     padding: 10px 0 20px 20px;
     display: flex;
     flex-wrap: wrap;
-}
-.events-single__title {
+  }
+  .events-single__title {
     width: 40%;
     padding-top: 10px;
-}
-.events-single__content {
+  }
+  .events-single__content {
     width: 60%;
     font-size: 11px;
-}
-.events-single__content__row {
+  }
+  .events-single__content__row {
     display: flex;
     padding: 15px 0;
     border-bottom: 1px solid lightgray;
-}
-.events-single__content__col-title {
-    width: 30%;
-    font-weight: bold;
-}
-.events-single__content__col-data {
-    width: 70%;
-    border-left: 1px solid lightgray;
-    padding-left: 10px;
-}
-.events-state {
-    margin-bottom: 20px;
-}
-
-
-@media screen and (max-width:768px) {
-  .events-state,
-  .events-single {
-    padding-left: 0;
-  }
-  .events-single__title,
-  .events-single__content {
-    width: 100%;
   }
   .events-single__content__col-title {
-    width: 36%;
+    width: 30%;
     font-weight: bold;
   }
   .events-single__content__col-data {
-      width: 64%;
+    width: 70%;
+    border-left: 1px solid lightgray;
+    padding-left: 10px;
   }
-}
+  .events-state {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .events-state,
+    .events-single {
+      padding-left: 0;
+    }
+    .events-single__title,
+    .events-single__content {
+      width: 100%;
+    }
+    .events-single__content__col-title {
+      width: 36%;
+      font-weight: bold;
+    }
+    .events-single__content__col-data {
+      width: 64%;
+    }
+  }
 {% endstyle %}
 
-
-
 {% javascript %}
+  document.querySelector('.events-section').addEventListener('click', function () {
+    console.log('click');
 
-if (document.querySelector(".events-section").length) {
-
-  document.querySelector(".events-section").addEventListner("click", function() {
-
-    console.log("click")
-
-    if ( this.classList.contains("opened") ) {
-      this.parentElement.classList.remove("opened")
-      this.classList.remove("opened")
+    if (this.classList.contains('opened')) {
+      this.parentElement.classList.remove('opened');
+      this.classList.remove('opened');
     } else {
-      this.parentElement.classList.add("opened")
-      this.classList.add("opened")
+      this.parentElement.classList.add('opened');
+      this.classList.add('opened');
     }
-
-  })
-
-}
-
+  });
 {% endjavascript %}

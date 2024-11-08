@@ -18,12 +18,12 @@
 <div class="events-section">
   <div class="events-section__content page-width">
 
-    <h1 class="o-text is-1">EVENTS</h1>
+    <h1 class="o-text is-2">EVENTS</h1>
 
     {% for region in all_regions %}
       <div class="events-continent opened">
         <div class="events-continent-head opened">
-          <span class="o-text is-2">{{ region }}</span>
+          <span class="o-text is-3">{{ region }}</span>
           {% comment %} {% include "icon-plus" %} {% endcomment %}
         </div>
 
@@ -33,7 +33,7 @@
 
             <div class="events-state">
               <div class="events-state-head js-events-toggle">
-                <span class="o-text is-3">{{ state_clean }}</span>
+                <span class="o-text is-4">{{ state_clean }}</span>
                 {% include "icon-plus" %}
               </div>
 

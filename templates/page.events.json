@@ -33,7 +33,7 @@
         "title_position": "with_content",
         "content_position": "bottom_center",
         "title": "<h1 class=\"text-center o-text is-1\" style=\"margin-bottom: 20px;\">EVENTS &amp; DEMO</h1>",
-        "sub_title": "Discover CAPiTA Events and Test Demo near you.",
+        "sub_title": "<h2 class=\"text-center o-text is-3\">Discover CAPiTA Events and Test Demo near you.</h2>",
         "button_label": "",
         "button_link": "",
         "shadow_box_title": "",

@@ -34,7 +34,9 @@
             <div class="events-state">
               <div class="events-state-head js-events-toggle">
                 <span class="o-text is-4">{{ state_clean }}</span>
-                {% include "icon-plus" %}
+                <svg viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 1L10.5 10L1 1" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+                </svg>
               </div>
 
               {% for event in page.metafields.accentuate.event_region %}

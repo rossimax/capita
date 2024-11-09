@@ -29,14 +29,14 @@
         "@media screen and (max-width: 768px) {.hero-banner-secondary-content__title.hero-banner-secondary-content__title---top-left {top: 50px; }}"
       ],
       "settings": {
-        "margin_top": 40,
+        "margin_top": 0,
         "margin_bottom": 0,
         "image_desk": "shopify://shop_images/Test_Demo_desk-banner_318545ed-1620-47be-b1d9-7f51d7ec1ff8.jpg",
         "image_mob": "shopify://shop_images/Test_Demo_desk-banner_da34712f-a804-470f-a1f9-24806fa05aab.jpg",
         "shadow": "yes_full",
         "title_position": "top_left",
         "content_position": "bottom_center",
-        "title": "Discover Events<br> and Test Demos<br>near you.",
+        "title": "Discover Events<br>\nand Test Demos<br>\nnear you.",
         "sub_title": "",
         "button_label": "",
         "button_link": "",

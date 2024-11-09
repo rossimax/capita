@@ -25,7 +25,8 @@
     "hero_banner_secondary_izKfXT": {
       "type": "hero-banner-secondary",
       "custom_css": [
-        ".hero-banner-secondary-video--mob video,.hero-banner-secondary-image--mob img {object-position: 78%;}"
+        "55.hero-banner-secondary-video--mob video,.hero-banner-secondary-image--mob img {object-position: 78%;}",
+        "@media screen and (max-width: 768px) {.hero-banner-secondary-content__title.hero-banner-secondary-content__title---top-left {top: 50px; }}"
       ],
       "settings": {
         "margin_top": 40,

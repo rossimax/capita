@@ -53,32 +53,32 @@
                     <div class="events-single__content">
                       {% if page.metafields.accentuate.event_location_1[forloop.index0] != blank %}
                         <div class="events-single__content__row">
-                          <div class="events-single__content__col-title">City, Country</div>
-                          <div class="events-single__content__col-data">
+                          <div class="events-single__content__col-title o-text is-5">City, Country</div>
+                          <div class="events-single__content__col-data o-text is-5">
                             {{ page.metafields.accentuate.event_location_1[forloop.index0] }}
                           </div>
                         </div>
                       {% endif %}
                       {% if page.metafields.accentuate.event_location_2[forloop.index0] != blank %}
                         <div class="events-single__content__row">
-                          <div class="events-single__content__col-title">Where</div>
-                          <div class="events-single__content__col-data">
+                          <div class="events-single__content__col-title o-text is-5">Where</div>
+                          <div class="events-single__content__col-data o-text is-5">
                             {{ page.metafields.accentuate.event_location_2[forloop.index0] }}
                           </div>
                         </div>
                       {% endif %}
                       {% if page.metafields.accentuate.event_details[forloop.index0] != blank %}
                         <div class="events-single__content__row">
-                          <div class="events-single__content__col-title">Details</div>
-                          <div class="events-single__content__col-data">
+                          <div class="events-single__content__col-title o-text is-5">Details</div>
+                          <div class="events-single__content__col-data o-text is-5">
                             {{ page.metafields.accentuate.event_details[forloop.index0] }}
                           </div>
                         </div>
                       {% endif %}
                       {% if page.metafields.accentuate.event_web_tag[forloop.index0] != blank %}
                         <div class="events-single__content__row">
-                          <div class="events-single__content__col-title">Related Web or Social Media Link</div>
-                          <div class="events-single__content__col-data">
+                          <div class="events-single__content__col-title o-text is-5">Related Web or Social Media Link</div>
+                          <div class="events-single__content__col-data o-text is-5">
                             <a href="{{ page.metafields.accentuate.event_web_link[forloop.index0] }}" target="_blank">
                               {{- page.metafields.accentuate.event_web_tag[forloop.index0] -}}
                             </a>
@@ -87,8 +87,8 @@
                       {% endif %}
                       {% if page.metafields.accentuate.event_email[forloop.index0] != blank %}
                         <div class="events-single__content__row">
-                          <div class="events-single__content__col-title">Event Coordinator Email</div>
-                          <div class="events-single__content__col-data">
+                          <div class="events-single__content__col-title o-text is-5">Event Coordinator Email</div>
+                          <div class="events-single__content__col-data o-text is-5">
                             <a href="mailto:{{ page.metafields.accentuate.event_email[forloop.index0] }}">
                               {{- page.metafields.accentuate.event_email[forloop.index0] -}}
                             </a>

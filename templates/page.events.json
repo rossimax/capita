@@ -13,7 +13,7 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
-        "head_width": 100,
+        "head_width": 0,
         "margin_top": 0,
         "body_color": "#ffffff",
         "footer_border": false,
@@ -25,7 +25,7 @@
     "hero_banner_secondary_izKfXT": {
       "type": "hero-banner-secondary",
       "settings": {
-        "margin_top": 0,
+        "margin_top": -100,
         "margin_bottom": 0,
         "image_desk": "shopify://shop_images/Test_Demo_desk-banner_318545ed-1620-47be-b1d9-7f51d7ec1ff8.jpg",
         "image_mob": "shopify://shop_images/Test_Demo_desk-banner_da34712f-a804-470f-a1f9-24806fa05aab.jpg",

@@ -22,6 +22,24 @@
         "description": ""
       }
     },
+    "hero_banner_secondary_cjNj64": {
+      "type": "hero-banner-secondary",
+      "settings": {
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "image_desk": "shopify://shop_images/Test_Demo_desk-banner.jpg",
+        "image_mob": "shopify://shop_images/Test_Demo_desk-banner_16eab4c5-2fc6-4565-a776-afad876c4e5e.jpg",
+        "shadow": "no",
+        "title_position": "top_left",
+        "content_position": "bottom_center",
+        "title": "Discover CAPiTA Events and Test Demos near you.",
+        "sub_title": "",
+        "button_label": "",
+        "button_link": "",
+        "shadow_box_title": "",
+        "shadow_box_text": ""
+      }
+    },
     "events_Pr9me3": {
       "type": "events",
       "settings": {}
@@ -29,6 +47,7 @@
   },
   "order": [
     "main",
+    "hero_banner_secondary_cjNj64",
     "events_Pr9me3"
   ]
 }

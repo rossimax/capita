@@ -43,10 +43,10 @@
                 %}
                   <div class="events-single">
                     <div class="events-single__title">
-                      <h3>{{ page.metafields.accentuate.event_name[forloop.index0] }}</h3>
-                      <h5>Date: {{ page.metafields.accentuate.event_date[forloop.index0] }}</h5>
+                      <h3 class="o-text is-5">{{ page.metafields.accentuate.event_name[forloop.index0] }}</h3>
+                      <h5 class="o-text is-5">Date: {{ page.metafields.accentuate.event_date[forloop.index0] }}</h5>
                       {% if page.metafields.accentuate.event_time[forloop.index0] != blank %}
-                        <h5>Time: {{ page.metafields.accentuate.event_time[forloop.index0] }}</h5>
+                        <h5 class="o-text is-5">Time: {{ page.metafields.accentuate.event_time[forloop.index0] }}</h5>
                       {% endif %}
                     </div>
 

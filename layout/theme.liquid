@@ -296,7 +296,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     {% sections 'footer-group' %}
 
-    {% if settings.promo_popup %}
+    {% if settings.promo_popup and page.handle == "test"%}
       {% include 'promo-popup' %}
     {% endif %}
 

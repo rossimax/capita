@@ -8,15 +8,16 @@
       </svg>
     </span>
 
-    <h3>HOLIDAY SHIPPING UPDATE</h3>
-    <h5>Order on or before 14 Dec for delivery by 25 Dec.</h5>
-    <img class="popup-image" src="https://cdn.shopify.com/s/files/1/0815/1990/3022/files/M_hompage_productbanner_kevinbackstrom.jpg?v=1701879873" alt="promo capita">
+    <h3>Free Board Bag!</h3>
+    <h5>With orders over €249*<br/>
+    *While supplies last</h5>
+    <img class="popup-image" src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/Cropped_BFCM_Bag.png?v=1732645509" alt="promo capita">
 
-    {% comment %} <div class="countdown-box" data-time="December 14, 2023 00:00:01 AM"></div> {% endcomment %}
+    <div class="countdown-box" data-time="December 03, 2024 00:00:01 AM"></div>
 
     <a class="btn-shop-now" href="/collections/all-snowboards">SNOWBOARDS</a>
 
-    <p class="disclaimer">Carrier delays and delivery exceptions are possible.<br/>These dates are provided as a guideline.</p>
+    <p class="disclaimer">Terms and conditions: Limited time offer. Only available while supplies last or during this period (27/11-3/12 2024) whichever occurs first. Automatically applied at checkout and added to order. Free gift must be returned with order to qualify for returns.</p>
 
   </div>
 </div>
@@ -39,7 +40,7 @@
     z-index: 999;
     transition-duration: 0.5s;
     opacity: 1;
-    visibility: hidden;
+    visibility: visible;
   }
   .promo-popup-content {
     width: 100%;
@@ -69,8 +70,8 @@
   }
   .promo-popup h3 {
     text-align: center;
-    font-size: 36px;
-    font-weight: 500;
+    font-size: 46px;
+    font-weight: 700;
     margin-bottom: 10px;
   }
   .promo-popup h5 {
@@ -111,8 +112,12 @@
     margin-bottom: 30px;
   }
   .countdown-box span {
-    color: #fb6617;
+    color: #000;
     font-size: 14px;
+    padding: 0 5px;
+  }
+  .countdown-box {
+    text-align: center;
   }
   @media screen and (max-width: 768px) {
     .promo-popup-content {
@@ -158,7 +163,7 @@
       if (sessionStorage.getItem("promo-popup") != "close") {
         setTimeout(function(){
           promoPopup.classList.add("show")
-        }, 5000)
+        }, 2000)
       }
 
       promoPopupClose.addEventListener("click", (e) => {
@@ -171,7 +176,7 @@
       })
     })
     
-    // var countdownBox_start = countdownBox.getAttribute("data-time")
+    var countdownBox_start = countdownBox.getAttribute("data-time")
 
     if (typeof countdownBox_start !== typeof undefined && countdownBox_start !== false) {
 

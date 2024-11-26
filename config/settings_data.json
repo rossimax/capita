@@ -139,7 +139,7 @@
     "cart_drawer_collection": "",
     "script_pre_body_close": "<script>\n(function(g,e,o,t,a,r,ge,tl,y){\nt=g.getElementsByTagName(e)[0];y=g.createElement(e);y.async=true;\ny.src='https://g594253006.co/gj.js?id=-NeISIjdv2RTm56dqz3D&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);\nt.parentNode.insertBefore(y,t);\n})(document,'script');\n</script>",
     "footer_legal": "© 2020-2023 CAPiTA Snowboards | Core S.r.l. – Via Colombano 10, 23014 Delebio (SO), Italy - VAT nr. IT00838030146 All rights reserved.",
-    "promo_popup": true,
+    "promo_popup": false,
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -155,31 +155,25 @@
       },
       "find-my-size": {
         "type": "find-my-size",
-        "settings": {
-        }
+        "settings": {}
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "2153490007123654574": {
         "type": "shopify://apps/consentmo-gdpr/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "319724205969189013": {
         "type": "shopify://apps/hulk-form-builder/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "8559953418172270618": {
         "type": "shopify://apps/fbtrack-facebook-pixels-app/blocks/app-embed/40a16300-89a3-4e21-943b-e2c31e744e27",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "4095653568973655092": {
         "type": "shopify://apps/mag-product-reviews/blocks/app-embed/0cf5caa0-e138-46b8-999b-520d16633e4c",
@@ -204,8 +198,7 @@
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "10605408327587305396": {
         "type": "shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
@@ -229,8 +222,7 @@
       "14327677521557774844": {
         "type": "shopify://apps/simprosys-google-shopping-feed/blocks/core_settings_block/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     }
   },

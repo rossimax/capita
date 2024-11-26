@@ -1,22 +1,22 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "b78e3e4b-5746-42c1-b1e6-fdd722b34f05": {
       "type": "hero-banner",
       "settings": {
         "transparent_header": false,
-        "video": "shopify:\/\/files\/videos\/COLLECTION LAUNCH BANNER - DESKTOP.mp4",
-        "video_mob": "shopify:\/\/files\/videos\/COLLECTION LAUNCH BANNER - MOBILE.mp4",
+        "video": "shopify://files/videos/COLLECTION LAUNCH BANNER - DESKTOP.mp4",
+        "video_mob": "shopify://files/videos/COLLECTION LAUNCH BANNER - MOBILE.mp4",
         "cta_text": "OPEN YOUR MIND",
-        "cta_link": "shopify:\/\/collections\/all-snowboards"
+        "cta_link": "shopify://collections/all-snowboards"
       }
     },
     "b0ceccbd-5777-4ea4-a4a9-34b65278682a": {
@@ -24,7 +24,7 @@
       "disabled": true,
       "settings": {
         "black_style": "yes",
-        "text_slide": "<strong>EARTLY RELEASE<\/strong> <span style=\"font-size: 30px\">(ONLINE STORE ONLY)<\/span>",
+        "text_slide": "<strong>EARTLY RELEASE</strong> <span style=\"font-size: 30px\">(ONLINE STORE ONLY)</span>",
         "font_size": 60,
         "font_size_mob": 16,
         "padding": 40,
@@ -40,9 +40,9 @@
       "settings": {
         "image_position": false,
         "product": "mercury-2024",
-        "right_image": "shopify:\/\/shop_images\/D_hompage_productbanner_kevinbackstrom.jpg",
+        "right_image": "shopify://shop_images/D_hompage_productbanner_kevinbackstrom.jpg",
         "left_title": "MERCURY",
-        "left_sup_title": "ALL-MTN \/ FREERIDE",
+        "left_sup_title": "ALL-MTN / FREERIDE",
         "right_text": "KEVIN BACKSTROM"
       }
     },
@@ -52,9 +52,9 @@
       "settings": {
         "image_position": true,
         "product": "aeronaut",
-        "right_image": "shopify:\/\/shop_images\/D_hompage_productbanner_arthurlongo.jpg",
+        "right_image": "shopify://shop_images/D_hompage_productbanner_arthurlongo.jpg",
         "left_title": "AERONAUT",
-        "left_sup_title": "ALL-MTN \/ RESORT",
+        "left_sup_title": "ALL-MTN / RESORT",
         "right_text": "ARTHUR LONGO"
       }
     },
@@ -62,10 +62,10 @@
       "type": "banner-product",
       "settings": {
         "image_position": false,
-        "product": "aeronaut-2025",
-        "right_image": "shopify:\/\/shop_images\/D_2425_home_productbanner_aeronaut_2.jpg",
-        "left_title": "AERONAUT",
-        "left_sup_title": "DIRECTIONAL \/ TRADITIONAL CAMBER",
+        "product": "mercury-2025",
+        "right_image": "shopify://shop_images/DSC05223-2.jpg",
+        "left_title": "Mercury",
+        "left_sup_title": "DIRECTIONAL / HYBRID CAMBER",
         "right_text": "ARTHUR LONGO"
       }
     },
@@ -73,23 +73,23 @@
       "type": "paragraph",
       "settings": {
         "black_style": "yes",
-        "background_image": "shopify:\/\/shop_images\/000_GRID_PAPER_BG_1_77e3e65d-56ba-4a1f-a70b-76408f3b3cbf.png",
-        "text": "<p>CAPiTA Snowboards are handcrafted in Austria with self-generated clean energy at The MotherShip™.<\/p>",
-        "image": "shopify:\/\/shop_images\/HOMEPAGE.png"
+        "background_image": "shopify://shop_images/000_GRID_PAPER_BG_1_77e3e65d-56ba-4a1f-a70b-76408f3b3cbf.png",
+        "text": "<p>CAPiTA Snowboards are handcrafted in Austria with self-generated clean energy at The MotherShip™.</p>",
+        "image": "shopify://shop_images/HOMEPAGE.png"
       }
     },
     "313c2a61-4905-454f-af07-4dc52801aa92": {
       "type": "hero-banner-text",
       "settings": {
         "box_shadow": 0,
-        "image": "shopify:\/\/shop_images\/MFG_-_OVERHEAD_VILLAGE.jpg",
-        "image_mob": "shopify:\/\/shop_images\/Group_221.jpg",
-        "title": "<h2 class=\"h2\">The MotherShip<sup>TM<\/sup>\n<\/h2>",
+        "image": "shopify://shop_images/MFG_-_OVERHEAD_VILLAGE.jpg",
+        "image_mob": "shopify://shop_images/Group_221.jpg",
+        "title": "<h2 class=\"h2\">The MotherShip<sup>TM</sup>\n</h2>",
         "line_separator": "yes",
-        "subtitle": "<strong>HANDCRAFTED WITH SELF-GENERATED<br>CLEAN ENERGY.<\/strong>",
-        "logo_image": "shopify:\/\/shop_images\/D_homepage_mothershiplogo.png",
+        "subtitle": "<strong>HANDCRAFTED WITH SELF-GENERATED<br>CLEAN ENERGY.</strong>",
+        "logo_image": "shopify://shop_images/D_homepage_mothershiplogo.png",
         "cta_text": "ENTER THE MOTHERSHIP™",
-        "cta_link": "shopify:\/\/pages\/the-factory"
+        "cta_link": "shopify://pages/the-factory"
       }
     }
   },

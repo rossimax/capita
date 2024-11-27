@@ -64,8 +64,7 @@
         "58c7723e-358a-40ed-bb23-e7000658698a",
         "f6b75d5c-7d96-470e-b539-3a53098a1687"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "faqs_mAV6zz": {
       "type": "faqs",
@@ -251,8 +250,8 @@
           "settings": {
             "title": "How can I demo a CAPiTA snowboard?",
             "content": "<p>Many demos are offered in regions covered by a CAPiTA distributor or rep. Please check out our global list of demos and events to see if there is an upcoming event near you. Follow us on Instagram for further information and updates on demo and test events.</p><p>Many authorized CAPiTA Dealers offer daily or extended demo programs. </p>",
-            "cta1_text": "EVENTS (COMING SOON)",
-            "cta1_link": "",
+            "cta1_text": "EVENTS & DEMOS",
+            "cta1_link": "https://eu.capitasnowboarding.com/pages/events",
             "cta2_text": "FIND A DEALER",
             "cta2_link": "shopify://pages/dealers"
           }
@@ -326,8 +325,7 @@
         "faq_list_add_4Ltg8g",
         "faq_list_add_bcHDnf"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

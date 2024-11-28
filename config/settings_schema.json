@@ -1582,6 +1582,21 @@
         "label": {
           "en": "Promo Popup"
         }
+      },
+      {
+        "type": "text",
+        "id": "promo_popup_title",
+        "label": "Promo Popup Title"
+      },
+      {
+        "type": "html",
+        "id": "promo_popup_desct",
+        "label": "Promo Popup Desc"
+      },
+      {
+        "type": "html",
+        "id": "promo_popup_terms",
+        "label": "Promo Popup Terms"
       }
     ]
   }

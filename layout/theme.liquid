@@ -1,6 +1,20 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+<!-- EASYGIFT SCRIPT -->
+<script type="text/javascript">
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'https://cdn.506.io/eg/script.js?shop={{ shop.permanent_domain }}'
+{% if customer %}
++ '&id={{ customer.id | escape_once }}'
++ '&order_count={{ customer.orders_count | escape_once }}'
++ '&total_spent={{ customer.total_spent | escape_once }}'
++ '&tags={{ customer.tags | join: "," | escape_once }}';
+{% endif %}
+document.head.appendChild(script);
+</script>
+<!-- END EASYGIFT SCRIPT -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">

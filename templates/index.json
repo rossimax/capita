@@ -13,9 +13,9 @@
       "type": "hero-banner",
       "settings": {
         "transparent_header": false,
-        "video": "shopify://files/videos/COLLECTION LAUNCH BANNER - DESKTOP.mp4",
-        "video_mob": "shopify://files/videos/COLLECTION LAUNCH BANNER - MOBILE.mp4",
-        "cta_text": "OPEN YOUR MIND",
+        "video": "shopify://files/videos/HP_ANIMATION_1920x1156.mp4",
+        "video_mob": "shopify://files/videos/HP_ANIMATION_390x528.mp4",
+        "cta_text": "View",
         "cta_link": "shopify://collections/all-snowboards"
       }
     },

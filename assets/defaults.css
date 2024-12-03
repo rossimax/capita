@@ -847,3 +847,14 @@ main#MainContent {
   position: relative;
   border-radius: 18px;
 }
+
+
+/* find a store  */
+div#find-a-shop table {
+  overflow-x: scroll;
+}
+div#find-a-shop table td {
+  border-color: #000;
+  border: 1px solid;
+  padding: 5px;
+}

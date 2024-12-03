@@ -850,8 +850,9 @@ main#MainContent {
 
 
 /* find a store  */
-div#find-a-shop table {
-  overflow-x: scroll;
+div#find-a-shop {
+  position: relative;
+  overflow: auto;
 }
 div#find-a-shop table td {
   border-color: #000;

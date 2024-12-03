@@ -850,6 +850,9 @@ main#MainContent {
 
 
 /* find a store  */
+html {
+  scroll-behavior: smooth;
+}
 div#find-a-shop {
   position: relative;
   overflow: auto;

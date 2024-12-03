@@ -151,6 +151,14 @@
         </iframe>
 
       </div>
+
+      {% if product.metafields.accentuate.find_a_shop_text != blank  %}
+        <div class="c-product-tech__shops">
+
+          {{ product.metafields.accentuate.find_a_shop_text }}
+
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>

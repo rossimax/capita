@@ -853,16 +853,16 @@ main#MainContent {
 html {
   scroll-behavior: smooth;
 }
-div#find-a-shop {
+.c-product-tech__shops {
   position: relative;
 }
-div#find-a-shop table td {
+.c-product-tech__shops table td {
   border-color: #000;
   border: 1px solid;
   padding: 5px;
 }
 @media screen and (max-width: 768px) {
-  div#find-a-shop {
+  .c-product-tech__shops {
     overflow: auto;
   }
 }

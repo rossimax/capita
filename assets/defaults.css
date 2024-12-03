@@ -846,3 +846,25 @@ main#MainContent {
   position: relative;
   border-radius: 18px;
 }
+
+
+
+/* find a store  */
+html {
+  scroll-behavior: smooth;
+}
+.c-product-tech__shops {
+  position: relative;
+  background: #fff;
+}
+.c-product-tech__shops table td {
+  border-color: #000;
+  border: 1px solid;
+  padding: 5px;
+  font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  .c-product-tech__shops {
+    overflow: auto;
+  }
+}

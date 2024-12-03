@@ -855,10 +855,14 @@ html {
 }
 div#find-a-shop {
   position: relative;
-  overflow: auto;
 }
 div#find-a-shop table td {
   border-color: #000;
   border: 1px solid;
   padding: 5px;
+}
+@media screen and (max-width: 768px) {
+  div#find-a-shop {
+    overflow: auto;
+  }
 }

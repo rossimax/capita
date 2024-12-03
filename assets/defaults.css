@@ -500,6 +500,7 @@ main.template-nfc-steps {
 .c-info-card a {
   text-decoration: none;
 }
+a.find-a-shop,
 span.all-sold-out {
   display: block;
   font-size: 20px;

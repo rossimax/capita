@@ -11,12 +11,34 @@
   "sections": {
     "b78e3e4b-5746-42c1-b1e6-fdd722b34f05": {
       "type": "hero-banner",
+      "disabled": true,
+      "settings": {
+        "transparent_header": false,
+        "video": "shopify://files/videos/Lambo-loop_desktop.mp4",
+        "video_mob": "shopify://files/videos/Lambo_loop-mobile .mp4",
+        "cta_text": "CAPiTA for Automobili Lamborghini",
+        "cta_link": "shopify://collections/all-snowboards"
+      }
+    },
+    "hero_banner_YpjD37": {
+      "type": "hero-banner",
+      "disabled": true,
       "settings": {
         "transparent_header": false,
         "video": "shopify://files/videos/COLLECTION LAUNCH BANNER - DESKTOP.mp4",
         "video_mob": "shopify://files/videos/COLLECTION LAUNCH BANNER - MOBILE.mp4",
         "cta_text": "OPEN YOUR MIND",
         "cta_link": "shopify://collections/all-snowboards"
+      }
+    },
+    "hero_banner_mJhx6Q": {
+      "type": "hero-banner",
+      "settings": {
+        "transparent_header": false,
+        "video": "shopify://files/videos/HP_ANIMATION_1920x1156.mp4",
+        "video_mob": "shopify://files/videos/HP_ANIMATION_390x528.mp4",
+        "cta_text": "Shop Now",
+        "cta_link": "shopify://products/the-big-nice-burgundy-snowboard"
       }
     },
     "b0ceccbd-5777-4ea4-a4a9-34b65278682a": {
@@ -95,6 +117,8 @@
   },
   "order": [
     "b78e3e4b-5746-42c1-b1e6-fdd722b34f05",
+    "hero_banner_YpjD37",
+    "hero_banner_mJhx6Q",
     "b0ceccbd-5777-4ea4-a4a9-34b65278682a",
     "9bfad989-863d-473a-962c-c5b28a8c5824",
     "221611b0-cb5f-4aa9-af7b-309fbceb6127",

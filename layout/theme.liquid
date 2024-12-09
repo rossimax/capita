@@ -56,6 +56,12 @@ document.head.appendChild(script);
       {%- unless page_title contains shop.name %} {{ shop.name }}{% endunless -%}
     </title>
 
+    {% if product.metafields.accentuate.redirect_to != blank %}
+      <script>
+        window.location.href = {{ product.metafields.accentuate.redirect_to }};
+      </script>
+    {% endif %}
+
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}

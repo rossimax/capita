@@ -140,9 +140,9 @@
     "script_pre_body_close": "<script>\n(function(g,e,o,t,a,r,ge,tl,y){\nt=g.getElementsByTagName(e)[0];y=g.createElement(e);y.async=true;\ny.src='https://g594253006.co/gj.js?id=-NeISIjdv2RTm56dqz3D&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);\nt.parentNode.insertBefore(y,t);\n})(document,'script');\n</script>",
     "footer_legal": "© 2020-2023 CAPiTA Snowboards | Core S.r.l. – Via Colombano 10, 23014 Delebio (SO), Italy - VAT nr. IT00838030146 All rights reserved.",
     "promo_popup": false,
-    "promo_popup_title": "Free Board Bag!",
-    "promo_popup_desct": "With orders over $249*<br>*While supplies last",
-    "promo_popup_terms": "Terms and conditions: Limited time offer, cannot be combined. Pro Program users not eligible. Only available while supplies last or during this period (11/27-12/3 2024) whichever occurs first. Automatically applied at checkout and added to order. Free gift must be returned with order to qualify for returns.",
+    "promo_popup_title": "HOLIDAY SHIPPING UPDATE",
+    "promo_popup_desct": "Order before December 16th\nfor delivery by December 24th.",
+    "promo_popup_terms": "Currier delays and delivery exceptions are possible.<br>\nThese dates are provided as a guideline.",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",

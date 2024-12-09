@@ -44,7 +44,7 @@
 
     {% if product.metafields.accentuate.redirect_to != blank %}
       <script>
-        window.location.href = {{ product.metafields.accentuate.redirect_to }};
+        window.location.href = "{{ product.metafields.accentuate.redirect_to }}";
       </script>
     {% endif %}
 

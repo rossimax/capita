@@ -23,13 +23,13 @@
     "hero_banner_djjXDi": {
       "type": "hero-banner",
       "custom_css": [
-        ".hero-banner__cta.o-btn {gap: 0;}"
+        ".hero-banner__cta.o-btn {gap: 0; text-transform: unset;}"
       ],
       "settings": {
         "transparent_header": false,
         "video": "shopify://files/videos/Lambo-loop_desktop (1).mp4",
         "video_mob": "shopify://files/videos/Lambo_loop-mobile  (1).mp4",
-        "cta_text": "CAPiTA for Automobili Lamborghini",
+        "cta_text": "CAPiTA FOR AUTOMOBILI LAMBORGHINI",
         "cta_link": "https://eu.unionbindingcompany.com/pages/automobililamborghini_capita_warpspeed_snowboard_union_falcor_snowboard_binding"
       }
     },

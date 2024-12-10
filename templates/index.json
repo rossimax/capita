@@ -22,6 +22,9 @@
     },
     "hero_banner_djjXDi": {
       "type": "hero-banner",
+      "custom_css": [
+        ".hero-banner__cta.o-btn {gap: 0;}"
+      ],
       "settings": {
         "transparent_header": false,
         "video": "shopify://files/videos/Lambo-loop_desktop (1).mp4",

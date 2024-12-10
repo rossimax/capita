@@ -23,7 +23,8 @@
     "hero_banner_djjXDi": {
       "type": "hero-banner",
       "custom_css": [
-        ".hero-banner__cta.o-btn {gap: 0; text-transform: unset;}"
+        ".hero-banner__cta.o-btn {gap: 0; text-transform: unset;}",
+        "@media screen and (max-width: 768px) {.hero-banner__cta.o-btn {font-size: 14px;}}"
       ],
       "settings": {
         "transparent_header": false,

@@ -12,13 +12,13 @@
     "b78e3e4b-5746-42c1-b1e6-fdd722b34f05": {
       "type": "hero-banner",
       "custom_css": [
-        ".hero-banner__cta.o-btn {gap:0;}"
+        ".hero-banner__cta.o-btn {gap: 0; text-transform: unset;}"
       ],
       "settings": {
         "transparent_header": false,
         "video": "shopify://files/videos/Lambo-loop_desktop.mp4",
         "video_mob": "shopify://files/videos/Lambo_loop-mobile .mp4",
-        "cta_text": "CAP<span style=\"text-transform:lowercase;padding: 0; margin:0;\">i</span>TA for Automobili Lamborghini",
+        "cta_text": "CAPiTA FOR AUTOMOBILI LAMBORGHINI",
         "cta_link": "https://unionbindingcompany.com/pages/automobililamborghini_capita_warpspeed_snowboard_union_falcor_snowboard_binding"
       }
     },

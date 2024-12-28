@@ -89,8 +89,8 @@
               {% if product.metafields.accentuate.find_a_shop %}
                 <a class="find-a-shop" href="#find-a-shop">FIND A SHOP</a> 
               {% elsif all_soldout %}
-                {% comment %} <span class="all-sold-out">SOLD OUT</a> {% endcomment %}
-                <span class="all-sold-out">COMING SOON</span> 
+                <span class="all-sold-out">SOLD OUT</span>
+                {% comment %} <span class="all-sold-out">COMING SOON</span>  {% endcomment %}
               {% else %}
                 <button 
                   class="js-add-to-cart c-product-info__add-to-cart {% unless current_variant.available %} all-soldout{% endunless %}">

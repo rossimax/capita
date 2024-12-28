@@ -11,20 +11,20 @@
   "sections": {
     "b78e3e4b-5746-42c1-b1e6-fdd722b34f05": {
       "type": "hero-banner",
-      "disabled": true,
       "settings": {
         "transparent_header": false,
-        "video": "shopify://files/videos/HP_ANIMATION_1920x1156.mp4",
-        "video_mob": "shopify://files/videos/HP_ANIMATION_390x528.mp4",
-        "cta_text": "View Now",
-        "cta_link": "shopify://products/the-big-nice-burgundy-snowboard"
+        "video": "shopify://files/videos/COLLECTION LAUNCH BANNER - DESKTOP.mp4",
+        "video_mob": "shopify://files/videos/COLLECTION LAUNCH BANNER - MOBILE.mp4",
+        "cta_text": "OPEN YOUR MIND",
+        "cta_link": "shopify://collections/all-snowboards"
       }
     },
     "hero_banner_djjXDi": {
       "type": "hero-banner",
+      "disabled": true,
       "custom_css": [
         ".hero-banner__cta.o-btn {gap: 0; text-transform: unset;}",
-        "@media screen and (max-width: 768px) {.hero-banner__cta.o-btn {font-size: 14px;}}"
+        "@media screen and (max-width: 768px) {.hero-banner__cta.o-btn {font-size: 14px; }}"
       ],
       "settings": {
         "transparent_header": false,

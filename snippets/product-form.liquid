@@ -96,8 +96,8 @@
                   class="js-add-to-cart c-product-info__add-to-cart {% unless current_variant.available %} all-soldout{% endunless %}">
                     <span>
                         {% unless current_variant.available %}
-                          {% comment %} {{ 'products.product.sold_out' | t }} {% endcomment %}
-                          COMING SOON
+                          {{ 'products.product.sold_out' | t }}
+                          {% comment %} COMING SOON {% endcomment %}
                           {% else %}
                         {{ 'products.product.add_to_cart' | t }}
                         {% endunless %}

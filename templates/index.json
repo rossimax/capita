@@ -11,9 +11,10 @@
   "sections": {
     "b78e3e4b-5746-42c1-b1e6-fdd722b34f05": {
       "type": "hero-banner",
+      "disabled": true,
       "custom_css": [
         ".hero-banner__cta.o-btn {gap: 0; text-transform: unset;}",
-        "@media screen and (max-width: 768px) {.hero-banner__cta.o-btn {font-size: 14px;}}"
+        "@media screen and (max-width: 768px) {.hero-banner__cta.o-btn {font-size: 14px; }}"
       ],
       "settings": {
         "transparent_header": false,
@@ -25,7 +26,6 @@
     },
     "hero_banner_YpjD37": {
       "type": "hero-banner",
-      "disabled": true,
       "settings": {
         "transparent_header": false,
         "video": "shopify://files/videos/COLLECTION LAUNCH BANNER - DESKTOP.mp4",

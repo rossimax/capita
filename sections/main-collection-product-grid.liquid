@@ -422,8 +422,8 @@
               {% if product.metafields.accentuate.new_tag %}
                 <div class="new-label">NEW</div> 
               {% elsif product.available == false %}
-              {% comment %} <div class="sold-out-label">SOLD<br/> OUT</div>  {% endcomment %}
-              <div class="sold-out-label">COMING<br/> SOON</div>  
+              <div class="sold-out-label">SOLD<br/> OUT</div> 
+              {% comment %} <div class="sold-out-label">COMING<br/> SOON</div>   {% endcomment %}
             {% endif %}
               <div class="c-listing-product__image">
                 <a href="{{ product.url }}">

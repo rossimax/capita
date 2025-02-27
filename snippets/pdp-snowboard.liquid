@@ -143,14 +143,15 @@
         {% endif %}
       </div>
       <div class="c-product-tech__video">
-
-        <iframe id="youtube-{{ product.metafields.snowboard_intro.product_video }}" frameborder="0" allowfullscreen="1"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          title="Player for CAPiTA Snowboards | {{ product.title | strip_html }}" width="100%" height="100%"
-          src="https://www.youtube.com/embed/{{ product.metafields.snowboard_intro.product_video }}?autoplay=0;controls=0;disablekb=1;playsinline=1;cc_load_policy=0;cc_lang_pref=auto;">
-        </iframe>
-          <span id="find-a-shop"></span>
-        </div>
+        {% if product.metafields.snowboard_intro.product_video != blank %}
+          <iframe id="youtube-{{ product.metafields.snowboard_intro.product_video }}" frameborder="0" allowfullscreen="1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            title="Player for CAPiTA Snowboards | {{ product.title | strip_html }}" width="100%" height="100%"
+            src="https://www.youtube.com/embed/{{ product.metafields.snowboard_intro.product_video }}?autoplay=0;controls=0;disablekb=1;playsinline=1;cc_load_policy=0;cc_lang_pref=auto;">
+          </iframe>
+        {% endif %}
+        <span id="find-a-shop"></span>
+      </div>
   
         {% if product.metafields.accentuate.find_a_shop %}
   

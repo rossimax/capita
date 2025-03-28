@@ -1,7 +1,17 @@
-{
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "head_width": 100,
         "margin_top": 0,
@@ -12,16 +22,25 @@
         "description": ""
       }
     },
-    "ab6eee15-7390-4eef-821e-80aed63a6138": {
+    "html_cWVY3K": {
       "type": "html",
       "settings": {
-        "text": "<strong>REGISTER YOUR BOARD WITH NFC (FOR 2021 AND NEWER BOARDS)<\/strong><br>\nOver the past year, the EETT™ development team at MARS1 has been working to connect you to your board beyond the standard boot\/binding interface.<br>\nBy embedding a super-intelligent Near Field Communication (NFC) chip into the nose of your board, you can now connect your phone to your board for seamless product information, snowboard registration, warranty processing and more.<br><br><br><br>"
+        "text": "<span class=\"o-text is-2 nocase\">The MotherShip<sup style=\"font-size: 50%;\">TM</sup> Connection NFC</span><br><br>\n                <video width=\"100%\" class=\"c-info-card-modal__media\" src=\"https://cdn.shopify.com/videos/c/vp/244f7de8dee9416191b5326302609708/244f7de8dee9416191b5326302609708.SD-480p-1.2Mbps-18580469.mp4\" autoplay=\"autoplay\" loop=\"loop\" muted=\"muted\" playsinline=\"playsinline\"></video><br>\n                <span class=\"o-text is-3 nocase\">Enhanced Precision Through Technology</span>\n                <span class=\"o-text is-4 is-regular\">In 2020, The Mothership became the first in the snowboard industry to introduce an NFC system in our snowboards. This chip enables precise tracking of <hl>each board's production journey</hl>, resulting in higher quality and reduced waste.</span><br><br><br>\n                <video width=\"100%\" class=\"c-info-card-modal__media\" src=\"https://cdn.shopify.com/videos/c/vp/e0e119259e6e47fb9b4dcbf7d174d9bc/e0e119259e6e47fb9b4dcbf7d174d9bc.SD-480p-1.2Mbps-18580518.mp4\" autoplay=\"autoplay\" loop=\"loop\" muted=\"muted\" playsinline=\"playsinline\"></video><br>\n                <span class=\"o-text is-3 nocase\">Enhanced Experience Through Technology</span><br>\n                <span class=\"o-text is-4 is-regular\">Beyond the production floor, we have taken NFC capabilities to the next level. Now, you can <hl>connect with your board by simply scanning it with your phone</hl>. This NFC interface enables you to register your snowboard, streamlining the customer service process and granting exclusive early access to new product information, drops, and CAPiTA team videos exclusively for NFC-registered users.</span><br><br><br>"
+      }
+    },
+    "ab6eee15-7390-4eef-821e-80aed63a6138": {
+      "type": "html",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "text": "<hr><br><br>\n<strong><span class=\"o-text is-3 nocase\">REGISTER YOUR BOARD WITH NFC (FOR 2021 AND NEWER BOARDS)</span></strong><br>\n<span class=\"o-text is-4 is-regular\">Over the past year, the EETT™ development team at MARS1 has been working to connect you to your board beyond the standard boot/binding interface.<br>\nBy embedding a super-intelligent Near Field Communication (NFC) chip into the nose of your board, you can now connect your phone to your board for seamless product information, snowboard registration, warranty processing and more.<br><br><br></span>"
       }
     },
     "b921e825-ae16-47a6-a6bb-5ae9c0c433aa": {
       "type": "html",
       "settings": {
-        "text": "<strong>HOW TO GET YOUR SERIAL NUMBER<\/strong><br>\nRegister your board with NFC  (for 2021 and newer boards). Compatible with all android phones\/ iphone 6 and newer.<br><br>"
+        "text": "<strong><span class=\"o-text is-3 nocase\">HOW TO GET YOUR SERIAL NUMBER</span></strong><br>\n<span class=\"o-text is-4 is-regular\">Register your board with NFC  (for 2021 and newer boards). Compatible with all android phones/ iphone 6 and newer.<br><br></span>"
       }
     },
     "0909ffc7-eb7e-4862-8763-86525f4c8b02": {
@@ -30,29 +49,29 @@
         "bb6bbf22-fd4a-485b-8c12-cb2c61a39cbc": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_927.png",
-            "text": "<medium>SCAN<\/medium><br>\nHold your phone over the<br> nose of your board."
+            "image": "shopify://shop_images/Group_927.png",
+            "text": "<span class=\"o-text is-4 is-regular\"><medium>SCAN</medium><br>\nHold your phone over the<br> nose of your board.</span>"
           }
         },
         "8f4b5849-8918-4533-a24f-709823ba2966": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_928.png",
-            "text": "<medium>CLICK<\/medium><br>\nThe push notifications."
+            "image": "shopify://shop_images/Group_928.png",
+            "text": "<span class=\"o-text is-4 is-regular\"><medium>CLICK</medium><br>\nThe push notifications.</span>"
           }
         },
         "c0f18c11-6652-47a4-b341-b91dc9d4cf4d": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_929.png",
-            "text": "<medium>ACCESS<\/medium><br>\nSnowboard registration."
+            "image": "shopify://shop_images/Group_929.png",
+            "text": "<span class=\"o-text is-4 is-regular\"><medium>ACCESS</medium><br>\nSnowboard registration.</span>"
           }
         },
         "1084a8b2-b1b5-478c-aa35-74e6fd107dc5": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_930.png",
-            "text": "<medium>SERIAL NUMBER<\/medium><br>\nGet your serial number."
+            "image": "shopify://shop_images/Group_930.png",
+            "text": "<span class=\"o-text is-4 is-regular\"><medium>SERIAL NUMBER</medium><br>\nGet your serial number.</span>"
           }
         }
       },
@@ -75,6 +94,7 @@
   },
   "order": [
     "main",
+    "html_cWVY3K",
     "ab6eee15-7390-4eef-821e-80aed63a6138",
     "b921e825-ae16-47a6-a6bb-5ae9c0c433aa",
     "0909ffc7-eb7e-4862-8763-86525f4c8b02"

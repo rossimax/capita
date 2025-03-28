@@ -12,11 +12,7 @@
             {% assign index_rec = 0  %}
             {% for recommendation in recommendations.products limit:5 %}
               {% unless recommendation.tags contains 'hidden-recommendation' %}
-                {% increment index_rec %}
-              {% endunless %}
-              {% if index_rec == 3 %}
-                {% break %}
-              {% endif %}
+                {% assign index_rec = index_rec | plus: 1 %}
                 <div class="swiper-slide">
                   <a href="{{ recommendation.url }}">
                     <div class="c-product-card">
@@ -42,6 +38,11 @@
                     </div>
                   </a>
                 </div>
+              {% endunless %}
+              {% if index_rec == 3 %}
+                {% break %}
+              {% endif %}
+
             {%- endfor -%}
 
           </div>

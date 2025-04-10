@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -30,7 +30,7 @@
         "font_size_title": 80,
         "font_size_title_mob": 36,
         "title": "THE PROS",
-        "text": "<p>Innovators and icons, #TeamCAPiTA is unified by a passion to take snowboarding to its fullest potential.<br\/>We're a global community dedicated to fun outside the lines, protecting the sport and the planet.<\/p>"
+        "text": "<p>Innovators and icons, #TeamCAPiTA is unified by a passion to take snowboarding to its fullest potential.<br/>We're a global community dedicated to fun outside the lines, protecting the sport and the planet.</p>"
       }
     },
     "ba6ce852-f6df-45e2-9568-6a7da23a0b42": {
@@ -39,72 +39,72 @@
         "857e9f42-0ad0-4578-9b21-81765fc97352": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_1pro_jesskimura.jpg",
-            "link_url": "shopify:\/\/pages\/jess-kimura",
+            "image": "shopify://shop_images/team_1pro_jesskimura.jpg",
+            "link_url": "shopify://pages/jess-kimura",
             "name": "JESS KIMURA"
           }
         },
         "99433135-fb86-4c90-9e58-20dbe8c76ab0": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_1pro_scottstevens.jpg",
-            "link_url": "shopify:\/\/pages\/scott-stevens",
+            "image": "shopify://shop_images/team_1pro_scottstevens.jpg",
+            "link_url": "shopify://pages/scott-stevens",
             "name": "SCOTT STEVENS"
           }
         },
         "a021505d-8e69-4b82-b67a-128f2fd91c4c": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_1pro_kazukokubo.jpg",
-            "link_url": "shopify:\/\/pages\/kazu-kokubo",
+            "image": "shopify://shop_images/team_1pro_kazukokubo.jpg",
+            "link_url": "shopify://pages/kazu-kokubo",
             "name": "KAZU KOKUBO"
           }
         },
         "cfb358e2-f898-4274-b5e6-dcde3af64816": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_1pro_arthurlongo.jpg",
-            "link_url": "shopify:\/\/pages\/arthur-longo",
+            "image": "shopify://shop_images/team_1pro_arthurlongo.jpg",
+            "link_url": "shopify://pages/arthur-longo",
             "name": "ARTHUR LONGO"
           }
         },
         "90e1d231-1d69-4066-bbdb-c24dca42af13": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_1pro_torsteinhorgmo.jpg",
-            "link_url": "shopify:\/\/pages\/torstein-horgmo",
+            "image": "shopify://shop_images/team_1pro_torsteinhorgmo.jpg",
+            "link_url": "shopify://pages/torstein-horgmo",
             "name": "TORSTEIN HORGMO"
           }
         },
         "18b0ab16-5a65-4de0-a030-fe73f518d4af": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_1pro_kevinbackstrom.jpg",
-            "link_url": "shopify:\/\/pages\/kevin-backstrom",
+            "image": "shopify://shop_images/team_1pro_kevinbackstrom.jpg",
+            "link_url": "shopify://pages/kevin-backstrom",
             "name": "KEVIN BACKSTROM"
           }
         },
         "d4cded2c-ee22-4734-a2db-45f9e7290c0b": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_1pro_brandoncocard.jpg",
-            "link_url": "shopify:\/\/pages\/brandon-cocard",
+            "image": "shopify://shop_images/team_1pro_brandoncocard.jpg",
+            "link_url": "shopify://pages/brandon-cocard",
             "name": "BRANDON COCARD"
           }
         },
         "d8c3ecd4-4e7a-4a00-97f8-55282be63f90": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_1pro_mikerav.jpg",
-            "link_url": "shopify:\/\/pages\/mike-rav",
+            "image": "shopify://shop_images/team_1pro_mikerav.jpg",
+            "link_url": "shopify://pages/mike-rav",
             "name": "MIKE RAV"
           }
         },
         "d75fc589-e53a-4d0d-a38e-32fbbb10ec6d": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_1pro_chrisgrenier.jpg",
-            "link_url": "shopify:\/\/pages\/chris-grenier",
+            "image": "shopify://shop_images/team_1pro_chrisgrenier.jpg",
+            "link_url": "shopify://pages/chris-grenier",
             "name": "CHRIS GRENIER"
           }
         }
@@ -134,7 +134,7 @@
         "font_size_title": 80,
         "font_size_title_mob": 36,
         "title": "THE PATHFINDERS",
-        "text": "<p>The next generation of talent leading the progression of riding and style in contests, at resorts and in the streets. <br\/>The future is bright. The future is now.<\/p>"
+        "text": "<p>The next generation of talent leading the progression of riding and style in contests, at resorts and in the streets. <br/>The future is bright. The future is now.</p>"
       }
     },
     "c73601a3-fbde-479e-9c35-bfaab5fa2160": {
@@ -143,63 +143,63 @@
         "a09490b0-a18f-4a98-8032-506aff58b924": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_2pathfinders_miabrookes.jpg",
-            "link_url": "shopify:\/\/pages\/mia-brookes",
+            "image": "shopify://shop_images/team_2pathfinders_miabrookes.jpg",
+            "link_url": "shopify://pages/mia-brookes",
             "name": "MIA BROOKES"
           }
         },
         "4279ff00-67e8-4ca2-89e2-d426f1401f5f": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_2pathfinders_milesfallon.jpg",
-            "link_url": "shopify:\/\/pages\/miles-fallon",
+            "image": "shopify://shop_images/team_2pathfinders_milesfallon.jpg",
+            "link_url": "shopify://pages/miles-fallon",
             "name": "MILES FALLON"
           }
         },
         "08c5e9cb-ed1f-4e6d-85f6-72eff0097ee4": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_2pathfinders_hennaikola.jpg",
-            "link_url": "shopify:\/\/pages\/henna-ikola",
+            "image": "shopify://shop_images/team_2pathfinders_hennaikola.jpg",
+            "link_url": "shopify://pages/henna-ikola",
             "name": "HENNA IKOLA"
           }
         },
         "a2df5478-6b7c-439d-825d-dae42c02ed93": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_2pathfinders_bennymilam.jpg",
-            "link_url": "shopify:\/\/pages\/benny-milam",
+            "image": "shopify://shop_images/team_2pathfinders_bennymilam.jpg",
+            "link_url": "shopify://pages/benny-milam",
             "name": "BENNY MILAM"
           }
         },
         "0b8de1a6-69cc-46a2-8975-a310556735d2": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_2pathfinders_kaleahodriscoll.jpg",
-            "link_url": "shopify:\/\/pages\/kaleah-opal-driscoll",
+            "image": "shopify://shop_images/team_2pathfinders_kaleahodriscoll.jpg",
+            "link_url": "shopify://pages/kaleah-opal-driscoll",
             "name": "KALEAH OPAL DRISCOLL"
           }
         },
         "99451742-31db-4424-adfe-a1accc32ebc2": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_2pathfinders_austinvizz.jpg",
-            "link_url": "shopify:\/\/pages\/austin-vizz",
+            "image": "shopify://shop_images/team_2pathfinders_austinvizz.jpg",
+            "link_url": "shopify://pages/austin-vizz",
             "name": "AUSTIN VIZZ"
           }
         },
         "c06e8a1e-206a-4be4-a84c-6e8c4db41eaa": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_2pathfinders_himaritakamori.jpg",
-            "link_url": "shopify:\/\/pages\/himari-takamori",
+            "image": "shopify://shop_images/team_2pathfinders_himaritakamori.jpg",
+            "link_url": "shopify://pages/himari-takamori",
             "name": "HIMARI TAKAMORI"
           }
         },
         "56a0b0b8-6e3f-4095-9355-1b31a469d522": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_yuramurase.jpg",
+            "image": "shopify://shop_images/team_3explorers_yuramurase.jpg",
             "link_url": "",
             "name": "YURA MURASE"
           }
@@ -229,7 +229,7 @@
         "font_size_title": 80,
         "font_size_title_mob": 36,
         "title": "THE EXPLORERS",
-        "text": "<p>This global group of rippers are core members of The CAPiTA family,<br\/>flying the flag and pushing snowboarding nationally, regionally and locally.<\/p>"
+        "text": "<p>This global group of rippers are core members of The CAPiTA family,<br/>flying the flag and pushing snowboarding nationally, regionally and locally.</p>"
       }
     },
     "c5f887cb-81f6-4c19-a1eb-50d5df910e42": {
@@ -238,87 +238,87 @@
         "acbc6434-e022-4bb1-935f-c0f7b7871492": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_kevinjones.jpg",
-            "link_url": "shopify:\/\/pages\/kevin-jones",
+            "image": "shopify://shop_images/team_3explorers_kevinjones.jpg",
+            "link_url": "shopify://pages/kevin-jones",
             "name": "KEVIN JONES"
           }
         },
         "77dd9722-b736-44ae-aa92-07650c439b62": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_1pro_philjacques.jpg",
-            "link_url": "shopify:\/\/pages\/phil-jacques",
+            "image": "shopify://shop_images/team_1pro_philjacques.jpg",
+            "link_url": "shopify://pages/phil-jacques",
             "name": "PHIL JACQUES"
           }
         },
         "acdb5a97-90a3-4b91-a18a-58ef373c7e11": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_1pro_johnnyoconnor.jpg",
-            "link_url": "shopify:\/\/pages\/johnny-oconnor",
+            "image": "shopify://shop_images/team_1pro_johnnyoconnor.jpg",
+            "link_url": "shopify://pages/johnny-oconnor",
             "name": "JOHNNY O’CONNOR"
           }
         },
         "73800fe0-1812-4e7f-aeb4-01581bcb6c90": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_coreysmith.jpg",
-            "link_url": "shopify:\/\/pages\/corey-smith",
+            "image": "shopify://shop_images/team_3explorers_coreysmith.jpg",
+            "link_url": "shopify://pages/corey-smith",
             "name": "COREY SMITH"
           }
         },
         "d0771d5a-917d-43fd-84ef-ab1786009170": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_tiarncollins.jpg",
-            "link_url": "shopify:\/\/pages\/tiarn-collins",
+            "image": "shopify://shop_images/team_3explorers_tiarncollins.jpg",
+            "link_url": "shopify://pages/tiarn-collins",
             "name": "TIARN COLLINS"
           }
         },
         "efdca2be-d920-4401-9c4f-667a433f5c81": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_mattwainhouse.jpg",
-            "link_url": "shopify:\/\/pages\/matt-wainhouse",
+            "image": "shopify://shop_images/team_3explorers_mattwainhouse.jpg",
+            "link_url": "shopify://pages/matt-wainhouse",
             "name": "MATT WAINHOUSE"
           }
         },
         "4f09568f-3e83-47dd-8ea5-e7eaad5254e5": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_chasejosey.jpg",
-            "link_url": "shopify:\/\/pages\/chase-josey",
+            "image": "shopify://shop_images/team_3explorers_chasejosey.jpg",
+            "link_url": "shopify://pages/chase-josey",
             "name": "CHASE JOSEY"
           }
         },
         "b1d14384-90e4-4f8b-bd81-37cb3d520b06": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_sonnyalba.jpg",
-            "link_url": "shopify:\/\/pages\/sonny-alba",
+            "image": "shopify://shop_images/team_3explorers_sonnyalba.jpg",
+            "link_url": "shopify://pages/sonny-alba",
             "name": "SONNY ALBA"
           }
         },
         "d91cf783-0ede-405f-8ebd-b35692d561ce": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_georgiaaustin.jpg",
-            "link_url": "shopify:\/\/pages\/georgia-nicholls-austin",
+            "image": "shopify://shop_images/team_3explorers_georgiaaustin.jpg",
+            "link_url": "shopify://pages/georgia-nicholls-austin",
             "name": "GEORGIA NICHOLLS-AUSTIN"
           }
         },
         "e1c8c71c-db44-43d6-a080-a2e7ed59757d": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_miyonyamaguchi.jpg",
-            "link_url": "shopify:\/\/pages\/miyon-yamaguchi",
+            "image": "shopify://shop_images/team_3explorers_miyonyamaguchi.jpg",
+            "link_url": "shopify://pages/miyon-yamaguchi",
             "name": "MIYON YAMAGUCHI"
           }
         },
         "team_list_9ddG37": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/UI2024_DAY3_EllieNixon_ellienxn_7672.jpg",
+            "image": "shopify://shop_images/UI2024_DAY3_EllieNixon_ellienxn_7672.jpg",
             "link_url": "",
             "name": "JESS PERLMUTTER"
           }
@@ -326,47 +326,48 @@
         "0682fee8-c233-44c5-b764-a9b166fce0d6": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_yawgoons.jpg",
-            "link_url": "shopify:\/\/pages\/yawgoons",
+            "image": "shopify://shop_images/team_3explorers_yawgoons.jpg",
+            "link_url": "shopify://pages/yawgoons",
             "name": "YAWGOONS"
           }
         },
         "0ab80d4c-73b4-4844-8fc8-602eddd8784d": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_bendikgjerdalen.jpg",
-            "link_url": "shopify:\/\/pages\/bendik-gjerdalen",
+            "image": "shopify://shop_images/team_3explorers_bendikgjerdalen.jpg",
+            "link_url": "shopify://pages/bendik-gjerdalen",
             "name": "BENDIK GJERDALEN"
           }
         },
         "94fc702b-ff9b-434b-939a-20fd4c0817d3": {
           "type": "team_list",
+          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_moritzamsuss.jpg",
-            "link_url": "shopify:\/\/pages\/moritz-amsuss",
+            "image": "shopify://shop_images/team_3explorers_moritzamsuss.jpg",
+            "link_url": "shopify://pages/moritz-amsuss",
             "name": "MORITZ AMSUSS"
           }
         },
         "421eabbe-2d91-4344-b111-3cb1fc4b07e4": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_joeyfava.jpg",
-            "link_url": "shopify:\/\/pages\/joey-fava",
+            "image": "shopify://shop_images/team_3explorers_joeyfava.jpg",
+            "link_url": "shopify://pages/joey-fava",
             "name": "JOEY FAVA"
           }
         },
         "8e7328ab-7731-4df5-b956-47c297f74902": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_truthsmith.jpg",
-            "link_url": "shopify:\/\/pages\/truth-smith",
+            "image": "shopify://shop_images/team_3explorers_truthsmith.jpg",
+            "link_url": "shopify://pages/truth-smith",
             "name": "TRUTH SMITH"
           }
         },
         "team_list_JbMTUA": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/NiekTeamPic.webp",
+            "image": "shopify://shop_images/NiekTeamPic.webp",
             "link_url": "",
             "name": "NIEK VAN DER VELDEN"
           }
@@ -374,8 +375,8 @@
         "3e17076a-00f9-480f-bd82-9bea61373752": {
           "type": "team_list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/team_3explorers_brendonrego.jpg",
-            "link_url": "shopify:\/\/pages\/brendon-rego",
+            "image": "shopify://shop_images/team_3explorers_brendonrego.jpg",
+            "link_url": "shopify://pages/brendon-rego",
             "name": "BRENDON REGO"
           }
         }

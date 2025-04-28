@@ -1,21 +1,85 @@
 /* START GENERAL */
 
 body {
-  font-family: "Calibre", sans-serif;
+  font-family: "Proximanova", sans-serif;
+  font-size: 14pt;
+  @media screen and (min-width:769px) {
+    font-size: 16pt;
+  }
+}
+.normal {
+  font-family: "Proximanova", sans-serif;
+  font-weight: 400;
+}
+medium,
+.medium {
+  font-family: "Proximanova", sans-serif;
+  font-weight: 500;
 }
 strong,
 .strong {
-  font-family: "Calibre", sans-serif;
+  font-family: "Proximanova", sans-serif;
   font-weight: 600;
 }
-.normal {
-  font-family: "Calibre", sans-serif;
-  font-weight: 400;
+.btn {
+  font-size: 16pt;
+  @media screen and (min-width:769px) {
+    font-size: 20pt;
+  }
 }
-.medium {
-  font-family: "Calibre", sans-serif;
-  font-weight: 500;
+.title {
+  font-size: 26pt;
+  @media screen and (min-width:769px) {
+    font-size: 52pt;
+  }
 }
+.subtitle {
+  font-size: 16pt;
+  @media screen and (min-width:769px) {
+    font-size: 26pt;
+  }
+}
+.captions {
+  font-size: 10pt;
+  @media screen and (min-width:769px) {
+    font-size: 14pt;
+  }
+}
+.footer-info,
+.c-footer__legal {
+  font-size: 10pt;
+  @media screen and (min-width:769px) {
+    font-size: 12pt;
+  }
+}
+.btn-action:after {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  width: 20px;
+  background: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAxNSI+PGNpcmNsZSBjeD0iNy41IiBjeT0iNy41IiByPSI3IiBzdHJva2U9IiNmZmYiLz48cGF0aCBkPSJNMTAuNDk5IDcuNWgtNk03LjUgNC4wOXY2LjgyIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjIyLjUiIGN5PSI3LjUiIHI9IjYuODE4IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMS4zNjQiLz48cGF0aCBkPSJNMjUuNSA3LjVoLTYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: 30px;
+  aspect-ratio: 1 / 1;
+}
+.btn-link,
+.btn-link.o-btn {
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.btn-link:after {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  width: 27px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMjciIHZpZXdCb3g9IjAgMCAyNyAyNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjUgMjZDMjAuNDAzNiAyNiAyNiAyMC40MDM2IDI2IDEzLjVDMjYgNi41OTY0NCAyMC40MDM2IDEgMTMuNSAxQzYuNTk2NDQgMSAxIDYuNTk2NDQgMSAxMy41QzEgMjAuNDAzNiA2LjU5NjQ0IDI2IDEzLjUgMjZaIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIi8+CjxwYXRoIGQ9Ik0xMS4zNTg0IDYuOTIyMzZMMTcuNTkwOCAxMy4xNTQ3QzE3Ljc4NiAxMy4zNSAxNy43ODYgMTMuNjY2NiAxNy41OTA4IDEzLjg2MThMMTEuMzU4NCAyMC4wOTQyIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: 27px;
+  aspect-ratio: 1 / 1;
+}
+
 hl {
   color: #000;
   background: linear-gradient(
@@ -30,9 +94,6 @@ hl {
 }
 bl {
   color: #e2ff61;
-}
-medium {
-  font-weight: 500;
 }
 .title {
   font-size: 60px;
@@ -215,7 +276,7 @@ main.template-nfc-steps {
   text-decoration: none;
   text-align: center;
   font-size: 20px;
-  font-family: "Calibre", sans-serif;
+  font-family: "Proximanova", sans-serif;
   color: #000;
   line-height: 1;
   font-weight: 500;
@@ -460,9 +521,7 @@ main.template-nfc-steps {
   text-align: left;
   display: block;
 }
-.c-slim-form .c-slim-form__title {
-  font-size: 15px;
-}
+
 .c-slim-form label.c-slim-form__legal {
   line-height: 1;
 }
@@ -507,7 +566,7 @@ span.all-sold-out {
   color: #fb3105;
   text-align: center;
   margin: 30px 0 0 0;
-  font-family: "Calibre";
+  font-family: "Proximanova";
   font-weight: 500;
   border: 1px solid #fb3105;
   padding: 21px 20px;
@@ -524,6 +583,7 @@ span.all-sold-out {
 }
 input.cart-submit.c-header-cart__checkout-btn {
   cursor: pointer;
+  text-transform: unset !important;
 }
 img.c-cart-item__image {
   max-height: 148px;
@@ -553,7 +613,7 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-family: "Calibre", sans-serif;
+  font-family: "Proximanova", sans-serif;
   font-size: 80px;
   line-height: 1;
 }

@@ -8,8 +8,8 @@
 <div class="section-banner-product {{ image_position }}">
     <div class="banner-product__left">
         <div class="banner-product__left__text">
-            <h5>{{ section.settings.left_sup_title }}</h5>
-            <h3>{{ section.settings.left_title }}</h3>
+            <h3 class="subtitle strong">{{ section.settings.left_title }}</h3>
+            <h5 class="text">{{ section.settings.left_sup_title }}</h5>
         </div>
         <div class="banner-product__left__card">
             <a href="{{ section.settings.product.url }}">
@@ -22,7 +22,7 @@
     </div>
     <div class="banner-product__right">
         <img class="banner-product__right__image" src="{{ section.settings.right_image | img_url: 'master' }}" alt="capita snowboard" width="100%">
-        <h6 class="banner-product__right__text">{{ section.settings.right_text }}</h6>
+        <h6 class="banner-product__right__text subtitle strong">{{ section.settings.right_text }}</h6>
     </div>
 </div>
 
@@ -87,15 +87,16 @@
     position: relative;
 }
 .banner-product__left__card {
-    width: 330px;
-    height: 700px;
+    width: 341px;
+    height: 652px;
+    margin-bottom: 120px;
     transform: translateX(50%);
     border-radius: 20px;
     background: #fff;
     border: 1px solid #fff;
     background: #000;
     z-index: 1;
-    background-image: url(//cdn.shopify.com/s/files/1/0231/7366/0752/files/000_GRID_PAPER_BG_1.png?v=1686394097);
+    background-image: url(https://cdn.shopify.com/s/files/1/0231/7366/0752/files/b9852147b947ef0aaeafe39e96e26a7ebaff65c7.jpg?v=1745921244);
     background-color: #000;
     color: #fff;
 }
@@ -129,25 +130,6 @@
 }
 .banner-product__left__text {
     color: #fff;
-    text-align: right;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-}
-.banner-product__left__text h3 {
-    color: #fff;
-    font-size: 80px;
-    text-transform: uppercase;
-    line-height: 0.7;
-    margin: 0;
-    white-space: nowrap;
-    font-weight: 600;
-}
-.banner-product__left__text h5 {
-    color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
-    line-height: 1;
-    margin: 0;
 }
 .banner-product__left__card__image {
     padding: 50px 20px;
@@ -169,11 +151,8 @@
     top: 90px;
     margin: 0;
     color: #fff;
-    font-size: 20px;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    text-transform: uppercase;
-    font-weight: 500;
     vertical-align: baseline;
     display: flex;
     align-items: start;

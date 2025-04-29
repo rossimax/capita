@@ -958,33 +958,12 @@ html {
   text-transform: unset;
   min-width: 352px;
 }
-
-/* .c-header__utility.is-cart svg {
-  width: unset;
+a.c-header__utility.is-user.js-header-close-dropdown {
+  display: flex;
 }
-.c-header {
-  filter: invert(1);
-  background: #000;
+.c-header__utility.is-cart svg {
+  width: auto;
 }
-.c-header__menu-item {
-  text-transform: none;
-  font-weight: 600;
+.cart-count {
+  right: -13px;
 }
-.c-header__dropdown-panel.c-header-menu.js-header-dropdown {
-  background: #0d0d0d;
-}
-.c-header-menu__country img {
-  filter: invert(1);
-}
-.s-item__content img {
-  height: 80px;
-  filter: invert(1);
-}
-.c-header__utility {
-  aspect-ratio: unset;
-}
-.c-header__utilities .country-site-selector {
-  filter: invert(1);
-  background: none;
-  padding: none;
-} */

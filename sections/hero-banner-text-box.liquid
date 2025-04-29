@@ -1,0 +1,60 @@
+<div class="section-banner-box">
+    <div class="banner-box">
+        <div class="banner-box__image">
+            <img src="{{ section.settings.box_image | img_url: 'master' }}">
+        </div>
+
+        <div class="banner-box__content">
+            <img src="{{ section.settings.logo_image | img_url: 'master' }}">
+            <div class="text centered">{{ section.settings.text }}</div>
+            <a class="o-btn btn-link btn-green" href="{{section.settings.cta_link}}">{{section.settings.cta_text}}</a>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Banner Box",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "background",
+            "label": "Background"
+        },
+        {
+            "type": "image_picker",
+            "id": "box_image",
+            "label": "Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "logo_image",
+            "label": "Logo Image"
+        },
+        {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "text",
+            "id": "cta_text",
+            "label": "CTA Text"
+        },
+        {
+            "type": "url",
+            "id": "cta_link",
+            "label": "CTA Link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Banner Box"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+{% endstylesheet %}

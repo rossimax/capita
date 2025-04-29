@@ -15,9 +15,8 @@
         <img class="only-mob hero-banner-text__image" src="{{ section.settings.image_mob | img_url: 'master' }}" alt="capita banner" width="100%">
     {% endif %}
 
-    {% if section.settings.image_box == "no" %}
-
     <div class="hero-banner-text__content">
+
         {% if section.settings.logo_image %}
             <div class="hero-banner-text__content__logo">
                 <img src="{{ section.settings.logo_image | img_url: 'master' }}">
@@ -40,19 +39,10 @@
             </div>
         </div>
         {% endif %}
+
     </div>
 
     <a class="hero-banner-text__cta o-btn btn-link" href="{{section.settings.cta_link}}">{{section.settings.cta_text}}</a>
-
-    {% else %}
-
-        {% if section.settings.image_box == "left" %}
-
-        {% else %}
-            
-        {% endif %}
-
-    {% endif %}
 
 </div>
 
@@ -84,31 +74,6 @@
             "type": "video",
             "id": "video_mob",
             "label": "Video Mob"
-        },
-        {
-            "type": "select",
-            "id": "image_box",
-            "label": "Image Box",
-            "options": [
-              {
-                "value": "no",
-                "label": "No"
-              },
-              {
-                "value": "left",
-                "label": "Left"
-              },
-              {
-                "value": "right",
-                "label": "right"
-              }
-            ],
-            "default": "no"
-        },
-        {
-            "type": "image_picker",
-            "id": "image_box_file",
-            "label": "Image Box File"
         },
         {
             "type": "text",

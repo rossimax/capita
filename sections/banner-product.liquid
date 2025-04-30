@@ -16,7 +16,7 @@
                 <div class="banner-product__left__card__image">
                     <img src="{{ section.settings.product.featured_image | img_url: "550x550" }}" alt="capita card" width="100%">
                 </div>
-                <div class="banner-product__left__card__cta medium"><span>SHOP NOW</span></div>
+                <div class="banner-product__left__card__cta medium"><strong>Shop Now</strong></div>
             </a>
         </div>
     </div>
@@ -93,7 +93,7 @@
     transform: translateX(50%);
     border-radius: 20px;
     background: #fff;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     background: #000;
     z-index: 1;
     background-image: url(https://cdn.shopify.com/s/files/1/0231/7366/0752/files/b9852147b947ef0aaeafe39e96e26a7ebaff65c7.jpg?v=1745921244);
@@ -122,11 +122,6 @@
     background: #fff;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
-    font-size: 18px;
-}
-.banner-product__left__card__cta span {
-    font-size: 18px;
-    font-weight: 600;
 }
 .banner-product__left__text {
     color: #fff;
@@ -234,10 +229,6 @@
     .banner-product__left__card__cta {
         padding: 10px;
     }
-    .banner-product__left__card__cta span {
-        font-size: 18px;
-        font-weight: 600;
-    }
 }
 
 @media screen and (max-width: 910px) {
@@ -245,12 +236,6 @@
     .banner-product__left__card {
         height: 390px;
         width: 200px;
-    }
-    .banner-product__left__text h3 {
-        font-size: 50px;
-    }
-    .banner-product__left__text h5 {
-        font-size: 22px;
     }
 
 }
@@ -265,24 +250,19 @@
         background: #000;
     }
     .banner-product__left__card {
-        transform: translate(0);
+        transform: translateY(0);
         width: 175px;
         height: 350px;
+        margin-top: -80px;
+        margin-bottom: 0;
     }
     .banner-product__left {
         padding: 0 25px 50px 25px;
         justify-content: space-between;
-        align-items: end;
+        align-items: start;
         transform: translateY(0);
         z-index: 1;
         background: transparent;
-        margin-top: -35%;
-    }
-    .banner-product__left__text h3 {
-        font-size: 26px;
-    }
-    .banner-product__left__text h5 {
-        font-size: 16px;
     }
     .section-banner-product.image-on-left {
         flex-direction: column-reverse;
@@ -305,7 +285,6 @@
         right: 40px;
         left: unset;
         top: 20px;
-        font-size: 10px;
         width: auto;
         height: auto;
     }
@@ -319,13 +298,19 @@
     .banner-product__left__text {
         position: relative;
         left: unset;
-    }
-    .banner-product__left__card__cta span {
-        font-size: 18px;
-        font-weight: 600;
+        margin-top: 30px;
     }
     .banner-product__left__card__image {
         padding: 20px 0px;
+    }
+    h6.banner-product__right__text.subtitle.strong {
+        font-size: 26px;
+    }
+    .banner-product__left__text h3.subtitle.strong {
+        font-size: 26px;
+    }
+    .banner-product__left__text h5 {
+        font-size: 16px;
     }
 }
 {% endstyle %}

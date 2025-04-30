@@ -79,20 +79,9 @@
         type="button"
       >
         <span style="display:block;overflow:hidden">
-          <svg id="Livello_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28.3 28.3">
-            <defs>
-              <style>
-                .st0 {
-                  fill: none;
-                  stroke: #0b0204;
-                  stroke-linecap: round;
-                  stroke-linejoin: round;
-                  stroke-width: 2px;
-                }
-              </style>
-            </defs>
-            <path class="st0" d="M24.6,9.2H3.7v15.4h20.9v-15.4Z"/>
-            <path class="st0" d="M8.4,14.3v-4.9c0-3.2,2.6-5.7,5.7-5.7s5.7,2.6,5.7,5.7v4.9"/>
+          <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.9448 7.14551H1V22.5801H21.9448V7.14551Z" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.73877 12.2155V7.36414C5.73877 4.19687 8.30624 1.63232 11.4706 1.63232C14.6378 1.63232 17.2024 4.19982 17.2024 7.36414V12.2155" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           {% comment %} <svg
             fill="none"
@@ -297,17 +286,17 @@
   .cart-count {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 2px;
     background: #fff;
     color: #000;
     border-radius: 50%;
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #000;
-    font-size: 18px;
+    border: 1px solid #000;
+    font-size: 14px;
   }
   .cart-count.hide {
     display: none;
@@ -320,6 +309,118 @@
     display: block;
     margin-right: 10px;
   }
+  .c-header__utility svg {
+    max-width: 21px;
+  }
+  .c-header__utility.is-cart svg {
+    max-width: 19px;
+    width: auto;
+  }
+
+.c-menu-item,
+.c-header__menu-item {
+  color: #000;
+  text-transform: unset;
+}
+.c-menu-item span:after,
+.c-header__menu-item:after {
+  background-color: #000;
+}
+input#search-input {
+    border: 1px solid #000;
+    color: #000;
+}
+
+@media screen and (max-width: 1199px) {
+  .c-header__utilities .country-site-selector {
+    display: none;
+  }
+}
+
+.c-header__utilities .country-site-selector {
+  background: none;
+  padding: 0 !important;
+  margin-right: 35px;
+}
+.country-site-selector.opened .country-site-selector__other {
+  top: 60px;
+  background: #fff !important;
+  min-height: 360px;
+}
+.o-btn {
+  text-transform: unset;
+  min-width: 352px;
+}
+a.c-header__utility.is-user.js-header-close-dropdown {
+  display: flex;
+}
+.c-header-menu__parent {
+  color: #000;
+}
+.c-header-menu__parent:after {
+  filter: invert(1);
+}
+.c-header-menu__line {
+    background-color: #000;
+}
+#search-input::placeholder {
+  color: #000;
+}
+.c-header-search__input::after {
+  content: "";
+    display: block;
+    flex-shrink: 0;
+    width: 30px;
+    height: 40px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGl2ZWxsb18xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI4LjMgMjguMyI+CiAgPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI5LjMuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDIuMS4wIEJ1aWxkIDE1MSkgIC0tPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuc3QwIHsKICAgICAgICBmaWxsOiBub25lOwogICAgICAgIHN0cm9rZTogIzBiMDIwNDsKICAgICAgICBzdHJva2UtbGluZWNhcDogcm91bmQ7CiAgICAgICAgc3Ryb2tlLWxpbmVqb2luOiByb3VuZDsKICAgICAgICBzdHJva2Utd2lkdGg6IDJweDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTEyLjMsMjAuOGM0LjcsMCw4LjYtMy44LDguNi04LjZTMTcsMy43LDEyLjMsMy43LDMuNyw3LjUsMy43LDEyLjNzMy44LDguNiw4LjYsOC42aDBaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTE4LjUsMTguNWw2LjIsNi4yIi8+Cjwvc3ZnPg==);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 30px;
+    position: absolute;
+    top: -2px;
+    right: 16px;
+}
+.c-header-cart__total,
+.c-cart-item__price,
+.c-cart-item__quantity span,
+.c-cart-item__info {
+  color: #000;
+}
+.c-header-cart__line {
+  background-color: #000;
+}
+input.cart-submit.c-header-cart__checkout-btn {
+    background: #000;
+    color: #fff;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+}
+.c-cart-item__info {
+  display: flex;
+  flex-direction: column;
+}
+.c-header__bg {
+  background-color: #ffffffe8;
+  -webkit-backdrop-filter: unset;
+  backdrop-filter: unset;
+}
+.c-header__top {
+    background: #ffffffe8;
+}
+@media screen and (min-width: 48em) {
+    .c-cart-item__quantity {
+        justify-content: start;
+    }
+    .c-header__bg {
+      background-color: #ffffffe8;
+      -webkit-backdrop-filter: unset;
+      backdrop-filter: unset;
+    }
+    .c-header {
+        background: #fff;
+    }
+}
 {% endstyle %}
 
 {% javascript %}

@@ -2,9 +2,9 @@
 
 body {
   font-family: "Proximanova", sans-serif;
-  font-size: 14pt;
+  font-size: 14px;
   @media screen and (min-width:769px) {
-    font-size: 16pt;
+    font-size: 16px;
   }
 }
 .normal {
@@ -22,34 +22,34 @@ strong,
   font-weight: 600;
 }
 .btn {
-  font-size: 16pt;
+  font-size: 16px;
   @media screen and (min-width:769px) {
-    font-size: 20pt;
+    font-size: 20px;
   }
 }
 .title {
-  font-size: 26pt;
+  font-size: 26px;
   @media screen and (min-width:769px) {
-    font-size: 52pt;
+    font-size: 52px;
   }
 }
 .subtitle {
-  font-size: 16pt;
+  font-size: 16px;
   @media screen and (min-width:769px) {
-    font-size: 26pt;
+    font-size: 26px;
   }
 }
 .captions {
-  font-size: 10pt;
+  font-size: 10px;
   @media screen and (min-width:769px) {
-    font-size: 14pt;
+    font-size: 14px;
   }
 }
 .footer-info,
 .c-footer__legal {
-  font-size: 10pt;
+  font-size: 10px;
   @media screen and (min-width:769px) {
-    font-size: 12pt;
+    font-size: 12px;
   }
 }
 .btn-action:after {
@@ -67,6 +67,7 @@ strong,
 .btn-link.o-btn {
   justify-content: space-between;
   padding: 10px 20px;
+  max-width: 360px;
 }
 .btn-link:after {
   content: "";
@@ -78,6 +79,9 @@ strong,
   background-position: 100%;
   background-size: 27px;
   aspect-ratio: 1 / 1;
+}
+.btn-green {
+  background: #E2FF61 !important;
 }
 
 hl {
@@ -518,8 +522,19 @@ main.template-nfc-steps {
 }
 .c-slim-form__title {
   margin-bottom: 8px;
-  text-align: left;
+  text-align: left !important;
   display: block;
+}
+.c-slim-form__email:after {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  width: 27px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMjciIHZpZXdCb3g9IjAgMCAyNyAyNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjUgMjZDMjAuNDAzNiAyNiAyNiAyMC40MDM2IDI2IDEzLjVDMjYgNi41OTY0NCAyMC40MDM2IDEgMTMuNSAxQzYuNTk2NDQgMSAxIDYuNTk2NDQgMSAxMy41QzEgMjAuNDAzNiA2LjU5NjQ0IDI2IDEzLjUgMjZaIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIi8+CjxwYXRoIGQ9Ik0xMS4zNTg0IDYuOTIyMzZMMTcuNTkwOCAxMy4xNTQ3QzE3Ljc4NiAxMy4zNSAxNy43ODYgMTMuNjY2NiAxNy41OTA4IDEzLjg2MThMMTEuMzU4NCAyMC4wOTQyIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: 27px;
+  aspect-ratio: 1 / 1;
 }
 
 .c-slim-form label.c-slim-form__legal {
@@ -642,9 +657,13 @@ span.msg-empty-cart.medium.hide,
 }
 input.c-slim-form__email {
   width: 100%;
+  border-radius: 26px;
 }
 .c-footer__form .c-slim-form__email {
   background: unset;
+}
+.c-slim-form__legal input {
+  border-radius: 50%;
 }
 .c-footer__form span.c-slim-form__title {
   text-align: center;
@@ -931,39 +950,4 @@ html {
 }
 
 
-.c-header__bg {
-  background-color: #fff;
-  -webkit-backdrop-filter: unset;
-  backdrop-filter: unset;
-}
-.c-menu-item,
-.c-header__menu-item {
-  color: #000;
-  text-transform: unset;
-}
-.c-header__menu-item:after {
-  background-color: #000;
-}
 
-.c-header__utilities .country-site-selector {
-  background: none;
-  padding: none;
-}
-.country-site-selector.opened .country-site-selector__other {
-  top: 60px;
-  background: #fff !important;
-  min-height: 360px;
-}
-.o-btn {
-  text-transform: unset;
-  min-width: 352px;
-}
-a.c-header__utility.is-user.js-header-close-dropdown {
-  display: flex;
-}
-.c-header__utility.is-cart svg {
-  width: auto;
-}
-.cart-count {
-  right: -13px;
-}

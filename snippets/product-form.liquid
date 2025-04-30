@@ -14,8 +14,13 @@
 
   
     <div class="c-product-info__top">
-        <span class="c-product-info__categories o-text is-4">{{ snowboard_tags }}</span>
+        <span class="c-product-info__categories text strong">{{ snowboard_tags }}</span>
         <h2 class="c-product-info__name o-text is-2">{{ product.title }}</h2>
+        {% if product.type == "Snowboard" %}
+          {% comment %} <div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div> {% endcomment %}
+          <div id="epr-product-title-review" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}" data-product-title="{{ product.title }}"></div>
+        {% endif %}
+        <hr>
         <span class="c-product-info__price o-text is-3">{{ product.price | money }}</span>
 
         {% if section.settings.afterpay_text %}
@@ -24,18 +29,31 @@
         {% if section.settings.paypal_text %}
           <div class="c-product-info__paypal" style="margin-top: 5px;">or 3 interest-free installments of {{ product.price | divided_by: 3 | money }} by | <img style="display:inline;vertical-align: sub;" width="75px" src="{{ 'paypal-logo.png' | asset_url }}" alt="Afterpay"></div>
         {% endif %}
-
+        <hr>
         <p class="c-product-info__description medium">{{ product.metafields.snowboard_info.snowboard_description }}</p>
-        
-        {% if product.type == "Snowboard" %}
-          {% comment %} <div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div> {% endcomment %}
-          <div id="epr-product-title-review" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}" data-product-title="{{ product.title }}"></div>
-
-        {% endif %}
 
            {% comment %} form 'product', product, class:form_classes, novalidate: 'validate', data-product-form: ''
              {% endcomment %}
             <div class="c-product-info-form">
+
+              <div class="c-product-info-form__head">
+                <p class="text">Select Size</p>
+                {% if product.tags contains "Men's" or product.tags contains "Women's" or product.tags contains "Youth" %}
+                  <div class="find-size-pdp">
+                    <svg width="26" height="11" viewBox="0 0 26 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.5625 1H0.9375V10H24.5625V1Z" stroke="black" stroke-miterlimit="10"/>
+                      <path d="M4.3125 1V5.5" stroke="black" stroke-miterlimit="10"/>
+                      <path d="M11.0625 1V5.5" stroke="black" stroke-miterlimit="10"/>
+                      <path d="M17.8125 1V5.5" stroke="black" stroke-miterlimit="10"/>
+                      <path d="M7.6875 1V6.625" stroke="black" stroke-miterlimit="10"/>
+                      <path d="M14.4375 1V6.625" stroke="black" stroke-miterlimit="10"/>
+                      <path d="M21.1875 1V6.625" stroke="black" stroke-miterlimit="10"/>
+                    </svg>                                         
+                    <a class="open-find-my-size js-open-find-my-size">Find My Size</a>
+                  </div>
+                {% endif %}
+              </div>
+
                 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
 
               {% unless product.has_only_default_variant %}
@@ -61,11 +79,6 @@
                                   </div>
                               {% endfor %}
                           </div>
-
-                          {% comment %} {% if product.tags contains "Men's" or product.tags contains "Women's" %} {% endcomment %}
-                          {% if product.tags contains "Men's" or product.tags contains "Women's" or product.tags contains "Youth" %}
-                              <a class="open-find-my-size js-open-find-my-size">FIND MY SIZE</a>
-                          {% endif %}
 
                       {% endif %}
 
@@ -102,13 +115,13 @@
                         {{ 'products.product.add_to_cart' | t }}
                         {% endunless %}
                     </span>
-                  {% include 'capita-icon-cart' %}
+                  {% comment %} {% include 'capita-icon-cart' %} {% endcomment %}
                 </button>
               {% endif %}
 
               </div>
              {% comment %} {% endform %}  {% endcomment %}
-             <span class="c-product-info__shipping medium">{{ section.settings.caption_under__buy_cta }}</span>
+             <span class="c-product-info__shipping text">{{ section.settings.caption_under__buy_cta }}</span>
           </div>
 
     </div>

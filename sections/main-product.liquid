@@ -128,15 +128,6 @@
       <div class="c-product">
         <div class="c-product__content js-product-slider">
           <div class="c-product__thumbs">
-            <button class="c-product__thumb-nav-prev js-thumb-product-slider-prev" type="button">
-              <svg
-                viewBox="0 0 37 28"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M10 17.92L18.25 10L26.5 17.92" stroke="black" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </button>
             <div class="c-product__thumbs-slider swiper js-product-slider-thumbs">
               <div class="swiper-wrapper">
 
@@ -202,19 +193,10 @@
 
               </div>
             </div>
-            <button class="c-product__thumb-nav-next js-thumb-product-slider-next" type="button">
-              <svg
-                viewBox="0 0 37 29"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M10 10.9511L18.25 18.8711L26.5 10.9511" stroke="black" stroke-width="2"
-                  stroke-linecap="round" />
-              </svg>
-            </button>
+
           </div>
           <div class="c-product__main swiper js-product-slider-main js-main-product-magnify">
-            <button class="c-product__main-magnify" type="button">
+            {% comment %} <button class="c-product__main-magnify" type="button">
               <svg
                 viewBox="0 0 19 20"
                 fill="none"
@@ -224,7 +206,25 @@
                   d="M10.8976 6.81592H8.17647V4.09481C8.17647 3.91439 8.1048 3.74135 7.97722 3.61378C7.84965 3.4862 7.67662 3.41453 7.49619 3.41453C7.31577 3.41453 7.14274 3.4862 7.01517 3.61378C6.88759 3.74135 6.81592 3.91439 6.81592 4.09481V6.81592H4.09481C3.91439 6.81592 3.74135 6.88759 3.61378 7.01517C3.4862 7.14274 3.41453 7.31577 3.41453 7.49619C3.41453 7.67662 3.4862 7.84965 3.61378 7.97722C3.74135 8.1048 3.91439 8.17647 4.09481 8.17647H6.81592V10.8976C6.81592 11.078 6.88759 11.251 7.01517 11.3786C7.14274 11.5062 7.31577 11.5779 7.49619 11.5779C7.67662 11.5779 7.84965 11.5062 7.97722 11.3786C8.1048 11.251 8.17647 11.078 8.17647 10.8976V8.17647H10.8976C11.078 8.17647 11.251 8.1048 11.3786 7.97722C11.5062 7.84965 11.5779 7.67662 11.5779 7.49619C11.5779 7.31577 11.5062 7.14274 11.3786 7.01517C11.251 6.88759 11.078 6.81592 10.8976 6.81592ZM18.8636 17.8976L13.2445 12.2581C14.4724 10.7766 15.0824 8.87908 14.9478 6.9596C14.8132 5.04013 13.9443 3.24627 12.5217 1.95063C11.0991 0.654986 9.23211 -0.0428596 7.30845 0.00203965C5.38478 0.0469389 3.55234 0.831132 2.19174 2.19174C0.831132 3.55234 0.0469389 5.38478 0.00203965 7.30845C-0.0428596 9.23211 0.654986 11.0991 1.95063 12.5217C3.24627 13.9443 5.04013 14.8132 6.9596 14.9478C8.87908 15.0824 10.7766 14.4724 12.2581 13.2445L17.8772 18.8636C18.0074 18.9751 18.1748 19.0333 18.346 19.0267C18.5172 19.0201 18.6796 18.9491 18.8008 18.828C18.9219 18.7068 18.9929 18.5444 18.9995 18.3732C19.0061 18.202 18.9479 18.0346 18.8364 17.9044L18.8636 17.8976ZM1.3737 7.49619C1.3737 6.28528 1.73277 5.10156 2.40552 4.09472C3.07827 3.08788 4.03447 2.30314 5.15322 1.83974C6.27196 1.37635 7.50299 1.2551 8.69063 1.49134C9.87828 1.72758 10.9692 2.31069 11.8255 3.16693C12.6817 4.02318 13.2648 5.11411 13.5011 6.30175C13.7373 7.4894 13.616 8.72043 13.1526 9.83917C12.6892 10.9579 11.9045 11.9141 10.8977 12.5869C9.89083 13.2596 8.70711 13.6187 7.49619 13.6187C5.87241 13.6187 4.31512 12.9736 3.16693 11.8255C2.01874 10.6773 1.3737 9.11998 1.3737 7.49619Z"
                   fill="black" />
               </svg>
-            </button>
+            </button> {% endcomment %}
+
+            <div class="c-product__thumb-nav">
+              <button class="c-product__thumb-nav__prev js-thumb-product-slider-prev" type="button">
+                <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.5 0.999998C8.83502 0.999998 1 8.83501 1 18.5C1 28.165 8.83502 36 18.5 36C28.165 36 36 28.165 36 18.5C36 8.83502 28.165 0.999999 18.5 0.999998Z" fill="white" stroke="black" stroke-miterlimit="10"/>
+                  <path d="M21.498 27.7087L12.6313 18.842C12.436 18.6467 12.436 18.3301 12.6313 18.1349L21.498 9.26813" fill="white"/>
+                  <path d="M21.498 27.7087L12.6313 18.842C12.436 18.6467 12.436 18.3301 12.6313 18.1349L21.498 9.26813" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+                </svg>                                 
+              </button>
+              <button class="c-product__thumb-nav__next js-thumb-product-slider-next" type="button">
+                <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.5 36C28.165 36 36 28.165 36 18.5C36 8.83502 28.165 1 18.5 1C8.83502 1 1 8.83502 1 18.5C1 28.165 8.83502 36 18.5 36Z" fill="white" stroke="black" stroke-miterlimit="10"/>
+                  <path d="M15.502 9.29126L24.3687 18.158C24.564 18.3533 24.564 18.6699 24.3687 18.8651L15.502 27.7319" fill="white"/>
+                  <path d="M15.502 9.29126L24.3687 18.158C24.564 18.3533 24.564 18.6699 24.3687 18.8651L15.502 27.7319" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+                </svg>                  
+              </button>
+            </div>
+
             <div class="swiper-wrapper">
               <div class="swiper-slide">
 
@@ -543,6 +543,27 @@
 
   }
 
+  .c-product__thumb-nav {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+  }
+  .c-product-info__categories {
+    text-transform: unset;
+  }
+  .c-product__main hr {
+    margin: 30px 0;
+  }
+  .c-product-info-form__head {
+    display: flex;
+    justify-content: space-between;
+  }
+  .find-size-pdp {
+    display: flex;
+    align-items: center;
+  }
 {% endstyle %}
 
 {% schema %}
@@ -1923,12 +1944,10 @@
     position: relative;
   }
   .open-find-my-size {
-    font-weight: 500;
-    font-size: 18px;
     text-decoration: underline;
-    margin-top: 10px;
     display: block;
     cursor: pointer;
+    margin-left: 10px;
   }
   .border-error {
     position: absolute;
@@ -1987,6 +2006,29 @@
     main.main-page.other-product {
       margin-top: 80px;
     }
+  }
+
+  @media screen and (min-width: 100em) {
+    .c-product__content {
+        grid-template-columns: 100px 0.7fr 454px;
+    }
+
+  }
+  .c-product-info hr {
+    margin: 30px 0;
+  }
+  @media screen and (min-width: 64em) {
+    .c-product-info__sizes {
+      grid-gap: 10px;
+      margin-top: 20px;
+    }
+  }
+  .c-product-info__add-to-cart {
+    text-transform: unset;
+    padding-block: 17px;
+  }
+  .c-product-info__shipping {
+    margin-top: 15px;
   }
 {% endstyle %}
 

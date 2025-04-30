@@ -41,55 +41,55 @@
                   alt="{{ item.title | strip_html }}">
               </a>
               <div class="c-cart-item__info">
-                <span>{{ item.title }}</span>
-              </div>
-              <div class="c-cart-item__quantity">
-
-                <button
-                  class="c-cart-item__quantity-btn cart-qnt-btn-minus"
-                  type="button"
-                  data-id="{{ item.id }}"
-                  data-qnt="{{ item.quantity | minus: 1 }}">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"><circle
-                      cx="19.5"
-                      cy="19.5"
-                      r="7"
-                      stroke="white" /><path
-                      d="M22.498 19.5H16.498"
-                      stroke="white"
-                      stroke-linecap="round" /></svg>
-                </button>
-
-                <span class="c-cart-item__quantity-tot">{{ item.quantity }}</span>
-
-                <button
-                  class="c-cart-item__quantity-btn cart-qnt-btn-plus {{ itemPlusClass }}"
-                  type="button"
-                  data-id="{{ item.id }}"
-                  data-qnt="{{ item.quantity | plus: 1 }}">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"><circle
-                      cx="19.5"
-                      cy="19.5"
-                      r="7"
-                      stroke="white" /><path
-                      d="M22.498 19.5H16.498"
-                      stroke="white"
-                      stroke-linecap="round" /><path
-                      d="M19.5 16.0898V22.908"
-                      stroke="white"
-                      stroke-linecap="round" /></svg>
-                </button>
-
+                <strong>{{ item.title }}</strong>
+                <div class="c-cart-item__quantity">
+  
+                  <button
+                    class="c-cart-item__quantity-btn cart-qnt-btn-minus"
+                    type="button"
+                    data-id="{{ item.id }}"
+                    data-qnt="{{ item.quantity | minus: 1 }}">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"><circle
+                        cx="19.5"
+                        cy="19.5"
+                        r="7"
+                        stroke="#000" /><path
+                        d="M22.498 19.5H16.498"
+                        stroke="#000"
+                        stroke-linecap="round" /></svg>
+                  </button>
+  
+                  <span class="c-cart-item__quantity-tot">{{ item.quantity }}</span>
+  
+                  <button
+                    class="c-cart-item__quantity-btn cart-qnt-btn-plus {{ itemPlusClass }}"
+                    type="button"
+                    data-id="{{ item.id }}"
+                    data-qnt="{{ item.quantity | plus: 1 }}">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"><circle
+                        cx="19.5"
+                        cy="19.5"
+                        r="7"
+                        stroke="#000" /><path
+                        d="M22.498 19.5H16.498"
+                        stroke="#000"
+                        stroke-linecap="round" /><path
+                        d="M19.5 16.0898V22.908"
+                        stroke="#000"
+                        stroke-linecap="round" /></svg>
+                  </button>
+  
+                </div>
               </div>
               <span class="c-cart-item__price">{{ item.original_line_price | money }}</span>
             </div>

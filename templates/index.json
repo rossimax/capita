@@ -66,9 +66,9 @@
         "image_position": false,
         "product": "mercury-2026",
         "right_image": "shopify://shop_images/DSC05223-2.jpg",
-        "left_title": "Mercury",
-        "left_sup_title": "DIRECTIONAL / HYBRID CAMBER",
-        "right_text": "Brandon COCARD"
+        "left_title": "Aeronaut",
+        "left_sup_title": "Men’s Directional Camber",
+        "right_text": "Arthur Longo"
       }
     },
     "221611b0-cb5f-4aa9-af7b-309fbceb6127": {
@@ -97,6 +97,7 @@
     },
     "00a10f6f-b6ea-423b-9921-d1c287c306ea": {
       "type": "paragraph",
+      "disabled": true,
       "settings": {
         "black_style": "yes",
         "background_image": "shopify://shop_images/000_GRID_PAPER_BG_1_77e3e65d-56ba-4a1f-a70b-76408f3b3cbf.png",
@@ -106,6 +107,7 @@
     },
     "313c2a61-4905-454f-af07-4dc52801aa92": {
       "type": "hero-banner-text",
+      "disabled": true,
       "settings": {
         "box_shadow": 0,
         "image": "shopify://shop_images/MFG_-_OVERHEAD_VILLAGE.jpg",
@@ -116,6 +118,18 @@
         "logo_image": "shopify://shop_images/D_homepage_mothershiplogo.png",
         "cta_text": "ENTER THE MOTHERSHIP™",
         "cta_link": "shopify://pages/the-factory"
+      }
+    },
+    "hero_banner_text_box_DJcmQ6": {
+      "type": "hero-banner-text-box",
+      "name": "Banner Box",
+      "settings": {
+        "background": "shopify://shop_images/GRID-BACKGROUND-WHITE_COMPRESS.jpg",
+        "box_image": "shopify://shop_images/Clip_path_group.png",
+        "logo_image": "shopify://shop_images/D_homepage_box_mothershiplogo.png",
+        "text": "CAPiTA Snowboards are handcrafted inAustria with 100% self-generated clean energyat The MotherShip™.",
+        "cta_text": "Visit The Mothership™",
+        "cta_link": ""
       }
     }
   },
@@ -128,6 +142,7 @@
     "221611b0-cb5f-4aa9-af7b-309fbceb6127",
     "2056c58e-7330-430b-8fa5-de787867e504",
     "00a10f6f-b6ea-423b-9921-d1c287c306ea",
-    "313c2a61-4905-454f-af07-4dc52801aa92"
+    "313c2a61-4905-454f-af07-4dc52801aa92",
+    "hero_banner_text_box_DJcmQ6"
   ]
 }

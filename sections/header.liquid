@@ -163,6 +163,21 @@
             type="text"
             placeholder="Search"
           >
+            <svg style="display:none" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28.3 28.3">
+              <defs>
+                <style>
+                  .st0 {
+                    fill: none;
+                    stroke: #0b0204;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 2px;
+                  }
+                </style>
+              </defs>
+              <path class="st0" d="M12.3,20.8c4.7,0,8.6-3.8,8.6-8.6S17,3.7,12.3,3.7,3.7,7.5,3.7,12.3s3.8,8.6,8.6,8.6h0Z"></path>
+              <path class="st0" d="M18.5,18.5l6.2,6.2"></path>
+            </svg>
         </form>
         <div id="search-result"></div>
       </div>
@@ -368,17 +383,17 @@ a.c-header__utility.is-user.js-header-close-dropdown {
 }
 .c-header-search__input::after {
   content: "";
-    display: block;
-    flex-shrink: 0;
-    width: 30px;
-    height: 40px;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGl2ZWxsb18xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI4LjMgMjguMyI+CiAgPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI5LjMuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDIuMS4wIEJ1aWxkIDE1MSkgIC0tPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuc3QwIHsKICAgICAgICBmaWxsOiBub25lOwogICAgICAgIHN0cm9rZTogIzBiMDIwNDsKICAgICAgICBzdHJva2UtbGluZWNhcDogcm91bmQ7CiAgICAgICAgc3Ryb2tlLWxpbmVqb2luOiByb3VuZDsKICAgICAgICBzdHJva2Utd2lkdGg6IDJweDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTEyLjMsMjAuOGM0LjcsMCw4LjYtMy44LDguNi04LjZTMTcsMy43LDEyLjMsMy43LDMuNyw3LjUsMy43LDEyLjNzMy44LDguNiw4LjYsOC42aDBaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTE4LjUsMTguNWw2LjIsNi4yIi8+Cjwvc3ZnPg==);
-    background-repeat: no-repeat;
-    background-position: 0;
-    background-size: 30px;
-    position: absolute;
-    top: -2px;
-    right: 16px;
+  display: block;
+  flex-shrink: 0;
+  width: 30px;
+  height: 40px;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGl2ZWxsb18xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI4LjMgMjguMyI+CiAgPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI5LjMuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDIuMS4wIEJ1aWxkIDE1MSkgIC0tPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuc3QwIHsKICAgICAgICBmaWxsOiBub25lOwogICAgICAgIHN0cm9rZTogIzBiMDIwNDsKICAgICAgICBzdHJva2UtbGluZWNhcDogcm91bmQ7CiAgICAgICAgc3Ryb2tlLWxpbmVqb2luOiByb3VuZDsKICAgICAgICBzdHJva2Utd2lkdGg6IDJweDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTEyLjMsMjAuOGM0LjcsMCw4LjYtMy44LDguNi04LjZTMTcsMy43LDEyLjMsMy43LDMuNyw3LjUsMy43LDEyLjNzMy44LDguNiw4LjYsOC42aDBaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTE4LjUsMTguNWw2LjIsNi4yIi8+Cjwvc3ZnPg==);
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: 30px;
+  position: absolute;
+  top: -2px;
+  right: 16px;
 }
 .c-header-cart__total,
 .c-cart-item__price,
@@ -404,6 +419,9 @@ input.cart-submit.c-header-cart__checkout-btn {
   background-color: #ffffffe8;
   -webkit-backdrop-filter: unset;
   backdrop-filter: unset;
+}
+.c-header__dropdown-panel.c-header-cart.js-header-toggle-dropdown {
+    background: #ffffffe8;
 }
 .c-header__top {
     background: #ffffffe8;

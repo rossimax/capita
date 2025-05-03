@@ -143,15 +143,7 @@
         {% endif %}
       </div>
 
-      {% if product.metafields.snowboard_intro.product_video != blank %}
-      <div class="c-product-tech__video">
-        <iframe id="youtube-{{ product.metafields.snowboard_intro.product_video }}" frameborder="0" allowfullscreen="1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            title="Player for CAPiTA Snowboards | {{ product.title | strip_html }}" width="100%" height="100%"
-            src="https://www.youtube.com/embed/{{ product.metafields.snowboard_intro.product_video }}?autoplay=0;controls=0;disablekb=1;playsinline=1;cc_load_policy=0;cc_lang_pref=auto;">
-          </iframe>
-        </div>
-      {% endif %}
+
       <span id="find-a-shop"></span>
   
         {% if product.metafields.accentuate.find_a_shop %}
@@ -190,7 +182,189 @@
     <img class="c-detail-modal__full-board js-detail-modal-image" src="" alt="capita hotspot board" />
   </div>
 </div>
-<div class="c-product-details js-product-details">
+
+<div class="u-container mt-5">
+  <div class="u-content wider">
+  
+    <div class="u-toggle">
+
+      <div class="u-toggle__head js-open-toggle">
+        <h3 class="strong">Construction</h3>
+        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.17773 13.6777C1.17773 20.5813 6.77417 26.1777 13.6777 26.1777C20.5813 26.1777 26.1777 20.5813 26.1777 13.6777C26.1777 6.77417 20.5813 1.17773 13.6777 1.17773C6.77417 1.17773 1.17773 6.77417 1.17773 13.6777Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M13.6772 8.17737L13.6772 19.1783" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+          <path d="M19.1777 13.6771L8.17676 13.6771" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="u-toggle__content">
+
+        <div class="construction-picture c-constructions">
+
+          {% for hotspot in product.metafields.construction_hotspot.board_construction_hotspot_title %}
+            <div class="c-hotspot" style="
+                --x-mob: {{ product.metafields.construction_hotspot.coordinates_x_mob[forloop.index0] }}; 
+                --x-desk: {{ product.metafields.construction_hotspot.coordinates_x_desk[forloop.index0] }}; 
+                --y-mob: {{ product.metafields.construction_hotspot.coordinates_y_mob[forloop.index0] }}; 
+                --y-desk: {{ product.metafields.construction_hotspot.coordinates_y_desk[forloop.index0] }};
+                " data-title="{{ hotspot }}"
+              data-descr="{{ product.metafields.construction_hotspot.board_construction_hotspot_description[forloop.index0].html }}"
+              data-image="{{ product.metafields.construction_hotspot.board_construction_hotspot_image[forloop.index0] }}"
+              data-image-icon="{{ product.metafields.construction_hotspot['3d_board_construction_hotspot_image_icon'][forloop.index0] }}">
+              <div class="c-hotspot__btn js-constructions-hotspot-btn">
+                <div class="construct-data-num"><span>{{ forloop.index }}</span></div>
+              </div>
+            </div>
+            {% endfor %}
+
+            <picture><img class="c-constructions__image" src="{{ product.metafields.construction_hotspot['3d_board_image'] }}" /></picture>
+
+        </div>
+
+        <div class="construction-datas ">
+          {% for hotspot in product.metafields.construction_hotspot.board_construction_hotspot_title %}
+
+            <div class="construction-data-single">
+              <div class="construction-data-single__content">
+                <div class="construct-data-num"><span>{{ forloop.index }}</span></div>
+                <img src="{{ product.metafields.construction_hotspot['3d_board_construction_hotspot_image_icon'][forloop.index0] }}" alt="">
+                <div class="construct-data-title strong"> {{ hotspot }} </div>
+              </div>
+              <div class="construction-data-single__desc text">{{ product.metafields.construction_hotspot.board_construction_hotspot_description[forloop.index0].html }}</div>
+              {% if product.metafields.construction_hotspot.board_construction_hotspot_image[forloop.index0] %}
+                <img class="hotspot-image-constr" src="{{ product.metafields.construction_hotspot.board_construction_hotspot_image[forloop.index0] }}" alt="">
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="u-container mt-5">
+  <div class="u-content wider">
+  
+    <div class="u-toggle">
+
+      <div class="u-toggle__head js-open-toggle">
+        <h3 class="strong">Intel</h3>
+        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.17773 13.6777C1.17773 20.5813 6.77417 26.1777 13.6777 26.1777C20.5813 26.1777 26.1777 20.5813 26.1777 13.6777C26.1777 6.77417 20.5813 1.17773 13.6777 1.17773C6.77417 1.17773 1.17773 6.77417 1.17773 13.6777Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M13.6772 8.17737L13.6772 19.1783" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+          <path d="M19.1777 13.6771L8.17676 13.6771" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="u-toggle__content">
+          <div class="c-accolades">
+            {% if product.metafields.accentuate.award_title != blank %}
+              <span class="c-accolades__title subtitle strong">{{
+                product.metafields.accentuate.award_title }}
+              </span>
+              {% endif %}
+              {% if product.metafields.accentuate.award_description.html != blank %}
+              <div class="text">
+                {{ product.metafields.accentuate.award_description.html }}
+              </div>
+            {% endif %}
+            {% if product.metafields.snowboard_info.award_video != blank %}
+              <div class="c-accolades__video">
+                <iframe src="https://www.youtube.com/embed/{{ product.metafields.snowboard_info.award_video }}"
+                  title="Capita Award | {{ product.metafields.accentuate.award_title }}" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen="allowfullscreen"></iframe>
+              </div>
+            {% endif %}
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="u-container mt-5">
+  <div class="u-content wider">
+  
+    <div class="u-toggle">
+
+      <div class="u-toggle__head js-open-toggle">
+        <h3 class="strong">Specs</h3>
+        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.17773 13.6777C1.17773 20.5813 6.77417 26.1777 13.6777 26.1777C20.5813 26.1777 26.1777 20.5813 26.1777 13.6777C26.1777 6.77417 20.5813 1.17773 13.6777 1.17773C6.77417 1.17773 1.17773 6.77417 1.17773 13.6777Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M13.6772 8.17737L13.6772 19.1783" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+          <path d="M19.1777 13.6771L8.17676 13.6771" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="u-toggle__content">
+          <div class="c-size-chart">
+
+
+                {% comment %} {{ product.metafields.snowboard_info.dimensions }} {% endcomment %}
+
+                <div class="size-chart-new">
+                  <div class="size-chart-new__variants-name">
+                    {% for variant in product.variants %}
+
+                      <div class="strong js-variant-size-name c-product-info__size {% if forloop.index == 1 %}active{% endif %}" data-variant-name="{{ variant.title }}">
+                        {{ variant.title }}
+                      </div>
+                      
+                    {% endfor %}
+                  </div>
+                  <div class="size-chart-new__variants-specs">
+                    {% for variant in product.variants %}
+
+                      <div class="variant-specs js-variant-size-specs {% if forloop.index != 1 %}hide{% endif %}" data-variant-name="{{ variant.title }}">
+
+                        <div class="variant-specs__row">
+                          <span>Effective Edge (mm)</span>
+                          <span>{{ variant.metafields.accentuate.effective_edge_mm }}</span>
+                        </div>
+
+                        <div class="variant-specs__row">
+                          <span>Waist</span>
+                          <span>{{ variant.metafields.accentuate.waist }}</span>
+                        </div>
+                        
+                        <div class="variant-specs__row">
+                          <span>Nose / Tail</span>
+                          <span>{{ variant.metafields.accentuate.nose__tail }}</span>
+                        </div>
+
+                        <div class="variant-specs__row">
+                          <span>Sidecut</span>
+                          <span>{{ variant.metafields.accentuate.sidecut }}</span>
+                        </div>
+
+                        <div class="variant-specs__row">
+                          <span>Ref. Stance (cm/in)</span>
+                          <span>{{ variant.metafields.accentuate.ref_stance_cmin }}</span>
+                        </div>
+                        
+                        <div class="variant-specs__row">
+                          <span>Suggested Weight (lb/kg)</span>
+                          <span>{{ variant.metafields.accentuate.suggested_weight_lbkg }}</span>
+                        </div>
+
+                        <div class="variant-specs__row">
+                          <span>Suggested Boot Size</span>
+                          <span>{{ variant.metafields.accentuate.suggested_boot_size }}</span>
+                        </div>
+
+                      </div>
+                      
+                    {% endfor %}
+                  </div>
+                </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% comment %} <div class="c-product-details js-product-details">
   <div class="u-container">
     <div class="c-product-details__content">
       <div class="c-product-details__tabs js-details-tabs">
@@ -309,9 +483,22 @@
       </div>
     </div>
   </div>
-</div>
+</div> {% endcomment %}
+
+
 <div class="u-container">
+
+  
   <div class="c-info"> 
+    {% if product.metafields.snowboard_intro.product_video != blank %}
+      <div class="c-product-tech__video">
+        <iframe id="youtube-{{ product.metafields.snowboard_intro.product_video }}" frameborder="0" allowfullscreen="1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            title="Player for CAPiTA Snowboards | {{ product.title | strip_html }}" width="100%" height="100%"
+            src="https://www.youtube.com/embed/{{ product.metafields.snowboard_intro.product_video }}?autoplay=0;controls=0;disablekb=1;playsinline=1;cc_load_policy=0;cc_lang_pref=auto;">
+          </iframe>
+        </div>
+      {% endif %}
 
     <div class="c-info-card js-info-card-trigger" data-card="1">
       <picture>
@@ -320,7 +507,12 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_product_icon_cleanenergy.png?v=1693649707"
           alt="Capita clean energy" />
       </picture>
-      <span class="c-info-card__learn-more">learn more</span>
+      <span class="c-info-card__learn-more btn-green">Learn more about The MotherShip™ <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.5 26C20.4036 26 26 20.4036 26 13.5C26 6.59644 20.4036 1 13.5 1C6.59644 1 1 6.59644 1 13.5C1 20.4036 6.59644 26 13.5 26Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
+        <path d="M8 13.5H19.001" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+        <path d="M13.5 7.99951V19.0005" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+        </svg>
+        </span>
     </div>
     <div class="c-info-card-modal js-info-card" data-card="1" style="pointer-events: none; opacity: 0; visibility: hidden;">
         <div class="c-info-card-modal__bg js-info-card-bg"></div>
@@ -371,7 +563,12 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_product_icon_nfc.png?v=1693912750"
           alt="Capita NFC" />
       </picture>
-      <span class="c-info-card__learn-more">learn more</span>
+      <span class="c-info-card__learn-more btn-black">How does NFC work on CAPiTA? <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.5 26C20.4036 26 26 20.4036 26 13.5C26 6.59644 20.4036 1 13.5 1C6.59644 1 1 6.59644 1 13.5C1 20.4036 6.59644 26 13.5 26Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+        <path d="M8 13.5H19.001" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+        <path d="M13.5 7.99951V19.0005" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+        </svg>
+        </span>
     </div>
     <div class="c-info-card-modal js-info-card" data-card="2" style="pointer-events: none; opacity: 0; visibility: hidden;">
         <div class="c-info-card-modal__bg js-info-card-bg"></div>

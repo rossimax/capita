@@ -82,6 +82,11 @@ strong,
 }
 .btn-green {
   background: #E2FF61 !important;
+  color: #000;
+}
+.btn-black {
+  background: #000 !important;
+  color: #fff;
 }
 
 hl {
@@ -686,7 +691,7 @@ span.input-error-message.site_newsletter-error {
   margin-left: 20px;
 }
 .c-related-products {
-  background-image: url(//capitasnowboarding.com/cdn/shop/files/000_GRID_PAPER_BG_1_77e3e65d-56ba-4a1f-a70b-76408f3b3cbf.png?v=1690637051);
+  background-image: url(https://cdn.shopify.com/s/files/1/0231/7366/0752/files/GRID-BACKGROUND_BLACK_COMPRESS.jpg?v=1745924560);
   background-color: #000;
   color: #fff;
 }

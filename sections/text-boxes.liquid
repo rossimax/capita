@@ -1,498 +1,497 @@
-<div class="section-text-boxes"
-    style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;">
-    <div class="u-container">
-        <div class="u-content">
-            <div class="text-boxes">
-                <div class="text-boxes__head">
-                    {% if section.settings.title != blank %}
-                    <h2 class="o-text nocase">{{ section.settings.title }}</h2>
-                    {% endif %}
-                </div>
-                <div class="text-boxes__cards row">
-                    {% for block in section.blocks %}
-                    {% if block.settings.text_left %}
-                    {% assign row_direction = "row" %}
-                    {% else %}
-                    {% assign row_direction = "row-reverse" %}
-                    {% endif %}
-                    <div class="text-boxes__head__content {{ row_direction }}">
-                        <div class="text-boxes__head__content__paragraph col-6">
-                            <h5 class="text-boxes__head__content__paragraph__title o-text is-3 nocase">
-                                {{ block.settings.title }}
-                            </h5>
-                            <div class="text-boxes__head__content__paragraph__text o-text is-4 is-regular">
-                                {{ block.settings.paragraph }}
-                            </div>
-                        </div>
-                        <div class="text-boxes__head__content__media col-6">
-                            {% if block.settings.video %}
-                            {% assign video = block.settings.video | video_tag: image_size: 'master', autoplay: true,
-                            loop: true, muted: true, controls: false %}
-                            {{ video }}
-                            {% else %}
-                            <img src="{{ block.settings.image | image_url }}" alt="capita">
-                            {% endif %}
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-                <div class="text-boxes__foot">
-                    <div class="text-boxes__foot__title">
-                        {% if section.settings.title_bottom != blank %}
-                        <h2 class="title">{{ section.settings.title_bottom }}</h2>
-                        {% endif %}
-                    </div>
-                    <div class="text-boxes__foot__ctas">
-                        {% liquid
-                        if section.settings.arrow_type_1 == "arrow_normal"
-                        assign arrow_cta_1 = "icon-arrow-capita"
-                        elsif section.settings.arrow_type_1 == "arrow_play"
-                        assign arrow_cta_1 = "icon-arrow-play"
-                        else
-                        assign arrow_cta_1 = blank
-                        endif
-                        -%}
-                        {% if section.settings.cta_text_1 != blank %}
-                        <a class="o-btn is-big black text-boxes__foot__btn" href="{{ section.settings.cta_link_1 }}">{{
-                            section.settings.cta_text_1 }} {% if arrow_cta_1 != blank %}{% include arrow_cta_1 %}{%
-                            endif %}</a>
-                        {% endif %}
-                        {% liquid
-                        if section.settings.arrow_type_2 == "arrow_normal"
-                        assign arrow_cta_2 = "icon-arrow-capita"
-                        elsif section.settings.arrow_type_2 == "arrow_play"
-                        assign arrow_cta_2 = "icon-arrow-play"
-                        else
-                        assign arrow_cta_2 = blank
-                        endif
-                        -%}
-                        {% if section.settings.cta_text_2 != blank %}
-                        <a class="o-btn is-big black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">{{
-                            section.settings.cta_text_2 }} {% if arrow_cta_2 != blank %}{% include arrow_cta_2 %}{%
-                            endif %}</a>
-                        {% endif %}
-                        {% liquid
-                        if section.settings.arrow_type_3 == "arrow_normal"
-                        assign arrow_cta_3 = "icon-arrow-capita"
-                        elsif section.settings.arrow_type_3 == "arrow_play"
-                        assign arrow_cta_3 = "icon-arrow-play"
-                        else
-                        assign arrow_cta_3 = blank
-                        endif
-                        -%}
-                        {% if section.settings.cta_text_3 != blank %}
-                        <a class="o-btn is-big black text-boxes__foot__btn js-modal-youtube">{{
-                            section.settings.cta_text_3 }} {% if arrow_cta_3 != blank %}{% include arrow_cta_3 %}{%
-                            endif %}</a>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
+<div
+  class="section-text-boxes"
+  style="padding-top: {{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="u-container">
+    <div class="u-content">
+      <div class="text-boxes">
+        <div class="text-boxes__head">
+          {% if section.settings.title != blank %}
+            <h2 class="o-text nocase">{{ section.settings.title }}</h2>
+          {% endif %}
         </div>
+        <div class="text-boxes__cards row">
+          {% for block in section.blocks %}
+            {% if block.settings.text_left %}
+              {% assign row_direction = 'row' %}
+            {% else %}
+              {% assign row_direction = 'row-reverse' %}
+            {% endif %}
+            <div class="text-boxes__head__content {{ row_direction }}">
+              <div class="text-boxes__head__content__paragraph col-6">
+                <h5 class="text-boxes__head__content__paragraph__title o-text is-3 nocase">
+                  {{ block.settings.title }}
+                </h5>
+                <div class="text-boxes__head__content__paragraph__text o-text is-4 is-regular">
+                  {{ block.settings.paragraph }}
+                </div>
+              </div>
+              <div class="text-boxes__head__content__media col-6">
+                {% if block.settings.video %}
+                  {% assign video = block.settings.video
+                    | video_tag: image_size: 'master', autoplay: true, loop: true, muted: true, controls: false
+                  %}
+                  {{ video }}
+                {% else %}
+                  <img src="{{ block.settings.image | image_url }}" alt="capita">
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="text-boxes__foot">
+          <div class="text-boxes__foot__title">
+            {% if section.settings.title_bottom != blank %}
+              <h2 class="title">{{ section.settings.title_bottom }}</h2>
+            {% endif %}
+          </div>
+          <div class="text-boxes__foot__ctas">
+            {% liquid
+              if section.settings.arrow_type_1 == 'arrow_normal'
+                assign arrow_cta_1 = 'icon-arrow-capita'
+              elsif section.settings.arrow_type_1 == 'arrow_play'
+                assign arrow_cta_1 = 'icon-arrow-play'
+              else
+                assign arrow_cta_1 = blank
+              endif
+            -%}
+            {% if section.settings.cta_text_1 != blank %}
+              <a class="btn-action btn-white" href="{{ section.settings.cta_link_1 }}">
+                {{- section.settings.cta_text_1 }}
+              </a>
+            {% endif %}
+            {% liquid
+              if section.settings.arrow_type_2 == 'arrow_normal'
+                assign arrow_cta_2 = 'icon-arrow-capita'
+              elsif section.settings.arrow_type_2 == 'arrow_play'
+                assign arrow_cta_2 = 'icon-arrow-play'
+              else
+                assign arrow_cta_2 = blank
+              endif
+            -%}
+            {% if section.settings.cta_text_2 != blank %}
+              <a class="btn-link btn-white" href="{{ section.settings.cta_link_2 }}">
+                {{- section.settings.cta_text_2 }}
+              </a>
+            {% endif %}
+            {% liquid
+              if section.settings.arrow_type_3 == 'arrow_normal'
+                assign arrow_cta_3 = 'icon-arrow-capita'
+              elsif section.settings.arrow_type_3 == 'arrow_play'
+                assign arrow_cta_3 = 'icon-arrow-play'
+              else
+                assign arrow_cta_3 = blank
+              endif
+            -%}
+            {% if section.settings.cta_text_3 != blank %}
+              <a class="btn-action btn-white js-modal-youtube">
+                {{- section.settings.cta_text_3 }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
 {% if section.settings.cta_link_3_yt != blank %}
-<div class="modal-youtube hide">
+  <div class="modal-youtube hide">
     <div class="modal-youtube__close js-modal-youtube-close">{% include 'icon-close' %}</div>
-    <iframe width="90%" height="80%" src="{{ section.settings.cta_link_3_yt }}" title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-</div>
+    <iframe
+      width="90%"
+      height="80%"
+      src="{{ section.settings.cta_link_3_yt }}"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
 {% endif %}
 
 {% schema %}
 {
-"name": "Text Boxes",
-"settings": [
-{
-"type": "number",
-"id": "padding_top",
-"label": "Padding Top",
-"default": 20
-},
-{
-"type": "number",
-"id": "padding_bottom",
-"label": "Padding Bottom",
-"default": 20
-},
-{
-"type": "html",
-"id": "title",
-"label": "Title"
-},
-{
-"type": "html",
-"id": "title_bottom",
-"label": "Title Bottom"
-},
-{
-"type": "text",
-"id": "cta_text_1",
-"label": "CTA Text 1"
-},
-{
-"type": "url",
-"id": "cta_link_1",
-"label": "CTA Link 1"
-},
-{
-"type": "select",
-"id": "arrow_type_1",
-"label": "Arrow Type",
-"options": [
-{
-"value": "none",
-"label": "None"
-},
-{
-"value": "arrow_normal",
-"label": "Arrow Normal"
-},
-{
-"value": "arrow_play",
-"label": "Arrow Play"
-}
-],
-"default": "none"
-},
-{
-"type": "text",
-"id": "cta_text_2",
-"label": "CTA Text 2"
-},
-{
-"type": "url",
-"id": "cta_link_2",
-"label": "CTA Link 2"
-},
-{
-"type": "select",
-"id": "arrow_type_2",
-"label": "Arrow Type",
-"options": [
-{
-"value": "none",
-"label": "None"
-},
-{
-"value": "arrow_normal",
-"label": "Arrow Normal"
-},
-{
-"value": "arrow_play",
-"label": "Arrow Play"
-}
-],
-"default": "none"
-},
-{
-"type": "text",
-"id": "cta_text_3",
-"label": "CTA Text 3"
-},
-{
-"type": "url",
-"id": "cta_link_3_yt",
-"label": "YouTube Video link"
-},
-{
-"type": "select",
-"id": "arrow_type_3",
-"label": "Arrow Type",
-"options": [
-{
-"value": "none",
-"label": "None"
-},
-{
-"value": "arrow_normal",
-"label": "Arrow Normal"
-},
-{
-"value": "arrow_play",
-"label": "Arrow Play"
-}
-],
-"default": "none"
-}
-],
-"blocks": [
-{
-"type": "box",
-"name": "Box",
-"settings": [
-{
-"type": "checkbox",
-"id": "text_left",
-"label": "Text left"
-},
-{
-"type": "video",
-"id": "video",
-"label": "Video"
-},
-{
-"type": "image_picker",
-"id": "image",
-"label": "Image"
-},
-{
-"type": "text",
-"id": "title",
-"label": "Title"
-},
-{
-"type": "html",
-"id": "paragraph",
-"label": "Paragraph"
-}
-]
-}
-],
-"presets": [
-{
-"name": "Text Boxes"
-}
-]
+  "name": "Text Boxes",
+  "settings": [
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 20
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 20
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "html",
+      "id": "title_bottom",
+      "label": "Title Bottom"
+    },
+    {
+      "type": "text",
+      "id": "cta_text_1",
+      "label": "CTA Text 1"
+    },
+    {
+      "type": "url",
+      "id": "cta_link_1",
+      "label": "CTA Link 1"
+    },
+    {
+      "type": "select",
+      "id": "arrow_type_1",
+      "label": "Arrow Type",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "arrow_normal",
+          "label": "Arrow Normal"
+        },
+        {
+          "value": "arrow_play",
+          "label": "Arrow Play"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "cta_text_2",
+      "label": "CTA Text 2"
+    },
+    {
+      "type": "url",
+      "id": "cta_link_2",
+      "label": "CTA Link 2"
+    },
+    {
+      "type": "select",
+      "id": "arrow_type_2",
+      "label": "Arrow Type",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "arrow_normal",
+          "label": "Arrow Normal"
+        },
+        {
+          "value": "arrow_play",
+          "label": "Arrow Play"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "cta_text_3",
+      "label": "CTA Text 3"
+    },
+    {
+      "type": "url",
+      "id": "cta_link_3_yt",
+      "label": "YouTube Video link"
+    },
+    {
+      "type": "select",
+      "id": "arrow_type_3",
+      "label": "Arrow Type",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "arrow_normal",
+          "label": "Arrow Normal"
+        },
+        {
+          "value": "arrow_play",
+          "label": "Arrow Play"
+        }
+      ],
+      "default": "none"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "box",
+      "name": "Box",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "text_left",
+          "label": "Text left"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "html",
+          "id": "paragraph",
+          "label": "Paragraph"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Boxes"
+    }
+  ]
 }
 {% endschema %}
 
 {% stylesheet %}
+  .single-text-boxes__content {
+    background: #ececec;
+    width: calc(100% - 60px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    border-radius: 30px;
+    margin: 0 auto;
+    height: 460px;
+  }
+  .text-boxes__foot {
+    text-align: center;
+  }
+  .text-boxes video {
+    border-radius: 30px;
+    aspect-ratio: 352 / 170;
+    object-fit: cover;
+  }
+  .text-boxes__head__content {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+  }
+  .text-boxes__head__content.row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+  .text-boxes__head__content.row .text-boxes__head__content__paragraph {
+    padding-right: 20px;
+  }
+  .text-boxes__head__content.row .text-boxes__head__content__media {
+    padding-left: 20px;
+  }
+  .text-boxes__head__content.row-reverse .text-boxes__head__content__paragraph {
+    padding-left: 20px;
+  }
+  .text-boxes__head__content.row-reverse .text-boxes__head__content__media {
+    padding-right: 20px;
+  }
+  .text-boxes__head__content__paragraph__title {
+    margin-bottom: 15px;
+  }
+  .text-boxes__head__content__paragraph__text {
+    font-size: 18px;
+  }
+  .single-text-boxes__content__title {
+    text-align: center;
+    line-height: 1;
+    margin-top: 30px;
+    font-size: 36px;
+    height: 110px;
+  }
+  .text-boxes__foot__btn {
+    width: 740px;
+    text-transform: unset;
+  }
+  .text-boxes__foot {
+    margin-top: 20px;
+  }
+  .text-boxes__foot__title {
+    margin: 60px auto;
+  }
+  .text-boxes__foot__title h2 {
+    font-size: 60px;
+  }
+  .text-boxes__foot__ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-boxes__foot__ctas a {
+    margin-bottom: 20px;
+  }
+  .text-boxes__head__content__media.col-6 img {
+    border-radius: 30px;
+  }
+  .modal-youtube {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0000007d;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    z-index: 999;
+  }
+  .modal-youtube.hide {
+    display: none;
+  }
+  .modal-youtube__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .modal-youtube__close svg {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 1px solid;
+    background: #ffffffd1;
+    cursor: pointer;
+  }
+  .js-modal-youtube {
+    cursor: pointer;
+  }
 
-.single-text-boxes__content {
-background: #ececec;
-width: calc(100% - 60px);
-display: flex;
-align-items: center;
-flex-direction: column;
-justify-content: space-between;
-padding: 50px;
-border-radius: 30px;
-margin: 0 auto;
-height: 460px;
-}
-.text-boxes__foot {
-text-align: center;
-}
-.text-boxes video {
-border-radius: 30px;
-aspect-ratio: 352 / 170;
-object-fit: cover;
-}
-.text-boxes__head__content {
-margin-top: 40px;
-margin-bottom: 40px;
-line-height: 1.4;
-}
-.text-boxes__head__content.row-reverse {
-display: flex;
-flex-direction: row-reverse;
-flex-wrap: wrap;
-}
-.text-boxes__head__content.row .text-boxes__head__content__paragraph {
-padding-right: 20px;
-}
-.text-boxes__head__content.row .text-boxes__head__content__media {
-padding-left: 20px;
-}
-.text-boxes__head__content.row-reverse .text-boxes__head__content__paragraph {
-padding-left: 20px;
-}
-.text-boxes__head__content.row-reverse .text-boxes__head__content__media {
-padding-right: 20px;
-}
-.text-boxes__head__content__paragraph__title {
-margin-bottom: 15px;
-}
-.text-boxes__head__content__paragraph__text {
-font-size: 18px;
-}
-.single-text-boxes__content__title {
-text-align: center;
-line-height: 1;
-margin-top: 30px;
-font-size: 36px;
-height: 110px;
-}
-.text-boxes__foot__btn {
-width: 740px;
-text-transform: unset;
-}
-.text-boxes__foot {
-margin-top: 20px;
-}
-.text-boxes__foot__title {
-margin: 60px auto;
-}
-.text-boxes__foot__title h2 {
-font-size: 60px;
-}
-.text-boxes__foot__ctas {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.text-boxes__foot__ctas a {
-margin-bottom: 20px;
-}
-.text-boxes__head__content__media.col-6 img {
-border-radius: 30px;
-}
-.modal-youtube {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-background: #0000007d;
-display: flex;
-justify-content: center;
-height: 100vh;
-align-items: center;
-z-index: 999;
-}
-.modal-youtube.hide {
-display: none;
-}
-.modal-youtube__close {
-position: absolute;
-top: 20px;
-right: 20px;
-}
-.modal-youtube__close svg {
-height: 50px;
-width: 50px;
-border-radius: 50%;
-padding: 3px;
-border: 1px solid;
-background: #ffffffd1;
-cursor: pointer;
-}
-.js-modal-youtube {
-cursor: pointer;
-}
+  @media screen and (max-width: 1190px) {
+    .single-text-boxes__content__title {
+      font-size: 24px;
+    }
+    .single-text-boxes__content {
+      height: 340px;
+      width: calc(100% - 10px);
+    }
+    .single-text-boxes__content img {
+      max-width: 130px;
+    }
+  }
 
-@media screen and (max-width: 1190px) {
-.single-text-boxes__content__title {
-font-size: 24px;
-}
-.single-text-boxes__content {
-height: 340px;
-width: calc(100% - 10px);
-}
-.single-text-boxes__content img {
-max-width: 130px;
-}
-}
+  @media screen and (max-width: 768px) {
+    .section-text-boxes {
+      padding: 20px 0 !important;
+    }
+    .text-boxes__head__content {
+      margin-top: 0;
+    }
+    .text-boxes__head__content__paragraph.col-6 {
+      margin-bottom: 30px;
+      padding-right: 0;
+    }
+    .text-boxes__head {
+      margin: 20px 0;
+    }
 
-@media screen and (max-width: 768px) {
-.section-text-boxes {
-padding: 20px 0 !important;
-}
-.text-boxes__head__content {
-margin-top: 0;
-}
-.text-boxes__head__content__paragraph.col-6 {
-margin-bottom: 30px;
-padding-right: 0;
-}
-.text-boxes__head {
-margin: 20px 0;
-}
+    .text-boxes__foot__btn {
+      width: 100%;
+    }
+    .single-text-boxes__content__title {
+      font-size: 16px;
+      height: unset;
+      margin-top: 10px;
+    }
+    .single-text-boxes__content {
+      padding: 30px 0;
+      height: 200px;
+    }
+    .single-text-boxes__content img {
+      max-width: 80px;
+    }
+    .text-boxes__cta {
+      margin-top: 40px;
+    }
+    .text-boxes__head__content.row .text-boxes__head__content__paragraph {
+      padding-right: 0;
+    }
+    .text-boxes__head__content.row .text-boxes__head__content__media {
+      padding-left: 0;
+    }
+    .text-boxes__head__content.row-reverse .text-boxes__head__content__paragraph {
+      padding-left: 0;
+    }
+    .text-boxes__head__content.row-reverse .text-boxes__head__content__media {
+      padding-right: 0;
+    }
+    .text-boxes__foot__title h2 {
+      font-size: 36px;
+    }
+    .text-boxes__foot__title br {
+      display: none;
+    }
+    .text-boxes__foot__title {
+      margin: 30px auto;
+    }
+    .text-boxes__head__content__paragraph__text {
+      font-size: 16px;
+    }
+    .modal-youtube iframe {
+      height: 30% !important;
+    }
+  }
 
-.text-boxes__foot__btn {
-width: 100%;
-}
-.single-text-boxes__content__title {
-font-size: 16px;
-height: unset;
-margin-top: 10px
-}
-.single-text-boxes__content {
-padding: 30px 0;
-height: 200px;
-}
-.single-text-boxes__content img {
-max-width: 80px;
-}
-.text-boxes__cta {
-margin-top: 40px;
-}
-.text-boxes__head__content.row .text-boxes__head__content__paragraph {
-padding-right: 0;
-}
-.text-boxes__head__content.row .text-boxes__head__content__media {
-padding-left: 0;
-}
-.text-boxes__head__content.row-reverse .text-boxes__head__content__paragraph {
-padding-left: 0;
-}
-.text-boxes__head__content.row-reverse .text-boxes__head__content__media {
-padding-right: 0;
-}
-.text-boxes__foot__title h2 {
-font-size: 36px;
-}
-.text-boxes__foot__title br {
-display: none;
-}
-.text-boxes__foot__title {
-margin: 30px auto;
-}
-.text-boxes__head__content__paragraph__text {
-font-size: 16px;
-}
-.modal-youtube iframe {
-height: 30% !important;
-}
-}
-
+  .text-boxes__foot__btn.o-btn.is-big svg {
+    filter: invert(0);
+  }
 {% endstylesheet %}
 
-
 {% javascript %}
+  (function () {
+    let selectors = {
+      videoModalYT: '.modal-youtube',
+      iframeVideoModalYT: '.modal-youtube iframe',
+      ctaTextVideoCtaModal: '.js-modal-youtube',
+      videoModalYTClose: '.js-modal-youtube-close',
+    };
 
-(function() {
+    let videoModalYT = document.querySelector(selectors.videoModalYT);
+    let iframeVideoModalYT = document.querySelector(selectors.iframeVideoModalYT);
+    let ctaTextVideoCtaModal = document.querySelector(selectors.ctaTextVideoCtaModal);
+    let videoModalYTClose = document.querySelector(selectors.videoModalYTClose);
 
-let selectors = {
-videoModalYT: '.modal-youtube',
-iframeVideoModalYT: '.modal-youtube iframe',
-ctaTextVideoCtaModal: '.js-modal-youtube',
-videoModalYTClose: '.js-modal-youtube-close',
+    if (videoModalYT) {
+      let iframeVideoModalYT__src = iframeVideoModalYT.getAttribute('src');
 
-};
-
-let videoModalYT = document.querySelector(selectors.videoModalYT);
-let iframeVideoModalYT = document.querySelector(selectors.iframeVideoModalYT);
-let ctaTextVideoCtaModal = document.querySelector(selectors.ctaTextVideoCtaModal);
-let videoModalYTClose = document.querySelector(selectors.videoModalYTClose);
-
-
-if (videoModalYT) {
-
-let iframeVideoModalYT__src = iframeVideoModalYT.getAttribute("src")
-
-ctaTextVideoCtaModal.addEventListener("click", function(){
-videoModalYT.classList.remove("hide")
-iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=1")
-})
-videoModalYTClose.addEventListener("click", function(){
-videoModalYT.classList.add("hide")
-iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=0")
-
-})
-videoModalYT.addEventListener('click', function(e){
-if (!iframeVideoModalYT.contains(e.target)){
-videoModalYT.classList.add("hide")
-iframeVideoModalYT.setAttribute("src", iframeVideoModalYT__src + "?autoplay=0")
-
-}
-});
-}
-
-})();
-
-
+      ctaTextVideoCtaModal.addEventListener('click', function () {
+        videoModalYT.classList.remove('hide');
+        iframeVideoModalYT.setAttribute('src', iframeVideoModalYT__src + '?autoplay=1');
+      });
+      videoModalYTClose.addEventListener('click', function () {
+        videoModalYT.classList.add('hide');
+        iframeVideoModalYT.setAttribute('src', iframeVideoModalYT__src + '?autoplay=0');
+      });
+      videoModalYT.addEventListener('click', function (e) {
+        if (!iframeVideoModalYT.contains(e.target)) {
+          videoModalYT.classList.add('hide');
+          iframeVideoModalYT.setAttribute('src', iframeVideoModalYT__src + '?autoplay=0');
+        }
+      });
+    }
+  })();
 {% endjavascript %}

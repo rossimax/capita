@@ -43,9 +43,9 @@
     -%}
 
     <div class="text-video-cards__cta">
-      <a class="o-btn is-big black text-video-cards__cta__btn js-modal-youtube">
+      <a class="btn-link btn-green js-modal-youtube">
         {{- section.settings.cta_text }}
-        {% if arrow_cta != blank %}{% include arrow_cta %}{% endif -%}
+        {% comment %} {% if arrow_cta != blank %}{% include arrow_cta %}{% endif -%} {% endcomment %}
       </a>
     </div>
   </div>
@@ -204,7 +204,9 @@
     }
   }
   .text-video-cards__cta {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   .text-video-cards video {
     border-radius: 30px;

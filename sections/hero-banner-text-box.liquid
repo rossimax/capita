@@ -68,7 +68,7 @@
     grid-template-columns: 50% 50%;
 }
 .banner-box__content {
-    padding: 30px 170px;
+    padding: 30px 70px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -77,6 +77,16 @@
     img {
         max-width: 300px;
     }
+    .subtitle {
+        margin: 20px 0;
+        @media screen and (max-width: 991px) {
+            margin: 0 0;
+        }
+    }
+}
+.banner-box__image.only-desk {
+    display: flex;
+    align-items: center;
 }
 .banner-box .only-mob {
     display: none;
@@ -107,6 +117,9 @@
     .banner-box__content .btn-link {
         max-width: 100%;
         width: 100%;
+    }
+    .banner-box__image.only-desk {
+        display:none !important;
     }
 }
 

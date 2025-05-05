@@ -245,11 +245,8 @@
       endif
     -%}
     {% if section.settings.cta_text_1 != blank %}
-      <a class="o-btn is-big black text-boxes__foot__btn js-modal-youtube">
-        {{- section.settings.cta_text_1 }}
-        {% if arrow_cta_1 != blank -%}
-          {%- include arrow_cta_1 -%}
-        {%- endif -%}
+      <a class="btn-action btn-white js-modal-youtube">
+        {{- section.settings.cta_text_1 }}          
       </a>
     {% endif %}
     {% liquid
@@ -262,9 +259,8 @@
       endif
     -%}
     {% if section.settings.cta_text_2 != blank %}
-      <a class="o-btn is-big black text-boxes__foot__btn" href="{{ section.settings.cta_link_2 }}">
+      <a class="btn-link btn-white" href="{{ section.settings.cta_link_2 }}">
         {{- section.settings.cta_text_2 }}
-        {% if arrow_cta_2 != blank %}{% include arrow_cta_2 %}{% endif -%}
       </a>
     {% endif %}
     {% liquid
@@ -277,9 +273,8 @@
       endif
     -%}
     {% if section.settings.cta_text_3 != blank %}
-      <a class="o-btn is-big black text-boxes__foot__btn" href="{{ section.settings.cta_link_3 }}">
+      <a class="btn-link btn-white" href="{{ section.settings.cta_link_3 }}">
         {{- section.settings.cta_text_3 }}
-        {% if arrow_cta_3 != blank %}{% include arrow_cta_3 %}{% endif -%}
       </a>
     {% endif %}
   </div>
@@ -656,6 +651,9 @@
     .modal-youtube iframe {
       height: 30% !important;
     }
+  }
+  .text-boxes__foot__btn.o-btn.is-big svg {
+    filter: invert(0);
   }
 {% endstyle %}
 

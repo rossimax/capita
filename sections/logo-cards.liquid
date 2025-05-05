@@ -9,13 +9,13 @@
             <div class="single-card">
               <div class="single-card__content">
                 <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.title | strip_html }}">
-                <h4 class="single-card__content__title o-text is-3 nocase">{{ block.settings.title }}</h4>
-                <div class="single-card__content__description o-text is-4 is-regular">
+                <h4 class="single-card__content__title o-text is-3 nocase subtitle">{{ block.settings.title }}</h4>
+                <div class="single-card__content__description o-text is-4 is-regular text">
                   {{ block.settings.description }}
                 </div>
               </div>
-              <div class="single-card__cta">
-                <a href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
+              <div class="single-card__cta__new">
+                <a class="btn-link btn-green" href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
               </div>
             </div>
           {% endfor %}
@@ -108,12 +108,10 @@
       margin: 0 auto 40px auto;
     }
     .single-card__content__title {
-      font-size: 24px;
       margin-bottom: 20px;
       line-height: 1;
     }
     .single-card__content__description {
-      font-size: 20px;
       line-height: 1;
     }
     .single-card__cta {
@@ -134,7 +132,6 @@
       text-align: center;
       line-height: 1;
       color: #000;
-      font-size: 18px;
       font-weight: 600;
     }
     @media screen and (max-width: 991px) {
@@ -148,12 +145,6 @@
       .section-logo-cards {
         padding: 0 !important;
       }
-      .single-card__content__title {
-        font-size: 21px;
-      }
-      .single-card__content__description {
-        font-size: 16px;
-      }
       .single-card__content img {
         width: 96px;
       }
@@ -162,8 +153,16 @@
       }
       .single-card__cta a {
         padding: 14px 0;
-        font-size: 16px;
       }
+    }
+
+    .single-card__cta__new {
+        margin: 0 auto 20px;
+        a {
+          width: 100%;
+          font-weight: 600;
+          align-items: center;
+        }
     }
   {% endstylesheet %}
   

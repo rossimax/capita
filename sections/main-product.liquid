@@ -2244,6 +2244,8 @@ ol.breadcrumbs__list {
           openToggles: '.js-open-toggle',
           variantsSizeName: '.js-variant-size-name',
           variantsSizeSpecs: '.js-variant-size-specs',
+          variantsSize: '.js-product-variant',
+          variantsSizeCaption: '.js-variant-availability'
         };
 
         let specLines = document.querySelectorAll(selectors.specLines);
@@ -2255,8 +2257,27 @@ ol.breadcrumbs__list {
         let openToggles = document.querySelectorAll(selectors.openToggles);
         let variantsSizeName = document.querySelectorAll(selectors.variantsSizeName);
         let variantsSizeSpecs = document.querySelectorAll(selectors.variantsSizeSpecs);
+        let variantsSize = document.querySelectorAll(selectors.variantsSize);
+        let variantsSizeCaption = document.querySelector(selectors.variantsSizeCaption);
 
         window.addEventListener("load", function(){
+
+          variantsSize.forEach((variantSize) => {
+            variantSize.addEventListener("click", function(){
+
+              let qnt = Number(variantSize.dataset.qnt)
+
+              if ((qnt > 0) && (qnt < 5)) {
+                variantsSizeCaption.querySelector(".js-var-qnt").innerHTML = variantSize.dataset.qnt
+
+                variantsSizeCaption.classList.remove("hidden")
+                setTimeout(function(){
+                  variantsSizeCaption.classList.add("hidden")
+                }, 2500)
+              }
+
+            })
+          })
 
           variantsSizeName.forEach((variantSizeName) => {
             variantSizeName.addEventListener("click", function(){

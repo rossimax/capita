@@ -88,7 +88,9 @@ strong,
     font-size: 20px;
   }
 }
-
+.variant-availability {
+  color: red;
+}
 strong hl,
 i hl {
   padding: 7px 2px 4px;

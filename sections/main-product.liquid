@@ -126,6 +126,9 @@
   <div class="u-container">
     <div class="u-content wider">
       <div class="c-product">
+        
+        {% render "breadcrumbs" %}
+
         <div class="c-product__content js-product-slider">
           <div class="c-product__thumbs">
             <div class="c-product__thumbs-slider swiper js-product-slider-thumbs">
@@ -2218,7 +2221,11 @@ span.c-info-card__learn-more {
     display: flex;
     justify-content: space-between;
 }
-
+ol.breadcrumbs__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
 
 {% endstyle %}
 

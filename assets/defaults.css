@@ -153,6 +153,11 @@ a.o-btn {
 .btn-link.btn-black:after {
   filter: invert(1);
 }
+a.btn-link.btn-black.btn-finder {
+  min-width: unset;
+  border: 1px solid #fff;
+  margin-bottom: 20px;
+}
 
 hl {
   color: #000;

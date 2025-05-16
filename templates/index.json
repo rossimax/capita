@@ -131,6 +131,21 @@
         "cta_text": "Visit The Mothership™",
         "cta_link": ""
       }
+    },
+    "lazy_slider_jxJFeE": {
+      "type": "lazy-slider",
+      "name": "Lazy Slide",
+      "settings": {
+        "black_style": "yes",
+        "text_slide": "EARLY RELEASE",
+        "font_size": 20,
+        "font_size_mob": 16,
+        "padding": 20,
+        "padding_mob": 20,
+        "space_between_text": 25,
+        "border_top": "no",
+        "border_bottom": "no"
+      }
     }
   },
   "order": [
@@ -143,6 +158,7 @@
     "2056c58e-7330-430b-8fa5-de787867e504",
     "00a10f6f-b6ea-423b-9921-d1c287c306ea",
     "313c2a61-4905-454f-af07-4dc52801aa92",
-    "hero_banner_text_box_DJcmQ6"
+    "hero_banner_text_box_DJcmQ6",
+    "lazy_slider_jxJFeE"
   ]
 }

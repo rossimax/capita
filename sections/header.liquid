@@ -344,7 +344,11 @@
 input#search-input {
     border: 1px solid #000;
     color: #000;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    font-weight: bold;
 }
+
 
 @media screen and (max-width: 1199px) {
   .c-header__utilities .country-site-selector {
@@ -371,12 +375,17 @@ a.c-header__utility.is-user.js-header-close-dropdown {
 }
 .c-header-menu__parent {
   color: #000;
+  text-transform: unset;
 }
 .c-header-menu__parent:after {
   filter: invert(1);
 }
 .c-header-menu__line {
     background-color: #000;
+}
+.c-menu-item span {
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 #search-input::placeholder {
   color: #000;
@@ -392,7 +401,7 @@ a.c-header__utility.is-user.js-header-close-dropdown {
   background-position: 0;
   background-size: 30px;
   position: absolute;
-  top: -2px;
+  top: 0;
   right: 16px;
 }
 .c-header-cart__total,

@@ -4,7 +4,7 @@
             <img src="{{ section.settings.box_image | img_url: 'master' }}">
         </div>
         <div class="banner-box__content">
-            <img src="{{ section.settings.logo_image | img_url: 'master' }}">
+            <img class="banner-box__content__logo" src="{{ section.settings.logo_image | img_url: 'master' }}">
             <div class="subtitle strong">{{ section.settings.text }}</div>
             <img class="only-mob" src="{{ section.settings.box_image | img_url: 'master' }}">
             <a class="o-btn btn-link btn-green" href="{{section.settings.cta_link}}">{{section.settings.cta_text}}</a>
@@ -74,9 +74,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    img {
-        max-width: 300px;
-    }
     .subtitle {
         margin: 20px 0;
         @media screen and (max-width: 991px) {
@@ -119,7 +116,10 @@
         width: 100%;
     }
     .banner-box__image.only-desk {
-        display:none !important;
+        display: none !important;
+    }
+    .banner-box__content__logo {
+        max-width: 240px;
     }
 }
 

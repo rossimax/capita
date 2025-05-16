@@ -108,42 +108,12 @@
         <span class="cart-count js-cart-count medium {{ class_cart }}">{{ cart.item_count }}</span>
       </button>
       <button class="c-header__utility is-menu js-header-mobile-menu" type="button">
-        <svg
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 80 40"
-        >
-          <rect
-              x="6"
-              y="10"
-              width="28"
-              height="5"
-              rx="2.5"
-              fill="#000"
-          />
-          <rect
-              x="6"
-              y="18"
-              width="28"
-              height="5"
-              rx="2.5"
-              fill="#000"
-          />
-          <rect
-              x="6"
-              y="26"
-              width="28"
-              height="5"
-              rx="2.5"
-              fill="#000"
-          />
-          <path
-              d="m69.734 11.268-18.48 18.48M50 11l19 19"
-              stroke="#000"
-              stroke-width="3"
-              stroke-linecap="round"
-          />
-        </svg>
+        <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.25977 1.51611H22.2045" stroke="#0B0204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1.25977 20.6973H22.2045" stroke="#0B0204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1.25977 11.1064H22.2045" stroke="#0B0204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          
       </button>
 
     </div>
@@ -326,10 +296,18 @@
   }
   .c-header__utility svg {
     max-width: 21px;
+    @media screen and (max-width: 991px) {
+      max-width: 28px;
+    }
   }
   .c-header__utility.is-cart svg {
     max-width: 19px;
     width: auto;
+    @media screen and (max-width: 991px) {
+      max-width: 29px;
+      margin-bottom: 4px;
+      margin-left: 5px;
+    }
   }
 
 .c-menu-item,
@@ -372,6 +350,15 @@ input#search-input {
 }
 a.c-header__utility.is-user.js-header-close-dropdown {
   display: flex;
+}
+@media screen and (max-width: 991px) {
+  .c-header__utility.is-search {
+    display: block !important;
+  }
+  a.c-header__utility.is-user.js-header-close-dropdown {
+    display: none !important;
+  }
+
 }
 .c-header-menu__parent {
   color: #000;
@@ -434,6 +421,18 @@ input.cart-submit.c-header-cart__checkout-btn {
 }
 .c-header__top {
     background: #ffffffe8;
+    @media screen and (max-width: 991px) {
+      padding-top: 12px;
+      padding-bottom: 14px;
+    }
+}
+.c-header__utility.is-menu svg {
+  width: auto;
+  float: right;
+  padding-bottom: 2px;
+}
+.c-header__utility.is-menu.is-active svg {
+    transform: translate(0);
 }
 @media screen and (min-width: 48em) {
     .c-cart-item__quantity {

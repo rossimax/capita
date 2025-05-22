@@ -151,7 +151,7 @@
                         {%- assign img_url = media | image_url: width: 1024 -%}
                         {%- assign img_url__attr = media | image_url: width: 100, height: 100 -%}
                         
-                        <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
+                        <img class="img-prod-media" src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
                           attr-img-url="{{ img_url__attr }}" 
                           attr-num="{{ forloop.index0 }}" 
                           style="
@@ -167,10 +167,10 @@
 
                       {%- assign img_url = product.media[0] | image_url: width: 1024 -%}
                       {%- assign img_url__attr = product.media[0] | image_url: width: 100, height: 100 -%}
-                        <img src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
+                        <img class="img-prod-media" src="{{ img_url }}" alt="{{ product.title | strip_html }}" 
                           attr-img-url="{{ img_url__attr }}" 
                           attr-num="{{ forloop.index0 }}" 
-                          class="js-product-gallery-item"
+                          class="js-product-gallery-item img-prod-variant"
                           style="
                           {%- if forloop.index0 != 0 -%}
                           display:none

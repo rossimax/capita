@@ -612,7 +612,14 @@ main.template-nfc-steps {
   text-align: left !important;
   display: block;
 }
-.c-slim-form__email:after {
+.c-slim-form__input {
+  position:relative;
+}
+.c-slim-form__input:after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
   content: "";
   display: block;
   flex-shrink: 0;

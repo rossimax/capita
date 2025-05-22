@@ -164,6 +164,9 @@
 {% endschema %}
 
 {% style %}
+.c-footer__social {
+    justify-content: space-evenly;
+}
 .c-footer__currency select {
     font-size: 12px;
     line-height: 1;
@@ -186,10 +189,14 @@
     }
 }
 
-
+@media screen and (min-width: 100em) {
+    .c-footer__blocks {
+        grid-gap: 90px;
+    }
+}
 
 @media screen and (min-width: 992px) {
-    .footer-menu-single-head {
+    .footer-menu-single-head svg {
         display:none;
     }
 }
@@ -215,6 +222,7 @@
     }
     .c-footer__item {
         font-size: 14px;
+        line-height: 1;
     }
     .footer-menu-single-head {
         display: flex;

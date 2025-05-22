@@ -603,6 +603,10 @@ main.template-nfc-steps {
   color: #45681a;
   font-weight: 500;
 }
+.c-footer__form span.c-slim-form__title {
+  margin-top: 0;
+  font-size: 16px;
+}
 .c-slim-form__title {
   margin-bottom: 8px;
   text-align: left !important;
@@ -639,12 +643,17 @@ main.template-nfc-steps {
 .c-size-chart tr:nth-child(odd) {
   background-color: #eee;
 }
-
+@media screen and (max-width: 991px) {
+  .c-info {
+    margin-top: 15px;
+  }
+}
 .c-info-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
+
 }
 .c-product-info__size.is-disabled {
   pointer-events: auto;
@@ -1029,6 +1038,9 @@ html {
 @media screen and (max-width: 768px) {
   .c-product-tech__shops {
     overflow: auto;
+  }
+  .c-product-tech {
+    margin-top: 15px;
   }
 }
 

@@ -40,10 +40,10 @@
       "settings": {
         "black_style": "yes",
         "text_slide": "EARLY RELEASE",
-        "font_size": 20,
-        "font_size_mob": 16,
-        "padding": 20,
-        "padding_mob": 20,
+        "font_size": 24,
+        "font_size_mob": 20,
+        "padding": 15,
+        "padding_mob": 15,
         "space_between_text": 25,
         "border_top": "no",
         "border_bottom": "no"

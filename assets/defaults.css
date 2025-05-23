@@ -1063,5 +1063,7 @@ html {
 .c-product-tech .o-text.is-4 {
   font-weight: 500;
 }
-
+.c-hexagon .o-text.is-4 {
+  font-weight: 600;
+}
 

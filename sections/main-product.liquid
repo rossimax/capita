@@ -14,8 +14,8 @@
       endif
     -%}
     <img src="{{ background_image }}" alt="Capita | {{ product.title | strip_html }}">
-    <h1 class="c-product-hero__name o-text {{ hero_title_color }}">{{ product.title }}</h1>
   </div>
+  <h1 class="c-product-hero__name o-text">{{ product.title }}</h1>
   {% assign class_product = 'snowboard-product' %}
 {% else %}
   {% assign class_product = 'other-product' %}
@@ -2123,12 +2123,8 @@ img.hotspot-image-constr {
   }
 
   .c-product__main-pagination-bullet {
-    height: 3px;
-    width: 20px;
-  }
-  .c-product__main-pagination-bullet {
-    height: 3px;
-    width: 25px;
+    height: 4px;
+    width: 30px;
     background: #e7e6e6;
     border-color: #e7e6e6;
     border-radius: 5px
@@ -2138,6 +2134,7 @@ img.hotspot-image-constr {
   }
   .c-product__main-pagination {
     gap: 4px;
+    margin-top: 20px;
   }
   @media screen and (max-width: 991px) {
     .c-product-info hr {
@@ -2188,6 +2185,14 @@ img.hotspot-image-constr {
   height: 41px;
   border: none;
 }
+.c-product-info__size {
+  font-size: 16px;
+  padding: 10px 5px;
+  font-weight: 500;
+}
+.c-product-info__size span {
+  margin-left: -2px;
+}
 .size-chart-new .c-product-info__size.active,
 .size-chart-new .c-product-info__size:hover {
   background: #000;
@@ -2217,12 +2222,29 @@ span.c-info-card__learn-more {
     justify-content: space-between;
 }
 ol.breadcrumbs__list {
+  font-weight: 500;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
 .c-product__main-nav-next {
     right: 2px;
+}
+.c-product-hero__name {
+  background: #000;
+  color: #fff;
+  padding: 18px;
+  text-transform: unset;
+}
+
+.c-product-info__name {
+  margin-top: 5px;
+}
+div#epr-product-title-review {
+  margin-top: 10px;
+}
+span.c-product-info__price.o-text.is-3 {
+    font-size: 20px;
 }
 
 

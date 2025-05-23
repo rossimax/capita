@@ -194,7 +194,7 @@
 }
 @media screen and (min-width: 992px) {
     .c-footer__blocks {
-        grid-template-columns: repeat(5, minmax(0, auto));
+        grid-template-columns: repeat(5, 12%);
     }
 }
 
@@ -246,14 +246,29 @@
 
 }
 
+@media screen and (min-width: 48em) {
+    .c-footer__block {
+        grid-gap: 13px;
+    }
+}
+
+.c-footer__item {
+    font-weight: 500;
+    line-height: 1.2;
+}
+
 .footer-menu-single-head {
     font-size: 16px;
     line-height: 1;
 }
 
 img.logo-b-corp {
-    width: 100px;
-    padding: 20px 0 5px 0;
+    width: 80px;
+    margin-top: -12px;
+    @media screen and (max-width: 991px) {
+        width: 100px;
+        padding: 20px 0 5px 0;
+    }
 }
 
 {% endstyle %}

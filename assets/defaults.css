@@ -604,8 +604,11 @@ main.template-nfc-steps {
   font-weight: 500;
 }
 .c-footer__form span.c-slim-form__title {
-  margin-top: 0;
+  margin-top: 10px;
   font-size: 16px;
+  @media screen and (max-width:991px) {
+    margin-top: 0;
+  }
 }
 .c-slim-form__title {
   margin-bottom: 8px;

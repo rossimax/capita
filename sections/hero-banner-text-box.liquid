@@ -1,4 +1,4 @@
-<div class="section-banner-box" style="background:url({{ section.settings.background | img_url: 'master' }})">
+<div class="section-banner-box" style="background-image:url({{ section.settings.background | img_url: 'master' }})">
     <div class="banner-box">
         <div class="banner-box__image only-desk">
             <img src="{{ section.settings.box_image | img_url: 'master' }}">
@@ -105,7 +105,8 @@
     }
     .section-banner-box {
         padding: 30px 20px;
-        background-position: 50% !important;
+        background-position: 5% 158%;
+        background-size: 220%;
     }
 
     .banner-box__content img.only-mob {
@@ -120,7 +121,7 @@
         display: none !important;
     }
     .banner-box__content__logo {
-        max-width: 240px;
+        max-width: 210px;
     }
 }
 

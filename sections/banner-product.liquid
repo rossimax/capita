@@ -91,14 +91,19 @@
     height: 652px;
     margin-bottom: 120px;
     transform: translateX(50%);
-    border-radius: 20px;
+    border-radius: 40px;
     background: #fff;
     border: 2px solid #fff;
     background: #000;
     z-index: 1;
-    background-image: url(https://cdn.shopify.com/s/files/1/0231/7366/0752/files/b9852147b947ef0aaeafe39e96e26a7ebaff65c7.jpg?v=1745921244);
+    background-image: url(https://cdn.shopify.com/s/files/1/0231/7366/0752/files/GRID-BACKGROUND_BLACK_COMPRESS_e53b0bf8-98a4-4a54-aaae-d192aca790a5.jpg?v=1747993855);
     background-color: #000;
     color: #fff;
+    background-size: 330%;
+    background-position: -21.5%;
+    @media screen and (max-width: 991px) {
+        border-radius: 25px;
+    }
 }
 .banner-product__left__card a {
     text-decoration: none;
@@ -116,12 +121,17 @@
     transition-duration: 0.2s;
 }
 .banner-product__left__card__cta {
+    font-size: 16px;
     text-align: center;
     padding: 15px;
     color: #000;
     background: #fff;
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+    @media screen and (max-width: 991px) {
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+    }
 }
 .banner-product__left__text {
     color: #fff;
@@ -293,7 +303,7 @@
         right: unset;
     }
     .banner-product__right__image {
-        min-height: 350px;
+        min-height: 320px;
     }
     .banner-product__left__text {
         position: relative;
@@ -306,11 +316,16 @@
     h6.banner-product__right__text.subtitle.strong {
         font-size: 26px;
     }
-    .banner-product__left__text h3.subtitle.strong {
+    h6.banner-product__right__text.title.strong {
+        font-size: 26px;
+    }
+    .banner-product__left__text h3.title.strong {
         font-size: 26px;
     }
     .banner-product__left__text h5 {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 1.2;
+        margin-top: 8px;
     }
 }
 {% endstyle %}

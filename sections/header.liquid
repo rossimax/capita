@@ -108,11 +108,15 @@
         <span class="cart-count js-cart-count medium {{ class_cart }}">{{ cart.item_count }}</span>
       </button>
       <button class="c-header__utility is-menu js-header-mobile-menu" type="button">
-        <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="svg-menu-open" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.25977 1.51611H22.2045" stroke="#0B0204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M1.25977 20.6973H22.2045" stroke="#0B0204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M1.25977 11.1064H22.2045" stroke="#0B0204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        </svg>
+        <svg class="svg-menu-close hide" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.62598 1L19.8385 19.2125" stroke="#0B0204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M19.8384 1L1.62584 19.2125" stroke="#0B0204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
           
       </button>
 
@@ -161,6 +165,11 @@
           {%- if link.links != blank -%}
             <button class="c-header-menu__parent js-header-menu-parent">
               <span>{{ link.title }}</span>
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
+                <path d="M5.19971 8.5H11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                <path d="M8.49976 5.19971V11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+              </svg>
             </button>
 
             <div class="js-header-menu">
@@ -183,6 +192,11 @@
               class="c-header-menu__parent"
               href="{{ link.url }}"
               ><span>{{ link.title }}</span>
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
+                <path d="M5.19971 8.5H11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                <path d="M8.49976 5.19971V11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+              </svg>
             </a>
             <div class="c-header-menu__line"></div>
           {%- endif -%}
@@ -198,6 +212,11 @@
           class="c-header-menu__parent"
           href="/account/login"
           ><span>ACCOUNT</span>
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
+            <path d="M5.19971 8.5H11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+            <path d="M8.49976 5.19971V11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+          </svg>
         </a>
         <div class="c-header-menu__line"></div>
       </div>
@@ -208,7 +227,12 @@
           class="c-header-menu__parent"
           href="/pages/select-location"
           > 
-          <div class="c-header-menu__country">{{ localization.country | image_url: width: 32 | image_tag }} {{ localization.country.iso_code }}/{{ shop.locale | upcase }}</div>
+          <div class="c-header-menu__country">{{ localization.country | image_url: width: 24 | image_tag }} {{ localization.country.iso_code }}/{{ shop.locale | upcase }}</div>
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
+            <path d="M5.19971 8.5H11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+            <path d="M8.49976 5.19971V11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+          </svg>
         </a>
         <div class="c-header-menu__line"></div>
       </div>
@@ -322,8 +346,8 @@
 input#search-input {
     border: 1px solid #000;
     color: #000;
-    padding-top: 5px;
-    padding-bottom: 4px;
+    padding-top: 8px;
+    padding-bottom: 7px;
     font-weight: bold;
 }
 
@@ -363,9 +387,11 @@ a.c-header__utility.is-user.js-header-close-dropdown {
 .c-header-menu__parent {
   color: #000;
   text-transform: unset;
+  padding: 15px 0;
 }
 .c-header-menu__parent:after {
-  filter: invert(1);
+  /* filter: invert(1); */
+  display: none !important;
 }
 .c-header-menu__line {
     background-color: #000;
@@ -382,7 +408,7 @@ a.c-header__utility.is-user.js-header-close-dropdown {
   display: block;
   flex-shrink: 0;
   width: 30px;
-  height: 40px;
+  height: 45px;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGl2ZWxsb18xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI4LjMgMjguMyI+CiAgPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI5LjMuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDIuMS4wIEJ1aWxkIDE1MSkgIC0tPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuc3QwIHsKICAgICAgICBmaWxsOiBub25lOwogICAgICAgIHN0cm9rZTogIzBiMDIwNDsKICAgICAgICBzdHJva2UtbGluZWNhcDogcm91bmQ7CiAgICAgICAgc3Ryb2tlLWxpbmVqb2luOiByb3VuZDsKICAgICAgICBzdHJva2Utd2lkdGg6IDJweDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTEyLjMsMjAuOGM0LjcsMCw4LjYtMy44LDguNi04LjZTMTcsMy43LDEyLjMsMy43LDMuNyw3LjUsMy43LDEyLjNzMy44LDguNiw4LjYsOC42aDBaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTE4LjUsMTguNWw2LjIsNi4yIi8+Cjwvc3ZnPg==);
   background-repeat: no-repeat;
   background-position: 0;
@@ -426,6 +452,9 @@ input.cart-submit.c-header-cart__checkout-btn {
       padding-bottom: 14px;
     }
 }
+.c-header__utility.is-menu {
+  width: 31px;
+}
 .c-header__utility.is-menu svg {
   width: auto;
   float: right;
@@ -446,6 +475,10 @@ input.cart-submit.c-header-cart__checkout-btn {
     .c-header {
         background: #fff;
     }
+}
+.svg-menu-open.hide,
+.svg-menu-close.hide {
+  display: none;
 }
 {% endstyle %}
 
@@ -469,6 +502,8 @@ input.cart-submit.c-header-cart__checkout-btn {
       searchMobileBtn: '.is-cart.js-dropdown-trigger',
       hamMobileBtn: '.is-menu.js-header-mobile-menu',
       mobHeader: '.c-header.js-header',
+
+      'mobMenuHamb': '.js-header-mobile-menu',
     };
 
     let searchInput = document.querySelector(selectors.searchInput);
@@ -488,8 +523,22 @@ input.cart-submit.c-header-cart__checkout-btn {
     let hamMobileBtn = document.querySelector(selectors.hamMobileBtn);
     let mobHeader = document.querySelector(selectors.mobHeader);
 
+    let mobMenuHamb = document.querySelector(selectors.mobMenuHamb);
 
+    if (mobMenuHamb) {
+      mobMenuHamb.addEventListener("click", function(){
+        let svg_ham_open = mobMenuHamb.querySelector(".svg-menu-open");
+        let svg_ham_close = mobMenuHamb.querySelector(".svg-menu-close");
 
+        if (svg_ham_open.classList.contains("hide")){
+          svg_ham_open.classList.remove("hide")
+          svg_ham_close.classList.add("hide")
+        } else {
+          svg_ham_open.classList.add("hide")
+          svg_ham_close.classList.remove("hide")
+        }
+      })
+    }
     // searchMobileBtn.addEventListener("click", function(event) {
     //   event.stopPropagation()
     //   if (searchMobileBtn.classList.contains("is-active")) {

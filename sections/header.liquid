@@ -158,7 +158,7 @@
 
       {%- for link in section.settings.menu.links -%}
         <div
-          class="c-header__dropdown-panel c-header-menu js-header-dropdown"
+          class="c-header__dropdown-panel c-header-menu js-header-dropdown c-header__dropdown-panel--{{ forloop.index }}"
           style="display: none"
           data-parent="{{ link.handle }}"
         >
@@ -211,7 +211,7 @@
         <a
           class="c-header-menu__parent"
           href="/account/login"
-          ><span>ACCOUNT</span>
+          ><span>Account</span>
           <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
             <path d="M5.19971 8.5H11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
@@ -254,6 +254,12 @@
 {% endschema %}
 
 {% style %}
+.c-header__dropdown-panel--1 {
+  z-index: 1;
+}
+.c-header-menu__list {
+  padding-bottom: 0;
+}
   #search-result {
     max-width: 1200px;
     margin: 0 auto;
@@ -412,7 +418,7 @@ a.c-header__utility.is-user.js-header-close-dropdown {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGl2ZWxsb18xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI4LjMgMjguMyI+CiAgPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI5LjMuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDIuMS4wIEJ1aWxkIDE1MSkgIC0tPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuc3QwIHsKICAgICAgICBmaWxsOiBub25lOwogICAgICAgIHN0cm9rZTogIzBiMDIwNDsKICAgICAgICBzdHJva2UtbGluZWNhcDogcm91bmQ7CiAgICAgICAgc3Ryb2tlLWxpbmVqb2luOiByb3VuZDsKICAgICAgICBzdHJva2Utd2lkdGg6IDJweDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTEyLjMsMjAuOGM0LjcsMCw4LjYtMy44LDguNi04LjZTMTcsMy43LDEyLjMsMy43LDMuNyw3LjUsMy43LDEyLjNzMy44LDguNiw4LjYsOC42aDBaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTE4LjUsMTguNWw2LjIsNi4yIi8+Cjwvc3ZnPg==);
   background-repeat: no-repeat;
   background-position: 0;
-  background-size: 30px;
+  background-size: 28px;
   position: absolute;
   top: 0;
   right: 16px;
@@ -438,15 +444,15 @@ input.cart-submit.c-header-cart__checkout-btn {
   flex-direction: column;
 }
 .c-header__bg {
-  background-color: #ffffffe8;
+  background-color: #fffffff5;
   -webkit-backdrop-filter: unset;
   backdrop-filter: unset;
 }
 .c-header__dropdown-panel.c-header-cart.js-header-toggle-dropdown {
-    background: #ffffffe8;
+    background: #fffffff5;
 }
 .c-header__top {
-    background: #ffffffe8;
+    background: #fffffff5;
     @media screen and (max-width: 991px) {
       padding-top: 12px;
       padding-bottom: 14px;
@@ -468,7 +474,7 @@ input.cart-submit.c-header-cart__checkout-btn {
         justify-content: start;
     }
     .c-header__bg {
-      background-color: #ffffffe8;
+      background-color: #fffffff5;
       -webkit-backdrop-filter: unset;
       backdrop-filter: unset;
     }

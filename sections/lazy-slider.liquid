@@ -182,7 +182,7 @@
 }
 .lazy-slide-text {
     display: flex;
-    animation: scrollTextLazy 60s infinite linear;
+    animation: scrollTextLazyDesk 200s infinite linear;
     line-height: 1;
 }
 .lazy-slide-text span {
@@ -194,6 +194,10 @@
     font-family: NFUltra;
 }
 
+@keyframes scrollTextLazyDesk {
+    from   { transform: translateX(0%); }
+    to { transform: translateX(-1000%); }
+}
 @keyframes scrollTextLazy {
     from   { transform: translateX(0%); }
     to { transform: translateX(-1000%); }

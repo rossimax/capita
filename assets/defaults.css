@@ -631,6 +631,7 @@ main.template-nfc-steps {
   background-position: 100%;
   background-size: 27px;
   aspect-ratio: 1 / 1;
+  opacity: 0.5;
 }
 
 .c-slim-form label.c-slim-form__legal {
@@ -756,15 +757,19 @@ span.msg-empty-cart.medium.hide,
 .main-page {
   max-width: 100%;
 }
+.c-footer__social a {
+  width: 28px;
+}
 input.c-slim-form__email {
   width: 100%;
   border-radius: 26px;
+  font-size: 16px;
 }
 .c-footer__form .c-slim-form__email {
   background: unset;
 }
 .c-slim-form__legal input {
-  border-radius: 50%;
+  border-radius: 60%;
 }
 .c-footer__form span.c-slim-form__title {
   text-align: center;
@@ -777,6 +782,7 @@ footer label.c-slim-form__legal {
 }
 footer label.c-slim-form__legal span {
   line-height: 1;
+  font-weight: 500;
 }
 .c-product-info__sizes .c-product-info__size:hover {
   background-color: #000;

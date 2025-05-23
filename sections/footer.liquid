@@ -166,8 +166,15 @@
 {% endschema %}
 
 {% style %}
+.c-footer__legal {
+    font-weight: 500;
+    margin-top: -30px;
+}
 .c-footer__social {
     justify-content: space-evenly;
+}
+.c-footer__currency {
+    height: 0;
 }
 .c-footer__currency select {
     font-size: 12px;
@@ -206,6 +213,7 @@
 @media screen and (max-width: 991px) {
     .c-footer__social {
         justify-content: space-around;
+        padding: 5px 0;
     }
     .c-footer__block {
         height: 35px;
@@ -240,10 +248,12 @@
 
 .footer-menu-single-head {
     font-size: 16px;
+    line-height: 1;
 }
 
 img.logo-b-corp {
     width: 100px;
+    padding: 20px 0 5px 0;
 }
 
 {% endstyle %}

@@ -95,6 +95,7 @@ strong,
 }
 .variant-availability {
   color: red;
+  font-size: 16px;
 }
 strong hl,
 i hl {
@@ -1059,6 +1060,8 @@ html {
     margin-top: 15px;
   }
 }
-
+.c-product-tech .o-text.is-4 {
+  font-weight: 500;
+}
 
 

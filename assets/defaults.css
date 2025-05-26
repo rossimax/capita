@@ -176,6 +176,9 @@ a.btn-link.btn-black.btn-finder {
 .breadcrumbs {
   margin-bottom: 20px;
 }
+.c-product .breadcrumbs {
+  margin-bottom: 40px;
+}
 hl {
   color: #000;
   background: linear-gradient(
@@ -726,6 +729,52 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
   opacity: 0.5;
   pointer-events: none;
 }
+.main-page-pdp .u-content.wider,
+.main-page-pdp .c-info {
+  padding-inline: 20px;
+}
+@media screen and (max-width:991px) {
+
+  .c-info-card.js-info-card-trigger {
+    border: unset;
+    border-top: 1px solid #ebebeb;
+    border-radius: unset;
+  }
+  span.c-info-card__learn-more.btn-green,
+  span.c-info-card__learn-more {
+    margin: 0 auto !important;
+    width: 100%;
+  }
+  .epr-collaps-btn.btn.button {
+    width: 100%;
+    margin: 0 auto;
+    max-width: unset;
+  }
+  div#mag-product-review .epr-review .epr-data {
+    padding: 0 !important;
+  }
+  #mag-product-review .epr-wrapper {
+    padding: 0 10px !important;
+  }
+  div#mag-product-review .epr-review .epr-data .epr-collaps-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.epr-collaps-btn.btn.button {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+.epr-collaps-btn.btn.button:after {
+  content: '';
+  width: 27px;
+  height: 27px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 26C20.4036 26 26 20.4036 26 13.5C26 6.59644 20.4036 1 13.5 1C6.59644 1 1 6.59644 1 13.5C1 20.4036 6.59644 26 13.5 26Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"></path><path d="M8 13.5H19.001" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M13.5 7.99951V19.0005" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"></path></svg>');
+}
+.epr-collaps-btn.btn.button {
+  height: 57px !important;
+}
 .pdp-head-image {
   position: relative;
 }
@@ -802,9 +851,31 @@ span.input-error-message.site_newsletter-error {
   background-image: url(https://cdn.shopify.com/s/files/1/0231/7366/0752/files/GRID-BACKGROUND_BLACK_COMPRESS.jpg?v=1745924560);
   background-color: #000;
   color: #fff;
+  background-position: 94% 11%;
+  background-size: 85%;
+  background-repeat: repeat;
+  @media screen and (max-width: 991px) {
+    background-position: 94% 20%;
+    background-position: 94% 20%;
+    background-size: 230%;
+  }
 }
 .c-related-products a {
   text-decoration: none;
+}
+.c-related-products__title {
+  font-size: 26px;
+  text-transform: unset;
+  @media screen and (max-width: 991px) {
+    font-size: 16px;
+  }
+}
+span.c-product-card__name {
+  font-size: 16px;
+  text-transform: unset;
+}
+.c-product-card__info {
+  grid-gap: 5px;
 }
 /* width */
 .c-listing-filter__wrapper::-webkit-scrollbar {

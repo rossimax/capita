@@ -21,7 +21,7 @@
   {% assign class_product = 'other-product' %}
 {% endif %}
 
-<main class="main-page {{ class_product }}">
+<main class="main-page {{ class_product }} main-page-pdp">
   <div class="c-product-gallery js-product-gallery">
     <div class="swiper">
       <div class="swiper-wrapper">
@@ -468,7 +468,11 @@
   .c-product-tech__video {
     margin-top: 40px;
   }
-
+  @media screen and (min-width: 75em) {
+    .c-product-tech {
+        grid-gap: 50px;
+    }
+  }
   .spr-badge[data-rating='0.0'] {
     display: none;
   }
@@ -602,6 +606,9 @@ img.hotspot-image-constr {
 }
 .construction-data-single {
   margin-bottom: 60px;
+  @media screen and (max-width: 991px) {
+    margin-bottom: 20px;
+  }
 }
 .construction-data-single__desc.text {
   font-weight: 500;
@@ -1970,8 +1977,6 @@ img.hotspot-image-constr {
   }
   .variant-select {
     color: red;
-    margin-top: 20px;
-    margin-bottom: -20px;
     display: block;
     transition-duration: 0.2s;
     opacity: 1;
@@ -2094,6 +2099,10 @@ img.hotspot-image-constr {
       cursor: pointer;
       svg {
         transform: translateX(100%);
+        @media screen and (min-width: 992px) {
+          width: 27px;
+          height: 27px;
+        }
       }
     }
     @media screen and (max-width: 991px) {
@@ -2103,6 +2112,11 @@ img.hotspot-image-constr {
       .u-toggle__head svg {
         transform: translateX(0) translateY(0);
       }
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .u-toggle__head h3 {
+      font-size: 20px;
     }
   }
   .u-toggle.open {
@@ -2121,10 +2135,15 @@ img.hotspot-image-constr {
       margin-bottom: 10px;
       font-weight: 600;
     }
-    @media screen and (min-width: 64em) {
-      .c-accolades__video {
-          margin-top: 20px;
+    .c-accolades__video {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      @media screen and (min-width: 64em) {
+        margin-top: 20px;
       }
+    }
+    @media screen and (min-width: 64em) {
+      padding-top: 60px;
     }
   }
   .c-size-chart {
@@ -2198,12 +2217,17 @@ img.hotspot-image-constr {
     gap: 10px;
     @media screen and (max-width: 991px) {
       margin-bottom: 20px;
+      gap: 10px 3px;
     }
 }
 .size-chart-new .c-product-info__size {
   width: 100px;
   height: 41px;
   border: none;
+  @media screen and (max-width: 991px) {
+    height: unset;
+    width: 60px;
+  }
 }
 .c-product-info-form .caption {
     font-size: 12px;
@@ -2211,11 +2235,12 @@ img.hotspot-image-constr {
 }
 .c-product-info__size {
   font-size: 16px;
-  padding: 10px 5px;
+  padding: 14.5px 5px;
   font-weight: 500;
 }
 .c-product-info__size span {
   margin-left: -2px;
+  font-size: 20px;
 }
 .c-product-info__top {
     font-weight: 500;
@@ -2229,19 +2254,23 @@ img.hotspot-image-constr {
   display: none;
 }
 .variant-specs__row {
+  font-weight: 500;
     display: flex;
     justify-content: space-between;
-    padding: 10px 0px;
+    padding: 13px 0px;
     border-bottom: 1px solid #dedede;
     @media screen and (max-width: 991px) {
       border-bottom: none;
       border-top: 1px solid #dedede;
     }
+    span {
+      font-weight: 500;
+    }
 }
 span.c-info-card__learn-more {
     margin: 0 40px 40px;
     border-radius: 30px;
-    padding: 15px 20px;
+    padding: 10px 20px;
     font-size: 16px;
     text-transform: none;
     align-items: center;
@@ -2255,15 +2284,41 @@ ol.breadcrumbs__list {
     flex-wrap: wrap;
     gap: 5px;
 }
+.c-product__main-nav-prev {
+  bottom: 10px;
+}
 .c-product__main-nav-next {
     right: 2px;
+    bottom: 10px;
 }
 .c-product-hero__name {
   background: #000;
   color: #fff;
-  padding: 18px;
+  padding: 20px 155px;
   text-transform: unset;
+  @media screen and (max-width:991px) {
+    padding: 20px;
+  }
 }
+@media screen and (min-width: 64em) {
+    .c-product__main {
+        height: auto;
+    }
+}
+.c-product__main img {
+  height: auto;
+}
+@media screen and (min-width: 64em) {
+    .c-product {
+      padding-inline: unset;
+      padding: 0 135px;
+      margin-top: 30px;
+    }
+    .c-product-info {
+      padding-top: 0;
+    }
+}
+
 
 .c-product-info__name {
   margin-top: 5px;

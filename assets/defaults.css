@@ -827,7 +827,8 @@ span.msg-empty-cart.medium.hide,
 }
 .c-related-products__scrollbar.swiper-scrollbar {
   --swiper-scrollbar-size: 5px;
-  background: #9c9d9f;
+  background: #888888;
+  border: none;
 }
 input.c-slim-form__email {
   width: 100%;

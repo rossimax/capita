@@ -7,6 +7,9 @@ body {
     font-size: 16px;
   }
 }
+body:has(.c-header.has-dropdown) {
+  overflow:hidden;
+}
 .normal {
   font-family: "Proximanova", sans-serif;
   font-weight: 400;
@@ -48,6 +51,11 @@ strong,
   font-size: 10px;
   @media screen and (min-width:769px) {
     font-size: 14px;
+  }
+}
+@media screen and (min-width: 75em) {
+  .c-footer__content {
+      grid-template-columns: minmax(0, 1fr) 352px;
   }
 }
 .footer-info,
@@ -813,6 +821,13 @@ span.msg-empty-cart.medium.hide,
 }
 .c-footer__social a {
   width: 28px;
+}
+.c-menu-item span:after {
+  bottom: 7px;
+}
+.c-related-products__scrollbar.swiper-scrollbar {
+  --swiper-scrollbar-size: 5px;
+  background: #9c9d9f;
 }
 input.c-slim-form__email {
   width: 100%;

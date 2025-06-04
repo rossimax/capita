@@ -679,7 +679,11 @@ main.template-nfc-steps {
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
-
+  > img,
+  > svg {
+    margin: 50px auto;
+    min-height: 190px;
+  }
 }
 .c-product-info__size.is-disabled {
   pointer-events: auto;

@@ -125,9 +125,9 @@
 
   <div class="u-container">
     <div class="u-content wider">
+      {% render "breadcrumbs" %}
       <div class="c-product">
         
-        {% render "breadcrumbs" %}
 
         <div class="c-product__content js-product-slider">
           <div class="c-product__thumbs">
@@ -2290,6 +2290,7 @@ ol.breadcrumbs__list {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    margin: 25px 0 40px 0;
 }
 .c-product__main-nav-prev {
   bottom: 10px;
@@ -2318,7 +2319,7 @@ ol.breadcrumbs__list {
 @media screen and (min-width: 64em) {
     .c-product {
       padding-inline: unset;
-      padding: 0 135px;
+      padding: 0 85px;
       margin-top: 30px;
     }
     .c-product-info {

@@ -823,7 +823,7 @@ span.msg-empty-cart.medium.hide,
   width: 28px;
 }
 .c-menu-item span:after {
-  bottom: 7px;
+  bottom: 5px;
 }
 .c-related-products__scrollbar.swiper-scrollbar {
   --swiper-scrollbar-size: 5px;

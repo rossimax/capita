@@ -144,7 +144,7 @@
         "logo_image": "shopify://shop_images/D_homepage_box_mothershiplogo.png",
         "text": "CAPiTA Snowboards are handcrafted in Austria with 100% self-generated clean energy at The MotherShip™.",
         "cta_text": "Visit The Mothership™",
-        "cta_link": ""
+        "cta_link": "shopify://pages/the-factory"
       }
     }
   },

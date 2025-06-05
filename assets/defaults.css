@@ -768,10 +768,13 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
 }
 @media screen and (max-width:991px) {
 
-  .c-info-card.js-info-card-trigger {
+  .c-info-card {
     border: unset;
     border-top: 1px solid #ebebeb;
     border-radius: unset;
+    svg {
+      width: 100%;
+    }
   }
   span.c-info-card__learn-more.btn-green,
   span.c-info-card__learn-more {

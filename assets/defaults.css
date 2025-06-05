@@ -772,8 +772,10 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
     border: unset;
     border-top: 1px solid #ebebeb;
     border-radius: unset;
-    svg {
+    > svg {
       width: 100%;
+      max-width: 250px;
+      margin: 0 auto;
     }
   }
   span.c-info-card__learn-more.btn-green,

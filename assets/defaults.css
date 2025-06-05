@@ -774,7 +774,7 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
     border-radius: unset;
     > svg {
       width: 100%;
-      max-width: 250px;
+      max-width: 280px;
       margin: 0 auto;
     }
   }

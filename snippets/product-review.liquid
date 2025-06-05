@@ -1,5 +1,4 @@
 <div class="u-container">
-    <div class="c-product-details__content">
         <div class="product-reviews">
             <div class="page-width">
                 {% comment %} <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div> {% endcomment %}
@@ -8,10 +7,12 @@
         
             </div>
         </div>
-    </div>
 </div>
 
 {% style %}
+#mag-product-review .epr-wrapper {
+    max-width: unset;
+}
 .epr-product-title-review svg {
     display: flex;
 }

@@ -730,6 +730,7 @@ span.all-sold-out {
 }
 .c-product-info__add-to-cart {
   cursor: pointer;
+  font-size: 20px;
 }
 .c-product-info__add-to-cart.all-soldout {
   opacity: 0.5;
@@ -768,6 +769,7 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
 }
 @media screen and (max-width:991px) {
 
+
   .c-info-card {
     border: unset;
     border-top: 1px solid #ebebeb;
@@ -792,7 +794,11 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
     padding: 0 !important;
   }
   #mag-product-review .epr-wrapper {
-    padding: 0 10px !important;
+    padding: 0 20px !important;
+    .epr-review {
+      border-top: 1px solid #ebebeb;
+      padding-top: 30px;
+    }
   }
   div#mag-product-review .epr-review .epr-data .epr-collaps-btn {
     width: 100%;

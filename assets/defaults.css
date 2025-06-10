@@ -1216,4 +1216,11 @@ html {
   .c-product-card__price {
     font-weight: 600;
   }
+  .c-product-card__price,
+  .c-product-card__name {
+    font-size: 20px;
+    @media screen and (max-width: 991px) {
+      font-size: 16px;
+    }
+  }
 }

@@ -2204,11 +2204,16 @@ img.hotspot-image-constr {
   .construction-data-single__content .construct-data-num {
     font-size: 10px;
     margin-top: 10px;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     display: block;
     position: absolute;
     display: flex;
+    @media screen and (max-width: 991px) {
+      font-size: 10px;
+      width: 25px;
+      height: 25px;
+    }
   }
 
   .size-chart-new {

@@ -211,7 +211,7 @@
               data-image="{{ product.metafields.construction_hotspot.board_construction_hotspot_image[forloop.index0] }}"
               data-image-icon="{{ product.metafields.construction_hotspot['3d_board_construction_hotspot_image_icon'][forloop.index0] }}">
               <div class="c-hotspot__btn js-constructions-hotspot-btn">
-                <div class="construct-data-num"><span>{{ forloop.index }}</span></div>
+                <div class="construct-data-num">{{ forloop.index }}</div>
               </div>
             </div>
             {% endfor %}
@@ -225,7 +225,7 @@
 
             <div class="construction-data-single">
               <div class="construction-data-single__content">
-                <div class="construct-data-num"><span>{{ forloop.index }}</span></div>
+                <div class="construct-data-num">{{ forloop.index }}</div>
                 <img src="{{ product.metafields.construction_hotspot['3d_board_construction_hotspot_image_icon'][forloop.index0] }}" alt="">
                 <div class="construct-data-title strong"> {{ hotspot }} </div>
               </div>

@@ -795,11 +795,11 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
   }
   div#mag-product-review .epr-review .epr-data {
     padding: 0 !important;
+    border-top: 1px solid #ebebeb;
   }
   #mag-product-review .epr-wrapper {
     padding: 0 20px !important;
     .epr-review {
-      border-top: 1px solid #ebebeb;
       padding-top: 30px;
     }
   }

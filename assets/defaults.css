@@ -235,6 +235,11 @@ button:hover:not(.c-header__menu-item) span,
   text-decoration: underline !important;
 }
 
+@media screen and (min-width: 75em) {
+    .c-header__top {
+        grid-template-columns: 150px 1fr 250px;
+    }
+}
 @media screen and (min-width: 48em) {
   .c-header__top {
     padding-top: 30px;

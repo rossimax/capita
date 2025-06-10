@@ -768,8 +768,6 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
   margin: 50px auto;
   @media screen and (max-width:991px) {
     margin: 0 auto;
-    border-bottom: 1px solid #ebebeb;
-    padding-bottom: 20px;
   }
 }
 @media screen and (max-width:991px) {
@@ -794,6 +792,13 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
     width: 100%;
     margin: 0 auto;
     max-width: unset;
+  }
+  div#mag-product-review {
+    margin-top: -10px;
+  }
+  div#mag-product-review .epr-title {
+    border-top: 2px solid #f4f4f4;
+    padding-top: 20px;
   }
   div#mag-product-review .epr-review .epr-data {
     padding: 0 !important;

@@ -68,6 +68,9 @@ strong,
     font-size: 14px;
   }
 }
+.c-footer {
+  border-top: unset !important;
+}
 @media screen and (min-width: 75em) {
   .c-footer__content {
       grid-template-columns: minmax(0, 1fr) 352px;

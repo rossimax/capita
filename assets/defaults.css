@@ -902,10 +902,13 @@ footer label.c-slim-form__legal span {
 }
 .c-product-info__sizes .c-product-info__size:hover {
   background-color: #000;
+}
+.c-product-info__sizes.is-disabled .c-product-info__size:hover {
   @media screen and (max-width: 991px) {
       background-color: unset;
   }
 }
+
 span.input-error-message.site_newsletter-error {
   color: red;
   font-size: 12px;

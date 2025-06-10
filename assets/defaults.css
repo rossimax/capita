@@ -1212,3 +1212,8 @@ html {
   font-weight: 600;
 }
 
+.c-related-products {
+  .c-product-card__price {
+    font-weight: 600;
+  }
+}

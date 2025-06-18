@@ -1062,11 +1062,14 @@ span.c-header-cart__total {
     position: relative;
 }
 .pw-variant-optimal-container {
-  max-width: 205px !important;
+  max-width: 145px !important;
+  @media screen and (max-width: 991px) {
+      max-width: 125px !important;
+  }
 }
 .pw-variant-optimal-container .pw-variant-optimal .pw-info-icon {
     position: absolute !important;
-    right: 40px;
+    left: 6px;
     bottom: 3px;
 }
 @container optimal-widget (max-width: 313px) {

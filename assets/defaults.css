@@ -1007,15 +1007,21 @@ h1.cart__empty-text {
 .c-header-cart__line {
     background-color: #e4e4e4 !important;
 }
+.c-header-cart__total__val {
+  font-size: 20px;
+}
 .c-cart-item__right {
     grid-area: right;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 30px;
+    justify-content: center;
     .c-cart-item__price {
         align-self: normal;
         text-align: right;
+        font-size: 20px;
+        font-weight: regular;
     }
     .c-cart-item__remove {
         cursor: pointer;

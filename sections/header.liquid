@@ -1,6 +1,5 @@
 <div class="c-header js-header">
   <div class="c-header__back-area js-header-back-area"></div>
-  <div class="c-header__bg"></div>
   <div class="c-header__top js-header-bar">
     <a class="c-header__logo js-header-close-dropdown" href="{{ shop.url }}">
       <svg
@@ -124,6 +123,7 @@
   </div>
   {% comment %} <hr class="c-header__line"> {% endcomment %}
   <div class="c-header__dropdown">
+    <div class="c-header__bg"></div>
     {% include 'cart-header' %}
     <div class="c-header__menu-list js-header-menu-list">
       <div

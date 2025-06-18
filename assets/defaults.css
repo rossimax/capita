@@ -1001,6 +1001,9 @@ h1.cart__empty-text {
 .c-cart-item__quantity {
     gap: 5px;
     margin-left: -10px;
+    @media screen and (max-width: 991px) {
+          margin-left: 0;
+    }
 }
 .c-header-cart__line {
     background-color: #e4e4e4 !important;
@@ -1107,7 +1110,7 @@ span.c-header-cart__total {
 @media screen and (min-width: 48em) {
     .c-cart-item__container {
         grid-template-areas: "image info quantity right";
-        grid-template-columns: 80px 300px 1fr 360px;
+        grid-template-columns: 100px 300px 1fr 360px;
     }
 }
 @media screen and (min-width: 48em) {

@@ -1055,7 +1055,9 @@ span.c-header-cart__total {
       }
     }
 }
-
+.c-header__bg {
+    transform: translateY(calc(var(--panel-height, 1px)));
+}
 .c-cart-item__container {
     display: grid;
     grid-gap: 10px;

@@ -1056,6 +1056,11 @@ span.c-header-cart__total {
       }
     }
 }
+@media screen and (min-width: 100em) {
+    .c-header-search {
+        padding-block: 45px;
+    }
+}
 .c-header__bg {
     transform: translateY(calc(var(--panel-height, 1px)));
 }

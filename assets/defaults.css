@@ -1122,8 +1122,6 @@ span.c-header-cart__total {
     .c-header-cart form {
         padding-inline: 160px;
         max-width: 1920px;
-        left: 50%;
-        transform: translateX(-50%);
     }
 }
 

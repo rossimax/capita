@@ -1079,7 +1079,7 @@ span.c-header-cart__total {
 @media screen and (min-width: 48em) {
     .c-cart-item__container {
         grid-template-areas: "image info quantity right";
-        grid-template-columns: 60px 300px 1fr 360px;
+        grid-template-columns: 80px 300px 1fr 360px;
     }
 }
 @media screen and (min-width: 48em) {

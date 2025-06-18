@@ -1036,6 +1036,14 @@ span.c-header-cart__total {
     justify-content: space-between;
     font-weight: 600;
 }
+.pw-variant-optimal-container {
+  max-width: 260px;
+}
+@container optimal-widget (max-width: 313px) {
+    .pw-variant-optimal-container .pw-variant-optimal {
+        grid-template-columns: 20px 1fr 30px 40px;
+    }
+  }
 .cart-btns {
     display: flex;
     align-items: center;
@@ -1045,6 +1053,10 @@ span.c-header-cart__total {
     .o-btn.btn-link {
         border: 1px solid #000;
     }
+    input.cart-submit.c-header-cart__checkout-btn,
+      a.o-btn.btn-link {
+        font-size: 20px;
+      }
     @media screen and (max-width: 991px) {
       flex-direction: column;
       input.cart-submit.c-header-cart__checkout-btn,

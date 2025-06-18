@@ -1002,7 +1002,7 @@ h1.cart__empty-text {
     gap: 5px;
 }
 .c-header-cart__line {
-    background-color: #e4e4e4;
+    background-color: #e4e4e4 !important;
 }
 .c-cart-item__right {
     grid-area: right;
@@ -1028,6 +1028,9 @@ h1.cart__empty-text {
     justify-content: space-between;
     .cart-close {
       cursor: pointer;
+    }
+    .msg-cart {
+      font-size: 20px;
     }
 }
 span.c-header-cart__total {

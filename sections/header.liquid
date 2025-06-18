@@ -221,7 +221,7 @@
         <div class="c-header-menu__line"></div>
       </div>
       <div
-        class="c-header__dropdown-panel c-header-menu only-mob"
+        class="c-header__dropdown-panel c-header-menu js-header-dropdown only-mob"
       >
         <a
           class="c-header-menu__parent"
@@ -445,8 +445,7 @@ input.cart-submit.c-header-cart__checkout-btn {
     background: #000;
     color: #fff;
     width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
+    max-width: 310px;
 }
 .c-cart-item__info {
   display: flex;
@@ -456,9 +455,8 @@ input.cart-submit.c-header-cart__checkout-btn {
   background-color: #fffffff5;
   -webkit-backdrop-filter: unset;
   backdrop-filter: unset;
-}
-.c-header__dropdown-panel.c-header-cart.js-header-toggle-dropdown {
-    background: #fffffff5;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 .c-header__top {
     background: #fffffff5;
@@ -519,6 +517,8 @@ input.cart-submit.c-header-cart__checkout-btn {
       mobHeader: '.c-header.js-header',
 
       'mobMenuHamb': '.js-header-mobile-menu',
+
+      'cartClose': '.js-cart-close',
     };
 
     let searchInput = document.querySelector(selectors.searchInput);
@@ -539,6 +539,14 @@ input.cart-submit.c-header-cart__checkout-btn {
     let mobHeader = document.querySelector(selectors.mobHeader);
 
     let mobMenuHamb = document.querySelector(selectors.mobMenuHamb);
+
+    let cartClose = document.querySelector(selectors.cartClose);
+
+    if (cartClose) {
+      cartClose.addEventListener("click", function(){
+        document.querySelector(".js-dropdown-toggle.is-cart").click()
+      })
+    }
 
     if (mobMenuHamb) {
       mobMenuHamb.addEventListener("click", function(){

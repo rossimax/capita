@@ -17,6 +17,7 @@
     cartInfoHidden: '#cart-info-hidden',
     variantNotification: '.js-variant-notification',
     borderNotification: '.js-border-notification',
+    cartItemRemoves: '.js-cart-item-remove',
   };
 
   let productVariants = document.querySelectorAll(selectors.productVariants)
@@ -34,10 +35,30 @@
   let cartInfoHidden = document.querySelector(selectors.cartInfoHidden)
   let variantNotification = document.querySelector(selectors.variantNotification)
   let borderNotification = document.querySelector(selectors.borderNotification)
+  let cartItemRemoves = document.querySelectorAll(selectors.cartItemRemoves);
 
   let itemList = { "items" : [], 'sections': 'cart-ajax' }
 
   window.addEventListener("load", (event) => {
+
+    cartItemRemoves.forEach((cartItemRemove,i) => {
+      cartItemRemove.addEventListener("click", (e) => {
+
+        console.log("remove")
+
+          cartItemRemove.classList.add("disable")
+
+          let dataID = cartItemRemove.getAttribute("data-id")
+          let dataQnt = cartItemRemove.getAttribute("data-qnt")
+
+          let changeVariant = {
+                'id': dataID,
+                'quantity': dataQnt
+              }
+
+          changeCart(changeVariant, cartItemRemove, 0)
+      })
+    }) 
 
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -171,8 +192,13 @@
           let cartTotal = document.querySelector(".c-header-cart__total")
           let cartTotalVal = cartTotal.querySelector(".c-header-cart__total__val")
           let currentCurency = cartTotal.getAttribute("data-currency")
+          let itemsCartCount = document.querySelector(".js-items-cart-count")
+          
           cartTotalVal.innerHTML = currentCurency + newTotal
           
+          // Conteggio items
+          itemsCartCount.innerHTML = data.item_count
+
           // Ricalcolo totale del prodotto (line item)
           data.items.forEach(itemCart => {
             if (itemCart.id == changeVariant.id ) {

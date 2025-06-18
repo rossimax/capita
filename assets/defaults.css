@@ -996,10 +996,11 @@ h1.cart__empty-text {
   align-self: center;
 }
 .c-cart-item__info strong {
-  font-size: 20px;
+  font-size: 26px;
 }
 .c-cart-item__quantity {
     gap: 5px;
+    margin-left: -10px;
 }
 .c-header-cart__line {
     background-color: #e4e4e4 !important;

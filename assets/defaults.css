@@ -999,11 +999,10 @@ h1.cart__empty-text {
   font-size: 26px;
 }
 .c-cart-item__quantity {
-    gap: 5px;
-    margin-left: -10px;
-    @media screen and (max-width: 991px) {
-          margin-left: 0;
-    }
+    gap: 15px;
+}
+.c-cart-item__quantity-btn {
+  width: auto;
 }
 .c-header-cart__line {
     background-color: #e4e4e4 !important;

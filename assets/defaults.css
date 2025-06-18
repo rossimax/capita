@@ -1049,12 +1049,21 @@ span.c-header-cart__total {
     font-weight: 600;
     font-size: 20px;
 }
+@media screen and (min-width: 992px) {
+  route-protect-widget {
+      position: absolute;
+      top: 25px;
+      left: 100%;
+      transform: translateX(-100%);
+      width: 100%;
+  } 
+}
 .pw-variant-optimal-container {
-  max-width: 220px !important;
+  max-width: 205px !important;
 }
 @container optimal-widget (max-width: 313px) {
     .pw-variant-optimal-container .pw-variant-optimal {
-        grid-template-columns: 20px 120px 22px 40px !important;
+        grid-template-columns: 20px 115px 10px 40px!important;
     }
   }
 .cart-btns {

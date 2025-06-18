@@ -1058,12 +1058,20 @@ span.c-header-cart__total {
       width: 100%;
   } 
 }
+.pw-container {
+    position: relative;
+}
 .pw-variant-optimal-container {
   max-width: 205px !important;
 }
+.pw-variant-optimal-container .pw-variant-optimal .pw-info-icon {
+    position: absolute !important;
+    right: 40px;
+    bottom: 3px;
+}
 @container optimal-widget (max-width: 313px) {
     .pw-variant-optimal-container .pw-variant-optimal {
-        grid-template-columns: 20px 115px 10px 40px!important;
+        grid-template-columns: 20px 102px 0px 0px!important;
     }
   }
 .cart-btns {

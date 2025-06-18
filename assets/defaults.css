@@ -1117,7 +1117,9 @@ span.c-header-cart__total {
     }
 }
 @media screen and (min-width: 100em) {
-    .c-header-cart {
+  .c-header-cart {
+  }
+    .c-header-cart form {
         padding-inline: 160px;
         max-width: 1920px;
         left: 50%;

@@ -1,7 +1,7 @@
 <div class="u-container">
   <div class="u-content wider">
     <div class="c-board-tech-dropdowns">
-      <div class="o-text is-2">board technology</div>
+      <div class="o-text is-2">Board Technology</div>
       <div class="c-board-tech-dropdowns__list">
         {% comment %} START - WOD CORE COMPOSITION {% endcomment %}
 
@@ -2361,7 +2361,7 @@
     </div>
   </div>
 
-  <div class="u-container">
+  {% comment %} <div class="u-container">
     <div class="c-info"> 
   
       <div class="c-info-card js-info-card-trigger" data-card="1">
@@ -2549,9 +2549,12 @@
       {% endcomment %}
   
     </div>
-  </div>
+  </div> {% endcomment %}
 
 </div>
+
+
+{% render "c-info" %}
 
 {% schema %}
 {
@@ -2567,10 +2570,25 @@
 
 {% style %}
 
+span.c-info-card__learn-more {
+    margin: 0 40px 50px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-transform: none;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+    @media screen and (max-width: 991px) {
+      font-size: 16px;
+    }
+}
+
   .page-board-tech {
     padding: 90px 0;
     background: #eec900;
-    background: url('https://cdn.shopify.com/s/files/1/0231/7366/0752/files/SFONDO-min.jpg?v=1728035926');
+    background-image: url(//capitasnowboarding.com/cdn/shop/files/GRID-BACKGROUND-WHITE_COMPRESS.jpg?v=1745924560);
     background-repeat: repeat;
   }
   .c-dropdown-num-grid-image__item {
@@ -2619,8 +2637,29 @@
   .c-dropdown:not(.c-dropdown.is-small) {
       border: 1px solid #000;
       border-radius: 25px;
+      background: #fff;
   }
   .c-info .btn-link.btn-black {
     margin: 30px auto;
 }
+
+@media screen and (min-width: 48em) {
+    .c-info {
+        grid-gap: 40px;
+        padding-inline: 0;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .template-board-tech .u-content.wider {
+        padding-inline: 0;
+    }
+}
+
+    .template-board-tech {
+      .o-text.is-4 {
+        text-transform: capitalize;
+      }
+    }
+
 {% endstyle %}

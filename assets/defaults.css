@@ -743,6 +743,7 @@ main.template-nfc-steps {
   > svg {
     margin: 50px auto;
     min-height: 190px;
+    width: calc(100% - 40px);
   }
 }
 .c-product-info__size.is-disabled {

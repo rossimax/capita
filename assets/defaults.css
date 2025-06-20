@@ -815,6 +815,14 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
     margin: 0 auto;
   }
 }
+  .product-reviews div#mag-product-review .epr-title {
+    border-top: 2px solid #f4f4f4;
+    padding-top: 20px;
+    font-size: 26px;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
 @media screen and (max-width:991px) {
 
 
@@ -840,14 +848,6 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
   }
   div#mag-product-review {
     margin-top: -10px;
-  }
-  div#mag-product-review .epr-title {
-    border-top: 2px solid #f4f4f4;
-    padding-top: 20px;
-    font-size: 26px;
-    @media screen and (max-width: 768px) {
-          font-size: 20px;
-    }
   }
   div#mag-product-review .epr-review .epr-data {
     padding: 0 !important;
@@ -998,6 +998,7 @@ span.c-product-card__name {
 }
 .c-listing-filter__wrapper span {
     text-transform: capitalize;
+    font-weight: 500;
 }
 .js-filter-clean.o-text.is-4.is-medium {
     text-transform: capitalize;

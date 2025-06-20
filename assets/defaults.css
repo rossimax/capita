@@ -204,6 +204,12 @@ a.o-btn {
 .c-listing-filter {
     background: #000;
 }
+.c-listing-product__info {
+  .c-listing-product__categories {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
 a.btn-link.btn-black.btn-finder {
   min-width: unset;
   border: 1px solid #fff;

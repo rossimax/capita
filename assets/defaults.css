@@ -770,6 +770,7 @@ span.all-sold-out {
   line-height: 1;
 }
 .c-product-info__add-to-cart {
+  margin-top: 20px;
   cursor: pointer;
   font-size: 20px;
 }

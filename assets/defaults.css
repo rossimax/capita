@@ -1507,3 +1507,8 @@ h4.single-card__content__title.o-text.is-3.nocase.subtitle {
 .single-card__cta__new {
     margin: 0 20px 20px 20px;
 }
+
+main#MainContent.template-factory {
+    border-bottom: unset;
+    padding-bottom: 0;
+}

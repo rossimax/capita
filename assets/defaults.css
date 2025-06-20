@@ -803,11 +803,14 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
   opacity: 0.5;
   pointer-events: none;
 }
+.construction-picture.c-constructions {
+    margin-top: 10px;
+}
 .main-page-pdp .u-content.wider,
 .main-page-pdp .c-info {
   padding-inline: 20px;
   max-width: 1640px;
-  margin: 50px auto;
+  margin: 25px auto;
   @media screen and (max-width:991px) {
     margin: 0 auto;
   }

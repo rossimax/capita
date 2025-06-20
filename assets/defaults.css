@@ -1511,4 +1511,7 @@ h4.single-card__content__title.o-text.is-3.nocase.subtitle {
 main#MainContent.template-factory {
     border-bottom: unset;
     padding-bottom: 0;
+    .youtube-video iframe {
+      top: -30px;
+    }
 }

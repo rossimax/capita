@@ -844,10 +844,10 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
     margin: 0 auto;
     max-width: unset;
   }
-  div#mag-product-review {
+  .product-reviews div#mag-product-review {
     margin-top: -20px;
   }
-  div#mag-product-review .epr-review .epr-data {
+  .product-reviews div#mag-product-review .epr-review .epr-data {
     padding: 0 !important;
   }
   #mag-product-review .epr-wrapper {

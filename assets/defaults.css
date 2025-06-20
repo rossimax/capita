@@ -1517,3 +1517,9 @@ main#MainContent.template-factory {
       margin-top: -30px;
     }
 }
+
+@media screen and (max-width:991px) {
+  .template-clean-energy .section-hero-banner-secondary {
+      top: 35px;
+  }
+}

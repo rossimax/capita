@@ -63,7 +63,7 @@ strong,
   }
 }
 .captions {
-  font-size: 10px;
+  font-size: 12px;
   @media screen and (min-width:769px) {
     font-size: 14px;
   }

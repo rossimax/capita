@@ -401,6 +401,15 @@
     </div>
   </div>
 
+  <div class="js-modal-learn-more-pdp modal-learn-more-pdp hide">
+    <div class="modal-learn-more-pdp__content">
+      <svg class="js-modal-learn-more-pdp-close modal-learn-more-pdp-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 95 95">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="m47.408 49.006 16.178 16.178L65 63.77 48.822 47.592 65 31.414 63.586 30 47.408 46.178 31.23 30l-1.414 1.414 16.178 16.178L29.816 63.77l1.414 1.414 16.178-16.178Z" fill="#231F20"></path>
+      </svg>
+      Models featuring a die-cut base construction often will have two base color variations per size to maximize material utilization and minimize waste during the production process. While purchasing directly on www.capitasnowboarding.com, we cannot guarantee the base color variation on models with die-cut bases. If you have your sights set on a specific base graphic colorway, you can always head to an authorized CAPiTA Dealer!
+    </div>
+  </div>
+
   {% if template.suffix == 'snowboards' %}
     {% include 'pdp-snowboard' %}
   {% else %}
@@ -454,6 +463,46 @@
 </main>
 
 {% style %}
+
+.learn-more-pdp {
+  cursor: pointer;
+}
+.modal-learn-more-pdp.hide {
+  display: none;
+}
+.modal-learn-more-pdp {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background: #0000006b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  .modal-learn-more-pdp__content {
+    width: calc(100% - 40px);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+    position: relative;
+  }
+  .modal-learn-more-pdp-close {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 50px;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid;
+        cursor: pointer;
+  }
+}
   p.c-product-info__description {
     line-height: 1.2;
   }
@@ -2403,7 +2452,13 @@ span.c-product-info__price.o-text.is-3 {
           variantsSizeName: '.js-variant-size-name',
           variantsSizeSpecs: '.js-variant-size-specs',
           variantsSize: '.js-product-variant',
-          variantsSizeCaption: '.js-variant-availability'
+          variantsSizeCaption: '.js-variant-availability',
+
+          learnMorePdp: '.js-learn-more-pdp',
+          modalLearnMorePdp: '.js-modal-learn-more-pdp',
+          modalLearnMorePdpClose: '.js-modal-learn-more-pdp-close',
+          modalLearnMorePdp__content: '.modal-learn-more-pdp__content',
+
         };
 
         let specLines = document.querySelectorAll(selectors.specLines);
@@ -2418,7 +2473,36 @@ span.c-product-info__price.o-text.is-3 {
         let variantsSize = document.querySelectorAll(selectors.variantsSize);
         let variantsSizeCaption = document.querySelector(selectors.variantsSizeCaption);
 
+        let learnMorePdp = document.querySelector(selectors.learnMorePdp);
+        let modalLearnMorePdp = document.querySelector(selectors.modalLearnMorePdp);
+        let modalLearnMorePdpClose = document.querySelector(selectors.modalLearnMorePdpClose);
+        let modalLearnMorePdp__content = document.querySelector(selectors.modalLearnMorePdp__content);
+
+
         window.addEventListener("load", function(){
+
+          if (learnMorePdp) {
+
+            learnMorePdp.addEventListener("click", function(){
+              modalLearnMorePdp.classList.remove("hide")
+            })
+            modalLearnMorePdpClose.addEventListener("click", function(){
+              modalLearnMorePdp.classList.add("hide")
+            })
+
+            document.addEventListener('mouseup', function(e) {
+                if (!modalLearnMorePdp__content.contains(e.target)) {
+                    modalLearnMorePdp.classList.add("hide")
+                }
+            });
+
+            // modalLearnMorePdp.addEventListener("click", function(e){
+            //   if (!e.target.contains(modalLearnMorePdp__content) ) {
+            //     modalLearnMorePdp.classList.add("hide")
+            //   }
+            //   modalLearnMorePdp.classList.add("hide")
+            // })
+          }
 
           variantsSize.forEach((variantSize) => {
             variantSize.addEventListener("click", function(){

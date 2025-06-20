@@ -841,6 +841,10 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
   div#mag-product-review .epr-title {
     border-top: 2px solid #f4f4f4;
     padding-top: 20px;
+    font-size: 26px;
+    @media screen and (max-width: 768px) {
+          font-size: 20px;
+    }
   }
   div#mag-product-review .epr-review .epr-data {
     padding: 0 !important;

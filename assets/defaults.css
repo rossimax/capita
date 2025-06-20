@@ -207,9 +207,10 @@ a.o-btn {
 .c-listing-product__info {
   .c-listing-product__categories {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     @media screen and (max-width: 768px) {
-          font-size: 14px;
+      font-size: 14px;
+      font-weight: 500;
     }
   }
 }

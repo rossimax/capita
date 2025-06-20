@@ -475,7 +475,7 @@
               </div>
 
               <div class="c-listing-product__info">
-                <span class="c-listing-product__categories o-text is-5 is-medium">{{ product.metafields.snowboard_info.snowboard_listing_tag | default: 'categories'  }}</span>
+                <span class="c-listing-product__categories o-text is-5 is-medium">{{ product.metafields.snowboard_info.snowboard_listing_tag | default: '' }}</span>
                 <span class="c-listing-product__name o-text is-3"><a href="{{ product.url }}">{{ product.title }}</a></span>
                
                 {%- assign product_in_collects = '[' -%}

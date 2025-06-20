@@ -340,7 +340,7 @@
             <div class="c-listing-filter closed">
               <div class="c-listing-filter__wrapper">
                 <div class="c-listing-filter__mob-head closed">
-                  <span>FILTERS</span>
+                  <span>Filters</span>
                   <div class="js-filter-num-select-mob o-text is-4 is-regular"><span class="num-select-filter">0</span> selected</div>
                 </div>
       
@@ -358,7 +358,7 @@
       
                 <span class="js-tags-list" data-tags="{{tag_list}}"></span>
       
-                <div class="c-listing-filter__dropdown-title js-filter-type o-text is-4 is-medium" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
+                <div class="c-listing-filter__dropdown-title c-listing-filter__dropdown-title--cat js-filter-type o-text is-4 is-medium" attr-filter-type="category" style="margin-top: -15px;border-top: unset;"><span>Category</span></div>
                 <div class="c-listing-filter__stack js-filter-inputs js-filter-inputs-onlyone" attr-filter-type="category" attr-test="{{ current_tags }}">
                   <label class="c-listing-filter__option o-text is-4">
                     <input type="checkbox" name="All" 
@@ -715,6 +715,9 @@ a.c-listing-product__size:hover span {
   right: 0;
   text-align: right;
   line-height: 1;
+}
+.c-listing-filter__dropdown-title--cat:after {
+  content: unset;
 }
 
 @media screen and (min-width: 120em) {

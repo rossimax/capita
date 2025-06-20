@@ -1483,3 +1483,27 @@ html {
     }
   }
 }
+
+h4.single-card__content__title.o-text.is-3.nocase.subtitle {
+    font-weight: 600;
+}
+
+.logo-cards .btn-action,
+.logo-cards .btn-link,
+.logo-cards .btn-link.o-btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px 10px 20px;
+  min-width: unset;
+  max-width: 360px;
+  border-radius: 25px;
+  font-weight: 600;
+  align-items: center;
+  font-size: 20px;
+  @media screen and (max-width: 991px) {
+    font-size: 16px;
+  }
+}
+.single-card__cta__new {
+    margin: 0 20px 20px 20px;
+}

@@ -98,6 +98,7 @@ strong,
 .o-text.is-4,
 .o-text.is-4.is-regular {
   font-size: 14px;
+  font-weight: 500;
 }
 .o-text.is-5 {
   font-size: 16px;

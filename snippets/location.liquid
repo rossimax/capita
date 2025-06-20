@@ -1,6 +1,6 @@
 <div class="country-site-selector">
     <a class="country-site-selector__actual">
-        {{ localization.country | image_url: width: 32 | image_tag }} {{ localization.country.iso_code }}/{{ shop.locale | upcase }}
+        {{ localization.country | image_url: width: 32 | image_tag }} <span>{{ localization.country.iso_code }}/{{ shop.locale | upcase }}</span>
     </a> 
     {% include 'icon-chevron-down' %}
 
@@ -184,6 +184,9 @@ a.country-site-selector__actual {
     align-items: stretch;
     font-size: 16px;
     font-weight: 600;
+            span {
+            padding-top: 2px;
+        }
 }
 a.country-site-selector__actual img {
     margin-right: 10px;

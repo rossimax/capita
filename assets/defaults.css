@@ -896,6 +896,9 @@ span.msg-empty-cart.medium.hide,
 }
 .c-listing-product__image {
   border: unset !important;
+  @media screen and (max-width: 768px) {
+    aspect-ratio: 200 / 300;
+  }
 }
 .c-listing-product__name a {
   text-decoration: none;

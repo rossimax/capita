@@ -1521,3 +1521,14 @@ main#MainContent.template-factory {
       margin-top: 35px;
   }
 }
+
+.c-step.is-fullscreen .c-step__layer {
+    background: hsl(0deg 0% 100% / 97%);
+    -webkit-backdrop-filter: unset;
+    backdrop-filter: unset;
+    z-index: 1; 
+    border: 2px solid #000;
+    div {
+      color: #000;
+    }
+}

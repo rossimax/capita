@@ -1463,11 +1463,12 @@ html {
 }
 .c-product-tech .o-text.is-4 {
   font-weight: 500;
+  text-transform: capitalize;
 }
 .c-hexagon .o-text.is-4 {
   font-weight: 600;
+  text-transform: capitalize;
 }
-
 .c-related-products {
   .c-product-card__price {
     font-weight: 500;

@@ -997,7 +997,7 @@ span.c-product-card__name {
 }
 .c-listing-filter__wrapper span {
     text-transform: capitalize;
-    font-weight: 500;
+    font-weight: 600;
 }
 .js-filter-clean.o-text.is-4.is-medium {
     text-transform: capitalize;

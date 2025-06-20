@@ -763,9 +763,9 @@ span.all-sold-out {
   font-family: "Proximanova";
   font-weight: 500;
   border: 1px solid #fb3105;
-  padding: 21px 20px;
+  padding: 13px 20px;
   border-radius: 30px;
-  height: 65px;
+  height: 47px;
   min-width: 340px;
   line-height: 1;
 }

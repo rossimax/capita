@@ -1159,6 +1159,12 @@ span.c-header-cart__total {
         padding-block: 45px;
     }
 }
+@media screen and (min-width: 75em) {
+    .c-header-menu {
+      padding-block-start: 0;
+      padding-block-end: 32px;
+    }
+}
 .c-header__bg {
     transform: translateY(calc(var(--panel-height, 1px)));
 }

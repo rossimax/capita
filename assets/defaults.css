@@ -1062,6 +1062,9 @@ h1.cart__empty-text {
 }
 .c-header-cart__total__val {
   font-size: 20px;
+  @media screen and (max-width: 991px) {
+    font-size: 16px;
+  }
 }
 .c-cart-item__right {
     grid-area: right;

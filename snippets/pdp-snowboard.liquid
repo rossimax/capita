@@ -3,12 +3,12 @@
     <div class="c-product-tech">
       <div class="c-product-tech__sx">
         <div class="c-product-tech__specs">
-          <div class="c-spec"><span class="c-spec__type o-text is-4">shape</span><span class="c-spec__value o-text is-3">{{
+          <div class="c-spec"><span class="c-spec__type c-product-tech__subtitle o-text is-4">shape</span><span class="c-spec__value o-text is-3">{{
               product.metafields.snowboard_info.shapes }}</span>
           </div>
-          <div class="c-spec"><span class="c-spec__type o-text is-4">sidecut</span><span class="c-spec__value o-text is-3">{{
+          <div class="c-spec"><span class="c-spec__type c-product-tech__subtitle o-text is-4">sidecut</span><span class="c-spec__value o-text is-3">{{
               product.metafields.snowboard_info.sidecut }}</span></div>
-          <div class="c-spec"><span class="c-spec__type o-text is-4">flex</span>
+          <div class="c-spec"><span class="c-spec__type c-product-tech__subtitle o-text is-4">flex</span>
             <span class="c-spec__value o-text is-3">{{ product.metafields.snowboard_info.flex_title }}</span>
             <div class="c-spec__level is-blue js-spec-level"
               style="--dot-position: {{ product.metafields.snowboard_info.rating__flex }}; --steps: 10">
@@ -24,7 +24,7 @@
               <div class="c-spec__line"></div>
             </div>
           </div>
-          <div class="c-spec"><span class="c-spec__type o-text is-4">rider type</span><span class="c-spec__value o-text is-3">{{
+          <div class="c-spec"><span class="c-spec__type c-product-tech__subtitle o-text is-4">rider type</span><span class="c-spec__value o-text is-3">{{
               product.metafields.snowboard_info.rider_type_title }}</span></div>
 
               {% comment %} <div class="switch-spec">
@@ -32,7 +32,7 @@
                 <span class="switch-spec__lines js-show-lines">Show Lines</span>
               </div> {% endcomment %}
    
-            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type o-text is-4">skill level</span>
+            <div class="c-spec js-c-spec-line hide"><span class="c-spec__type c-product-tech__subtitle o-text is-4">skill level</span>
               <div class="c-spec__level js-spec-level"
                 style="--dot-position: {{ product.metafields.snowboard_info.rating__skill_level }}; --steps: 5">
                 <div class="c-spec__dot"></div>

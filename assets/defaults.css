@@ -1468,6 +1468,9 @@ html {
   font-weight: 500;
   text-transform: capitalize;
 }
+span.c-product-tech__subtitle.o-text.is-4 {
+    font-weight: 600;
+}
 .c-hexagon .o-text.is-4 {
   font-weight: 600;
   text-transform: capitalize;

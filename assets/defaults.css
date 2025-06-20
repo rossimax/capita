@@ -987,6 +987,12 @@ span.c-product-card__name {
 .c-product-card__info {
   grid-gap: 5px;
 }
+.c-listing-filter__wrapper span {
+    text-transform: capitalize;
+}
+.js-filter-clean.o-text.is-4.is-medium {
+    text-transform: capitalize;
+}
 /* width */
 .c-listing-filter__wrapper::-webkit-scrollbar {
   width: 7px;

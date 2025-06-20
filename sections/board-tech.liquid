@@ -2590,6 +2590,7 @@ span.c-info-card__learn-more {
     background: #eec900;
     background-image: url(//capitasnowboarding.com/cdn/shop/files/GRID-BACKGROUND-WHITE_COMPRESS.jpg?v=1745924560);
     background-repeat: repeat;
+    background-size: 85%;
   }
   .c-dropdown-num-grid-image__item {
     display: grid;
@@ -2659,7 +2660,19 @@ span.c-info-card__learn-more {
     .template-board-tech {
       .o-text.is-4 {
         text-transform: capitalize;
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      button.btn-transp.btn-action:hover,
+      button.btn-transp.btn-action.js-board-tech-dropdown-btn.is-active {
+        text-decoration: unset !important;
       }
     }
+
+button.btn-transp.btn-action.js-board-tech-dropdown-btn {
+  padding: 31.5px 35px;
+}
+
 
 {% endstyle %}

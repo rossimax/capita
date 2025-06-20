@@ -979,7 +979,7 @@ span.input-error-message.site_newsletter-error {
   font-size: 26px;
   text-transform: unset;
   @media screen and (max-width: 991px) {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 span.c-product-card__name {

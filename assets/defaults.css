@@ -337,6 +337,9 @@ button:hover:not(.c-header__menu-item) span,
 
 /* START TEMPLATES */
 
+.template-select-location {
+  padding-top: calc(var(--header-bar) + 20px);
+}
 main.template-informative,
 main.template-contact,
 main.template-faq,

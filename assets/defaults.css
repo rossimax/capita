@@ -90,6 +90,7 @@ strong,
 .o-text.is-1,
 .o-text.is-2 {
   font-size: 26px;
+  text-transform: unset;
 }
 .o-text.is-3 {
   font-size: 16px;

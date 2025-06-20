@@ -1519,7 +1519,7 @@ main#MainContent.template-factory {
 }
 
 @media screen and (max-width:991px) {
-  .template-clean-energy .section-hero-banner-secondary {
-      top: 35px;
+  .template-clean-energy {
+      margin-top: 35px;
   }
 }

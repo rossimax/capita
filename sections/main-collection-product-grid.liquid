@@ -11,8 +11,8 @@
     
               {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
     
-              <span class="sorting-option {% if sort_by == 'created-descending' %}selected{% endif %}" value="created-descending">NEWEST</span> | <span class="sorting-option {% if sort_by == 'manual' %}selected{% endif %}" value="manual">FEATURED</span> / <span class="sorting-option {% if sort_by == 'price-descending' %}selected{% endif %}" value="price-descending">PRICE: HIGH - LOW</span> |
-              <span class="sorting-option {% if sort_by == 'price-ascending' %}selected{% endif %}" value="price-ascending">PRICE: LOW - HIGH</span>
+              <span class="sorting-option {% if sort_by == 'created-descending' %}selected{% endif %}" value="created-descending">newest</span> | <span class="sorting-option {% if sort_by == 'manual' %}selected{% endif %}" value="manual">featured</span> / <span class="sorting-option {% if sort_by == 'price-descending' %}selected{% endif %}" value="price-descending">price: high - low</span> |
+              <span class="sorting-option {% if sort_by == 'price-ascending' %}selected{% endif %}" value="price-ascending">price: low - high</span>
     
             </div>
           </div>
@@ -629,6 +629,9 @@ a.o-btn.btn-finder {
     h1 {
       text-transform: unset;
     }
+}
+.sorting-option {
+  text-transform: capitalize;
 }
 span.sorting-option.selected {
   font-weight: 600;

@@ -1519,7 +1519,8 @@ main#MainContent.template-factory {
 }
 
 @media screen and (max-width:991px) {
-  .template-clean-energy {
+  .template-clean-energy,
+  .template-technology {
       margin-top: 35px;
   }
 }

@@ -8,9 +8,9 @@
 >
   <div class="text-video-cards padding-inline">
     <div class="text-video-cards__head">
-      <h2 class="o-text nocase">{{ section.settings.title }}</h2>
       <div class="text-video-cards__head__content row">
         <div class="text-video-cards__head__content__paragraph col-6 o-text is-4 is-regular">
+          <h2 class="o-text nocase">{{ section.settings.title }}</h2>
           {{ section.settings.paragraph }}
         </div>
         <div class="text-video-cards__head__content__video col-6">
@@ -302,6 +302,10 @@
       height: 30% !important;
     }
   }
+
+  .text-video-cards__head h2.o-text.nocase {
+    margin-bottom: 30px;
+}
 {% endstylesheet %}
 
 {% javascript %}

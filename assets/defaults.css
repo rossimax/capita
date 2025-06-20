@@ -200,6 +200,9 @@ a.o-btn {
     background-position: 94% 11%;
     background-size: 85%;
     background-repeat: repeat;
+    @media screen and (max-width: 768px) {
+        background-size: 225%;  
+    }
 }
 .c-listing-filter {
     background: #000;

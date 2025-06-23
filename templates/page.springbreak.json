@@ -22,15 +22,19 @@
         "description": ""
       }
     },
-    "9c80f921-d510-4838-b362-dbe82da9dc5e": {
-      "type": "warranty-claim-s1",
+    "video_zbH6B4": {
+      "type": "video",
+      "name": "Hero Banner Video",
       "settings": {
-        "form_warranty": "88sdrr-Y0W493EPXOxapMw"
+        "boxed": false,
+        "title": "",
+        "video_desk": "shopify://files/videos/84b486accc474e1db679617665aac13e.mp4",
+        "video_mob": "shopify://files/videos/95d57af0388d4813bc8e451583bb42db.mp4"
       }
     }
   },
   "order": [
     "main",
-    "9c80f921-d510-4838-b362-dbe82da9dc5e"
+    "video_zbH6B4"
   ]
 }

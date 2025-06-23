@@ -29,7 +29,9 @@
         "boxed": false,
         "title": "",
         "video_desk": "shopify://files/videos/84b486accc474e1db679617665aac13e.mp4",
-        "video_mob": "shopify://files/videos/95d57af0388d4813bc8e451583bb42db.mp4"
+        "video_mob": "shopify://files/videos/95d57af0388d4813bc8e451583bb42db.mp4",
+        "cta_text": "Explore the Collection",
+        "cta_link": "shopify://collections/spring-break"
       }
     }
   },

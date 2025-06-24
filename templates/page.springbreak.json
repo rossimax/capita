@@ -33,10 +33,16 @@
         "cta_text": "Explore the Collection",
         "cta_link": "shopify://collections/spring-break"
       }
+    },
+    "springbreak_module_1_JggqDt": {
+      "type": "springbreak-module-1",
+      "name": "Springbreak Module 1",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "video_zbH6B4"
+    "video_zbH6B4",
+    "springbreak_module_1_JggqDt"
   ]
 }

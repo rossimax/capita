@@ -1496,6 +1496,11 @@ h4.single-card__content__title.o-text.is-3.nocase.subtitle {
     margin: 0 auto;
 }
 
+.template-board-tech .c-info-card.js-info-card-trigger {
+    padding: 20px;
+    border-radius: 15px;
+}
+
 .logo-cards .btn-action,
 .logo-cards .btn-link,
 .logo-cards .btn-link.o-btn {

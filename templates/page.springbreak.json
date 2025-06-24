@@ -54,12 +54,18 @@
         "left_sup_title": "TRUE TWIN HYBRID CAMBER",
         "right_text": ""
       }
+    },
+    "springbreak_module_2_wHU47N": {
+      "type": "springbreak-module-2",
+      "name": "Springbreak Module 2",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "video_zbH6B4",
     "springbreak_module_1_JggqDt",
-    "banner_product_hitdac"
+    "banner_product_hitdac",
+    "springbreak_module_2_wHU47N"
   ]
 }

@@ -59,6 +59,11 @@
       "type": "springbreak-module-2",
       "name": "Springbreak Module 2",
       "settings": {}
+    },
+    "springbreak_module_3_Gk47Bh": {
+      "type": "springbreak-module-3",
+      "name": "Springbreak Module 3",
+      "settings": {}
     }
   },
   "order": [
@@ -66,6 +71,7 @@
     "video_zbH6B4",
     "springbreak_module_1_JggqDt",
     "banner_product_hitdac",
-    "springbreak_module_2_wHU47N"
+    "springbreak_module_2_wHU47N",
+    "springbreak_module_3_Gk47Bh"
   ]
 }

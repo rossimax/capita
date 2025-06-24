@@ -41,6 +41,9 @@
     },
     "banner_product_hitdac": {
       "type": "banner-product",
+      "custom_css": [
+        ".banner-product__left {background: #fcef21;}"
+      ],
       "name": "Banner Product",
       "settings": {
         "image_position": true,

@@ -38,11 +38,24 @@
       "type": "springbreak-module-1",
       "name": "Springbreak Module 1",
       "settings": {}
+    },
+    "banner_product_hitdac": {
+      "type": "banner-product",
+      "name": "Banner Product",
+      "settings": {
+        "image_position": true,
+        "product": "sb-resort-twin-2026",
+        "right_image": "shopify://shop_images/26EARLY_RELEASE_RESORT_TWIN_1294x870_c12799b9-f692-4efe-b454-118f1e14251c.png",
+        "left_title": "SB RESORTTWIN",
+        "left_sup_title": "TRUE TWIN HYBRID CAMBER",
+        "right_text": "TRUE TWIN HYBRID CAMBER"
+      }
     }
   },
   "order": [
     "main",
     "video_zbH6B4",
-    "springbreak_module_1_JggqDt"
+    "springbreak_module_1_JggqDt",
+    "banner_product_hitdac"
   ]
 }

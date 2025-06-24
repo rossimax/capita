@@ -1,0 +1,599 @@
+{% assign sb_list = "sb-powder-twin-2025|sb-powder-racers-2025|sb-powder-glider-2025|sb-slush-slashers-2025|sb-resort-twin-2026" | split: "|" %}
+
+<div class="px-4 py-10 bg-gray-grid bg-repeat bg-m-gray-grid grid gap-10 content-start md:px-32 md:py-24" id="spring-break-collection">
+  <h2 class="font-bold text-5xl md:text-7xl ">The Spring Break Collection</h2>
+  <div class="grid grid-cols-2 gap-y-10 gap-x-5 md:grid-cols-3 lg:grid-cols-3 lg:gap-y-20 lg:gap-x-16">
+
+    {% for sb_board in sb_list %}
+      <div class="block">
+        <a href="{{ all_products[sb_board].url }}"
+          ><img
+            class="object-contain block w-full transition-transform duration-300 ease-out aspect-[200/327] hover:scale-105"
+            src="{{ all_products[sb_board].featured_image | img_url: '1160x' }}"
+            alt="{{ all_products[sb_board].title }}"></a
+        ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden">
+            {% for variant in all_products[sb_board].variants %}
+              {% if forloop.index < 4 %}
+                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}">{%- if variant.available == false %} <span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{% endif %}{{ variant.title }}</a>
+              {% elsif forloop.index == forloop.length %}
+                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+              {% endif %}
+            {% endfor %}
+            
+            </span
+        ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start">
+            
+            {% for variant in all_products[sb_board].variants %}
+              {% if forloop.index < 4 %}
+                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}">{%- if variant.available == false %} <span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{% endif %}{{ variant.title }}</a>
+              {% elsif forloop.index == forloop.length %}
+                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+              {% endif %}
+            {% endfor %}
+  
+            </span
+        ><span class="grid mt-2 md:mt-3"
+          ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+            >{{ all_products[sb_board].metafields.snowboard_info.snowboard_listing_tag | default: ''  }}</span
+          ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+            >{{ all_products[sb_board].title }}</a
+          ></span
+        ><span class="text-sm text-black leading-none md:text-lg">{{ all_products[sb_board].price | money_with_currency }}</span>
+      </div>
+    {% endfor %}
+
+    {% comment %} <div class="block">
+      <a href=""
+        ><img
+          class="object-contain block w-full transition-transform duration-300 ease-out aspect-[200/327] hover:scale-105"
+          src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_2425_productimage_SBpowderracers_149_f6fa2233-7a6e-4c6b-a15a-8a5b3400cde6.png?v=1719927267"
+          alt=""></a
+      ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="grid mt-2 md:mt-3"
+        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+          >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
+        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+          >aeronaut</a
+        ></span
+      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+    </div>
+
+    <div class="block">
+      <a href=""
+        ><img
+          class="object-contain block w-full transition-transform duration-300 ease-out aspect-[200/327] hover:scale-105"
+          src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_2425_productimage_SBpowderglider_154_e6ea2f4c-566a-4931-8c3b-6bedec382813.png?v=1719927267"
+          alt=""></a
+      ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="grid mt-2 md:mt-3"
+        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+          >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
+        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+          >aeronaut</a
+        ></span
+      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+    </div>
+
+    <div class="block">
+      <a href=""
+        ><img
+          class="object-contain block w-full transition-transform duration-300 ease-out aspect-[200/327] hover:scale-105"
+          src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_2425_productimage_SBslushslashers_139_2ddca488-3a87-4bc4-9bc9-e6bdea84b6a7.png?v=1719927266"
+          alt=""></a
+      ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="grid mt-2 md:mt-3"
+        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+          >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
+        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+          >aeronaut</a
+        ></span
+      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+    </div>
+
+    <div class="block">
+      <a href=""
+        ><img
+          class="object-contain block w-full transition-transform duration-300 ease-out aspect-[200/327] hover:scale-105"
+          src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_2425_productimage_SBresorttwin_152.png?v=1719927266"
+          alt=""></a
+      ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="grid mt-2 md:mt-3"
+        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+          >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
+        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+          >aeronaut</a
+        ></span
+      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+    </div> {% endcomment %}
+
+  </div>
+</div>
+
+{% assign acc_list = "tropical-hood-white|tropical-hood-black|reaper-long-sleeve-tee|skidoo-tee|bars-long-sleeve-tee|resort-tee" | split: "|" %}
+
+<div class="px-4 py-10 bg-gray-grid bg-repeat bg-m-gray-grid grid gap-10 content-start md:px-32 md:py-24">
+  <h2 class="font-bold text-5xl md:text-7xl ">Spring Break Accessories</h2>
+  <div class="grid grid-cols-2 gap-y-10 gap-x-5 md:grid-cols-3 lg:gap-y-20 lg:gap-x-16">
+
+    {% for sb_acc in acc_list %}
+      <div class="block">
+        <a href="{{ all_products[sb_acc].url }}"
+          ><img
+            class="object-contain block w-full transition-transform duration-300 ease-out aspect-[130/150] hover:scale-105"
+            src="{{ all_products[sb_acc].featured_image | img_url: '1160x' }}"
+            alt="{{ all_products[sb_acc].title }}"></a
+        ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+          >
+            {% for variant in all_products[sb_acc].variants %}
+              {% if forloop.index < 4 %}
+                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
+              {% elsif forloop.index == forloop.length %}
+                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+              {% endif %}
+            {% endfor %}
+            
+            </span
+        ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+          >
+            
+            {% for variant in all_products[sb_acc].variants %}
+              {% if forloop.index < 4 %}
+                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
+              {% elsif forloop.index == forloop.length %}
+                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+              {% endif %}
+            {% endfor %}
+            
+            </span
+        ><span class="grid mt-2 md:mt-3"
+          ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+            >{{ all_products[sb_acc].metafields.snowboard_info.snowboard_listing_tag | default: ''  }}</span
+          ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+            >{{ all_products[sb_acc].title }}</a
+          ></span
+        ><span class="text-sm text-black leading-none md:text-lg">{{ all_products[sb_acc].price | money_with_currency }}</span>
+      </div>
+    {% endfor %}
+
+    {% comment %} <div class="block">
+      <a href=""
+        ><img
+          class="object-contain block w-full transition-transform duration-300 ease-out aspect-[130/150] hover:scale-105"
+          src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/TROPICAL_Hood_Black_Front.png?v=1719927528"
+          alt=""></a
+      ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="grid mt-2 md:mt-3"
+        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+          >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
+        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+          >aeronaut</a
+        ></span
+      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+    </div>
+
+    <div class="block">
+      <a href=""
+        ><img
+          class="object-contain block w-full transition-transform duration-300 ease-out aspect-[130/150] hover:scale-105"
+          src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/TROPICAL_Hood_White_Front.png?v=1719927528"
+          alt=""></a
+      ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="grid mt-2 md:mt-3"
+        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+          >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
+        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+          >aeronaut</a
+        ></span
+      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+    </div>
+
+    <div class="block">
+      <a href=""
+        ><img
+          class="object-contain block w-full transition-transform duration-300 ease-out aspect-[130/150] hover:scale-105"
+          src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/REAPER_Long_Tee_Front.png?v=1719927527"
+          alt=""></a
+      ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="grid mt-2 md:mt-3"
+        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+          >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
+        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+          >aeronaut</a
+        ></span
+      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+    </div>
+
+    <div class="block">
+      <a href=""
+        ><img
+          class="object-contain block w-full transition-transform duration-300 ease-out aspect-[130/150] hover:scale-105"
+          src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/SKIDOO_Tee_Front.png?v=1719927528"
+          alt=""></a
+      ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="grid mt-2 md:mt-3"
+        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+          >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
+        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+          >aeronaut</a
+        ></span
+      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+    </div>
+
+    <div class="block">
+      <a href=""
+        ><img
+          class="object-contain block w-full transition-transform duration-300 ease-out aspect-[130/150] hover:scale-105"
+          src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/BARS_Long_Tee_Front.png?v=1719927527"
+          alt=""></a
+      ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="grid mt-2 md:mt-3"
+        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+          >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
+        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+          >aeronaut</a
+        ></span
+      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+    </div>
+
+    <div class="block">
+      <a href=""
+        ><img
+          class="object-contain block w-full transition-transform duration-300 ease-out aspect-[130/150] hover:scale-105"
+          src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/RESORT_Tee_Front.png?v=1719927527"
+          alt=""></a
+      ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+          ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+          >156</a
+        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+          >+ 3 more</a
+        ></span
+      ><span class="grid mt-2 md:mt-3"
+        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+          >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
+        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+          >aeronaut</a
+        ></span
+      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+    </div> {% endcomment %}
+
+  </div>
+
+  
+  </div>
+  <div class="text-boxes__foot mt-12 mb-6">
+    <div class="text-boxes__foot__ctas">
+      
+        <a class="o-btn is-big black text-boxes__foot__btn js-modal-youtube px-6 !normal-case">Watch: Clean Energy Production
+          <svg class="icon-arrow-play" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.41346 0C3.77399 0 0 3.77399 0 8.41346C0 13.0529 3.77399 16.8269 8.41346 16.8269C13.0529 16.8269 16.8269 13.0526 16.8269 8.41346C16.8269 3.77432 13.0529 0 8.41346 0ZM8.41346 15.3058C4.61317 15.3058 1.52117 12.2137 1.52117 8.41313C1.52117 4.61284 4.6132 1.52117 8.41346 1.52117C12.2137 1.52117 15.3058 4.61307 15.3058 8.41346C15.3058 12.2139 12.2137 15.3058 8.41346 15.3058Z" fill="white"></path>
+      <path d="M12.4349 7.56565L7.04042 4.45086C6.87471 4.35491 6.69245 4.30469 6.51389 4.30469C5.97619 4.30469 5.57031 4.73243 5.57031 5.2998V11.5288C5.57031 12.0962 5.97622 12.5242 6.51389 12.5242C6.69244 12.5242 6.87445 12.4736 7.04055 12.3776L12.4347 9.26352C12.7579 9.07688 12.951 8.75949 12.951 8.41448C12.9512 8.0696 12.758 7.75231 12.4349 7.5658L12.4349 7.56565Z" fill="white"></path>
+  </svg>
+      </a>
+      
+      
+        <a class="o-btn is-big black text-boxes__foot__btn px-6 !normal-case" href="/pages/technology">How does technology help?
+          </a>
+      
+      
+    </div>
+  </div>
+
+  <div class="modal-youtube hide">
+    <div class="modal-youtube__close js-modal-youtube-close"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+  <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+</path></svg>
+</div>
+    <iframe width="90%" height="80%" src="https://www.youtube.com/embed/HN33OvYL8N4?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+  </div>
+
+<style>
+  hl {
+    background: linear-gradient(0deg,#fcef2100,#fcef2100 10%,#fcef21 10%,#fcef21 80%,#fcef2100 80%);
+  }
+  .text-boxes__foot {
+  margin: 60px 0;
+}
+  .text-boxes__foot__btn {
+    width: 740px;
+    padding-block: 21px;
+    font-size: 18px;
+  }
+  .c-step__media .only-mob {
+    display: none;
+  }
+  .text-boxes__foot__ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-boxes__foot__ctas a {
+    margin-bottom: 20px;
+  }
+  a.btn.btn-secondary.black.text-boxes__foot__btn {
+    width: 100%;
+    max-width: 740px;
+    padding: 0 20px;
+  }
+  .modal-youtube {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0000007d;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    z-index: 999;
+  }
+  .modal-youtube.hide {
+    display: none;
+  }
+  .modal-youtube__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .modal-youtube__close svg {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 1px solid;
+    background: #ffffffd1;
+    cursor: pointer;
+  }
+  .js-modal-youtube {
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    .c-step__media .only-mob {
+      display: block;
+    }
+    .c-step__media .only-desk {
+      display: none;
+    }
+    .text-boxes__foot__ctas {
+      padding: 0 20px;
+    }
+    .modal-youtube iframe {
+      height: 30% !important;
+    }
+    .text-boxes__foot__btn {
+      width: 100%;
+    }
+  }
+</style>
+  <script>
+
+    (function () {
+      let selectors = {
+        videoModalYT: '.modal-youtube',
+        iframeVideoModalYT: '.modal-youtube iframe',
+        ctaTextVideoCtaModal: '.js-modal-youtube',
+        videoModalYTClose: '.js-modal-youtube-close',
+      };
+  
+      let videoModalYT = document.querySelector(selectors.videoModalYT);
+      let iframeVideoModalYT = document.querySelector(selectors.iframeVideoModalYT);
+      let ctaTextVideoCtaModal = document.querySelector(selectors.ctaTextVideoCtaModal);
+      let videoModalYTClose = document.querySelector(selectors.videoModalYTClose);
+  
+      if (videoModalYT) {
+        let iframeVideoModalYT__src = iframeVideoModalYT.getAttribute('src');
+  
+        ctaTextVideoCtaModal.addEventListener('click', function () {
+          videoModalYT.classList.remove('hide');
+          iframeVideoModalYT.setAttribute('src', iframeVideoModalYT__src + '?autoplay=1');
+        });
+        videoModalYTClose.addEventListener('click', function () {
+          videoModalYT.classList.add('hide');
+          iframeVideoModalYT.setAttribute('src', iframeVideoModalYT__src + '?autoplay=0');
+        });
+        videoModalYT.addEventListener('click', function (e) {
+          if (!iframeVideoModalYT.contains(e.target)) {
+            videoModalYT.classList.add('hide');
+            iframeVideoModalYT.setAttribute('src', iframeVideoModalYT__src + '?autoplay=0');
+          }
+        });
+      }
+    })();
+
+  </script>
+<script src="{{ 'springbreak.js' | asset_url }}"></script>
+
+{% schema %}
+  {
+    "name": "Springbreak Module 3",
+    "presets": [
+        {
+            "name": "Springbreak Module 3"
+        }
+    ]
+  }
+{% endschema %}

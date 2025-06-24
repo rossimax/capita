@@ -1506,7 +1506,7 @@ h4.single-card__content__title.o-text.is-3.nocase.subtitle {
       border-radius: 0 !important;
       border-top: 0;
       border-bottom: 2px solid #f4f4f4;
-      padding: 20px 10px;
+      padding: 20px 0;
     }
 }
 

@@ -1500,6 +1500,12 @@ h4.single-card__content__title.o-text.is-3.nocase.subtitle {
 .template-board-tech .c-info-card.js-info-card-trigger {
     padding: 20px;
     border-radius: 15px;
+    @media screen and (max-width: 768px) {
+      background: transparent;
+      border-radius: 0 !important;
+      border-top: 0;
+      border-bottom: 2px solid #f4f4f4;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1517,10 +1523,6 @@ h4.single-card__content__title.o-text.is-3.nocase.subtitle {
     .template-board-tech .u-container {
         max-width: unset;
         padding: 0;
-    }
-    .template-board-tech .c-info-card {
-      background: transparent;
-          border-radius: 0 !important;
     }
 }
 @media screen and (min-width: 48em) {

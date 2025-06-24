@@ -1507,7 +1507,12 @@ h4.single-card__content__title.o-text.is-3.nocase.subtitle {
         padding: 0 70px;
     }
 }
-
+@media screen and (min-width: 48em) {
+  .template-board-tech .u-content {
+      padding-inline: 70px;
+  }
+}
+  
 .logo-cards .btn-action,
 .logo-cards .btn-link,
 .logo-cards .btn-link.o-btn {

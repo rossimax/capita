@@ -14,9 +14,9 @@
         ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden">
             {% for variant in all_products[sb_board].variants %}
               {% if forloop.index < 4 %}
-                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}">{%- if variant.available == false %} <span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{% endif %}{{ variant.title }}</a>
+                <a class="py-1 rounded-full border border-white block text-white text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-100{% endif %}">{%- if variant.available == false %} <span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{% endif %}{{ variant.title }}</a>
               {% elsif forloop.index == forloop.length %}
-                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+                <a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
               {% endif %}
             {% endfor %}
             
@@ -25,20 +25,20 @@
             
             {% for variant in all_products[sb_board].variants %}
               {% if forloop.index < 4 %}
-                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}">{%- if variant.available == false %} <span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{% endif %}{{ variant.title }}</a>
+                <a class="py-1 rounded-full border border-white block text-white text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-100{% endif %}">{%- if variant.available == false %} <span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{% endif %}{{ variant.title }}</a>
               {% elsif forloop.index == forloop.length %}
-                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+                <a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
               {% endif %}
             {% endfor %}
   
             </span
         ><span class="grid mt-2 md:mt-3"
-          ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+          ><span class="text-sm text-white font-semibold uppercase leading-none tracking-tight"
             >{{ all_products[sb_board].metafields.snowboard_info.snowboard_listing_tag | default: ''  }}</span
-          ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+          ><a class="text-xl text-white font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
             >{{ all_products[sb_board].title }}</a
           ></span
-        ><span class="text-sm text-black leading-none md:text-lg">{{ all_products[sb_board].price | money_with_currency }}</span>
+        ><span class="text-sm text-white leading-none md:text-lg">{{ all_products[sb_board].price | money_with_currency }}</span>
       </div>
     {% endfor %}
 
@@ -49,32 +49,32 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_2425_productimage_SBpowderracers_149_f6fa2233-7a6e-4c6b-a15a-8a5b3400cde6.png?v=1719927267"
           alt=""></a
       ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >+ 3 more</a
         ></span
       ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
           >+ 3 more</a
         ></span
       ><span class="grid mt-2 md:mt-3"
-        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+        ><span class="text-sm text-white font-semibold uppercase leading-none tracking-tight"
           >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
-        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+        ><a class="text-xl text-white font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
           >aeronaut</a
         ></span
-      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+      ><span class="text-sm text-white leading-none md:text-lg">€649,00</span>
     </div>
 
     <div class="block">
@@ -84,32 +84,32 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_2425_productimage_SBpowderglider_154_e6ea2f4c-566a-4931-8c3b-6bedec382813.png?v=1719927267"
           alt=""></a
       ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >+ 3 more</a
         ></span
       ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
           >+ 3 more</a
         ></span
       ><span class="grid mt-2 md:mt-3"
-        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+        ><span class="text-sm text-white font-semibold uppercase leading-none tracking-tight"
           >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
-        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+        ><a class="text-xl text-white font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
           >aeronaut</a
         ></span
-      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+      ><span class="text-sm text-white leading-none md:text-lg">€649,00</span>
     </div>
 
     <div class="block">
@@ -119,32 +119,32 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_2425_productimage_SBslushslashers_139_2ddca488-3a87-4bc4-9bc9-e6bdea84b6a7.png?v=1719927266"
           alt=""></a
       ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >+ 3 more</a
         ></span
       ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
           >+ 3 more</a
         ></span
       ><span class="grid mt-2 md:mt-3"
-        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+        ><span class="text-sm text-white font-semibold uppercase leading-none tracking-tight"
           >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
-        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+        ><a class="text-xl text-white font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
           >aeronaut</a
         ></span
-      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+      ><span class="text-sm text-white leading-none md:text-lg">€649,00</span>
     </div>
 
     <div class="block">
@@ -154,32 +154,32 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/D_2425_productimage_SBresorttwin_152.png?v=1719927266"
           alt=""></a
       ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >+ 3 more</a
         ></span
       ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
           >+ 3 more</a
         ></span
       ><span class="grid mt-2 md:mt-3"
-        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+        ><span class="text-sm text-white font-semibold uppercase leading-none tracking-tight"
           >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
-        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+        ><a class="text-xl text-white font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
           >aeronaut</a
         ></span
-      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+      ><span class="text-sm text-white leading-none md:text-lg">€649,00</span>
     </div> {% endcomment %}
 
   </div>
@@ -202,9 +202,9 @@
           >
             {% for variant in all_products[sb_acc].variants %}
               {% if forloop.index < 4 %}
-                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
+                <a class="py-1 rounded-full border border-white block text-white text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-100{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
               {% elsif forloop.index == forloop.length %}
-                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+                <a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
               {% endif %}
             {% endfor %}
             
@@ -214,20 +214,20 @@
             
             {% for variant in all_products[sb_acc].variants %}
               {% if forloop.index < 4 %}
-                <a class="py-1 rounded-full border border-black block text-black text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-50{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
+                <a class="py-1 rounded-full border border-white block text-white text-center tracking-tight relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden {%- if variant.available == false %} pointer-events-none opacity-100{% endif %}"><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>{{ variant.title }}</a>
               {% elsif forloop.index == forloop.length %}
-                <a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
+                <a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline">+ {{ forloop.length | minus: 3 }} more</a>
               {% endif %}
             {% endfor %}
             
             </span
         ><span class="grid mt-2 md:mt-3"
-          ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+          ><span class="text-sm text-white font-semibold uppercase leading-none tracking-tight"
             >{{ all_products[sb_acc].metafields.snowboard_info.snowboard_listing_tag | default: ''  }}</span
-          ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+          ><a class="text-xl text-white font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
             >{{ all_products[sb_acc].title }}</a
           ></span
-        ><span class="text-sm text-black leading-none md:text-lg">{{ all_products[sb_acc].price | money_with_currency }}</span>
+        ><span class="text-sm text-white leading-none md:text-lg">{{ all_products[sb_acc].price | money_with_currency }}</span>
       </div>
     {% endfor %}
 
@@ -238,32 +238,32 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/TROPICAL_Hood_Black_Front.png?v=1719927528"
           alt=""></a
       ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >+ 3 more</a
         ></span
       ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
           >+ 3 more</a
         ></span
       ><span class="grid mt-2 md:mt-3"
-        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+        ><span class="text-sm text-white font-semibold uppercase leading-none tracking-tight"
           >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
-        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+        ><a class="text-xl text-white font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
           >aeronaut</a
         ></span
-      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+      ><span class="text-sm text-white leading-none md:text-lg">€649,00</span>
     </div>
 
     <div class="block">
@@ -273,32 +273,32 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/TROPICAL_Hood_White_Front.png?v=1719927528"
           alt=""></a
       ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >+ 3 more</a
         ></span
       ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
           >+ 3 more</a
         ></span
       ><span class="grid mt-2 md:mt-3"
-        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+        ><span class="text-sm text-white font-semibold uppercase leading-none tracking-tight"
           >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
-        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+        ><a class="text-xl text-white font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
           >aeronaut</a
         ></span
-      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+      ><span class="text-sm text-white leading-none md:text-lg">€649,00</span>
     </div>
 
     <div class="block">
@@ -308,32 +308,32 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/REAPER_Long_Tee_Front.png?v=1719927527"
           alt=""></a
       ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >+ 3 more</a
         ></span
       ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
           >+ 3 more</a
         ></span
       ><span class="grid mt-2 md:mt-3"
-        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+        ><span class="text-sm text-white font-semibold uppercase leading-none tracking-tight"
           >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
-        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+        ><a class="text-xl text-white font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
           >aeronaut</a
         ></span
-      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+      ><span class="text-sm text-white leading-none md:text-lg">€649,00</span>
     </div>
 
     <div class="block">
@@ -343,32 +343,32 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/SKIDOO_Tee_Front.png?v=1719927528"
           alt=""></a
       ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >+ 3 more</a
         ></span
       ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
           >+ 3 more</a
         ></span
       ><span class="grid mt-2 md:mt-3"
-        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+        ><span class="text-sm text-white font-semibold uppercase leading-none tracking-tight"
           >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
-        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+        ><a class="text-xl text-white font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
           >aeronaut</a
         ></span
-      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+      ><span class="text-sm text-white leading-none md:text-lg">€649,00</span>
     </div>
 
     <div class="block">
@@ -378,32 +378,32 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/BARS_Long_Tee_Front.png?v=1719927527"
           alt=""></a
       ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >+ 3 more</a
         ></span
       ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
           >+ 3 more</a
         ></span
       ><span class="grid mt-2 md:mt-3"
-        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+        ><span class="text-sm text-white font-semibold uppercase leading-none tracking-tight"
           >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
-        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+        ><a class="text-xl text-white font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
           >aeronaut</a
         ></span
-      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+      ><span class="text-sm text-white leading-none md:text-lg">€649,00</span>
     </div>
 
     <div class="block">
@@ -413,32 +413,32 @@
           src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/RESORT_Tee_Front.png?v=1719927527"
           alt=""></a
       ><span class="grid grid-cols-4 items-center content-start gap-1 md:hidden"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >+ 3 more</a
         ></span
       ><span class="hidden md:grid md:grid-cols-4 md:items-center md:gap-1 md:content-start"
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight pointer-events-none opacity-50 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight pointer-events-none opacity-100 relative text-[11px] leading-[.7] md:text-sm md:leading-none overflow-hidden"
           ><span class="absolute top-1/2 -translate-y-1/2 h-[1px] bg-black w-full left-0 rotate-25"></span>156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-black block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-black hover:underline"
+        ><a class="py-1 rounded-full border border-white block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:bg-white hover:text-white hover:underline"
           >156</a
-        ><a class="py-1 rounded-full border border-transparent block text-black text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
+        ><a class="py-1 rounded-full border border-transparent block text-white text-center tracking-tight cursor-pointer text-[11px] leading-[.7] md:text-sm md:leading-none hover:underline"
           >+ 3 more</a
         ></span
       ><span class="grid mt-2 md:mt-3"
-        ><span class="text-sm text-black font-semibold uppercase leading-none tracking-tight"
+        ><span class="text-sm text-white font-semibold uppercase leading-none tracking-tight"
           >MEN'S DIRECTIONAL TRADITIONAL CAMBER</span
-        ><a class="text-xl text-black font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
+        ><a class="text-xl text-white font-bold uppercase leading-none cursor-pointer md:text-3xl hover:underline"
           >aeronaut</a
         ></span
-      ><span class="text-sm text-black leading-none md:text-lg">€649,00</span>
+      ><span class="text-sm text-white leading-none md:text-lg">€649,00</span>
     </div> {% endcomment %}
 
   </div>
@@ -449,14 +449,19 @@
     <div class="text-boxes__foot__ctas">
       
         <a class="o-btn is-big black text-boxes__foot__btn js-modal-youtube px-6 !normal-case">Watch: Clean Energy Production
-          <svg class="icon-arrow-play" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8.41346 0C3.77399 0 0 3.77399 0 8.41346C0 13.0529 3.77399 16.8269 8.41346 16.8269C13.0529 16.8269 16.8269 13.0526 16.8269 8.41346C16.8269 3.77432 13.0529 0 8.41346 0ZM8.41346 15.3058C4.61317 15.3058 1.52117 12.2137 1.52117 8.41313C1.52117 4.61284 4.6132 1.52117 8.41346 1.52117C12.2137 1.52117 15.3058 4.61307 15.3058 8.41346C15.3058 12.2139 12.2137 15.3058 8.41346 15.3058Z" fill="white"></path>
-      <path d="M12.4349 7.56565L7.04042 4.45086C6.87471 4.35491 6.69245 4.30469 6.51389 4.30469C5.97619 4.30469 5.57031 4.73243 5.57031 5.2998V11.5288C5.57031 12.0962 5.97622 12.5242 6.51389 12.5242C6.69244 12.5242 6.87445 12.4736 7.04055 12.3776L12.4347 9.26352C12.7579 9.07688 12.951 8.75949 12.951 8.41448C12.9512 8.0696 12.758 7.75231 12.4349 7.5658L12.4349 7.56565Z" fill="white"></path>
-  </svg>
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z" stroke="#0B0204" stroke-width="1" stroke-miterlimit="10"></path>
+          <path d="M5.19971 8.5H11.8003" stroke="#0B0204" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round"></path>
+          <path class="svg-line-vert" d="M8.49976 5.19971V11.8003" stroke="#0B0204" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round"></path>
+        </svg>
       </a>
       
       
-        <a class="o-btn is-big black text-boxes__foot__btn px-6 !normal-case" href="/pages/technology">How does technology help?
+        <a class="o-btn is-big black text-boxes__foot__btn px-6 !normal-case" href="/pages/technology">How does technology help? <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z" stroke="#0B0204" stroke-width="1" stroke-miterlimit="10"></path>
+          <path d="M5.19971 8.5H11.8003" stroke="#0B0204" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round"></path>
+          <path class="svg-line-vert" d="M8.49976 5.19971V11.8003" stroke="#0B0204" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round"></path>
+        </svg>
           </a>
       
       
@@ -586,6 +591,37 @@
 
   </script>
 <script src="{{ 'springbreak.js' | asset_url }}"></script>
+
+{% style %}
+.bg-gray-grid {
+    background-image: url(https://cdn.shopify.com/s/files/1/0231/7366/0752/files/GRID-BACKGROUND_BLACK_COMPRESS.jpg?v=1745924560);
+    background-color: #000;
+    color: #fff;
+    background-position: 94% 11%;
+    background-size: 85%;
+    background-repeat: repeat;
+}
+.text-white {
+  color: #fff;
+}
+.border-white {
+  border-color: #fff;
+}
+.rotate-25 {
+    --tw-rotate: 25deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.bg-black {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+a.o-btn.is-big.black.text-boxes__foot__btn.px-6.\!normal-case,
+a.o-btn.is-big.black.text-boxes__foot__btn.js-modal-youtube.px-6.\!normal-case {
+    padding: 14px;
+    font-size: 20px;
+}
+{% endstyle %}
+
 
 {% schema %}
   {

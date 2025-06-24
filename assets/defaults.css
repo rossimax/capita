@@ -732,7 +732,11 @@ main.template-nfc-steps {
 @media screen and (max-width: 991px) {
   .c-info {
     margin-top: 15px;
-        padding-inline: 20px;
+    padding-inline: 20px;
+    background: #fff;
+  }
+  .page-board-tech {
+    padding: 90px 0 0 0;
   }
 }
 .c-info-card {

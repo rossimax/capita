@@ -1494,6 +1494,7 @@ h4.single-card__content__title.o-text.is-3.nocase.subtitle {
 
 .logo-cards a.btn-link.btn-green {
     margin: 0 auto;
+    max-width: 100%;
 }
 
 .template-board-tech .c-info-card.js-info-card-trigger {

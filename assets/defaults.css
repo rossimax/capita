@@ -736,7 +736,8 @@ main.template-nfc-steps {
     background: #fff;
   }
   .page-board-tech {
-    padding: 90px 0 0 0;
+        padding: 90px 0 0 !important;
+        margin-bottom: -42px;
   }
 }
 .c-info-card {

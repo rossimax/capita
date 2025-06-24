@@ -1509,7 +1509,7 @@ h4.single-card__content__title.o-text.is-3.nocase.subtitle {
 }
 @media screen and (min-width: 48em) {
   .template-board-tech .u-content {
-      padding-inline: 70px;
+      padding-inline: 0;
   }
 }
   

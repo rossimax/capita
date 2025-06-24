@@ -1502,6 +1502,17 @@ h4.single-card__content__title.o-text.is-3.nocase.subtitle {
     border-radius: 15px;
 }
 
+@media screen and (max-width: 768px) {
+
+      .template-technology .hero-banner-secondary-content__title.hero-banner-secondary-content__title---top-left {
+        left: 20px;
+        top: 90px;
+    }
+    .template-technology .hero-banner-secondary-image--mob img {
+          margin-top: -51px;
+      }
+}
+
 @media screen and (max-width: 1600px) {
     .template-board-tech .u-container {
         max-width: unset;

@@ -42,7 +42,8 @@
     "banner_product_hitdac": {
       "type": "banner-product",
       "custom_css": [
-        ".banner-product__left {background: #fcef21;}"
+        ".banner-product__left {background: #fcef21;}",
+        "@media screen and (min-width: 992px) {.banner-product__left__text .title {margin-bottom: 5px; font-size: 48px; }}"
       ],
       "name": "Banner Product",
       "settings": {

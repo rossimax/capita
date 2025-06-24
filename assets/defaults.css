@@ -1528,7 +1528,7 @@ h4.single-card__content__title.o-text.is-3.nocase.subtitle {
 @media screen and (max-width: 768px) {
     .template-board-tech .u-container {
         max-width: unset;
-        padding: 0;
+        padding: 0 0 40px 0;
     }
 }
 @media screen and (min-width: 48em) {

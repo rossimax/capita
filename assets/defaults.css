@@ -1607,3 +1607,6 @@ main#MainContent.template-factory {
 .country-site-selector__other__content hr {
   margin-bottom: 20px;
 }
+.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-next.swiper-slide-thumb-active {
+    filter: brightness(0.9);
+}

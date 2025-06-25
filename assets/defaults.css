@@ -1610,3 +1610,9 @@ main#MainContent.template-factory {
 .c-product__thumbs .swiper-slide-thumb-active {
     filter: brightness(0.9);
 }
+p.text-sm.text-gray-700.leading-5 {
+    font-size: 12px;
+    @media screen and (max-width:991px) {
+      font-size: 10px;
+    }
+}

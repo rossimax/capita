@@ -1600,3 +1600,7 @@ main#MainContent.template-factory {
     }
   }
 }
+
+.country-site-selector.opened .country-site-selector__other {
+  right: -30px;
+}

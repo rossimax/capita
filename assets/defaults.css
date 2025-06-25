@@ -1582,3 +1582,16 @@ main#MainContent.template-factory {
       color: #000;
     }
 }
+
+.template-springbreak {
+  .banner-product__left__text .title {
+    font-size: 52px; 
+    @media screen and (max-width:991px) {
+      font-size: 26px; 
+    }
+  }
+  .banner-product__left__text .title,
+  .banner-product__left__text .subtitle {
+    color: #000;
+  }
+}

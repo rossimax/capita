@@ -1616,7 +1616,8 @@ p.text-sm.text-gray-700.leading-5 {
       font-size: 10px;
     }
 }
-span#paginate-grid-text {
+.main-page-pdp #epr-product-reviews .el-pagination span#paginate-list-text, 
+.main-page-pdp #epr-product-reviews .el-pagination span#paginate-grid-text {
     font-size: 16px;
     @media screen and (max-width:991px) {
       font-size: 14px;

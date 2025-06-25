@@ -1594,4 +1594,9 @@ main#MainContent.template-factory {
   .banner-product__left__text .subtitle {
     color: #000;
   }
+  .banner-product__left__text .subtitle {
+    @media screen and (max-width:991px) {
+      padding-right: 20px;
+    }
+  }
 }

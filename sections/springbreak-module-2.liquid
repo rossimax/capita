@@ -348,9 +348,20 @@ html {
 
 {% style %}
 h2.font-bold.text-5xl.md\:text-7xl.lg\:w-8\/12 {
-    font-size: 36px;
+    font-size: 52px;
     margin-bottom: 30px;
     width: 100%;
+    @media screen and (max-width: 991px) {
+      font-size: 26px;
+    }
+}
+p.lg\:text-lg {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  @media screen and (max-width: 991px) {
+    font-size: 14px;
+  }
 }
 {% endstyle %}
 

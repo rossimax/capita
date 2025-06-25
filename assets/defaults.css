@@ -1612,6 +1612,7 @@ main#MainContent.template-factory {
 }
 p.text-sm.text-gray-700.leading-5 {
     font-size: 12px;
+    margin-bottom: 15px;
     @media screen and (max-width:991px) {
       font-size: 10px;
     }

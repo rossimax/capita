@@ -1604,3 +1604,6 @@ main#MainContent.template-factory {
 .country-site-selector .country-site-selector__other {
   right: -30px;
 }
+.country-site-selector__other__content hr {
+  margin-bottom: 20px;
+}

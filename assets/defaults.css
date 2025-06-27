@@ -1636,9 +1636,8 @@ p.text-sm.text-gray-700.leading-5 {
       font-size: 16px;
     }
 }
-
 .shopify-policy__body {
-      font-size: 16px;
+    font-size: 16px;
     @media screen and (max-width:991px) {
       font-size: 14px;
     }

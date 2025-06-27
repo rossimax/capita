@@ -241,14 +241,6 @@ button.finder-btn-next {
         font-size: 16px;
     }
 }
-.fs-result .fs-result-btn {
-    font-weight: 700;
-    font-size: 16px;
-    height: 47px !important;
-    @media screen and (max-width: 991px) {
-        font-size: 16px;
-    }
-}
 button.finder-btn-next.active {
     background-color: #000;
     color: #fff;
@@ -576,7 +568,7 @@ img.result-loader {
 .fs-result .fs-result-data__title {
     font-size: 26px;
     font-weight: 700;
-    margin: 10px 0;
+    margin: 10px 0 20px 0;
     @media screen and (max-width: 991px) {
         font-size: 26px;
     }
@@ -589,14 +581,18 @@ img.result-loader {
 .fs-result .fs-result-btn {
     width: 100%;
     background: #000;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-weight: 500;
     border-radius: 25px;
     border: 1px solid #000;
+    font-weight: 700;
+    font-size: 20px;
+    height: 47px !important;
+    @media screen and (max-width: 991px) {
+        font-size: 16px;
+    }
 }
 .fs-result .fs-result-btn:hover {
     background: #fff;
@@ -689,9 +685,6 @@ a.result-size:hover {
 @media screen and (max-width: 768px) {
     .finder-container {
         margin-top: 90px;
-    }
-    .fs-result .fs-result-btn {
-        font-size: 20px;
     }
     img.js-fs-result-img {
         width: 80px;

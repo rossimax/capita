@@ -363,15 +363,23 @@
 
 .ub-application .c-text.is-4-big {
     color: var(--color-body-text);
-    font-size: 21px;
-    font-weight: 500
+    font-size: 20px;
+    font-weight: 500;
+    @media screen and (max-width: 991px){
+            font-size: 16px;
+    }
 }
 
 .ub-application .c-text.is-4-medium {
     color: var(--color-body-text);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
-    text-transform: uppercase
+                line-height: 19px;
+    text-transform: uppercase;
+        @media screen and (max-width: 991px){
+            font-size: 14px;
+            line-height: 17px;
+    }
 }
 
 .ub-application .c-input {

@@ -1623,3 +1623,11 @@ p.text-sm.text-gray-700.leading-5 {
       font-size: 14px;
     }
 }
+
+.template-warranty a.btn.btn-primary.black.button-one {
+    height: 47px;
+    font-size: 20px;
+    @media screen and (max-width:991px) {
+      font-size: 16px;
+    }
+}

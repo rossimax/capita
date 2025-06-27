@@ -1627,6 +1627,7 @@ p.text-sm.text-gray-700.leading-5 {
 .template-warranty a.btn.btn-primary.black.button-one {
     height: 47px;
     font-size: 20px;
+    text-transform: capitalize;
     @media screen and (max-width:991px) {
       font-size: 16px;
     }

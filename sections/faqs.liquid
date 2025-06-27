@@ -393,6 +393,9 @@
     justify-content: space-between;
     cursor: pointer;
     font-size: 16px;
+    @media screen and (max-width: 991px) {
+      font-size: 14px;
+    }
 }
 .cpt-toggle__title svg {
   transition-duration: 0.3s;
@@ -403,7 +406,10 @@
   transform: rotate(180deg);
 }
 .cpt-toggle__content {
-    padding: 20px;
+  padding: 20px;
+        @media screen and (max-width: 991px) {
+      font-size: 14px;
+    }
 }
 .cpt-toggle hr {
     margin: 10px 20px 0 20px;

@@ -1298,11 +1298,14 @@ span.c-header-cart__total {
 }
 
 .content-for-layout .shopify-policy__container h1 {
-  font-size: 70px;
+  font-size: 52px;
   font-weight: 700;
   letter-spacing: normal;
   line-height: 0.9;
   text-transform: uppercase;
+      @media screen and (max-width:991px) {
+      font-size: 26px;
+    }
 }
 
 .content-for-layout .shopify-policy__container table,

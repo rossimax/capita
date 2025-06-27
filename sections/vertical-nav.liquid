@@ -1,95 +1,92 @@
 <div class="section-vertical-nav">
-    <div class="vertical-nav">
-        {% for block in section.blocks %}
-        <div class="vertical-nav__item {% if block.settings.selected %}selected{% endif %}">
-            <a href="{{ block.settings.link_url }}" class="o-text is-4">{{ block.settings.link_text }}</a>
-        </div>
-        {% endfor %}
-    </div>
+  <div class="vertical-nav">
+    {% for block in section.blocks %}
+      <div class="vertical-nav__item {% if block.settings.selected %}selected{% endif %}">
+        <a href="{{ block.settings.link_url }}" class="o-text is-4">{{ block.settings.link_text }}</a>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
 {
-"name": "Vertical Nav",
-"tag": "section",
-"class": "shopify-section--vertical-nav one-quarter",
-"blocks": [
-{
-"type": "link_list",
-"name": "Menu",
-"settings": [
-{
-"type": "text",
-"id": "link_text",
-"label": "Link Text"
-},
-{
-"type": "url",
-"id": "link_url",
-"label": "Link Url"
-},
-{
-"type": "checkbox",
-"id": "selected",
-"label": "Selected"
-}
-]
-}
-],
-"presets": [
-{
-"name": "Vertical Nav"
-}
-]
+  "name": "Vertical Nav",
+  "tag": "section",
+  "class": "shopify-section--vertical-nav one-quarter",
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link Url"
+        },
+        {
+          "type": "checkbox",
+          "id": "selected",
+          "label": "Selected"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Vertical Nav"
+    }
+  ]
 }
 {% endschema %}
 
-
 {% stylesheet %}
-.vertical-nav {
-display: flex;
-flex-direction: column;
-border: 1px solid #000;
-border-radius: 30px;
-margin-right: min(4vw, 70px);
-}
-.vertical-nav__item {
-border-bottom: 1px solid #000;
-line-height: 1;
-}
-.vertical-nav__item:first-child {
-border-top-left-radius: 30px;
-border-top-right-radius: 30px;
-}
-.vertical-nav__item:last-child {
-border-bottom-left-radius: 30px;
-border-bottom-right-radius: 30px;
-border-bottom: unset;
-}
+  .vertical-nav {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    border-radius: 30px;
+    margin-right: min(4vw, 70px);
+  }
+  .vertical-nav__item {
+    border-bottom: 1px solid #000;
+    line-height: 1;
+  }
+  .vertical-nav__item:first-child {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .vertical-nav__item:last-child {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom: unset;
+  }
 
-.vertical-nav__item a {
-padding: 20px;
-display: block;
-width: 100%;
-text-decoration: none;
-text-transform: uppercase;
-color: #000;
-}
-.vertical-nav__item.selected {
-background: #000;
-}
-.vertical-nav__item.selected a {
-color: #fff;
-}
-.vertical-nav__item a {
+  .vertical-nav__item a {
+    padding: 20px;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+  }
+  .vertical-nav__item.selected {
+    background: #000;
+  }
+  .vertical-nav__item.selected a {
+    color: #fff;
+  }
+  .vertical-nav__item a {
     text-transform: unset;
-}
+  }
 
-
-@media screen and (max-width: 768px) {
-.vertical-nav {
-margin: 50px 0;
-}
-}
-
+  @media screen and (max-width: 768px) {
+    .vertical-nav {
+      margin: 50px 0;
+    }
+  }
 {% endstylesheet %}

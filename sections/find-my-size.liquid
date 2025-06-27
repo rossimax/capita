@@ -370,10 +370,13 @@
     display: none;
 }
 .find-my-size-container h4 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 2vh;
     font-smooth: auto;
+    @media screen and (max-width: 991px) {
+        font-size: 14px;
+    }
 }
 .find-my-size-container {
     position: fixed;
@@ -420,9 +423,12 @@
     height: 30px;
 }
 .fsm-box-text {
-    font-size: 24px;
+    font-size: 20px;
     align-items: center;
     display: flex;
+    @media screen and (max-width: 991px) {
+        font-size: 16px;
+    }
 }
 .fsm-box-select {
     background-position: 20px;
@@ -664,12 +670,6 @@ span.fsm-prod-size {
     }
     .find-my-size h5 {
         font-size: 14px;
-    }
-    .find-my-size-container h4 {
-        font-size: 16px;
-    }
-    .fsm-box-text {
-        font-size: 20px;
     }
     .fsm-box-select {
         font-size: 20px;

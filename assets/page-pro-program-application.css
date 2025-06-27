@@ -358,7 +358,12 @@
 .ub-application .c-text.is-4 {
     color: var(--color-body-text);
     font-size: 16px;
-    font-weight: 400
+    line-height: 19px;
+    font-weight: 400;
+    @media screen and (max-width: 991px){
+            font-size: 14px;
+            line-height: 17px;
+    }
 }
 
 .ub-application .c-text.is-4-big {

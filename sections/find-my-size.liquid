@@ -47,7 +47,7 @@
                 <div class="fsm-box-select js-fsm-box-select-height" data-select="height">
 
                     <select {% if request.origin == "https://eu.capitasnowboarding.com" %}class="hide"{% endif %} data-type="in">
-                        <option>SELECT</option>
+                        <option>Select</option>
                         <option value="100-103">3' 3" - 3' 5"</option>
                         <option value="104-107">3' 5" - 3' 6"</option>
                         <option value="108-111">3' 7" - 3' 8"</option>
@@ -77,7 +77,7 @@
                     </select>
 
                     <select {% if request.origin == "https://capitasnowboarding.com" %}class="hide"{% endif %} data-type="cm">
-                        <option>SELECT</option>
+                        <option>Select</option>
                         <option value="100-103">100 - 103</option>
                         <option value="104-107">104 - 107</option>
                         <option value="108-111">108 - 111</option>
@@ -144,7 +144,7 @@
                 </div>
                 <div class="fsm-box-select js-fsm-box-select-size" data-select="size">
                     <select id="fsm-box-select-us" {% if request.origin == "https://eu.capitasnowboarding.com" %}class="hide"{% endif %} data-type="US">
-                        <option>SELECT</option>
+                        <option>Select</option>
 
                         {% if gender == "men" %}
                             <option value="38.5" gender="Men">{{ gender_text }} 6</option>
@@ -198,7 +198,7 @@
                         
                     </select>
                     <select id="fsm-box-select-eu" {% if request.origin == "https://capitasnowboarding.com" %}class="hide"{% endif %} data-type="EU">
-                        <option>SELECT</option>
+                        <option>Select</option>
 
                         {% if gender == "men" %}
                             <option value="38.5" gender="Men">{{ gender_text }} EU 38.5</option>
@@ -255,8 +255,8 @@
 
             </div>
 
-            <span class="fsm-alert js-alert hidden">SELECTION REQUIRED</span>
-            <button class="o-btn is-big btn-findmysize">FIND MY SIZE</button>
+            <span class="fsm-alert js-alert hidden">Selection Required</span>
+            <button class="o-btn is-big btn-findmysize">Find My Size</button>
 
         </div>
 
@@ -346,7 +346,7 @@
                     Based on your input provided, our super-advanced algorithm is having trouble finding a suggestion for you on this snowboard model. <BR/><BR/>Feel free to hit us up for help finding the right board for you! Or, check out another snowboard model that may be right for you.
                 </div>
 
-                <a class="o-btn is-big" style="margin-bottom: 2vh;" href="/collections/all-snowboards">VIEW ALL SNOWBOARDS</a>
+                <a class="o-btn is-big" style="margin-bottom: 2vh;" href="/collections/all-snowboards">View All Snowboards</a>
                 
                 {% comment %} <a class="o-btn is-big" href="/pages/dealers">FIND A DEALER</a> {% endcomment %}
                 {% comment %} <a class="o-btn is-big btn-findmysize" href="/collections/all-snowboards">BOARD FINDER</a> {% endcomment %}
@@ -513,6 +513,13 @@ button.o-btn.is-big.btn-findmysize {
     background: #000;
     color: #fff;
     margin: 0 auto;
+    font-size: 20px;
+    height: 47px;
+    padding: 10px;
+    @media screen and (max-width: 991px) {
+        font-size: 16px;
+        height: 47px;
+    }
 }
 .fsm-result-head {
     min-height: 120px;

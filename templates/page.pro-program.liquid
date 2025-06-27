@@ -22,7 +22,7 @@ s
               <span class="c-text is-4">An active supporting document such as a pay stub, proof of employment, licenses/certification, or other is a requirement for our Pro Program.<br/><br/>
                 There are no exceptions to this rule.</span>
             </div>
-            <a class="o-btn is-black" href="/pages/pro-program-application">START APPLICATION</a>
+            <a class="o-btn is-black" href="/pages/pro-program-application">Start Application</a>
           </div>
 
           {% form 'customer_login', class: "c-pro-account-login", return_to: "/pages/pro-program-account" %}
@@ -46,7 +46,7 @@ s
 
               <a class="c-button is-line c-pro-account-login__forgot" href="/account/login#recover">Forgot your password?</a>
               
-              <button class="c-pro-account-login__signin-new o-btn is-black" type="submit">SIGN INTO PRO ACCOUNT</button>
+              <button class="c-pro-account-login__signin-new o-btn is-black" type="submit">Sign into Pro Account</button>
  
           {% endform %}
 
@@ -66,6 +66,13 @@ s
 {% style %}
 .ub-pro-program {
     margin-top: 80px;
+    a.o-btn.is-black,
+    .c-pro-account-login__signin-new {
+      height: 47px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
 }
 .ub-pro-program .c-input input, .ub-pro-program .c-input select {
     background: #fff;

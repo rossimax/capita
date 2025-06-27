@@ -366,6 +366,15 @@
     }
 }
 
+.ub-application button.cf-submit-form.cf-button.btn.button {
+    height: 47px;
+    padding: 10px;
+    font-size: 20px;
+        @media screen and (max-width: 991px){
+            font-size: 16px;
+    }
+}
+
 .ub-application .c-text.is-4-big {
     color: var(--color-body-text);
     font-size: 20px;

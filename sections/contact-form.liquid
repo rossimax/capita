@@ -7,23 +7,23 @@
   <input type="hidden" name="contact[object]" value="CAPiTA Customer Service" />
 
   <div class="form-item half">
-    <input type="text" name="contact[first_name]" id="first-name" placeholder="ENTER NAME" />
+    <input type="text" name="contact[first_name]" id="first-name" placeholder="Enter name" />
   </div>
 
   <div class="form-item half">
-    <input type="email" name="contact[email]" id="email" placeholder="ENTER EMAIL" />
+    <input type="email" name="contact[email]" id="email" placeholder="Enter email" />
   </div>
 
   <div class="form-item half">
-    <input type="tel" name="contact[phone]" id="phone" placeholder="PHONE NUMBER" />
+    <input type="tel" name="contact[phone]" id="phone" placeholder="Phone number" />
   </div>
 
   <div class="form-item half">
-    <input type="country" name="contact[country]" id="country" placeholder="COUNTRY" />
+    <input type="country" name="contact[country]" id="country" placeholder="Country" />
   </div>
 
   <div class="form-item">
-    <textarea name="contact[body]" id="message" placeholder="ENTER MESSAGE" rows="10"></textarea>
+    <textarea name="contact[body]" id="message" placeholder="Enter message" rows="10"></textarea>
   </div>
 
   <label class="form-item__legal">
@@ -119,4 +119,15 @@ grid-column-end: span 2;
 }
 }
 
+.contact-form .o-btn {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-smooth: auto;
+    @media screen and (max-width: 991px) {
+        font-size: 14px;
+    }
+}
 {% endstylesheet %}

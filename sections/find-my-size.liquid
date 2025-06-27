@@ -574,12 +574,15 @@ span.fsm-prod-size {
     font-smooth: auto;
 }
 .find-my-size h3 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     margin-top: 2vh;
     margin-bottom: 2vh;
     text-align: center;
     font-smooth: auto;
+    @media screen and (max-width: 991px) {
+        font-size: 14px;
+    }
 }
 .find-my-size h5 {
     font-size: 16px;
@@ -725,9 +728,6 @@ span.fsm-prod-size {
     }
     .fsm-prod-img {
         max-width: 130px;
-    }
-    .find-my-size h3 {
-        font-size: 14px;
     }
     .fsm-result-products {
         margin: 20px 0;

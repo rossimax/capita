@@ -131,7 +131,21 @@
     --off-white: #f4f4f4;
     --context-vw: 375;
     --context-vh: 630;
-    padding-top: 70px
+    padding-top: 70px;
+    h1 {
+        font-size: 52px;
+        @media screen and (max-width: 991px) {
+            font-size: 26px;
+        }
+    }
+    span.c-text.is-3 {
+        font-size: 16px;
+        line-height: 19px;
+        @media screen and (max-width: 991px) {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
 }
 
 .ub-application *,

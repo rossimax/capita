@@ -519,9 +519,12 @@ span.selector-segment:nth-child(10) {
 .level-selector__num {
     display: flex;
     justify-content: space-between;
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 10px;
     user-select: none;
+    @media screen and (max-width: 991px) {
+        font-size: 10px;
+    }
 }
 span.selector-pin {
     width: 26px;

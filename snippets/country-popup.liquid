@@ -13,6 +13,8 @@
 
     if request.page_type == 'collection' or request.page_type == 'product'
         assign link_redirect = redirect_shop | append: request.path
+    elsif content_for_header contains "the-factory#factory-video"
+        assign link_redirect = redirect_shop | append: "/the-factory/#factory-video"
     else
         assign link_redirect = redirect_shop | append: "/pages/select-location?localpos=no-local"
     endif

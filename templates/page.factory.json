@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -26,9 +26,9 @@
       "settings": {
         "boxed": false,
         "title": "",
-        "logo_top_left": "shopify:\/\/shop_images\/D_homepage_mothershiplogo.png",
-        "video_desk": "shopify:\/\/files\/videos\/Hero Banner Page 1 Desktop.mp4",
-        "video_mob": "shopify:\/\/files\/videos\/Page 1 Mobile.mp4"
+        "logo_top_left": "shopify://shop_images/D_homepage_mothershiplogo.png",
+        "video_desk": "shopify://files/videos/Hero Banner Page 1 Desktop.mp4",
+        "video_mob": "shopify://files/videos/Page 1 Mobile.mp4"
       }
     },
     "6f9f2d79-f9c0-4656-b9af-709522a45887": {
@@ -39,7 +39,7 @@
         "padding_bottom": 60,
         "font_size_title": 60,
         "font_size_title_mob": 26,
-        "title": "<strong>A one-of-a-kind marvel in snowboard production, The MotherShip™ is the most <hl>technologically advanced<\/hl> and <hl>environmentally responsible<\/hl> manufacturing facility in the industry.<\/strong>",
+        "title": "<strong>A one-of-a-kind marvel in snowboard production, The MotherShip™ is the most <hl>technologically advanced</hl> and <hl>environmentally responsible</hl> manufacturing facility in the industry.</strong>",
         "text": ""
       }
     },
@@ -49,31 +49,31 @@
         "cf8ae26c-8e17-4abc-94fb-613d98faa83a": {
           "type": "cards",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PRODUCT_PAGE.jpg",
+            "image": "shopify://shop_images/PRODUCT_PAGE.jpg",
             "title": "Clean Energy Manufacturing",
             "description": "The CAPiTA Mothership is the world’s first snowboard manufacturing facility powered by 100% clean energy. At CAPiTA we are not only driven to make the world’s best snowboards, but to produce in the most responsible manner possible.",
             "cta_text": "KNOW MORE",
-            "cta_link": "shopify:\/\/pages\/clean-energy"
+            "cta_link": "shopify://pages/clean-energy"
           }
         },
         "0bdde7b0-61e7-4e96-bb11-f39049944fd2": {
           "type": "cards",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PRODUCT_PAGE_1.jpg",
+            "image": "shopify://shop_images/PRODUCT_PAGE_1.jpg",
             "title": "Technology Development",
             "description": "The Mothership stands out in the snowboard industry for its relentless investment in developing new processes and technology. We continuously strive to enhance our manufacturing processes and redefine the standards for the world's best snowboards.",
             "cta_text": "KNOW MORE",
-            "cta_link": "shopify:\/\/pages\/technology"
+            "cta_link": "shopify://pages/technology"
           }
         },
         "c254af81-585c-4636-854b-192aa556710c": {
           "type": "cards",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PRODUCT_PAGE_2.jpg",
+            "image": "shopify://shop_images/PRODUCT_PAGE_2.jpg",
             "title": "How Snowboards Are Made",
             "description": "The CAPiTA Mothership is known for its localized supply chain and full-scale production processes that are managed in-house. Having direct oversight and control over the entire manufacturing process, CAPiTA aims to ensure that each board produced at The Mothership is of superior quality.",
             "cta_text": "KNOW MORE",
-            "cta_link": "shopify:\/\/pages\/how-snowboards-are-made"
+            "cta_link": "shopify://pages/how-snowboards-are-made"
           }
         }
       },
@@ -93,42 +93,42 @@
         "f580cd57-a328-42ce-ae29-3cdeff35298e": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_904.png",
+            "image": "shopify://shop_images/Group_904.png",
             "text": ""
           }
         },
         "22093b51-8735-4b7f-b291-0048909b7edb": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_905.png",
+            "image": "shopify://shop_images/Group_905.png",
             "text": ""
           }
         },
         "3098e62d-c394-4d19-87e4-916227f9b42b": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_906.png",
+            "image": "shopify://shop_images/Group_906.png",
             "text": ""
           }
         },
         "acc88b38-0a2b-4f2e-a5dc-d6f8a97e2eed": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_907.png",
+            "image": "shopify://shop_images/Group_907.png",
             "text": ""
           }
         },
         "2cd8803c-71e2-4b38-9192-d3916f24a114": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_908.png",
+            "image": "shopify://shop_images/Group_908.png",
             "text": ""
           }
         },
         "680387cc-4d5c-41a2-8c10-2767490245ac": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_909.png",
+            "image": "shopify://shop_images/Group_909.png",
             "text": ""
           }
         }
@@ -156,8 +156,8 @@
       "settings": {
         "margin_top": 0,
         "margin_bottom": 0,
-        "image_desk": "shopify:\/\/shop_images\/D_mothership1_banner1_1.jpg",
-        "image_mob": "shopify:\/\/shop_images\/Asset_5_1.jpg",
+        "image_desk": "shopify://shop_images/D_mothership1_banner1_1.jpg",
+        "image_mob": "shopify://shop_images/Asset_5_1.jpg",
         "shadow": "no",
         "title_position": "top_left",
         "content_position": "bottom_center",
@@ -177,7 +177,7 @@
         "padding_bottom": 80,
         "font_size_title": 60,
         "font_size_title_mob": 20,
-        "title": "<strong>Our dedication to building the world’s best snowboards, with the most\nefficient and sustainable process, is galvanized by the company mantra — <br>\n<i><hl>EVERYTHING IS POSSIBLE.<\/hl><\/i><\/strong>",
+        "title": "<strong>Our dedication to building the world’s best snowboards, with the most\nefficient and sustainable process, is galvanized by the company mantra — <br>\n<i><hl>EVERYTHING IS POSSIBLE.</hl></i></strong>",
         "text": ""
       }
     },
@@ -187,15 +187,16 @@
       "settings": {
         "boxed": true,
         "title": "Clean Energy Snowboards Production",
-        "video_desk": "shopify:\/\/files\/videos\/CAPiTA_ The Mothership Connection - Clean Energy Snowboard Production.mp4",
-        "video_mob": "shopify:\/\/files\/videos\/CAPiTA_ The Mothership Connection - Clean Energy Snowboard Production.mp4"
+        "video_desk": "shopify://files/videos/CAPiTA_ The Mothership Connection - Clean Energy Snowboard Production.mp4",
+        "video_mob": "shopify://files/videos/CAPiTA_ The Mothership Connection - Clean Energy Snowboard Production.mp4"
       }
     },
     "2c4af106-f61a-4713-a125-7ac2cd4e7c04": {
       "type": "youtube-video",
       "settings": {
+        "id_anchor": "factory-video",
         "title": "",
-        "text": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/ossDgIIFKQA?si=nJfj8K5yIcJNtk9F\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen><\/iframe>"
+        "text": "<iframe src=\"https://www.youtube.com/embed/ossDgIIFKQA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
       }
     }
   },

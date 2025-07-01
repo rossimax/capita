@@ -21,20 +21,7 @@
 -%}
 
 <span style="display:none">
-{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
-  {%- assign pageUrl = contentForQuerystring
-    | split: '"pageurl":"'
-    | last
-    | split: '"'
-    | first
-    | split: '.myshopify.com'
-    | last
-    | replace: '\/', '/'
-    | replace: '%20', ' '
-    | replace: '\u0026', '&'
-  -%}
-  {% capture finalurl %}https://{{ pageUrl }}{% endcapture %}
-  {{ content_for_header }}
+  {{ canonical_url }}
 </span>
 {% comment %} <div id="choose-country-site-modal" data-check-request-origin="{{ request.origin }}">
     <div class="modal-country-content">

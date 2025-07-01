@@ -1,4 +1,4 @@
-<div class="section-youtube-video">
+<div class="section-youtube-video" id="{{ section.settings.id_anchor }}">
     <div class="u-container">
         <div class="u-content">
             <h4 class="strong">{{ section.settings.title }}</h4>            
@@ -15,6 +15,11 @@
     "tag": "section",
     "class": "shopify-section--youtube-video",
     "settings": [
+        {
+            "type": "text",
+            "id": "id_anchor",
+            "label": "ID for Anchor Link"
+        },
         {
             "type": "text",
             "id": "title",

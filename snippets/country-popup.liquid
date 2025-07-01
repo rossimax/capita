@@ -34,7 +34,7 @@
     | replace: '\u0026', '&'
   -%}
   {% capture finalurl %}https://{{ pageUrl }}{% endcapture %}
-  {{ finalurl }}
+  {{ content_for_header }}
 </span>
 {% comment %} <div id="choose-country-site-modal" data-check-request-origin="{{ request.origin }}">
     <div class="modal-country-content">

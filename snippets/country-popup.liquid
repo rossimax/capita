@@ -14,7 +14,7 @@
     if request.page_type == 'collection' or request.page_type == 'product'
         assign link_redirect = redirect_shop | append: request.path
     elsif canonical_url contains "the-factory"
-        assign link_redirect = redirect_shop | append: "/the-factory"
+        assign link_redirect = redirect_shop | append: "/pages/the-factory"
     else
         assign link_redirect = redirect_shop | append: "/pages/select-location?localpos=no-local"
     endif

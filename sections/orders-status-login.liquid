@@ -3,21 +3,21 @@
   <div class="row">
     <div class="login-form col-8">
 
-      <h4>SIGN IN WITH YOUR CREDENTIALS</h4>
+      <h4>Sign in with your Credentials</h4>
 
       {% form 'customer_login' %}
         {{ form.errors | default_errors }}
       
         <div class="form-item">
-          <input type="email" name="customer[email]" placeholder="ENTER EMAIL">
+          <input type="email" name="customer[email]" placeholder="Enter email">
         </div>
       
         <div class="form-item">
-          <input type="password" name="customer[password]" placeholder="ENTER PASSWORD">
+          <input type="password" name="customer[password]" placeholder="Enter password">
         </div>
       
         <div class="form-item form-item--submit">
-          <input class="btn btn-primary black" type="submit" value="CONTINUE">
+          <input class="btn btn-primary black" type="submit" value="Continue">
         </div>
       {% endform %}
     </div>

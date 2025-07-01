@@ -194,9 +194,9 @@
     "2c4af106-f61a-4713-a125-7ac2cd4e7c04": {
       "type": "youtube-video",
       "settings": {
-        "id_anchor": "",
+        "id_anchor": "factory-video",
         "title": "",
-        "text": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ossDgIIFKQA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        "text": "<iframe src=\"https://www.youtube.com/embed/ossDgIIFKQA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
       }
     }
   },

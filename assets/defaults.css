@@ -1294,12 +1294,12 @@ span.c-header-cart__total {
 /* START LEGALS */
 
 .content-for-layout .shopify-policy__container {
-    max-width: 100%;
-    margin: 150px auto;
-    padding-inline: 155px;
+  max-width: 100%;
+  margin: 150px auto;
+  padding-inline: 155px;
   margin: 150px auto;
   @media screen and (max-width: 991px) {
-        padding-inline: 20px;
+      padding-inline: 20px;
   }
 }
 

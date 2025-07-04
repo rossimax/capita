@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -19,7 +19,7 @@
         "footer_border": false,
         "enable_head": true,
         "title": "HELP",
-        "description": "<p>CAPiTA customer support is here to help. Please select from options below to find answers for commonly asked questions.<\/p>"
+        "description": "<p>CAPiTA customer support is here to help. Please select from options below to find answers for commonly asked questions.</p>"
       }
     },
     "1d210c57-3f36-47c1-8ef2-17be22222a78": {
@@ -37,7 +37,7 @@
           "type": "link_list",
           "settings": {
             "link_text": "HELP & FAQs",
-            "link_url": "shopify:\/\/pages\/faq",
+            "link_url": "shopify://pages/faq",
             "selected": false
           }
         },
@@ -45,7 +45,7 @@
           "type": "link_list",
           "settings": {
             "link_text": "Find a Dealer",
-            "link_url": "shopify:\/\/pages\/dealers",
+            "link_url": "shopify://pages/dealers",
             "selected": false
           }
         },
@@ -53,7 +53,7 @@
           "type": "link_list",
           "settings": {
             "link_text": "Distributors info",
-            "link_url": "shopify:\/\/pages\/distributors-info",
+            "link_url": "shopify://pages/distributors-info",
             "selected": false
           }
         }
@@ -64,22 +64,26 @@
         "58c7723e-358a-40ed-bb23-e7000658698a",
         "f6b75d5c-7d96-470e-b539-3a53098a1687"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "form": {
       "type": "contact-form",
-      "settings": {
-      }
+      "disabled": true,
+      "settings": {}
     },
     "rich_text_DYLpi9": {
       "type": "rich-text",
       "disabled": true,
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
-        "text": "<p><strong>Dear CAPiTA customer, our Customer Service is currently suspended. We will be back on July 19th.<\/strong><\/p>"
+        "text": "<p><strong>Dear CAPiTA customer, our Customer Service is currently suspended. We will be back on July 19th.</strong></p>"
+      }
+    },
+    "html_bLpdxf": {
+      "type": "html",
+      "name": "Custom Html",
+      "settings": {
+        "text": "<script defer src=\"https://contact.gorgias.help/api/contact-forms/loader.js?v=3\" data-gorgias-loader-contact-form data-gorgias-contact-form-uid=\"5bejxrxv\"></script>"
       }
     }
   },
@@ -87,6 +91,7 @@
     "main",
     "1d210c57-3f36-47c1-8ef2-17be22222a78",
     "form",
-    "rich_text_DYLpi9"
+    "rich_text_DYLpi9",
+    "html_bLpdxf"
   ]
 }

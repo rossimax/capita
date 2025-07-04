@@ -1299,6 +1299,9 @@ span.c-header-cart__total {
   margin: 150px auto;
   padding-inline: 155px;
   margin: 150px auto;
+  @media screen and (max-width: 1600px) {
+      padding-inline: 60px;
+  }
   @media screen and (max-width: 991px) {
       padding-inline: 20px;
   }

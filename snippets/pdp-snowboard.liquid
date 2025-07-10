@@ -334,7 +334,7 @@
 
                         <div class="variant-specs__row">
                           <span>Taper</span>
-                          <span>{{ variant.metafields.accentuate.taper }}</span>
+                          <span>{% if variant.metafields.accentuate.taper == blank %} 0 {% else %} {{ variant.metafields.accentuate.taper }} {% endif %}</span>
                         </div>
 
                         <div class="variant-specs__row">

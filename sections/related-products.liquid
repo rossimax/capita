@@ -7,35 +7,38 @@
     <div class="u-container">
       <div class="u-content">
         <h2 class="c-related-products__title text">You might also like...</h2>
+
         <div class="c-related-products__slider swiper">
           <div class="swiper-wrapper">
 
             {% for recommendation in recommendations.products limit:4 %}
-              <div class="swiper-slide">
-                <a href="{{ recommendation.url }}">
-                  <div class="c-product-card">
-                    <div class="c-product-card__media">
-                      <img src="{{ recommendation.featured_image | image_url: width: 360 }}" alt="Capita Related Product {{ recommendation.title | strip_html }}"/>
-                    </div>
-                    <div class="c-product-card__info">
-                      <span class="c-product-card__name">{{ recommendation.title }}</span>
-                     
+              {% if recommendation.title != "Shipping Protection by Route" %}
+                <div class="swiper-slide">
+                  <a href="{{ recommendation.url }}">
+                    <div class="c-product-card">
+                      <div class="c-product-card__media">
+                        <img src="{{ recommendation.featured_image | image_url: width: 360 }}" alt="Capita Related Product {{ recommendation.title | strip_html }}"/>
+                      </div>
+                      <div class="c-product-card__info">
+                        <span class="c-product-card__name">{{ recommendation.title }}</span>
                       
-                      {%- assign product_in_collects = '[' -%}
-                      {%- for collection in recommendation.collections -%} 
-                      {%- assign product_in_collects = product_in_collects | append: '{"collection_id":"' | append: collection.id | append: '","product_id":"' | append: recommendation.id | append: '"' | append: ',"product_handle":"' | append: recommendation.handle | append: '"}' -%}
-                      {% if forloop.last == false %}
-                      {%- assign product_in_collects =  product_in_collects | append: ',' -%}
-                      {% endif %}
-                      {%- endfor -%}
-                      {%- assign product_in_collects =  product_in_collects | append: ']' -%}
-                      <span class="col_clct" clct='{{product_in_collects}}'></span>
-                      
-                      <span class="c-product-card__price">{{ recommendation.price | money_with_currency }}</span>
+                        
+                        {%- assign product_in_collects = '[' -%}
+                        {%- for collection in recommendation.collections -%} 
+                        {%- assign product_in_collects = product_in_collects | append: '{"collection_id":"' | append: collection.id | append: '","product_id":"' | append: recommendation.id | append: '"' | append: ',"product_handle":"' | append: recommendation.handle | append: '"}' -%}
+                        {% if forloop.last == false %}
+                        {%- assign product_in_collects =  product_in_collects | append: ',' -%}
+                        {% endif %}
+                        {%- endfor -%}
+                        {%- assign product_in_collects =  product_in_collects | append: ']' -%}
+                        <span class="col_clct" clct='{{product_in_collects}}'></span>
+                        
+                        <span class="c-product-card__price">{{ recommendation.price | money_with_currency }}</span>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </div>
+                  </a>
+                </div>
+              {% endif %}
             {%- endfor -%}
 
           </div>

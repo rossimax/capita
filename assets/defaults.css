@@ -205,6 +205,7 @@ main .u-bg-black {
     background-position: 94% 11%;
     background-size: 85%;
     background-repeat: repeat;
+    background-attachment: fixed;
     @media screen and (max-width: 768px) {
         background-size: 225%;  
     }
@@ -1653,4 +1654,18 @@ p.text-sm.text-gray-700.leading-5 {
 }
 input#search-input:valid, input#search-input:focus-visible {
     outline-color: #000;
+}
+span#paginate-grid-text.relative-inner.active {
+    text-decoration: underline;
+}
+div#epr-product-title-review span {
+color: #000;
+align-items: normal;
+}
+
+.c-dropdown.is-small .c-dropdown__wrapper {
+  border-top: none;
+}
+.c-dropdown.is-small.js-board-tech-dropdown {
+    border-bottom: 1px solid #000;
 }

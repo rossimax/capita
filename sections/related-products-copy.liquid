@@ -7,23 +7,34 @@
     <div class="u-container">
       <div class="u-content">
         <h2 class="c-related-products__title">related products</h2>
+        {% assign limit_rec = 4 %}
+        {% for recommendation in recommendations.products limit:4 %}
+          {% if recommendation.title == "Shipping Protection by Route" %}
+            {% assign limit_rec = 5 %}
+          {% endif %}
+        {% endfor %}
+
+        {{limit_rec }}
         <div class="c-related-products__slider swiper">
           <div class="swiper-wrapper">
 
-            {% for recommendation in recommendations.products limit:4 %}
-              <div class="swiper-slide">
-                <a href="{{ recommendation.url }}">
-                  <div class="c-product-card">
-                    <div class="c-product-card__media">
-                      <img src="{{ recommendation.featured_image | image_url: width: 360 }}" alt="Capita Related Product {{ recommendation.title | strip_html }}"/>
+
+            {% for recommendation in recommendations.products limit:limit_rec %}
+              {% if recommendation.title != "Shipping Protection by Route" %}
+                <div class="swiper-slide">
+                  <a href="{{ recommendation.url }}">
+                    <div class="c-product-card">
+                      <div class="c-product-card__media">
+                        <img src="{{ recommendation.featured_image | image_url: width: 360 }}" alt="Capita Related Product {{ recommendation.title | strip_html }}"/>
+                      </div>
+                      <div class="c-product-card__info">
+                        <span class="c-product-card__name">{{ recommendation.title }}</span>
+                        <span class="c-product-card__price">{{ recommendation.price | money_with_currency }}</span>
+                      </div>
                     </div>
-                    <div class="c-product-card__info">
-                      <span class="c-product-card__name">{{ recommendation.title }}</span>
-                      <span class="c-product-card__price">{{ recommendation.price | money_with_currency }}</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
+                  </a>
+                </div>
+              {% endif %}
             {%- endfor -%}
 
           </div>

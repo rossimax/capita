@@ -39,7 +39,7 @@
         "padding_bottom": 60,
         "font_size_title": 60,
         "font_size_title_mob": 26,
-        "title": "<strong>A one-of-a-kind marvel in snowboard production, The MotherShip™ is the most <hl>technologically advanced</hl> and <hl>environmentally responsible</hl> manufacturing facility in the industry.</strong>",
+        "title": "<strong>A one-of-a-kind marvel in snowboard production, The MotherShip™ is the most <bl>technologically advanced</bl> and <bl>environmentally responsible</bl> manufacturing facility in the industry.</strong>",
         "text": ""
       }
     },

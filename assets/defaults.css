@@ -1683,3 +1683,6 @@ align-items: normal;
 .c-product-card__media img {
   object-position: center;
 }
+.c-header-search__input input {
+  outline: #000;
+}

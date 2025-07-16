@@ -231,6 +231,10 @@ a.btn-link.btn-black.btn-finder {
   font-size: 16px;
   padding: 10.5px 0px;
   border-radius: 20px;
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 a.btn-link.btn-black.btn-finder::after {
   content: unset;

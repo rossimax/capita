@@ -628,6 +628,9 @@ a.o-btn.btn-finder {
     flex-wrap: wrap;
     h1 {
       text-transform: unset;
+      @media screen and (max-width: 1200px) {
+        font-size: 26px !important;
+      }
     }
 }
 .sorting-option {
@@ -745,11 +748,14 @@ a.c-listing-product__size:hover span {
 @media screen and (max-width: 1199px) {
   .l-listing__aside {
     position: absolute;
-    margin: 0 15px;
+    margin: 0 0;
     left: 0;
     top: 260px;
     z-index: 1;
-    width: calc(100% - 30px);
+    width: 100%;
+    .c-listing-filter__mob-head.closed.o-text.is-3 {
+      font-size: 16px;
+    }
   }
   .c-listing-filter__mob-head {
       color: #fff;
@@ -833,7 +839,7 @@ a.c-listing-product__size:hover span {
 @media screen and (max-width: 768px) {
   .l-listing__aside {
     top: 210px;
-    width: calc(100% - 30px);
+    width: 100%;
   }
   .l-listing__grid__empty.empty {
     font-size: 20px;

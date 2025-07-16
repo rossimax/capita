@@ -39,7 +39,7 @@
         "padding_bottom": 60,
         "font_size_title": 60,
         "font_size_title_mob": 26,
-        "title": "<strong>A one-of-a-kind marvel in snowboard production, The MotherShip™ is the most <hl>technologically advanced</hl> and <hl>environmentally responsible</hl> manufacturing facility in the industry.</strong>",
+        "title": "<strong>A one-of-a-kind marvel in snowboard production, The MotherShip™ is the most <bl>technologically advanced</bl> and <bl>environmentally responsible</bl> manufacturing facility in the industry.</strong>",
         "text": ""
       }
     },
@@ -70,7 +70,7 @@
           "type": "cards",
           "settings": {
             "image": "shopify://shop_images/PRODUCT_PAGE_2.jpg",
-            "title": "How Snowboards Are Made",
+            "title": "How Our Snowboards Are Made",
             "description": "The CAPiTA Mothership is known for its localized supply chain and full-scale production processes that are managed in-house. Having direct oversight and control over the entire manufacturing process, CAPiTA aims to ensure that each board produced at The Mothership is of superior quality.",
             "cta_text": "KNOW MORE",
             "cta_link": "shopify://pages/how-snowboards-are-made"
@@ -146,7 +146,7 @@
         "background": "#000000",
         "padding_top": 50,
         "padding_bottom": 20,
-        "title": "The world’s best snowboards are made at <br>The MotherShip™.",
+        "title": "The world’s best snowboards are made at The MotherShip™.",
         "description": "",
         "display_list_count": false
       }

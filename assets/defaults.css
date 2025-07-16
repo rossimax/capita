@@ -679,6 +679,16 @@ main.template-nfc-steps {
   color: #45681a;
   font-weight: 500;
 }
+.c-footer__legal nav {
+  display: block;
+  margin-bottom: 5px;
+  .c-footer__legal__item {
+    margin-right: 10px;
+    @media screen and (max-width:991px) {
+      font-size: 14px;
+    }
+  }
+}
 .c-footer__form span.c-slim-form__title {
   margin-top: 10px;
   font-size: 16px;

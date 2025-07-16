@@ -125,11 +125,16 @@
         
                         {% include 'localization-countries' %} {% endcomment %}
                     </div>
-            <span class="c-footer__legal">    
-            {%- if settings.footer_legal -%}
-                {{ settings.footer_legal }}
-            {% endif %} 
-            </span>
+            <div class="c-footer__legal">    
+                <nav>
+                    <a class="c-footer__legal__item c-footer__legal__item--1" href="javascript:void()">Cookie Settings</a>
+                    <a class="c-footer__legal__item c-footer__legal__item--2" href="/policies/privacy-policy">Privacy Policy</a>
+                    <a class="c-footer__legal__item c-footer__legal__item--3" href="/policies/terms-of-service">Terms &amp; Conditions</a>
+                </nav>
+                {%- if settings.footer_legal -%}
+                    {{ settings.footer_legal }}
+                {% endif %} 
+            </div>
           </div>
       </div>
   </div>

@@ -4,45 +4,25 @@
         <div class="c-footer__content u-content">
             <div class="c-footer__blocks">
                 <div class="c-footer__block c-footer__block--col1">
-                    <span class="strong footer-menu-single-head js-footer-menu-col">Programs <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
-                        <path d="M5.19971 8.5H11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path class="svg-line-vert" d="M8.49976 5.19971V11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
-                        </svg>
-                        </span>
+                    <strong>Programs</strong>
                     {%- for link in section.settings.menu_col_1.links -%}
                         <a class="c-footer__item c-footer__item--{{ forloop.index }}" href="{{ link.url }}">{{ link.title }}</a>
                     {%- endfor -%}
                 </div>
                 <div class="c-footer__block c-footer__block--col2">
-                    <span class="strong footer-menu-single-head js-footer-menu-col">Order Support <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
-                        <path d="M5.19971 8.5H11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path class="svg-line-vert" d="M8.49976 5.19971V11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
-                        </svg>
-                        </span>
+                    <strong>Order Support</strong>
                     {%- for link in section.settings.menu_col_2.links -%}
                         <a class="c-footer__item c-footer__item--{{ forloop.index }}" href="{{ link.url }}">{{ link.title }}</a>
                     {%- endfor -%}
                 </div>
                 <div class="c-footer__block c-footer__block--col3">
-                    <span class="strong footer-menu-single-head js-footer-menu-col">Help <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
-                        <path d="M5.19971 8.5H11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path class="svg-line-vert" d="M8.49976 5.19971V11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
-                        </svg>
-                        </span>
+                    <strong>Help</strong>
                     {%- for link in section.settings.menu_col_3.links -%}
                         <a class="c-footer__item c-footer__item--{{ forloop.index }}" href="{{ link.url }}">{{ link.title }}</a>
                     {%- endfor -%}
                 </div>
                 <div class="c-footer__block c-footer__block--col4">
-                    <span class="strong footer-menu-single-head js-footer-menu-col">Contact Us <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10"/>
-                        <path d="M5.19971 8.5H11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path class="svg-line-vert" d="M8.49976 5.19971V11.8003" stroke="#0B0204" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
-                        </svg>
-                        </span>
+                    <strong>Contact Us</strong>
                     {%- for link in section.settings.menu_col_4.links -%}
                         {% if link.url == "#" %}
                             {% assign  link_url = "javascript:void()" %}
@@ -52,7 +32,6 @@
                         <a class="c-footer__item c-footer__item--{{ forloop.index }}" href="{{ link_url }}">{{ link.title }}</a>
                     {%- endfor -%}
                 </div>
-                <img class="logo-b-corp" style="margin-top: -10px" src="https://cdn.shopify.com/s/files/1/0231/7366/0752/files/b-cert.png?v=1748002768" alt="capita certification">
             </div>
             <div class="c-footer__form">
                 {%- assign formId = 'Contact-Newsletter' -%}

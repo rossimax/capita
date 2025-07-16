@@ -846,9 +846,11 @@ button.js-add-to-cart.c-product-info__add-to-cart.disabled {
   }
 }
 @media screen and (max-width:991px) {
+  .c-info .c-info-card[data-card="2"] {
+    border-top: 2px solid #f4f4f4;
+  }
   .c-info-card {
     border: unset;
-    border-top: 2px solid #f4f4f4;
     border-radius: unset;
     > svg {
       width: 100%;

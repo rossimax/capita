@@ -534,6 +534,8 @@ input.cart-submit.c-header-cart__checkout-btn {
       'mobMenuHamb': '.js-header-mobile-menu',
 
       'cartClose': '.js-cart-close',
+
+      'searchBtn': 'button.c-header__utility.is-search.js-dropdown-toggle'
     };
 
     let searchInput = document.querySelector(selectors.searchInput);
@@ -556,6 +558,15 @@ input.cart-submit.c-header-cart__checkout-btn {
     let mobMenuHamb = document.querySelector(selectors.mobMenuHamb);
 
     let cartClose = document.querySelector(selectors.cartClose);
+
+    let searchBtn = document.querySelector(selectors.searchBtn);
+
+    if (searchBtn) {
+      searchBtn.addEventListener("click", function(){
+        window.setTimeout(() => document.querySelector("#search-input").focus(), 0);
+        return false;
+      })
+    }
 
     if (cartClose) {
       cartClose.addEventListener("click", function(){
@@ -602,7 +613,6 @@ input.cart-submit.c-header-cart__checkout-btn {
         .then((response) => response.json())
         .then((suggestions) => {
 
-          console.log("CERCA")
           const productSuggestions = suggestions.resources.results.products;
 
           searchResult.innerHTML = '';
@@ -643,7 +653,7 @@ input.cart-submit.c-header-cart__checkout-btn {
           if (productSuggestions.length > 0) {
             const firstProductSuggestion = productSuggestions[0];
 
-            console.log(`The title of the first product suggestion is: ${firstProductSuggestion.title}`);
+            // console.log(`The title of the first product suggestion is: ${firstProductSuggestion.title}`);
           }
         });
     }

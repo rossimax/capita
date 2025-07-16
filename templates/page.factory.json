@@ -179,7 +179,7 @@
         "padding_bottom": 80,
         "font_size_title": 60,
         "font_size_title_mob": 20,
-        "title": "<strong>Our dedication to building the world’s best snowboards, with the most\nefficient and sustainable process, is galvanized by the company mantra — <br>\n<i><hl>EVERYTHING IS POSSIBLE.</hl></i></strong>",
+        "title": "<strong>Our dedication to building the world’s best snowboards, with the most\nefficient and sustainable process, is galvanized by the company mantra — <br>\n<i><bl>EVERYTHING IS POSSIBLE.</bl></i></strong>",
         "text": ""
       }
     },

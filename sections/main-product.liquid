@@ -5,7 +5,7 @@
     {% assign hero_title_color = 'text-white' %}
   {% endif %}
 
-  <div class="c-product-hero">
+  <div class="c-product-hero only-desk-991">
     {% liquid
       if product.metafields.snowboard_intro.background_image_new
         assign background_image = product.metafields.snowboard_intro.background_image_new
@@ -15,7 +15,7 @@
     -%}
     <img src="{{ background_image }}" alt="Capita | {{ product.title | strip_html }}">
   </div>
-  <div class="c-product-hero__name o-text"><h1>{{ product.title }}</h1></div>
+  {% comment %} <div class="c-product-hero__name o-text"><h1>{{ product.title }}</h1></div> {% endcomment %}
   {% assign class_product = 'snowboard-product' %}
 {% else %}
   {% assign class_product = 'other-product' %}
@@ -2445,6 +2445,11 @@ span.c-product-info__price.o-text.is-3 {
 #epr-product-title-review svg {
     width: 18px;
     height: 18px;
+}
+.c-product-hero.only-desk-991 {
+  @media screen and (max-width: 991px) {
+    display:none;
+  }
 }
 
 

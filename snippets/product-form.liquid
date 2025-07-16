@@ -15,7 +15,7 @@
   
     <div class="c-product-info__top">
         <span class="c-product-info__categories text strong">{{ snowboard_tags }}</span>
-        <h2 class="c-product-info__name o-text is-2">{{ product.title }}</h2>
+        <h1 class="c-product-info__name o-text is-2">{{ product.title }}</h1>
         {% if product.type == "Snowboard" %}
           {% comment %} <div class="c-product-info__reviews-stars"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div> {% endcomment %}
           <div id="epr-product-title-review" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}" data-product-title="{{ product.title }}"></div>

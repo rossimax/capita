@@ -242,7 +242,8 @@ a.btn-link.btn-black.btn-finder::after {
   margin-bottom: 40px;
 }
 hl {
-  color: #000;
+  color: #e2ff61;
+  /* color: #000;
   background: linear-gradient(
     0deg,
     rgba(226, 255, 97, 0) 0%,
@@ -251,7 +252,7 @@ hl {
     rgba(226, 255, 97, 1) 80%,
     rgba(226, 255, 97, 0) 80%
   );
-  padding: 0 2px;
+  padding: 0 2px; */
 }
 bl {
   color: #e2ff61;

@@ -1691,3 +1691,31 @@ align-items: normal;
 .c-header-search__input input {
   outline: #000;
 }
+
+.text-video-cards__cards {
+  display: grid;
+  grid-gap: 8px;
+  margin-top: 20px;
+  @media only screen and (min-width: 1024px) {
+    display: grid;
+    grid-gap: clamp(10px, 1.1vw, 90px);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+  .single-text-video-cards {
+    background: #ececec;
+    border-radius: 12px;
+  }
+  .single-text-video-cards__content {
+    display: grid;
+    align-content: start;
+    justify-content: center;
+    justify-items: center;
+    padding: 32px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .single-text-video-cards__content img {
+    max-width: 130px;
+    margin-bottom: 10px;
+  }

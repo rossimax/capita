@@ -234,6 +234,7 @@ a.btn-link.btn-black.btn-finder {
   @media screen and (max-width: 1200px) {
     width: 100%;
     max-width: 100%;
+    border-radius: 30px;
   }
 }
 a.btn-link.btn-black.btn-finder::after {
@@ -1020,6 +1021,11 @@ span.c-product-card__name {
 }
 .c-product-card__info {
   grid-gap: 5px;
+}
+.c-listing-filter__wrapper {
+  @media screen and (max-width: 991px) {
+    padding: 0 0;
+  }
 }
 .c-listing-filter__wrapper span {
     text-transform: capitalize;

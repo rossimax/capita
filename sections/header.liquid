@@ -588,14 +588,21 @@ input.cart-submit.c-header-cart__checkout-btn {
     // })
 
     function predectiveSearch() {
+      // fetch(
+      //   window.Shopify.routes.root +
+      //     'search/suggest.json?q=' +
+      //     searchInput.value +
+      //     '&resources[type]=product&resources[options][unavailable_products]=hide&resources[options][fields]=title,body,product_type,variants.title'
+      // )
       fetch(
         window.Shopify.routes.root +
           'search/suggest.json?q=' +
-          searchInput.value +
-          '&resources[type]=product&resources[options][unavailable_products]=hide&resources[options][fields]=title,body,product_type,variants.title'
+          searchInput.value
       )
         .then((response) => response.json())
         .then((suggestions) => {
+
+          console.log("CERCA")
           const productSuggestions = suggestions.resources.results.products;
 
           searchResult.innerHTML = '';

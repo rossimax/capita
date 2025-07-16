@@ -1680,3 +1680,6 @@ align-items: normal;
 .c-dropdown.is-small.js-board-tech-dropdown {
     border-bottom: 1px solid #000;
 }
+.c-product-card__media img {
+  object-position: center;
+}
